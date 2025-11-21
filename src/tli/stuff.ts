@@ -117,76 +117,56 @@ interface BasicMod {
   source: string;
 }
 
-namespace BMod {
-  export interface IBMod {
-    src?: string;
-  }
-
-  export class Str implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly mod: "pct" | "flat",
-      readonly src?: string
-    ) {}
-  }
-
-  export class Dex implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly mod: "pct" | "flat",
-      readonly src?: string
-    ) {}
-  }
-
-  export class Int implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly mod: "pct" | "flat",
-      readonly src?: string
-    ) {}
-  }
-
-  export class DmgPct implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly modType: DmgModType,
-      readonly src?: string
-    ) {}
-  }
-
-  export class CritRatingPct implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly modType: CritRatingModType,
-      readonly src?: string
-    ) {}
-  }
-
-  export class CritDmgPct implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly modType: CritDmgModType,
-      readonly src?: string
-    ) {}
-  }
-
-  export class AspdPct implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-  }
-
-  export class FervorEffPct implements IBMod {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-  }
-}
+type Mod =
+  | {
+      type: "Str";
+      value: number;
+      mod: "pct" | "flat";
+      src?: string;
+    }
+  | {
+      type: "Dex";
+      value: number;
+      mod: "pct" | "flat";
+      src?: string;
+    }
+  | {
+      type: "Int";
+      value: number;
+      mod: "pct" | "flat";
+      src?: string;
+    }
+  | {
+      type: "DmgPct";
+      value: number;
+      addn: boolean;
+      modType: DmgModType;
+      src?: string;
+    }
+  | {
+      type: "CritRatingPct";
+      value: number;
+      modType: CritRatingModType;
+      src?: string;
+    }
+  | {
+      type: "CritDmgPct";
+      value: number;
+      addn: boolean;
+      modType: CritDmgModType;
+      src?: string;
+    }
+  | {
+      type: "AspdPct";
+      value: number;
+      addn: boolean;
+      src?: string;
+    }
+  | {
+      type: "FervorEffPct";
+      value: number;
+      src?: string;
+    };
 
 interface StatBag {
   additionalMainHandDamage: BasicMod[];
@@ -415,10 +395,12 @@ const calculateGearAspd = (
   return baseAspd.value * (1 + gearAspdPctBonus);
 };
 
-const calculateDmgPcts = (allAffixes: Affix.Affix[]): BMod.DmgPct[] => {
+const calculateDmgPcts = (
+  allAffixes: Affix.Affix[]
+): Extract<Mod, { type: "DmgPct" }>[] => {
   let dmgPctAffixes = filterAffix(allAffixes, "DmgPct");
   return dmgPctAffixes.map((a) => {
-    return new BMod.DmgPct(a.value, a.addn, a.modType, a.src);
+    return { type: "DmgPct", value: a.value, addn: a.addn, modType: a.modType, src: a.src };
   });
   // let byModType = R.pipe(
   //   dmgPctAffixes,
@@ -443,7 +425,7 @@ const calculateDmgPcts = (allAffixes: Affix.Affix[]): BMod.DmgPct[] => {
 const calculateCritRating = (allAffixes: Affix.Affix[]): number => {
   let critRatingPctAffixes = filterAffix(allAffixes, "CritRatingPct");
   let mods = critRatingPctAffixes.map((a) => {
-    return new BMod.CritRatingPct(a.value, a.modType, a.src);
+    return { type: "CritRatingPct", value: a.value, modType: a.modType, src: a.src };
   });
   let inc = calculateInc(mods.map((v) => v.value));
   return 0.05 * (1 + inc);
@@ -452,7 +434,7 @@ const calculateCritRating = (allAffixes: Affix.Affix[]): number => {
 const calculateCritDmg = (allAffixes: Affix.Affix[]): number => {
   let critDmgPctAffixes = filterAffix(allAffixes, "CritDmgPct");
   let mods = critDmgPctAffixes.map((a) => {
-    return new BMod.CritDmgPct(a.value, a.addn, a.modType, a.src);
+    return { type: "CritDmgPct", value: a.value, addn: a.addn, modType: a.modType, src: a.src };
   });
 
   let inc = calculateInc(mods.filter((m) => !m.addn).map((v) => v.value));
@@ -461,10 +443,12 @@ const calculateCritDmg = (allAffixes: Affix.Affix[]): number => {
   return 1.5 * (1 + inc) * addn;
 };
 
-const calculateAspdPcts = (allAffixes: Affix.Affix[]): BMod.AspdPct[] => {
+const calculateAspdPcts = (
+  allAffixes: Affix.Affix[]
+): Extract<Mod, { type: "AspdPct" }>[] => {
   let aspdPctAffixes = filterAffix(allAffixes, "AspdPct");
   return aspdPctAffixes.map((a) => {
-    return new BMod.AspdPct(a.value, a.addn, a.src);
+    return { type: "AspdPct", value: a.value, addn: a.addn, src: a.src };
   });
 };
 
@@ -508,7 +492,7 @@ interface DmgOverview {
 }
 
 const filterDmgPctMods = (
-  dmgPctMods: BMod.DmgPct[],
+  dmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   dmgModTypes: DmgModType[]
 ) => {
   return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
@@ -527,16 +511,16 @@ interface TotalDmgModsPerType {
   erosion: DmgModsAggr;
 }
 
-const calculateDmgInc = (mods: BMod.DmgPct[]) => {
+const calculateDmgInc = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
   return calculateInc(mods.filter((m) => !m.addn).map((m) => m.value));
 };
 
-const calculateDmgAddn = (mods: BMod.DmgPct[]) => {
+const calculateDmgAddn = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
   return calculateAddn(mods.filter((m) => m.addn).map((m) => m.value));
 };
 
 const getTotalDmgModsPerType = (
-  allDmgPctMods: BMod.DmgPct[],
+  allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration
 ): TotalDmgModsPerType => {
   let dmgModTypes = dmgModTypesForSkill(skillConf);
@@ -609,7 +593,7 @@ interface SkillHitOverview {
 
 const calculateSkillHit = (
   gearDmg: GearDmg,
-  allDmgPcts: BMod.DmgPct[],
+  allDmgPcts: Extract<Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration
 ): SkillHitOverview => {
   let totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
