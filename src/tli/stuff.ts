@@ -1,49 +1,84 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
-
-type Tag = "physical" | "spell";
+import * as Affix from "./affix";
+import { DmgModType, CritRatingModType, CritDmgModType } from "./constants";
 
 let dummy40Armor = 0.11;
 let dummy85Armor = 0.44;
 
-interface DamageRange {
+type Stat = "dex" | "int" | "str";
+
+type SkillTag =
+  | "Attack"
+  | "Spell"
+  | "Melee"
+  | "Area"
+  | "Physical"
+  | "Slash-Stike"
+  | "Persistent";
+
+export type Skill = "[Test] Simple Attack" | "Berserking Blade";
+
+interface SkillConfiguration {
+  skill: Skill;
+  tags: SkillTag[];
+  stats: Stat[];
+  addedDmgEffPct: number;
+}
+
+let offensiveSkillConfs: SkillConfiguration[] = [
+  {
+    skill: "[Test] Simple Attack",
+    tags: ["Attack"],
+    stats: ["dex", "str"],
+    addedDmgEffPct: 1,
+  },
+  {
+    skill: "Berserking Blade",
+    tags: ["Attack", "Melee", "Area", "Physical", "Slash-Stike", "Persistent"],
+    stats: ["dex", "str"],
+    addedDmgEffPct: 2.1,
+  },
+];
+
+export interface DmgRange {
   // inclusive on both ends
   min: number;
   max: number;
 }
 
-const addDR = (dr1: DamageRange, dr2: DamageRange): DamageRange => {
+const addDR = (dr1: DmgRange, dr2: DmgRange): DmgRange => {
   return {
     min: dr1.min + dr2.min,
     max: dr1.max + dr2.max,
   };
 };
 
-const multDR = (dr: DamageRange, multiplier: number): DamageRange => {
+const multDR = (dr: DmgRange, multiplier: number): DmgRange => {
   return {
     min: dr.min * multiplier,
     max: dr.max * multiplier,
   };
 };
 
-const emptyDamageRange = (): DamageRange => {
+const emptyDamageRange = (): DmgRange => {
   return { min: 0, max: 0 };
 };
 
-interface TalentPage {
+export interface TalentPage {
   affixes: Affix.Affix[];
   coreTalents: Affix.Affix[];
 }
 
-interface DivinitySlate {
+export interface DivinitySlate {
   affixes: Affix.Affix[];
 }
 
-interface DivinityPage {
+export interface DivinityPage {
   slates: DivinitySlate[];
 }
 
-interface Gear {
+export interface Gear {
   gearType:
     | "helmet"
     | "chest"
@@ -57,7 +92,7 @@ interface Gear {
   affixes: Affix.Affix[];
 }
 
-interface GearPage {
+export interface GearPage {
   helmet?: Gear;
   chest?: Gear;
   neck?: Gear;
@@ -70,302 +105,24 @@ interface GearPage {
   offHand?: Gear;
 }
 
-interface Loadout {
+export interface Loadout {
   equipmentPage: GearPage;
   talentPage: TalentPage;
   divinityPage: DivinityPage;
   customConfiguration: Affix.Affix[];
 }
 
-type DmgModType =
-  | "global"
-  | "attack"
-  | "spell"
-  | "physical"
-  | "cold"
-  | "lightning"
-  | "fire"
-  | "erosion";
-
-namespace Affix {
-  export interface Affix {
-    src?: string;
-
-    toStat(): BStat.IBStat[];
-  }
-
-  export class DmgPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly modType: DmgModType,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-
-    toStat(): BStat.IBStat[] {
-      return [
-        new BStat.DamagePct(this.value, this.addn, this.modType, this.src),
-      ];
-    }
-  }
-
-  export class CritRatingPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-
-    toStat(): BStat.IBStat[] {
-      return [new BStat.CritRatingPct(this.value, this.src)];
-    }
-  }
-
-  export class CritDmgPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-
-    toStat(): BStat.IBStat[] {
-      return [new BStat.CritDmgPct(this.value, this.addn, this.src)];
-    }
-  }
-
-  export class AspdPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      return [new BStat.AspdPct(this.value, this.addn, this.src)];
-    }
-  }
-
-  export class DblDmg implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class Str implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class StrPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class Dex implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class DexPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class FervorEff implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class SteepStrikeChance implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class SteepStrikeDmg implements Affix {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class SweepSlashDmg implements Affix {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class Fervor implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class CritDmgPerFervor implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class AddnMainHandDmgPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearBaseCritRating implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearBaseAspd implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearAspdPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearBasePhysFlatDmg implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class FlatGearDmg implements Affix {
-    constructor(
-      readonly value: DamageRange,
-      readonly modType: "physical" | "cold" | "lightning" | "fire" | "erosion",
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearPhysDmgPct implements Affix {
-    constructor(
-      readonly value: number,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class GearPlusEleMinusPhysDmg implements Affix {
-    constructor(
-      readonly value: DamageRange,
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-
-  export class CoreTalent implements Affix {
-    constructor(
-      readonly name:
-        | "Last Stand"
-        | "Dirty Tricks"
-        | "Centralize"
-        | "Tenacity"
-        | "Hidden Mastery"
-        | "Formless"
-        | "Tradeoff"
-        | "Unmatched Valor",
-      readonly src?: string
-    ) {}
-    toStat(): BStat.IBStat[] {
-      throw new Error("Method not implemented.");
-    }
-  }
-}
-
-interface BasicStat {
+interface BasicMod {
   value: number;
   source: string;
 }
 
-namespace BStat {
-  export interface IBStat {
+namespace BMod {
+  export interface IBMod {
     src?: string;
   }
 
-  export class Str implements IBStat {
+  export class Str implements IBMod {
     constructor(
       readonly value: number,
       readonly mod: "pct" | "flat",
@@ -373,7 +130,7 @@ namespace BStat {
     ) {}
   }
 
-  export class Dex implements IBStat {
+  export class Dex implements IBMod {
     constructor(
       readonly value: number,
       readonly mod: "pct" | "flat",
@@ -381,7 +138,7 @@ namespace BStat {
     ) {}
   }
 
-  export class Int implements IBStat {
+  export class Int implements IBMod {
     constructor(
       readonly value: number,
       readonly mod: "pct" | "flat",
@@ -389,7 +146,7 @@ namespace BStat {
     ) {}
   }
 
-  export class DamagePct implements IBStat {
+  export class DmgPct implements IBMod {
     constructor(
       readonly value: number,
       readonly addn: boolean,
@@ -398,14 +155,24 @@ namespace BStat {
     ) {}
   }
 
-  export class CritRatingPct implements IBStat {
+  export class CritRatingPct implements IBMod {
     constructor(
       readonly value: number,
+      readonly modType: CritRatingModType,
       readonly src?: string
     ) {}
   }
 
-  export class CritDmgPct implements IBStat {
+  export class CritDmgPct implements IBMod {
+    constructor(
+      readonly value: number,
+      readonly addn: boolean,
+      readonly modType: CritDmgModType,
+      readonly src?: string
+    ) {}
+  }
+
+  export class AspdPct implements IBMod {
     constructor(
       readonly value: number,
       readonly addn: boolean,
@@ -413,15 +180,7 @@ namespace BStat {
     ) {}
   }
 
-  export class AspdPct implements IBStat {
-    constructor(
-      readonly value: number,
-      readonly addn: boolean,
-      readonly src?: string
-    ) {}
-  }
-
-  export class FervorEffPct implements IBStat {
+  export class FervorEffPct implements IBMod {
     constructor(
       readonly value: number,
       readonly src?: string
@@ -430,25 +189,25 @@ namespace BStat {
 }
 
 interface StatBag {
-  additionalMainHandDamage: BasicStat[];
-  damage: BasicStat[];
-  additionalDamage: BasicStat[];
-  critRate: BasicStat[];
-  critDamage: BasicStat[];
-  additionalCritDamage: BasicStat[];
-  attackSpeed: BasicStat[];
-  additionalAttackSpeed: BasicStat[];
-  doubleDamage: BasicStat[];
-  str: BasicStat[];
-  dex: BasicStat[];
-  steepStrikeChance: BasicStat[];
-  steepStrikeDamage: BasicStat[];
-  additionalSweepSlashDamage: BasicStat[];
-  additionalSteepStrikeDamage: BasicStat[];
-  fervorEffect: BasicStat[];
+  additionalMainHandDamage: BasicMod[];
+  damage: BasicMod[];
+  additionalDamage: BasicMod[];
+  critRate: BasicMod[];
+  critDamage: BasicMod[];
+  additionalCritDamage: BasicMod[];
+  attackSpeed: BasicMod[];
+  additionalAttackSpeed: BasicMod[];
+  doubleDamage: BasicMod[];
+  str: BasicMod[];
+  dex: BasicMod[];
+  steepStrikeChance: BasicMod[];
+  steepStrikeDamage: BasicMod[];
+  additionalSweepSlashDamage: BasicMod[];
+  additionalSteepStrikeDamage: BasicMod[];
+  fervorEffect: BasicMod[];
 }
 
-const calculateBonusRaw = (bonuses: number[]) => {
+const calculateInc = (bonuses: number[]) => {
   return R.pipe(
     bonuses,
     R.filter((b) => true),
@@ -456,7 +215,15 @@ const calculateBonusRaw = (bonuses: number[]) => {
   );
 };
 
-const calculateBonus = (bonuses: BasicStat[]) => {
+const calculateAddn = (bonuses: number[]) => {
+  return R.pipe(
+    bonuses,
+    R.filter((b) => true),
+    R.reduce((b1, b2) => b1 * (1 + b2), 1)
+  );
+};
+
+const calculateBonus = (bonuses: BasicMod[]) => {
   return R.pipe(
     bonuses,
     R.filter((b) => true),
@@ -464,7 +231,7 @@ const calculateBonus = (bonuses: BasicStat[]) => {
   );
 };
 
-const calculateAdditionalBonus = (bonuses: BasicStat[]) => {
+const calculateAdditionalBonus = (bonuses: BasicMod[]) => {
   return R.pipe(
     bonuses,
     R.filter((b) => true),
@@ -488,19 +255,17 @@ const collectAffixes = (loadout: Loadout): Affix.Affix[] => {
     ...(loadout.equipmentPage.rightRing?.affixes || []),
     ...(loadout.equipmentPage.mainHand?.affixes || []),
     ...(loadout.equipmentPage.offHand?.affixes || []),
+    ...loadout.customConfiguration,
   ];
 };
 
 interface OffenseSummary {
-  averageHit: number;
-  critRatePct: number;
-  critDamagePct: number;
-  aspdBonusPct: number;
-  additionalAspdBonusPct: number;
+  critChance: number;
+  critDmgMult: number;
   aspd: number;
-  dmgBonus: number;
-  additionalDmgBonus: number;
-  dps: number;
+  avgHit: number;
+  avgHitWithCrit: number;
+  avgDps: number;
 }
 
 interface GearDmg {
@@ -509,11 +274,11 @@ interface GearDmg {
 }
 
 interface WeaponDmg {
-  phys: DamageRange;
-  cold: DamageRange;
-  lightning: DamageRange;
-  fire: DamageRange;
-  erosion: DamageRange;
+  phys: DmgRange;
+  cold: DmgRange;
+  lightning: DmgRange;
+  fire: DmgRange;
+  erosion: DmgRange;
 }
 
 const emptyGearDmg = (): GearDmg => {
@@ -632,34 +397,282 @@ const calculateGearAspd = (
   if (baseAspd === undefined) {
     return 0;
   }
-  let gearAspdPctBonus = calculateBonusRaw(
+  let gearAspdPctBonus = calculateInc(
     filterAffix(mh.affixes, Affix.GearAspdPct).map((b) => b.value)
   );
   return baseAspd.value * (1 + gearAspdPctBonus);
 };
 
-interface DmgPcts {
-  global: BStat.DamagePct[]
+const calculateDmgPcts = (allAffixes: Affix.Affix[]): BMod.DmgPct[] => {
+  let dmgPctAffixes = filterAffix(allAffixes, Affix.DmgPct);
+  return dmgPctAffixes.map((a) => {
+    return new BMod.DmgPct(a.value, a.addn, a.modType, a.src);
+  });
+  // let byModType = R.pipe(
+  //   dmgPctAffixes,
+  //   R.map((a) => {
+  //     return new BMod.DmgPct(a.value, a.addn, a.modType, a.src);
+  //   }),
+  //   R.groupBy((s) => s.modType)
+  // );
+  // let dmgPcts: DmgPcts = {
+  //   global: byModType["global"] || [],
+  //   attack: byModType["attack"] || [],
+  //   spell: byModType["spell"] || [],
+  //   physical: byModType["physical"] || [],
+  //   cold: byModType["cold"] || [],
+  //   lightning: byModType["lightning"] || [],
+  //   fire: byModType["fire"] || [],
+  //   erosion: byModType["erosion"] || [],
+  // };
+  // return dmgPcts;
+};
+
+const calculateCritRating = (allAffixes: Affix.Affix[]): number => {
+  let critRatingPctAffixes = filterAffix(allAffixes, Affix.CritRatingPct);
+  let mods = critRatingPctAffixes.map((a) => {
+    return new BMod.CritRatingPct(a.value, a.modType, a.src);
+  });
+  let inc = calculateInc(mods.map((v) => v.value));
+  return 0.05 * (1 + inc);
+};
+
+const calculateCritDmg = (allAffixes: Affix.Affix[]): number => {
+  let critDmgPctAffixes = filterAffix(allAffixes, Affix.CritDmgPct);
+  let mods = critDmgPctAffixes.map((a) => {
+    return new BMod.CritDmgPct(a.value, a.addn, a.modType, a.src);
+  });
+
+  let inc = calculateInc(mods.filter((m) => !m.addn).map((v) => v.value));
+  let addn = calculateAddn(mods.filter((m) => m.addn).map((v) => v.value));
+
+  return 1.5 * (1 + inc) * addn;
+};
+
+const calculateAspdPcts = (allAffixes: Affix.Affix[]): BMod.AspdPct[] => {
+  let aspdPctAffixes = filterAffix(allAffixes, Affix.AspdPct);
+  return aspdPctAffixes.map((a) => {
+    return new BMod.AspdPct(a.value, a.addn, a.src);
+  });
+};
+
+const calculateAspd = (loadout: Loadout, allAffixes: Affix.Affix[]): number => {
+  let gearAspd = calculateGearAspd(loadout, allAffixes);
+  let aspdPctMods = calculateAspdPcts(allAffixes);
+  let inc = calculateInc(
+    aspdPctMods.filter((m) => !m.addn).map((v) => v.value)
+  );
+  let addn = calculateAddn(
+    aspdPctMods.filter((m) => m.addn).map((v) => v.value)
+  );
+
+  return gearAspd * (1 + inc) * addn;
+};
+
+const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
+  Attack: "attack",
+  Spell: "spell",
+  Melee: "attack",
+  Area: "attack",
+};
+
+const dmgModTypesForSkill = (conf: SkillConfiguration) => {
+  let dmgModTypes: DmgModType[] = ["global"];
+  conf.tags.forEach((t) => {
+    let dmgModType = dmgModTypePerSkillTag[t];
+    if (dmgModType !== undefined) {
+      dmgModTypes.push(dmgModType);
+    }
+  });
+  return dmgModTypes;
+};
+
+interface DmgOverview {
+  phys: DmgRange;
+  cold: DmgRange;
+  lightning: DmgRange;
+  fire: DmgRange;
+  erosion: DmgRange;
 }
 
-const calculateDmgPcts = (allAffixes: Affix.Affix[]) => {
+const filterDmgPctMods = (
+  dmgPctMods: BMod.DmgPct[],
+  dmgModTypes: DmgModType[]
+) => {
+  return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
+};
 
+interface DmgModsAggr {
+  inc: number;
+  addn: number;
 }
 
-const calculateOffense = (loadout: Loadout): OffenseSummary => {
+interface TotalDmgModsPerType {
+  phys: DmgModsAggr;
+  cold: DmgModsAggr;
+  lightning: DmgModsAggr;
+  fire: DmgModsAggr;
+  erosion: DmgModsAggr;
+}
+
+const calculateDmgInc = (mods: BMod.DmgPct[]) => {
+  return calculateInc(mods.filter((m) => !m.addn).map((m) => m.value));
+};
+
+const calculateDmgAddn = (mods: BMod.DmgPct[]) => {
+  return calculateAddn(mods.filter((m) => m.addn).map((m) => m.value));
+};
+
+const getTotalDmgModsPerType = (
+  allDmgPctMods: BMod.DmgPct[],
+  skillConf: SkillConfiguration
+): TotalDmgModsPerType => {
+  let dmgModTypes = dmgModTypesForSkill(skillConf);
+  let dmgModTypesForPhys: DmgModType[] = [...dmgModTypes, "physical"];
+  let dmgModTypesForCold: DmgModType[] = [...dmgModTypes, "cold", "elemental"];
+  let dmgModTypesForLightning: DmgModType[] = [
+    ...dmgModTypes,
+    "lightning",
+    "elemental",
+  ];
+  let dmgModTypesForFire: DmgModType[] = [...dmgModTypes, "fire", "elemental"];
+  let dmgModTypesForErosion: DmgModType[] = [...dmgModTypes, "erosion"];
+
+  let dmgPctModsForPhys = filterDmgPctMods(allDmgPctMods, dmgModTypesForPhys);
+  let dmgPctModsForCold = filterDmgPctMods(allDmgPctMods, dmgModTypesForCold);
+  let dmgPctModsForLightning = filterDmgPctMods(
+    allDmgPctMods,
+    dmgModTypesForLightning
+  );
+  let dmgPctModsForFire = filterDmgPctMods(allDmgPctMods, dmgModTypesForFire);
+  let dmgPctModsForErosion = filterDmgPctMods(
+    allDmgPctMods,
+    dmgModTypesForErosion
+  );
+
+  return {
+    phys: {
+      inc: calculateDmgInc(dmgPctModsForPhys),
+      addn: calculateDmgAddn(dmgPctModsForPhys),
+    },
+    cold: {
+      inc: calculateDmgInc(dmgPctModsForCold),
+      addn: calculateDmgAddn(dmgPctModsForCold),
+    },
+    lightning: {
+      inc: calculateDmgInc(dmgPctModsForLightning),
+      addn: calculateDmgAddn(dmgPctModsForLightning),
+    },
+    fire: {
+      inc: calculateDmgInc(dmgPctModsForFire),
+      addn: calculateDmgAddn(dmgPctModsForFire),
+    },
+    erosion: {
+      inc: calculateDmgInc(dmgPctModsForErosion),
+      addn: calculateDmgAddn(dmgPctModsForErosion),
+    },
+  };
+};
+
+const calculateDmgRange = (
+  dmgRange: DmgRange,
+  dmgModsAggr: DmgModsAggr
+): DmgRange => {
+  let mult = (1 + dmgModsAggr.inc) * dmgModsAggr.addn;
+  return multDR(dmgRange, mult);
+};
+
+interface SkillHitOverview {
+  base: {
+    phys: DmgRange;
+    cold: DmgRange;
+    lightning: DmgRange;
+    fire: DmgRange;
+    erosion: DmgRange;
+    total: DmgRange;
+    totalAvg: number;
+  };
+  avg: number;
+}
+
+const calculateSkillHit = (
+  gearDmg: GearDmg,
+  allDmgPcts: BMod.DmgPct[],
+  skillConf: SkillConfiguration
+): SkillHitOverview => {
+  let totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
+  let phys = calculateDmgRange(gearDmg.mainHand.phys, totalDmgModsPerType.phys);
+  let cold = calculateDmgRange(gearDmg.mainHand.cold, totalDmgModsPerType.cold);
+  let lightning = calculateDmgRange(
+    gearDmg.mainHand.lightning,
+    totalDmgModsPerType.lightning
+  );
+  let fire = calculateDmgRange(gearDmg.mainHand.fire, totalDmgModsPerType.fire);
+  let erosion = calculateDmgRange(
+    gearDmg.mainHand.erosion,
+    totalDmgModsPerType.erosion
+  );
+  let total = {
+    min: phys.min + cold.min + lightning.min + fire.min + erosion.min,
+    max: phys.max + cold.max + lightning.max + fire.max + erosion.max,
+  };
+  let totalAvg = (total.min + total.max) / 2;
+
+  let finalAvg = match(skillConf.skill)
+    .with("Berserking Blade", () => {
+      return totalAvg * 2.1;
+    })
+    .with("[Test] Simple Attack", () => {
+      return totalAvg;
+    })
+    .otherwise(() => {
+      // either it's unimplemented, not an attack
+      return 0;
+    });
+
+  return {
+    base: {
+      phys: phys,
+      cold: cold,
+      lightning: lightning,
+      fire: fire,
+      erosion: erosion,
+      total: total,
+      totalAvg: totalAvg,
+    },
+    avg: finalAvg,
+  };
+};
+
+// return undefined if skill unimplemented or it's not an offensive skill
+export const calculateOffense = (
+  loadout: Loadout,
+  skill: Skill
+): OffenseSummary | undefined => {
+  let skillConf = offensiveSkillConfs.find((c) => c.skill === skill);
+  if (skillConf === undefined) {
+    return undefined;
+  }
   let allAffixes = collectAffixes(loadout);
   let gearDmg = calculateGearDmg(loadout, allAffixes);
-  let gearAspd = calculateGearAspd(loadout, allAffixes);
+  let aspd = calculateAspd(loadout, allAffixes);
+  let dmgPcts = calculateDmgPcts(allAffixes);
+  let critChance = calculateCritRating(allAffixes);
+  let critDmgMult = calculateCritDmg(allAffixes);
 
-  let dmgPcts = filterAffix(allAffixes, Affix.DmgPct);
-  let globalDmgPcts = dmgPcts.filter((d) => d.modType === "global");
-  let attackDmgPcts = dmgPcts.filter((d) => d.modType === "attack");
-  let spellDmgPcts = dmgPcts.filter((d) => d.modType === "spell");
-  let physDmgPcts = dmgPcts.filter((d) => d.modType === "physical");
-  let coldDmgPcts = dmgPcts.filter((d) => d.modType === "cold");
-  let lightningDmgPcts = dmgPcts.filter((d) => d.modType === "lightning");
-  let fireDmgPcts = dmgPcts.filter((d) => d.modType === "fire");
-  let erosionDmgPcts = dmgPcts.filter((d) => d.modType === "erosion");
+  let skillHit = calculateSkillHit(gearDmg, dmgPcts, skillConf);
+  let avgHitWithCrit =
+    skillHit.avg * critChance * critDmgMult + skillHit.avg * (1 - critChance);
+  let avgDps = avgHitWithCrit * aspd;
+
+  return {
+    critChance: critChance,
+    critDmgMult: critDmgMult,
+    aspd: aspd,
+    avgHit: skillHit.avg,
+    avgHitWithCrit: avgHitWithCrit,
+    avgDps: avgDps,
+  };
 };
 
 const _calculateDps = (statBag: StatBag) => {
