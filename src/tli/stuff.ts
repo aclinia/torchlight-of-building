@@ -357,11 +357,21 @@ const calculateGearDmg = (
 
   filterAffix(mh.affixes, "FlatGearDmg").forEach((a) => {
     match(a.modType)
-      .with("physical", () => addDR(phys, a.value))
-      .with("cold", () => addDR(cold, a.value))
-      .with("lightning", () => addDR(lightning, a.value))
-      .with("fire", () => addDR(fire, a.value))
-      .with("erosion", () => addDR(erosion, a.value))
+      .with("physical", () => {
+        phys = addDR(phys, a.value);
+      })
+      .with("cold", () => {
+        cold = addDR(cold, a.value);
+      })
+      .with("lightning", () => {
+        lightning = addDR(lightning, a.value);
+      })
+      .with("fire", () => {
+        fire = addDR(fire, a.value);
+      })
+      .with("erosion", () => {
+        erosion = addDR(erosion, a.value);
+      })
       .exhaustive();
   });
 
