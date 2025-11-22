@@ -392,8 +392,15 @@ const calculateCritRating = (
 
   // Add fervor bonus if enabled
   if (configuration.fervor.enabled) {
-    // Each fervor point gives 2% increased critical strike rating
-    let fervorBonus = configuration.fervor.points * 0.02;
+    // Collect FervorEff modifiers and calculate total effectiveness
+    let fervorEffAffixes = filterAffix(allAffixes, "FervorEff");
+    let fervorEffTotal = calculateInc(fervorEffAffixes.map((a) => a.value));
+
+    // Base fervor: 2% per point, modified by FervorEff
+    // Example: 100 points * 0.02 * (1 + 0.5) = 3.0 (with 50% FervorEff)
+    let fervorPerPoint = 0.02 * (1 + fervorEffTotal);
+    let fervorBonus = configuration.fervor.points * fervorPerPoint;
+
     mods.push({
       type: "CritRatingPct",
       value: fervorBonus,
