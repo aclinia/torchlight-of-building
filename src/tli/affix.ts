@@ -139,3 +139,5 @@ export type Affix =
         | "Unmatched Valor";
       src?: string;
     };
+
+export type AffixOfType<T> = Extract<Affix, { type: T }>;

@@ -1,4 +1,4 @@
-import * as Affix from "./affix";
+import { Affix, AffixOfType } from "./affix";
 import {
   DmgModType,
   DMG_MOD_TYPES,
@@ -10,11 +10,15 @@ const isValidDmgModType = (value: string): value is DmgModType => {
   return DMG_MOD_TYPES.includes(value as DmgModType);
 };
 
-const isValidCritRatingModType = (value: string): value is CritRatingModType => {
+const isValidCritRatingModType = (
+  value: string
+): value is CritRatingModType => {
   return CRIT_RATING_MOD_TYPES.includes(value as CritRatingModType);
 };
 
-const parseDmgPct = (input: string): Extract<Affix.Affix, { type: "DmgPct" }> | undefined => {
+const parseDmgPct = (
+  input: string
+): AffixOfType<"DmgPct"> | undefined => {
   // Regex to parse: +9% [additional] [fire] damage
   const pattern =
     /^([+-])?(\d+(?:\.\d+)?)%\s+(?:(additional)\s+)?(?:(\w+)\s+)?damage$/i;
@@ -57,7 +61,7 @@ const parseDmgPct = (input: string): Extract<Affix.Affix, { type: "DmgPct" }> | 
 
 const parseCritRatingPct = (
   input: string
-): Extract<Affix.Affix, { type: "CritRatingPct" }> | undefined => {
+): AffixOfType<"CritRatingPct"> | undefined => {
   // Regex to parse: +10% [Attack] Critical Strike Rating
   // The type word comes before "Critical Strike Rating"
   const pattern =
@@ -94,7 +98,7 @@ const parseCritRatingPct = (
   };
 };
 
-export const parseAffix = (input: string): Affix.Affix | undefined => {
+export const parseAffix = (input: string): Affix | undefined => {
   const normalized = input.trim();
 
   // Try each parser in order
