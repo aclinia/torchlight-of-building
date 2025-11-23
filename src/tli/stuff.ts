@@ -201,17 +201,16 @@ const filterAffix = <T extends Mod.Mod["type"]>(
   mods: Mod.Mod[],
   type: T
 ): Extract<Mod.Mod, { type: T }>[] => {
-  return mods.filter((a) => a.type === type) as Extract<
-    Mod.Mod,
-    { type: T }
-  >[];
+  return mods.filter((a) => a.type === type) as Extract<Mod.Mod, { type: T }>[];
 };
 
 // currently only calculating mainhand
-const calculateGearDmg = (
-  allMods: Mod.Mod[]
-): GearDmg => {
-  let basePhysDmg = findAffix(allMods, "GearBasePhysFlatDmg");
+const calculateGearDmg = (loadout: Loadout, allMods: Mod.Mod[]): GearDmg => {
+  let mainhand = loadout.equipmentPage.mainHand;
+  if (mainhand === undefined) {
+    return emptyGearDmg();
+  }
+  let basePhysDmg = findAffix(mainhand.affixes, "GearBasePhysFlatDmg");
   if (basePhysDmg === undefined) {
     return emptyGearDmg();
   }
@@ -226,7 +225,10 @@ const calculateGearDmg = (
   phys.max += basePhysDmg.value;
   let physBonusPct = 0;
 
-  let gearEleMinusPhysDmg = findAffix(allMods, "GearPlusEleMinusPhysDmg");
+  let gearEleMinusPhysDmg = findAffix(
+    mainhand.affixes,
+    "GearPlusEleMinusPhysDmg"
+  );
   if (gearEleMinusPhysDmg !== undefined) {
     physBonusPct -= 1;
 
@@ -240,12 +242,12 @@ const calculateGearDmg = (
     fire.max += max;
   }
 
-  let gearPhysDmgPct = findAffix(allMods, "GearPhysDmgPct");
+  let gearPhysDmgPct = findAffix(mainhand.affixes, "GearPhysDmgPct");
   if (gearPhysDmgPct !== undefined) {
     physBonusPct += gearPhysDmgPct.value;
   }
 
-  filterAffix(allMods, "FlatGearDmg").forEach((a) => {
+  filterAffix(mainhand.affixes, "FlatGearDmg").forEach((a) => {
     match(a.modType)
       .with("physical", () => {
         phys = addDR(phys, a.value);
@@ -287,9 +289,7 @@ const calculateGearDmg = (
   };
 };
 
-const calculateGearAspd = (
-  allMods: Mod.Mod[]
-): number => {
+const calculateGearAspd = (allMods: Mod.Mod[]): number => {
   let baseAspd = findAffix(allMods, "GearBaseAspd");
   if (baseAspd === undefined) {
     return 0;
@@ -299,7 +299,6 @@ const calculateGearAspd = (
   );
   return baseAspd.value * (1 + gearAspdPctBonus);
 };
-
 
 const calculateCritRating = (
   allMods: Mod.Mod[],
@@ -566,6 +565,7 @@ const calculateSkillHit = (
 
 // return undefined if skill unimplemented or it's not an offensive skill
 export const calculateOffense = (
+  loadout: Loadout,
   mods: Mod.Mod[],
   skill: Skill,
   configuration: Configuration
@@ -574,7 +574,7 @@ export const calculateOffense = (
   if (skillConf === undefined) {
     return undefined;
   }
-  let gearDmg = calculateGearDmg(mods);
+  let gearDmg = calculateGearDmg(loadout, mods);
   let aspd = calculateAspd(mods);
   let dmgPcts = filterAffix(mods, "DmgPct");
   let critChance = calculateCritRating(mods, configuration);

@@ -43,7 +43,7 @@ test("calculate offense very basic", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // base * bonusdmg * crit * skill bonus
   // 100 * 2 * 1.025
@@ -72,7 +72,7 @@ test("calculate offense multiple inc dmg", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // base * (1 + sum of increased) * crit
   // 100 * (1 + 0.5 + 0.3) = 180
@@ -102,7 +102,7 @@ test("calculate offense multiple addn dmg", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // base * (1 + more1) * (1 + more2) * crit
   // 100 * 1.5 * 1.2 = 180
@@ -134,7 +134,7 @@ test("calculate offense multiple mix inc and addn dmg", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // base * (1 + sum of increased) * (1 + more) * crit
   // 100 * (1 + 0.5 + 0.3) * 1.2 = 100 * 1.8 * 1.2 = 216
@@ -164,7 +164,7 @@ test("calculate offense atk dmg mod", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // [Test] Simple Attack has "Attack" tag, so attack modifiers apply
   // 100 * (1 + 0.5) = 150
@@ -193,7 +193,7 @@ test("calculate offense spell dmg mod doesn't affect attack skill", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // [Test] Simple Attack has "Attack" tag, NOT "Spell" tag
   // So spell modifiers don't apply - only base damage
@@ -226,7 +226,7 @@ test("calculate offense elemental damage", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // GearPlusEleMinusPhysDmg removes all physical damage and adds elemental
   // Physical: 100 * (1 - 1) = 0 (removed by conversion)
@@ -261,7 +261,7 @@ test("calculate offense cold damage", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // Physical: 100 (no bonuses)
   // Cold: 30 * 1.8 (cold bonus) = 54
@@ -301,7 +301,7 @@ test("calculate offense affixes from equipment, talents, and divinities combine"
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", defaultConfiguration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", defaultConfiguration);
 
   // All affixes from equipment, talents, and divinities are collected
   // Total damage bonus: 20% + 30% + 10% = 60%
@@ -337,7 +337,7 @@ test("calculate offense with fervor enabled default points", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 100 points * 2% = 200% increased crit rating
@@ -375,7 +375,7 @@ test("calculate offense with fervor enabled custom points", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 50 points * 2% = 100% increased crit rating
@@ -413,7 +413,7 @@ test("calculate offense with fervor disabled", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Fervor disabled, so no bonus despite having 100 points
   // Crit chance: 0.05 * (1 + 0) = 0.05 (5%)
@@ -453,7 +453,7 @@ test("calculate offense with fervor and other crit rating affixes", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Crit rating from gear: +50%
@@ -496,7 +496,7 @@ test("calculate offense with fervor and single FervorEff modifier", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 100 points * 2% * (1 + 0.5) = 100 * 0.02 * 1.5 = 3.0 (300% increased crit rating)
@@ -539,7 +539,7 @@ test("calculate offense with fervor and multiple FervorEff modifiers stacking", 
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // FervorEff total: 0.1 + 0.1 = 0.2 (20% total)
@@ -581,7 +581,7 @@ test("calculate offense with fervor and FervorEff with custom fervor points", ()
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 50 points * 2% * (1 + 1.0) = 50 * 0.02 * 2.0 = 2.0 (200% increased crit rating)
@@ -622,7 +622,7 @@ test("calculate offense with FervorEff but fervor disabled", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // FervorEff has no effect when fervor is disabled
   // Crit chance: 0.05 * (1 + 0) = 0.05 (5%)
@@ -662,7 +662,7 @@ test("calculate offense with CritDmgPerFervor single affix", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 100 points * 2% = 200% increased crit rating
@@ -707,7 +707,7 @@ test("calculate offense with multiple CritDmgPerFervor affixes stacking", () => 
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 100 points * 2% = 200% increased crit rating
@@ -750,7 +750,7 @@ test("calculate offense with CritDmgPerFervor with custom fervor points", () => 
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 50 points * 2% = 100% increased crit rating
@@ -793,7 +793,7 @@ test("calculate offense with CritDmgPerFervor but fervor disabled", () => {
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // CritDmgPerFervor has no effect when fervor is disabled
   // Crit chance: 0.05 (5%, no fervor bonus)
@@ -835,7 +835,7 @@ test("calculate offense with CritDmgPerFervor and other crit damage modifiers", 
   };
 
   let mods = collectMods(loadout);
-  let res = calculateOffense(mods, "[Test] Simple Attack", configuration);
+  let res = calculateOffense(loadout, mods, "[Test] Simple Attack", configuration);
 
   // Base damage: 100
   // Fervor: 100 points * 2% = 200% increased crit rating
