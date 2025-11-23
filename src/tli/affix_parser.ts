@@ -28,25 +28,20 @@ const parseDmgPct = (
     return undefined;
   }
 
-  // Extract components
   const percentageStr = match[2];
   const hasAdditional = match[3] !== undefined;
   const damageTypeWord = match[4];
 
-  // Convert percentage to decimal
   const value = parseFloat(percentageStr) / 100;
 
-  // Determine addn flag
   const addn = hasAdditional;
 
-  // Determine modType
   let modType: DmgModType = "global";
   if (damageTypeWord) {
     const lowerDamageType = damageTypeWord.toLowerCase();
     if (isValidDmgModType(lowerDamageType)) {
       modType = lowerDamageType;
     } else {
-      // Invalid damage type - not a valid DmgPct affix
       return undefined;
     }
   }
@@ -72,21 +67,17 @@ const parseCritRatingPct = (
     return undefined;
   }
 
-  // Extract components
   const percentageStr = match[2];
   const modTypeWord = match[3];
 
-  // Convert percentage to decimal
   const value = parseFloat(percentageStr) / 100;
 
-  // Determine modType
   let modType: CritRatingModType = "global";
   if (modTypeWord) {
     const lowerModType = modTypeWord.toLowerCase();
     if (isValidCritRatingModType(lowerModType)) {
       modType = lowerModType;
     } else {
-      // Invalid mod type - not a valid CritRatingPct affix
       return undefined;
     }
   }
@@ -101,7 +92,6 @@ const parseCritRatingPct = (
 export const parseAffix = (input: string): Affix | undefined => {
   const normalized = input.trim();
 
-  // Try each parser in order
   const parsers = [
     parseDmgPct,
     parseCritRatingPct,
