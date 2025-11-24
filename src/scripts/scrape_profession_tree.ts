@@ -11,6 +11,7 @@ interface TalentNode {
   position: { x: number; y: number };
   prerequisite?: { x: number; y: number };
   maxPoints: number;
+  iconName: string;
 }
 
 interface NodeData {
@@ -21,6 +22,7 @@ interface NodeData {
   type: "micro" | "medium" | "legendary";
   rawAffix: string;
   maxPoints: number;
+  iconName: string;
 }
 
 const TALENT_TYPE_MAP: Record<string, "micro" | "medium" | "legendary"> = {
@@ -121,6 +123,12 @@ const scrapeProfessionTree = async (
       const tooltipHtml = $image.attr("data-bs-title") || "";
       const rawAffix = parseAffix(tooltipHtml);
 
+      // Extract icon name from href attribute
+      const href =
+        $image.attr("xlink:href") || $image.attr("href") || "";
+      const iconMatch = href.match(/\/(\w+)_64\.webp$/);
+      const iconName = iconMatch ? iconMatch[1] : "";
+
       // Find level-up time text element
       // The text is positioned slightly offset from the circle center
       const textX = cx + 22; // Observed offset
@@ -143,6 +151,7 @@ const scrapeProfessionTree = async (
         type,
         rawAffix,
         maxPoints,
+        iconName,
       });
     });
 
@@ -201,6 +210,7 @@ const scrapeProfessionTree = async (
         position: { x: node.gridX, y: node.gridY },
         ...(prerequisite && { prerequisite }),
         maxPoints: node.maxPoints,
+        iconName: node.iconName,
       };
     });
 
