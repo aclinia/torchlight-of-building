@@ -45,3 +45,14 @@ For now, implement a RawTalentPage interface, which stores
 Actual TODOs:
 Maybe have separate mod union for micro/medium talent mods, so that they're easily scalable with points?
 Input crafting options from tlidb (how to handle and where to put affix ranges). Probably just a list per equipment type or whatever?
+
+
+I want you to implement the frontend for the talent page.
+Some talent page rules and information:
+* A player may select up to four talent trees
+* The first talent tree must be one of the god or goddess trees, and none of the remaining 3 may be god or goddess trees
+* Each talent tree can be thought of as a 7 column, 5 row blank grid. 
+* Each column requires at least (column * 3) points allocated total in the columns before it
+  * For example, the first column requires 0 points allocated, while the 4th column will require 9 points allocated in the tree
+* If a node has a pre-requisite, then the pre-requisite node must have all points allocated up to its max points
+* Each talent tree's data can be found in data/*_tree.json

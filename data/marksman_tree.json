@@ -8,7 +8,8 @@
         "x": 0,
         "y": 0
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "DmgExtra"
     },
     {
       "nodeType": "medium",
@@ -21,7 +22,8 @@
         "x": 0,
         "y": 0
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "DmgAll"
     },
     {
       "nodeType": "micro",
@@ -30,7 +32,8 @@
         "x": 2,
         "y": 0
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "DmgExtra"
     },
     {
       "nodeType": "medium",
@@ -43,7 +46,8 @@
         "x": 2,
         "y": 0
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Agi"
     },
     {
       "nodeType": "legendary",
@@ -56,7 +60,8 @@
         "x": 3,
         "y": 0
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "DmgAll"
     },
     {
       "nodeType": "legendary",
@@ -69,7 +74,8 @@
         "x": 5,
         "y": 1
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Crossbow02"
     },
     {
       "nodeType": "micro",
@@ -78,7 +84,8 @@
         "x": 1,
         "y": 1
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "CastSpeed"
     },
     {
       "nodeType": "medium",
@@ -91,7 +98,8 @@
         "x": 1,
         "y": 1
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Agi"
     },
     {
       "nodeType": "medium",
@@ -104,7 +112,8 @@
         "x": 2,
         "y": 0
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Crit02"
     },
     {
       "nodeType": "legendary",
@@ -117,7 +126,8 @@
         "x": 3,
         "y": 1
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Crit03"
     },
     {
       "nodeType": "micro",
@@ -126,7 +136,8 @@
         "x": 5,
         "y": 1
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "DmgExtra"
     },
     {
       "nodeType": "legendary",
@@ -139,7 +150,8 @@
         "x": 5,
         "y": 1
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Bow01"
     },
     {
       "nodeType": "micro",
@@ -148,7 +160,8 @@
         "x": 0,
         "y": 2
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "AtkSpeed"
     },
     {
       "nodeType": "medium",
@@ -161,7 +174,8 @@
         "x": 0,
         "y": 2
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Dagger03"
     },
     {
       "nodeType": "micro",
@@ -170,7 +184,8 @@
         "x": 2,
         "y": 2
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Es"
     },
     {
       "nodeType": "medium",
@@ -183,7 +198,8 @@
         "x": 2,
         "y": 2
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "DmgPhys"
     },
     {
       "nodeType": "micro",
@@ -192,7 +208,8 @@
         "x": 4,
         "y": 2
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Es"
     },
     {
       "nodeType": "legendary",
@@ -205,7 +222,8 @@
         "x": 4,
         "y": 2
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "legendary",
@@ -218,7 +236,8 @@
         "x": 5,
         "y": 1
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Crit04"
     },
     {
       "nodeType": "micro",
@@ -227,7 +246,8 @@
         "x": 1,
         "y": 3
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "medium",
@@ -240,7 +260,8 @@
         "x": 1,
         "y": 3
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "micro",
@@ -249,7 +270,8 @@
         "x": 3,
         "y": 3
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "legendary",
@@ -262,7 +284,8 @@
         "x": 3,
         "y": 3
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "micro",
@@ -271,7 +294,8 @@
         "x": 5,
         "y": 3
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Area"
     },
     {
       "nodeType": "legendary",
@@ -284,7 +308,8 @@
         "x": 5,
         "y": 3
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "DmgLightning"
     },
     {
       "nodeType": "micro",
@@ -293,7 +318,8 @@
         "x": 0,
         "y": 4
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "medium",
@@ -306,7 +332,8 @@
         "x": 0,
         "y": 4
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Evasion"
     },
     {
       "nodeType": "micro",
@@ -315,7 +342,8 @@
         "x": 2,
         "y": 4
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Defence01"
     },
     {
       "nodeType": "medium",
@@ -328,7 +356,8 @@
         "x": 2,
         "y": 4
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Defence01"
     },
     {
       "nodeType": "micro",
@@ -337,7 +366,8 @@
         "x": 5,
         "y": 4
       },
-      "maxPoints": 3
+      "maxPoints": 3,
+      "iconName": "Agi"
     },
     {
       "nodeType": "legendary",
@@ -350,7 +380,8 @@
         "x": 5,
         "y": 4
       },
-      "maxPoints": 1
+      "maxPoints": 1,
+      "iconName": "DmgLightning"
     }
   ]
 }
