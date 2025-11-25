@@ -31,6 +31,8 @@ Top-level state structure:
 ```typescript
 interface RawLoadout {
   equipmentPage: RawGearPage;
+  talentPage: RawTalentPage;
+  skillPage: RawSkillPage;
 }
 ```
 
@@ -38,6 +40,7 @@ interface RawLoadout {
 
 - LocalStorage key: `"tli-planner-loadout"`
 - Serialized as JSON
+- No backwards compatibility required - old saves can be invalidated when schema changes
 
 ### RawGearPage
 
@@ -311,6 +314,47 @@ interface RawTalentPage {
   tree4: RawTalentTree; // Additional tree
 }
 ```
+
+### RawSkillPage
+
+Skill selections for a build:
+
+```typescript
+interface RawSkillPage {
+  skills: RawSkill[]; // 0-4 skills
+}
+
+interface RawSkill {
+  skill: Skill; // Skill name (type-safe)
+  enabled: boolean; // Toggle on/off
+}
+```
+
+**Key points:**
+
+- Up to 4 skills can be selected
+- Each skill has an independent enabled state
+- Order is preserved (array-based structure)
+- Skill type is derived from available skills in [src/tli/offense.ts](../src/tli/offense.ts)
+
+**Skill Type Definition:**
+
+The `Skill` type follows the "single source of truth" pattern - it's derived from the actual skill configurations:
+
+```typescript
+// In src/tli/offense.ts
+const offensiveSkillConfs = [
+  { skill: "[Test] Simple Attack", ... },
+  { skill: "Berserking Blade", ... },
+] as const satisfies readonly SkillConfiguration[];
+
+export type Skill = (typeof offensiveSkillConfs)[number]["skill"];
+export const AVAILABLE_SKILLS = offensiveSkillConfs.map((c) => c.skill);
+```
+
+To add a new skill:
+1. Add entry to `offensiveSkillConfs` array in [src/tli/offense.ts](../src/tli/offense.ts)
+2. Skill type and UI dropdown automatically update via `AVAILABLE_SKILLS`
 
 ### Talent Tree Utilities
 
