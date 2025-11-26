@@ -1,0 +1,1 @@
+Update claude.md or supporting documentation with anything from this session that would be especially useful to you for future sessions as an agentic coding AI. Be sure to remain consise for the purposes of tokenization costs, and organize or refactor documents as you see fit, such that larger pieces of information are only pulled in for tasks that need them.
