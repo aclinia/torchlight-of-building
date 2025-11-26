@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-40)`% Cooldown Recovery Speed for Mobility Skills",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-50)`% gear Evasion",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -125,7 +117,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+1`Mobility Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -136,7 +127,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Has Hasten",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -147,7 +137,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -158,7 +147,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Regenerates `1`% Mana per second while moving",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",
@@ -169,7 +157,6 @@ export const BOOTS_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Regenerates `1`% of Life per second while moving",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Corrosion Base",

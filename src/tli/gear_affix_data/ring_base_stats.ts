@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const RING_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+11`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+11`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+11`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+11`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -134,7 +122,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -145,7 +132,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -156,7 +142,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+4`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -167,7 +152,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+4`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -178,7 +162,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+4`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -189,7 +172,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+4`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -200,7 +182,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+6`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -211,7 +192,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+6`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -222,7 +202,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+6`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -233,7 +212,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+6`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -244,7 +222,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+9`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -255,7 +232,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+9`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",
@@ -266,7 +242,6 @@ export const RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+9`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Stats",

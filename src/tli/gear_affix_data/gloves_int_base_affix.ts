@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -40,7 +38,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
       "`+(5-7)`% Armor DMG Mitigation Penetration<> `+(5-7)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -56,7 +53,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -78,7 +74,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
       "`+(6-8)`% Elemental and Erosion Resistance Penetration<> `+(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -94,7 +89,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -105,7 +99,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+100`% chance to Paralyze the target on hit",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -121,7 +114,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-20)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -137,7 +129,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -153,7 +144,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -169,7 +159,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -185,7 +174,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Skill Area",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -201,7 +189,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(4-6)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -217,7 +204,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -233,7 +219,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -249,7 +234,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",
@@ -265,7 +249,6 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Base Affix",

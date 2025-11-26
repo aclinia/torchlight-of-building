@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
       "`+15`% Armor Effective Rate for Non-Physical Damage<> `+2400`Gear Armor",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -26,7 +24,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Block Ratio Upper limit",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -39,7 +36,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
       "All Passive Skill slots are supported by Lv. `30`Precise: Restrain",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -52,7 +48,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
       "Converts `25`% of Physical Damage taken to random Elemental Damage<> `-25`% Defense",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -65,7 +60,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
       "Energy Shield starts to Charge when Blocking<> `+40`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -76,7 +70,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Immune to crowd control effects",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -89,7 +82,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
       "Spell Damage will not further reduce Evasion by default<> `+1680`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -100,7 +92,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+10`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -111,7 +102,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+12`% Movement Speed",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -122,7 +112,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+15`% Max Life and Max Mana",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -133,7 +122,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+40`% Defense from Shield",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -144,7 +132,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+40`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -155,7 +142,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -166,7 +152,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% all stats",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -177,7 +162,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+80`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",
@@ -188,7 +172,6 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Restores `3`% Energy Shield on Block. Interval: 0.3s",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Tower Sequence",

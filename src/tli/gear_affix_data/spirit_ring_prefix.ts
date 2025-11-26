@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SPIRIT_RING_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(18-22)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -35,7 +33,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
       "`+(21-26)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -47,7 +44,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
       "Max Agility Blessing Stacks `+1`<> `+5`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -58,7 +54,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`<> `+5`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -70,7 +65,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
       "Max Tenacity Blessing Stacks `+1`<> `+5`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -86,7 +80,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(13-17)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -103,7 +96,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
       "`+(15-20)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -114,7 +106,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -125,7 +116,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -136,7 +126,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -152,7 +141,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Dexterity",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -168,7 +156,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Intelligence",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -184,7 +171,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Strength",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -204,7 +190,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(54-56)`- `(71-76)`Fire Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -224,7 +209,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(55-57)`- `(73-75)`Cold Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -244,7 +228,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(58-60)`- `(71-73)`Erosion Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -264,7 +247,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(58-60)`- `(71-73)`Physical Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -284,7 +266,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(6-8)`- `(123-125)`Lightning Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -300,7 +281,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Dexterity",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -316,7 +296,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Intelligence",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -332,7 +311,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Strength",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -352,7 +330,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(4-6)`- `(94-96)`Lightning Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -372,7 +349,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(42-44)`- `(54-59)`Fire Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -392,7 +368,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(42-44)`- `(56-58)`Cold Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -412,7 +387,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(44-46)`- `(54-56)`Erosion Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -432,7 +406,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "Adds `(44-46)`- `(54-56)`Physical Damage to Minions",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -448,7 +421,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -464,7 +436,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(17-24)`% Life Regeneration Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -480,7 +451,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -496,7 +466,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Minion Life Regeneration Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -512,7 +481,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(319-455)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -528,7 +496,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Armor",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -544,7 +511,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Evasion",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -560,7 +526,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -576,7 +541,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(11-16)`% Life Regeneration Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -592,7 +556,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(155-220)`Max Life",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -608,7 +571,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Minion Life Regeneration Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -624,7 +586,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(245-350)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -640,7 +601,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(27-36)`% Armor",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -656,7 +616,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(27-36)`% Evasion",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
@@ -672,7 +631,6 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     rawAffix: "`+(52-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",

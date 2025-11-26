@@ -1,5 +1,6 @@
 import { readFile, writeFile, mkdir } from "fs/promises";
 import { join } from "path";
+import { execSync } from "child_process";
 
 interface RawAffix {
   equipmentSlot: string;
@@ -16,7 +17,6 @@ interface ParsedAffix {
 }
 
 interface BaseGearAffix {
-  equipmentTypeKey: string;
   equipmentSlot: string;
   equipmentType: string;
   affixType: string;
@@ -97,33 +97,6 @@ export type ${typeName} = (typeof ${constName})[number];
 `;
 };
 
-const generateIndexFile = (fileKeys: string[]): string => {
-  const imports = fileKeys
-    .map((key) => {
-      const constName = key.toUpperCase() + "_AFFIXES";
-      const typeName = toPascalCase(key) + "Affix";
-      return `import { ${constName}, ${typeName} } from "./${key}";`;
-    })
-    .join("\n");
-
-  const typeUnion = fileKeys
-    .map((key) => toPascalCase(key) + "Affix")
-    .join("\n  | ");
-
-  const exports = fileKeys.map((key) => `export * from "./${key}";`).join("\n");
-
-  return `${imports}
-
-export type GearAffix =
-  | ${typeUnion};
-
-export * from "./types";
-export * from "./craft";
-
-${exports}
-`;
-};
-
 const generateAllAffixesFile = (fileKeys: string[]): string => {
   const imports = fileKeys
     .map((key) => {
@@ -145,27 +118,36 @@ ${arraySpread}
 };
 
 const generateTypesFile = (
-  equipmentTypeKeys: string[],
+  equipmentSlots: string[],
+  equipmentTypes: string[],
   affixTypes: string[],
+  craftingPools: string[],
 ): string => {
   return `import { DmgRange } from "../core";
 
 export type ValueRange = DmgRange;
 
+export const EQUIPMENT_SLOTS = ${JSON.stringify(equipmentSlots.sort(), null, 2)} as const;
+
+export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
+
+export const EQUIPMENT_TYPES = ${JSON.stringify(equipmentTypes.sort(), null, 2)} as const;
+
+export type EquipmentType = (typeof EQUIPMENT_TYPES)[number];
+
 export const AFFIX_TYPES = ${JSON.stringify(affixTypes, null, 2)} as const;
 
 export type AffixType = (typeof AFFIX_TYPES)[number];
 
-export const EQUIPMENT_TYPE_KEYS = ${JSON.stringify(equipmentTypeKeys.sort(), null, 2)} as const;
+export const CRAFTING_POOLS = ${JSON.stringify(craftingPools.sort(), null, 2)} as const;
 
-export type EquipmentTypeKey = (typeof EQUIPMENT_TYPE_KEYS)[number];
+export type CraftingPool = (typeof CRAFTING_POOLS)[number];
 
 export interface BaseGearAffix {
-  equipmentTypeKey: EquipmentTypeKey;
-  equipmentSlot: string;
-  equipmentType: string;
+  equipmentSlot: EquipmentSlot;
+  equipmentType: EquipmentType;
   affixType: AffixType;
-  craftingPool: string;
+  craftingPool: CraftingPool;
   tier: string;
   template: string;
   valueRanges: ValueRange[];
@@ -242,20 +224,22 @@ const main = async (): Promise<void> => {
 
   // Group by combination of equipmentType + affixType
   const grouped = new Map<string, BaseGearAffix[]>();
-  const equipmentTypeKeysSet = new Set<string>();
+  const equipmentSlotsSet = new Set<string>();
+  const equipmentTypesSet = new Set<string>();
   const affixTypesSet = new Set<string>();
+  const craftingPoolsSet = new Set<string>();
 
   for (const raw of rawData) {
-    const equipmentTypeKey = normalizeEquipmentType(raw.equipmentType);
     const fileKey = normalizeFileKey(raw.equipmentType, raw.affixType);
 
-    equipmentTypeKeysSet.add(equipmentTypeKey);
+    equipmentSlotsSet.add(raw.equipmentSlot);
+    equipmentTypesSet.add(raw.equipmentType);
     affixTypesSet.add(raw.affixType);
+    craftingPoolsSet.add(raw.craftingPool);
 
     const { template, valueRanges } = parseAffixString(raw.affix);
 
     const affixEntry: BaseGearAffix = {
-      equipmentTypeKey,
       equipmentSlot: raw.equipmentSlot,
       equipmentType: raw.equipmentType,
       affixType: raw.affixType,
@@ -294,8 +278,10 @@ const main = async (): Promise<void> => {
   // Generate types.ts
   const typesPath = join(outDir, "types.ts");
   const typesContent = generateTypesFile(
-    Array.from(equipmentTypeKeysSet),
+    Array.from(equipmentSlotsSet),
+    Array.from(equipmentTypesSet),
     Array.from(affixTypesSet),
+    Array.from(craftingPoolsSet),
   );
   await writeFile(typesPath, typesContent, "utf-8");
   console.log(`✓ Generated types.ts`);
@@ -305,12 +291,6 @@ const main = async (): Promise<void> => {
   const craftContent = generateCraftFile();
   await writeFile(craftPath, craftContent, "utf-8");
   console.log(`✓ Generated craft.ts`);
-
-  // Generate index.ts
-  const indexPath = join(outDir, "index.ts");
-  const indexContent = generateIndexFile(fileKeys.sort());
-  await writeFile(indexPath, indexContent, "utf-8");
-  console.log(`✓ Generated index.ts`);
 
   // Generate all_affixes.ts
   const allAffixesPath = join(outDir, "all_affixes.ts");
@@ -322,6 +302,9 @@ const main = async (): Promise<void> => {
   console.log(
     `Generated ${grouped.size} affix files with ${rawData.length} total affixes`,
   );
+
+  console.log("\n🎨 Running formatter...");
+  execSync("pnpm format", { stdio: "inherit" });
 };
 
 if (require.main === module) {

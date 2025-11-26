@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const DAGGER_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -20,7 +19,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
       "Wilted enemies defeated by you will explode, dealing Secondary Erosion Damage equal to `(5-10)`% of their Max Life to enemies within a 5m radius",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -36,7 +34,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`(5-8)`% chance to inflict `1`additional stacks of Wilt",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -52,7 +49,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -68,7 +64,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-30)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -84,7 +79,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -100,7 +94,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -116,7 +109,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-10)`Affliction inflicted per second",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",
@@ -132,7 +124,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Corrosion Base",

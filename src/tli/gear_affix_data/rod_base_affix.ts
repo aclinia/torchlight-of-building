@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ROD_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -13,7 +12,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -29,7 +27,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-7)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -45,7 +42,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -58,7 +54,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
       "`+100`% chance to gain 1 stack of Focus Blessing when casting a Summon Skill. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -71,7 +66,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
       "`+100`% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -87,7 +81,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Minion Damage penetrates `(6-8)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -103,7 +96,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -119,7 +111,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -135,7 +126,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -151,7 +141,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -167,7 +156,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -187,7 +175,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-2)`- `(28-32)`Lightning Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -207,7 +194,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Cold Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -227,7 +213,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Physical Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",
@@ -247,7 +232,6 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(11-13)`- `(15-18)`Erosion Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Base Affix",

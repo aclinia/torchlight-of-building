@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SCEPTER_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-16)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-32)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-40)`% Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -100,7 +94,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
       "`+(5-8)`% chance to trigger the Main Spell Skill 1 additional time when using it",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -116,7 +109,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-10)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",
@@ -132,7 +124,6 @@ export const SCEPTER_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(5-8)`% of Elemental Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Corrosion Base",

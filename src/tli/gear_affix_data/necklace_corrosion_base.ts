@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const NECKLACE_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation for Charged Flames",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation for Deep Pain",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation for Electric Conversion",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation for Frigid Domain",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation for Weapon Amplification",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Skill Effect Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-40)`% Skill Area",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -146,7 +137,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(60-80)`Attack and Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -162,7 +152,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-10)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -173,7 +162,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to Ignite<> Immune to Numbed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -184,7 +172,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to Frostbite<> Immune to Numbed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
@@ -195,7 +182,6 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to Elemental Ailments",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",

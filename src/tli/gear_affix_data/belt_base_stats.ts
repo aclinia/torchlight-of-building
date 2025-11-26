@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BELT_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+10`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+110`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+110`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+140`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+15`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+35`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+50`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+65`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const BELT_BASE_STATS_AFFIXES = [
     rawAffix: "`+80`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Base Stats",

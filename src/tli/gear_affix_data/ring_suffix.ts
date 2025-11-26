@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const RING_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -23,7 +22,6 @@ export const RING_SUFFIX_AFFIXES = [
       "`+(13-16)`% Elemental Resistance<> `+(13-16)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -39,7 +37,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-30)`% additional damage for Main-Hand Weapons",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -55,7 +52,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(27-34)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -71,7 +67,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -87,7 +82,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-54)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -103,7 +97,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Fervor effect",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -119,7 +112,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -135,7 +127,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-23)`% additional damage for Main-Hand Weapons",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -151,7 +142,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-26)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -167,7 +157,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -183,7 +172,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(28-36)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -199,7 +187,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Fervor effect",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -215,7 +202,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -235,7 +221,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(9-12)`% Elemental Resistance<> `+(9-12)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -251,7 +236,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% Max Mana",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -267,7 +251,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -283,7 +266,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(46-65)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -299,7 +281,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Terra Charge Recovery Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -315,7 +296,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -331,7 +311,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -349,7 +328,6 @@ export const RING_SUFFIX_AFFIXES = [
       "`+1`Combo Points gained from Combo Starters<> `+(3-5)`% additional damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -362,7 +340,6 @@ export const RING_SUFFIX_AFFIXES = [
       "`100`% chance to gain a Barrier for every `5`m you move<> `+25`% Barrier Shield",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -380,7 +357,6 @@ export const RING_SUFFIX_AFFIXES = [
       "Inflicts `(6-8)`Frostbite Rating to Frostbitten enemies every second",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -396,7 +372,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% Max Mana",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -412,7 +387,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -428,7 +402,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-50)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -444,7 +417,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -460,7 +432,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-50)`% Terra Charge Recovery Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -476,7 +447,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -494,7 +464,6 @@ export const RING_SUFFIX_AFFIXES = [
       "`+1`Combo Points gained from Combo Starters<> `+(1-2)`% additional damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -505,7 +474,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`100`% chance to gain a Barrier for every `5`m you move",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -517,7 +485,6 @@ export const RING_SUFFIX_AFFIXES = [
       "Inflicts `5`Frostbite Rating to Frostbitten enemies every second",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -533,7 +500,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(121-156)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -549,7 +515,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -565,7 +530,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -581,7 +545,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -597,7 +560,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -613,7 +575,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-48)`% Frostbite inflicted",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -629,7 +590,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -645,7 +605,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -661,7 +620,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -677,7 +635,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",
@@ -693,7 +650,6 @@ export const RING_SUFFIX_AFFIXES = [
     rawAffix: "`+(27-37)`% Frostbite inflicted",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Suffix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const DAGGER_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `+(10-15)`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -77,7 +72,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "Adds `23`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -88,7 +82,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `-5`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -104,7 +97,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -120,7 +112,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -136,7 +127,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -147,7 +137,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "Adds `19`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -163,7 +152,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(166-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -184,7 +172,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
       "`+(33-47)`% Attack and Cast Speed<> `+(33-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -200,7 +187,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(47-64)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -216,7 +202,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -232,7 +217,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(74-94)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -248,7 +232,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -264,7 +247,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -280,7 +262,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(128-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -301,7 +282,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -317,7 +297,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -333,7 +312,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -349,7 +327,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -365,7 +342,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(57-72)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -381,7 +357,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -397,7 +372,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -413,7 +387,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -429,7 +402,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -445,7 +417,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -461,7 +432,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -477,7 +447,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-41)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -493,7 +462,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -509,7 +477,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -525,7 +492,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -541,7 +507,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",
@@ -557,7 +522,6 @@ export const DAGGER_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "dagger",
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
     affixType: "Suffix",

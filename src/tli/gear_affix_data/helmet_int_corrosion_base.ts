@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const HELMET_INT_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`(-50--30)`% Cursed Effect",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Life",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-50)`% gear Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -109,7 +102,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to Blinding<> Immune to Paralysis",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -120,7 +112,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",
@@ -138,7 +129,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES = [
       "Triggers Lv. `(15-20)`Timid Curse upon inflicting damage. Cooldown: `0.3`s",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Corrosion Base",

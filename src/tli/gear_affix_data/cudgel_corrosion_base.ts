@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CUDGEL_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(1-2)`Support Skill Level",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(18-24)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(35-45)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(40-48)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-60)`% Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-12)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-15)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-12)`% of Elemental Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "cudgel",
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
     affixType: "Corrosion Base",

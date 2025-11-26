@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const RING_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(18-20)`% of Physical Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -34,7 +32,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(18-20)`% of Physical Damage as Fire Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -50,7 +47,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(18-20)`% of Physical Damage as Lightning Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -66,7 +62,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(18-20)`% of Physical Damage to Cold Damage",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -77,7 +72,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to curse",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -88,7 +82,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -99,7 +92,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -110,7 +102,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -123,7 +114,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Blind Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -136,7 +126,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Timid Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -149,7 +138,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Entangled Pain Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -165,7 +153,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(11-15)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -181,7 +168,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Fervor effect",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -199,7 +185,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
       "`+(20-25)`% chance to launch one more wave when casting a Barrage Skill",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -210,7 +195,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Gains Attack Aggression when casting an Attack Skill",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -221,7 +205,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Gains Spell Aggression when casting a Spell Skill",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -232,7 +215,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to Wilt",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -243,7 +225,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to Trauma",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -259,7 +240,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -275,7 +255,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -291,7 +270,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -307,7 +285,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -323,7 +300,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -339,7 +315,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -355,7 +330,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -371,7 +345,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",
@@ -387,7 +360,6 @@ export const RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "ring",
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Base Affix",

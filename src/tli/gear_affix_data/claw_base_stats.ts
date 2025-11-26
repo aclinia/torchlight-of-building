@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CLAW_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -15,7 +14,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`10`- `10`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -28,7 +26,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`109`- `109`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -41,7 +38,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`13`- `13`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -54,7 +50,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`130`- `130`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -67,7 +62,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`142`- `142`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -80,7 +74,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`154`- `154`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -93,7 +86,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`16`- `16`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -106,7 +98,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`178`- `178`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -119,7 +110,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`20`- `20`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -132,7 +122,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`25`- `25`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -145,7 +134,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`30`- `30`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -158,7 +146,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`35`- `35`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -171,7 +158,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`41`- `41`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -184,7 +170,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`49`- `49`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -197,7 +182,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`57`- `57`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -209,7 +193,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`6`- `6`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -221,7 +204,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`7`- `7`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -234,7 +216,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`73`- `73`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",
@@ -246,7 +227,6 @@ export const CLAW_BASE_STATS_AFFIXES = [
       "`8`- `8`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Base Stats",

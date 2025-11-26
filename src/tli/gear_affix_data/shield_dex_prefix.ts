@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_DEX_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -24,7 +23,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
       "`+(26-33)`% Armor DMG Mitigation Penetration<> `+(26-33)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -46,7 +44,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
       "`+(29-39)`% Elemental and Erosion Resistance Penetration<> Minion Damage penetrates `(29-39)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -62,7 +59,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`Active Skill Level",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -84,7 +80,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
       "`+(19-25)`% Armor DMG Mitigation Penetration<> `+(19-25)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -106,7 +101,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
       "`+(22-30)`% Elemental and Erosion Resistance Penetration<> Minion Damage penetrates `(22-30)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -117,7 +111,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+3`Active Skill Level",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -133,7 +126,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% Block Ratio",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -149,7 +141,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -165,7 +156,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Dexterity",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -181,7 +171,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Intelligence",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -197,7 +186,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Strength",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -213,7 +201,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% Block Ratio",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -229,7 +216,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -245,7 +231,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Dexterity",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -261,7 +246,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Intelligence",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -277,7 +261,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Strength",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -293,7 +276,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(-15--13)`% additional Physical Damage taken",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -313,7 +295,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% damage<> `+(109-140)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -329,7 +310,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(20-25)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -345,7 +325,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(331-429)`Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -361,7 +340,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(4321-5616)`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -377,7 +355,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(-12--10)`% additional Physical Damage taken",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -393,7 +370,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(14-19)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -409,7 +385,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(232-330)`Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",
@@ -425,7 +400,6 @@ export const SHIELD_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(3025-4320)`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Prefix",

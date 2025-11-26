@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_DEX_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -15,7 +14,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "`-45`% additional Damage Over Time taken when having at least `50000`Evasion",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -31,7 +29,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(21-26)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -47,7 +44,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% additional Max Life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -65,7 +61,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "`+(31-40)`% Spell Burst Charge Speed<> `+10`% chance to immediately gain `1`stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -81,7 +76,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(31-40)`% chance to avoid Spell Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -97,7 +91,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`70`% chance to gain Blur per `(5-10)`m you move",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -114,7 +107,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "Converts `(16-20)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -130,7 +122,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "Converts `(36-45)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -146,7 +137,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "Triggers Lv. `(11-20)`Aim while standing still. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -159,7 +149,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "`-40`% additional Damage Over Time taken when having at least `50000`Evasion",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -175,7 +164,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(15-20)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -191,7 +179,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% additional Max Life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -209,7 +196,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "`+(21-30)`% Spell Burst Charge Speed<> `+10`% chance to immediately gain `1`stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -225,7 +211,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(26-30)`% chance to avoid Spell Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -241,7 +226,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`50`% chance to gain Blur per `(5-10)`m you move",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -258,7 +242,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
       "Converts `(12-15)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -274,7 +257,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -290,7 +272,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "Triggers Lv. `(6-10)`Aim while standing still. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -306,7 +287,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -322,7 +302,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -333,7 +312,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -344,7 +322,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -355,7 +332,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -366,7 +342,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -377,7 +352,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -388,7 +362,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+2`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -404,7 +377,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -420,7 +392,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(33-45)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -431,7 +402,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -442,7 +412,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -453,7 +422,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -464,7 +432,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -475,7 +442,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -486,7 +452,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+1`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -502,7 +467,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -518,7 +482,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -534,7 +497,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(2881-3744)`gear Evasion",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -550,7 +512,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -566,7 +527,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -582,7 +542,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -598,7 +557,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(154-220)`Max Life",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -614,7 +572,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(2017-2880)`gear Evasion",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -630,7 +587,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -646,7 +602,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",
@@ -662,7 +617,6 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "boots_dex",
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
     affixType: "Prefix",

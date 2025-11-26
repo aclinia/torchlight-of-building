@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BELT_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`(-18--16)`% additional damage taken at Low Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -36,7 +34,6 @@ export const BELT_PREFIX_AFFIXES = [
       "`+(386-500)`% Critical Strike Rating against Traumatized enemies<> `-30`% additional Hit Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -52,7 +49,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Deterioration Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -63,7 +59,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+1`Ignite limit<> `+5`% additional Ignite Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -74,7 +69,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Max Channeled Stacks `+2`",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -85,7 +79,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Min Channeled Stacks `+2`",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -101,7 +94,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`(-15--12)`% additional damage taken at Low Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -119,7 +111,6 @@ export const BELT_PREFIX_AFFIXES = [
       "`+(271-385)`% Critical Strike Rating against Traumatized enemies<> `-30`% additional Hit Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -135,7 +126,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Deterioration Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -146,7 +136,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+1`Ignite limit",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -157,7 +146,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Max Channeled Stacks `+1`",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -168,7 +156,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Min Channeled Stacks `+1`",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -184,7 +171,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -200,7 +186,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Defense",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -216,7 +201,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% Deterioration Chance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -232,7 +216,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Dexterity",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -248,7 +231,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Intelligence",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -264,7 +246,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Strength",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -280,7 +261,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Barrage Skills `+(26-32)`% damage increase per wave",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -298,7 +278,6 @@ export const BELT_PREFIX_AFFIXES = [
       "Gains a stack of Fortitude when using a Melee Skill<> `(-8--6)`% additional damage taken",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -314,7 +293,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -330,7 +308,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Defense",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -346,7 +323,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% Deterioration Chance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -362,7 +338,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Dexterity",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -378,7 +353,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Intelligence",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -394,7 +368,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Strength",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -410,7 +383,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "Barrage Skills `+(20-25)`% damage increase per wave",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -428,7 +400,6 @@ export const BELT_PREFIX_AFFIXES = [
       "Gains a stack of Fortitude when using a Melee Skill<> `(-5--3)`% additional damage taken",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -444,7 +415,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -460,7 +430,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -477,7 +446,6 @@ export const BELT_PREFIX_AFFIXES = [
       "`+(24-30)`% chance for Attacks to inflict Taunt on enemies on hit",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -493,7 +461,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(351-455)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -509,7 +476,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(66-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -525,7 +491,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -541,7 +506,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(155-220)`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -558,7 +522,6 @@ export const BELT_PREFIX_AFFIXES = [
       "`+(17-23)`% chance for Attacks to inflict Taunt on enemies on hit",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -574,7 +537,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(246-350)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -590,7 +552,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",
@@ -606,7 +567,6 @@ export const BELT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Prefix",

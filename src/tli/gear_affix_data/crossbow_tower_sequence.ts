@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "`+200`% Precise Projectiles Aura effect<> `-30`% additional Precise Projectiles Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -28,7 +26,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "`+30`% additional Deterioration Damage<> `10`% chance to inflict `2`additional stack(s) of Deterioration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -40,7 +37,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "`+50`% Elemental Damage for the gear<> `-25`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -53,7 +49,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "`+80`% gear Physical Damage<> `-20`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -64,7 +59,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Adds `1`- `7`Lightning Damage to Attacks per `10`Dexterity",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -75,7 +69,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Adds `3`- `5`Fire Damage to Attacks per `10`Strength",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -88,7 +81,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "Attack Horizontal Projectiles will return after reaching their max range and will hit enemies on their path again<> `-30`% additional Projectile Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -101,7 +93,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "Enemies have a `30`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -114,7 +105,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
       "Main Skill is supported by Lv. `25`Multiple Projectiles<> `+25`% additional Projectile Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -125,7 +115,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+12`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -136,7 +125,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% all stats",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -147,7 +135,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% additional damage for Weapons",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -158,7 +145,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Cold Penetration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -169,7 +155,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -180,7 +165,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Fire Penetration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -191,7 +175,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Lightning Penetration",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -202,7 +185,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+20`% additional damage on Critical Strike",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",
@@ -213,7 +195,6 @@ export const CROSSBOW_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+20`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Tower Sequence",

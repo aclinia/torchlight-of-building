@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const WAND_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -34,7 +32,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(28-39)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -50,7 +47,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -66,7 +62,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Jumps<> `+(12-16)`% additional damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -77,7 +72,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+3`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -93,7 +87,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(18-25)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -109,7 +102,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -125,7 +117,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Jumps<> `+(8-10)`% additional damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -136,7 +127,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+3`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -147,7 +137,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+2`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -163,7 +152,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -179,7 +167,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -195,7 +182,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -211,7 +197,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -227,7 +212,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -243,7 +227,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Dexterity",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -259,7 +242,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Intelligence",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -275,7 +257,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Strength",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -291,7 +272,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Dexterity",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -307,7 +287,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Intelligence",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -323,7 +302,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Strength",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -334,7 +312,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -345,7 +322,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -356,7 +332,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -367,7 +342,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -378,7 +352,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+2`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -394,7 +367,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -410,7 +382,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Max Mana",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -430,7 +401,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(82-84)`- `(106-113)`Fire Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -450,7 +420,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(83-85)`- `(110-112)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -470,7 +439,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(87-89)`- `(106-108)`Erosion Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -490,7 +458,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(87-89)`- `(106-108)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -510,7 +477,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(9-11)`- `(184-186)`Lightning Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -526,7 +492,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Max Mana",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -542,7 +507,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -562,7 +526,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(63-65)`- `(82-87)`Fire Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -582,7 +545,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(64-66)`- `(85-87)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -602,7 +564,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(67-69)`- `(82-84)`Erosion Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",
@@ -622,7 +583,6 @@ export const WAND_PREFIX_AFFIXES = [
     rawAffix: "Adds `(67-69)`- `(82-84)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Prefix",

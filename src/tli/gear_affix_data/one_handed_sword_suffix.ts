@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `+(10-15)`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -84,7 +79,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(55-65)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -101,7 +95,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+30`% Steep Strike chance.<> `+(23-29)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -112,7 +105,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Adds `30`% of Main-Hand Weapon Damage to Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -123,7 +115,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `-5`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -139,7 +130,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -155,7 +145,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -171,7 +160,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -189,7 +177,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(40-50)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -206,7 +193,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+23`% Steep Strike chance.<> `+(16-22)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -217,7 +203,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Adds `24`% of Main-Hand Weapon Damage to Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -233,7 +218,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(166-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -254,7 +238,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(33-47)`% Attack and Cast Speed<> `+(33-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -270,7 +253,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(47-64)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -286,7 +268,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -302,7 +283,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -318,7 +298,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -334,7 +313,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -350,7 +328,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(128-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -371,7 +348,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -387,7 +363,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -403,7 +378,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -419,7 +393,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(52-72)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -435,7 +408,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -451,7 +423,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -467,7 +438,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -483,7 +453,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -499,7 +468,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -515,7 +483,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -531,7 +498,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -547,7 +513,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-41)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -563,7 +528,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -579,7 +543,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -595,7 +558,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -611,7 +573,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",
@@ -627,7 +588,6 @@ export const ONE_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "one_handed_sword",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
     affixType: "Suffix",

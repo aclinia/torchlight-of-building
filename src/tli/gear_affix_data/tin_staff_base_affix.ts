@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -24,7 +23,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
       "Enemies have a `(20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `(15-25)`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -35,7 +33,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -46,7 +43,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -57,7 +53,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -73,7 +68,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -89,7 +83,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% additional damage when channeling",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -105,7 +98,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -121,7 +113,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -137,7 +128,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -153,7 +143,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -169,7 +158,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -185,7 +173,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -201,7 +188,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -221,7 +207,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-3)`- `(60-65)`Lightning Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -241,7 +226,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -261,7 +245,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Fire Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",
@@ -281,7 +264,6 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(25-30)`- `(33-38)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Base Affix",

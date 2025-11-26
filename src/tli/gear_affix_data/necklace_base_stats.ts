@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const NECKLACE_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+24`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+24`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+24`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -134,7 +122,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -145,7 +132,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -156,7 +142,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+5`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -167,7 +152,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+5`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -178,7 +162,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+5`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -189,7 +172,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+8`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",
@@ -200,7 +182,6 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     rawAffix: "`+8`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Base Stats",

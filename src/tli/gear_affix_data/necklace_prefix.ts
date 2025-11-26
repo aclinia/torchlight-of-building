@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const NECKLACE_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -13,7 +12,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "[Beacon] `+2`Max Spell Burst",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -29,7 +27,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "Multistrikes deal `(36-52)`% increasing damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -45,7 +42,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Deterioration Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -56,7 +52,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+3`Active Skill Level",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -67,7 +62,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+3`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -78,7 +72,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "Have Fervor<> `+5`% additional damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -94,7 +87,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "Multistrikes deal `(28-40)`% increasing damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -110,7 +102,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(1-2)`Active Skill Level",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -126,7 +117,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Deterioration Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -137,7 +127,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+1`Max Spell Burst",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -148,7 +137,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+2`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -159,7 +147,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "Have Fervor",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -175,7 +162,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Defense",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -191,7 +177,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Sealed Mana Compensation for Energy Fortress",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -207,7 +192,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Sealed Mana Compensation for Nimbleness",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -223,7 +207,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Sealed Mana Compensation for Steadfast",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -239,7 +222,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% Deterioration Chance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -255,7 +237,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(49-62)`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -271,7 +252,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -287,7 +267,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -303,7 +282,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -321,7 +299,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
       "Gains Attack Aggression when casting an Attack Skill<> `+(40-60)`% Attack Aggression Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -339,7 +316,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
       "Gains Spell Aggression when casting a Spell Skill<> `+(40-60)`% Spell Aggression Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -355,7 +331,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Defense",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -371,7 +346,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Sealed Mana Compensation for Energy Fortress",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -387,7 +361,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Sealed Mana Compensation for Nimbleness",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -403,7 +376,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Sealed Mana Compensation for Steadfast",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -419,7 +391,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% Deterioration Chance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -435,7 +406,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(35-48)`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -451,7 +421,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -467,7 +436,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -483,7 +451,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -501,7 +468,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
       "Gains Attack Aggression when casting an Attack Skill<> `+(10-30)`% Attack Aggression Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -519,7 +485,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
       "Gains Spell Aggression when casting a Spell Skill<> `+(10-30)`% Spell Aggression Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -535,7 +500,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -551,7 +515,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -567,7 +530,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(319-455)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -583,7 +545,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Armor",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -599,7 +560,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Evasion",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -615,7 +575,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(66-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -631,7 +590,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -647,7 +605,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(155-220)`Max Life",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -663,7 +620,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(245-350)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -679,7 +635,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(27-36)`% Armor",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -695,7 +650,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(27-36)`% Evasion",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -711,7 +665,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",
@@ -727,7 +680,6 @@ export const NECKLACE_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Prefix",

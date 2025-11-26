@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Multistrikes deal `(121-156)`% increasing damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -44,7 +42,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
       "`+(111-145)`% gear Physical Damage<> Adds `(69-71)`- `(85-87)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -60,7 +57,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(51-64)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -76,7 +72,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% additional Ignite Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -92,7 +87,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -103,7 +97,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+7`to Attack Skill Level",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -125,7 +118,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
       "Adds `(77-79)`- `(438-440)`Elemental Damage to the gear<> `-100`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -141,7 +133,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Multistrikes deal `(85-120)`% increasing damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -157,7 +148,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -173,7 +163,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% additional Ignite Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -189,7 +178,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -215,7 +203,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
       "`+(77-110)`% gear Physical Damage<> Adds `(53-55)`- `(65-67)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -226,7 +213,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+6`to Attack Skill Level",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -248,7 +234,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
       "Adds `(59-61)`- `(337-339)`Elemental Damage to the gear<> `-100`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -264,7 +249,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Dexterity",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -280,7 +264,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Intelligence",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -296,7 +279,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Strength",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -312,7 +294,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -328,7 +309,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(81-104)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -344,7 +324,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Dexterity",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -360,7 +339,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Intelligence",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -376,7 +354,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Strength",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -392,7 +369,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(49-80)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -408,7 +384,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -428,7 +403,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(198-200)`- `(256-270)`Fire Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -448,7 +422,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(200-202)`- `(266-268)`Cold Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -468,7 +441,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(214-216)`- `(252-254)`Erosion Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -488,7 +460,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(22-24)`- `(444-446)`Lightning Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -508,7 +479,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(93-95)`- `(113-115)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -521,7 +491,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
       "Reaps `(0.37-0.48)`s of Ignite Damage when dealing Damage Over Time. The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -537,7 +506,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -557,7 +525,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(152-154)`- `(197-208)`Fire Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -577,7 +544,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(154-156)`- `(204-206)`Cold Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -597,7 +563,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(165-167)`- `(193-195)`Erosion Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -617,7 +582,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(17-19)`- `(341-343)`Lightning Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",
@@ -637,7 +601,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(71-73)`- `(87-89)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Prefix",

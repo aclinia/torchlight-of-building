@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(4-5)`% Max Elemental and Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -35,7 +33,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
       "Converts `(12-15)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -51,7 +48,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -67,7 +63,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Dexterity",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -83,7 +78,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Intelligence",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -99,7 +93,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Strength",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -115,7 +108,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% additional damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -131,7 +123,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -147,7 +138,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -163,7 +153,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -179,7 +168,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -195,7 +183,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -211,7 +198,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -227,7 +213,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -243,7 +228,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",
@@ -259,7 +243,6 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Affix",

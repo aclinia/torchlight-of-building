@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -13,7 +12,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to curse",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -24,7 +22,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -35,7 +32,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -48,7 +44,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Blind Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -61,7 +56,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Timid Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -74,7 +68,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Entangled Pain Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -85,7 +78,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "+ `3`Command per second",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -101,7 +93,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(11-15)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -112,7 +103,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+32`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -123,7 +113,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to Wilt",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -134,7 +123,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "Immune to Trauma",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -150,7 +138,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -166,7 +153,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -182,7 +168,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -198,7 +183,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -214,7 +198,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -230,7 +213,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -246,7 +228,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -262,7 +243,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",
@@ -278,7 +258,6 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Minion Movement Speed, Attack Speed, and Cast Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Affix",

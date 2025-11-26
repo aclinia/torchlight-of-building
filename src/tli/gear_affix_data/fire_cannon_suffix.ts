@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const FIRE_CANNON_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`(61-78)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(106-137)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(96-120)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -61,7 +57,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "Adds `45`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -72,7 +67,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+2`<> `+10`% additional damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -88,7 +82,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`(43-60)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -104,7 +97,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(70-90)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -120,7 +112,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(75-105)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -131,7 +122,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "Adds `39`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -142,7 +132,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+2`<> `+1`% additional damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -158,7 +147,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(120-140)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -174,7 +162,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(151-195)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -190,7 +177,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -206,7 +192,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(328-468)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -222,7 +207,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -243,7 +227,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
       "`+(66-94)`% Attack and Cast Speed<> `+(66-94)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -259,7 +242,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(106-150)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -275,7 +257,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -291,7 +272,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(252-360)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -307,7 +287,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -328,7 +307,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
       "`+(51-72)`% Attack and Cast Speed<> `+(51-72)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -344,7 +322,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(90-110)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -360,7 +337,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -376,7 +352,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -392,7 +367,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -408,7 +382,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -424,7 +397,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Life Regain",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -440,7 +412,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -456,7 +427,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -472,7 +442,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -488,7 +457,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -504,7 +472,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",
@@ -520,7 +487,6 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Life Regain",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Suffix",

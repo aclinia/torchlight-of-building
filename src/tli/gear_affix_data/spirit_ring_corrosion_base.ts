@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% Max Life",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-6)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-8)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-8)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-10)`% Dexterity",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-10)`% Intelligence",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -146,7 +137,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-10)`% Strength",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -157,7 +147,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+5`% Movement Speed",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -168,7 +157,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+5`% XP earned",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",
@@ -179,7 +167,6 @@ export const SPIRIT_RING_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to Trauma<> Immune to Wilt",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Corrosion Base",

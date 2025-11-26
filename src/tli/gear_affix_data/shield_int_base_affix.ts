@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(4-5)`% Max Elemental and Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -34,7 +32,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "Converts `(12-15)`% of Physical Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -50,7 +47,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -66,7 +62,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Dexterity",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -82,7 +77,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Intelligence",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -98,7 +92,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(35-40)`Strength",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -114,7 +107,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% additional damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -130,7 +122,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -146,7 +137,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -162,7 +152,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -178,7 +167,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(4-6)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -194,7 +182,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -210,7 +197,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -226,7 +212,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -242,7 +227,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",
@@ -258,7 +242,6 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(8-10)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Base Affix",

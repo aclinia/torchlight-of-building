@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BELT_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-31)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Skill Effect Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(27-34)`% Wilt Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(27-34)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -82,7 +77,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -98,7 +92,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-54)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -116,7 +109,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "`+(40-50)`% chance to launch one more wave when casting a Barrage Skill",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -132,7 +124,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(17-24)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -148,7 +139,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Skill Effect Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -164,7 +154,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-26)`% Wilt Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -180,7 +169,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-26)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -196,7 +184,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -212,7 +199,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(28-36)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -230,7 +216,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "`+(30-37)`% chance to launch one more wave when casting a Barrage Skill",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -252,7 +237,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "`+(10-12)`% Elemental Resistance<> `+(12-15)`% chance to avoid Elemental Ailment",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -268,7 +252,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(13-16)`% Ailment Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -284,7 +267,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% Max Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -300,7 +282,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -316,7 +297,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(49-62)`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -332,7 +312,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -343,7 +322,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "Warcry is cast immediately<> `+2`Max Warcry Skill Charges",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -359,7 +337,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% Max Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -375,7 +352,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -391,7 +367,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-48)`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -407,7 +382,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -429,7 +403,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "`+(7-9)`% Elemental Resistance<> `+(12-15)`% chance to avoid Elemental Ailment",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -445,7 +418,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(8-12)`% Ailment Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -456,7 +428,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "Warcry is cast immediately<> `+1`Max Warcry Skill Charges",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -472,7 +443,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -488,7 +458,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -504,7 +473,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -520,7 +488,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -533,7 +500,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "Reaps `0.16`s of Damage Over Time when dealing Trauma Damage. The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -546,7 +512,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "Reaps `0.16`s of Damage Over Time when inflicting Wilt . The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -559,7 +524,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "Reaps `0.16`s of Damage Over Time when inflicting Ignite . The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -575,7 +539,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -591,7 +554,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -607,7 +569,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -623,7 +584,6 @@ export const BELT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -636,7 +596,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "Reaps `0.12`s of Damage Over Time when dealing Trauma Damage. The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",
@@ -649,7 +608,6 @@ export const BELT_SUFFIX_AFFIXES = [
       "Reaps `0.12`s of Damage Over Time when inflicting Wilt . The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Suffix",

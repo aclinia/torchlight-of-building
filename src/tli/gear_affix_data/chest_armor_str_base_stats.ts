@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1091`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1309`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1571`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1885`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+196`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+2073`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+2240`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+274`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+384`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+538`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",
@@ -134,7 +122,6 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+699`Gear Armor",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Stats",

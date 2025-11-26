@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const HELMET_INT_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(10-11)`Support Skill Level",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% additional damage taken by Nearby enemies",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% Numbed Effect",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(50-68)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -82,7 +77,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -98,7 +92,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% additional damage taken by Nearby enemies",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -114,7 +107,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Numbed Effect",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -130,7 +122,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(30-45)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -146,7 +137,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -162,7 +152,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(6-9)`Support Skill Level",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -178,7 +167,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`(11-15)`% chance to gain a Barrier on defeat",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -194,7 +182,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(17-21)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -215,7 +202,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
       "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -231,7 +217,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -251,7 +236,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(49-62)`% Skill Area<> `+(49-62)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -267,7 +251,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -283,7 +266,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -299,7 +281,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -320,7 +301,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
       "`+(18-24)`% Attack and Cast Speed<> `+(18-24)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -336,7 +316,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -356,7 +335,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-48)`% Skill Area<> `+(35-48)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -372,7 +350,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -388,7 +365,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -404,7 +380,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(121-156)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -420,7 +395,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -436,7 +410,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -452,7 +425,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -468,7 +440,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -484,7 +455,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -500,7 +470,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(55-78)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -516,7 +485,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -532,7 +500,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -548,7 +515,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -564,7 +530,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -580,7 +545,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",
@@ -596,7 +560,6 @@ export const HELMET_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(42-60)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Suffix",

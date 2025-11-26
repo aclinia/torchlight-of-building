@@ -1,14 +1,16 @@
 import { expect, test, describe } from "vitest";
-import { GearAffix, BOOTS_DEX_BASE_AFFIX_AFFIXES } from "./index";
+import { BOOTS_DEX_BASE_AFFIX_AFFIXES } from "./boots_dex_base_affix";
 import { ALL_GEAR_AFFIXES } from "./all_affixes";
+import type { BaseGearAffix } from "./types";
 
-describe("GearAffix type system", () => {
+describe("BaseGearAffix type system", () => {
   test("BOOTS_DEX_BASE_AFFIX_AFFIXES has correct structure", () => {
     const firstAffix = BOOTS_DEX_BASE_AFFIX_AFFIXES[0];
-    expect(firstAffix).toHaveProperty("equipmentTypeKey");
     expect(firstAffix).toHaveProperty("equipmentSlot");
     expect(firstAffix).toHaveProperty("equipmentType");
     expect(firstAffix).toHaveProperty("affixType");
+    expect(firstAffix).toHaveProperty("craftingPool");
+    expect(firstAffix).toHaveProperty("tier");
     expect(firstAffix).toHaveProperty("template");
     expect(firstAffix).toHaveProperty("valueRanges");
     expect(firstAffix).toHaveProperty("rawAffix");
@@ -33,11 +35,11 @@ describe("GearAffix type system", () => {
   });
 
   test("type narrowing works with discriminated union", () => {
-    const affix: GearAffix = BOOTS_DEX_BASE_AFFIX_AFFIXES[0];
+    const affix: BaseGearAffix = BOOTS_DEX_BASE_AFFIX_AFFIXES[0];
 
-    // Type narrowing by equipmentTypeKey
-    if (affix.equipmentTypeKey === "boots_dex") {
-      expect(affix.equipmentType).toBe("Boots (DEX)");
+    // Type narrowing by equipmentType
+    if (affix.equipmentType === "Boots (DEX)") {
+      expect(affix.equipmentSlot).toBe("Boots");
     }
   });
 

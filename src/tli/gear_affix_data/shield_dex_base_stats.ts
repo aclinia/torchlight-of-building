@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_DEX_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1122`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1346`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1615`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+168`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1777`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1920`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+235`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+329`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+461`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+599`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const SHIELD_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+779`gear Evasion",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Base Stats",

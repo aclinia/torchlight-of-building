@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1091`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1309`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1571`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+1885`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+196`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+2073`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+2240`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+274`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+384`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+538`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     rawAffix: "`+699`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Base Stats",

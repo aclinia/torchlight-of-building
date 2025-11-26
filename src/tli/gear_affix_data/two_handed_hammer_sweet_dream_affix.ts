@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -18,7 +17,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Lucky Critical Strike<> `(-50--80)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -40,7 +38,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
       "Enemies have a `(20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `(15-25)`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -51,7 +48,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -62,7 +58,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -73,7 +68,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -90,7 +84,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(14-16)`% additional damage when a Skill consumes Demolisher Charge",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -106,7 +99,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(24-32)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -122,7 +114,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-7)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -138,7 +129,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -158,7 +148,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(32-34)`- `(40-42)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -174,7 +163,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Eliminates enemies under `(5-7)`% Life upon inflicting damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -190,7 +178,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -206,7 +193,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -222,7 +208,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -238,7 +223,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -254,7 +238,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -274,7 +257,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-2)`- `(28-32)`Lightning Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -294,7 +276,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Cold Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -314,7 +295,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Physical Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",
@@ -334,7 +314,6 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(11-13)`- `(15-18)`Erosion Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Sweet Dream Affix",

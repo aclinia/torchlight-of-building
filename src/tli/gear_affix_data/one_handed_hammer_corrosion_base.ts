@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Skill Area",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-30)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -109,7 +102,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+1`Main Skill Level",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",
@@ -129,7 +121,6 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(2-4)`- `(8-10)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Corrosion Base",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -18,7 +17,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(17-24)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -34,7 +32,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-25)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -50,7 +47,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -66,7 +62,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Converts `(12-15)`% of Physical Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -82,7 +77,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -104,7 +98,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(5-7)`% Armor DMG Mitigation Penetration<> `+(5-7)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -126,7 +119,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(6-8)`% Elemental and Erosion Resistance Penetration<> `+(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -142,7 +134,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -158,7 +149,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -174,7 +164,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -190,7 +179,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Skill Area",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -206,7 +194,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(4-6)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -222,7 +209,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -238,7 +224,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -254,7 +239,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",
@@ -270,7 +254,6 @@ export const BOOTS_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Sweet Dream Affix",

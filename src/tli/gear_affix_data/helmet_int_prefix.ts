@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const HELMET_INT_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`(-20--16)`% additional Damage dealt by Nearby enemies",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -34,7 +32,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`(21-26)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -50,7 +47,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -63,7 +59,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
       "`+1`Max Spell Burst<> `+10`% additional Hit Damage for skills cast by Spell Burst",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -79,7 +74,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "Converts `(16-20)`% of Physical Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -95,7 +89,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "Converts `(36-45)`% of Erosion Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -107,7 +100,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
       "Max Terra Charge Stacks `+1`<> `+30`% Terra Charge Recovery Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -123,7 +115,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`(-15--12)`% additional Damage dealt by Nearby enemies",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -139,7 +130,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`(15-20)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -155,7 +145,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -166,7 +155,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+1`Max Spell Burst",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -182,7 +170,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "Converts `(12-15)`% of Physical Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -198,7 +185,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Cold Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -209,7 +195,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+1`",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -225,7 +210,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(14-17)`% Block Ratio",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -241,7 +225,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -257,7 +240,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -273,7 +255,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Dexterity",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -289,7 +270,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Intelligence",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -305,7 +285,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Strength",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -321,7 +300,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Barrier Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -337,7 +315,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(10-13)`% Block Ratio",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -353,7 +330,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(33-45)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -369,7 +345,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(37-50)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -385,7 +360,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Dexterity",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -401,7 +375,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Intelligence",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -417,7 +390,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Strength",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -433,7 +405,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Barrier Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -449,7 +420,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -465,7 +435,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -481,7 +450,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(341-442)`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -497,7 +465,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(61-86)`% gear Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -513,7 +480,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -529,7 +495,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -545,7 +510,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(155-220)`Max Life",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -561,7 +525,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(239-340)`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -577,7 +540,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(47-66)`% gear Energy Shield",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -593,7 +555,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",
@@ -609,7 +570,6 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "helmet_int",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (INT)",
     affixType: "Prefix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Lucky Critical Strike<> `(-40--50)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -29,7 +27,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -40,7 +37,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -51,7 +47,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -67,7 +62,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -83,7 +77,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% additional damage against Traumatized enemies",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -99,7 +92,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -115,7 +107,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-18)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -131,7 +122,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(48-64)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -151,7 +141,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(64-68)`- `(80-84)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -167,7 +156,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -183,7 +171,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -199,7 +186,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -215,7 +201,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -231,7 +216,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -251,7 +235,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-3)`- `(60-65)`Lightning Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -271,7 +254,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Cold Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -291,7 +273,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Fire Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",
@@ -311,7 +292,6 @@ export const TWO_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(25-30)`- `(33-38)`Physical Damage to Attacks",
   },
   {
-    equipmentTypeKey: "two_handed_axe",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
     affixType: "Base Affix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const PISTOL_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -13,7 +12,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -24,7 +22,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -35,7 +32,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -51,7 +47,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-7)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -67,7 +62,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -78,7 +72,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+1`Parabolic Projectile Split Quantity",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -89,7 +82,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Projectile Quantity `+1`",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -105,7 +97,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -121,7 +112,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -137,7 +127,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -153,7 +142,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Ranged Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -169,7 +157,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -189,7 +176,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-2)`- `(28-32)`Lightning Damage to Attacks",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -209,7 +195,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Cold Damage to Attacks",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -229,7 +214,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Physical Damage to Attacks",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",
@@ -249,7 +233,6 @@ export const PISTOL_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(11-13)`- `(15-18)`Erosion Damage to Attacks",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Base Affix",

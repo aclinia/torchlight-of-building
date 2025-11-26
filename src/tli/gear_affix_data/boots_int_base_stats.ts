@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_INT_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+103`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+120`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+13`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+146`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+26`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+35`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+43`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+56`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+69`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+86`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "boots_int",
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Base Stats",

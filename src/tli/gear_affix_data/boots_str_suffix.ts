@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_STR_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-29)`% additional Armor while moving",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(27-34)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(50-68)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -77,7 +72,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "For every `5`m moved, gains `1`stack(s) of Deflection",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -95,7 +89,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "Triggers Lv. `(11-20)`Blurry Steps upon starting to move. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -111,7 +104,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(17-22)`% additional Armor while moving",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -127,7 +119,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-26)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -143,7 +134,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(30-45)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -159,7 +149,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -170,7 +159,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "For every `6`m moved, gains `1`stack(s) of Deflection",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -188,7 +176,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "Triggers Lv. `(6-10)`Blurry Steps upon starting to move. Interval: `1`s",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -209,7 +196,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -230,7 +216,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -246,7 +231,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -262,7 +246,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -278,7 +261,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -296,7 +278,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "Has Hasten<> `+(9-12)`% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -317,7 +298,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "`+(18-24)`% Attack and Cast Speed<> `+(18-24)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -333,7 +313,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -349,7 +328,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -365,7 +343,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -383,7 +360,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
       "Has Hasten<> `+(5-8)`% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -399,7 +375,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(121-156)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -415,7 +390,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -431,7 +405,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -447,7 +420,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -463,7 +435,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -479,7 +450,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -490,7 +460,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "Regenerates `4`% of Life per second while moving",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -506,7 +475,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -522,7 +490,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -538,7 +505,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -554,7 +520,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -570,7 +535,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",
@@ -586,7 +550,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     rawAffix: "`+(87-120)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Suffix",

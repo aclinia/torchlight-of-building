@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const GLOVES_STR_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -23,7 +22,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(26-30)`% additional Minion Damage when you have `(1-8)`Minion(s)",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -45,7 +43,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(9-10)`% additional Cold Damage and `+(16-18)`% Cold Penetration when having at least `8`stack(s) of Focus Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -67,7 +64,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(9-10)`% additional Fire Damage and `+(16-18)`% Fire Penetration when having at least `8`stack(s) of Tenacity Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -89,7 +85,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(9-10)`% additional Lightning Damage and `+(16-18)`% Lightning Penetration when having at least `8`stack(s) of Agility Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -100,7 +95,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+3`Active Skill Level",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -121,7 +115,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(21-25)`% additional Minion Damage when you have `(1-8)`Minion(s)",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -143,7 +136,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(6-8)`% additional Cold Damage and `+(12-15)`% Cold Penetration when having at least `8`stack(s) of Focus Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -165,7 +157,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(6-8)`% additional Fire Damage and `+(12-15)`% Fire Penetration when having at least `8`stack(s) of Tenacity Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -187,7 +178,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
       "`+(6-8)`% additional Lightning Damage and `+(12-15)`% Lightning Penetration when having at least `8`stack(s) of Agility Blessing",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -198,7 +188,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+2`Active Skill Level",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -214,7 +203,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(13-16)`% of Fire Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -230,7 +218,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(13-16)`% of Physical Damage as Fire Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -250,7 +237,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(54-56)`- `(71-76)`Fire Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -270,7 +256,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(55-57)`- `(73-75)`Cold Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -290,7 +275,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(55-57)`- `(73-75)`Erosion Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -310,7 +294,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(58-60)`- `(71-73)`Physical Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -330,7 +313,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(6-8)`- `(123-125)`Lightning Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -350,7 +332,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(4-6)`- `(94-96)`Lightning Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -370,7 +351,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(42-44)`- `(54-59)`Fire Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -390,7 +370,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(42-44)`- `(56-58)`Cold Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -410,7 +389,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(42-44)`- `(56-58)`Erosion Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -430,7 +408,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(44-46)`- `(54-56)`Physical Damage to Attacks and Spells",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -446,7 +423,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(9-12)`% of Fire Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -462,7 +438,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "Adds `(9-12)`% of Physical Damage as Fire Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -478,7 +453,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -494,7 +468,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -510,7 +483,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(26-37)`% Frostbite inflicted",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -526,7 +498,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(2881-3744)`Gear Armor",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -542,7 +513,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -558,7 +528,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -574,7 +543,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -590,7 +558,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(155-220)`Max Life",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -606,7 +573,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(20-25)`% Frostbite inflicted",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -622,7 +588,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(2017-2880)`Gear Armor",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -638,7 +603,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -654,7 +618,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",
@@ -670,7 +633,6 @@ export const GLOVES_STR_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "gloves_str",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Prefix",

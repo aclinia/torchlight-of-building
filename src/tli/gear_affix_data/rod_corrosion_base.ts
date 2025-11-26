@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ROD_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-16)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-32)`% Minion Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-40)`% Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -100,7 +94,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
       "`+(5-8)`% chance to trigger the Main Spell Skill 1 additional time when using it",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -117,7 +110,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
       "`+(5-8)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",
@@ -133,7 +125,6 @@ export const ROD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-10)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Corrosion Base",

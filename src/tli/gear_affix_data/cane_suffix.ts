@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CANE_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -82,7 +77,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -98,7 +92,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -114,7 +107,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(166-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -135,7 +127,6 @@ export const CANE_SUFFIX_AFFIXES = [
       "`+(33-47)`% Attack and Cast Speed<> `+(33-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -151,7 +142,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(47-64)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -167,7 +157,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -183,7 +172,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -199,7 +187,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(128-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -220,7 +207,6 @@ export const CANE_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -236,7 +222,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -252,7 +237,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -268,7 +252,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -284,7 +267,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -300,7 +282,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -316,7 +297,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -332,7 +312,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -348,7 +327,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -364,7 +342,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-41)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -380,7 +357,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -396,7 +372,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -412,7 +387,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -428,7 +402,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",
@@ -444,7 +417,6 @@ export const CANE_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "cane",
     equipmentSlot: "One-Handed",
     equipmentType: "Cane",
     affixType: "Suffix",

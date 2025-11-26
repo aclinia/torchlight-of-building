@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -15,7 +14,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "`-45`% additional Damage Over Time taken when having at least `50000`Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -31,7 +29,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(21-26)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -47,7 +44,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -63,7 +59,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% additional Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -80,7 +75,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "Converts `(16-20)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -96,7 +90,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "Converts `(36-45)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -118,7 +111,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "Enemies have a `(20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `(15-25)`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -134,7 +126,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "You can cast `1`additional Curses<> `+(8-10)`% curse effect",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -147,7 +138,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "`-40`% additional Damage Over Time taken when having at least `50000`Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -163,7 +153,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`(15-20)`% of damage is taken from Mana before life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -179,7 +168,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -195,7 +183,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% additional Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -212,7 +199,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "Converts `(12-15)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -228,7 +214,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -250,7 +235,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
       "Enemies have a `(10-15)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `(15-25)`% of their Max Life to enemies within a `4`m radius",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -261,7 +245,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "You can cast `1`additional Curses",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -277,7 +260,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -293,7 +275,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -309,7 +290,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Dexterity",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -325,7 +305,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Intelligence",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -341,7 +320,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`Strength",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -357,7 +335,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% Attack and Spell Block Chance",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -373,7 +350,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(33-45)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -389,7 +365,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Dexterity",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -405,7 +380,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Intelligence",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -421,7 +395,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`Strength",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -437,7 +410,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(121-156)`Max Mana",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -453,7 +425,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(17-21)`% Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -469,7 +440,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(221-286)`Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -485,7 +455,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(3361-4368)`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -501,7 +470,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -517,7 +485,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -533,7 +500,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -549,7 +515,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -565,7 +530,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(154-220)`Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -581,7 +545,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(2353-3360)`gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -597,7 +560,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -613,7 +575,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",
@@ -629,7 +590,6 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Prefix",

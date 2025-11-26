@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "`+200`% Spell Amplification Aura<> `-30`% additional Spell Amplification Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -28,7 +26,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "`+30`% additional Deterioration Damage<> `10`% chance to inflict `2`additional stack(s) of Deterioration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -39,7 +36,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+50`% additional Hit Damage for skills cast by Spell Burst",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -50,7 +46,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+70`% additional damage<> `-10`% additional Cast Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -63,7 +58,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "Adds `420`- `440`Cold Damage to Spells when having at least `800`Intelligence",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -76,7 +70,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "Enemies have a `30`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -89,7 +82,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "Max Tenacity Blessing Stacks `-2`<> Max Focus Blessing Stacks `+2`<> Max Agility Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -102,7 +94,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
       "The Main Skill is supported by Lv. `25`Control Spell<> `+25`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -113,7 +104,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+110`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -124,7 +114,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+12`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -135,7 +124,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% all stats",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -146,7 +134,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -157,7 +144,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Cold Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -168,7 +154,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -179,7 +164,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Fire Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -190,7 +174,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Lightning Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",
@@ -201,7 +184,6 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+20`% additional damage on Critical Strike",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Tower Sequence",

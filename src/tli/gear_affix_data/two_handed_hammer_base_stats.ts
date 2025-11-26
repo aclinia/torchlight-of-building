@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -15,7 +14,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`10`- `10`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -28,7 +26,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`110`- `110`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -41,7 +38,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`12`- `12`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -54,7 +50,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`135`- `135`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -67,7 +62,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`16`- `16`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -80,7 +74,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`160`- `160`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -93,7 +86,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`175`- `175`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -106,7 +98,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`190`- `190`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -119,7 +110,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`20`- `20`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -132,7 +122,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`220`- `220`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -145,7 +134,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`25`- `25`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -158,7 +146,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`31`- `31`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -171,7 +158,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`37`- `37`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -184,7 +170,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`43`- `43`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -197,7 +182,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`50`- `50`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -210,7 +194,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`60`- `60`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -222,7 +205,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`7`- `7`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -235,7 +217,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`70`- `70`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",
@@ -247,7 +228,6 @@ export const TWO_HANDED_HAMMER_BASE_STATS_AFFIXES = [
       "`8`- `8`Physical Damage<> `500`Critical Strike Rating<> `1.5`Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_hammer",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Base Stats",

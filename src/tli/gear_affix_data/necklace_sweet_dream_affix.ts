@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -15,7 +14,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Biting Cold Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -28,7 +26,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Corruption Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -41,7 +38,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Electrocute Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -54,7 +50,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Vulnerability Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -67,7 +62,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
       "Triggers Lv. `20`Scorch Curse upon inflicting damage. Cooldown: `0.2`s",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -83,7 +77,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(11-15)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -99,7 +92,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(2-3)`% damage per stack of any Blessing",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -115,7 +107,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -126,7 +117,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+1`% damage per `27`stats",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -137,7 +127,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `10`Base Ailment Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -153,7 +142,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -169,7 +157,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -185,7 +172,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -205,7 +191,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% damage<> `+(20-24)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -221,7 +206,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(3-4)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -237,7 +221,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -253,7 +236,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -269,7 +251,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -285,7 +266,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",
@@ -301,7 +281,6 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Sweet Dream Affix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ROD_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -35,7 +33,6 @@ export const ROD_PREFIX_AFFIXES = [
       "`+(28-39)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -51,7 +48,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`Main Skill Level",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -67,7 +63,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -83,7 +78,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(18-25)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -100,7 +94,6 @@ export const ROD_PREFIX_AFFIXES = [
       "`+(22-30)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -111,7 +104,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+3`Main Skill Level",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -122,7 +114,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+3`Minion Skill Level",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -138,7 +129,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Dexterity",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -154,7 +144,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Intelligence",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -170,7 +159,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Strength",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -188,7 +176,6 @@ export const ROD_PREFIX_AFFIXES = [
       "`+1`to Max Summonable Synthetic Troops<> `+(10-12)`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -204,7 +191,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Spirit Magi `+(31-39)`% chance to use an Enhanced Skill",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -220,7 +206,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Dexterity",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -236,7 +221,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Intelligence",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -252,7 +236,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Strength",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -270,7 +253,6 @@ export const ROD_PREFIX_AFFIXES = [
       "`+1`to Max Summonable Synthetic Troops<> `+(6-8)`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -286,7 +268,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Spirit Magi `+(22-30)`% chance to use an Enhanced Skill",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -302,7 +283,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -318,7 +298,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Minion Max Life",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -338,7 +317,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(82-84)`- `(106-113)`Fire Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -358,7 +336,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(83-85)`- `(110-112)`Cold Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -378,7 +355,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(87-89)`- `(106-108)`Erosion Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -398,7 +374,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(87-89)`- `(106-108)`Physical Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -418,7 +393,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(9-11)`- `(184-186)`Lightning Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -434,7 +408,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(33-45)`% Minion Max Life",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -450,7 +423,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -470,7 +442,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(63-65)`- `(82-87)`Fire Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -490,7 +461,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(64-66)`- `(85-87)`Cold Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -510,7 +480,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(67-69)`- `(82-84)`Erosion Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",
@@ -530,7 +499,6 @@ export const ROD_PREFIX_AFFIXES = [
     rawAffix: "Adds `(67-69)`- `(82-84)`Physical Damage to Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Prefix",

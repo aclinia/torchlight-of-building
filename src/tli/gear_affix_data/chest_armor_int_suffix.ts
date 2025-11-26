@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(136-176)`Attack and Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(50-68)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -82,7 +77,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -98,7 +92,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(30-45)`% chance to avoid Elemental Ailments",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -114,7 +107,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -130,7 +122,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(96-135)`Attack and Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -146,7 +137,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(11-13)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -162,7 +152,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Intelligence",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -183,7 +172,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
       "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -199,7 +187,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -215,7 +202,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -233,7 +219,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
       "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: `1`s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: `1`s<> `+(40-60)`% Cold Infiltration Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -249,7 +234,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Intelligence",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -270,7 +254,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
       "`+(18-24)`% Attack and Cast Speed<> `+(18-24)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -286,7 +269,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -302,7 +284,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -318,7 +299,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(8-10)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -336,7 +316,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
       "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: `1`s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: `1`s<> `+(10-30)`% Cold Infiltration Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -352,7 +331,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(121-156)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -368,7 +346,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -384,7 +361,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -400,7 +376,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -416,7 +391,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -432,7 +406,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -448,7 +421,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -464,7 +436,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -480,7 +451,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -496,7 +466,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -512,7 +481,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -528,7 +496,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",
@@ -544,7 +511,6 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(43-60)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Suffix",

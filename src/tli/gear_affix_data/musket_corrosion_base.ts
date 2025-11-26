@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const MUSKET_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(12-15)`% chance for Attacks to cause Ailment",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(40-45)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(6-12)`% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -118,7 +111,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-10)`- `(14-17)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",
@@ -134,7 +126,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-12)`% of Elemental Damage as Erosion Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Corrosion Base",

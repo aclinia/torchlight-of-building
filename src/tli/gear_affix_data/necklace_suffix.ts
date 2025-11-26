@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const NECKLACE_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(21-26)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-54)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -82,7 +77,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% damage per stack of any Blessing",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -93,7 +87,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+1`% damage per `8`stats",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -109,7 +102,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -125,7 +117,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -141,7 +132,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% additional Deterioration Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -157,7 +147,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(28-36)`% Freeze Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -173,7 +162,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(5-6)`% damage per stack of any Blessing",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -184,7 +172,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+1`% damage per `12`stats",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -200,7 +187,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(11-13)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -216,7 +202,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(11-13)`% all stats",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -232,7 +217,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Blessing Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -253,7 +237,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
       "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -269,7 +252,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -282,7 +264,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
       "`100`% chance to gain a Barrier for every `5`m you move<> `+25`% Barrier Shield",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -293,7 +274,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`80`% chance to gain `1`charge stacks when using a Terra Skill",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -309,7 +289,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Blessing Duration",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -330,7 +309,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
       "`+(18-24)`% Attack and Cast Speed<> `+(18-24)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -346,7 +324,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(42-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -362,7 +339,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(8-10)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -378,7 +354,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(8-10)`% all stats",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -389,7 +364,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`100`% chance to gain a Barrier for every `5`m you move",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -400,7 +374,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`60`% chance to gain `1`charge stacks when using a Terra Skill",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -416,7 +389,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -432,7 +404,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -448,7 +419,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -464,7 +434,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -480,7 +449,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(46-59)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -496,7 +464,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -512,7 +479,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -528,7 +494,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",
@@ -544,7 +509,6 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "necklace",
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Suffix",

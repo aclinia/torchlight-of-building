@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BELT_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -20,7 +19,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
       "`(-50--40)`% additional Damage Over Time taken when a Restoration Skill is active",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -36,7 +34,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Charged Flames Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -52,7 +49,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Cruelty Aura Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -68,7 +64,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Deep Pain Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -84,7 +79,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Electric Conversion Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -100,7 +94,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Fearless Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -116,7 +109,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Frigid Domain Aura Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -132,7 +124,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Precise Projectiles Aura effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -148,7 +139,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Radical Order Aura Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -164,7 +154,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Spell Amplification Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -180,7 +169,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(20-30)`% Weapon Amplification Aura",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -196,7 +184,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -212,7 +199,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -228,7 +214,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-6)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -244,7 +229,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-10)`% Skill Area",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -255,7 +239,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "Immune to crowd control effects",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -266,7 +249,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "Owns `1`additional stack(s) of Fortitude",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",
@@ -282,7 +264,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     rawAffix: "Restoration Skills: `(-20--15)`% Restoration Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Corrosion Base",

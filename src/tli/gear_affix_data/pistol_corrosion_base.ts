@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const PISTOL_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(1-2)`Projectile Skill Level",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-30)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-30)`% Projectile Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",
@@ -134,7 +126,6 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(2-4)`- `(8-10)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Corrosion Base",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -18,7 +17,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -35,7 +33,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
       "Converts `(12-15)`% of Physical Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -51,7 +48,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Lightning Damage",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -73,7 +69,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(5-7)`% Armor DMG Mitigation Penetration<> `+(5-7)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -89,7 +84,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -111,7 +105,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(6-8)`% Elemental and Erosion Resistance Penetration<> `+(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -127,7 +120,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -138,7 +130,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Nearby enemies within `15`m have Frail",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -154,7 +145,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -170,7 +160,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -186,7 +175,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -202,7 +190,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Skill Area",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -218,7 +205,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -234,7 +220,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -250,7 +235,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -266,7 +250,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",
@@ -282,7 +265,6 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "helmet_dex",
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
     affixType: "Sweet Dream Affix",

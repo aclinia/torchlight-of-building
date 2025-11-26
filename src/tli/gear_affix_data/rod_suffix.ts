@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ROD_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(151-195)`% Minion Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -36,7 +34,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(36-46)`% additional damage for Synthetic Troop Minions when having at least `40`Command",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -54,7 +51,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(41-52)`% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -70,7 +66,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance for Minions to deal Double Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -88,7 +83,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(61-78)`% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -104,7 +98,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(106-150)`% Minion Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -122,7 +115,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(26-35)`% additional damage for Synthetic Troop Minions when having at least `40`Command",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -140,7 +132,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(29-40)`% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -156,7 +147,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance for Minions to deal Double Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -174,7 +164,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(43-60)`% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -190,7 +179,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(126-163)`Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -206,7 +194,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -222,7 +209,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -238,7 +224,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -254,7 +239,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -270,7 +254,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(89-125)`Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -286,7 +269,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Minion Elemental Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -302,7 +284,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Minion Erosion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -318,7 +299,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -334,7 +314,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -355,7 +334,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(37-47)`% Attack and Cast Speed<> `+(37-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -371,7 +349,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "Regenerates `(181-234)`Life per second",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -387,7 +364,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -408,7 +384,6 @@ export const ROD_SUFFIX_AFFIXES = [
       "`+(27-36)`% Attack and Cast Speed<> `+(27-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -424,7 +399,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Minion Elemental Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -440,7 +414,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Minion Erosion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",
@@ -456,7 +429,6 @@ export const ROD_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Physical Damage for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Suffix",

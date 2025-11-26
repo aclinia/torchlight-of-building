@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(13-14)`% Armor Effective Rate for Non-Physical Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -34,7 +32,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -50,7 +47,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "Converts `(12-15)`% of Physical Damage taken to Fire Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -66,7 +62,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Fire Damage",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -77,7 +72,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "Takes 10 True Damage every 0.1s",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -99,7 +93,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
       "`+(5-7)`% Armor DMG Mitigation Penetration<> `+(5-7)`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -115,7 +108,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -137,7 +129,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
       "`+(6-8)`% Elemental and Erosion Resistance Penetration<> `+(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -153,7 +144,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -169,7 +159,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-20)`% Critical Strike Damage Mitigation",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -185,7 +174,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -201,7 +189,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -217,7 +204,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -233,7 +219,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Skill Area",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -249,7 +234,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -265,7 +249,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -281,7 +264,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -297,7 +279,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",
@@ -313,7 +294,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_str",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
     affixType: "Base Affix",

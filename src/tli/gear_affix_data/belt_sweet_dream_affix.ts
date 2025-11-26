@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -18,7 +17,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-26)`% Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -34,7 +32,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-26)`% Skill Effect Duration",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -50,7 +47,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(11-15)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -68,7 +64,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
       "`+(20-25)`% chance to launch one more wave when casting a Barrage Skill",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -84,7 +79,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -100,7 +94,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% Aura Effect",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -116,7 +109,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -132,7 +124,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -148,7 +139,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -164,7 +154,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(40-60)`Max Mana",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -180,7 +169,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -196,7 +184,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -212,7 +199,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -228,7 +214,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-10)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",
@@ -244,7 +229,6 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(54-74)`Max Life",
   },
   {
-    equipmentTypeKey: "belt",
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
     affixType: "Sweet Dream Affix",

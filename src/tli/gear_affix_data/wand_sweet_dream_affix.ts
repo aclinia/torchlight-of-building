@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -13,7 +12,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -24,7 +22,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -35,7 +32,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -51,7 +47,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(5-7)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -67,7 +62,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -78,7 +72,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+1`Parabolic Projectile Split Quantity",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -89,7 +82,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Projectile Quantity `+1`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -105,7 +97,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -121,7 +112,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -137,7 +127,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -153,7 +142,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -169,7 +157,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -189,7 +176,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-2)`- `(28-32)`Lightning Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -209,7 +195,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -229,7 +214,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",
@@ -249,7 +233,6 @@ export const WAND_SWEET_DREAM_AFFIX_AFFIXES = [
     rawAffix: "Adds `(11-13)`- `(15-18)`Erosion Damage to Spells",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Sweet Dream Affix",

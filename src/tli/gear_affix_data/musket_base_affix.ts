@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const MUSKET_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Lucky Critical Strike<> `(-40--50)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -29,7 +27,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -40,7 +37,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -51,7 +47,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+2`",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -67,7 +62,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -83,7 +77,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -99,7 +92,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(48-64)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -110,7 +102,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+2`Horizontal Projectile Penetration(s)",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -130,7 +121,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(64-68)`- `(80-84)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -141,7 +131,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Projectile Quantity `+2`",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -157,7 +146,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(12-16)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -173,7 +161,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -189,7 +176,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -205,7 +191,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -221,7 +206,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(40-48)`% Ranged Damage",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -241,7 +225,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-3)`- `(60-65)`Lightning Damage to Attacks",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -261,7 +244,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Cold Damage to Attacks",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -281,7 +263,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(24-29)`- `(34-39)`Fire Damage to Attacks",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",
@@ -301,7 +282,6 @@ export const MUSKET_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(25-30)`- `(33-38)`Physical Damage to Attacks",
   },
   {
-    equipmentTypeKey: "musket",
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
     affixType: "Base Affix",

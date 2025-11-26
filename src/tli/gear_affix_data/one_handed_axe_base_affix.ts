@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -13,7 +12,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -24,7 +22,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -35,7 +32,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -51,7 +47,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(5-7)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -67,7 +62,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% additional damage against Traumatized enemies",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -83,7 +77,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -99,7 +92,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-9)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -115,7 +107,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -131,7 +122,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -147,7 +137,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -163,7 +152,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -179,7 +167,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -199,7 +186,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(1-2)`- `(28-32)`Lightning Damage to Attacks",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -219,7 +205,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Cold Damage to Attacks",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -239,7 +224,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(10-13)`- `(14-19)`Physical Damage to Attacks",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",
@@ -259,7 +243,6 @@ export const ONE_HANDED_AXE_BASE_AFFIX_AFFIXES = [
     rawAffix: "Adds `(11-13)`- `(15-18)`Erosion Damage to Attacks",
   },
   {
-    equipmentTypeKey: "one_handed_axe",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Axe",
     affixType: "Base Affix",

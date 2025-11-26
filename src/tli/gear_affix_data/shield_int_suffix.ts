@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_INT_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-33)`% additional Defense gained from Shield",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -52,7 +49,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
       "`+(55-65)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -68,7 +64,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(9-10)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -79,7 +74,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+2`% Cast Speed and Skill Area for every `5`% of Spell Block",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -90,7 +84,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "Max Sentry Quantity `+1`<> `+5`% additional damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -106,7 +99,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-25)`% additional Defense gained from Shield",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -122,7 +114,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -140,7 +131,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
       "`+(40-50)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -156,7 +146,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(7-8)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -167,7 +156,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+1`% Cast Speed and Skill Area for every `3`% of Spell Block",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -178,7 +166,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "Max Sentry Quantity `+1`",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -194,7 +181,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(165-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -215,7 +201,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
       "`+(34-47)`% Attack and Cast Speed<> `+(34-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -231,7 +216,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(49-72)`% Warcry Effect",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -247,7 +231,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -263,7 +246,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(83-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -279,7 +261,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -290,7 +271,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+2`Max Warcry Skill Charges",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -306,7 +286,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -327,7 +306,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -343,7 +321,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-48)`% Warcry Effect",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -359,7 +336,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -375,7 +351,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -391,7 +366,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -402,7 +376,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+1`Max Warcry Skill Charges",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -418,7 +391,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(15-18)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -434,7 +406,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -450,7 +421,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-45)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -466,7 +436,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-45)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -482,7 +451,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-45)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -498,7 +466,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-45)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -514,7 +481,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "Restores `(5-6)`% Energy Shield on Block. Interval: 0.3s",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -530,7 +496,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Elemental Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -546,7 +511,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -562,7 +526,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -578,7 +541,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -594,7 +556,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",
@@ -610,7 +571,6 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "shield_int",
     equipmentSlot: "Shield",
     equipmentType: "Shield (INT)",
     affixType: "Suffix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CLAW_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Skill Area",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(25-30)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(4-8)`% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% Movement Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
@@ -134,7 +126,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(2-4)`- `(8-10)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",

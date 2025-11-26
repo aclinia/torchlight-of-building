@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Lucky Critical Strike<> `(-150--120)`Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(12-15)`% Attack Speed",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(12-15)`% Cast Speed",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% chance to Mark the target on hit",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% chance to cause Blinding on hit",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% chance to inflict Paralysis on hit",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-50)`% gear Evasion",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -141,7 +132,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Converts `50`% of Physical Damage to Cold Damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -152,7 +142,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Converts `50`% of Physical Damage to Erosion Damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -163,7 +152,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Converts `50`% of Physical Damage to Lightning Damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -174,7 +162,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Converts `50`% Physical Damage to Fire Damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -185,7 +172,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Eliminates enemies under `15`% Life upon inflicting damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -196,7 +182,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Gains a stack of Fortitude when using a Melee Skill",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -207,7 +192,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Gains a stack of Torment when Reaping",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",
@@ -218,7 +202,6 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "Inflicts Frail when dealing Spell Damage",
   },
   {
-    equipmentTypeKey: "gloves_dex",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
     affixType: "Corrosion Base",

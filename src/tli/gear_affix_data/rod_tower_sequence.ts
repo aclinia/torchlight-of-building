@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ROD_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -13,7 +12,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "+ `10`Command per second",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -26,7 +24,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
       "`-80`Minion Critical Strike Rating<> `+200`% Minion Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -39,7 +36,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
       "`+120`% Radical Order Aura Effect<> `-20`% additional Radical Order Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -50,7 +46,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+80`initial Growth for Spirit Magi",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -61,7 +56,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "The Main Skill is supported by a Lv. `25`Servant Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -74,7 +68,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
       "Triggers Lv. `10`Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown: `1`s<> Minions can cast `1`additional Curse(s)",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -85,7 +78,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Triggers Lv. `20`Dark Gate when moving. Interval: `4`s",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -98,7 +90,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
       "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: `1`s<> When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: `1`s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: `1`s",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -109,7 +100,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -120,7 +110,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+40`% Minion Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -131,7 +120,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+55`Minion Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -142,7 +130,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+6`% Armor DMG Mitigation Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -153,7 +140,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% all stats",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -164,7 +150,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% additional Minion Damage",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -175,7 +160,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Cold Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -186,7 +170,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Erosion Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",
@@ -197,7 +180,6 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Lightning Penetration for Minions",
   },
   {
-    equipmentTypeKey: "rod",
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
     affixType: "Tower Sequence",

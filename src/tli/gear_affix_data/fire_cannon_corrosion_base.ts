@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -13,7 +12,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`-30`% additional Damage Over Time taken while standing still",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -29,7 +27,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Skill Area",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -45,7 +42,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -61,7 +57,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -77,7 +72,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(40-45)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -93,7 +87,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -110,7 +103,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
       "`+(6-12)`% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-10)`- `(14-17)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "fire_cannon",
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Corrosion Base",

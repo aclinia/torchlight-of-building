@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`(-6--4)`% additional Physical Damage taken",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Attack and Spell Block Chance while standing still",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-20)`% Max Life",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Elemental Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(30-50)`% gear Evasion",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(50-70)`% damage",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-10)`% Elemental and Erosion Resistance",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -141,7 +132,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+1`Support Skill Level",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -152,7 +142,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+2`Active Skill Level",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",
@@ -163,7 +152,6 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`50`% chance to gain Hardened when you are hit",
   },
   {
-    equipmentTypeKey: "chest_armor_dex",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (DEX)",
     affixType: "Corrosion Base",

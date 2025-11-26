@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(10-15)`% Skill Area",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(40-45)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -99,7 +93,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
       "`+(6-12)`% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -110,7 +103,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+1`Melee Skill Level",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const TWO_HANDED_SWORD_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-10)`- `(14-17)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Corrosion Base",

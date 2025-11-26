@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TIN_STAFF_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -34,7 +32,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -50,7 +47,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+4`Jumps<> `+(25-30)`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -61,7 +57,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+7`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -77,7 +72,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+(5-6)`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -88,7 +82,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Max Channeled Stacks `+5`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -99,7 +92,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Min Channeled Stacks `+5`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -115,7 +107,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -131,7 +122,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -147,7 +137,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+4`Jumps<> `+(18-20)`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -158,7 +147,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+6`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -174,7 +162,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+(3-4)`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -185,7 +172,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Max Channeled Stacks `+4`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -196,7 +182,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Min Channeled Stacks `+4`",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -212,7 +197,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Dexterity",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -228,7 +212,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Intelligence",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -244,7 +227,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Strength",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -260,7 +242,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(4-5)`Main Skill Level",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -276,7 +257,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Dexterity",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -292,7 +272,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Intelligence",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -308,7 +287,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Strength",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -319,7 +297,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+4`Main Skill Level",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -335,7 +312,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -351,7 +327,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(361-468)`Max Mana",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -371,7 +346,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(166-168)`- `(215-226)`Fire Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -391,7 +365,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(168-170)`- `(222-224)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -411,7 +384,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(179-181)`- `(211-213)`Erosion Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -431,7 +403,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(179-181)`- `(211-213)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -451,7 +422,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(19-21)`- `(371-373)`Lightning Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -467,7 +437,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -483,7 +452,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "`+(253-360)`Max Mana",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -503,7 +471,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(127-129)`- `(164-174)`Fire Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -523,7 +490,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(128-130)`- `(170-172)`Cold Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -543,7 +509,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(137-139)`- `(161-163)`Erosion Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",
@@ -563,7 +528,6 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     rawAffix: "Adds `(137-139)`- `(161-163)`Physical Damage to Spells",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Prefix",

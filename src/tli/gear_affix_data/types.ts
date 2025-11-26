@@ -2,6 +2,62 @@ import { DmgRange } from "../core";
 
 export type ValueRange = DmgRange;
 
+export const EQUIPMENT_SLOTS = [
+  "Boots",
+  "Chest Armor",
+  "Gloves",
+  "Helmet",
+  "One-Handed",
+  "Shield",
+  "Trinket",
+  "Two-Handed",
+] as const;
+
+export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
+
+export const EQUIPMENT_TYPES = [
+  "Belt",
+  "Boots (DEX)",
+  "Boots (INT)",
+  "Boots (STR)",
+  "Bow",
+  "Cane",
+  "Chest Armor (DEX)",
+  "Chest Armor (INT)",
+  "Chest Armor (STR)",
+  "Claw",
+  "Crossbow",
+  "Cudgel",
+  "Dagger",
+  "Fire Cannon",
+  "Gloves (DEX)",
+  "Gloves (INT)",
+  "Gloves (STR)",
+  "Helmet (DEX)",
+  "Helmet (INT)",
+  "Helmet (STR)",
+  "Musket",
+  "Necklace",
+  "One-Handed Axe",
+  "One-Handed Hammer",
+  "One-Handed Sword",
+  "Pistol",
+  "Ring",
+  "Rod",
+  "Scepter",
+  "Shield (DEX)",
+  "Shield (INT)",
+  "Shield (STR)",
+  "Spirit Ring",
+  "Tin Staff",
+  "Two-Handed Axe",
+  "Two-Handed Hammer",
+  "Two-Handed Sword",
+  "Wand",
+] as const;
+
+export type EquipmentType = (typeof EQUIPMENT_TYPES)[number];
+
 export const AFFIX_TYPES = [
   "Base Affix",
   "Base Stats",
@@ -14,55 +70,21 @@ export const AFFIX_TYPES = [
 
 export type AffixType = (typeof AFFIX_TYPES)[number];
 
-export const EQUIPMENT_TYPE_KEYS = [
-  "belt",
-  "boots_dex",
-  "boots_int",
-  "boots_str",
-  "bow",
-  "cane",
-  "chest_armor_dex",
-  "chest_armor_int",
-  "chest_armor_str",
-  "claw",
-  "crossbow",
-  "cudgel",
-  "dagger",
-  "fire_cannon",
-  "gloves_dex",
-  "gloves_int",
-  "gloves_str",
-  "helmet_dex",
-  "helmet_int",
-  "helmet_str",
-  "musket",
-  "necklace",
-  "one_handed_axe",
-  "one_handed_hammer",
-  "one_handed_sword",
-  "pistol",
-  "ring",
-  "rod",
-  "scepter",
-  "shield_dex",
-  "shield_int",
-  "shield_str",
-  "spirit_ring",
-  "tin_staff",
-  "two_handed_axe",
-  "two_handed_hammer",
-  "two_handed_sword",
-  "wand",
+export const CRAFTING_POOLS = [
+  "",
+  "Advanced",
+  "Basic",
+  "Intermediate",
+  "Ultimate",
 ] as const;
 
-export type EquipmentTypeKey = (typeof EQUIPMENT_TYPE_KEYS)[number];
+export type CraftingPool = (typeof CRAFTING_POOLS)[number];
 
 export interface BaseGearAffix {
-  equipmentTypeKey: EquipmentTypeKey;
-  equipmentSlot: string;
-  equipmentType: string;
+  equipmentSlot: EquipmentSlot;
+  equipmentType: EquipmentType;
   affixType: AffixType;
-  craftingPool: string;
+  craftingPool: CraftingPool;
   tier: string;
   template: string;
   valueRanges: ValueRange[];

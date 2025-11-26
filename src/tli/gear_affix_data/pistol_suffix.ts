@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const PISTOL_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -61,7 +57,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "Adds `23`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -72,7 +67,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+5`% additional damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -88,7 +82,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -104,7 +97,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -120,7 +112,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -131,7 +122,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "Adds `19`% of Main-Hand Weapon Damage to Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -142,7 +132,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+1`% additional damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -158,7 +147,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(166-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -179,7 +167,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
       "`+(33-47)`% Attack and Cast Speed<> `+(33-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -195,7 +182,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(47-64)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -211,7 +197,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -227,7 +212,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(74-94)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -243,7 +227,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -259,7 +242,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -275,7 +257,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(128-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -296,7 +277,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -312,7 +292,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -328,7 +307,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -344,7 +322,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -360,7 +337,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(57-72)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -376,7 +352,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -392,7 +367,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -408,7 +382,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -424,7 +397,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -440,7 +412,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -456,7 +427,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -472,7 +442,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-41)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -488,7 +457,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -504,7 +472,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -520,7 +487,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(23-32)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -536,7 +502,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",
@@ -552,7 +517,6 @@ export const PISTOL_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "pistol",
     equipmentSlot: "One-Handed",
     equipmentType: "Pistol",
     affixType: "Suffix",

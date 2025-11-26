@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const BOOTS_STR_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1122`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1346`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1615`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+168`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1777`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+1920`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+235`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+329`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+461`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+599`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     rawAffix: "`+779`Gear Armor",
   },
   {
-    equipmentTypeKey: "boots_str",
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Base Stats",

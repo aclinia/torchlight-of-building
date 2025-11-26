@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TIN_STAFF_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`(61-78)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -36,7 +34,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
       "`+(110-130)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -52,7 +49,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% additional damage when channeling",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -68,7 +64,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(96-120)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -84,7 +79,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+4`Beams<> `+(20-30)`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -95,7 +89,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+2`<> `+10`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -111,7 +104,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`(43-60)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -127,7 +119,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% additional damage when channeling",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -143,7 +134,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(70-90)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -161,7 +151,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
       "`+(80-100)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -177,7 +166,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+4`Beams<> `+(5-10)`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -188,7 +176,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+2`<> `+1`% additional damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -204,7 +191,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(120-140)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -220,7 +206,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -236,7 +221,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Spell Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -252,7 +236,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(251-325)`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -268,7 +251,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(361-468)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -284,7 +266,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(88-125)`% Max Mana",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -300,7 +281,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -316,7 +296,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Spell Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -332,7 +311,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(176-250)`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -348,7 +326,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(253-360)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -364,7 +341,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(68-96)`% Max Mana",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -380,7 +356,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(90-110)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -396,7 +371,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(100-130)`% Spell Burst Charge Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -412,7 +386,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(197-281)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -428,7 +401,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(197-281)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -444,7 +416,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -460,7 +431,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -476,7 +446,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Life Regain",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -496,7 +465,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% Cast Speed<> `+(73-94)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -512,7 +480,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -528,7 +495,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -544,7 +510,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -560,7 +525,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -576,7 +540,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Life Regain",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",
@@ -596,7 +559,6 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-72)`% Cast Speed<> `+(51-72)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "tin_staff",
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Suffix",

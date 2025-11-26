@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const WAND_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
       "`+120`% Spell Amplification Aura<> `-20`% additional Spell Amplification Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -28,7 +26,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
       "`+15`% additional Deterioration Damage<> `10`% chance to inflict `1`additional stack(s) of Deterioration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -39,7 +36,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+25`% additional Hit Damage for skills cast by Spell Burst",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -50,7 +46,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+35`% additional damage<> `-10`% additional Cast Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -63,7 +58,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
       "Adds `200`- `220`Cold Damage to Spells when having at least `800`Intelligence",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -76,7 +70,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
       "Enemies have a `15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -89,7 +82,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
       "Max Tenacity Blessing Stacks `-1`<> Max Focus Blessing Stacks `+1`<> Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -100,7 +92,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "The Main Skill is supported by Lv. `25`Control Spell",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -111,7 +102,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+10`% additional damage on Critical Strike",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -122,7 +112,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`% Cast Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -133,7 +122,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+55`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -144,7 +132,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+6`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -155,7 +142,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% all stats",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -166,7 +152,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -177,7 +162,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Cold Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -188,7 +172,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",
@@ -199,7 +182,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Fire Penetration",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Tower Sequence",

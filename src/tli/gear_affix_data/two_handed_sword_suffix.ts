@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`(61-78)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(106-137)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -52,7 +49,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(110-130)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -68,7 +64,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(251-325)`% Demolisher Charge Restoration Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -84,7 +79,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(96-120)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -101,7 +95,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+60`% Steep Strike chance.<> `+(49-62)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -112,7 +105,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Adds `55`% of Main-Hand Weapon Damage to Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -128,7 +120,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`(43-60)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -144,7 +135,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(176-250)`% Demolisher Charge Restoration Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -160,7 +150,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(70-90)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -176,7 +165,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(75-105)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -194,7 +182,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(80-100)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -211,7 +198,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+46`% Steep Strike chance.<> `+(35-48)`% additional Steep Strike Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -222,7 +208,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "Adds `48`% of Main-Hand Weapon Damage to Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -238,7 +223,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(120-140)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -254,7 +238,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(145-187)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -270,7 +253,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(151-195)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -286,7 +268,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -302,7 +283,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(328-468)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -318,7 +298,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -339,7 +318,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(66-94)`% Attack and Cast Speed<> `+(66-94)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -355,7 +333,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(102-144)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -371,7 +348,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(106-150)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -387,7 +363,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -403,7 +378,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(252-360)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -419,7 +393,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -440,7 +413,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
       "`+(51-72)`% Attack and Cast Speed<> `+(51-72)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -456,7 +428,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(90-110)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -472,7 +443,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -488,7 +458,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -504,7 +473,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(217-281)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -520,7 +488,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -536,7 +503,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Life Regain",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -552,7 +518,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(33-42)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -568,7 +533,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -584,7 +548,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -600,7 +563,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(152-216)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -616,7 +578,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",
@@ -632,7 +593,6 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Life Regain",
   },
   {
-    equipmentTypeKey: "two_handed_sword",
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Sword",
     affixType: "Suffix",

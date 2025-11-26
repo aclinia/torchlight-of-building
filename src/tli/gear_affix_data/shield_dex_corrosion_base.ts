@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(1-2)`% Max Cold Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(1-2)`% Max Fire Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(1-2)`% Max Lightning Resistance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(12-15)`% Spell Block Chance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -82,7 +77,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Energy Shield",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -98,7 +92,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-5)`% Max Life",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -114,7 +107,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% Block Ratio",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
@@ -130,7 +122,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-12)`% Attack Block Chance",
   },
   {
-    equipmentTypeKey: "shield_dex",
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",

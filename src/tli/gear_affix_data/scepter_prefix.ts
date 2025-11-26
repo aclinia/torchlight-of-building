@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SCEPTER_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`(31-39)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -34,7 +32,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(28-39)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -50,7 +47,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -61,7 +57,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+3`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -77,7 +72,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`(22-30)`% additional damage applied to Life",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -93,7 +87,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -104,7 +97,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+3`Spell Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -115,7 +107,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "Max Terra Charge Stacks `+2`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -131,7 +122,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -147,7 +137,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -163,7 +152,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -179,7 +167,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -195,7 +182,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(2-3)`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -211,7 +197,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Dexterity",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -227,7 +212,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Intelligence",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -243,7 +227,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Strength",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -259,7 +242,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Dexterity",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -275,7 +257,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Intelligence",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -291,7 +272,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Strength",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -302,7 +282,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+2`Cold Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -313,7 +292,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+2`Erosion Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -324,7 +302,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+2`Fire Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -335,7 +312,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+2`Lightning Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -346,7 +322,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+2`Physical Skill Level",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -359,7 +334,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
       "Reaps `(0.19-0.24)`s of Damage Over Time when dealing Damage Over Time. The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -375,7 +349,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Damage Over Time",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -391,7 +364,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(150-188)`Affliction inflicted per second",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -407,7 +379,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(181-234)`Max Mana",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -423,7 +394,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(331-429)`Max Life",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -439,7 +409,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(526-683)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -452,7 +421,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
       "Reaps `(0.13-0.18)`s of Damage Over Time when dealing Damage Over Time. The effect has a `1`s cooldown against the same target",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -468,7 +436,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(120-144)`Affliction inflicted per second",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -484,7 +451,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(127-180)`Max Mana",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -500,7 +466,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(232-330)`Max Life",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
@@ -516,7 +481,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     rawAffix: "`+(369-525)`Max Energy Shield",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+10`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+100`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+120`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -68,7 +62,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+140`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -79,7 +72,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+15`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -90,7 +82,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+170`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -101,7 +92,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+20`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -112,7 +102,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+30`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -123,7 +112,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+40`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -134,7 +122,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+50`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",
@@ -145,7 +132,6 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     rawAffix: "`+65`gear Energy Shield",
   },
   {
-    equipmentTypeKey: "chest_armor_int",
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (INT)",
     affixType: "Base Stats",

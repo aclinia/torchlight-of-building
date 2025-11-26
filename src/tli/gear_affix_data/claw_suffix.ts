@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CLAW_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `+(10-15)`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -66,7 +62,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -78,7 +73,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "Adds `45`% of the Main-Hand Weapon's damage to Base Trauma Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -89,7 +83,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "Shadow Quantity `+2`<> `-5`% additional Shadow Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -105,7 +98,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -121,7 +113,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -137,7 +128,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -149,7 +139,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "Adds `38`% of the Main-Hand Weapon's damage to Base Trauma Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -165,7 +154,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(166-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -186,7 +174,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "`+(33-47)`% Attack and Cast Speed<> `+(33-47)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -202,7 +189,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(47-64)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -218,7 +204,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -234,7 +219,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(73-94)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -250,7 +234,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -266,7 +249,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -282,7 +264,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(128-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -303,7 +284,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "`+(26-36)`% Attack and Cast Speed<> `+(26-36)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -319,7 +299,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -335,7 +314,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -351,7 +329,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(52-72)`% chance to Multistrike",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -367,7 +344,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -383,7 +359,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -399,7 +374,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -415,7 +389,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -431,7 +404,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -447,7 +419,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -463,7 +434,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -484,7 +454,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "`+(55-61)`% Gear Attack Speed. `(-12--11)`% additional Attack Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -500,7 +469,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -516,7 +484,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -537,7 +504,6 @@ export const CLAW_SUFFIX_AFFIXES = [
       "`+(43-52)`% Gear Attack Speed. `(-13--12)`% additional Attack Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -553,7 +519,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
@@ -569,7 +534,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "claw",
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",

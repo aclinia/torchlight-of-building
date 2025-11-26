@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const CROSSBOW_CORROSION_BASE_AFFIXES = [
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -18,7 +17,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(15-25)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -34,7 +32,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(3-6)`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -50,7 +47,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(40-45)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -66,7 +62,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(5-8)`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -83,7 +78,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
       "`+(6-12)`% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -99,7 +93,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "`+(8-12)`% chance to deal double Trauma Damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -119,7 +112,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "Adds `(7-10)`- `(14-17)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",
@@ -135,7 +127,6 @@ export const CROSSBOW_CORROSION_BASE_AFFIXES = [
     rawAffix: "Eliminates enemies under `(5-8)`% Life upon inflicting damage",
   },
   {
-    equipmentTypeKey: "crossbow",
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
     affixType: "Corrosion Base",

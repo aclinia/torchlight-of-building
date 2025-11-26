@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SCEPTER_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(126-163)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -68,7 +64,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
       "`+(55-65)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -79,7 +74,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+5`% additional damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -95,7 +89,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -111,7 +104,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -129,7 +121,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
       "`+(40-50)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -145,7 +136,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(89-125)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -156,7 +146,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+1`% additional damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -172,7 +161,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Wilt Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -188,7 +176,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Ignite Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -204,7 +191,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Trauma Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -224,7 +210,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-47)`% Cast Speed<> `+(37-47)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -240,7 +225,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -256,7 +240,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -267,7 +250,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `40`% of the skill's damage as Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -278,7 +260,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `50`% of the skill's damage as Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -289,7 +270,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `81`% of the skill's damage as Base Trauma Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -305,7 +285,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Wilt Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -321,7 +300,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Ignite Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -337,7 +315,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Trauma Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -357,7 +334,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Cast Speed<> `+(26-36)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -373,7 +349,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -389,7 +364,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -400,7 +374,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `35`% of the skill's damage as Base Wilt Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -411,7 +384,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `42`% of the skill's damage as Base Ignite Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -422,7 +394,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "Gains `70`% of the skill's damage as Base Trauma Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -438,7 +409,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -454,7 +424,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -470,7 +439,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -486,7 +454,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-31)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -502,7 +469,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(76-98)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -518,7 +484,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(18-24)`% Energy Shield Charge Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -534,7 +499,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-75)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -550,7 +514,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",
@@ -566,7 +529,6 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     rawAffix: "`+(78-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Suffix",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
       "`+120`% Deep Pain Aura<> `-20`% additional Deep Pain Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -26,7 +24,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+160`Affliction inflicted per second",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -39,7 +36,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
       "`+25`% Movement Speed when standing on a Terra Skill. The effect lasts `2`s.<> `+100`% Skill Area when standing on a Terra Skill. Lasts for `2`s",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -52,7 +48,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
       "Enemies have a `15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -63,7 +58,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Main Skill is supported by Lv. `25`Cataclysm",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -76,7 +70,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
       "Max Tenacity Blessing Stacks `+1`<> Max Focus Blessing Stacks `-1`<> Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -87,7 +80,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Triggers Lv. `30`Black Hole when moving. Interval: `1.5`s",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -100,7 +92,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
       "Upon inflicting damage, `+5`% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -111,7 +102,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`-10`% All Resistance when the enemy has max Affliction",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -122,7 +112,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+12`% Ailment Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -133,7 +122,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+12`% Movement Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -144,7 +132,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+16`Affliction inflicted per second<> `+24`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -155,7 +142,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+25`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -166,7 +152,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+30`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -177,7 +162,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Blur Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -188,7 +172,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% all stats",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",
@@ -199,7 +182,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% additional Damage Over Time",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Tower Sequence",

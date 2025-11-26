@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const WAND_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -19,7 +18,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`-15`% additional Cast Speed<> `+(54-69)`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -35,7 +33,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(41-52)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -51,7 +48,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(48-60)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -67,7 +63,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(54-69)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -85,7 +80,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+(55-65)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -102,7 +96,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+(62-88)`% additional Hit Damage for skills cast by Spell Burst",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -120,7 +113,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+2`Parabolic Projectile Split Quantity<> `+(8-12)`% additional Projectile Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -131,7 +123,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+5`% additional damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -148,7 +139,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`-15`% additional Cast Speed<> `+(38-53)`% additional Spell Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -164,7 +154,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(29-40)`% chance to deal Double Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -180,7 +169,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-45)`% Focus Damage Enhancement",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -196,7 +184,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-53)`% additional damage against Frozen enemies",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -214,7 +201,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+(40-50)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least `8`Combo Point(s)",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -231,7 +217,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+(48-68)`% additional Hit Damage for skills cast by Spell Burst",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -249,7 +234,6 @@ export const WAND_SUFFIX_AFFIXES = [
       "`+1`Parabolic Projectile Split Quantity<> `+(12-16)`% additional Projectile Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -260,7 +244,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "Max Terra Quantity `+1`<> `+1`% additional damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -276,7 +259,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(126-163)`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -292,7 +274,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(181-234)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -308,7 +289,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-62)`% Max Mana",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -324,7 +304,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(60-70)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -340,7 +319,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -356,7 +334,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(91-117)`% Spell Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -372,7 +349,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(127-180)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -388,7 +364,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(34-48)`% Max Mana",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -404,7 +379,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(45-54)`% Focus Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -420,7 +394,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Mana Regeneration Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -436,7 +409,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(64-90)`% Spell Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -452,7 +424,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(89-125)`Spell Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -468,7 +439,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -484,7 +454,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -500,7 +469,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -516,7 +484,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -532,7 +499,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-23)`% Life Regain",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -552,7 +518,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(34-47)`% Cast Speed<> `+(34-47)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -568,7 +533,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(50-64)`% Spell Burst Charge Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -584,7 +548,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Energy Shield Regain",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -600,7 +563,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(14-18)`% Life Regain",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -620,7 +582,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-36)`% Cast Speed<> `+(26-36)`% Minion Cast Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -636,7 +597,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(38-47)`% Spell Burst Charge Speed",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -652,7 +612,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
@@ -668,7 +627,6 @@ export const WAND_SUFFIX_AFFIXES = [
     rawAffix: "`+(78-108)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",

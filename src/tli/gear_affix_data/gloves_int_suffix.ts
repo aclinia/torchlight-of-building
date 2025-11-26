@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const GLOVES_INT_SUFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -18,7 +17,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(16-20)`% Blur Effect<> Gains Blur for `1`s after losing Blur",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -34,7 +32,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(26-30)`% additional damage while having Fervor",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -50,7 +47,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -61,7 +57,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+1`Jumps<> `+6`% additional damage for every Jump (multiplies)",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -77,7 +72,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(12-15)`% Blur Effect<> Gains Blur for `1`s after losing Blur",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -93,7 +87,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(21-25)`% additional damage while having Fervor",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -109,7 +102,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -126,7 +118,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
       "`+1`Jumps<> `+(4-5)`% additional damage for every Jump (multiplies)",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -147,7 +138,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
       "`+(22-31)`% Attack and Cast Speed<> `+(22-31)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -167,7 +157,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(49-62)`% Skill Area<> `+(49-62)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -183,7 +172,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -199,7 +187,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(61-78)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -220,7 +207,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
       "`+(17-24)`% Attack and Cast Speed<> `+(17-24)`% Minion Attack and Cast Speed",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -240,7 +226,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(35-48)`% Skill Area<> `+(35-48)`% Minion Skill Area",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -256,7 +241,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(37-50)`% Reaping Duration",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -272,7 +256,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(44-60)`% Critical Strike Damage",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -288,7 +271,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(111-156)`% Critical Strike Rating",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -304,7 +286,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -320,7 +301,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -336,7 +316,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -352,7 +331,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(25-35)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -368,7 +346,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(51-65)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -384,7 +361,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Cold Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -400,7 +376,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Erosion Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -416,7 +391,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Fire Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -432,7 +406,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(19-27)`% Lightning Resistance",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
@@ -448,7 +421,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     rawAffix: "`+(36-50)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "gloves_int",
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",

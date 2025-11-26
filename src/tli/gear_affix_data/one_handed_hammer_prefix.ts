@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -18,7 +17,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(26-32)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -34,7 +32,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(3-4)`to Attack Skill Level",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -50,7 +47,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(31-39)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -72,7 +68,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
       "Adds `(62-64)`- `(356-358)`Elemental Damage to the gear<> `-100`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -88,7 +83,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(18-25)`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -104,7 +98,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(22-30)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -115,7 +108,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+3`to Attack Skill Level",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -137,7 +129,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
       "Adds `(47-49)`- `(272-274)`Elemental Damage to the gear<> `-100`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -153,7 +144,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(101-130)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -169,7 +159,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Dexterity",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -185,7 +174,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Intelligence",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -201,7 +189,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(91-117)`Strength",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -217,7 +204,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(56-100)`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -233,7 +219,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Dexterity",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -249,7 +234,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Intelligence",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -265,7 +249,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(64-90)`Strength",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -281,7 +264,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(109-140)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -301,7 +283,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(161-163)`- `(208-220)`Fire Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -321,7 +302,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(162-164)`- `(216-218)`Cold Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -341,7 +321,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(174-176)`- `(204-206)`Erosion Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -361,7 +340,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(18-20)`- `(360-362)`Lightning Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -381,7 +359,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(47-49)`- `(57-59)`Physical Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -397,7 +374,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "`+(77-108)`% Melee Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -417,7 +393,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(123-125)`- `(160-169)`Fire Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -437,7 +412,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(125-127)`- `(165-167)`Cold Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -457,7 +431,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(133-135)`- `(157-159)`Erosion Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
@@ -477,7 +450,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     rawAffix: "Adds `(14-16)`- `(276-278)`Lightning Damage to the gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",

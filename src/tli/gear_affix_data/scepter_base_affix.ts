@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SCEPTER_BASE_AFFIX_AFFIXES = [
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -18,7 +17,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Blur Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -29,7 +27,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Agility Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -40,7 +37,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Focus Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -51,7 +47,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "Max Tenacity Blessing Stacks `+1`",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -67,7 +62,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`% Reaping Cooldown Recovery Speed",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -83,7 +77,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% additional Damage Over Time",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -99,7 +92,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -115,7 +107,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(10-14)`% Affliction Effect",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -131,7 +122,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Dexterity",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -147,7 +137,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Intelligence",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -163,7 +152,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(15-20)`Strength",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -179,7 +167,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Elemental Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -195,7 +182,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Erosion Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -211,7 +197,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Physical Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
@@ -227,7 +212,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     rawAffix: "`+(20-24)`% Spell Damage",
   },
   {
-    equipmentTypeKey: "scepter",
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",

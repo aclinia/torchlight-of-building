@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const SPIRIT_RING_BASE_STATS_AFFIXES = [
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",
@@ -13,7 +12,6 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+12`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",
@@ -24,7 +22,6 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+18`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",
@@ -35,7 +32,6 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+24`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",
@@ -46,7 +42,6 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+3`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",
@@ -57,7 +52,6 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     rawAffix: "`+5`% Minion Damage",
   },
   {
-    equipmentTypeKey: "spirit_ring",
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Base Stats",

@@ -2,7 +2,6 @@ import { BaseGearAffix } from "./types";
 
 export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -15,7 +14,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
       "`+120`% Fearless Aura<> `-20`% additional Fearless Sealed Mana Compensation",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -28,7 +26,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
       "`+15`% additional Deterioration Damage<> `10`% chance to inflict `1`additional stack(s) of Deterioration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -40,7 +37,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
       "`+25`% Elemental Damage for the gear<> `-25`% gear Physical Damage",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -53,7 +49,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
       "`+80`% gear Physical Damage<> `-20`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -64,7 +59,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Adds `1`- `1`Physical Damage to Attacks per `2260`Armor",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -75,7 +69,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Adds `1`- `3`Lightning Damage to Attacks per `10`Dexterity",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -86,7 +79,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Adds `2`- `2`Fire Damage to Attacks per `10`Strength",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -99,7 +91,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
       "Enemies have a `15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -110,7 +101,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "Main Skill is supported by Lv. `25`Steamroll",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -121,7 +111,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+10`% all stats",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -132,7 +121,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+10`% additional damage on Critical Strike",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -143,7 +131,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+20`% Attack Critical Strike Rating for this gear",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -154,7 +141,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+6`% Armor DMG Mitigation Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -165,7 +151,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% additional damage for Weapons",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -176,7 +161,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Cold Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -187,7 +171,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Erosion Resistance Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -198,7 +181,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% Fire Penetration",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
@@ -209,7 +191,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES = [
     rawAffix: "`+8`% gear Attack Speed",
   },
   {
-    equipmentTypeKey: "one_handed_hammer",
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Tower Sequence",
