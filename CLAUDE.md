@@ -8,6 +8,7 @@ Next.js 16 + React 19 + TypeScript character build planner for Torchlight Infini
 - **Calculation Engine** ([src/tli/offense.ts](src/tli/offense.ts)) - DPS/stat calculations
 - **Mod Parser** ([src/tli/mod_parser.ts](src/tli/mod_parser.ts)) - String → typed Mod conversion
 - **Data Models** ([src/tli/core.ts](src/tli/core.ts), [src/tli/mod.ts](src/tli/mod.ts)) - Type definitions
+- **Gear Affixes** ([src/tli/gear_affix_data/](src/tli/gear_affix_data/)) - 5,625 typed gear affixes
 
 ## Key Conventions
 
@@ -29,7 +30,18 @@ RawLoadout (UI, strings) → parseMod() → Loadout (typed Mods) → calculateOf
 
 **Add skill:** Add to `offensiveSkillConfs` in [offense.ts](src/tli/offense.ts), type auto-updates
 
-**Update talent trees:** `tsx src/scripts/save_all_profession_trees.ts`
+**Update talent trees:** `pnpm exec tsx src/scripts/save_all_profession_trees.ts`
+
+**Regenerate gear affixes:** `pnpm exec tsx src/scripts/generate_gear_affix_data.ts`
+
+## Code Generation Pattern
+
+For large datasets (5k+ entries), use build-time code generation:
+1. Script in `src/scripts/` reads JSON data
+2. Groups/transforms data into TypeScript const arrays
+3. Generates files with `satisfies readonly T[]` for type safety
+4. Exports discriminated union from const array types
+5. See [generate_gear_affix_data.ts](src/scripts/generate_gear_affix_data.ts) for reference
 
 ## Detailed Docs
 
