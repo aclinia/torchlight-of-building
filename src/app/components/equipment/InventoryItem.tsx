@@ -46,7 +46,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
       </div>
 
       {/* Hover tooltip showing item details */}
-      <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-50 w-72 pointer-events-none">
+      <div className="absolute left-0 top-full mt-2 hidden group-hover:block z-50 w-72 pointer-events-none">
         <div className="bg-zinc-900 dark:bg-zinc-950 text-white p-3 rounded-lg shadow-xl border border-zinc-700">
           <div className="font-semibold text-sm mb-2 text-blue-400">
             {item.equipmentType}
