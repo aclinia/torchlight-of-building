@@ -21,7 +21,10 @@ interface SkillSlotProps {
   excludedSkillNames: string[];
   onSkillChange: (skillName: string | undefined) => void;
   onToggle: () => void;
-  onUpdateSupport: (supportKey: SupportSkillKey, supportName: string | undefined) => void;
+  onUpdateSupport: (
+    supportKey: SupportSkillKey,
+    supportName: string | undefined,
+  ) => void;
 }
 
 export const SkillSlot: React.FC<SkillSlotProps> = ({

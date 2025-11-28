@@ -397,8 +397,16 @@ export default function Home() {
   };
 
   // Skill page handlers
-  type ActiveSkillSlot = "activeSkill1" | "activeSkill2" | "activeSkill3" | "activeSkill4";
-  type PassiveSkillSlot = "passiveSkill1" | "passiveSkill2" | "passiveSkill3" | "passiveSkill4";
+  type ActiveSkillSlot =
+    | "activeSkill1"
+    | "activeSkill2"
+    | "activeSkill3"
+    | "activeSkill4";
+  type PassiveSkillSlot =
+    | "passiveSkill1"
+    | "passiveSkill2"
+    | "passiveSkill3"
+    | "passiveSkill4";
   type SkillSlotKey = ActiveSkillSlot | PassiveSkillSlot;
   type SupportSkillKey = keyof RawSupportSkills;
 
@@ -417,15 +425,15 @@ export default function Home() {
   ];
 
   const getSelectedActiveSkillNames = (): string[] => {
-    return ACTIVE_SKILL_SLOTS.map((slot) => loadout.skillPage[slot].skillName).filter(
-      (name): name is string => name !== undefined,
-    );
+    return ACTIVE_SKILL_SLOTS.map(
+      (slot) => loadout.skillPage[slot].skillName,
+    ).filter((name): name is string => name !== undefined);
   };
 
   const getSelectedPassiveSkillNames = (): string[] => {
-    return PASSIVE_SKILL_SLOTS.map((slot) => loadout.skillPage[slot].skillName).filter(
-      (name): name is string => name !== undefined,
-    );
+    return PASSIVE_SKILL_SLOTS.map(
+      (slot) => loadout.skillPage[slot].skillName,
+    ).filter((name): name is string => name !== undefined);
   };
 
   const handleSkillChange = (
