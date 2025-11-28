@@ -1175,7 +1175,7 @@ export const HeroMemories = [
     type: "Random Affix",
     item: "Memory of Origin",
     effect:
-      "+(10-12)% additional Attack and Cast Speed for Combo Starters +(31-40)% Critical Strike Damage for Combo Finishers",
+      "+(10-12)% additional Attack and Cast Speed for Combo Starters\n+(31-40)% Critical Strike Damage for Combo Finishers",
   },
   {
     type: "Random Affix",
@@ -1335,7 +1335,7 @@ export const HeroMemories = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    effect: "+18% Attack and Cast Speed +18% Minion Attack and Cast Speed",
+    effect: "+18% Attack and Cast Speed\n+18% Minion Attack and Cast Speed",
   },
   {
     type: "Random Affix",
@@ -1351,7 +1351,7 @@ export const HeroMemories = [
     type: "Random Affix",
     item: "Memory of Discipline",
     effect:
-      "+(10-12)% additional Attack and Cast Speed for Combo Starters +(31-40)% Critical Strike Damage for Combo Finishers",
+      "+(10-12)% additional Attack and Cast Speed for Combo Starters\n+(31-40)% Critical Strike Damage for Combo Finishers",
   },
   {
     type: "Random Affix",
@@ -1511,7 +1511,7 @@ export const HeroMemories = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    effect: "+18% Attack and Cast Speed +18% Minion Attack and Cast Speed",
+    effect: "+18% Attack and Cast Speed\n+18% Minion Attack and Cast Speed",
   },
   {
     type: "Random Affix",
@@ -1527,7 +1527,7 @@ export const HeroMemories = [
     type: "Random Affix",
     item: "Memory of Progress",
     effect:
-      "+(10-12)% additional Attack and Cast Speed for Combo Starters +(31-40)% Critical Strike Damage for Combo Finishers",
+      "+(10-12)% additional Attack and Cast Speed for Combo Starters\n+(31-40)% Critical Strike Damage for Combo Finishers",
   },
   {
     type: "Random Affix",
@@ -1687,7 +1687,7 @@ export const HeroMemories = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    effect: "+18% Attack and Cast Speed +18% Minion Attack and Cast Speed",
+    effect: "+18% Attack and Cast Speed\n+18% Minion Attack and Cast Speed",
   },
   {
     type: "Random Affix",

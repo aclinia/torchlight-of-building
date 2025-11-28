@@ -10,8 +10,9 @@ interface HeroMemory {
 }
 
 const cleanEffectText = (html: string): string => {
-  // Replace <br> tags with spaces (not newlines) for single-line output
-  let text = html.replace(/<br\s*\/?>/gi, " ");
+  // Replace <br> tags with placeholder to preserve intentional line breaks
+  const BR_PLACEHOLDER = "\x00";
+  let text = html.replace(/<br\s*\/?>/gi, BR_PLACEHOLDER);
   // Remove all other HTML tags
   text = text.replace(/<[^>]+>/g, "");
   // Fix mojibake dash: UTF-8 en-dash bytes misinterpreted as Windows-1252
@@ -25,8 +26,16 @@ const cleanEffectText = (html: string): string => {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&nbsp;/g, " ");
-  // Normalize all whitespace (including newlines) to single spaces
+  // Normalize all whitespace (including source newlines) to single spaces
   text = text.replace(/\s+/g, " ");
+  // Restore intentional line breaks from <br> tags
+  text = text.replace(new RegExp(BR_PLACEHOLDER, "g"), "\n");
+  // Clean up: trim each line and remove empty lines
+  text = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0)
+    .join("\n");
   return text.trim();
 };
 
