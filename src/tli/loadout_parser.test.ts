@@ -1,6 +1,21 @@
 import { describe, expect, it } from "vitest";
 import { parse_loadout } from "./loadout_parser";
-import { RawLoadout, RawSkillPage } from "./core";
+import { RawLoadout, RawSkillPage, RawHeroPage } from "./core";
+
+const createEmptyHeroPage = (): RawHeroPage => ({
+  selectedHero: undefined,
+  traits: {
+    level1: undefined,
+    level45: undefined,
+    level60: undefined,
+    level75: undefined,
+  },
+  memorySlots: {
+    slot45: undefined,
+    slot60: undefined,
+    slot75: undefined,
+  },
+});
 
 const createEmptySkillPage = (): RawSkillPage => ({
   activeSkill1: { enabled: true, supportSkills: {} },
@@ -30,7 +45,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -80,7 +97,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -129,7 +148,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -172,7 +193,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -207,7 +230,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -234,7 +259,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -260,7 +287,9 @@ describe("parse_loadout", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -287,7 +316,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -317,7 +348,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -345,7 +378,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -385,7 +420,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -412,7 +449,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     expect(() => parse_loadout(rawLoadout)).toThrow(
@@ -433,7 +472,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     expect(() => parse_loadout(rawLoadout)).toThrow(
@@ -456,7 +497,9 @@ describe("talent tree parsing", () => {
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const result = parse_loadout(rawLoadout);

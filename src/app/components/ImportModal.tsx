@@ -96,9 +96,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({
         />
 
         {/* Error Message */}
-        {error && (
-          <p className="text-sm text-red-500 mt-2">{error}</p>
-        )}
+        {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
 
         {/* Buttons */}
         <div className="flex gap-3 mt-4">

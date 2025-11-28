@@ -61,9 +61,7 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
             disabled={!hasSkill}
             className="w-5 h-5 disabled:opacity-50 accent-amber-500"
           />
-          <span className="text-xs text-zinc-500 w-16">
-            {slotLabel}
-          </span>
+          <span className="text-xs text-zinc-500 w-16">{slotLabel}</span>
           <select
             className={`flex-1 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500 ${
               hasSkill
@@ -102,9 +100,7 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
           <div className="space-y-2">
             {SUPPORT_SKILL_KEYS.map((key, index) => (
               <div key={key} className="flex items-center gap-2">
-                <span className="text-xs text-zinc-500 w-6">
-                  {index + 1}.
-                </span>
+                <span className="text-xs text-zinc-500 w-6">{index + 1}.</span>
                 <SupportSkillSelector
                   selectedSkill={skill.supportSkills[key]}
                   excludedSkills={selectedSupports.filter(

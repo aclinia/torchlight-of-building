@@ -7,6 +7,8 @@ import {
   RawAllocatedTalentNode,
   RawSkillPage,
   RawSupportSkills,
+  RawHeroMemory,
+  HeroMemorySlot,
 } from "@/src/tli/core";
 import { ActiveSkills, PassiveSkills } from "@/src/data/skill";
 import {
@@ -28,6 +30,7 @@ import {
   saveDebugModeToStorage,
   createEmptyLoadout,
   generateItemId,
+  createEmptyHeroPage,
 } from "./lib/storage";
 import { decodeBuildCode, encodeBuildCode } from "./lib/build-code";
 import {
@@ -36,6 +39,7 @@ import {
   getGearTypeFromEquipmentType,
 } from "./lib/equipment-utils";
 import { getFilteredAffixes } from "./lib/affix-utils";
+import { getBaseTraitForHero } from "./lib/hero-utils";
 
 // Component imports
 import { PageTabs } from "./components/PageTabs";
@@ -47,6 +51,7 @@ import { TalentGrid } from "./components/talents/TalentGrid";
 import { SkillSlot } from "./components/skills/SkillSlot";
 import { ExportModal } from "./components/ExportModal";
 import { ImportModal } from "./components/ImportModal";
+import { HeroTab } from "./components/hero/HeroTab";
 
 export default function Home() {
   const [loadout, setLoadout] = useState<RawLoadout>(createEmptyLoadout);
@@ -487,6 +492,120 @@ export default function Home() {
     }));
   };
 
+  // Hero page handlers
+  const handleHeroChange = (hero: string | undefined) => {
+    setLoadout((prev) => {
+      if (!hero) {
+        return {
+          ...prev,
+          heroPage: createEmptyHeroPage(),
+        };
+      }
+
+      const baseTrait = getBaseTraitForHero(hero);
+
+      return {
+        ...prev,
+        heroPage: {
+          selectedHero: hero,
+          traits: {
+            level1: baseTrait?.name,
+            level45: undefined,
+            level60: undefined,
+            level75: undefined,
+          },
+          memorySlots: {
+            slot45: undefined,
+            slot60: undefined,
+            slot75: undefined,
+          },
+        },
+      };
+    });
+  };
+
+  const handleHeroTraitSelect = (
+    level: 45 | 60 | 75,
+    traitName: string | undefined,
+  ) => {
+    const traitKey = `level${level}` as "level45" | "level60" | "level75";
+    setLoadout((prev) => ({
+      ...prev,
+      heroPage: {
+        ...prev.heroPage,
+        traits: {
+          ...prev.heroPage.traits,
+          [traitKey]: traitName,
+        },
+      },
+    }));
+  };
+
+  const handleHeroMemoryEquip = (
+    slot: HeroMemorySlot,
+    memoryId: string | undefined,
+  ) => {
+    setLoadout((prev) => {
+      const memory = memoryId
+        ? prev.heroMemoryList.find((m) => m.id === memoryId)
+        : undefined;
+
+      return {
+        ...prev,
+        heroPage: {
+          ...prev.heroPage,
+          memorySlots: {
+            ...prev.heroPage.memorySlots,
+            [slot]: memory,
+          },
+        },
+      };
+    });
+  };
+
+  const handleHeroMemorySave = (memory: RawHeroMemory) => {
+    setLoadout((prev) => ({
+      ...prev,
+      heroMemoryList: [...prev.heroMemoryList, memory],
+    }));
+  };
+
+  const handleHeroMemoryCopy = (memory: RawHeroMemory) => {
+    const newMemory: RawHeroMemory = { ...memory, id: generateItemId() };
+    setLoadout((prev) => ({
+      ...prev,
+      heroMemoryList: [...prev.heroMemoryList, newMemory],
+    }));
+  };
+
+  const handleHeroMemoryDelete = (memoryId: string) => {
+    setLoadout((prev) => {
+      const newMemoryList = prev.heroMemoryList.filter(
+        (m) => m.id !== memoryId,
+      );
+      // Also unequip if equipped
+      const newMemorySlots = { ...prev.heroPage.memorySlots };
+      if (newMemorySlots.slot45?.id === memoryId) {
+        newMemorySlots.slot45 = undefined;
+      }
+      if (newMemorySlots.slot60?.id === memoryId) {
+        newMemorySlots.slot60 = undefined;
+      }
+      if (newMemorySlots.slot75?.id === memoryId) {
+        newMemorySlots.slot75 = undefined;
+      }
+
+      return {
+        ...prev,
+        heroMemoryList: newMemoryList,
+        heroPage: {
+          ...prev.heroPage,
+          memorySlots: newMemorySlots,
+        },
+      };
+    });
+  };
+
   const handleDebugToggle = () => {
     setDebugMode((prev) => {
       const newValue = !prev;
@@ -866,6 +985,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Hero Page */}
+        {activePage === "hero" && (
+          <HeroTab
+            heroPage={loadout.heroPage}
+            heroMemoryList={loadout.heroMemoryList}
+            onHeroChange={handleHeroChange}
+            onTraitSelect={handleHeroTraitSelect}
+            onMemoryEquip={handleHeroMemoryEquip}
+            onMemorySave={handleHeroMemorySave}
+            onMemoryCopy={handleHeroMemoryCopy}
+            onMemoryDelete={handleHeroMemoryDelete}
+          />
         )}
 
         {/* Action Buttons */}

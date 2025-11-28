@@ -154,9 +154,49 @@ export interface RawSkillPage {
   passiveSkill4: RawSkillWithSupports;
 }
 
+// Hero Memory types
+export const HERO_MEMORY_TYPES = [
+  "Memory of Origin",
+  "Memory of Discipline",
+  "Memory of Progress",
+] as const;
+export type HeroMemoryType = (typeof HERO_MEMORY_TYPES)[number];
+
+export interface RawHeroMemoryAffix {
+  effect: string;
+  quality: number;
+}
+
+export interface RawHeroMemory {
+  id: string;
+  memoryType: HeroMemoryType;
+  baseStat: string;
+  fixedAffixes: RawHeroMemoryAffix[];
+  randomAffixes: RawHeroMemoryAffix[];
+}
+
+export type HeroMemorySlot = "slot45" | "slot60" | "slot75";
+
+export interface RawHeroPage {
+  selectedHero: string | undefined;
+  traits: {
+    level1: string | undefined;
+    level45: string | undefined;
+    level60: string | undefined;
+    level75: string | undefined;
+  };
+  memorySlots: {
+    slot45: RawHeroMemory | undefined;
+    slot60: RawHeroMemory | undefined;
+    slot75: RawHeroMemory | undefined;
+  };
+}
+
 export interface RawLoadout {
   equipmentPage: RawGearPage;
   talentPage: RawTalentPage;
   skillPage: RawSkillPage;
+  heroPage: RawHeroPage;
   itemsList: RawGear[];
+  heroMemoryList: RawHeroMemory[];
 }

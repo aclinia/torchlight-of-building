@@ -10,7 +10,11 @@
 body {
   background: #0c0c0e;
   color: #fafafa;
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 /* Custom scrollbar for dark theme */

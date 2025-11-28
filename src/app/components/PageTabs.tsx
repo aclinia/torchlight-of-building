@@ -41,6 +41,16 @@ export const PageTabs: React.FC<PageTabsProps> = ({
       >
         Skills
       </button>
+      <button
+        onClick={() => setActivePage("hero")}
+        className={`px-6 py-3 font-medium transition-colors ${
+          activePage === "hero"
+            ? "border-b-2 border-amber-500 text-amber-500"
+            : "text-zinc-400 hover:text-zinc-50"
+        }`}
+      >
+        Hero
+      </button>
     </div>
   );
 };

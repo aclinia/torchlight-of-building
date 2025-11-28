@@ -2,23 +2,26 @@
 
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { RawGear } from "@/src/tli/core";
+import type { RawHeroMemory } from "@/src/tli/core";
+import { formatCraftedMemoryAffixes } from "../../lib/hero-utils";
 
-interface InventoryItemProps {
-  item: RawGear;
+interface HeroMemoryItemProps {
+  memory: RawHeroMemory;
   isEquipped: boolean;
-  onCopy: (item: RawGear) => void;
+  onCopy: (memory: RawHeroMemory) => void;
   onDelete: (id: string) => void;
 }
 
-export const InventoryItem: React.FC<InventoryItemProps> = ({
-  item,
+export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
+  memory,
   isEquipped,
   onCopy,
   onDelete,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const craftedAffixes = formatCraftedMemoryAffixes(memory);
 
   return (
     <div
@@ -29,10 +32,10 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
     >
       <div className="flex items-center gap-2">
         <span className="font-medium text-zinc-50 text-sm">
-          {item.equipmentType}
+          {memory.memoryType}
         </span>
         <span className="text-xs text-zinc-500">
-          ({item.affixes.length} affixes)
+          ({craftedAffixes.length} affixes)
         </span>
         {isEquipped && (
           <span className="text-xs text-green-500 font-medium">Equipped</span>
@@ -40,22 +43,22 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
       </div>
       <div className="flex gap-2">
         <button
-          onClick={() => onCopy(item)}
+          onClick={() => onCopy(memory)}
           className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
-          title="Copy item"
+          title="Copy memory"
         >
           Copy
         </button>
         <button
-          onClick={() => onDelete(item.id)}
+          onClick={() => onDelete(memory.id)}
           className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
-          title="Delete item"
+          title="Delete memory"
         >
           Delete
         </button>
       </div>
 
-      {/* Hover tooltip showing item details - rendered via portal to escape scroll container */}
+      {/* Hover tooltip showing memory details - rendered via portal to escape scroll container */}
       {isHovered &&
         typeof document !== "undefined" &&
         createPortal(
@@ -65,12 +68,15 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
           >
             <div className="bg-zinc-950 text-zinc-50 p-3 rounded-lg shadow-xl border border-zinc-700">
               <div className="font-semibold text-sm mb-2 text-amber-400">
-                {item.equipmentType}
+                {memory.memoryType}
               </div>
-              {item.affixes.length > 0 ? (
+              {craftedAffixes.length > 0 ? (
                 <ul className="space-y-1">
-                  {item.affixes.map((affix, idx) => (
-                    <li key={idx} className="text-xs text-zinc-400">
+                  {craftedAffixes.map((affix, idx) => (
+                    <li
+                      key={idx}
+                      className="text-xs text-zinc-400 whitespace-pre-wrap"
+                    >
                       {affix}
                     </li>
                   ))}

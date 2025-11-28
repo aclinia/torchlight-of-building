@@ -1,9 +1,24 @@
-import { RawLoadout, RawSkillWithSupports } from "@/src/tli/core";
+import { RawLoadout, RawSkillWithSupports, RawHeroPage } from "@/src/tli/core";
 import { DEBUG_MODE_STORAGE_KEY } from "./constants";
 
 const createEmptySkillSlot = (): RawSkillWithSupports => ({
   enabled: true,
   supportSkills: {},
+});
+
+export const createEmptyHeroPage = (): RawHeroPage => ({
+  selectedHero: undefined,
+  traits: {
+    level1: undefined,
+    level45: undefined,
+    level60: undefined,
+    level75: undefined,
+  },
+  memorySlots: {
+    slot45: undefined,
+    slot60: undefined,
+    slot75: undefined,
+  },
 });
 
 export const generateItemId = (): string => crypto.randomUUID();
@@ -41,5 +56,7 @@ export const createEmptyLoadout = (): RawLoadout => ({
     passiveSkill3: createEmptySkillSlot(),
     passiveSkill4: createEmptySkillSlot(),
   },
+  heroPage: createEmptyHeroPage(),
   itemsList: [],
+  heroMemoryList: [],
 });

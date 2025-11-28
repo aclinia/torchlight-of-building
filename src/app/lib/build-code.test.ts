@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { encodeBuildCode, decodeBuildCode } from "./build-code";
-import { RawLoadout, RawSkillPage } from "@/src/tli/core";
-import { createEmptyLoadout } from "./storage";
+import { RawLoadout, RawSkillPage, RawHeroPage } from "@/src/tli/core";
+import { createEmptyLoadout, createEmptyHeroPage } from "./storage";
 
 const createEmptySkillPage = (): RawSkillPage => ({
   activeSkill1: { enabled: true, supportSkills: {} },
@@ -40,7 +40,9 @@ describe("build-code", () => {
       },
       talentPage: {},
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -66,7 +68,9 @@ describe("build-code", () => {
         },
       },
       skillPage: createEmptySkillPage(),
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -99,7 +103,9 @@ describe("build-code", () => {
       equipmentPage: {},
       talentPage: {},
       skillPage,
+      heroPage: createEmptyHeroPage(),
       itemsList: [],
+      heroMemoryList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -140,6 +146,7 @@ describe("build-code", () => {
         },
       },
       skillPage,
+      heroPage: createEmptyHeroPage(),
       itemsList: [
         {
           id: "inv-1",
@@ -147,6 +154,7 @@ describe("build-code", () => {
           affixes: ["+10% crit"],
         },
       ],
+      heroMemoryList: [],
     };
 
     const code = encodeBuildCode(loadout);

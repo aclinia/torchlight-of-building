@@ -27,9 +27,7 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
 
   return (
     <div className="flex items-center gap-3 py-2">
-      <label className="w-24 font-medium text-zinc-400 text-sm">
-        {label}:
-      </label>
+      <label className="w-24 font-medium text-zinc-400 text-sm">{label}:</label>
       <select
         value={selectedItemId || ""}
         onChange={(e) => onSelectItem(slot, e.target.value || null)}

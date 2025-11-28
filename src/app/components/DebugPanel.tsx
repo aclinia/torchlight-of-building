@@ -27,9 +27,7 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
       {/* Panel Header */}
       <div className="bg-zinc-950 px-4 py-2 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <h3 className="font-semibold text-zinc-50">
-            Debug: RawLoadout
-          </h3>
+          <h3 className="font-semibold text-zinc-50">Debug: RawLoadout</h3>
           <span className="text-xs text-zinc-500">
             {JSON.stringify(loadout).length} bytes
           </span>
