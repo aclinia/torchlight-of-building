@@ -63,10 +63,19 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
     );
   };
 
-  const getCellSlate = (row: number, col: number): RawDivinitySlate | undefined => {
+  const getCellSlateId = (row: number, col: number): string | undefined => {
     const placed = findSlateAtCell(row, col, divinitySlateList, divinityPage.placedSlates);
-    if (!placed) return undefined;
-    return divinitySlateList.find((s) => s.id === placed.slateId);
+    return placed?.slateId;
+  };
+
+  const getSlateEdges = (row: number, col: number, slateId: string | undefined) => {
+    if (!slateId) return undefined;
+    return {
+      top: getCellSlateId(row - 1, col) !== slateId,
+      right: getCellSlateId(row, col + 1) !== slateId,
+      bottom: getCellSlateId(row + 1, col) !== slateId,
+      left: getCellSlateId(row, col - 1) !== slateId,
+    };
   };
 
   const previewCells = getPreviewCells();
@@ -100,7 +109,9 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
       const isValid = GRID_MASK[row][col] === 1;
       const isOccupied = occupiedCells.has(`${row},${col}`);
       const isPreview = previewCells.has(`${row},${col}`);
-      const cellSlate = getCellSlate(row, col);
+      const cellSlateId = getCellSlateId(row, col);
+      const cellSlate = cellSlateId ? divinitySlateList.find((s) => s.id === cellSlateId) : undefined;
+      const slateEdges = getSlateEdges(row, col, cellSlateId);
 
       cells.push(
         <DivinityGridCell
@@ -113,6 +124,7 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
           isValidPlacement={validPlacement}
           slate={cellSlate}
           selectedSlate={selectedSlate}
+          slateEdges={slateEdges}
           onClick={() => handleCellClick(row, col)}
           onMouseEnter={() => handleCellHover(row, col)}
         />,
