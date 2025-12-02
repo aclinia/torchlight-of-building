@@ -47,6 +47,7 @@ export interface AllocatedTalentNode {
 export interface TalentTree {
   name: string;
   allocatedNodes: AllocatedTalentNode[];
+  selectedCoreTalents?: string[];
 }
 
 export interface TalentPage {

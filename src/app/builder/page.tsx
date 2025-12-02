@@ -22,6 +22,7 @@ import {
   isGodGoddessTree,
   loadTalentTree,
 } from "@/src/tli/talent_tree";
+import { CoreTalentSelector } from "../components/talents/CoreTalentSelector";
 import { EquipmentType } from "@/src/tli/gear_data_types";
 import { craft } from "@/src/tli/crafting/craft";
 
@@ -499,6 +500,35 @@ export default function BuilderPage() {
         talentPage: {
           ...prev.talentPage,
           [slot]: { ...tree, allocatedNodes: updatedNodes },
+        },
+      };
+    });
+  };
+
+  const handleSelectCoreTalent = (
+    treeSlot: TreeSlot,
+    slotIndex: number,
+    talentName: string | undefined,
+  ) => {
+    updateLoadout((prev) => {
+      const tree = prev.talentPage[treeSlot];
+      if (!tree) return prev;
+
+      const newSelected = [...(tree.selectedCoreTalents ?? [])];
+      if (talentName) {
+        newSelected[slotIndex] = talentName;
+      } else {
+        newSelected.splice(slotIndex, 1);
+      }
+
+      return {
+        ...prev,
+        talentPage: {
+          ...prev.talentPage,
+          [treeSlot]: {
+            ...tree,
+            selectedCoreTalents: newSelected.filter(Boolean),
+          },
         },
       };
     });
@@ -1173,6 +1203,22 @@ export default function BuilderPage() {
                 </button>
               </div>
             </div>
+
+            {loadout.talentPage[activeTreeSlot] && (
+              <CoreTalentSelector
+                treeName={loadout.talentPage[activeTreeSlot]!.name}
+                treeSlot={activeTreeSlot}
+                pointsSpent={loadout.talentPage[
+                  activeTreeSlot
+                ]!.allocatedNodes.reduce((sum, node) => sum + node.points, 0)}
+                selectedCoreTalents={
+                  loadout.talentPage[activeTreeSlot]!.selectedCoreTalents ?? []
+                }
+                onSelectCoreTalent={(slotIndex, name) =>
+                  handleSelectCoreTalent(activeTreeSlot, slotIndex, name)
+                }
+              />
+            )}
 
             {!loadout.talentPage[activeTreeSlot] ? (
               <div className="text-center py-12 text-zinc-500">
