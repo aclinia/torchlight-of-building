@@ -32,41 +32,44 @@ export const TalentGrid: React.FC<TalentGridProps> = ({
 
   return (
     <div className="overflow-x-auto">
-      <div className="relative" style={{ width: gridWidth, height: gridHeight }}>
+      <div
+        className="relative"
+        style={{ width: gridWidth, height: gridHeight }}
+      >
         {/* SVG for prerequisite lines */}
         <svg
           className="absolute inset-0 pointer-events-none"
           style={{ width: gridWidth, height: gridHeight, zIndex: 0 }}
         >
-        {treeData.nodes
-          .filter((node) => node.prerequisite)
-          .map((node, idx) => {
-            const from = getNodeCenter(
-              node.prerequisite!.x,
-              node.prerequisite!.y,
-            );
-            const to = getNodeCenter(node.position.x, node.position.y);
+          {treeData.nodes
+            .filter((node) => node.prerequisite)
+            .map((node, idx) => {
+              const from = getNodeCenter(
+                node.prerequisite!.x,
+                node.prerequisite!.y,
+              );
+              const to = getNodeCenter(node.position.x, node.position.y);
 
-            const isSatisfied = isPrerequisiteSatisfied(
-              node.prerequisite,
-              allocatedNodes,
-              treeData,
-            );
+              const isSatisfied = isPrerequisiteSatisfied(
+                node.prerequisite,
+                allocatedNodes,
+                treeData,
+              );
 
-            return (
-              <line
-                key={idx}
-                x1={from.cx}
-                y1={from.cy}
-                x2={to.cx}
-                y2={to.cy}
-                stroke={isSatisfied ? "#22c55e" : "#71717a"}
-                strokeWidth="2"
-                opacity="0.5"
-              />
-            );
-          })}
-      </svg>
+              return (
+                <line
+                  key={idx}
+                  x1={from.cx}
+                  y1={from.cy}
+                  x2={to.cx}
+                  y2={to.cy}
+                  stroke={isSatisfied ? "#22c55e" : "#71717a"}
+                  strokeWidth="2"
+                  opacity="0.5"
+                />
+              );
+            })}
+        </svg>
 
         {/* Node Grid */}
         <div

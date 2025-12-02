@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "format": "prettier . --write"
+    "format": "prettier . --write --log-level error"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
