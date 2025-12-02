@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import { TalentNodeData } from "@/src/tli/talent_tree";
 
 interface TalentNodeDisplayProps {
@@ -17,8 +19,19 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
   onAllocate,
   onDeallocate,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
   const isFullyAllocated = allocated >= node.maxPoints;
   const isLocked = !canAllocate && allocated === 0;
+  const isLegendary = node.nodeType === "legendary";
+
+  const talentTypeName =
+    node.nodeType === "micro"
+      ? "Micro Talent"
+      : node.nodeType === "medium"
+        ? "Medium Talent"
+        : "Legendary Talent";
 
   return (
     <div
@@ -34,13 +47,9 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
                 : "border-zinc-700 bg-zinc-800 hover:border-amber-500"
         }
       `}
-      title={`${
-        node.nodeType === "micro"
-          ? "Micro Talent"
-          : node.nodeType === "medium"
-            ? "Medium Talent"
-            : "Legendary Talent"
-      }\n${node.rawAffix}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={(e) => setMousePos({ x: e.clientX, y: e.clientY })}
     >
       {/* Icon */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -90,6 +99,30 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           -
         </button>
       </div>
+
+      {/* Tooltip */}
+      {isHovered &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <div
+            className="fixed z-50 w-72 pointer-events-none"
+            style={{ left: mousePos.x + 12, top: mousePos.y + 12 }}
+          >
+            <div
+              className={`bg-zinc-950 text-zinc-50 p-3 rounded-lg shadow-xl border ${
+                isLegendary ? "border-amber-500/50" : "border-zinc-700"
+              }`}
+            >
+              <div className="font-semibold text-sm mb-2 text-amber-400">
+                {talentTypeName}
+              </div>
+              <div className="text-xs text-zinc-400 whitespace-pre-line">
+                {node.rawAffix}
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 };

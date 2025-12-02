@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import type { CoreTalent } from "@/src/data/core_talent";
 import {
   type TreeSlot,
@@ -119,7 +121,13 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
   allTalentsForTree,
   onSelect,
 }) => {
-  const selectedTalent = allTalentsForTree.find((ct) => ct.name === selected);
+  const [hoveredTalent, setHoveredTalent] = useState<CoreTalent | undefined>();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent, talent: CoreTalent) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+    setHoveredTalent(talent);
+  };
 
   return (
     <div
@@ -134,30 +142,61 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
       <div className="text-xs text-zinc-400 mb-2">{label}</div>
 
       {unlocked ? (
-        <select
-          value={selected ?? ""}
-          onChange={(e) => onSelect(e.target.value || undefined)}
-          className="w-full px-3 py-2 border border-zinc-700 rounded-lg bg-zinc-800 text-zinc-50 text-sm"
-        >
-          <option value="">Select...</option>
+        <div className="space-y-1">
           {available.map((ct) => (
-            <option key={ct.name} value={ct.name} title={ct.affix}>
+            <button
+              key={ct.name}
+              onClick={() => onSelect(selected === ct.name ? undefined : ct.name)}
+              onMouseEnter={(e) => handleMouseMove(e, ct)}
+              onMouseMove={(e) => handleMouseMove(e, ct)}
+              onMouseLeave={() => setHoveredTalent(undefined)}
+              className={`w-full px-3 py-2 border rounded-lg text-sm text-left transition-colors ${
+                selected === ct.name
+                  ? "border-amber-500 bg-amber-500/20 text-amber-400"
+                  : "border-zinc-700 bg-zinc-800 text-zinc-50 hover:border-amber-500/50"
+              }`}
+            >
               {ct.name}
-            </option>
+            </button>
           ))}
-          {selected && !available.find((ct) => ct.name === selected) && (
-            <option value={selected}>{selected}</option>
-          )}
-        </select>
+          {selected && !available.find((ct) => ct.name === selected) && (() => {
+            const orphanedTalent = allTalentsForTree.find((ct) => ct.name === selected);
+            return (
+              <button
+                onClick={() => onSelect(undefined)}
+                onMouseEnter={(e) => orphanedTalent && handleMouseMove(e, orphanedTalent)}
+                onMouseMove={(e) => orphanedTalent && handleMouseMove(e, orphanedTalent)}
+                onMouseLeave={() => setHoveredTalent(undefined)}
+                className="w-full px-3 py-2 border border-amber-500 bg-amber-500/20 text-amber-400 rounded-lg text-sm text-left"
+              >
+                {selected}
+              </button>
+            );
+          })()}
+        </div>
       ) : (
         <div className="text-sm text-zinc-500 italic">Locked</div>
       )}
 
-      {selectedTalent && (
-        <div className="mt-2 text-xs text-zinc-400 whitespace-pre-line">
-          {selectedTalent.affix}
-        </div>
-      )}
+      {/* Tooltip */}
+      {hoveredTalent &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <div
+            className="fixed z-50 w-72 pointer-events-none"
+            style={{ left: mousePos.x + 12, top: mousePos.y + 12 }}
+          >
+            <div className="bg-zinc-950 text-zinc-50 p-3 rounded-lg shadow-xl border border-amber-500/50">
+              <div className="font-semibold text-sm mb-2 text-amber-400">
+                {hoveredTalent.name}
+              </div>
+              <div className="text-xs text-zinc-400 whitespace-pre-line">
+                {hoveredTalent.affix}
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 };
