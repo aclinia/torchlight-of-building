@@ -45,6 +45,10 @@ export const Trees = [
 ] as const;
 export type Tree = (typeof Trees)[number];
 
+export const isTree = (name: string): name is Tree => {
+  return name in Trees;
+};
+
 export const Types = ["Core", "Legendary Medium", "Medium", "Micro"] as const;
 export type Type = (typeof Types)[number];
 

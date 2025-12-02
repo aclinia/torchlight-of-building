@@ -3,6 +3,7 @@ import { readFile, writeFile, mkdir } from "fs/promises";
 import { join } from "path";
 import { execSync } from "child_process";
 import type { CoreTalent } from "../data/core_talent/types";
+import { isTree, Tree, Trees } from "../data/talent";
 
 const cleanAffixText = (html: string): string => {
   const NEWLINE_PLACEHOLDER = "\x00";
@@ -52,6 +53,7 @@ const extractCoreTalents = ($: cheerio.CheerioAPI): CoreTalent[] => {
     // Extract tree from the anchor tag
     const tree = contentDiv.find("a").first().text().trim();
     if (!tree) return;
+    if (!isTree(tree)) return;
 
     // Skip "New God" talents
     if (tree === "New God") return;
