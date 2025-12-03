@@ -41,12 +41,14 @@ export const DestinySelectionModal = ({
     ? craftDestinyAffix(selectedDestiny.affix, percentage)
     : "";
 
+  /* eslint-disable react-hooks/set-state-in-effect -- reset form state on modal open */
   useEffect(() => {
     if (isOpen) {
       setSelectedDestiny(undefined);
       setPercentage(50);
     }
   }, [isOpen]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleDestinySelect = (destinyName: string) => {
     const destiny = availableDestinies.find((d) => d.name === destinyName);

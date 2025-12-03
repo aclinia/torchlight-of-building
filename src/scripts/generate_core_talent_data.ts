@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir } from "fs/promises";
 import { join } from "path";
 import { execSync } from "child_process";
 import type { CoreTalent } from "../data/core_talent/types";
-import { isTree, Tree, Trees } from "../data/talent";
+import { isTree } from "../data/talent";
 
 const cleanAffixText = (html: string): string => {
   const NEWLINE_PLACEHOLDER = "\x00";

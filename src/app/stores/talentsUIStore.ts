@@ -3,7 +3,7 @@
 import { create } from "zustand";
 import { TalentTreeData } from "@/src/tli/talent_tree";
 import { TreeSlot } from "../lib/types";
-import { CraftedPrism, PrismRarity } from "../lib/save-data";
+import { PrismRarity } from "../lib/save-data";
 
 interface TalentsUIState {
   // Tree data loaded from files

@@ -5,6 +5,7 @@ import { PROFESSION_TREES, GOD_GODDESS_TREES } from "../tli/talent_tree_types";
 
 const formatTreeAsTypeScript = (
   treeName: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- serializing to JSON
   treeData: { name: string; nodes: any[] },
 ): string => {
   const constName = treeName.toUpperCase();

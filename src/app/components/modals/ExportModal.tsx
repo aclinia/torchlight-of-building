@@ -31,11 +31,13 @@ export const ExportModal = ({
     }
   };
 
+  /* eslint-disable react-hooks/set-state-in-effect -- reset state on modal open */
   useEffect(() => {
     if (isOpen) {
       setCopied(false);
     }
   }, [isOpen]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Export Loadout">

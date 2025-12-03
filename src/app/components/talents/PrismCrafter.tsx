@@ -13,7 +13,6 @@ import {
   getLegendaryGaugeAffixes,
   getMaxRareGaugeAffixes,
   getMaxLegendaryGaugeAffixes,
-  PrismAffix,
 } from "@/src/app/lib/prism-utils";
 import {
   SearchableSelect,
@@ -46,12 +45,12 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
     SelectedGaugeAffix[]
   >([]);
 
+  /* eslint-disable react-hooks/set-state-in-effect -- sync state with prop changes */
   useEffect(() => {
     if (editingPrism) {
       setRarity(editingPrism.rarity);
       setBaseAffix(editingPrism.baseAffix);
 
-      const rareGauges = getRareGaugeAffixes();
       const legendaryGauges = getLegendaryGaugeAffixes();
 
       const gaugeAffixes: SelectedGaugeAffix[] = editingPrism.gaugeAffixes.map(
@@ -66,6 +65,7 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
       setBaseAffix(undefined);
     }
   }, [editingPrism]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const baseAffixOptions = useMemo((): SearchableSelectOption<string>[] => {
     return getBaseAffixes(rarity).map((affix) => ({

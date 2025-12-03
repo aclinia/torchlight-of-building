@@ -8,7 +8,6 @@ import { CoreTalentSelector } from "../talents/CoreTalentSelector";
 import { PrismSection } from "../talents/PrismSection";
 import { TreeSlot } from "../../lib/types";
 import {
-  TalentTreeData,
   GOD_GODDESS_TREES,
   PROFESSION_TREES,
   TreeName,
@@ -61,6 +60,7 @@ export const TalentsSection = () => {
     loadTree("tree2");
     loadTree("tree3");
     loadTree("tree4");
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally watching only tree names
   }, [
     loadout.talentPage.tree1?.name,
     loadout.talentPage.tree2?.name,

@@ -9,9 +9,7 @@ import {
   DivinitySlate,
   CraftedPrism,
   AllocatedTalentNode,
-  PlacedPrism,
   PlacedSlate,
-  TalentTree,
   HeroMemorySlot,
   PactspiritSlot,
   RingSlotState,
@@ -22,7 +20,6 @@ import {
   saveSaveData,
   loadSavesIndex,
   saveSavesIndex,
-  SaveMetadata,
   SavesIndex,
 } from "../lib/saves";
 import {

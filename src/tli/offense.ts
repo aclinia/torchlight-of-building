@@ -2,20 +2,7 @@ import * as R from "remeda";
 import { match } from "ts-pattern";
 import * as Mod from "./mod";
 import { DmgModType } from "./constants";
-import {
-  Affix,
-  Loadout,
-  ParsedGearPage,
-  ParsedGear,
-  ParsedTalentPage,
-  ParsedDivinityPage,
-  ParsedDivinitySlate,
-  Configuration,
-  DmgRange,
-} from "./core";
-
-const dummy40Armor = 0.11;
-const dummy85Armor = 0.44;
+import { Affix, Loadout, Configuration, DmgRange } from "./core";
 
 type Stat = "dex" | "int" | "str";
 
@@ -75,17 +62,12 @@ const emptyDamageRange = (): DmgRange => {
 };
 
 const calculateInc = (bonuses: number[]) => {
-  return R.pipe(
-    bonuses,
-    R.filter((b) => true),
-    R.sum(),
-  );
+  return R.pipe(bonuses, R.sum());
 };
 
 const calculateAddn = (bonuses: number[]) => {
   return R.pipe(
     bonuses,
-    R.filter((b) => true),
     R.reduce((b1, b2) => b1 * (1 + b2), 1),
   );
 };

@@ -1,10 +1,6 @@
 import * as cheerio from "cheerio";
 import { TalentTreeData, TalentNodeData } from "../tli/core";
-import {
-  ALL_TREES,
-  isProfessionName,
-  TreeName,
-} from "../tli/talent_tree_types";
+import { isProfessionName } from "../tli/talent_tree_types";
 
 interface NodeData {
   cx: number;

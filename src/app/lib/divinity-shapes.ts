@@ -95,7 +95,8 @@ export const getTransformedCells = (
   flippedH: boolean,
   flippedV: boolean,
 ): [number, number][] => {
-  let { cells, bounds } = applyRotation(shape, rotation);
+  const { cells: rotatedCells, bounds } = applyRotation(shape, rotation);
+  let cells = rotatedCells;
 
   if (flippedH) {
     cells = flipHorizontal(cells, bounds);

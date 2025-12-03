@@ -217,6 +217,7 @@ export default function SavesPage() {
     const data = loadSaveData(saveId);
     if (!data) return;
 
+    // eslint-disable-next-line react-hooks/purity -- event handler, not render
     const now = Date.now();
     const newSaveId = generateSaveId();
     const newMetadata: SaveMetadata = {

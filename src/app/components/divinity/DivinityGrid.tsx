@@ -180,7 +180,6 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
           key={`${row}-${col}`}
           row={row}
           col={col}
-          isValid={isValid}
           isOutOfBounds={isOutOfBounds}
           slate={cellSlate}
           slateEdges={slateEdges}

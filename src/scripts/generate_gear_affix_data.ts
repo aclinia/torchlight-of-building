@@ -29,6 +29,7 @@ interface BaseGearAffix {
  * - En-dashes (–) to hyphens (-)
  */
 const parseAffixText = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- cheerio internal type
   td: cheerio.Cheerio<any>,
   $: cheerio.CheerioAPI,
 ): string => {

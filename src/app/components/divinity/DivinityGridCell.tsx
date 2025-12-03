@@ -13,7 +13,6 @@ interface SlateEdges {
 interface DivinityGridCellProps {
   row: number;
   col: number;
-  isValid: boolean;
   isOutOfBounds: boolean;
   slate: DivinitySlate | undefined;
   slateEdges: SlateEdges | undefined;
@@ -41,7 +40,6 @@ const invalidOverlayStyle: React.CSSProperties = {
 };
 
 export const DivinityGridCell: React.FC<DivinityGridCellProps> = ({
-  isValid,
   isOutOfBounds,
   slate,
   slateEdges,
