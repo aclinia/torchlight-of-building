@@ -1,5 +1,28 @@
 import { Prisms } from "@/src/data/prism/prisms";
-import type { PlacedPrism, PrismRarity } from "./save-data";
+import type { CraftedPrism, PlacedPrism, PrismRarity } from "./save-data";
+
+const ADDS_CORE_TALENT_PREFIX =
+  "Adds an additional effect to the Core Talent on the";
+
+// Extract the "added effect" text from a prism's "Adds an additional effect..." base affix
+export const extractCoreTalentAddedEffect = (
+  baseAffix: string,
+): string | undefined => {
+  if (!baseAffix.startsWith(ADDS_CORE_TALENT_PREFIX)) {
+    return undefined;
+  }
+  const parts = baseAffix.split(":\n");
+  if (parts.length <= 1) return undefined;
+  const effect = parts.slice(1).join(":\n").trim();
+  return effect || undefined;
+};
+
+// Get the core talent added effect from a crafted prism, if applicable
+export const getPrismCoreTalentEffect = (
+  prism: CraftedPrism,
+): string | undefined => {
+  return extractCoreTalentAddedEffect(prism.baseAffix);
+};
 
 export interface PrismAffix {
   type: string;

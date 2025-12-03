@@ -5,6 +5,7 @@ import { useBuilderStore } from "../../stores/builderStore";
 import { useTalentsUIStore } from "../../stores/talentsUIStore";
 import { TalentGrid } from "../talents/TalentGrid";
 import { CoreTalentSelector } from "../talents/CoreTalentSelector";
+import { PrismCoreTalentEffect } from "../talents/PrismCoreTalentEffect";
 import { PrismSection } from "../talents/PrismSection";
 import { TreeSlot } from "../../lib/types";
 import {
@@ -429,6 +430,11 @@ export const TalentsSection = () => {
             }
           />
         )}
+
+        <PrismCoreTalentEffect
+          placedPrism={loadout.talentPage.placedPrism}
+          activeTreeSlot={activeTreeSlot}
+        />
 
         {!currentTree ? (
           <div className="py-12 text-center text-zinc-500">
