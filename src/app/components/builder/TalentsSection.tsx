@@ -252,6 +252,9 @@ export const TalentsSection = () => {
     (treeSlot: TreeSlot, x: number, y: number) => {
       if (!selectedPrismId) return;
 
+      // Only allow prisms on profession trees (slots 2-4), not god/goddess tree (slot 1)
+      if (treeSlot === "tree1") return;
+
       const prism = loadout.prismList.find((p) => p.id === selectedPrismId);
       if (!prism) return;
 
@@ -464,9 +467,12 @@ export const TalentsSection = () => {
               onDeallocate={(x, y) => handleDeallocate(activeTreeSlot, x, y)}
               treeSlot={activeTreeSlot}
               placedPrism={loadout.talentPage.placedPrism}
-              selectedPrism={loadout.prismList.find(
-                (p) => p.id === selectedPrismId,
-              )}
+              selectedPrism={
+                // Prisms can only be placed on profession trees (slots 2-4)
+                activeTreeSlot !== "tree1"
+                  ? loadout.prismList.find((p) => p.id === selectedPrismId)
+                  : undefined
+              }
               onPlacePrism={(x, y) => handlePlacePrism(activeTreeSlot, x, y)}
               onRemovePrism={handleRemovePrism}
             />
