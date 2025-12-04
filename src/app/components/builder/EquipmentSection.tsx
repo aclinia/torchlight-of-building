@@ -283,8 +283,6 @@ export const EquipmentSection = () => {
                   />
                 </div>
               )}
-true
-                    formatCraftedText=
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-zinc-50">
                   Prefixes (3 max)
