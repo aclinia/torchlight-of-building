@@ -9,6 +9,7 @@ import {
 } from "../../lib/storage";
 import type { ActivePage } from "../../lib/types";
 import { useBuilderStore } from "../../stores/builderStore";
+import { useLoadout } from "../../stores/builderStoreSelectors";
 import { DebugPanel } from "../DebugPanel";
 import { ExportModal } from "../modals/ExportModal";
 import { ImportModal } from "../modals/ImportModal";
@@ -31,9 +32,11 @@ export const BuilderLayout = ({
   const currentSaveName = useBuilderStore((state) => state.currentSaveName);
   const currentSaveId = useBuilderStore((state) => state.currentSaveId);
   const hasUnsavedChanges = useBuilderStore((state) => state.hasUnsavedChanges);
-  const loadout = useBuilderStore((state) => state.loadout);
+  const saveData = useBuilderStore((state) => state.loadout);
   const save = useBuilderStore((state) => state.save);
   const setLoadout = useBuilderStore((state) => state.setLoadout);
+
+  const loadout = useLoadout();
 
   const [debugMode, setDebugMode] = useState(false);
   const [debugPanelExpanded, setDebugPanelExpanded] = useState(true);
@@ -85,10 +88,10 @@ export const BuilderLayout = ({
   }, []);
 
   const handleExport = useCallback(() => {
-    const code = encodeBuildCode(loadout);
+    const code = encodeBuildCode(saveData);
     setBuildCode(code);
     setExportModalOpen(true);
-  }, [loadout]);
+  }, [saveData]);
 
   const handleImport = useCallback(
     (code: string): boolean => {
@@ -217,6 +220,7 @@ export const BuilderLayout = ({
 
         {debugMode && (
           <DebugPanel
+            saveData={saveData}
             loadout={loadout}
             debugPanelExpanded={debugPanelExpanded}
             setDebugPanelExpanded={setDebugPanelExpanded}
