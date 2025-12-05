@@ -135,16 +135,11 @@ test("loadSave sets correct src for different gear slots", () => {
   });
 
   const loadout = loadSave(saveData);
+  const equippedGear = loadout.gearPage.equippedGear;
 
-  expect(loadout.gearPage.equippedGear.helmet?.affixes[0].src).toBe(
-    "Gear#helmet",
-  );
-  expect(loadout.gearPage.equippedGear.leftRing?.affixes[0].src).toBe(
-    "Gear#leftRing",
-  );
-  expect(loadout.gearPage.equippedGear.offHand?.affixes[0].src).toBe(
-    "Gear#offHand",
-  );
+  expect(equippedGear.helmet?.affixes[0].src).toBe("Gear#helmet");
+  expect(equippedGear.leftRing?.affixes[0].src).toBe("Gear#leftRing");
+  expect(equippedGear.offHand?.affixes[0].src).toBe("Gear#offHand");
 });
 
 test("loadSave handles empty gear page", () => {
@@ -156,4 +151,40 @@ test("loadSave handles empty gear page", () => {
 
   expect(loadout.gearPage.equippedGear).toEqual({});
   expect(loadout.gearPage.inventory).toEqual([]);
+});
+
+test("loadSave converts gear in inventory", () => {
+  const saveData = createMinimalSaveData({
+    itemsList: [
+      {
+        id: "inv-sword",
+        equipmentType: "One-Handed Sword",
+        affixes: ["+20% cold damage"],
+      },
+      {
+        id: "inv-helmet",
+        equipmentType: "Helmet (STR)",
+        affixes: ["unparseable text", "+15% lightning damage"],
+      },
+    ],
+  });
+
+  const loadout = loadSave(saveData);
+
+  expect(loadout.gearPage.inventory).toHaveLength(2);
+
+  const sword = loadout.gearPage.inventory[0];
+  expect(sword.equipmentType).toBe("One-Handed Sword");
+  expect(sword.affixes).toHaveLength(1);
+  expect(sword.affixes[0].text).toBe("+20% cold damage");
+  expect(sword.affixes[0].src).toBeUndefined();
+  expect(sword.affixes[0].mods).toHaveLength(1);
+  expect(sword.affixes[0].mods![0].type).toBe("DmgPct");
+  expect(sword.affixes[0].mods![0].src).toBeUndefined();
+
+  const helmet = loadout.gearPage.inventory[1];
+  expect(helmet.equipmentType).toBe("Helmet (STR)");
+  expect(helmet.affixes).toHaveLength(2);
+  expect(helmet.affixes[0].mods).toBeUndefined();
+  expect(helmet.affixes[1].mods).toHaveLength(1);
 });
