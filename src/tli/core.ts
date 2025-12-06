@@ -28,6 +28,11 @@ export interface DivinitySlate {
 export interface Gear {
   equipmentType: EquipmentType;
 
+  // UI fields (preserved from SaveData for display, always present for inventory items)
+  id?: string;
+  rarity?: "rare" | "legendary";
+  legendaryName?: string;
+
   // Base stats (shared by both regular and legendary gear)
   baseStats?: Affix;
 

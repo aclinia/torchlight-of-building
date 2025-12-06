@@ -1,6 +1,5 @@
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
-import { getAllAffixes } from "@/src/app/lib/gear-utils";
-import type { Gear } from "@/src/app/lib/save-data";
+import { getAllAffixes, type Gear } from "@/src/tli/core";
 import type { GearSlot } from "../../lib/types";
 
 interface EquipmentSlotDropdownProps {
@@ -25,7 +24,7 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
         value={selectedItemId ?? undefined}
         onChange={(value) => onSelectItem(slot, value ?? null)}
         options={compatibleItems.map((item) => ({
-          value: item.id,
+          value: item.id!,
           label: item.equipmentType,
           sublabel: `${getAllAffixes(item).length} affixes`,
         }))}

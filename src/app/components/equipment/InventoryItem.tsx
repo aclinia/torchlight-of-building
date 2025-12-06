@@ -2,13 +2,12 @@
 
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
-import { getAllAffixes } from "@/src/app/lib/gear-utils";
-import type { Gear } from "@/src/app/lib/save-data";
+import { getAllAffixes, type Gear } from "@/src/tli/core";
 
 interface InventoryItemProps {
   item: Gear;
   isEquipped: boolean;
-  onCopy: (item: Gear) => void;
+  onCopy: (itemId: string) => void;
   onDelete: (id: string) => void;
 }
 
@@ -46,7 +45,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
       <div className="flex gap-2">
         <button
           type="button"
-          onClick={() => onCopy(item)}
+          onClick={() => onCopy(item.id!)}
           className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
           title="Copy item"
         >
@@ -54,7 +53,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
         </button>
         <button
           type="button"
-          onClick={() => onDelete(item.id)}
+          onClick={() => onDelete(item.id!)}
           className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
           title="Delete item"
         >
@@ -71,8 +70,10 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
         {isLegendary && (
           <div className="text-xs text-zinc-500 mb-2">{item.equipmentType}</div>
         )}
-        {item.baseStats && (
-          <div className="text-xs text-amber-300 mb-2">{item.baseStats}</div>
+        {item.baseStats?.text && (
+          <div className="text-xs text-amber-300 mb-2">
+            {item.baseStats.text}
+          </div>
         )}
         {getAllAffixes(item).length > 0 ? (
           <ul className="space-y-1">
@@ -82,7 +83,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
                 key={idx}
                 className="text-xs text-zinc-400"
               >
-                {affix}
+                {affix.text}
               </li>
             ))}
           </ul>

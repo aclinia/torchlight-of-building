@@ -12,10 +12,11 @@ import {
 } from "../../lib/blend-utils";
 import { GEAR_SLOTS, SLOT_TO_VALID_EQUIPMENT_TYPES } from "../../lib/constants";
 import { getCompatibleItems } from "../../lib/equipment-utils";
-import type { Gear } from "../../lib/save-data";
+import type { Gear as SaveDataGear } from "../../lib/save-data";
 import { generateItemId } from "../../lib/storage";
 import type { GearSlot } from "../../lib/types";
 import { useBuilderStore } from "../../stores/builderStore";
+import { useLoadout } from "../../stores/builderStoreSelectors";
 import { useEquipmentUIStore } from "../../stores/equipmentUIStore";
 import { AffixSlotComponent } from "../equipment/AffixSlotComponent";
 import { EquipmentSlotDropdown } from "../equipment/EquipmentSlotDropdown";
@@ -23,8 +24,8 @@ import { InventoryItem } from "../equipment/InventoryItem";
 import { LegendaryGearModule } from "../equipment/LegendaryGearModule";
 
 export const EquipmentSection = () => {
-  // Builder store - loadout data
-  const loadout = useBuilderStore((state) => state.loadout);
+  // Parsed loadout (for reads)
+  const loadout = useLoadout();
   const addItemToInventory = useBuilderStore(
     (state) => state.addItemToInventory,
   );
@@ -236,7 +237,7 @@ export const EquipmentSection = () => {
       suffixes.push(craft(selectedAffix, selection.percentage));
     });
 
-    const newItem: Gear = {
+    const newItem: SaveDataGear = {
       id: generateItemId(),
       equipmentType: selectedEquipmentType,
       baseStats,
@@ -290,8 +291,11 @@ export const EquipmentSection = () => {
               key={key}
               slot={key}
               label={label}
-              selectedItemId={loadout.equipmentPage[key]?.id || null}
-              compatibleItems={getCompatibleItems(loadout.itemsList, key)}
+              selectedItemId={loadout.gearPage.equippedGear[key]?.id ?? null}
+              compatibleItems={getCompatibleItems(
+                loadout.gearPage.inventory,
+                key,
+              )}
               onSelectItem={handleSelectItemForSlot}
             />
           ))}
@@ -475,19 +479,19 @@ export const EquipmentSection = () => {
 
         <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
           <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            Inventory ({loadout.itemsList.length} items)
+            Inventory ({loadout.gearPage.inventory.length} items)
           </h2>
-          {loadout.itemsList.length === 0 ? (
+          {loadout.gearPage.inventory.length === 0 ? (
             <p className="py-4 text-center italic text-zinc-500">
               No items in inventory. Craft items above to add them here.
             </p>
           ) : (
             <div className="max-h-96 space-y-2 overflow-y-auto">
-              {loadout.itemsList.map((item) => (
+              {loadout.gearPage.inventory.map((item) => (
                 <InventoryItem
                   key={item.id}
                   item={item}
-                  isEquipped={isItemEquipped(item.id)}
+                  isEquipped={isItemEquipped(item.id!)}
                   onCopy={copyItem}
                   onDelete={handleDeleteItem}
                 />

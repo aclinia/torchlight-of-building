@@ -50,7 +50,7 @@ interface BuilderState {
 
   // Actions - Equipment
   addItemToInventory: (item: Gear) => void;
-  copyItem: (item: Gear) => void;
+  copyItem: (itemId: string) => void;
   deleteItem: (itemId: string) => void;
   selectItemForSlot: (slot: GearSlot, itemId: string | undefined) => void;
   isItemEquipped: (itemId: string) => boolean;
@@ -205,7 +205,9 @@ export const useBuilderStore = create<BuilderState>()(
           hasUnsavedChanges: true,
         })),
 
-      copyItem: (item) => {
+      copyItem: (itemId) => {
+        const item = get().loadout.itemsList.find((i) => i.id === itemId);
+        if (!item) return;
         const newItem: Gear = { ...item, id: generateItemId() };
         set((state) => ({
           loadout: {

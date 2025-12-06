@@ -41,6 +41,9 @@ const convertAffixArray = (
 const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
   return {
     equipmentType: gear.equipmentType,
+    id: gear.id,
+    rarity: gear.rarity,
+    legendaryName: gear.legendaryName,
     baseStats: gear.baseStats ? convertAffix(gear.baseStats, src) : undefined,
     base_affixes: convertAffixArray(gear.base_affixes, src),
     prefixes: convertAffixArray(gear.prefixes, src),

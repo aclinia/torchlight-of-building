@@ -194,3 +194,39 @@ test("loadSave converts gear in inventory", () => {
   expect(helmetAffixes[0].mods).toBeUndefined();
   expect(helmetAffixes[1].mods).toHaveLength(1);
 });
+
+test("loadSave preserves UI fields (id, rarity, legendaryName)", () => {
+  const saveData = createMinimalSaveData({
+    equipmentPage: {
+      helmet: {
+        id: "legendary-helm-123",
+        equipmentType: "Helmet (STR)",
+        rarity: "legendary",
+        legendaryName: "Crown of the Eternal",
+        legendary_affixes: ["+50% fire damage"],
+      },
+    },
+    itemsList: [
+      {
+        id: "inv-item-456",
+        equipmentType: "Ring",
+        rarity: "rare",
+        prefixes: ["+5% max life"],
+      },
+    ],
+  });
+
+  const loadout = loadSave(saveData);
+
+  // Check equipped gear preserves UI fields
+  const helmet = loadout.gearPage.equippedGear.helmet!;
+  expect(helmet.id).toBe("legendary-helm-123");
+  expect(helmet.rarity).toBe("legendary");
+  expect(helmet.legendaryName).toBe("Crown of the Eternal");
+
+  // Check inventory preserves UI fields
+  const ring = loadout.gearPage.inventory[0];
+  expect(ring.id).toBe("inv-item-456");
+  expect(ring.rarity).toBe("rare");
+  expect(ring.legendaryName).toBeUndefined();
+});
