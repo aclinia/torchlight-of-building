@@ -449,12 +449,12 @@ export const parseMod = (input: string): Mod | undefined => {
     // Defense parsers
     parseAttackBlockChancePct,
     parseSpellBlockChancePct,
-    // parseMaxLifePct,
-    // parseMaxEnergyShieldPct,
-    // parseArmorPct,
-    // parseEvasionPct,
-    // parseEnergyShieldRegainPct,
-    // parseLifeRegainPct,
+    parseMaxLifePct,
+    parseMaxEnergyShieldPct,
+    parseArmorPct,
+    parseEvasionPct,
+    parseEnergyShieldRegainPct,
+    parseLifeRegainPct,
     // Attributes
     parseStr,
     parseDex,
