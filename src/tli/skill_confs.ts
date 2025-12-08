@@ -1,4 +1,4 @@
-import { Stat } from "./offense";
+import type { Stat } from "./offense";
 
 export type SkillTag =
   | "Attack"

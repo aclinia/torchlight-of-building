@@ -12,9 +12,9 @@ import {
 import type * as Mod from "./mod";
 import {
   offensiveSkillConfs,
-  SkillTag,
-  SkillConfiguration,
-  Skill,
+  type Skill,
+  type SkillConfiguration,
+  type SkillTag,
 } from "./skill_confs";
 
 export type Stat = "dex" | "int" | "str";
