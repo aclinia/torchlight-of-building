@@ -524,19 +524,6 @@ const filterDmgPctMods = (
   return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
 };
 
-interface DmgModsAggr {
-  inc: number;
-  addn: number;
-}
-
-interface TotalDmgModsPerType {
-  phys: DmgModsAggr;
-  cold: DmgModsAggr;
-  lightning: DmgModsAggr;
-  fire: DmgModsAggr;
-  erosion: DmgModsAggr;
-}
-
 const calculateDmgInc = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
   return calculateInc(mods.filter((m) => !m.addn).map((m) => m.value));
 };
@@ -545,71 +532,53 @@ const calculateDmgAddn = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
   return calculateAddn(mods.filter((m) => m.addn).map((m) => m.value));
 };
 
-const getTotalDmgModsPerType = (
+// Apply damage % bonuses to a single chunk, considering its conversion history
+const calculateChunkDmg = (
+  chunk: DmgChunk,
+  currentType: Mod.DmgType,
   allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration,
-): TotalDmgModsPerType => {
-  const dmgModTypes = dmgModTypesForSkill(skillConf);
-  const dmgModTypesForPhys: DmgModType[] = [...dmgModTypes, "physical"];
-  const dmgModTypesForCold: DmgModType[] = [
-    ...dmgModTypes,
-    "cold",
-    "elemental",
-  ];
-  const dmgModTypesForLightning: DmgModType[] = [
-    ...dmgModTypes,
-    "lightning",
-    "elemental",
-  ];
-  const dmgModTypesForFire: DmgModType[] = [
-    ...dmgModTypes,
-    "fire",
-    "elemental",
-  ];
-  const dmgModTypesForErosion: DmgModType[] = [...dmgModTypes, "erosion"];
+): DmgRange => {
+  const baseDmgModTypes = dmgModTypesForSkill(skillConf);
 
-  const dmgPctModsForPhys = filterDmgPctMods(allDmgPctMods, dmgModTypesForPhys);
-  const dmgPctModsForCold = filterDmgPctMods(allDmgPctMods, dmgModTypesForCold);
-  const dmgPctModsForLightning = filterDmgPctMods(
-    allDmgPctMods,
-    dmgModTypesForLightning,
-  );
-  const dmgPctModsForFire = filterDmgPctMods(allDmgPctMods, dmgModTypesForFire);
-  const dmgPctModsForErosion = filterDmgPctMods(
-    allDmgPctMods,
-    dmgModTypesForErosion,
-  );
+  // Chunk benefits from bonuses for current type AND all types in its history
+  const allApplicableTypes: Mod.DmgType[] = [currentType, ...chunk.history];
+  const dmgModTypes: DmgModType[] = [...baseDmgModTypes];
 
-  return {
-    phys: {
-      inc: calculateDmgInc(dmgPctModsForPhys),
-      addn: calculateDmgAddn(dmgPctModsForPhys),
-    },
-    cold: {
-      inc: calculateDmgInc(dmgPctModsForCold),
-      addn: calculateDmgAddn(dmgPctModsForCold),
-    },
-    lightning: {
-      inc: calculateDmgInc(dmgPctModsForLightning),
-      addn: calculateDmgAddn(dmgPctModsForLightning),
-    },
-    fire: {
-      inc: calculateDmgInc(dmgPctModsForFire),
-      addn: calculateDmgAddn(dmgPctModsForFire),
-    },
-    erosion: {
-      inc: calculateDmgInc(dmgPctModsForErosion),
-      addn: calculateDmgAddn(dmgPctModsForErosion),
-    },
-  };
+  for (const dmgType of allApplicableTypes) {
+    dmgModTypes.push(dmgType);
+    if (dmgType === "cold" || dmgType === "lightning" || dmgType === "fire") {
+      dmgModTypes.push("elemental");
+    }
+  }
+
+  const applicableMods = filterDmgPctMods(allDmgPctMods, dmgModTypes);
+
+  const inc = calculateDmgInc(applicableMods);
+  const addn = calculateDmgAddn(applicableMods);
+  const mult = (1 + inc) * addn;
+
+  return multDR(chunk.range, mult);
 };
 
-const calculateDmgRange = (
-  dmgRange: DmgRange,
-  dmgModsAggr: DmgModsAggr,
+// Sum all chunks in a pool, applying bonuses to each based on its history
+const calculatePoolTotal = (
+  pool: DmgChunk[],
+  poolType: Mod.DmgType,
+  allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
+  skillConf: SkillConfiguration,
 ): DmgRange => {
-  const mult = (1 + dmgModsAggr.inc) * dmgModsAggr.addn;
-  return multDR(dmgRange, mult);
+  let total: DmgRange = { min: 0, max: 0 };
+  for (const chunk of pool) {
+    const chunkDmg = calculateChunkDmg(
+      chunk,
+      poolType,
+      allDmgPctMods,
+      skillConf,
+    );
+    total = addDR(total, chunkDmg);
+  }
+  return total;
 };
 
 interface SkillHitOverview {
@@ -629,7 +598,7 @@ interface SkillHitOverview {
 const calculateSkillHit = (
   gearDmg: GearDmg,
   flatDmg: DmgRanges,
-  allDmgPcts: Extract<Mod.Mod, { type: "DmgPct" }>[],
+  allMods: Mod.Mod[],
   skillConf: SkillConfiguration,
 ): SkillHitOverview => {
   const skillWeaponDR = match(skillConf.skillName)
@@ -646,18 +615,32 @@ const calculateSkillHit = (
   const skillFlatDR = multDRs(flatDmg, skillConf.addedDmgEffPct);
   const skillBaseDmg = addDRs(skillWeaponDR, skillFlatDR);
 
-  const totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
-  const phys = calculateDmgRange(skillBaseDmg.phys, totalDmgModsPerType.phys);
-  const cold = calculateDmgRange(skillBaseDmg.cold, totalDmgModsPerType.cold);
-  const lightning = calculateDmgRange(
-    skillBaseDmg.lightning,
-    totalDmgModsPerType.lightning,
+  // Damage conversion happens after flat damage, before % bonuses
+  const dmgPools = convertDmg(skillBaseDmg, allMods);
+
+  // Apply % bonuses to each pool, considering conversion history
+  const allDmgPcts = filterAffix(allMods, "DmgPct");
+  const phys = calculatePoolTotal(
+    dmgPools.physical,
+    "physical",
+    allDmgPcts,
+    skillConf,
   );
-  const fire = calculateDmgRange(skillBaseDmg.fire, totalDmgModsPerType.fire);
-  const erosion = calculateDmgRange(
-    skillBaseDmg.erosion,
-    totalDmgModsPerType.erosion,
+  const cold = calculatePoolTotal(dmgPools.cold, "cold", allDmgPcts, skillConf);
+  const lightning = calculatePoolTotal(
+    dmgPools.lightning,
+    "lightning",
+    allDmgPcts,
+    skillConf,
   );
+  const fire = calculatePoolTotal(dmgPools.fire, "fire", allDmgPcts, skillConf);
+  const erosion = calculatePoolTotal(
+    dmgPools.erosion,
+    "erosion",
+    allDmgPcts,
+    skillConf,
+  );
+
   const total = {
     min: phys.min + cold.min + lightning.min + fire.min + erosion.min,
     max: phys.max + cold.max + lightning.max + fire.max + erosion.max,
@@ -692,11 +675,10 @@ export const calculateOffense = (
   const flatDmg = calculateFlatDmg(mods, "attack");
 
   const aspd = calculateAspd(loadout, mods);
-  const dmgPcts = filterAffix(mods, "DmgPct");
   const critChance = calculateCritRating(mods, configuration);
   const critDmgMult = calculateCritDmg(mods, configuration);
 
-  const skillHit = calculateSkillHit(gearDmg, flatDmg, dmgPcts, skillConf);
+  const skillHit = calculateSkillHit(gearDmg, flatDmg, mods, skillConf);
   const avgHitWithCrit =
     skillHit.avg * critChance * critDmgMult + skillHit.avg * (1 - critChance);
   const avgDps = avgHitWithCrit * aspd;

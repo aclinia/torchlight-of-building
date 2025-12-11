@@ -1183,3 +1183,114 @@ describe("convertDmg", () => {
     expect(sumPoolRanges(result, "fire")).toEqual({ min: 0, max: 0 });
   });
 });
+
+describe("calculateOffense with damage conversion", () => {
+  test("100% phys to cold conversion - cold gets both phys% and cold% bonuses", () => {
+    // 100 phys → 100 cold via conversion
+    // Cold now benefits from: 50% physical bonus + 30% cold bonus = 80% inc
+    // 100 * (1 + 0.8) = 180 * 1.025 (crit) = 184.5
+    runTest(
+      {
+        mods: [
+          affix([
+            { type: "ConvertDmgPct", from: "physical", to: "cold", value: 1 },
+          ]),
+          affix([
+            { type: "DmgPct", value: 0.5, modType: "physical", addn: false },
+          ]),
+          affix([{ type: "DmgPct", value: 0.3, modType: "cold", addn: false }]),
+        ],
+      },
+      { avgHit: 180, avgHitWithCrit: 184.5 },
+    );
+  });
+
+  test("50% phys to cold conversion - unconverted phys gets phys%, converted cold gets both", () => {
+    // 100 phys → 50 phys + 50 cold
+    // Unconverted phys: 50 * (1 + 0.5) = 75
+    // Converted cold: 50 * (1 + 0.5 + 0.3) = 90
+    // Total: 75 + 90 = 165 * 1.025 (crit) = 169.125
+    runTest(
+      {
+        mods: [
+          affix([
+            { type: "ConvertDmgPct", from: "physical", to: "cold", value: 0.5 },
+          ]),
+          affix([
+            { type: "DmgPct", value: 0.5, modType: "physical", addn: false },
+          ]),
+          affix([{ type: "DmgPct", value: 0.3, modType: "cold", addn: false }]),
+        ],
+      },
+      { avgHit: 165, avgHitWithCrit: 169.125 },
+    );
+  });
+
+  test("chain conversion phys→lightning→cold gets bonuses from all three types", () => {
+    // 100 phys → 100 lightning → 100 cold
+    // Cold benefits from: 20% physical + 30% lightning + 40% cold = 90% inc
+    // 100 * (1 + 0.9) = 190 * 1.025 (crit) = 194.75
+    runTest(
+      {
+        mods: [
+          affix([
+            {
+              type: "ConvertDmgPct",
+              from: "physical",
+              to: "lightning",
+              value: 1,
+            },
+          ]),
+          affix([
+            { type: "ConvertDmgPct", from: "lightning", to: "cold", value: 1 },
+          ]),
+          affix([
+            { type: "DmgPct", value: 0.2, modType: "physical", addn: false },
+          ]),
+          affix([
+            { type: "DmgPct", value: 0.3, modType: "lightning", addn: false },
+          ]),
+          affix([{ type: "DmgPct", value: 0.4, modType: "cold", addn: false }]),
+        ],
+      },
+      { avgHit: 190, avgHitWithCrit: 194.75 },
+    );
+  });
+
+  test("elemental bonus applies to converted cold damage", () => {
+    // 100 phys → 100 cold
+    // Cold benefits from: 50% elemental (applies to cold) = 50% inc
+    // 100 * (1 + 0.5) = 150 * 1.025 (crit) = 153.75
+    runTest(
+      {
+        mods: [
+          affix([
+            { type: "ConvertDmgPct", from: "physical", to: "cold", value: 1 },
+          ]),
+          affix([
+            { type: "DmgPct", value: 0.5, modType: "elemental", addn: false },
+          ]),
+        ],
+      },
+      { avgHit: 150, avgHitWithCrit: 153.75 },
+    );
+  });
+
+  test("no conversion - damage bonuses apply normally by type", () => {
+    // 100 phys, no conversion
+    // Physical: 100 * (1 + 0.5) = 150
+    // Cold bonus doesn't apply (no cold damage)
+    // 150 * 1.025 (crit) = 153.75
+    runTest(
+      {
+        mods: [
+          affix([
+            { type: "DmgPct", value: 0.5, modType: "physical", addn: false },
+          ]),
+          affix([{ type: "DmgPct", value: 0.3, modType: "cold", addn: false }]),
+        ],
+      },
+      { avgHit: 150, avgHitWithCrit: 153.75 },
+    );
+  });
+});
