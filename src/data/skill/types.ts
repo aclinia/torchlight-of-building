@@ -74,12 +74,16 @@ export type InferredSkillKind =
   | "summon_spirit_magus"
   | "summon_synthetic_troops";
 
-// Multiple skill tags means the target must have all specified tags
 export type SupportTarget =
+  // Multiple skill tags means the target must have all specified tags
   | { tags: SkillTag[] }
+  // Matches if SkillType matches to skill's type
   | { skillType: "active" | "passive" }
+  // Only applies to active skills. Matches if the active skill's kinds contains this kind
   | InferredSkillKind
+  // Can be applied to any skill
   | "any"
+  // Can be applied to any skill with the Spell tags, but not Summon, Channeled, or Sentry skills.
   | "spell_burst";
 
 export interface SupportSkill extends BaseSkill {
