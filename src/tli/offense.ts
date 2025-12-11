@@ -11,11 +11,12 @@ import {
 } from "./core";
 import type * as Mod from "./mod";
 import {
+  listTags,
   offensiveSkillConfs,
-  type Skill,
+  type ImplementedOffenseSkill as ImplementedOffenseSkillName,
   type SkillConfiguration,
-  type SkillTag,
 } from "./skill_confs";
+import { SkillTag } from "../data/skill";
 
 export type Stat = "dex" | "int" | "str";
 
@@ -506,7 +507,8 @@ const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
 
 const dmgModTypesForSkill = (conf: SkillConfiguration) => {
   const dmgModTypes: DmgModType[] = ["global"];
-  conf.tags.forEach((t) => {
+  const tags = listTags(conf.skillName);
+  tags.forEach((t) => {
     const dmgModType = dmgModTypePerSkillTag[t];
     if (dmgModType !== undefined) {
       dmgModTypes.push(dmgModType);
@@ -630,7 +632,7 @@ const calculateSkillHit = (
   allDmgPcts: Extract<Mod.Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration,
 ): SkillHitOverview => {
-  const skillWeaponDR = match(skillConf.skill)
+  const skillWeaponDR = match(skillConf.skillName)
     .with("Berserking Blade", () => {
       return multDRs(gearDmg.mainHand, 2.1);
     })
@@ -679,10 +681,10 @@ const calculateSkillHit = (
 export const calculateOffense = (
   loadout: Loadout,
   mods: Mod.Mod[],
-  skill: Skill,
+  skillName: ImplementedOffenseSkillName,
   configuration: Configuration,
 ): OffenseSummary | undefined => {
-  const skillConf = offensiveSkillConfs.find((c) => c.skill === skill);
+  const skillConf = offensiveSkillConfs.find((c) => c.skillName === skillName);
   if (skillConf === undefined) {
     return undefined;
   }

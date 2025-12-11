@@ -8,7 +8,7 @@ import {
   type DmgPools,
   type DmgRanges,
 } from "./offense";
-import type { Skill } from "./skill_confs";
+import type { ImplementedOffenseSkill } from "./skill_confs";
 
 // Helper to create Affix objects from mods for tests
 const affix = (mods: Mod[]): Affix => ({
@@ -80,7 +80,7 @@ type TestInput = {
   } | null; // null means no weapon
   mods?: Affix[]; // customConfiguration - array of affixes
   talentMods?: Affix[]; // for talent tree selectedCoreTalents
-  skill?: Skill;
+  skill?: ImplementedOffenseSkill;
   configuration?: Configuration;
 };
 

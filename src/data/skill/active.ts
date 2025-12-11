@@ -1,6 +1,6 @@
 import type { ActiveSkill } from "./types";
 
-export const ActiveSkills: readonly ActiveSkill[] = [
+export const ActiveSkills = [
   {
     type: "Active",
     name: "Aegis of Fire",
@@ -2127,4 +2127,4 @@ export const ActiveSkills: readonly ActiveSkill[] = [
     ],
     kinds: ["hit_enemies"],
   },
-];
+] as const satisfies readonly ActiveSkill[];

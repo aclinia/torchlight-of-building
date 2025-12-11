@@ -462,7 +462,7 @@ const generateActiveSkillFile = (
 ): string => {
   return `import type { ActiveSkill } from "./types";
 
-export const ${constName}: readonly ActiveSkill[] = ${JSON.stringify(skills, null, 2)};
+export const ${constName} = ${JSON.stringify(skills, null, 2)} as const satisfies readonly ActiveSkill[];
 `;
 };
 

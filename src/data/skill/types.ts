@@ -1,3 +1,5 @@
+import { ActiveSkills } from "./active";
+
 export const SKILL_TYPES = [
   "Activation Medium",
   "Active",
@@ -56,10 +58,12 @@ export const SKILL_TAGS = [
 
 export type SkillTag = (typeof SKILL_TAGS)[number];
 
+export type SkillName = (typeof ActiveSkills)[number]["name"];
+
 export interface BaseSkill {
   type: SkillType;
   name: string;
-  tags: readonly SkillTag[];
+  tags: SkillTag[];
   description: string[];
 }
 
