@@ -93,10 +93,7 @@ const OUTPUT_PATH = join(
   ".garbage/skills/inferred_skill_kinds.json",
 );
 
-const buildPrompt = (
-  template: string,
-  skill: (typeof ActiveSkills)[number],
-): string => {
+const buildPrompt = (template: string, skill: BaseSkill): string => {
   return template
     .replace("{{SKILL_NAME}}", skill.name)
     .replace("{{SKILL_TAGS}}", skill.tags.join(", "))

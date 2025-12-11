@@ -3,6 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import {
+  type ActiveSkill,
   type BaseSkill,
   type MagnificentSupportSkill,
   type NobleSupportSkill,
@@ -12,6 +13,7 @@ import {
   type SupportTarget,
 } from "../data/skill/types";
 import { readCodexHtml } from "./lib/codex";
+import { classifyWithRegex } from "./skill_kind_patterns";
 
 interface RawSkill {
   type: string;
@@ -368,6 +370,16 @@ const extractSkillData = (html: string): RawSkill[] => {
   return skills;
 };
 
+const generateActiveSkillFile = (
+  constName: string,
+  skills: ActiveSkill[],
+): string => {
+  return `import type { ActiveSkill } from "./types";
+
+export const ${constName}: readonly ActiveSkill[] = ${JSON.stringify(skills, null, 2)};
+`;
+};
+
 const generateBaseSkillFile = (
   constName: string,
   skills: BaseSkill[],
@@ -417,6 +429,7 @@ const main = async (): Promise<void> => {
   console.log(`Extracted ${rawData.length} skills`);
 
   // Group by skill type - separate maps for different skill interfaces
+  const activeSkillGroups = new Map<SkillTypeKey, ActiveSkill[]>();
   const baseSkillGroups = new Map<SkillTypeKey, BaseSkill[]>();
   const supportSkillGroups = new Map<SkillTypeKey, SupportSkill[]>();
   const magnificentSupportSkillGroups = new Map<
@@ -486,8 +499,27 @@ const main = async (): Promise<void> => {
         nobleSupportSkillGroups.set(skillType, []);
       }
       nobleSupportSkillGroups.get(skillType)?.push(skillEntry);
+    } else if (skillType === "Active") {
+      // Active skills with inferred kinds
+      const baseSkill: BaseSkill = {
+        type: raw.type as BaseSkill["type"],
+        name: raw.name,
+        tags: raw.tags as unknown as BaseSkill["tags"],
+        description: raw.description,
+      };
+      const kinds = classifyWithRegex(baseSkill);
+
+      const skillEntry: ActiveSkill = {
+        ...baseSkill,
+        kinds,
+      };
+
+      if (!activeSkillGroups.has(skillType)) {
+        activeSkillGroups.set(skillType, []);
+      }
+      activeSkillGroups.get(skillType)?.push(skillEntry);
     } else {
-      // Base skills (supportType === "none")
+      // Other base skills (Passive, Activation Medium)
       const skillEntry: BaseSkill = {
         type: raw.type as BaseSkill["type"],
         name: raw.name,
@@ -503,6 +535,7 @@ const main = async (): Promise<void> => {
   }
 
   const totalGroups =
+    activeSkillGroups.size +
     baseSkillGroups.size +
     supportSkillGroups.size +
     magnificentSupportSkillGroups.size +
@@ -512,6 +545,17 @@ const main = async (): Promise<void> => {
   // Create output directory
   const outDir = join(process.cwd(), "src", "data", "skill");
   await mkdir(outDir, { recursive: true });
+
+  // Generate active skill files
+  for (const [skillType, skills] of activeSkillGroups) {
+    const config = SKILL_TYPE_CONFIG[skillType];
+    const fileName = `${config.fileKey}.ts`;
+    const filePath = join(outDir, fileName);
+    const content = generateActiveSkillFile(config.constName, skills);
+
+    await writeFile(filePath, content, "utf-8");
+    console.log(`Generated ${fileName} (${skills.length} active skills)`);
+  }
 
   // Generate base skill type files
   for (const [skillType, skills] of baseSkillGroups) {

@@ -98,3 +98,7 @@ export interface NobleSupportSkill extends BaseSkill {
   // name of skill that can be supported
   supportTarget: string;
 }
+
+export interface ActiveSkill extends BaseSkill {
+  kinds: InferredSkillKind[];
+}
