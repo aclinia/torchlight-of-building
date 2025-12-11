@@ -47,9 +47,6 @@ export const offensiveSkillConfs = [
 export type ImplementedOffenseSkill =
   (typeof offensiveSkillConfs)[number]["skillName"];
 
-// Export available skills for UI
-export const AVAILABLE_SKILLS = offensiveSkillConfs.map((c) => c.skillName);
-
 export const listTags = (skillName: SkillName): SkillTag[] => {
   if (skillName === "[Test] Simple Attack") return ["Attack"];
   return ActiveSkills.find((s) => s.name === skillName)?.tags || [];
