@@ -1,6 +1,6 @@
 import type { SupportSkill } from "./types";
 
-export const ActivationMediumSkills: readonly SupportSkill[] = [
+export const ActivationMediumSkills = [
   {
     type: "Activation Medium",
     name: "Activation Medium: Boss",
@@ -412,4 +412,4 @@ export const ActivationMediumSkills: readonly SupportSkill[] = [
     supportTargets: [{ tags: ["Spell"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
   },
-];
+] as const satisfies readonly SupportSkill[];

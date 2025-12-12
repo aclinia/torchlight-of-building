@@ -472,7 +472,7 @@ const generateBaseSkillFile = (
 ): string => {
   return `import type { BaseSkill } from "./types";
 
-export const ${constName}: readonly BaseSkill[] = ${JSON.stringify(skills, null)};
+export const ${constName} = ${JSON.stringify(skills, null)} as const satisfies readonly BaseSkill[];
 `;
 };
 
@@ -482,7 +482,7 @@ const generateSupportSkillFile = (
 ): string => {
   return `import type { SupportSkill } from "./types";
 
-export const ${constName}: readonly SupportSkill[] = ${JSON.stringify(skills, null)};
+export const ${constName} = ${JSON.stringify(skills, null)} as const satisfies readonly SupportSkill[];
 `;
 };
 
@@ -492,7 +492,7 @@ const generateMagnificentSupportSkillFile = (
 ): string => {
   return `import type { MagnificentSupportSkill } from "./types";
 
-export const ${constName}: readonly MagnificentSupportSkill[] = ${JSON.stringify(skills, null)};
+export const ${constName} = ${JSON.stringify(skills, null)} as const satisfies readonly MagnificentSupportSkill[];
 `;
 };
 
@@ -502,7 +502,7 @@ const generateNobleSupportSkillFile = (
 ): string => {
   return `import type { NobleSupportSkill } from "./types";
 
-export const ${constName}: readonly NobleSupportSkill[] = ${JSON.stringify(skills, null)};
+export const ${constName} = ${JSON.stringify(skills, null)} as const satisfies readonly NobleSupportSkill[];
 `;
 };
 

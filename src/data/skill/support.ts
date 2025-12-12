@@ -1,6 +1,6 @@
 import type { SupportSkill } from "./types";
 
-export const SupportSkills: readonly SupportSkill[] = [
+export const SupportSkills = [
   {
     type: "Support",
     name: "Added Cold Damage",
@@ -1335,4 +1335,4 @@ export const SupportSkills: readonly SupportSkill[] = [
     supportTargets: [{ tags: ["Projectile"] }],
     cannotSupportTargets: [],
   },
-];
+] as const satisfies readonly SupportSkill[];

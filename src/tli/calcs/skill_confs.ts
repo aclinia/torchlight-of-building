@@ -1,6 +1,6 @@
 import {
   ActiveSkills,
-  type SkillName as DataSkillName,
+  type ActiveSkillName as DataSkillName,
   type SkillTag,
 } from "../../data/skill";
 import type { Mod } from "../mod";

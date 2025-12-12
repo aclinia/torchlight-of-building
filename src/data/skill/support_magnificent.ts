@@ -1,6 +1,6 @@
 import type { MagnificentSupportSkill } from "./types";
 
-export const MagnificentSupportSkills: readonly MagnificentSupportSkill[] = [
+export const MagnificentSupportSkills = [
   {
     type: "Support (Magnificent)",
     name: "Acuteness Focus: Piercing Agony (Magnificent)",
@@ -1387,4 +1387,4 @@ export const MagnificentSupportSkills: readonly MagnificentSupportSkill[] = [
     ],
     supportTarget: "Wilting Beam",
   },
-];
+] as const satisfies readonly MagnificentSupportSkill[];
