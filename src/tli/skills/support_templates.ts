@@ -36,4 +36,7 @@ export const skillModTemplates: Partial<
   "Quick Decision": {
     levelMods: [{ type: "AspdAndCspdPct", addn: true }],
   },
+  "Critical Strike Damage Increase": {
+    levelMods: [{ type: "CritDmgPct", addn: true, modType: "global" }],
+  },
 };

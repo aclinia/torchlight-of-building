@@ -1,4 +1,5 @@
 import {
+  criticalStrikeDamageIncreaseParser,
   hauntParser,
   quickDecisionParser,
   steamrollParser,
@@ -26,6 +27,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Quick Decision",
     categories: ["support"],
     parser: quickDecisionParser,
+  },
+  {
+    skillName: "Critical Strike Damage Increase",
+    categories: ["support"],
+    parser: criticalStrikeDamageIncreaseParser,
   },
 ];
 

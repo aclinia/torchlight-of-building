@@ -153,3 +153,27 @@ export const willpowerParser: SupportLevelParser = (input) => {
 
   return [maxStacksLevels, dmgPctLevels];
 };
+
+export const criticalStrikeDamageIncreaseParser: SupportLevelParser = (
+  input,
+) => {
+  const { skillName, progressionTable } = input;
+
+  // Extract crit damage from progression table values
+  const critDmgPctLevels: Record<number, number> = {};
+  for (const [levelStr, values] of Object.entries(progressionTable.values)) {
+    const level = Number(levelStr);
+    const critDmgValue = values[0];
+    if (critDmgValue === undefined) {
+      throw new Error(`${skillName} level ${level}: missing crit damage value`);
+    }
+
+    critDmgPctLevels[level] = parseNumericValue(critDmgValue, {
+      asPercentage: true,
+    });
+  }
+
+  validateAllLevels(critDmgPctLevels, skillName);
+
+  return [critDmgPctLevels];
+};
