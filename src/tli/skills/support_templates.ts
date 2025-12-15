@@ -17,7 +17,12 @@ export const skillModTemplates: Partial<
   Willpower: {
     levelMods: [
       { type: "MaxWillpowerStacks" },
-      { type: "DmgPct", modType: "global", addn: false, per: "willpower" },
+      {
+        type: "DmgPct",
+        modType: "global",
+        addn: false,
+        per: { stackable: "willpower" },
+      },
     ],
   },
   Haunt: {

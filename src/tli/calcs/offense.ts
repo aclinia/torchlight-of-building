@@ -713,7 +713,7 @@ const resolveBuffSkill = (
   skillConf: SkillConfiguration,
 ): Mod[] => {
   // todo finish
-  return []
+  return [];
 };
 
 const resolveSelectedSkillSupportMods = (
@@ -772,7 +772,7 @@ const resolveMods = (
       value: 0.005,
       modType: "global",
       addn: true,
-      per: "main_stat",
+      per: { stackable: "main_stat" },
       src: "Additional Damage from skill Main Stat (.5% per stat)",
     },
   ];
@@ -783,15 +783,16 @@ const resolveMods = (
   const normalizedMods = [];
   for (const mod of allOriginalMods) {
     if ("per" in mod && mod.per !== undefined) {
-      const normalizedMod = match<Stackable, Mod>(mod.per)
-        .with("willpower", () => multModValue(mod, willpowerStacks))
+      const div = mod.per.amt || 1;
+      const normalizedMod = match<Stackable, Mod>(mod.per.stackable)
+        .with("willpower", () => multModValue(mod, willpowerStacks / div))
         .with("main_stat", () => {
           const mainStatTypes = skillConf.stats;
           let totalMainStats = 0;
           for (const mainStatType of mainStatTypes) {
             totalMainStats += stats[mainStatType];
           }
-          return multModValue(mod, totalMainStats);
+          return multModValue(mod, totalMainStats / div);
         })
         .exhaustive();
       normalizedMods.push(normalizedMod);

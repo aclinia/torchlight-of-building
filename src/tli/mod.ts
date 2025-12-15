@@ -11,41 +11,48 @@ export type Stackable = "willpower" | "main_stat";
 
 export type StatType = "str" | "dex" | "int";
 
+// mod value is multiplied by number of stackable divided by amt
+// e.g. per 35 frostbite with 105 frostbite means x3
+export interface PerStackable {
+  stackable: Stackable;
+  amt?: number;  // default 1
+}
+
 export type Mod =
   | {
       type: "DmgPct";
       value: number;
       modType: DmgModType;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "FlatDmgToAtks";
       value: DmgRange;
       dmgType: DmgType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "FlatDmgToAtksAndSpells";
       value: DmgRange;
       dmgType: DmgType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "FlatDmgToSpells";
       value: DmgRange;
       dmgType: DmgType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "CritRatingPct";
       value: number;
       modType: CritRatingModType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
@@ -53,105 +60,105 @@ export type Mod =
       value: number;
       addn: boolean;
       modType: CritDmgModType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "AspdPct";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "CspdPct";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "AspdAndCspdPct";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "MinionAspdAndCspdPct";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "DblDmg";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "Stat";
       value: number;
       statType: StatType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "StatPct";
       value: number;
       statType: StatType;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "FervorEff";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "SteepStrikeChance";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "SteepStrikeDmg";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "SweepSlashDmg";
       value: number;
       addn: boolean;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "Fervor";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "CritDmgPerFervor";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "AddnMainHandDmgPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "GearAspdPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
@@ -164,67 +171,67 @@ export type Mod =
         | "fire"
         | "erosion"
         | "elemental";
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "GearPhysDmgPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "AttackBlockChancePct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "SpellBlockChancePct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "MaxLifePct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "MaxEnergyShieldPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "ArmorPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "EvasionPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "LifeRegainPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "EnergyShieldRegainPct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "MultistrikeChancePct";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
@@ -232,7 +239,7 @@ export type Mod =
       from: DmgType;
       to: DmgType;
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
@@ -240,13 +247,13 @@ export type Mod =
       from: DmgType;
       to: DmgType;
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
       type: "MaxWillpowerStacks";
       value: number;
-      per?: Stackable;
+      per?: PerStackable;
       src?: string;
     }
   | {
