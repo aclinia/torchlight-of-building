@@ -16,7 +16,7 @@ import {
   type SkillSlot,
   type SupportSkillSlot,
 } from "../core";
-import type * as Mod from "../mod";
+import type { DmgType, Mod, Stackable } from "../mod";
 import {
   type ImplementedOffenseSkill as ImplementedOffenseSkillName,
   listTags,
@@ -73,7 +73,7 @@ const calculateAddn = (bonuses: number[]) => {
   );
 };
 
-const collectModsFromAffixes = (affixes: Affix[]): Mod.Mod[] => {
+const collectModsFromAffixes = (affixes: Affix[]): Mod[] => {
   return affixes.flatMap((a) => a.affixLines.flatMap((l) => l.mods ?? []));
 };
 
@@ -83,7 +83,7 @@ const getGearAffixes = (
   return gear ? getAllAffixes(gear) : [];
 };
 
-export const collectMods = (loadout: Loadout): Mod.Mod[] => {
+export const collectMods = (loadout: Loadout): Mod[] => {
   return [
     // todo: handle divinity slates
     // todo: handle pactspirits
@@ -161,27 +161,27 @@ const emptyDmgRanges = (): DmgRanges => {
   };
 };
 
-const findAffix = <T extends Mod.Mod["type"]>(
-  mods: Mod.Mod[],
+const findAffix = <T extends Mod["type"]>(
+  mods: Mod[],
   type: T,
-): Extract<Mod.Mod, { type: T }> | undefined => {
+): Extract<Mod, { type: T }> | undefined => {
   return mods.find((a) => a.type === type) as
-    | Extract<Mod.Mod, { type: T }>
+    | Extract<Mod, { type: T }>
     | undefined;
 };
 
-const filterAffix = <T extends Mod.Mod["type"]>(
-  mods: Mod.Mod[],
+const filterAffix = <T extends Mod["type"]>(
+  mods: Mod[],
   type: T,
-): Extract<Mod.Mod, { type: T }>[] => {
-  return mods.filter((a) => a.type === type) as Extract<Mod.Mod, { type: T }>[];
+): Extract<Mod, { type: T }>[] => {
+  return mods.filter((a) => a.type === type) as Extract<Mod, { type: T }>[];
 };
 
 // A chunk of damage that tracks its conversion history
 export interface DmgChunk {
   range: DmgRange;
   // Types this damage has been converted from (not including current pool type)
-  history: Mod.DmgType[];
+  history: DmgType[];
 }
 
 // All damage organized by current type
@@ -202,10 +202,7 @@ const CONVERSION_ORDER = ["physical", "lightning", "cold", "fire"] as const;
 // a brief summary would be that damage gets converted in a specific order, and converted damage
 // remembers all the damage types through which it was converted for the purposes of applying
 // damage bonuses
-export const convertDmg = (
-  dmgRanges: DmgRanges,
-  allMods: Mod.Mod[],
-): DmgPools => {
+export const convertDmg = (dmgRanges: DmgRanges, allMods: Mod[]): DmgPools => {
   const pools: DmgPools = {
     physical: [],
     cold: [],
@@ -279,7 +276,7 @@ export const convertDmg = (
 };
 
 // currently only calculating mainhand
-const calculateGearDmg = (loadout: Loadout, allMods: Mod.Mod[]): GearDmg => {
+const calculateGearDmg = (loadout: Loadout, allMods: Mod[]): GearDmg => {
   const mainhand = loadout.gearPage.equippedGear.mainHand;
   if (mainhand === undefined) {
     return emptyGearDmg();
@@ -355,7 +352,7 @@ const calculateGearDmg = (loadout: Loadout, allMods: Mod.Mod[]): GearDmg => {
 };
 
 const calculateFlatDmg = (
-  allMods: Mod.Mod[],
+  allMods: Mod[],
   skillType: "attack" | "spell",
 ): DmgRanges => {
   if (skillType === "spell") throw new Error("Spells not implemented yet");
@@ -398,7 +395,7 @@ const calculateFlatDmg = (
   };
 };
 
-const calculateGearAspd = (loadout: Loadout, allMods: Mod.Mod[]): number => {
+const calculateGearAspd = (loadout: Loadout, allMods: Mod[]): number => {
   const baseAspd =
     loadout.gearPage.equippedGear.mainHand?.baseStats?.baseStatLines.find(
       (l) => l.mod?.type === "AttackSpeed",
@@ -410,7 +407,7 @@ const calculateGearAspd = (loadout: Loadout, allMods: Mod.Mod[]): number => {
 };
 
 const calculateCritRating = (
-  allMods: Mod.Mod[],
+  allMods: Mod[],
   configuration: Configuration,
 ): number => {
   const critRatingPctMods = filterAffix(allMods, "CritRatingPct");
@@ -447,7 +444,7 @@ const calculateCritRating = (
 };
 
 const calculateCritDmg = (
-  allMods: Mod.Mod[],
+  allMods: Mod[],
   configuration: Configuration,
 ): number => {
   const critDmgPctMods = filterAffix(allMods, "CritDmgPct");
@@ -484,7 +481,7 @@ const calculateCritDmg = (
   return 1.5 * (1 + inc) * addn;
 };
 
-const calculateAspd = (loadout: Loadout, allMods: Mod.Mod[]): number => {
+const calculateAspd = (loadout: Loadout, allMods: Mod[]): number => {
   const gearAspd = calculateGearAspd(loadout, allMods);
   const aspdPctMods = R.concat(
     filterAffix(allMods, "AspdPct"),
@@ -520,31 +517,31 @@ const dmgModTypesForSkill = (conf: SkillConfiguration) => {
 };
 
 const filterDmgPctMods = (
-  dmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
+  dmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   dmgModTypes: DmgModType[],
 ) => {
   return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
 };
 
-const calculateDmgInc = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
+const calculateDmgInc = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
   return calculateInc(mods.filter((m) => !m.addn).map((m) => m.value));
 };
 
-const calculateDmgAddn = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
+const calculateDmgAddn = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
   return calculateAddn(mods.filter((m) => m.addn).map((m) => m.value));
 };
 
 // Apply damage % bonuses to a single chunk, considering its conversion history
 const calculateChunkDmg = (
   chunk: DmgChunk,
-  currentType: Mod.DmgType,
-  allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
+  currentType: DmgType,
+  allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration,
 ): DmgRange => {
   const baseDmgModTypes = dmgModTypesForSkill(skillConf);
 
   // Chunk benefits from bonuses for current type AND all types in its history
-  const allApplicableTypes: Mod.DmgType[] = [currentType, ...chunk.history];
+  const allApplicableTypes: DmgType[] = [currentType, ...chunk.history];
   const dmgModTypes: DmgModType[] = [...baseDmgModTypes];
 
   for (const dmgType of allApplicableTypes) {
@@ -566,8 +563,8 @@ const calculateChunkDmg = (
 // Sum all chunks in a pool, applying bonuses to each based on its history
 const calculatePoolTotal = (
   pool: DmgChunk[],
-  poolType: Mod.DmgType,
-  allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
+  poolType: DmgType,
+  allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration,
 ): DmgRange => {
   let total: DmgRange = { min: 0, max: 0 };
@@ -600,7 +597,7 @@ interface SkillHitOverview {
 const calculateSkillHit = (
   gearDmg: GearDmg,
   flatDmg: DmgRanges,
-  allMods: Mod.Mod[],
+  allMods: Mod[],
   skillConf: SkillConfiguration,
 ): SkillHitOverview => {
   const skillWeaponDR = match(skillConf.skillName)
@@ -671,7 +668,7 @@ export interface OffenseInput {
   configuration: Configuration;
 }
 
-const multModValue = <T extends Extract<Mod.Mod, { value: number | DmgRange }>>(
+const multModValue = <T extends Extract<Mod, { value: number | DmgRange }>>(
   mod: T,
   multiplier: number,
 ): T => {
@@ -683,7 +680,7 @@ const multModValue = <T extends Extract<Mod.Mod, { value: number | DmgRange }>>(
 
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (
-  mods: Mod.Mod[],
+  mods: Mod[],
 ): { str: number; dex: number; int: number } => {
   const statMods = filterAffix(mods, "Stat");
   return {
@@ -702,16 +699,29 @@ const calculateStats = (
   };
 };
 
-const resolveSelectedSkillSupportMods = (
-  input: OffenseInput,
-  skillConf: SkillConfiguration,
-): Mod.Mod[] => {
-  const name = skillConf.skillName;
+const listSkillSlots = (input: OffenseInput): SkillSlot[] => {
   // we're sure that SkillSlots properties only has SkillSlot as values
   const slots = Object.values(input.loadout.skillPage.activeSkills) as (
     | SkillSlot
     | undefined
   )[];
+  return slots.filter((s) => s !== undefined);
+};
+
+const resolveBuffSkill = (
+  input: OffenseInput,
+  skillConf: SkillConfiguration,
+): Mod[] => {
+  // todo finish
+  return []
+};
+
+const resolveSelectedSkillSupportMods = (
+  input: OffenseInput,
+  skillConf: SkillConfiguration,
+): Mod[] => {
+  const name = skillConf.skillName;
+  const slots = listSkillSlots(input);
   const slot = slots.find((s) => s?.skillName === name);
   if (slot === undefined) {
     return [];
@@ -722,7 +732,7 @@ const resolveSelectedSkillSupportMods = (
     | undefined
   )[];
 
-  const supportMods: Mod.Mod[] = [];
+  const supportMods: Mod[] = [];
   for (const ss of supportSlots) {
     if (ss === undefined) continue;
     const supportSkill = SupportSkills.find((s) => s.name === ss.name) as
@@ -732,11 +742,11 @@ const resolveSelectedSkillSupportMods = (
 
     const level = ss.level || 20;
     for (const levelMods of supportSkill.levelMods || []) {
-      const mod: Mod.Mod = {
+      const mod: Mod = {
         ...levelMods.template,
         value: levelMods.levels[level],
         src: `Support: ${supportSkill.name} L${level}`,
-      } as Mod.Mod;
+      } as Mod;
       supportMods.push(mod);
     }
   }
@@ -749,9 +759,9 @@ const resolveSelectedSkillSupportMods = (
 const resolveMods = (
   input: OffenseInput,
   skillConf: SkillConfiguration,
-): Mod.Mod[] => {
+): Mod[] => {
   // includes mods from loadout and from base effects, such as from stats
-  const allOriginalMods: Mod.Mod[] = [
+  const allOriginalMods: Mod[] = [
     ...collectMods(input.loadout),
     ...resolveSelectedSkillSupportMods(input, skillConf),
     ...skillConf.extraMods,
@@ -773,7 +783,7 @@ const resolveMods = (
   const normalizedMods = [];
   for (const mod of allOriginalMods) {
     if ("per" in mod && mod.per !== undefined) {
-      const normalizedMod = match<Mod.Stackable, Mod.Mod>(mod.per)
+      const normalizedMod = match<Stackable, Mod>(mod.per)
         .with("willpower", () => multModValue(mod, willpowerStacks))
         .with("main_stat", () => {
           const mainStatTypes = skillConf.stats;
