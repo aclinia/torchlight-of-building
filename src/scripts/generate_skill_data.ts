@@ -796,21 +796,23 @@ const main = async (): Promise<void> => {
       const template =
         activeSkillTemplates[raw.name as keyof typeof activeSkillTemplates];
 
-      // Build levelOffense and levelMods from template + parsed values
+      // Build levelOffense, levelMods, and levelBuffMods from template + parsed values
       let levelOffense: BaseActiveSkill["levelOffense"];
       let levelMods: BaseActiveSkill["levelMods"];
+      let levelBuffMods: BaseActiveSkill["levelBuffMods"];
 
       if (template !== undefined && raw.parsedLevelModValues !== undefined) {
         const parsedValues = raw.parsedLevelModValues;
 
-        // Calculate expected count: levelOffense templates + levelMods templates
+        // Calculate expected count: levelOffense + levelMods + levelBuffMods templates
         const offenseCount = template.levelOffense?.length ?? 0;
         const modsCount = template.levelMods?.length ?? 0;
-        const expectedCount = offenseCount + modsCount;
+        const buffModsCount = template.levelBuffMods?.length ?? 0;
+        const expectedCount = offenseCount + modsCount + buffModsCount;
 
         if (parsedValues.length !== expectedCount) {
           throw new Error(
-            `Skill "${raw.name}": template expects ${expectedCount} level arrays (${offenseCount} offense + ${modsCount} mods) but parser returned ${parsedValues.length}`,
+            `Skill "${raw.name}": template expects ${expectedCount} level arrays (${offenseCount} offense + ${modsCount} mods + ${buffModsCount} buffMods) but parser returned ${parsedValues.length}`,
           );
         }
 
@@ -827,13 +829,26 @@ const main = async (): Promise<void> => {
           });
         }
 
-        // Remaining arrays are for levelMods
+        // Next arrays are for levelMods
         if (template.levelMods !== undefined && modsCount > 0) {
           levelMods = template.levelMods.map((modTemplate, i) => {
             const levels = parsedValues[offenseCount + i];
             if (levels === undefined) {
               throw new Error(
                 `Skill "${raw.name}": missing parsed mod levels at index ${offenseCount + i}`,
+              );
+            }
+            return { template: modTemplate, levels };
+          });
+        }
+
+        // Remaining arrays are for levelBuffMods
+        if (template.levelBuffMods !== undefined && buffModsCount > 0) {
+          levelBuffMods = template.levelBuffMods.map((modTemplate, i) => {
+            const levels = parsedValues[offenseCount + modsCount + i];
+            if (levels === undefined) {
+              throw new Error(
+                `Skill "${raw.name}": missing parsed buff mod levels at index ${offenseCount + modsCount + i}`,
               );
             }
             return { template: modTemplate, levels };
@@ -847,6 +862,7 @@ const main = async (): Promise<void> => {
         kinds,
         ...(levelOffense !== undefined && { levelOffense }),
         ...(levelMods !== undefined && { levelMods }),
+        ...(levelBuffMods !== undefined && { levelBuffMods }),
       };
 
       if (!activeSkillGroups.has(skillType)) {

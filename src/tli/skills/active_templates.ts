@@ -4,6 +4,7 @@ import type { ModWithoutValue } from "./support_templates";
 export type ActiveSkillTemplate = {
   levelOffense?: SkillOffenseTemplate[];
   levelMods?: ModWithoutValue[];
+  levelBuffMods?: ModWithoutValue[];
 };
 
 export const activeSkillTemplates: Partial<
@@ -21,6 +22,16 @@ export const activeSkillTemplates: Partial<
         modType: "global",
         addn: true,
         per: { stackable: "projectile" },
+      },
+    ],
+  },
+  "Ice Bond": {
+    levelBuffMods: [
+      {
+        type: "DmgPct",
+        addn: true,
+        modType: "cold",
+        cond: "enemy_frostbitten",
       },
     ],
   },

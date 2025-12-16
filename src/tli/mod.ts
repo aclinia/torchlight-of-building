@@ -16,7 +16,9 @@ export type Stackable =
   | "willpower"
   | "main_stat"
   | "frostbite_rating"
-  | "projectile";
+  | "projectile"
+  | "skill_use"
+  | "skill_charges_on_use";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -27,6 +29,8 @@ export interface PerStackable {
   amt?: number; // default 1
 }
 
+export type Condition = "enemy_frostbitten";
+
 export type Mod =
   | {
       type: "DmgPct";
@@ -34,6 +38,7 @@ export type Mod =
       modType: DmgModType;
       addn: boolean;
       per?: PerStackable;
+      cond?: Condition;
       src?: string;
     }
   | {

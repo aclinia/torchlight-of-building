@@ -43,6 +43,10 @@ export interface Configuration {
     enabled: boolean;
     points: number;
   };
+  enemyFrobitten?: {
+    enabled: true;
+    points: number;
+  };
 }
 
 export interface Gear {

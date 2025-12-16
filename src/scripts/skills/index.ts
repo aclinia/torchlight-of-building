@@ -1,4 +1,4 @@
-import { frostSpikeParser } from "./active_parsers";
+import { frostSpikeParser, iceBondParser } from "./active_parsers";
 import {
   criticalStrikeDamageIncreaseParser,
   criticalStrikeRatingIncreaseParser,
@@ -50,6 +50,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Frost Spike",
     categories: ["active"],
     parser: frostSpikeParser,
+  },
+  {
+    skillName: "Ice Bond",
+    categories: ["active"],
+    parser: iceBondParser,
   },
 ];
 

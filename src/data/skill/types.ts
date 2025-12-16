@@ -167,4 +167,8 @@ export interface BaseActiveSkill extends BaseSkill {
     template: ModWithoutValue;
     levels: Record<number, number | DmgRange>;
   }[];
+  levelBuffMods?: {
+    template: ModWithoutValue;
+    levels: Record<number, number | DmgRange>;
+  }[];
 }

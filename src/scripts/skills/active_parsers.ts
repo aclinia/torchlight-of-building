@@ -2,6 +2,36 @@ import { parseNumericValue, validateAllLevels } from "./progression_table";
 import type { SupportLevelParser } from "./types";
 import { createConstantLevels } from "./utils";
 
+export const iceBondParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  // levelBuffMods: DmgPct cold additional damage vs frostbitten from Descript column (values[2])
+  const buffDmgPctLevels: Record<number, number> = {};
+
+  for (const [levelStr, values] of Object.entries(progressionTable.values)) {
+    const level = Number(levelStr);
+    const descript = values[2];
+
+    if (descript !== undefined && descript !== "") {
+      // Match "23.5% additional Cold Damage" or "+24% additional Cold Damage"
+      const match = descript.match(
+        /[+]?([\d.]+)%\s+additional\s+Cold\s+Damage/i,
+      );
+      if (match !== null) {
+        buffDmgPctLevels[level] = parseNumericValue(match[1], {
+          asPercentage: true,
+        });
+      }
+    }
+  }
+
+  validateAllLevels(buffDmgPctLevels, skillName);
+
+  // Return array matching template order:
+  // levelBuffMods: [DmgPct cold vs frostbitten]
+  return [buffDmgPctLevels];
+};
+
 export const frostSpikeParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 

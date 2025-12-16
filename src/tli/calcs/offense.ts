@@ -835,8 +835,15 @@ const resolveMods = (
     if ("per" in mod && mod.per !== undefined) {
       const div = mod.per.amt || 1;
       const normalizedMod = match<Stackable, Mod>(mod.per.stackable)
-        .with(P.union("willpower", "frostbite_rating", "projectile"), () =>
-          multModValue(mod, willpowerStacks / div),
+        .with(
+          P.union(
+            "willpower",
+            "frostbite_rating",
+            "projectile",
+            "skill_use",
+            "skill_charges_on_use",
+          ),
+          () => multModValue(mod, willpowerStacks / div),
         )
         .with("main_stat", () => {
           if (mainSkill.mainStats === undefined) {
