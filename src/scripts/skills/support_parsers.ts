@@ -225,3 +225,49 @@ export const enhancedAilmentParser: SupportLevelParser = (input) => {
 
   return [ailmentDmgPctLevels];
 };
+
+export const wellFoughtBattleParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const skillEffPctLevels: Record<number, number> = {};
+  for (const [levelStr, values] of Object.entries(progressionTable.values)) {
+    const level = Number(levelStr);
+    const skillEffValue = values[0];
+    if (skillEffValue === undefined) {
+      throw new Error(
+        `${skillName} level ${level}: missing skill effect value`,
+      );
+    }
+
+    skillEffPctLevels[level] = parseNumericValue(skillEffValue, {
+      asPercentage: true,
+    });
+  }
+
+  validateAllLevels(skillEffPctLevels, skillName);
+
+  return [skillEffPctLevels];
+};
+
+export const massEffectParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const skillEffPctLevels: Record<number, number> = {};
+  for (const [levelStr, values] of Object.entries(progressionTable.values)) {
+    const level = Number(levelStr);
+    const skillEffValue = values[0];
+    if (skillEffValue === undefined) {
+      throw new Error(
+        `${skillName} level ${level}: missing skill effect value`,
+      );
+    }
+
+    skillEffPctLevels[level] = parseNumericValue(skillEffValue, {
+      asPercentage: true,
+    });
+  }
+
+  validateAllLevels(skillEffPctLevels, skillName);
+
+  return [skillEffPctLevels];
+};

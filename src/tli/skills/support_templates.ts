@@ -50,4 +50,12 @@ export const skillModTemplates: Partial<
   "Enhanced Ailment": {
     levelMods: [{ type: "DmgPct", modType: "ailment", addn: true }],
   },
+  "Well-Fought Battle": {
+    levelMods: [{ type: "SkillEffPct", per: { stackable: "skill_use" } }],
+  },
+  "Mass Effect": {
+    levelMods: [
+      { type: "SkillEffPct", per: { stackable: "skill_charges_on_use" } },
+    ],
+  },
 };

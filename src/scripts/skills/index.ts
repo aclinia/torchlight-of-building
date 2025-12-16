@@ -8,8 +8,10 @@ import {
   criticalStrikeRatingIncreaseParser,
   enhancedAilmentParser,
   hauntParser,
+  massEffectParser,
   quickDecisionParser,
   steamrollParser,
+  wellFoughtBattleParser,
   willpowerParser,
 } from "./support_parsers";
 import type { SkillCategory, SkillParserEntry } from "./types";
@@ -49,6 +51,16 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Enhanced Ailment",
     categories: ["support"],
     parser: enhancedAilmentParser,
+  },
+  {
+    skillName: "Well-Fought Battle",
+    categories: ["support"],
+    parser: wellFoughtBattleParser,
+  },
+  {
+    skillName: "Mass Effect",
+    categories: ["support"],
+    parser: massEffectParser,
   },
   {
     skillName: "Frost Spike",
