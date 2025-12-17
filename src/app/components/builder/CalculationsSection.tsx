@@ -50,17 +50,17 @@ export const CalculationsSection = () => {
     [updateSaveData],
   );
 
-  const offenseSummary = useMemo(() => {
-    if (!selectedSkill) return undefined;
-
+  const offenseResults = useMemo(() => {
     const input: OffenseInput = {
       loadout,
-      mainSkillName: selectedSkill,
       configuration: DEFAULT_CONFIGURATION,
     };
-
     return calculateOffense(input);
-  }, [loadout, selectedSkill]);
+  }, [loadout]);
+
+  const offenseSummary = selectedSkill
+    ? offenseResults[selectedSkill]
+    : undefined;
 
   const groupedMods = useMemo(() => {
     if (!offenseSummary) return undefined;
