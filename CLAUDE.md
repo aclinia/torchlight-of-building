@@ -68,3 +68,4 @@ See [docs/claude/](docs/claude/) for implementation details only when needed.
 - run `pnpm test`, `pnpm typecheck`, and `pnpm check` after making changes
 - read [docs/claude/development.md](docs/claude/development.md) when planning or making code changes
 - read [docs/claude/ui-development.md](docs/claude/ui-development.md) when planning or making code changes related to the UI
+- when using git, assume that there is no remote, and only work locally
