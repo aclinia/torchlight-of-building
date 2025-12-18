@@ -2544,6 +2544,7 @@ describe("Pactspirit Ring Mods", () => {
         slot1: {
           pactspiritName: "Test Pactspirit",
           level: 1,
+          mainAffix: emptyAffix(),
           rings: {
             innerRing1: ringSlotWithOriginalAffix(
               affix([
@@ -2596,6 +2597,7 @@ describe("Pactspirit Ring Mods", () => {
         slot1: {
           pactspiritName: "Test Pactspirit",
           level: 1,
+          mainAffix: emptyAffix(),
           rings: {
             innerRing1: ringSlotWithOriginalAffix(
               affix([
@@ -2653,6 +2655,7 @@ describe("Pactspirit Ring Mods", () => {
         slot1: {
           pactspiritName: "Test Pactspirit",
           level: 1,
+          mainAffix: emptyAffix(),
           rings: {
             innerRing1: {
               installedDestiny: {
@@ -2718,6 +2721,7 @@ describe("Pactspirit Ring Mods", () => {
         slot1: {
           pactspiritName: "Test Pactspirit 1",
           level: 1,
+          mainAffix: emptyAffix(),
           rings: {
             innerRing1: ringSlotWithOriginalAffix(
               affix([
@@ -2737,6 +2741,7 @@ describe("Pactspirit Ring Mods", () => {
         slot2: {
           pactspiritName: "Test Pactspirit 2",
           level: 1,
+          mainAffix: emptyAffix(),
           rings: {
             innerRing1: ringSlotWithOriginalAffix(
               affix([

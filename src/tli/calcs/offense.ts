@@ -108,6 +108,7 @@ const getPactspiritAffixes = (
   ];
   for (const slot of slots) {
     if (slot === undefined) continue;
+    affixes.push(slot.mainAffix);
     for (const ring of Object.values(slot.rings)) {
       affixes.push(ring.installedDestiny?.affix ?? ring.originalAffix);
     }

@@ -351,6 +351,7 @@ export interface RingSlotState {
 export interface PactspiritSlot {
   pactspiritName: string;
   level: number;
+  mainAffix: Affix;
   rings: {
     innerRing1: RingSlotState;
     innerRing2: RingSlotState;

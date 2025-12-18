@@ -515,9 +515,17 @@ const convertPactspiritSlot = (
     rings[ringKey] = { installedDestiny, originalRingName, originalAffix };
   }
 
+  const mainAffixKey = `affix${saveDataSlot.level}` as keyof Pactspirit;
+  const mainAffixText = pactspirit[mainAffixKey] as string;
+  const mainAffix = convertAffix(
+    mainAffixText,
+    `Pactspirit#slot${slotIndex}#mainAffix`,
+  );
+
   return {
     pactspiritName: saveDataSlot.pactspiritName,
     level: saveDataSlot.level,
+    mainAffix,
     rings,
   };
 };
