@@ -1,32 +1,112 @@
 import { execSync } from "node:child_process";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { HeroMemory } from "../data/hero_memory/types";
-import { cleanEffectText, readCodexHtml } from "./lib/codex";
+
+const TLIDB_HTML_PATH = join(
+  process.cwd(),
+  ".garbage",
+  "tlidb",
+  "hero_memories",
+  "hero_memories_random_affix.html",
+);
+
+const cleanAffixText = (html: string): string => {
+  let text = html;
+
+  // Remove <span class="text-mod"> tags but keep content
+  text = text.replace(/<span[^>]*class="text-mod"[^>]*>([^<]*)<\/span>/g, "$1");
+
+  // Remove <e> hyperlink tags but keep content
+  text = text.replace(/<e[^>]*>([^<]*)<\/e>/g, "$1");
+
+  // Remove <i> info icon elements entirely
+  text = text.replace(/<i[^>]*><\/i>/g, "");
+  text = text.replace(/<i[^>]*\/>/g, "");
+
+  // Remove any remaining HTML tags
+  text = text.replace(/<[^>]+>/g, "");
+
+  // Convert HTML en-dash entity to hyphen
+  text = text.replace(/&ndash;/g, "-");
+
+  // Decode common HTML entities
+  text = text
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ");
+
+  // Normalize whitespace
+  text = text.replace(/\s+/g, " ");
+
+  return text.trim();
+};
+
+const extractTypeFromHeader = (headerText: string): string | undefined => {
+  // Header format: "Base Stats /15" or "Fixed Affix /219" or "Random Affix /..."
+  if (headerText.includes("Base Stats")) {
+    return "Base Stats";
+  }
+  if (headerText.includes("Fixed Affix")) {
+    return "Fixed Affix";
+  }
+  if (headerText.includes("Random Affix")) {
+    return "Random Affix";
+  }
+  return undefined;
+};
 
 const extractHeroMemoryData = (html: string): HeroMemory[] => {
   const $ = cheerio.load(html);
   const items: HeroMemory[] = [];
 
-  const rows = $('#heroMemory tbody tr[class*="thing"]');
-  console.log(`Found ${rows.length} hero memory rows`);
+  // Find all card elements that contain tables
+  $(".card").each((_, card) => {
+    const $card = $(card);
+    const headerText = $card.find(".card-header").first().text().trim();
+    const memoryType = extractTypeFromHeader(headerText);
 
-  rows.each((_, row) => {
-    const tds = $(row).find("td");
-
-    if (tds.length !== 3) {
-      console.warn(`Skipping row with ${tds.length} columns (expected 3)`);
-      return;
+    if (memoryType === undefined) {
+      return; // Skip cards without recognized type
     }
 
-    const item: HeroMemory = {
-      type: $(tds[0]).text().trim(),
-      item: $(tds[1]).text().trim(),
-      affix: cleanEffectText($(tds[2]).html() || ""),
-    };
+    // Find 5-column tables within this card (Tier, Modifier, Level, Weight, Source)
+    $card.find("table.DataTable").each((_, table) => {
+      const $table = $(table);
+      const headers = $table.find("thead th");
+      if (headers.length !== 5) {
+        return;
+      }
+      const firstHeader = $(headers[0]).text().trim();
+      if (firstHeader !== "Tier") {
+        return;
+      }
 
-    items.push(item);
+      $table.find("tbody tr").each((_, row) => {
+        const tds = $(row).find("td");
+        if (tds.length !== 5) {
+          return;
+        }
+
+        const tier = parseInt($(tds[0]).text().trim(), 10);
+        const affixHtml = $(tds[1]).html() || "";
+        const affix = cleanAffixText(affixHtml);
+        const item = $(tds[4]).find("a").text().trim();
+
+        if (affix.length > 0 && item.length > 0) {
+          items.push({
+            type: memoryType,
+            item,
+            affix,
+            tier,
+          });
+        }
+      });
+    });
   });
 
   return items;
@@ -40,12 +120,24 @@ export const HeroMemories: readonly HeroMemory[] = ${JSON.stringify(items)};
 };
 
 const main = async (): Promise<void> => {
-  console.log("Reading HTML file...");
-  const html = await readCodexHtml();
+  console.log("Reading tlidb HTML file...");
+  const html = await readFile(TLIDB_HTML_PATH, "utf-8");
 
   console.log("Extracting hero memory data...");
   const items = extractHeroMemoryData(html);
   console.log(`Extracted ${items.length} hero memories`);
+
+  // Log breakdown by type
+  const byType = items.reduce(
+    (acc, item) => {
+      acc[item.type] = (acc[item.type] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+  for (const [type, count] of Object.entries(byType)) {
+    console.log(`  ${type}: ${count}`);
+  }
 
   const outDir = join(process.cwd(), "src", "data", "hero_memory");
   await mkdir(outDir, { recursive: true });
