@@ -3,7 +3,6 @@
 import { useCallback, useMemo } from "react";
 import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
 import { calculateOffense, type OffenseInput } from "@/src/tli/calcs/offense";
-import { createDefaultConfiguration } from "@/src/tli/core";
 import {
   formatStatValue,
   getStatCategoryDescription,
@@ -15,16 +14,16 @@ import { createEmptyCalculationsPage } from "../../lib/storage";
 import {
   useBuilderActions,
   useCalculationsSelectedSkill,
+  useConfiguration,
   useLoadout,
 } from "../../stores/builderStore";
 import { ModGroup } from "../calculations/ModGroup";
 import { SkillSelector } from "../calculations/SkillSelector";
 import { StatBreakdown } from "../calculations/StatBreakdown";
 
-const DEFAULT_CONFIGURATION = createDefaultConfiguration();
-
 export const CalculationsSection = () => {
   const loadout = useLoadout();
+  const configuration = useConfiguration();
   const savedSkillName = useCalculationsSelectedSkill();
   const { updateSaveData } = useBuilderActions();
 
@@ -48,10 +47,10 @@ export const CalculationsSection = () => {
   const offenseResults = useMemo(() => {
     const input: OffenseInput = {
       loadout,
-      configuration: DEFAULT_CONFIGURATION,
+      configuration,
     };
     return calculateOffense(input);
-  }, [loadout]);
+  }, [loadout, configuration]);
 
   const offenseSummary = selectedSkill
     ? offenseResults[selectedSkill]

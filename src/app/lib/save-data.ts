@@ -207,6 +207,14 @@ export interface CalculationsPage {
   selectedSkillName?: string;
 }
 
+export interface ConfigurationPage {
+  fervorEnabled: boolean;
+  fervorPoints: number | undefined;
+  enemyFrostbittenEnabled: boolean;
+  enemyFrostbittenPoints: number | undefined;
+  crueltyBuffStacks: number;
+}
+
 export interface SaveData {
   equipmentPage: GearPage;
   talentPage: TalentPage;
@@ -214,6 +222,7 @@ export interface SaveData {
   heroPage: HeroPage;
   pactspiritPage: PactspiritPage;
   divinityPage: DivinityPage;
+  configurationPage: ConfigurationPage;
   calculationsPage: CalculationsPage;
   itemsList: Gear[];
   heroMemoryList: HeroMemory[];

@@ -40,6 +40,13 @@ const createMinimalSaveData = (
     slot3: { level: 1, rings: createEmptyRings() },
   },
   divinityPage: { placedSlates: [] },
+  configurationPage: {
+    fervorEnabled: false,
+    fervorPoints: undefined,
+    enemyFrostbittenEnabled: false,
+    enemyFrostbittenPoints: undefined,
+    crueltyBuffStacks: 40,
+  },
   calculationsPage: { selectedSkillName: undefined },
   itemsList: [],
   heroMemoryList: [],

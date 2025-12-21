@@ -799,7 +799,7 @@ const calculateNormalizationContext = (
     skillUse: 3,
     skillChargesOnUse: 2,
     mainStat,
-    crueltyBuffStacks: config.crueltyBuffStacks,
+    crueltyBuffStacks: config.crueltyBuffStacks ?? 40,
   };
 };
 

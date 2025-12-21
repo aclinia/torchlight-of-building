@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useRef } from "react";
-import type { Loadout, TalentTree } from "@/src/tli/core";
+import type { Configuration, Loadout, TalentTree } from "@/src/tli/core";
 import { loadSave } from "@/src/tli/storage/load-save";
+import { createEmptyConfigurationPage } from "../../lib/storage";
 import type { TreeSlot } from "../../lib/types";
 import { internalStore } from "./internal";
 import type { BuilderReadableState } from "./types";
@@ -58,3 +59,25 @@ export const useSavesIndex = () => internalStore((state) => state.savesIndex);
 
 export const useCalculationsSelectedSkill = (): string | undefined =>
   internalStore((state) => state.saveData.calculationsPage?.selectedSkillName);
+
+export const useConfigurationPage = () =>
+  internalStore((state) => state.saveData.configurationPage);
+
+export const useConfiguration = (): Configuration => {
+  const configPage = internalStore((state) => state.saveData.configurationPage);
+  const defaults = createEmptyConfigurationPage();
+
+  return {
+    fervor: {
+      enabled: configPage?.fervorEnabled ?? defaults.fervorEnabled,
+      points: configPage?.fervorPoints,
+    },
+    enemyFrostbitten: {
+      enabled:
+        configPage?.enemyFrostbittenEnabled ?? defaults.enemyFrostbittenEnabled,
+      points: configPage?.enemyFrostbittenPoints,
+    },
+    crueltyBuffStacks:
+      configPage?.crueltyBuffStacks ?? defaults.crueltyBuffStacks,
+  };
+};

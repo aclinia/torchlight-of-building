@@ -11,6 +11,7 @@ export type ActivePage =
   | "hero"
   | "pactspirit"
   | "divinity"
+  | "configuration"
   | "calculations";
 
 export interface AffixSlotState {

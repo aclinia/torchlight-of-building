@@ -4,6 +4,8 @@ export { useSaveDataRaw } from "./raw-access";
 export {
   useBuilderState,
   useCalculationsSelectedSkill,
+  useConfiguration,
+  useConfigurationPage,
   useCurrentSaveId,
   useCurrentSaveName,
   useHasUnsavedChanges,

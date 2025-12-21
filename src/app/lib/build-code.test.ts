@@ -3,6 +3,7 @@ import { decodeBuildCode, encodeBuildCode } from "./build-code";
 import type { SaveData } from "./save-data";
 import {
   createEmptyCalculationsPage,
+  createEmptyConfigurationPage,
   createEmptyDivinityPage,
   createEmptyHeroPage,
   createEmptyPactspiritPage,
@@ -39,6 +40,7 @@ describe("build-code", () => {
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
+      configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
       itemsList: [],
       heroMemoryList: [],
@@ -73,6 +75,7 @@ describe("build-code", () => {
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
+      configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
       itemsList: [],
       heroMemoryList: [],
@@ -112,6 +115,7 @@ describe("build-code", () => {
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
+      configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
       itemsList: [],
       heroMemoryList: [],
@@ -161,6 +165,7 @@ describe("build-code", () => {
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
+      configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
       itemsList: [
         {

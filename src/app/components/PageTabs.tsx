@@ -79,6 +79,17 @@ export const PageTabs: React.FC<PageTabsProps> = ({
       </button>
       <button
         type="button"
+        onClick={() => setActivePage("configuration")}
+        className={`px-6 py-3 font-medium transition-colors ${
+          activePage === "configuration"
+            ? "border-b-2 border-amber-500 text-amber-500"
+            : "text-zinc-400 hover:text-zinc-50"
+        }`}
+      >
+        Configuration
+      </button>
+      <button
+        type="button"
         onClick={() => setActivePage("calculations")}
         className={`px-6 py-3 font-medium transition-colors ${
           activePage === "calculations"
