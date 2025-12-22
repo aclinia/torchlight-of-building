@@ -10,7 +10,7 @@ export default defineConfig({
     port: 3000,
   },
   plugins: [
-    cloudflare({ viteEnvironment: { name: "client" } }),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tsconfigPaths(),
     tanstackStart(),
     react(),
