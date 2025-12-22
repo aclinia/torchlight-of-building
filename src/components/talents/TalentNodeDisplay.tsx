@@ -307,7 +307,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
       >
         {/* Reflected Icon */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/** biome-ignore lint/performance/noImgElement: dynamic game assets */}
           <img
             src={`/tli/talents/${node.iconName}.webp`}
             alt={node.iconName}
@@ -415,7 +414,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
     >
       {/* Icon */}
       <div className="absolute inset-0 flex items-center justify-center">
-        {/* biome-ignore lint/performance/noImgElement: dynamic game assets */}
         <img
           src={`/tli/talents/${node.iconName}.webp`}
           alt={node.iconName}
