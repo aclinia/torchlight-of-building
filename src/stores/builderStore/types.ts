@@ -22,6 +22,7 @@ import type {
   RingSlotKey,
   TreeSlot,
 } from "../../lib/types";
+import type { DivinitySlate as CoreDivinitySlate } from "../../tli/core";
 
 // Public readable state (NO saveData)
 export interface BuilderReadableState {
@@ -110,7 +111,7 @@ export interface BuilderActions {
   ) => void;
 
   // Divinity actions
-  addSlateToInventory: (slate: DivinitySlate) => void;
+  addSlateToInventory: (slate: CoreDivinitySlate) => void;
   deleteSlate: (slateId: string) => void;
   placeSlate: (slateId: string, position: { row: number; col: number }) => void;
   removeSlate: (slateId: string) => void;
@@ -225,3 +226,4 @@ export type {
   RingSlotKey,
   TreeSlot,
 } from "../../lib/types";
+export type { DivinitySlate as CoreDivinitySlate } from "../../tli/core";

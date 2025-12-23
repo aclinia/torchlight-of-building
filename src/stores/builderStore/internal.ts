@@ -1,7 +1,7 @@
 "use client";
 
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { combine, persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 import type { SaveData } from "../../lib/save-data";
 import type { SavesIndex } from "../../lib/saves";
@@ -15,16 +15,18 @@ export interface InternalBuilderState {
   savesIndex: SavesIndex;
 }
 
-export const internalStore = create<InternalBuilderState>()(
+const initialState: InternalBuilderState = {
+  saveData: createEmptySaveData(),
+  hasUnsavedChanges: false,
+  currentSaveId: undefined,
+  currentSaveName: undefined,
+  savesIndex: { currentSaveId: undefined, saves: [] },
+};
+
+export const internalStore = create(
   immer(
     persist(
-      (): InternalBuilderState => ({
-        saveData: createEmptySaveData(),
-        hasUnsavedChanges: false,
-        currentSaveId: undefined,
-        currentSaveName: undefined,
-        savesIndex: { currentSaveId: undefined, saves: [] },
-      }),
+      combine(initialState, () => ({})),
       {
         name: "torchlight-builder-storage",
         partialize: (state) => ({

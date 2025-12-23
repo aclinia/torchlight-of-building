@@ -6,6 +6,7 @@ import type {
   CraftedPrism,
   Gear,
   HeroMemorySlot,
+  DivinitySlate as SaveDataDivinitySlate,
 } from "../../lib/save-data";
 import {
   loadSaveData,
@@ -25,8 +26,26 @@ import type {
   PactspiritSlotIndex,
   RingSlotKey,
 } from "../../lib/types";
+import {
+  type DivinitySlate as CoreDivinitySlate,
+  getAffixText,
+} from "../../tli/core";
 import { internalStore } from "./internal";
 import type { BuilderActions } from "./types";
+
+// Convert core DivinitySlate to save-data format
+const toSaveDataSlate = (slate: CoreDivinitySlate): SaveDataDivinitySlate => ({
+  id: slate.id,
+  god: slate.god,
+  shape: slate.shape,
+  rotation: slate.rotation,
+  flippedH: slate.flippedH,
+  flippedV: slate.flippedV,
+  affixes: slate.affixes.map(getAffixText),
+  metaAffixes: slate.metaAffixes,
+  isLegendary: slate.isLegendary,
+  legendaryName: slate.legendaryName,
+});
 
 export const createActions = (): BuilderActions => ({
   // Core actions
@@ -451,8 +470,9 @@ export const createActions = (): BuilderActions => ({
 
   // Divinity actions
   addSlateToInventory: (slate) => {
+    const saveDataSlate = toSaveDataSlate(slate);
     internalStore.setState((state) => {
-      state.saveData.divinityPage.inventory.push(slate);
+      state.saveData.divinityPage.inventory.push(saveDataSlate);
       state.hasUnsavedChanges = true;
     });
   },

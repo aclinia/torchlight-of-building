@@ -19,6 +19,7 @@ export type {
   BuilderActions,
   BuilderReadableState,
   ConfigurationPage,
+  CoreDivinitySlate,
   CraftedInverseImage,
   CraftedPrism,
   DivinitySlate,
