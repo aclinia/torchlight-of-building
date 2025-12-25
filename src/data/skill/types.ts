@@ -1,5 +1,3 @@
-import type { DmgRange } from "@/src/tli/core";
-import type { ModWithoutValue } from "@/src/tli/skills/support_templates";
 import type { ActivationMediumSkills } from "./activation_medium";
 import { ActiveSkills } from "./active";
 import type { PassiveSkills } from "./passive";
@@ -66,7 +64,7 @@ export const SKILL_TAGS = [
 export type SkillTag = (typeof SKILL_TAGS)[number];
 
 export type ActiveSkillName = (typeof ActiveSkills)[number]["name"];
-const implementedActiveSkills = ActiveSkills.filter((s) => "levelOffense" in s);
+const implementedActiveSkills = ActiveSkills.filter((s) => "levelValues" in s);
 export type ImplementedActiveSkillName =
   (typeof implementedActiveSkills)[number]["name"];
 export type SupportSkillName = (typeof SupportSkills)[number]["name"];
@@ -91,16 +89,17 @@ export interface BaseSkill {
   description: string[];
 }
 
+/**
+ * Named level values: keys are descriptive names, values are 40-element arrays (index = level - 1).
+ * Example: { weaponAtkDmgPct: [1.49, 1.52, ...], addedDmgEffPct: [1.49, ...] }
+ */
+export type LevelValues = Readonly<Record<string, readonly number[]>>;
+
 export interface BasePassiveSkill extends BaseSkill {
   mainStats?: ("str" | "dex" | "int")[];
-  levelBuffMods?: {
-    template: ModWithoutValue;
-    levels: Record<number, number | DmgRange>;
-  }[];
-  levelMods?: {
-    template: ModWithoutValue;
-    levels: Record<number, number | DmgRange>;
-  }[];
+  // Named value arrays for level-scaling mods (1-40).
+  // Keys must match factory function expectations.
+  levelValues?: LevelValues;
 }
 
 // Support targets which cannot be identified using easily
@@ -135,12 +134,9 @@ export interface BaseSupportSkill extends BaseSkill {
   supportTargets: SupportTarget[];
   // cannot support any of the matched targets (takes precedence over supportTargets)
   cannotSupportTargets: SupportTarget[];
-  // mods that can vary by level (1-40), and require custom parsin from data source
-  // each mod is missing a value property, to be interpolated with the value from the levels record
-  levelMods?: {
-    template: ModWithoutValue;
-    levels: Record<number, number | DmgRange>;
-  }[];
+  // Named value arrays for level-scaling mods (1-40).
+  // Keys must match factory function expectations in support_factories.ts.
+  levelValues?: LevelValues;
 }
 
 export interface BaseMagnificentSupportSkill extends BaseSkill {
@@ -168,16 +164,7 @@ export type SkillOffenseTemplate = SkillOffense extends infer M
 export interface BaseActiveSkill extends BaseSkill {
   mainStats?: ("str" | "dex" | "int")[];
   kinds: InferredSkillKind[];
-  levelOffense?: {
-    template: SkillOffenseTemplate;
-    levels: Record<number, number | DmgRange>;
-  }[];
-  levelMods?: {
-    template: ModWithoutValue;
-    levels: Record<number, number | DmgRange>;
-  }[];
-  levelBuffMods?: {
-    template: ModWithoutValue;
-    levels: Record<number, number | DmgRange>;
-  }[];
+  // Named value arrays for level-scaling offense/mods/buffMods (1-40).
+  // Keys must match factory function expectations in active_factories.ts.
+  levelValues?: LevelValues;
 }

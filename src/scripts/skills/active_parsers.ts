@@ -5,8 +5,7 @@ import { createConstantLevels } from "./utils";
 export const iceBondParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  // levelBuffMods: DmgPct cold additional damage vs frostbitten from Descript column (values[2])
-  const buffDmgPctLevels: Record<number, number> = {};
+  const coldDmgPctVsFrostbitten: Record<number, number> = {};
 
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
@@ -18,25 +17,22 @@ export const iceBondParser: SupportLevelParser = (input) => {
         /[+]?([\d.]+)%\s+additional\s+Cold\s+Damage/i,
       );
       if (match !== null) {
-        buffDmgPctLevels[level] = parseNumericValue(match[1], {
+        coldDmgPctVsFrostbitten[level] = parseNumericValue(match[1], {
           asPercentage: true,
         });
       }
     }
   }
 
-  validateAllLevels(buffDmgPctLevels, skillName);
+  validateAllLevels(coldDmgPctVsFrostbitten, skillName);
 
-  // Return array matching template order:
-  // levelBuffMods: [DmgPct cold vs frostbitten]
-  return [buffDmgPctLevels];
+  return { coldDmgPctVsFrostbitten };
 };
 
 export const bullsRageParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  // levelBuffMods: DmgPct melee additional damage from Descript column (values[0])
-  const buffDmgPctLevels: Record<number, number> = {};
+  const meleeDmgPct: Record<number, number> = {};
 
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
@@ -48,32 +44,28 @@ export const bullsRageParser: SupportLevelParser = (input) => {
         /[+]?([\d.]+)%\s+additional\s+Melee\s+Skill\s+Damage/i,
       );
       if (match !== null) {
-        buffDmgPctLevels[level] = parseNumericValue(match[1], {
+        meleeDmgPct[level] = parseNumericValue(match[1], {
           asPercentage: true,
         });
       }
     }
   }
 
-  validateAllLevels(buffDmgPctLevels, skillName);
+  validateAllLevels(meleeDmgPct, skillName);
 
-  // Return array matching template order:
-  // levelBuffMods: [DmgPct melee]
-  return [buffDmgPctLevels];
+  return { meleeDmgPct };
 };
 
 export const frostSpikeParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  // levelOffense: WeaponAtkDmgPct from "damage" column (values[1])
-  // levelOffense: AddedDmgEffPct from "Effectiveness of added damage" column (values[0])
-  const weaponAtkDmgLevels: Record<number, number> = {};
-  const addedDmgEffLevels: Record<number, number> = {};
+  const weaponAtkDmgPct: Record<number, number> = {};
+  const addedDmgEffPct: Record<number, number> = {};
 
-  // levelMods from Descript column (values[2])
-  let convertDmgPct: number | undefined;
+  // Constant mods from Descript column (values[2])
+  let convertPhysicalToColdPct: number | undefined;
   let maxProjectile: number | undefined;
-  let projectilePerRating: number | undefined;
+  let projectilePerFrostbiteRating: number | undefined;
   let baseProjectile: number | undefined;
   let dmgPctPerProjectile: number | undefined;
 
@@ -88,7 +80,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
 
     // Try dedicated columns
     if (addedDmgEffValue !== undefined && addedDmgEffValue !== "") {
-      addedDmgEffLevels[level] = parseNumericValue(addedDmgEffValue, {
+      addedDmgEffPct[level] = parseNumericValue(addedDmgEffValue, {
         asPercentage: true,
       });
     }
@@ -96,7 +88,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
     if (damageValue !== undefined && damageValue !== "") {
       const dmgMatch = damageValue.match(/([\d.]+)%/);
       if (dmgMatch !== null) {
-        weaponAtkDmgLevels[level] = parseNumericValue(dmgMatch[1], {
+        weaponAtkDmgPct[level] = parseNumericValue(dmgMatch[1], {
           asPercentage: true,
         });
       }
@@ -104,8 +96,8 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
   }
 
   // Second pass: fill in missing levels 21-40 with level 20 values
-  const level20WeaponDmg = weaponAtkDmgLevels[20];
-  const level20AddedDmgEff = addedDmgEffLevels[20];
+  const level20WeaponDmg = weaponAtkDmgPct[20];
+  const level20AddedDmgEff = addedDmgEffPct[20];
 
   if (level20WeaponDmg === undefined || level20AddedDmgEff === undefined) {
     throw new Error(
@@ -114,11 +106,11 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
   }
 
   for (let level = 21; level <= 40; level++) {
-    if (weaponAtkDmgLevels[level] === undefined) {
-      weaponAtkDmgLevels[level] = level20WeaponDmg;
+    if (weaponAtkDmgPct[level] === undefined) {
+      weaponAtkDmgPct[level] = level20WeaponDmg;
     }
-    if (addedDmgEffLevels[level] === undefined) {
-      addedDmgEffLevels[level] = level20AddedDmgEff;
+    if (addedDmgEffPct[level] === undefined) {
+      addedDmgEffPct[level] = level20AddedDmgEff;
     }
   }
 
@@ -132,7 +124,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
       /Converts\s+(\d+)%\s+of the skill's Physical Damage to Cold/i,
     );
     if (convertMatch !== null) {
-      convertDmgPct = parseNumericValue(convertMatch[1], {
+      convertPhysicalToColdPct = parseNumericValue(convertMatch[1], {
         asPercentage: true,
       });
     }
@@ -151,7 +143,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
       /\+(\d+)\s+Projectile Quantity for every\s+\d+\s+.*Frostbite Rating/i,
     );
     if (projPerRatingMatch !== null) {
-      projectilePerRating = Number.parseInt(projPerRatingMatch[1], 10);
+      projectilePerFrostbiteRating = Number.parseInt(projPerRatingMatch[1], 10);
     }
 
     // Base Projectile: "fires 2 Projectiles in its base state"
@@ -174,13 +166,13 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
   }
 
   // Validate we found all required values
-  if (convertDmgPct === undefined) {
+  if (convertPhysicalToColdPct === undefined) {
     throw new Error(`${skillName}: could not find ConvertDmgPct value`);
   }
   if (maxProjectile === undefined) {
     throw new Error(`${skillName}: could not find MaxProjectile value`);
   }
-  if (projectilePerRating === undefined) {
+  if (projectilePerFrostbiteRating === undefined) {
     throw new Error(`${skillName}: could not find Projectile per rating value`);
   }
   if (baseProjectile === undefined) {
@@ -190,19 +182,18 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
     throw new Error(`${skillName}: could not find DmgPct per projectile value`);
   }
 
-  validateAllLevels(weaponAtkDmgLevels, skillName);
-  validateAllLevels(addedDmgEffLevels, skillName);
+  validateAllLevels(weaponAtkDmgPct, skillName);
+  validateAllLevels(addedDmgEffPct, skillName);
 
-  // Return arrays in order matching template:
-  // levelOffense: [WeaponAtkDmgPct, AddedDmgEffPct]
-  // levelMods: [ConvertDmgPct, MaxProjectile, Projectile(per), Projectile, DmgPct]
-  return [
-    weaponAtkDmgLevels,
-    addedDmgEffLevels,
-    createConstantLevels(convertDmgPct),
-    createConstantLevels(maxProjectile),
-    createConstantLevels(projectilePerRating),
-    createConstantLevels(baseProjectile),
-    createConstantLevels(dmgPctPerProjectile),
-  ];
+  return {
+    weaponAtkDmgPct,
+    addedDmgEffPct,
+    convertPhysicalToColdPct: createConstantLevels(convertPhysicalToColdPct),
+    maxProjectile: createConstantLevels(maxProjectile),
+    projectilePerFrostbiteRating: createConstantLevels(
+      projectilePerFrostbiteRating,
+    ),
+    baseProjectile: createConstantLevels(baseProjectile),
+    dmgPctPerProjectile: createConstantLevels(dmgPctPerProjectile),
+  };
 };

@@ -4,10 +4,8 @@ import type { SupportLevelParser } from "./types";
 export const preciseCrueltyParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  // levelBuffMods[0]: DmgPct attack additional damage from Descript column (values[0])
-  const buffDmgPctLevels: Record<number, number> = {};
-  // levelMods[0]: AuraEffPct per cruelty_buff stack from Descript column
-  const auraEffPctLevels: Record<number, number> = {};
+  const attackDmgPct: Record<number, number> = {};
+  const auraEffPctPerCrueltyStack: Record<number, number> = {};
 
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
@@ -19,7 +17,7 @@ export const preciseCrueltyParser: SupportLevelParser = (input) => {
         /[+]?([\d.]+)%\s+additional\s+Attack\s+Damage/i,
       );
       if (dmgMatch !== null) {
-        buffDmgPctLevels[level] = parseNumericValue(dmgMatch[1], {
+        attackDmgPct[level] = parseNumericValue(dmgMatch[1], {
           asPercentage: true,
         });
       }
@@ -29,17 +27,18 @@ export const preciseCrueltyParser: SupportLevelParser = (input) => {
         /(\d+(?:\.\d+)?)%\s+additional\s+Aura\s+Effect\s+per\s+stack/i,
       );
       if (auraEffMatch !== null) {
-        auraEffPctLevels[level] = parseNumericValue(auraEffMatch[1], {
+        auraEffPctPerCrueltyStack[level] = parseNumericValue(auraEffMatch[1], {
           asPercentage: true,
         });
       }
     }
   }
 
-  validateAllLevels(buffDmgPctLevels, skillName);
-  validateAllLevels(auraEffPctLevels, skillName);
+  validateAllLevels(attackDmgPct, skillName);
+  validateAllLevels(auraEffPctPerCrueltyStack, skillName);
 
-  // Return array matching template order:
-  // levelBuffMods: [DmgPct attack], levelMods: [AuraEffPct]
-  return [buffDmgPctLevels, auraEffPctLevels];
+  return {
+    attackDmgPct,
+    auraEffPctPerCrueltyStack,
+  };
 };

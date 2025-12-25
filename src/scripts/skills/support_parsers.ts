@@ -18,10 +18,9 @@ export const hauntParser: SupportLevelParser = (input) => {
     throw new Error(`${skillName}: could not find Shadow Quantity value`);
   }
   const shadowQuant = parseNumericValue(shadowQuantMatch[1]);
-  const shadowQuantLevels = createConstantLevels(shadowQuant);
 
   // Extract DmgPct from progression table values
-  const dmgPctLevels: Record<number, number> = {};
+  const dmgPct: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const dmgValue = values[0];
@@ -29,15 +28,17 @@ export const hauntParser: SupportLevelParser = (input) => {
       throw new Error(`${skillName} level ${level}: missing damage value`);
     }
 
-    dmgPctLevels[level] = parseNumericValue(dmgValue, {
+    dmgPct[level] = parseNumericValue(dmgValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(shadowQuantLevels, skillName);
-  validateAllLevels(dmgPctLevels, skillName);
+  validateAllLevels(dmgPct, skillName);
 
-  return [shadowQuantLevels, dmgPctLevels];
+  return {
+    shadowQuant: createConstantLevels(shadowQuant),
+    dmgPct,
+  };
 };
 
 export const steamrollParser: SupportLevelParser = (input) => {
@@ -55,12 +56,11 @@ export const steamrollParser: SupportLevelParser = (input) => {
   if (aspdMatch === null) {
     throw new Error(`${skillName}: could not find Attack Speed value`);
   }
-  const aspdPct = parseNumericValue(aspdMatch[1], { asPercentage: true });
-  const aspdPctLevels = createConstantLevels(aspdPct);
+  const aspdPctValue = parseNumericValue(aspdMatch[1], { asPercentage: true });
 
   // Extract melee and ailment damage from progression table
-  const meleeDmgPctLevels: Record<number, number> = {};
-  const ailmentDmgPctLevels: Record<number, number> = {};
+  const meleeDmgPct: Record<number, number> = {};
+  const ailmentDmgPct: Record<number, number> = {};
 
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
@@ -78,26 +78,29 @@ export const steamrollParser: SupportLevelParser = (input) => {
       );
     }
 
-    meleeDmgPctLevels[level] = parseNumericValue(meleeDmgValue, {
+    meleeDmgPct[level] = parseNumericValue(meleeDmgValue, {
       asPercentage: true,
     });
-    ailmentDmgPctLevels[level] = parseNumericValue(ailmentDmgValue, {
+    ailmentDmgPct[level] = parseNumericValue(ailmentDmgValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(aspdPctLevels, skillName);
-  validateAllLevels(meleeDmgPctLevels, skillName);
-  validateAllLevels(ailmentDmgPctLevels, skillName);
+  validateAllLevels(meleeDmgPct, skillName);
+  validateAllLevels(ailmentDmgPct, skillName);
 
-  return [aspdPctLevels, meleeDmgPctLevels, ailmentDmgPctLevels];
+  return {
+    aspdPct: createConstantLevels(aspdPctValue),
+    meleeDmgPct,
+    ailmentDmgPct,
+  };
 };
 
 export const quickDecisionParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
   // Extract Attack and Cast Speed from progression table values
-  const speedPctLevels: Record<number, number> = {};
+  const aspdAndCspdPct: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const speedValue = values[0];
@@ -105,14 +108,14 @@ export const quickDecisionParser: SupportLevelParser = (input) => {
       throw new Error(`${skillName} level ${level}: missing speed value`);
     }
 
-    speedPctLevels[level] = parseNumericValue(speedValue, {
+    aspdAndCspdPct[level] = parseNumericValue(speedValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(speedPctLevels, skillName);
+  validateAllLevels(aspdAndCspdPct, skillName);
 
-  return [speedPctLevels];
+  return { aspdAndCspdPct };
 };
 
 export const willpowerParser: SupportLevelParser = (input) => {
@@ -128,11 +131,10 @@ export const willpowerParser: SupportLevelParser = (input) => {
   if (stacksMatch === null) {
     throw new Error(`${skillName}: could not find max stacks value`);
   }
-  const maxStacks = parseNumericValue(stacksMatch[1]);
-  const maxStacksLevels = createConstantLevels(maxStacks);
+  const maxStacksValue = parseNumericValue(stacksMatch[1]);
 
   // Extract damage percentage from each row's description
-  const dmgPctLevels: Record<number, number> = {};
+  const dmgPctPerWillpower: Record<number, number> = {};
   for (const [levelStr, desc] of Object.entries(progressionTable.description)) {
     const level = Number(levelStr);
 
@@ -143,15 +145,17 @@ export const willpowerParser: SupportLevelParser = (input) => {
       );
     }
 
-    dmgPctLevels[level] = parseNumericValue(dmgMatch[1], {
+    dmgPctPerWillpower[level] = parseNumericValue(dmgMatch[1], {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(maxStacksLevels, skillName);
-  validateAllLevels(dmgPctLevels, skillName);
+  validateAllLevels(dmgPctPerWillpower, skillName);
 
-  return [maxStacksLevels, dmgPctLevels];
+  return {
+    maxWillpowerStacks: createConstantLevels(maxStacksValue),
+    dmgPctPerWillpower,
+  };
 };
 
 export const criticalStrikeDamageIncreaseParser: SupportLevelParser = (
@@ -160,7 +164,7 @@ export const criticalStrikeDamageIncreaseParser: SupportLevelParser = (
   const { skillName, progressionTable } = input;
 
   // Extract crit damage from progression table values
-  const critDmgPctLevels: Record<number, number> = {};
+  const critDmgPct: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const critDmgValue = values[0];
@@ -168,14 +172,14 @@ export const criticalStrikeDamageIncreaseParser: SupportLevelParser = (
       throw new Error(`${skillName} level ${level}: missing crit damage value`);
     }
 
-    critDmgPctLevels[level] = parseNumericValue(critDmgValue, {
+    critDmgPct[level] = parseNumericValue(critDmgValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(critDmgPctLevels, skillName);
+  validateAllLevels(critDmgPct, skillName);
 
-  return [critDmgPctLevels];
+  return { critDmgPct };
 };
 
 export const criticalStrikeRatingIncreaseParser: SupportLevelParser = (
@@ -184,7 +188,7 @@ export const criticalStrikeRatingIncreaseParser: SupportLevelParser = (
   const { skillName, progressionTable } = input;
 
   // Extract crit rating from progression table values
-  const critRatingPctLevels: Record<number, number> = {};
+  const critRatingPct: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const critRatingValue = values[0];
@@ -192,21 +196,21 @@ export const criticalStrikeRatingIncreaseParser: SupportLevelParser = (
       throw new Error(`${skillName} level ${level}: missing crit rating value`);
     }
 
-    critRatingPctLevels[level] = parseNumericValue(critRatingValue, {
+    critRatingPct[level] = parseNumericValue(critRatingValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(critRatingPctLevels, skillName);
+  validateAllLevels(critRatingPct, skillName);
 
-  return [critRatingPctLevels];
+  return { critRatingPct };
 };
 
 export const enhancedAilmentParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
   // Extract ailment damage from progression table values
-  const ailmentDmgPctLevels: Record<number, number> = {};
+  const ailmentDmgPct: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const ailmentDmgValue = values[0];
@@ -216,20 +220,20 @@ export const enhancedAilmentParser: SupportLevelParser = (input) => {
       );
     }
 
-    ailmentDmgPctLevels[level] = parseNumericValue(ailmentDmgValue, {
+    ailmentDmgPct[level] = parseNumericValue(ailmentDmgValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(ailmentDmgPctLevels, skillName);
+  validateAllLevels(ailmentDmgPct, skillName);
 
-  return [ailmentDmgPctLevels];
+  return { ailmentDmgPct };
 };
 
 export const wellFoughtBattleParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  const skillEffPctLevels: Record<number, number> = {};
+  const skillEffPctPerSkillUse: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const skillEffValue = values[0];
@@ -239,20 +243,20 @@ export const wellFoughtBattleParser: SupportLevelParser = (input) => {
       );
     }
 
-    skillEffPctLevels[level] = parseNumericValue(skillEffValue, {
+    skillEffPctPerSkillUse[level] = parseNumericValue(skillEffValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(skillEffPctLevels, skillName);
+  validateAllLevels(skillEffPctPerSkillUse, skillName);
 
-  return [skillEffPctLevels];
+  return { skillEffPctPerSkillUse };
 };
 
 export const massEffectParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
-  const skillEffPctLevels: Record<number, number> = {};
+  const skillEffPctPerCharges: Record<number, number> = {};
   for (const [levelStr, values] of Object.entries(progressionTable.values)) {
     const level = Number(levelStr);
     const skillEffValue = values[0];
@@ -262,12 +266,12 @@ export const massEffectParser: SupportLevelParser = (input) => {
       );
     }
 
-    skillEffPctLevels[level] = parseNumericValue(skillEffValue, {
+    skillEffPctPerCharges[level] = parseNumericValue(skillEffValue, {
       asPercentage: true,
     });
   }
 
-  validateAllLevels(skillEffPctLevels, skillName);
+  validateAllLevels(skillEffPctPerCharges, skillName);
 
-  return [skillEffPctLevels];
+  return { skillEffPctPerCharges };
 };

@@ -26,7 +26,7 @@ export const SkillSelector: React.FC<SkillSelectorProps> = ({
       .map((slot) => slot.skillName)
       .filter((name): name is ImplementedActiveSkillName => {
         const skill = ActiveSkills.find((s) => s.name === name);
-        return skill !== undefined && "levelOffense" in skill;
+        return skill !== undefined && "levelValues" in skill;
       });
   }, [loadout.skillPage.activeSkills]);
 

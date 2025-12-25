@@ -18,9 +18,16 @@ export interface SupportParserInput {
   };
 }
 
+/**
+ * Parser return type: named keys mapping to level→value records.
+ * Keys are descriptive names matching factory expectations.
+ * Example: { weaponAtkDmgPct: { 1: 1.49, 2: 1.52, ... }, addedDmgEffPct: { 1: 1.49, ... } }
+ */
+export type ParsedLevelValues = Record<string, Record<number, number>>;
+
 export type SupportLevelParser = (
   input: SupportParserInput,
-) => Record<number, number>[];
+) => ParsedLevelValues;
 
 export type SkillCategory =
   | "support"

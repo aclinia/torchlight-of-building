@@ -11,6 +11,7 @@ import {
   PassiveSkills,
   type SkillOffenseType,
   type SkillTag,
+  type SupportSkillName,
   SupportSkills,
 } from "../../data/skill";
 import type { DmgModType } from "../constants";
@@ -27,6 +28,9 @@ import {
   type SupportSkillSlot,
 } from "../core";
 import type { DmgChunkType, Mod, ModOfType, Stackable } from "../mod";
+import { getActiveSkillMods } from "../skills/active_mods";
+import { getPassiveSkillMods } from "../skills/passive_mods";
+import { getSupportSkillMods } from "../skills/support_mods";
 import type { OffenseSkillName } from "./skill_confs";
 
 const addDR = (dr1: DmgRange, dr2: DmgRange): DmgRange => {
@@ -612,18 +616,17 @@ const getLeveOffenseValue = (
   skillOffenseType: SkillOffenseType,
   level: number,
 ): number | DmgRange => {
-  if (skill.levelOffense === undefined) {
+  const skillMods = getActiveSkillMods(skill.name as ActiveSkillName, level);
+  if (skillMods.offense === undefined) {
     throw new Error(`Skill "${skill.name}" has no levelOffense data`);
   }
-  const offense = skill.levelOffense.find(
-    (o) => o.template.type === skillOffenseType,
-  );
+  const offense = skillMods.offense.find((o) => o.type === skillOffenseType);
   if (offense === undefined) {
     throw new Error(
       `Skill "${skill.name}" has no ${skillOffenseType} in levelOffense`,
     );
   }
-  return offense.levels[level];
+  return offense.value;
 };
 
 const calculateAddnDmgFromShadows = (
@@ -1013,14 +1016,43 @@ const resolveBuffSkillMods = (
 
     // Get support skill mods (includes SkillEffPct, AuraEffPct, etc.)
     const supportMods = resolveSelectedSkillSupportMods(skillSlot);
-    const levelMods =
-      skill.levelMods?.map((m) => {
-        return {
-          ...m.template,
-          value: m.levels[level],
+
+    // Get level mods from factory based on skill type
+    let levelMods: Mod[] = [];
+    let rawBuffMods: Mod[] = [];
+
+    if (skill.type === "Active") {
+      const activeMods = getActiveSkillMods(
+        skill.name as ActiveSkillName,
+        level,
+      );
+      levelMods =
+        activeMods.mods?.map((mod) => ({
+          ...mod,
           src: `${skill.name} Lv.${level}`,
-        } as Mod;
-      }) ?? [];
+        })) ?? [];
+      rawBuffMods =
+        activeMods.buffMods?.map((mod) => ({
+          ...mod,
+          src: `${isAuraSkill ? "Aura" : "Buff"}: ${skill.name} Lv.${level}`,
+        })) ?? [];
+    } else if (skill.type === "Passive") {
+      const passiveMods = getPassiveSkillMods(
+        skill.name as PassiveSkillName,
+        level,
+      );
+      levelMods =
+        passiveMods.mods?.map((mod) => ({
+          ...mod,
+          src: `${skill.name} Lv.${level}`,
+        })) ?? [];
+      rawBuffMods =
+        passiveMods.buffMods?.map((mod) => ({
+          ...mod,
+          src: `${isAuraSkill ? "Aura" : "Buff"}: ${skill.name} Lv.${level}`,
+        })) ?? [];
+    }
+
     const prenormMods = [...loadoutMods, ...supportMods, ...levelMods];
     const mods = normalizeModsForSkill(prenormMods, skill, config);
 
@@ -1028,16 +1060,6 @@ const resolveBuffSkillMods = (
     // todo: add area, cdr, duration, and other buff-skill modifiers
     const skillEffMods = filterMod(mods, "SkillEffPct");
     const skillEffMult = calculateEffMultiplier(skillEffMods);
-
-    // === Resolve raw buff mods from skill's levelBuffMods ===
-    const rawBuffMods: Mod[] =
-      skill.levelBuffMods?.map((m) => {
-        return {
-          ...m.template,
-          value: m.levels[level],
-          src: `${isAuraSkill ? "Aura" : "Buff"}: ${skill.name} Lv.${level}`,
-        } as Mod;
-      }) || [];
 
     // === Calculate AuraEffPct multiplier (from loadout mods + support skills + own levelBuffMods) ===
     // Only applies if this is an Aura skill
@@ -1077,19 +1099,14 @@ const resolveMainSkillMods = (
   level: number,
 ): Mod[] => {
   const skill = findActiveSkill(mainSkillName);
-  if (skill.levelMods === undefined) {
+  const skillMods = getActiveSkillMods(skill.name as ActiveSkillName, level);
+  if (skillMods.mods === undefined) {
     return [];
   }
-  const mods: Mod[] = [];
-  for (const levelMod of skill.levelMods) {
-    const value = levelMod.levels[level];
-    mods.push({
-      ...levelMod.template,
-      value,
-      src: `Selected Active Skill: ${skill.name} Lv.${level}`,
-    } as Mod);
-  }
-  return mods;
+  return skillMods.mods.map((mod) => ({
+    ...mod,
+    src: `Selected Active Skill: ${skill.name} Lv.${level}`,
+  }));
 };
 
 const resolveSelectedSkillSupportMods = (slot: SkillSlot): Mod[] => {
@@ -1107,13 +1124,15 @@ const resolveSelectedSkillSupportMods = (slot: SkillSlot): Mod[] => {
     if (supportSkill === undefined) continue;
 
     const level = ss.level || 20;
-    for (const levelMods of supportSkill.levelMods || []) {
-      const mod: Mod = {
-        ...levelMods.template,
-        value: levelMods.levels[level],
+    const mods = getSupportSkillMods(
+      supportSkill.name as SupportSkillName,
+      level,
+    );
+    for (const mod of mods) {
+      supportMods.push({
+        ...mod,
         src: `Support: ${supportSkill.name} Lv.${level}`,
-      } as Mod;
-      supportMods.push(mod);
+      });
     }
   }
   return supportMods;
@@ -1127,18 +1146,26 @@ interface PerSkillModContext {
 }
 
 // Resolves mods specific to a single skill slot
-// Returns undefined if the skill is not implemented (no levelOffense)
+// Returns undefined if the skill is not implemented (no offense data)
 const resolvePerSkillMods = (
   skillSlot: SkillSlot,
 ): PerSkillModContext | undefined => {
   const skill = findActiveSkill(skillSlot.skillName as ActiveSkillName);
 
-  // Skip non-implemented skills (those without levelOffense)
-  if (!("levelOffense" in skill) || skill.levelOffense === undefined) {
+  // Skip non-implemented skills (those without levelValues)
+  if (!("levelValues" in skill) || skill.levelValues === undefined) {
     return undefined;
   }
 
   const level = skillSlot.level || 20;
+
+  // Check if the skill's factory returns offense data
+  const skillMods = getActiveSkillMods(skill.name as ActiveSkillName, level);
+  if (skillMods.offense === undefined) {
+    // Skill has levelValues but no offense (e.g., buff-only skills like Ice Bond)
+    return undefined;
+  }
+
   const mainSkillMods = resolveMainSkillMods(
     skillSlot.skillName as OffenseSkillName,
     level,

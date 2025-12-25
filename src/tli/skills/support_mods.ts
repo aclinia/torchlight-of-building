@@ -4,12 +4,19 @@ import type {
   SupportSkillName,
 } from "@/src/data/skill/types";
 import type { Mod } from "../mod";
+import { supportSkillModFactories } from "./support_factories";
 
 export const getSupportSkillMods = (
   skillName: SupportSkillName,
   level: number,
 ): Mod[] => {
-  // re-widen type to BaseSupportSkill
+  const factory = supportSkillModFactories[skillName];
+  if (factory === undefined) {
+    // Skill has no level-scaling mods
+    return [];
+  }
+
+  // Get levelValues from generated skill data
   const skill = SupportSkills.find((s) => s.name === skillName) as
     | BaseSupportSkill
     | undefined;
@@ -17,17 +24,12 @@ export const getSupportSkillMods = (
     throw new Error(`Support skill "${skillName}" not found`);
   }
 
-  const mods: Mod[] = [];
-
-  if (skill.levelMods !== undefined) {
-    for (const levelMod of skill.levelMods) {
-      const value = levelMod.levels[level];
-      if (value === undefined) {
-        throw new Error(`Level ${level} not found for "${skillName}" levelMod`);
-      }
-      mods.push({ ...levelMod.template, value } as Mod);
-    }
+  const levelValues = skill.levelValues;
+  if (levelValues === undefined) {
+    throw new Error(
+      `Support skill "${skillName}" has a factory but no levelValues`,
+    );
   }
 
-  return mods;
+  return factory(level, levelValues);
 };
