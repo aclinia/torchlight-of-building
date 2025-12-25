@@ -857,16 +857,16 @@ const multModValue = <T extends Extract<Mod, { value: number | DmgRange }>>(
   return { ...mod, value: newValue, per: undefined };
 };
 
-const filterModsByFrostbittenCond = (
+const filterModsByCond = (
   prenormalizedMods: Mod[],
-  config: EnemyFrostbittenCtx,
+  config: Configuration,
 ): Mod[] => {
-  const condMatched = config.enabled;
-  if (!condMatched) {
-    return [];
-  }
   return prenormalizedMods.filter((m) => {
-    return "cond" in m && m.cond === "enemy_frostbitten";
+    if (!("cond" in m) || m.cond === undefined) return true;
+    return match(m.cond)
+      .with("enemy_frostbitten", () => config.enemyFrostbitten.enabled)
+      .with("realm_of_mercury", () => config.realmOfMercuryEnabled)
+      .exhaustive();
   });
 };
 
@@ -915,13 +915,12 @@ interface Stats {
 }
 
 // returns mods that don't need normalization
-// excludes mods with `per`, `cond`, or that need replacement (like CoreTalent mods)
-const calculateStaticMods = (mods: Mod[]): Mod[] => {
+// excludes mods with `per` or that need replacement (like CoreTalent mods)
+const filterOutPerMods = (mods: Mod[]): Mod[] => {
   const staticMods = mods.filter((m) => {
     const hasPer = "per" in m && m.per !== undefined;
-    const hasCond = "cond" in m && m.cond !== undefined;
     const isCoreTalent = m.type === "CoreTalent";
-    return !(hasPer || hasCond || isCoreTalent);
+    return !(hasPer || isCoreTalent);
   });
   return staticMods;
 };
@@ -1268,6 +1267,17 @@ const calculateEnemyArmorDmgMitigation = (
   return { phys, nonPhys };
 };
 
+// replaces CoreTalent mods with their equivalent regular mods
+const replaceCoreTalentMods = (mods: Mod[]): Mod[] => {
+  // todo: implement some core talent replacements
+  const coreTalentNames = mods
+    .filter((m) => m.type === "CoreTalent")
+    .map((m) => m.name);
+  const newMods: Mod[] = coreTalentNames.flatMap((_m) => []);
+  const withoutCoreTalentMods = mods.filter((m) => m.type !== "CoreTalent");
+  return [...withoutCoreTalentMods, ...newMods];
+};
+
 // Normalizes mods for a specific skill, handling "per" properties
 const normalizeModsForSkill = (
   prenormModsFromParam: Mod[],
@@ -1275,8 +1285,14 @@ const normalizeModsForSkill = (
   config: Configuration,
 ): Mod[] => {
   // Create stat-based damage mod
-  const prenormMods = [...prenormModsFromParam, ...calculateImplicitMods()];
-  let mods = calculateStaticMods(prenormMods);
+  const prenormMods = filterModsByCond(
+    replaceCoreTalentMods([
+      ...prenormModsFromParam,
+      ...calculateImplicitMods(),
+    ]),
+    config,
+  );
+  let mods = filterOutPerMods(prenormMods);
 
   const stats = calculateStats(prenormMods);
   const totalMainStats = calculateTotalMainStats(skill, stats);
@@ -1303,7 +1319,6 @@ const normalizeModsForSkill = (
   );
 
   const frostbitten = calculateEnemyFrostbitten(config);
-  mods = mods.concat(filterModsByFrostbittenCond(prenormMods, frostbitten));
   mods = mods.concat(
     normalizeStackables(prenormMods, "frostbite_rating", frostbitten.points),
   );

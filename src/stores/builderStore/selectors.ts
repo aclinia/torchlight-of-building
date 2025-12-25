@@ -84,5 +84,6 @@ export const useConfiguration = (): Configuration => {
       configPage?.crueltyBuffStacks ?? defaults.crueltyBuffStacks,
     enemyRes: configPage?.enemyRes,
     enemyArmor: configPage?.enemyArmor,
+    realmOfMercuryEnabled: false,
   };
 };

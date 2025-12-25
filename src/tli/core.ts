@@ -57,6 +57,9 @@ export interface Configuration {
   enemyRes?: number;
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor?: number;
+
+  // default false
+  realmOfMercuryEnabled: boolean;
 }
 
 export interface Gear {

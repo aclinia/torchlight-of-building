@@ -18,6 +18,7 @@ const createDefaultConfiguration = (): Configuration => ({
   enemyFrostbitten: { enabled: false },
   enemyArmor: 0,
   enemyRes: 0,
+  realmOfMercuryEnabled: false,
 });
 
 // Helper to create Affix objects from mods for tests
@@ -2001,6 +2002,7 @@ describe("resolveBuffSkillMods", () => {
         fervor: { enabled: false, points: 0 },
         enemyFrostbitten: { enabled: false, points: 0 },
         crueltyBuffStacks: 40,
+        realmOfMercuryEnabled: false,
       },
     });
     const actual = results["[Test] Simple Attack"];
