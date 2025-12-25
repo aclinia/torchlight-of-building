@@ -27,7 +27,7 @@ import {
   type SkillSlot,
   type SupportSkillSlot,
 } from "../core";
-import type { DmgChunkType, Mod, ModOfType, Stackable } from "../mod";
+import type { DmgChunkType, Mod, ModOfType, Stackable, StatType } from "../mod";
 import { getActiveSkillMods } from "../skills/active_mods";
 import { getPassiveSkillMods } from "../skills/passive_mods";
 import { getSupportSkillMods } from "../skills/support_mods";
@@ -965,19 +965,17 @@ const calculateImplicitMods = (): Mod[] => {
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterMod(mods, "Stat");
+  const statPctMods = filterMod(mods, "StatPct");
+  const calcFinalStat = (statType: StatType): number => {
+    const flat = sumByValue(statMods.filter((m) => m.statType === statType));
+    const mult =
+      1 + sumByValue(statPctMods.filter((m) => m.statType === statType));
+    return flat * mult;
+  };
   return {
-    str: R.sumBy(
-      statMods.filter((m) => m.statType === "str"),
-      (m) => m.value,
-    ),
-    dex: R.sumBy(
-      statMods.filter((m) => m.statType === "dex"),
-      (m) => m.value,
-    ),
-    int: R.sumBy(
-      statMods.filter((m) => m.statType === "int"),
-      (m) => m.value,
-    ),
+    str: calcFinalStat("str"),
+    dex: calcFinalStat("dex"),
+    int: calcFinalStat("int"),
   };
 };
 
