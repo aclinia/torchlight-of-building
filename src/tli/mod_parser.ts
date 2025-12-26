@@ -11,6 +11,7 @@ import {
   DmgChunkTypes,
   type Mod,
   type ModOfType,
+  type PerStackable,
   type ResPenType,
   ResPenTypes,
 } from "./mod";
@@ -700,6 +701,36 @@ const parseFlatDmgToAtksAndSpells = (
   ];
 };
 
+const parseFlatDmgToAtksAndSpellsPer = (
+  input: string,
+): [ModOfType<"FlatDmgToAtks">, ModOfType<"FlatDmgToSpells">] | undefined => {
+  // Regex to parse: Adds 22 - 27 Physical Damage to Attacks and Spells for every 1034 Mana consumed recently. Stacks up to 200 time(s)
+  const pattern =
+    /^adds (\d+) - (\d+) (\w+) damage to attacks and spells for every (\d+) mana consumed recently\. stacks up to (\d+) time\(s\)$/i;
+  const match = input.match(pattern);
+
+  if (!match) {
+    return undefined;
+  }
+
+  const min = parseInt(match[1], 10);
+  const max = parseInt(match[2], 10);
+  const dmgType = match[3].toLowerCase();
+  const amt = parseInt(match[4], 10);
+  const limit = parseInt(match[5], 10);
+
+  if (!isValidDmgChunkType(dmgType)) {
+    return undefined;
+  }
+
+  const per: PerStackable = { stackable: "mana_consumed_recently", amt, limit };
+
+  return [
+    { type: "FlatDmgToAtks", value: { min, max }, dmgType, per },
+    { type: "FlatDmgToSpells", value: { min, max }, dmgType, per },
+  ];
+};
+
 /**
  * Parses an affix line string and returns extracted mods.
  *
@@ -714,6 +745,7 @@ export const parseMod = (input: string): Mod[] | undefined => {
   // Multi-mod parsers (return arrays directly)
   const multiModParsers = [
     parseGearAspdWithDmgPenalty,
+    parseFlatDmgToAtksAndSpellsPer,
     parseFlatDmgToAtksAndSpells,
   ];
 

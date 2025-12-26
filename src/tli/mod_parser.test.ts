@@ -703,3 +703,23 @@ test("parse flat physical damage to attacks and spells", () => {
     },
   ]);
 });
+
+test("parse flat physical damage to attacks and spells per mana consumed recently", () => {
+  const result = parseMod(
+    "Adds 22 - 27 Physical Damage to Attacks and Spells for every 1034 Mana consumed recently. Stacks up to 200 time(s)",
+  );
+  expect(result).toEqual([
+    {
+      type: "FlatDmgToAtks",
+      value: { min: 22, max: 27 },
+      dmgType: "physical",
+      per: { stackable: "mana_consumed_recently", amt: 1034, limit: 200 },
+    },
+    {
+      type: "FlatDmgToSpells",
+      value: { min: 22, max: 27 },
+      dmgType: "physical",
+      per: { stackable: "mana_consumed_recently", amt: 1034, limit: 200 },
+    },
+  ]);
+});
