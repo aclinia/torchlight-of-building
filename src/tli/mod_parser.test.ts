@@ -757,3 +757,24 @@ test("parse critical strike rating and damage combined", () => {
     },
   ]);
 });
+
+test("parse critical strike rating and damage per mana consumed recently", () => {
+  const result = parseMod(
+    "+5% Critical Strike Rating and Critical Strike Damage for every 720 Mana consumed recently",
+  );
+  expect(result).toEqual([
+    {
+      type: "CritRatingPct",
+      value: 0.05,
+      modType: "global",
+      per: { stackable: "mana_consumed_recently", amt: 720 },
+    },
+    {
+      type: "CritDmgPct",
+      value: 0.05,
+      modType: "global",
+      addn: false,
+      per: { stackable: "mana_consumed_recently", amt: 720 },
+    },
+  ]);
+});

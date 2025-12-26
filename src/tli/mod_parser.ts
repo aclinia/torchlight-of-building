@@ -767,6 +767,28 @@ const parseDmgPctPerManaConsumedRecently = (
   };
 };
 
+const parseCritRatingAndCritDmgPctPerManaConsumedRecently = (
+  input: string,
+): [ModOfType<"CritRatingPct">, ModOfType<"CritDmgPct">] | undefined => {
+  // Regex to parse: +5% Critical Strike Rating and Critical Strike Damage for every 720 Mana consumed recently
+  const pattern =
+    /^([+-])?(\d+(?:\.\d+)?)% critical strike rating and critical strike damage for every (\d+) mana consumed recently$/i;
+  const match = input.match(pattern);
+
+  if (!match) {
+    return undefined;
+  }
+
+  const value = parseFloat(match[2]) / 100;
+  const amt = parseInt(match[3], 10);
+  const per: PerStackable = { stackable: "mana_consumed_recently", amt };
+
+  return [
+    { type: "CritRatingPct", value, modType: "global", per },
+    { type: "CritDmgPct", value, modType: "global", addn: false, per },
+  ];
+};
+
 const parseCritRatingAndCritDmgPct = (
   input: string,
 ): [ModOfType<"CritRatingPct">, ModOfType<"CritDmgPct">] | undefined => {
@@ -803,6 +825,7 @@ export const parseMod = (input: string): Mod[] | undefined => {
     parseGearAspdWithDmgPenalty,
     parseFlatDmgToAtksAndSpellsPer,
     parseFlatDmgToAtksAndSpells,
+    parseCritRatingAndCritDmgPctPerManaConsumedRecently,
     parseCritRatingAndCritDmgPct,
   ];
 
