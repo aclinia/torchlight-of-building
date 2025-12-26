@@ -1,4 +1,4 @@
-import type { HeroTraitName } from "@/src/data/hero_trait/types";
+import type { HeroName, HeroTraitName } from "@/src/data/hero_trait/types";
 import type { BaseStatMod } from "./base_stat_mod";
 import type { EquipmentType } from "./gear_data_types";
 import { getHeroTraitMods } from "./hero/hero_trait_mods";
@@ -363,7 +363,7 @@ export interface HeroMemorySlots {
 }
 
 export interface HeroPage {
-  selectedHero?: string;
+  selectedHero?: HeroName;
   traits: HeroTraits;
   memorySlots: HeroMemorySlots;
   memoryInventory: HeroMemory[];

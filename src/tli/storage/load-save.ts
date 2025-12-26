@@ -1,6 +1,6 @@
 import * as R from "remeda";
 import { CoreTalents } from "@/src/data/core_talent/core_talents";
-import type { HeroTraitName } from "@/src/data/hero_trait/types";
+import type { HeroName, HeroTraitName } from "@/src/data/hero_trait/types";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
 import type { TalentNodeData, TreeName } from "@/src/data/talent_tree";
@@ -452,7 +452,7 @@ const convertHeroPage = (
   }
 
   return {
-    selectedHero: saveDataHeroPage.selectedHero,
+    selectedHero: saveDataHeroPage.selectedHero as HeroName | undefined,
     traits,
     memorySlots,
     memoryInventory: heroMemoryList.map((memory, idx) =>
