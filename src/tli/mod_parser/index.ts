@@ -1,8 +1,20 @@
 import type { Mod } from "../mod";
-import { multi } from "./template";
 import { allParsers } from "./templates";
+import type { ModParser } from "./types";
 
 export { spec, t } from "./template";
+
+const multi = (parsers: ModParser[]): ModParser => ({
+  parse(input: string): Mod[] | undefined {
+    for (const parser of parsers) {
+      const result = parser.parse(input);
+      if (result !== undefined) {
+        return result;
+      }
+    }
+    return undefined;
+  },
+});
 
 const combinedParser = multi(allParsers);
 

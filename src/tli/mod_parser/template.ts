@@ -257,16 +257,3 @@ t.multi = <TCaptures extends object = Record<string, unknown>>(
     };
   },
 });
-
-// Standalone multi for parsers that already have output defined
-export const multi = (parsers: ModParser[]): ModParser => ({
-  parse(input: string): Mod[] | undefined {
-    for (const parser of parsers) {
-      const result = parser.parse(input);
-      if (result !== undefined) {
-        return result;
-      }
-    }
-    return undefined;
-  },
-});

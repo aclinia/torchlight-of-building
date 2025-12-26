@@ -1,5 +1,5 @@
 import { type CoreTalentName, CoreTalentNames } from "../../data/core_talent";
-import type { Mod, PerStackable, ResPenType } from "../mod";
+import type { Mod, PerStackable } from "../mod";
 import { StatWordMapping } from "./enums";
 import { spec, t } from "./template";
 
