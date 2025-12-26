@@ -118,8 +118,7 @@ interface ModDefinitions {
   ResPenPct: { value: number; penType: ResPenType };
   ArmorPenPct: { value: number };
   ManaBeforeLife: { value: number };
-  // biome-ignore lint/complexity/noBannedTypes: no unique fields
-  SpellDmgBonusAppliesToAtkDmg: {};
+  SpellDmgBonusAppliesToAtkDmg: object;
   MaxMana: { value: number };
   MaxManaPct: { value: number; addn: boolean };
   MercuryBaptism: { value: number };
