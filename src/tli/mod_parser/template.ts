@@ -195,42 +195,15 @@ const createBuilder = (config: BuilderConfig): TemplateBuilder<any> => ({
   },
 });
 
-/**
- * Template builder factory.
- *
- * Two calling conventions:
- * 1. Function call (type-safe): t("{value:dec%} damage") - infers capture types
- * 2. Tagged template (legacy): t`{value:dec%} damage` - no type inference
- *
- * For new templates, prefer the function call syntax for type safety.
- */
-export function t<T extends string>(
+/** Template builder factory with type-safe capture inference. */
+export const t = <T extends string>(
   template: T,
-): TemplateBuilder<ParseTemplate<T>>;
-export function t(
-  strings: TemplateStringsArray,
-  ...values: unknown[]
-): TemplateBuilder<Record<string, unknown>>;
-export function t<T extends string>(
-  templateOrStrings: T | TemplateStringsArray,
-  ...values: unknown[]
-):
-  | TemplateBuilder<ParseTemplate<T>>
-  | TemplateBuilder<Record<string, unknown>> {
-  // Determine if called as tagged template or function
-  const template =
-    typeof templateOrStrings === "string"
-      ? templateOrStrings
-      : (templateOrStrings as TemplateStringsArray).reduce((acc, str, i) => {
-          return acc + str + (values[i] ?? "");
-        }, "");
-
-  return createBuilder({
+): TemplateBuilder<ParseTemplate<T>> =>
+  createBuilder({
     template,
     enumMappings: new Map(),
     customExtractors: new Map(),
   }) as TemplateBuilder<ParseTemplate<T>>;
-}
 
 // Multi-pattern support
 t.multi = <TCaptures extends object = Record<string, unknown>>(
