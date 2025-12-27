@@ -327,6 +327,15 @@ export const CoreTalentMods: Record<CoreTalentName, Affix> = {
       { text: "+50% chance to inflict Elemental Ailments" },
       {
         text: "+25% additional damage against enemies with Elemental Ailments",
+        mods: [
+          {
+            type: "DmgPct",
+            value: 25,
+            modType: "global",
+            addn: true,
+            cond: "enemy_has_ailment",
+          },
+        ],
       },
     ],
   },

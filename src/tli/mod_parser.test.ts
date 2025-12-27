@@ -64,6 +64,21 @@ test("parse additional damage when mana reaches max", () => {
   ]);
 });
 
+test("parse additional damage against enemies with elemental ailments", () => {
+  const result = parseMod(
+    "+25% additional damage against enemies with Elemental Ailments",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 25,
+      modType: "global",
+      addn: true,
+      cond: "enemy_has_ailment",
+    },
+  ]);
+});
+
 test("parse decimal damage", () => {
   const result = parseMod("+12.5% fire damage");
   expect(result).toEqual([

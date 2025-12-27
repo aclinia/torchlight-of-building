@@ -63,6 +63,12 @@ export const allParsers = [
     addn: true,
     cond: "has_full_mana" as const,
   })),
+  t("{value:dec%} additional damage against enemies with elemental ailments").output("DmgPct", (c) => ({
+    value: c.value,
+    modType: "global" as const,
+    addn: true,
+    cond: "enemy_has_ailment" as const,
+  })),
   t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
     value: c.value,
     modType: c.modType ?? "global",
