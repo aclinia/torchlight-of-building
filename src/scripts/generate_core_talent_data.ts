@@ -85,7 +85,7 @@ const parseAffixString = (affixText: string): Affix => {
   const lines = affixText.split("\n");
   const affixLines: AffixLine[] = lines.map((text) => ({
     text,
-    mods: parseMod(text) ?? [],
+    mods: parseMod(text),
   }));
   return { affixLines };
 };

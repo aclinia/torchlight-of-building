@@ -1,5 +1,7 @@
+import { CoreTalentInfoIcon } from "@/src/components/ui/CoreTalentInfoIcon";
 import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import { TooltipTitle } from "@/src/components/ui/Tooltip";
+import { getCoreTalentNameFromText } from "@/src/lib/core-talent-utils";
 import { getSlateDisplayName } from "@/src/lib/divinity-utils";
 import type { DivinitySlate } from "@/src/tli/core";
 
@@ -38,15 +40,22 @@ export const SlateTooltipContent: React.FC<{ slate: DivinitySlate }> = ({
       {hasAffixes ? (
         <ul className="space-y-1">
           {slate.affixes.map((affix, affixIdx) =>
-            affix.affixLines.map((line, lineIdx) => (
-              <li
-                key={`${affixIdx}-${lineIdx}`}
-                className="text-xs text-zinc-400 flex items-center"
-              >
-                <span>{line.text}</span>
-                {line.mods === undefined && <ModNotImplementedIcon />}
-              </li>
-            )),
+            affix.affixLines.map((line, lineIdx) => {
+              const coreTalentName = getCoreTalentNameFromText(line.text);
+              return (
+                <li
+                  key={`${affixIdx}-${lineIdx}`}
+                  className="text-xs text-zinc-400 flex items-center"
+                >
+                  <span>{line.text}</span>
+                  {coreTalentName !== undefined ? (
+                    <CoreTalentInfoIcon talentName={coreTalentName} />
+                  ) : (
+                    line.mods === undefined && <ModNotImplementedIcon />
+                  )}
+                </li>
+              );
+            }),
           )}
         </ul>
       ) : (

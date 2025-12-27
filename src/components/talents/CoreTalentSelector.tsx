@@ -1,10 +1,9 @@
 import React from "react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTitle,
-} from "@/src/components/ui/Tooltip";
+import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
+import { Tooltip, TooltipTitle } from "@/src/components/ui/Tooltip";
 import type { BaseCoreTalent } from "@/src/data/core_talent";
+import { CoreTalentMods } from "@/src/data/core_talent/core_talent_mods";
+import type { CoreTalentName } from "@/src/data/core_talent/types";
 import { useTooltip } from "@/src/hooks/useTooltip";
 import {
   getAvailableGodGoddessCoreTalents,
@@ -147,13 +146,12 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
     BaseCoreTalent | undefined
   >();
 
-  const handleMouseEnter = (talent: BaseCoreTalent | undefined) => {
-    setHoveredTalent(talent);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredTalent(undefined);
-  };
+  // Clear hoveredTalent when tooltip hides (after the useTooltip delay)
+  React.useEffect(() => {
+    if (!isVisible) {
+      setHoveredTalent(undefined);
+    }
+  }, [isVisible]);
 
   return (
     <div
@@ -176,8 +174,7 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
               onClick={() =>
                 onSelect(selected === ct.name ? undefined : ct.name)
               }
-              onMouseEnter={() => handleMouseEnter(ct)}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => setHoveredTalent(ct)}
               className={`w-full px-3 py-2 border rounded-lg text-sm text-left transition-colors ${
                 selected === ct.name
                   ? "border-amber-500 bg-amber-500/20 text-amber-400"
@@ -196,8 +193,7 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
               return (
                 <button
                   onClick={() => onSelect(undefined)}
-                  onMouseEnter={() => handleMouseEnter(orphanedTalent)}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={() => setHoveredTalent(orphanedTalent)}
                   className="w-full px-3 py-2 border border-amber-500 bg-amber-500/20 text-amber-400 rounded-lg text-sm text-left"
                 >
                   {selected}
@@ -210,15 +206,27 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
       )}
 
       <Tooltip
-        isVisible={isVisible && !!hoveredTalent}
+        isVisible={isVisible && hoveredTalent !== undefined}
         triggerRect={triggerRect}
         variant="legendary"
         {...tooltipHandlers}
       >
-        {hoveredTalent && (
+        {hoveredTalent !== undefined && (
           <>
             <TooltipTitle>{hoveredTalent.name}</TooltipTitle>
-            <TooltipContent>{hoveredTalent.affix}</TooltipContent>
+            <ul className="space-y-1">
+              {CoreTalentMods[
+                hoveredTalent.name as CoreTalentName
+              ].affixLines.map((line, idx) => (
+                <li
+                  key={idx}
+                  className="text-xs text-zinc-300 flex items-center"
+                >
+                  <span>{line.text}</span>
+                  {line.mods === undefined && <ModNotImplementedIcon />}
+                </li>
+              ))}
+            </ul>
           </>
         )}
       </Tooltip>
