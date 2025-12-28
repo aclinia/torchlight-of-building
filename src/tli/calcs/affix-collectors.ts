@@ -1,4 +1,11 @@
-import type { Affix, Gear, HeroPage, TalentPage } from "../core";
+import type {
+  Affix,
+  DivinityPage,
+  Gear,
+  HeroPage,
+  Loadout,
+  TalentPage,
+} from "../core";
 import { getHeroTraitMods } from "../hero/hero_trait_mods";
 import type { Mod } from "../mod";
 import { type ModWithValue, multModValue } from "./util";
@@ -105,5 +112,43 @@ export const getHeroAffixes = (heroPage: HeroPage): Affix[] => {
   if (memorySlots.slot60) affixes.push(...memorySlots.slot60.affixes);
   if (memorySlots.slot75) affixes.push(...memorySlots.slot75.affixes);
 
+  return affixes;
+};
+
+export const getGearAffixes = (
+  gear: Loadout["gearPage"]["equippedGear"][keyof Loadout["gearPage"]["equippedGear"]],
+): Affix[] => {
+  return gear ? getAllAffixes(gear) : [];
+};
+
+export const getPactspiritAffixes = (
+  pactspiritPage: Loadout["pactspiritPage"],
+): Affix[] => {
+  const affixes: Affix[] = [];
+  const slots = [
+    pactspiritPage.slot1,
+    pactspiritPage.slot2,
+    pactspiritPage.slot3,
+  ];
+  for (const slot of slots) {
+    if (slot === undefined) continue;
+    affixes.push(slot.mainAffix);
+    for (const ring of Object.values(slot.rings)) {
+      affixes.push(ring.installedDestiny?.affix ?? ring.originalAffix);
+    }
+  }
+  return affixes;
+};
+
+export const getDivinityAffixes = (divinityPage: DivinityPage): Affix[] => {
+  const affixes: Affix[] = [];
+  for (const placedSlate of divinityPage.placedSlates) {
+    const slate = divinityPage.inventory.find(
+      (s) => s.id === placedSlate.slateId,
+    );
+    if (slate !== undefined) {
+      affixes.push(...slate.affixes);
+    }
+  }
   return affixes;
 };

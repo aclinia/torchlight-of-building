@@ -19,7 +19,6 @@ import type { DmgModType } from "../constants";
 import type {
   Affix,
   Configuration,
-  DivinityPage,
   DmgRange,
   Loadout,
   SkillSlot,
@@ -38,7 +37,10 @@ import { getPassiveSkillMods } from "../skills/passive_mods";
 import { getSupportSkillMods } from "../skills/support_mods";
 import {
   getAllAffixes,
+  getDivinityAffixes,
+  getGearAffixes,
   getHeroAffixes,
+  getPactspiritAffixes,
   getTalentAffixes,
 } from "./affix-collectors";
 import type { OffenseSkillName } from "./skill_confs";
@@ -110,44 +112,6 @@ const calculateEffMultiplier = <T extends { value: number; addn?: boolean }>(
 
 const collectModsFromAffixes = (affixes: Affix[]): Mod[] => {
   return affixes.flatMap((a) => a.affixLines.flatMap((l) => l.mods ?? []));
-};
-
-const getGearAffixes = (
-  gear: Loadout["gearPage"]["equippedGear"][keyof Loadout["gearPage"]["equippedGear"]],
-): Affix[] => {
-  return gear ? getAllAffixes(gear) : [];
-};
-
-const getPactspiritAffixes = (
-  pactspiritPage: Loadout["pactspiritPage"],
-): Affix[] => {
-  const affixes: Affix[] = [];
-  const slots = [
-    pactspiritPage.slot1,
-    pactspiritPage.slot2,
-    pactspiritPage.slot3,
-  ];
-  for (const slot of slots) {
-    if (slot === undefined) continue;
-    affixes.push(slot.mainAffix);
-    for (const ring of Object.values(slot.rings)) {
-      affixes.push(ring.installedDestiny?.affix ?? ring.originalAffix);
-    }
-  }
-  return affixes;
-};
-
-const getDivinityAffixes = (divinityPage: DivinityPage): Affix[] => {
-  const affixes: Affix[] = [];
-  for (const placedSlate of divinityPage.placedSlates) {
-    const slate = divinityPage.inventory.find(
-      (s) => s.id === placedSlate.slateId,
-    );
-    if (slate !== undefined) {
-      affixes.push(...slate.affixes);
-    }
-  }
-  return affixes;
 };
 
 export const collectMods = (loadout: Loadout): Mod[] => {

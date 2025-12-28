@@ -15,6 +15,7 @@ const HAS_BLOCKED_RECENTLY = "has_blocked_recently" as const;
 const FROSTBITE_RATING = "frostbite_rating" as const;
 const MANA_CONSUMED_RECENTLY = "mana_consumed_recently" as const;
 const TARGET_ENEMY_IS_IN_PROXIMITY = "target_enemy_is_in_proximity" as const;
+const TARGET_ENEMY_IS_NEARBY = "target_enemy_is_nearby" as const;
 const ALL = "all" as const;
 
 const coreTalentNameSet = new Set(CoreTalentNames.map((name) => name.toLowerCase()));
@@ -117,6 +118,12 @@ export const allParsers = [
     spec("DmgPct", (c) => ({ value: c.value, modType: ATTACK, addn: true, cond: HAS_ELITES_NEARBY })),
     spec("DmgPct", (c) => ({ value: c.value, modType: AILMENT, addn: true, cond: HAS_ELITES_NEARBY })),
   ]),
+  t("{value:dec%} additional attack damage dealt to nearby enemies").output("DmgPct", (c) => ({
+    value: c.value,
+    modType: ATTACK,
+    addn: true,
+    cond: TARGET_ENEMY_IS_NEARBY,
+  })),
   t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
     value: c.value,
     modType: c.modType ?? "global",
@@ -143,6 +150,15 @@ export const allParsers = [
     spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined })),
     spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined })),
   ]),
+  t("{value:dec%} additional attack speed when only {count:int} enemies are nearby").output("AspdPct", (c) => ({
+    value: c.value,
+    addn: true,
+    condThreshold: {
+      target: "num_enemies_nearby" as const,
+      comparator: "eq" as const,
+      value: c.count,
+    },
+  })),
   t("{value:dec%} [additional] attack speed").output("AspdPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,

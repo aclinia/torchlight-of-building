@@ -311,6 +311,24 @@ test("parse additional attack speed", () => {
   ]);
 });
 
+test("parse additional attack speed when only 1 enemy nearby", () => {
+  const result = parseMod(
+    "+20% additional Attack Speed when only 1 enemies are Nearby",
+  );
+  expect(result).toEqual([
+    {
+      type: "AspdPct",
+      value: 20,
+      addn: true,
+      condThreshold: {
+        target: "num_enemies_nearby",
+        comparator: "eq",
+        value: 1,
+      },
+    },
+  ]);
+});
+
 test("parse attack speed with decimal percentage", () => {
   const result = parseMod("+12.5% attack speed");
   expect(result).toEqual([
@@ -1002,6 +1020,21 @@ test("parse max agility blessing stacks with higher value", () => {
     {
       type: "MaxAgilityBlessing",
       value: 3,
+    },
+  ]);
+});
+
+test("parse additional attack damage dealt to nearby enemies", () => {
+  const result = parseMod(
+    "+10% additional Attack Damage dealt to Nearby enemies",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 10,
+      modType: "attack",
+      addn: true,
+      cond: "target_enemy_is_nearby",
     },
   ]);
 });
