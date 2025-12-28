@@ -526,16 +526,23 @@ const extractSkillFromTlidbHtml = (
   const parser = getParserForSkill(name, file.category as SkillCategory);
   let parsedLevelModValues: Record<string, Record<number, number>> | undefined;
 
+  // Skills that extract values from description only (no progression table in HTML)
+  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set(["Charging Warcry"]);
+
   if (parser !== undefined) {
     const progressionTable = extractProgressionTable($);
-    if (progressionTable === undefined) {
+
+    if (
+      progressionTable === undefined &&
+      !SKILLS_WITHOUT_PROGRESSION_TABLE.has(name)
+    ) {
       throw new Error(`No progression table found for "${name}"`);
     }
 
     const parserInput: SupportParserInput = {
       skillName: name,
       description,
-      progressionTable,
+      progressionTable: progressionTable ?? [],
     };
     parsedLevelModValues = parser.parser(parserInput);
   }

@@ -41,7 +41,8 @@ export type Stackable =
   | "mercury_pt"
   | "unsealed_mana_pct"
   | "focus_blessing"
-  | "agility_blessing";
+  | "agility_blessing"
+  | "num_enemies_affected_by_warcry";
 
 export type StatType = "str" | "dex" | "int";
 

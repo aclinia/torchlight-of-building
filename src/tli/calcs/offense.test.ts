@@ -231,6 +231,49 @@ describe("basic damage modifiers", () => {
     validate(results, skillName, { avgHit: 100 });
   });
 
+  test("calculate offense shadow_strike_skill dmg mod doesn't affect non-Shadow Strike skill", () => {
+    // [Test] Simple Attack does NOT have "Shadow Strike" tag
+    // So shadow_strike_skill modifiers don't apply - only base damage
+    // 100 * 1 (no applicable modifiers) = 100
+    const input = createModsInput([
+      affix([
+        { type: "DmgPct", value: 50, modType: "shadow_strike_skill", addn: false },
+      ]),
+    ]);
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 100 });
+  });
+
+  test("calculate offense shadow_strike_skill dmg mod applies to Frost Spike", () => {
+    // Frost Spike has "Shadow Strike" tag, so shadow_strike_skill modifiers apply
+    // Frost Spike level 20: weaponAtkDmgPct = 2.01, converts 100% phys to cold
+    // 100 * 2.01 = 201 cold, then * 1.5 (50% inc) = 301.5
+    const input = {
+      loadout: initLoadout({
+        gearPage: { equippedGear: { mainHand: baseWeapon }, inventory: [] },
+        customConfiguration: [
+          affix([
+            { type: "DmgPct", value: 50, modType: "shadow_strike_skill", addn: false },
+          ]),
+        ],
+        skillPage: {
+          activeSkills: {
+            1: {
+              skillName: "Frost Spike" as const,
+              enabled: true,
+              level: 20,
+              supportSkills: {},
+            },
+          },
+          passiveSkills: {},
+        },
+      }),
+      configuration: defaultConfiguration,
+    };
+    const results = calculateOffense(input);
+    validate(results, "Frost Spike", { avgHit: 301.5 });
+  });
+
   test("calculate offense elemental damage", () => {
     // 100 phys weapon + 50 elemental (cold/lightning/fire each)
     // GearPhysDmgPct -1 removes all physical damage

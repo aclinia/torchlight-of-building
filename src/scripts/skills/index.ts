@@ -1,5 +1,6 @@
 import {
   bullsRageParser,
+  chargingWarcryParser,
   frostSpikeParser,
   iceBondParser,
 } from "./active_parsers";
@@ -77,6 +78,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Bull's Rage",
     categories: ["active"],
     parser: bullsRageParser,
+  },
+  {
+    skillName: "Charging Warcry",
+    categories: ["active"],
+    parser: chargingWarcryParser,
   },
   {
     skillName: "Precise: Cruelty",

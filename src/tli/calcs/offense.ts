@@ -542,6 +542,7 @@ const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
   Spell: "spell",
   Melee: "melee",
   Area: "area",
+  "Shadow Strike": "shadow_strike_skill",
 };
 
 const dmgModTypesForSkill = (skill: BaseActiveSkill): DmgModType[] => {
@@ -1563,6 +1564,15 @@ const resolveModsForOffenseSkill = (
   const unsealedManaPct = config.unsealedManaPct ?? 0;
   mods.push(
     ...normalizeStackables(prenormMods, "unsealed_mana_pct", unsealedManaPct),
+  );
+
+  const numEnemiesAffectedByWarcry = config.numEnemiesAffectedByWarcry;
+  mods.push(
+    ...normalizeStackables(
+      prenormMods,
+      "num_enemies_affected_by_warcry",
+      numEnemiesAffectedByWarcry,
+    ),
   );
 
   return mods;

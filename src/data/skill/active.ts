@@ -352,6 +352,16 @@ export const ActiveSkills = [
       "Casts the skill and lets out a Warcry:\nTaunts Nearby enemies.\n+8% additional Attack Speed for Shadow Strike Skills while the skill lasts\n+8% additional Attack Speed for Shadow Strike Skills while the skill lasts\nLasts for 3s",
     ],
     kinds: [],
+    levelValues: {
+      shadowStrikeSkillDmgPerEnemy: [
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+      ],
+      shadowStrikeSkillAspd: [
+        8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+        8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+      ],
+    },
   },
   {
     type: "Active",

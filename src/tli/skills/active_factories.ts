@@ -71,4 +71,21 @@ export const activeSkillModFactories: Partial<
       },
     ],
   }),
+  "Charging Warcry": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        modType: "shadow_strike_skill",
+        addn: true,
+        value: v(vals.shadowStrikeSkillDmgPerEnemy, l),
+        per: { stackable: "num_enemies_affected_by_warcry" },
+      },
+      {
+        // TODO: THIS SHOULD ONLY AFFECT SHADOW STRIKE SKILLS
+        type: "AspdPct",
+        addn: true,
+        value: v(vals.shadowStrikeSkillAspd, l),
+      },
+    ],
+  }),
 };

@@ -146,3 +146,25 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
     dmgPctPerProjectile: createConstantLevels(dmgPctPerProjectile),
   };
 };
+
+export const chargingWarcryParser: SupportLevelParser = (input) => {
+  const { skillName, description } = input;
+  const firstDescription = description[0] ?? "";
+
+  // Extract "4% additional damage" for shadow strike skills per enemy
+  const dmgMatch = template("{value:int%} additional damage").match(
+    firstDescription,
+    skillName,
+  );
+
+  // Extract "+8% additional Attack Speed"
+  const aspdMatch = template("{value:int%} additional attack speed").match(
+    firstDescription,
+    skillName,
+  );
+
+  return {
+    shadowStrikeSkillDmgPerEnemy: createConstantLevels(dmgMatch.value),
+    shadowStrikeSkillAspd: createConstantLevels(aspdMatch.value),
+  };
+};
