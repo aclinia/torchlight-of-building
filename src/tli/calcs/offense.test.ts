@@ -483,8 +483,8 @@ describe("fervor mechanics", () => {
     // Fervor: 100 points * 2% = 200% increased crit rating
     // Crit chance: 0.05 * (1 + 2.0) = 0.15 (15%)
     // CritDmgPerFervor: 0.005 * 100 = 0.5 (50% increased crit damage)
-    // Crit damage: 1.5 * (1 + 0.5) = 2.25
-    // AvgHitWithCrit: 100 * 0.15 * 2.25 + 100 * 0.85 = 33.75 + 85 = 118.75
+    // Crit damage: 1.5 + 0.5 = 2.0
+    // AvgHitWithCrit: 100 * 0.15 * 2.0 + 100 * 0.85 = 30 + 85 = 115
     const input = createFervorInput({ enabled: true, points: 100 }, [
       affix([
         {
@@ -500,8 +500,8 @@ describe("fervor mechanics", () => {
     validate(results, skillName, {
       avgHit: 100,
       critChance: 0.15,
-      critDmgMult: 2.25,
-      avgHitWithCrit: 118.75,
+      critDmgMult: 2.0,
+      avgHitWithCrit: 115,
     });
   });
 
@@ -510,8 +510,8 @@ describe("fervor mechanics", () => {
     // Fervor: 100 points * 2% = 200% increased crit rating
     // Crit chance: 0.05 * (1 + 2.0) = 0.15 (15%)
     // CritDmgPerFervor total: (0.005 * 100) + (0.003 * 100) = 0.5 + 0.3 = 0.8
-    // Crit damage: 1.5 * (1 + 0.8) = 2.7
-    // AvgHitWithCrit: 100 * 0.15 * 2.7 + 100 * 0.85 = 40.5 + 85 = 125.5
+    // Crit damage: 1.5 + 0.8 = 2.3
+    // AvgHitWithCrit: 100 * 0.15 * 2.3 + 100 * 0.85 = 34.5 + 85 = 119.5
     const input = createFervorInput({ enabled: true, points: 100 }, [
       affix([
         {
@@ -536,8 +536,8 @@ describe("fervor mechanics", () => {
     validate(results, skillName, {
       avgHit: 100,
       critChance: 0.15,
-      critDmgMult: 2.7,
-      avgHitWithCrit: 125.5,
+      critDmgMult: 2.3,
+      avgHitWithCrit: 119.5,
     });
   });
 
@@ -546,8 +546,8 @@ describe("fervor mechanics", () => {
     // Fervor: 50 points * 2% = 100% increased crit rating
     // Crit chance: 0.05 * (1 + 1.0) = 0.10 (10%)
     // CritDmgPerFervor: 0.01 * 50 = 0.5 (50% increased crit damage)
-    // Crit damage: 1.5 * (1 + 0.5) = 2.25
-    // AvgHitWithCrit: 100 * 0.10 * 2.25 + 100 * 0.90 = 22.5 + 90 = 112.5
+    // Crit damage: 1.5 + 0.5 = 2.0
+    // AvgHitWithCrit: 100 * 0.10 * 2.0 + 100 * 0.90 = 20 + 90 = 110
     const input = createFervorInput({ enabled: true, points: 50 }, [
       affix([
         {
@@ -563,8 +563,8 @@ describe("fervor mechanics", () => {
     validate(results, skillName, {
       avgHit: 100,
       critChance: 0.1,
-      critDmgMult: 2.25,
-      avgHitWithCrit: 112.5,
+      critDmgMult: 2.0,
+      avgHitWithCrit: 110,
     });
   });
 
@@ -600,8 +600,8 @@ describe("fervor mechanics", () => {
     // CritDmgPerFervor: 0.005 * 100 = 0.5 (50%)
     // CritDmgPct: 0.3 (30%)
     // Total increased crit damage: 0.5 + 0.3 = 0.8 (80%)
-    // Crit damage: 1.5 * (1 + 0.8) = 2.7
-    // AvgHitWithCrit: 100 * 0.15 * 2.7 + 100 * 0.85 = 40.5 + 85 = 125.5
+    // Crit damage: 1.5 + 0.8 = 2.3
+    // AvgHitWithCrit: 100 * 0.15 * 2.3 + 100 * 0.85 = 34.5 + 85 = 119.5
     const input = createFervorInput({ enabled: true, points: 100 }, [
       affix([
         {
@@ -620,8 +620,8 @@ describe("fervor mechanics", () => {
     validate(results, skillName, {
       avgHit: 100,
       critChance: 0.15,
-      critDmgMult: 2.7,
-      avgHitWithCrit: 125.5,
+      critDmgMult: 2.3,
+      avgHitWithCrit: 119.5,
     });
   });
 });

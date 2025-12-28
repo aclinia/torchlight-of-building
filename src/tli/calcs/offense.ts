@@ -514,7 +514,7 @@ const calculateCritDmg = (allMods: Mod[]): number => {
   const inc = calculateInc(mods.filter((m) => !m.addn).map((v) => v.value));
   const addn = calculateAddn(mods.filter((m) => m.addn).map((v) => v.value));
 
-  return 1.5 * (1 + inc) * addn;
+  return (1.5 + inc) * addn;
 };
 
 const calculateDoubleDmgMult = (mods: Mod[]): number => {
