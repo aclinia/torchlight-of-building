@@ -269,6 +269,7 @@ export const compileTemplate = (template: string): CompiledTemplate => {
 
   // No anchors - substring matching
   return {
+    templateStr: template,
     regex: new RegExp(regexStr, "i"),
     captureNames,
     extractors,

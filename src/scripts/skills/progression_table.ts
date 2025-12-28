@@ -1,5 +1,5 @@
 import type { CheerioAPI } from "cheerio";
-import { template } from "../../lib/template-compiler";
+import { template } from "./template-compiler";
 import type { ProgressionColumn, SupportParserInput } from "./types";
 
 const EXPECTED_LEVELS = 40;
@@ -100,7 +100,7 @@ export const findColumn = (
   skillName: string,
 ): ProgressionColumn => {
   const t = template(headerTemplate);
-  const col = columns.find((c) => t.match(c.header) !== undefined);
+  const col = columns.find((c) => t.tryMatch(c.header) !== undefined);
   if (col === undefined) {
     throw new Error(`${skillName}: no column matches "${headerTemplate}"`);
   }

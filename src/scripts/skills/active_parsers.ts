@@ -1,9 +1,9 @@
-import { template } from "../../lib/template-compiler";
 import {
   findColumn,
   parseNumericValue,
   validateAllLevels,
 } from "./progression_table";
+import { template } from "./template-compiler";
 import type { SupportLevelParser } from "./types";
 import { createConstantLevels } from "./utils";
 
@@ -16,12 +16,10 @@ export const iceBondParser: SupportLevelParser = (input) => {
   for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
     const level = Number(levelStr);
     // Match "23.5% additional Cold Damage" or "+24% additional Cold Damage"
-    const match = template("{value:dec%} additional cold damage").match(text);
-    if (match === undefined) {
-      throw new Error(
-        `${skillName} level ${level}: could not match cold damage`,
-      );
-    }
+    const match = template("{value:dec%} additional cold damage").match(
+      text,
+      skillName,
+    );
     coldDmgPctVsFrostbitten[level] = match.value;
   }
 
@@ -41,12 +39,8 @@ export const bullsRageParser: SupportLevelParser = (input) => {
     // Match "17.5% additional Melee Skill Damage" or "+27% additional Melee Skill Damage"
     const match = template("{value:dec%} additional melee skill damage").match(
       text,
+      skillName,
     );
-    if (match === undefined) {
-      throw new Error(
-        `${skillName} level ${level}: could not match melee skill damage`,
-      );
-    }
     meleeDmgPct[level] = match.value;
   }
 
@@ -81,12 +75,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
   for (const [levelStr, text] of Object.entries(damageCol.rows)) {
     const level = Number(levelStr);
     if (level <= 20) {
-      const dmgMatch = template("{value:dec%}").match(text);
-      if (dmgMatch === undefined) {
-        throw new Error(
-          `${skillName} level ${level}: could not match weapon damage`,
-        );
-      }
+      const dmgMatch = template("{value:dec%}").match(text, skillName);
       weaponAtkDmgPct[level] = dmgMatch.value;
     }
   }
@@ -116,69 +105,31 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
     throw new Error(`${skillName}: no descript found for level 1`);
   }
 
-  // Constant mods from Descript column
-  let convertPhysicalToColdPct: number | undefined;
-  let maxProjectile: number | undefined;
-  let projectilePerFrostbiteRating: number | undefined;
-  let baseProjectile: number | undefined;
-  let dmgPctPerProjectile: number | undefined;
-
   // ConvertDmgPct: "Converts 100% of the skill's Physical Damage to Cold"
-  const convertMatch = template(
+  const convertPhysicalToColdPct = template(
     "converts {value:int%} of the skill's physical damage to cold",
-  ).match(descript);
-  if (convertMatch !== undefined) {
-    convertPhysicalToColdPct = convertMatch.value;
-  }
+  ).match(descript, skillName).value;
 
   // MaxProjectile: "max amount of Projectiles that can be fired by this skill is 5"
-  const maxProjMatch = template(
+  const maxProjectile = template(
     "max amount of projectiles that can be fired by this skill is {value:int}",
-  ).match(descript);
-  if (maxProjMatch !== undefined) {
-    maxProjectile = maxProjMatch.value;
-  }
+  ).match(descript, skillName).value;
 
   // Projectile per frostbite_rating: "+1 Projectile Quantity for every 35 Frostbite Rating"
-  const projPerRatingMatch = template(
+  const projectilePerFrostbiteRating = template(
     "{value:int} projectile quantity for every",
-  ).match(descript);
-  if (projPerRatingMatch !== undefined) {
-    projectilePerFrostbiteRating = projPerRatingMatch.value;
-  }
+  ).match(descript, skillName).value;
 
   // Base Projectile: "fires 2 Projectiles in its base state"
-  const baseProjMatch = template("fires {value:int} projectile").match(
+  const baseProjectile = template("fires {value:int} projectile").match(
     descript,
-  );
-  if (baseProjMatch !== undefined) {
-    baseProjectile = baseProjMatch.value;
-  }
+    skillName,
+  ).value;
 
   // DmgPct per projectile: "+8% additional Damage for every +1 Projectile"
-  const dmgPctMatch = template(
+  const dmgPctPerProjectile = template(
     "{value:int%} additional damage for every +1 projectile",
-  ).match(descript);
-  if (dmgPctMatch !== undefined) {
-    dmgPctPerProjectile = dmgPctMatch.value;
-  }
-
-  // Validate we found all required values
-  if (convertPhysicalToColdPct === undefined) {
-    throw new Error(`${skillName}: could not find ConvertDmgPct value`);
-  }
-  if (maxProjectile === undefined) {
-    throw new Error(`${skillName}: could not find MaxProjectile value`);
-  }
-  if (projectilePerFrostbiteRating === undefined) {
-    throw new Error(`${skillName}: could not find Projectile per rating value`);
-  }
-  if (baseProjectile === undefined) {
-    throw new Error(`${skillName}: could not find base Projectile value`);
-  }
-  if (dmgPctPerProjectile === undefined) {
-    throw new Error(`${skillName}: could not find DmgPct per projectile value`);
-  }
+  ).match(descript, skillName).value;
 
   validateAllLevels(weaponAtkDmgPct, skillName);
   validateAllLevels(addedDmgEffPct, skillName);

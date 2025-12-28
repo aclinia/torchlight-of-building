@@ -1,10 +1,10 @@
-import { template } from "../../lib/template-compiler";
 import {
   findColumn,
   getDescriptionPart,
   parseNumericValue,
   validateAllLevels,
 } from "./progression_table";
+import { template } from "./template-compiler";
 import type { SupportLevelParser } from "./types";
 import { createConstantLevels } from "./utils";
 
@@ -16,10 +16,8 @@ export const hauntParser: SupportLevelParser = (input) => {
   // Extract Shadow Quantity from description text
   const shadowQuantMatch = template("{value:int} shadow quantity").match(
     firstDescription,
+    skillName,
   );
-  if (shadowQuantMatch === undefined) {
-    throw new Error(`${skillName}: could not find Shadow Quantity value`);
-  }
   const shadowQuant = shadowQuantMatch.value;
 
   // Extract DmgPct from progression table
@@ -49,10 +47,8 @@ export const steamrollParser: SupportLevelParser = (input) => {
   // Extract Attack Speed from description text
   const aspdMatch = template("{value:dec%} attack speed").match(
     firstDescription,
+    skillName,
   );
-  if (aspdMatch === undefined) {
-    throw new Error(`${skillName}: could not find Attack Speed value`);
-  }
   const aspdPctValue = aspdMatch.value;
 
   // Extract melee and ailment damage from progression table
@@ -123,23 +119,18 @@ export const willpowerParser: SupportLevelParser = (input) => {
 
   const stacksMatch = template("stacks up to {value:int} time").match(
     level1Text,
+    skillName,
   );
-  if (stacksMatch === undefined) {
-    throw new Error(`${skillName}: could not find max stacks value`);
-  }
   const maxStacksValue = stacksMatch.value;
 
   // Extract damage percentage from each level's first column
   const dmgPctPerWillpower: Record<number, number> = {};
   for (const [levelStr, text] of Object.entries(firstCol.rows)) {
     const level = Number(levelStr);
-    const dmgMatch = template("{value:dec%} additional damage").match(text);
-    if (dmgMatch === undefined) {
-      throw new Error(
-        `${skillName} level ${level}: could not find damage percentage`,
-      );
-    }
-
+    const dmgMatch = template("{value:dec%} additional damage").match(
+      text,
+      skillName,
+    );
     dmgPctPerWillpower[level] = dmgMatch.value;
   }
 
