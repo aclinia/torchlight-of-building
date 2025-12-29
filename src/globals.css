@@ -35,12 +35,16 @@ body {
 /* Range slider styling */
 input[type="range"] {
   -webkit-appearance: none;
+  appearance: none;
   background: transparent;
+  height: 16px;
+  cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-track {
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
   height: 6px;
-  background: #27272a;
+  background: #52525b;
   border-radius: 3px;
 }
 
@@ -57,7 +61,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 input[type="range"]::-moz-range-track {
   height: 6px;
-  background: #27272a;
+  background: #52525b;
   border-radius: 3px;
 }
 
