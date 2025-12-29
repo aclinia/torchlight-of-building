@@ -173,26 +173,27 @@ export const SearchableSelect = <T extends string | number>({
       <div className={`relative ${className}`}>
         <div
           ref={inputWrapperRef}
-          className="relative"
           onMouseEnter={handleInputMouseEnter}
           onMouseLeave={handleInputMouseLeave}
         >
-          <ComboboxInput
-            className={`
-              w-full bg-zinc-800 border border-zinc-700 rounded
-              ${SIZE_CLASSES[size]}
-              focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500
-              ${isEmpty ? "text-zinc-500" : "text-zinc-50"}
-              ${disabled ? "opacity-50 cursor-not-allowed" : ""}
-            `}
-            displayValue={(opt: SearchableSelectOption<T> | null) =>
-              opt?.label ?? ""
-            }
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={placeholder}
-          />
-          <ComboboxButton className="absolute inset-y-0 right-0 flex items-center pr-2">
-            <ChevronDownIcon className="h-4 w-4 text-zinc-400" />
+          <ComboboxButton as="div" className="relative">
+            <ComboboxInput
+              className={`
+                w-full bg-zinc-800 border border-zinc-700 rounded
+                ${SIZE_CLASSES[size]}
+                focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500
+                ${isEmpty ? "text-zinc-500" : "text-zinc-50"}
+                ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+              `}
+              displayValue={(opt: SearchableSelectOption<T> | null) =>
+                opt?.label ?? ""
+              }
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={placeholder}
+            />
+            <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+              <ChevronDownIcon className="h-4 w-4 text-zinc-400" />
+            </span>
           </ComboboxButton>
         </div>
 
