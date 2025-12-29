@@ -1766,6 +1766,17 @@ const calculateResourcePool = (
   return { stats, maxLife, maxMana, mercuryPts };
 };
 
+export interface Defenses {
+  armor: number;
+  energyShield: number;
+  evasion: number;
+  attackBlockChancePct: number;
+  spellBlockChancePct: number;
+  blockRatioPct: number;
+}
+
+export const _calculateDefenses = () => {};
+
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
   const { loadout, configuration: config } = input;
