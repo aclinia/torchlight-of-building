@@ -7,7 +7,6 @@ import type {
   Loadout,
   TalentPage,
 } from "../core";
-import { getHeroTraitMods } from "../hero/hero_trait_mods";
 import type { Mod } from "../mod";
 import { type ModWithValue, multModValue } from "./util";
 
@@ -91,23 +90,7 @@ export const getTalentAffixes = (talentPage: TalentPage): Affix[] => {
 export const getHeroAffixes = (heroPage: HeroPage): Affix[] => {
   const affixes: Affix[] = [];
 
-  const { memorySlots, traits } = heroPage;
-
-  const traitSlots = [
-    traits.level1,
-    traits.level45,
-    traits.level60,
-    traits.level75,
-  ];
-  for (const trait of traitSlots) {
-    if (trait !== undefined) {
-      // defaulting to level3 for now
-      const mods = getHeroTraitMods(trait.name, 3);
-      if (mods.length > 0) {
-        affixes.push({ affixLines: [{ text: trait.name, mods }] });
-      }
-    }
-  }
+  const memorySlots = heroPage.memorySlots;
 
   if (memorySlots.slot45) affixes.push(...memorySlots.slot45.affixes);
   if (memorySlots.slot60) affixes.push(...memorySlots.slot60.affixes);

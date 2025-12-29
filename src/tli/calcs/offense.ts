@@ -25,6 +25,7 @@ import type {
   SkillSlot,
   SupportSkillSlot,
 } from "../core";
+import { getHeroTraitMods } from "../hero/hero_trait_mods";
 import type {
   ConditionThreshold,
   DmgChunkType,
@@ -1090,6 +1091,25 @@ const calculateImplicitMods = (): Mod[] => {
   ];
 };
 
+const calculateHeroTraitMods = (loadout: Loadout): Mod[] => {
+  const traits = loadout.heroPage.traits;
+
+  const mods = [];
+  const traitSlots = [
+    traits.level1,
+    traits.level45,
+    traits.level60,
+    traits.level75,
+  ];
+  for (const trait of traitSlots) {
+    if (trait !== undefined) {
+      // defaulting to level3 for now
+      mods.push(...getHeroTraitMods(trait.name, 3));
+    }
+  }
+  return mods;
+};
+
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterMod(mods, "Stat");
@@ -1728,7 +1748,10 @@ const calculateResourcePool = (
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
   const { loadout, configuration: config } = input;
-  const loadoutMods = resolveCoreTalentMods(collectMods(loadout));
+  const loadoutMods = [
+    ...resolveCoreTalentMods(collectMods(loadout)),
+    ...calculateHeroTraitMods(loadout),
+  ];
 
   const derivedCtx = resolveDerivedCtx(loadoutMods);
   const resourcePool = calculateResourcePool(
