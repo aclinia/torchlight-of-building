@@ -13,7 +13,7 @@ export const Route = createRootRoute({
   component: RootLayout,
   head: () => ({
     meta: [
-      { title: "TLI Build Planner" },
+      { title: "Torchlight of Building" },
       {
         name: "description",
         content: "Torchlight Infinite character build planner",
