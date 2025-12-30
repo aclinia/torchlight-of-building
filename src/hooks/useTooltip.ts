@@ -78,25 +78,27 @@ export const useTooltip = (): UseTooltipReturn => {
     setIsVisible(true);
   }, [cancelHideTimeout, hide, tooltipId]);
 
-  // Callback ref that handles attaching/detaching event listeners
-  const handlersRef = useRef<{
-    handleMouseEnter: () => void;
-    handleMouseLeave: () => void;
-  } | null>(null);
+  // Refs to always have access to latest callbacks without re-attaching listeners
+  const showRef = useRef(show);
+  const scheduleHideRef = useRef(scheduleHide);
 
-  // Keep handlers in sync with latest show/scheduleHide
+  // Keep refs in sync with latest callbacks
   useEffect(() => {
-    handlersRef.current = {
-      handleMouseEnter: () => {
-        triggerHoveredRef.current = true;
-        show();
-      },
-      handleMouseLeave: () => {
-        triggerHoveredRef.current = false;
-        scheduleHide();
-      },
-    };
+    showRef.current = show;
+    scheduleHideRef.current = scheduleHide;
   }, [show, scheduleHide]);
+
+  // Stable handlers that read from refs - initialized synchronously
+  const handlersRef = useRef({
+    handleMouseEnter: () => {
+      triggerHoveredRef.current = true;
+      showRef.current();
+    },
+    handleMouseLeave: () => {
+      triggerHoveredRef.current = false;
+      scheduleHideRef.current();
+    },
+  });
 
   const triggerRef = useCallback(<T extends HTMLElement>(node: T | null) => {
     // Clean up old element
