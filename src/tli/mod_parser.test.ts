@@ -436,6 +436,7 @@ test("parse max life", () => {
     {
       type: "MaxLifePct",
       value: 3,
+      addn: false,
     },
   ]);
 });
@@ -446,6 +447,7 @@ test("parse max energy shield", () => {
     {
       type: "MaxEnergyShieldPct",
       value: 3,
+      addn: false,
     },
   ]);
 });
@@ -456,6 +458,7 @@ test("parse armor", () => {
     {
       type: "ArmorPct",
       value: 5,
+      addn: false,
     },
   ]);
 });
@@ -466,6 +469,7 @@ test("parse evasion", () => {
     {
       type: "EvasionPct",
       value: 5,
+      addn: false,
     },
   ]);
 });
