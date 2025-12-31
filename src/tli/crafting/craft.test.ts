@@ -47,6 +47,26 @@ describe("craft", () => {
     expect(craft(affix, 100)).toBe("-4% additional Physical Damage taken");
   });
 
+  test("crafts affix with negative-to-positive range at max", () => {
+    const affix = { craftableAffix: "(-1-1) Spell Skill Level" };
+    expect(craft(affix, 100)).toBe("+1 Spell Skill Level");
+  });
+
+  test("crafts affix with negative-to-positive range at min", () => {
+    const affix = { craftableAffix: "(-1-1) Spell Skill Level" };
+    expect(craft(affix, 0)).toBe("-1 Spell Skill Level");
+  });
+
+  test("crafts affix with negative-to-positive range at middle (zero)", () => {
+    const affix = { craftableAffix: "(-1-1) Spell Skill Level" };
+    expect(craft(affix, 50)).toBe("+0 Spell Skill Level");
+  });
+
+  test("does not add + for purely positive ranges", () => {
+    const affix = { craftableAffix: "(1-3) Skill Level" };
+    expect(craft(affix, 100)).toBe("3 Skill Level");
+  });
+
   test("crafts multi-effect affix with newline", () => {
     const affix = {
       craftableAffix: "+(5-7)% Armor Pen<>+(5-7)% Armor Pen for Minions",
