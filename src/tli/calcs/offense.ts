@@ -1682,13 +1682,7 @@ const resolveBuffSkillEffMults = (
   return { skillEffMult, auraEffMult };
 };
 
-const calculateNumFocusBlessings = (
-  mods: Mod[],
-  config: Configuration,
-): number => {
-  if (config.focusBlessings !== undefined) {
-    return config.focusBlessings;
-  }
+const calcMaxFocus = (mods: Mod[]): number => {
   const baseMaxFocusBlessings = 4;
   const additionalMaxFocusBlessings = sumByValue(
     filterMod(mods, "MaxFocusBlessing"),
@@ -1696,18 +1690,26 @@ const calculateNumFocusBlessings = (
   return baseMaxFocusBlessings + additionalMaxFocusBlessings;
 };
 
-const calculateNumAgilityBlessings = (
-  mods: Mod[],
-  config: Configuration,
-): number => {
-  if (config.agilityBlessings !== undefined) {
-    return config.agilityBlessings;
+const calcNumFocus = (maxFocus: number, config: Configuration): number => {
+  if (config.focusBlessings !== undefined) {
+    return config.focusBlessings;
   }
+  return maxFocus;
+};
+
+const calcMaxAgility = (mods: Mod[]): number => {
   const baseMaxAgilityBlessings = 4;
   const additionalMaxAgilityBlessings = sumByValue(
     filterMod(mods, "MaxAgilityBlessing"),
   );
   return baseMaxAgilityBlessings + additionalMaxAgilityBlessings;
+};
+
+const calcNumAgility = (maxAgility: number, config: Configuration): number => {
+  if (config.agilityBlessings !== undefined) {
+    return config.agilityBlessings;
+  }
+  return maxAgility;
 };
 
 const calcAfflictionPts = (config: Configuration): number => {
@@ -1863,14 +1865,20 @@ const resolveModsForOffenseSkill = (
   mods.push(...calculateTorment(config));
   mods.push(...calculateAffliction(mods, config));
 
-  const focusBlessings = calculateNumFocusBlessings(mods, config);
   mods.push(
-    ...normalizeStackables(prenormMods, "focus_blessing", focusBlessings),
+    ...normalizeStackables(
+      prenormMods,
+      "focus_blessing",
+      resourcePool.focusBlessings,
+    ),
   );
 
-  const agilityBlessings = calculateNumAgilityBlessings(mods, config);
   mods.push(
-    ...normalizeStackables(prenormMods, "agility_blessing", agilityBlessings),
+    ...normalizeStackables(
+      prenormMods,
+      "agility_blessing",
+      resourcePool.agilityBlessings,
+    ),
   );
 
   const willpowerStacks = calculateWillpower(prenormMods);
@@ -1943,6 +1951,10 @@ export interface ResourcePool {
   maxLife: number;
   maxMana: number;
   mercuryPts: number;
+  focusBlessings: number;
+  maxFocusBlessings: number;
+  agilityBlessings: number;
+  maxAgilityBlessings: number;
 }
 
 const calculateResourcePool = (
@@ -1978,7 +1990,21 @@ const calculateResourcePool = (
   const mercuryPts = calculateMercuryPts(mods);
   mods.push(...normalizeStackables(prenormMods, "mercury_pt", mercuryPts));
 
-  return { stats, maxLife, maxMana, mercuryPts };
+  const maxFocusBlessings = calcMaxFocus(mods);
+  const focusBlessings = calcNumFocus(maxFocusBlessings, config);
+  const maxAgilityBlessings = calcMaxAgility(mods);
+  const agilityBlessings = calcNumAgility(maxAgilityBlessings, config);
+
+  return {
+    stats,
+    maxLife,
+    maxMana,
+    mercuryPts,
+    maxFocusBlessings,
+    focusBlessings,
+    maxAgilityBlessings,
+    agilityBlessings,
+  };
 };
 
 export interface Resistance {
