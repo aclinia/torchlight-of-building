@@ -619,6 +619,21 @@ const createTestActiveSkill = (): BaseActiveSkill => {
   };
 };
 
+const createTestPersistentSpell = (): BaseActiveSkill => {
+  const constantValues = Array.from({ length: 40 }, () => 100);
+  return {
+    type: "Active",
+    name: "[Test] Simple Persistent Spell",
+    kinds: ["deal_damage", "dot"],
+    tags: ["Spell", "Persistent"],
+    description: ["this is used for testing persistent damage"],
+    mainStats: ["int"],
+    levelValues: {
+      persistentDamage: constantValues,
+    },
+  };
+};
+
 const generateActiveSkillFile = (
   constName: string,
   skills: BaseActiveSkill[],
@@ -889,9 +904,11 @@ const main = async (): Promise<void> => {
   const outDir = join(process.cwd(), "src", "data", "skill");
   await mkdir(outDir, { recursive: true });
 
-  // Add test skill for testing purposes
+  // Add test skills for testing purposes
   const testSkill = createTestActiveSkill();
+  const testPersistentSpell = createTestPersistentSpell();
   activeSkillGroups.get("Active")?.push(testSkill);
+  activeSkillGroups.get("Active")?.push(testPersistentSpell);
 
   // Generate active skill files
   for (const [skillType, skills] of activeSkillGroups) {

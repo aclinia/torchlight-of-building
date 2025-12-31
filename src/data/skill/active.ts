@@ -2002,4 +2002,19 @@ export const ActiveSkills = [
       ],
     },
   },
+  {
+    type: "Active",
+    name: "[Test] Simple Persistent Spell",
+    kinds: ["deal_damage", "dot"],
+    tags: ["Spell", "Persistent"],
+    description: ["this is used for testing persistent damage"],
+    mainStats: ["int"],
+    levelValues: {
+      persistentDamage: [
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+      ],
+    },
+  },
 ] as const satisfies readonly (BaseActiveSkill & Record<string, unknown>)[];

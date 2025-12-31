@@ -1922,7 +1922,7 @@ const calcAvgPersistentDps = (
   const offense: SkillOffenseOfType<"PersistentDmg"> | undefined = match(
     skill.name,
   )
-    .with("Mind Control", () => {
+    .with("Mind Control", "[Test] Simple Persistent Spell", () => {
       return getLevelOffense(skill, "PersistentDmg", skillLevel);
     })
     .otherwise(() => {

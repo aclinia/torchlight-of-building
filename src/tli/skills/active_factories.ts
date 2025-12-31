@@ -18,6 +18,17 @@ export const activeSkillModFactories: Partial<
       { type: "AddedDmgEffPct", value: v(vals.addedDmgEffPct, l) },
     ],
   }),
+  // Test skill for persistent damage testing
+  "[Test] Simple Persistent Spell": (l, vals) => ({
+    offense: [
+      {
+        type: "PersistentDmg",
+        value: v(vals.persistentDamage, l),
+        dmgType: "physical",
+        duration: 1,
+      },
+    ],
+  }),
   "Frost Spike": (l, vals) => ({
     offense: [
       { type: "WeaponAtkDmgPct", value: v(vals.weaponAtkDmgPct, l) },
