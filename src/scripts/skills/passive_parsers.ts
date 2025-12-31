@@ -1,6 +1,7 @@
 import { findColumn, validateAllLevels } from "./progression_table";
 import { template } from "./template-compiler";
 import type { SupportLevelParser } from "./types";
+import { createConstantLevels } from "./utils";
 
 export const preciseCrueltyParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
@@ -55,4 +56,29 @@ export const spellAmplificationParser: SupportLevelParser = (input) => {
   validateAllLevels(spellDmgPct, skillName);
 
   return { spellDmgPct };
+};
+
+export const preciseDeepPainParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const dotDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+21% additional Damage Over Time" or "21% additional Damage Over Time"
+    const dmgMatch = template("{value:dec%} additional damage over time").match(
+      text,
+      skillName,
+    );
+    dotDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(dotDmgPct, skillName);
+
+  return {
+    dotDmgPct,
+    afflictionPerSec: createConstantLevels(30),
+  };
 };

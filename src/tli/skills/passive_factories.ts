@@ -40,4 +40,18 @@ export const passiveSkillModFactories: Partial<
       },
     ],
   }),
+  "Precise: Deep Pain": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.dotDmgPct, l),
+        addn: true,
+        dmgModType: "damage_over_time",
+      },
+      {
+        type: "AfflictionInflictedPerSec",
+        value: v(vals.afflictionPerSec, l),
+      },
+    ],
+  }),
 };
