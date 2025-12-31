@@ -997,6 +997,7 @@ const filterModsByCond = (
       )
       .with("has_focus_blessing", () => config.hasFocusBlessing)
       .with("has_agility_blessing", () => config.hasAgilityBlessing)
+      .with("has_tenacity_blessing", () => config.hasTenacityBlessing)
       .with("enemy_paralyzed", () => config.enemyParalyzed)
       .with("has_full_mana", () => config.hasFullMana)
       .with("target_enemy_is_nearby", () => config.targetEnemyIsNearby)
@@ -1712,6 +1713,24 @@ const calcNumAgility = (maxAgility: number, config: Configuration): number => {
   return maxAgility;
 };
 
+const calcMaxTenacity = (mods: Mod[]): number => {
+  const baseMaxTenacityBlessings = 4;
+  const additionalMaxTenacityBlessings = sumByValue(
+    filterMod(mods, "MaxTenacityBlessing"),
+  );
+  return baseMaxTenacityBlessings + additionalMaxTenacityBlessings;
+};
+
+const calcNumTenacity = (
+  maxTenacity: number,
+  config: Configuration,
+): number => {
+  if (config.tenacityBlessings !== undefined) {
+    return config.tenacityBlessings;
+  }
+  return maxTenacity;
+};
+
 const calcAfflictionPts = (config: Configuration): number => {
   return config.afflictionPts ?? 100;
 };
@@ -1881,6 +1900,14 @@ const resolveModsForOffenseSkill = (
     ),
   );
 
+  mods.push(
+    ...normalizeStackables(
+      prenormMods,
+      "tenacity_blessing",
+      resourcePool.tenacityBlessings,
+    ),
+  );
+
   const willpowerStacks = calculateWillpower(prenormMods);
   mods.push(...normalizeStackables(prenormMods, "willpower", willpowerStacks));
 
@@ -1955,6 +1982,8 @@ export interface ResourcePool {
   maxFocusBlessings: number;
   agilityBlessings: number;
   maxAgilityBlessings: number;
+  tenacityBlessings: number;
+  maxTenacityBlessings: number;
 }
 
 const calculateResourcePool = (
@@ -1994,6 +2023,8 @@ const calculateResourcePool = (
   const focusBlessings = calcNumFocus(maxFocusBlessings, config);
   const maxAgilityBlessings = calcMaxAgility(mods);
   const agilityBlessings = calcNumAgility(maxAgilityBlessings, config);
+  const maxTenacityBlessings = calcMaxTenacity(mods);
+  const tenacityBlessings = calcNumTenacity(maxTenacityBlessings, config);
 
   return {
     stats,
@@ -2004,6 +2035,8 @@ const calculateResourcePool = (
     focusBlessings,
     maxAgilityBlessings,
     agilityBlessings,
+    maxTenacityBlessings,
+    tenacityBlessings,
   };
 };
 

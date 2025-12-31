@@ -85,6 +85,8 @@ export const useConfiguration = (): Configuration => {
     hasFocusBlessing: configPage.hasFocusBlessing,
     agilityBlessings: configPage.agilityBlessings,
     hasAgilityBlessing: configPage.hasAgilityBlessing,
+    tenacityBlessings: configPage.tenacityBlessings,
+    hasTenacityBlessing: configPage.hasTenacityBlessing,
     enemyRes: configPage.enemyRes,
     enemyArmor: configPage.enemyArmor,
     enemyParalyzed: configPage.enemyParalyzed,

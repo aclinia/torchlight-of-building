@@ -63,6 +63,10 @@ export interface Configuration {
   agilityBlessings: number | undefined;
   // default to max
   hasAgilityBlessing: boolean;
+  // default to max
+  tenacityBlessings: number | undefined;
+  // default to max
+  hasTenacityBlessing: boolean;
   // default to false
   hasFullMana: boolean;
   // default to false

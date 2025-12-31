@@ -311,6 +311,33 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           )}
 
           <label className="text-right text-zinc-50">
+            Has Tenacity Blessing
+          </label>
+          <input
+            type="checkbox"
+            checked={config.hasTenacityBlessing}
+            onChange={(e) =>
+              onUpdate({ hasTenacityBlessing: e.target.checked })
+            }
+            className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
+          />
+
+          {config.hasTenacityBlessing && (
+            <>
+              <label className="text-right text-zinc-50">
+                Tenacity Blessing Stacks
+                <InfoTooltip text="Defaults to max (base 4 + bonuses)" />
+              </label>
+              <NumberInput
+                value={config.tenacityBlessings}
+                onChange={(v) => onUpdate({ tenacityBlessings: v })}
+                min={0}
+                max={100}
+              />
+            </>
+          )}
+
+          <label className="text-right text-zinc-50">
             Mana Consumed Recently
             <InfoTooltip text="Total mana consumed in the last 4 seconds. Defaults to 0." />
           </label>

@@ -77,6 +77,8 @@ export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   hasFocusBlessing: false,
   agilityBlessings: undefined,
   hasAgilityBlessing: false,
+  tenacityBlessings: undefined,
+  hasTenacityBlessing: false,
   enemyRes: undefined,
   enemyArmor: undefined,
   enemyParalyzed: false,

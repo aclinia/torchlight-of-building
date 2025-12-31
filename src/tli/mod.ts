@@ -68,6 +68,7 @@ export type Stackable =
   | "sealed_life_pct"
   | "focus_blessing"
   | "agility_blessing"
+  | "tenacity_blessing"
   | "torment"
   | "num_enemies_affected_by_warcry"
   | "str"
@@ -101,6 +102,7 @@ export type Condition =
   | "realm_of_mercury"
   | "has_focus_blessing"
   | "has_agility_blessing"
+  | "has_tenacity_blessing"
   | "has_full_mana"
   | "enemy_paralyzed"
   | "target_enemy_is_nearby"
@@ -223,6 +225,7 @@ interface ModDefinitions {
   MaxMercuryPtsPct: { value: number };
   MaxFocusBlessing: { value: number };
   MaxAgilityBlessing: { value: number };
+  MaxTenacityBlessing: { value: number };
   MaxChannel: { value: number };
   GeneratesBarrier: object;
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
