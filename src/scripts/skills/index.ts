@@ -8,6 +8,7 @@ import {
 import {
   preciseCrueltyParser,
   preciseDeepPainParser,
+  preciseErosionAmplificationParser,
   spellAmplificationParser,
 } from "./passive_parsers";
 import {
@@ -126,6 +127,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Precise: Deep Pain",
     categories: ["passive"],
     parser: preciseDeepPainParser,
+  },
+  {
+    skillName: "Precise: Erosion Amplification",
+    categories: ["passive"],
+    parser: preciseErosionAmplificationParser,
   },
 ];
 

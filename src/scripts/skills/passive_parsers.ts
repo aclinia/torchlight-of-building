@@ -82,3 +82,27 @@ export const preciseDeepPainParser: SupportLevelParser = (input) => {
     afflictionPerSec: createConstantLevels(30),
   };
 };
+
+export const preciseErosionAmplificationParser: SupportLevelParser = (
+  input,
+) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const erosionDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+21% additional Erosion Damage" or "21% additional Erosion Damage"
+    const dmgMatch = template("{value:dec%} additional erosion damage").match(
+      text,
+      skillName,
+    );
+    erosionDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(erosionDmgPct, skillName);
+
+  return { erosionDmgPct };
+};

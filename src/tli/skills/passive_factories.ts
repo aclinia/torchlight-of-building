@@ -54,4 +54,14 @@ export const passiveSkillModFactories: Partial<
       },
     ],
   }),
+  "Precise: Erosion Amplification": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.erosionDmgPct, l),
+        addn: true,
+        dmgModType: "erosion",
+      },
+    ],
+  }),
 };
