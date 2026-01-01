@@ -232,6 +232,7 @@ interface ModDefinitions {
   MaxTenacityBlessing: { value: number };
   MaxChannel: { value: number };
   GeneratesBarrier: object;
+  GeneratesTorment: object;
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
   HeroTraitLevel: { value: number; heroTraitLevelType?: HeroTraitLevelType };
   CoreTalent: { name: CoreTalentName };

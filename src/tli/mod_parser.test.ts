@@ -1212,6 +1212,17 @@ test("parse has hasten", () => {
   ]);
 });
 
+test("parse generates torment", () => {
+  const result = parseMod(
+    "Gains a stack of Torment when dealing damage to enemies with max Affliction",
+  );
+  expect(result).toEqual([
+    {
+      type: "GeneratesTorment",
+    },
+  ]);
+});
+
 test("parse movement speed", () => {
   const result = parseMod("+38% Movement Speed");
   expect(result).toEqual([

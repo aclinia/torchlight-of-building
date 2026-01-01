@@ -306,6 +306,10 @@ export const allParsers = [
   t("max tenacity blessing stacks \\+{value:int}").output("MaxTenacityBlessing", (c) => ({ value: c.value })),
   t("max channeled stacks \\+{value:int}").output("MaxChannel", (c) => ({ value: c.value })),
   t("has hasten").output("HasHasten", () => ({})),
+  t("gains a stack of torment when dealing damage to enemies with max affliction").output(
+    "GeneratesTorment",
+    () => ({}),
+  ),
   t("{value:dec%} [additional] movement speed").output("MovementSpeedPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
