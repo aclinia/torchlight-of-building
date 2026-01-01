@@ -1,5 +1,11 @@
 import { useNavigate } from "@tanstack/react-router";
-import { type ReactNode, useCallback, useEffect, useState } from "react";
+import {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { encodeBuildCode } from "../../lib/build-code";
 import {
   loadDebugModeFromStorage,
@@ -25,7 +31,7 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
 
   const currentSaveName = useCurrentSaveName();
   const saveDataForExport = useSaveDataRaw("export");
-  const { setSaveData } = useBuilderActions();
+  const { setSaveData, renameCurrentSave } = useBuilderActions();
 
   const loadout = useLoadout();
 
@@ -33,6 +39,9 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
   const [debugPanelExpanded, setDebugPanelExpanded] = useState(true);
   const [exportModalOpen, setExportModalOpen] = useState(false);
   const [buildCode, setBuildCode] = useState("");
+  const [isRenamingBuild, setIsRenamingBuild] = useState(false);
+  const [renameValue, setRenameValue] = useState("");
+  const renameInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setDebugMode(loadDebugModeFromStorage());
@@ -55,6 +64,36 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
     setBuildCode(code);
     setExportModalOpen(true);
   }, [saveDataForExport]);
+
+  const handleStartRename = useCallback(() => {
+    setRenameValue(currentSaveName ?? "");
+    setIsRenamingBuild(true);
+    setTimeout(() => renameInputRef.current?.focus(), 0);
+  }, [currentSaveName]);
+
+  const handleRenameSubmit = useCallback(() => {
+    const trimmed = renameValue.trim();
+    if (trimmed.length > 0 && trimmed !== currentSaveName) {
+      renameCurrentSave(trimmed);
+    }
+    setIsRenamingBuild(false);
+  }, [renameValue, currentSaveName, renameCurrentSave]);
+
+  const handleRenameCancel = useCallback(() => {
+    setRenameValue(currentSaveName ?? "");
+    setIsRenamingBuild(false);
+  }, [currentSaveName]);
+
+  const handleRenameKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Enter") {
+        handleRenameSubmit();
+      } else if (e.key === "Escape") {
+        handleRenameCancel();
+      }
+    },
+    [handleRenameSubmit, handleRenameCancel],
+  );
 
   return (
     <div className="min-h-screen bg-zinc-950 p-6">
@@ -86,11 +125,42 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
             <h1 className="text-3xl font-bold text-zinc-50">
               TLI Character Build Planner
             </h1>
-            {currentSaveName !== undefined && (
-              <span className="rounded-full border border-zinc-700 bg-zinc-800 px-3 py-1 text-sm text-zinc-300">
-                {currentSaveName}
-              </span>
-            )}
+            {currentSaveName !== undefined &&
+              (isRenamingBuild ? (
+                <div className="flex items-center gap-2">
+                  <input
+                    ref={renameInputRef}
+                    type="text"
+                    value={renameValue}
+                    onChange={(e) => setRenameValue(e.target.value)}
+                    onKeyDown={handleRenameKeyDown}
+                    className="rounded-full border border-amber-500 bg-zinc-800 px-3 py-1 text-sm text-zinc-50 outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleRenameSubmit}
+                    className="rounded px-2 py-1 text-sm font-medium text-amber-500 transition-colors hover:bg-zinc-800"
+                  >
+                    Save
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleRenameCancel}
+                    className="rounded px-2 py-1 text-sm text-zinc-400 transition-colors hover:bg-zinc-800"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleStartRename}
+                  className="rounded-full border border-zinc-700 bg-zinc-800 px-3 py-1 text-sm text-zinc-300 transition-colors hover:border-zinc-500 hover:text-zinc-100"
+                  title="Click to rename"
+                >
+                  {currentSaveName}
+                </button>
+              ))}
           </div>
 
           <div className="flex items-center gap-3">

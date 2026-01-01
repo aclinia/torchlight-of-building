@@ -122,6 +122,23 @@ export const internalStore = create(
         return success;
       },
 
+      renameCurrentSave: (newName: string): boolean => {
+        const { currentSaveId, savesIndex } = get();
+        if (currentSaveId === undefined) return false;
+
+        const updatedSaves = savesIndex.saves.map((s) =>
+          s.id === currentSaveId ? { ...s, name: newName } : s,
+        );
+        const updatedIndex = { ...savesIndex, saves: updatedSaves };
+        saveSavesIndex(updatedIndex);
+
+        set((state) => {
+          state.currentSaveName = newName;
+          state.savesIndex = updatedIndex;
+        });
+        return true;
+      },
+
       // Equipment actions
       addItemToInventory: (item: Gear) => {
         set((state) => {
