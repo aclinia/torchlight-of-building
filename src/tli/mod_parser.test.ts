@@ -120,6 +120,19 @@ test("parse additional damage per frostbite rating", () => {
   ]);
 });
 
+test("parse additional damage per fervor rating", () => {
+  const result = parseMod("+1% additional damage per 2 Fervor Rating");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 1,
+      dmgModType: "global",
+      addn: true,
+      per: { stackable: "fervor", amt: 2 },
+    },
+  ]);
+});
+
 test("parse additional damage per additional max channeled stack", () => {
   const result = parseMod(
     "+6% additional damage for every +1 additional Max Channeled Stack(s)",

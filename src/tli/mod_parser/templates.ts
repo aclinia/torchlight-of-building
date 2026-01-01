@@ -15,6 +15,7 @@ const HAS_BLOCKED_RECENTLY = "has_blocked_recently" as const;
 const HAS_CRIT_RECENTLY = "has_crit_recently" as const;
 const HAS_BLUR = "has_blur" as const;
 const FROSTBITE_RATING = "frostbite_rating" as const;
+const FERVOR = "fervor" as const;
 const MANA_CONSUMED_RECENTLY = "mana_consumed_recently" as const;
 const TARGET_ENEMY_IS_IN_PROXIMITY = "target_enemy_is_in_proximity" as const;
 const TARGET_ENEMY_IS_NEARBY = "target_enemy_is_nearby" as const;
@@ -106,6 +107,12 @@ export const allParsers = [
     dmgModType: GLOBAL,
     addn: true,
     per: { stackable: FROSTBITE_RATING, amt: c.amt },
+  })),
+  t("{value:dec%} additional damage per {amt:int} fervor rating").output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: GLOBAL,
+    addn: true,
+    per: { stackable: FERVOR, amt: c.amt },
   })),
   t("{value:dec%} [additional] damage for every \\+{amt:int} additional max channeled stack\\(s\\)").output(
     "DmgPct",
