@@ -1,6 +1,6 @@
 import type { Pactspirit } from "./types";
 
-export const Pactspirits: readonly Pactspirit[] = [
+export const Pactspirits = [
   {
     type: "Persistent",
     rarity: "Legendary",
@@ -3518,4 +3518,4 @@ export const Pactspirits: readonly Pactspirit[] = [
     affix6:
       "Inflicts Paralysis or Weaken on enemies within 10m in turn. Cooldown: 4 s\nFor every type of crowd control effect the enemy has, you and your Minions deal +3% additional damage to them\n+4% additional damage",
   },
-];
+] as const satisfies readonly Pactspirit[];

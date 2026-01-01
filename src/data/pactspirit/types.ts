@@ -25,3 +25,6 @@ export interface Pactspirit {
   affix5: string;
   affix6: string;
 }
+
+export const PactspiritNames = Pactspirits.map((p) => p.name);
+export type PactspiritName = (typeof PactspiritNames)[number];

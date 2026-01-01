@@ -43,6 +43,7 @@ import { getSupportSkillMods } from "../skills/support_mods";
 import { getAllAffixes, getGearAffixes } from "./affix-collectors";
 import type { OffenseSkillName } from "./skill_confs";
 import { type ModWithValue, multModValue, multValue } from "./util";
+import { PactspiritName } from "@/src/data/pactspirit";
 
 const addDR = (dr1: DmgRange, dr2: DmgRange): DmgRange => {
   return {
@@ -936,7 +937,7 @@ const resolveDerivedCtx = (mods: Mod[]): DerivedCtx => {
   return { hasHasten, hasBlasphemer };
 };
 
-const hasPactspirit = (name: string, loadout: Loadout): boolean => {
+const hasPactspirit = (name: PactspiritName, loadout: Loadout): boolean => {
   return (
     loadout.pactspiritPage.slot1?.pactspiritName === name ||
     loadout.pactspiritPage.slot2?.pactspiritName === name ||

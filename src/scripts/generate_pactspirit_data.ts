@@ -151,7 +151,7 @@ const extractPactspirit = (
 const generateDataFile = (items: Pactspirit[]): string => {
   return `import type { Pactspirit } from "./types";
 
-export const Pactspirits: readonly Pactspirit[] = ${JSON.stringify(items)};
+export const Pactspirits = ${JSON.stringify(items)} as const satisfies readonly Pactspirit[];
 `;
 };
 
