@@ -37,6 +37,10 @@ export const ResTypes = [
 
 export type ResType = (typeof ResTypes)[number];
 
+export const SkillAreaModTypes = ["global", "curse"];
+
+export type SkillAreaModType = (typeof SkillAreaModTypes)[number];
+
 export const SkillLevelTypes = [
   "main",
   "support",
@@ -218,7 +222,11 @@ interface ModDefinitions {
   ShadowDmgPct: { value: number; addn: boolean };
   Projectile: { value: number };
   MaxProjectile: { value: number; override?: boolean };
-  SkillAreaPct: { value: number; addn?: boolean };
+  SkillAreaPct: {
+    value: number;
+    skillAreaModType: SkillAreaModType;
+    addn?: boolean;
+  };
   SkillEffPct: { value: number; addn?: boolean };
   AuraEffPct: { value: number; addn?: boolean; unscalable?: boolean };
   CurseEffPct: { value: number; addn?: boolean };

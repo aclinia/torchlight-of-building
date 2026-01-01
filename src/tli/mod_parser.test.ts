@@ -1743,3 +1743,51 @@ test("parse all resistance reduction when enemy has max affliction", () => {
     },
   ]);
 });
+
+test("parse skill area", () => {
+  const result = parseMod("+15% Skill Area");
+  expect(result).toEqual([
+    {
+      type: "SkillAreaPct",
+      value: 15,
+      skillAreaModType: "global",
+      addn: false,
+    },
+  ]);
+});
+
+test("parse curse skill area", () => {
+  const result = parseMod("+8% Curse Skill Area");
+  expect(result).toEqual([
+    {
+      type: "SkillAreaPct",
+      value: 8,
+      skillAreaModType: "curse",
+      addn: false,
+    },
+  ]);
+});
+
+test("parse additional skill area", () => {
+  const result = parseMod("+10% additional Skill Area");
+  expect(result).toEqual([
+    {
+      type: "SkillAreaPct",
+      value: 10,
+      skillAreaModType: "global",
+      addn: true,
+    },
+  ]);
+});
+
+test("parse additional curse skill area", () => {
+  const result = parseMod("+5% additional Curse Skill Area");
+  expect(result).toEqual([
+    {
+      type: "SkillAreaPct",
+      value: 5,
+      skillAreaModType: "curse",
+      addn: true,
+    },
+  ]);
+});

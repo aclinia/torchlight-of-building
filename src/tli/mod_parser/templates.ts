@@ -392,6 +392,17 @@ export const allParsers = [
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  // Skill area - curse specific must come before global
+  t("{value:dec%} [additional] curse skill area").output("SkillAreaPct", (c) => ({
+    value: c.value,
+    skillAreaModType: "curse" as const,
+    addn: c.additional !== undefined,
+  })),
+  t("{value:dec%} [additional] skill area").output("SkillAreaPct", (c) => ({
+    value: c.value,
+    skillAreaModType: GLOBAL,
+    addn: c.additional !== undefined,
+  })),
   t(
     "additionally settles {value:dec%} of the remaining total damage when reaping, then removes all damage over time acting on the target",
   ).output("ReapPurificationPct", (c) => ({ value: c.value })),
