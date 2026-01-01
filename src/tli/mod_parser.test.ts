@@ -1818,6 +1818,16 @@ test("parse additional curse skill area", () => {
   ]);
 });
 
+test("parse skill effect duration", () => {
+  const result = parseMod("+2% Skill Effect Duration");
+  expect(result).toEqual([
+    {
+      type: "SkillEffDurationPct",
+      value: 2,
+    },
+  ]);
+});
+
 test("parse chance to gain blur when reaping", () => {
   const result = parseMod("+5% chance to gain Blur when Reaping");
   expect(result).toEqual([

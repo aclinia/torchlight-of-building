@@ -2171,10 +2171,14 @@ const calcAvgPersistentDps = (
   const erosion = dmgValues.erosion ?? 0;
   const total = physical + cold + lightning + fire + erosion;
 
+  const duration =
+    offense.duration *
+    calculateEffMultiplier(filterMod(mods, "SkillEffDurationPct"));
+
   return {
     base: { physical, cold, lightning, fire, erosion },
     total,
-    duration: offense.duration,
+    duration,
   };
 };
 

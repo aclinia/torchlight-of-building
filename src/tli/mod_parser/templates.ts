@@ -420,6 +420,7 @@ export const allParsers = [
     skillAreaModType: GLOBAL,
     addn: c.additional !== undefined,
   })),
+  t("{value:dec%} skill effect duration").output("SkillEffDurationPct", (c) => ({ value: c.value })),
   t(
     "additionally settles {value:dec%} of the remaining total damage when reaping, then removes all damage over time acting on the target",
   ).output("ReapPurificationPct", (c) => ({ value: c.value })),

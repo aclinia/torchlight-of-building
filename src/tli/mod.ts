@@ -235,6 +235,7 @@ interface ModDefinitions {
     skillAreaModType: SkillAreaModType;
     addn?: boolean;
   };
+  SkillEffDurationPct: { value: number };
   SkillEffPct: { value: number; addn?: boolean };
   AuraEffPct: { value: number; addn?: boolean; unscalable?: boolean };
   CurseEffPct: { value: number; addn?: boolean };
