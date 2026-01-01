@@ -1695,14 +1695,6 @@ const resolveBuffSkillEffMults = (
   return { skillEffMult, auraEffMult };
 };
 
-const calcMaxFocus = (mods: Mod[]): number => {
-  const baseMaxFocusBlessings = 4;
-  const additionalMaxFocusBlessings = sumByValue(
-    filterMod(mods, "MaxFocusBlessing"),
-  );
-  return baseMaxFocusBlessings + additionalMaxFocusBlessings;
-};
-
 const calcNumFocus = (maxFocus: number, config: Configuration): number => {
   if (config.focusBlessings !== undefined) {
     return config.focusBlessings;
@@ -1710,30 +1702,11 @@ const calcNumFocus = (maxFocus: number, config: Configuration): number => {
   return maxFocus;
 };
 
-const calcMaxAgility = (mods: Mod[]): number => {
-  const baseMaxAgilityBlessings = 4;
-  const additionalMaxAgilityBlessings = sumByValue(
-    filterMod(mods, "MaxAgilityBlessing"),
-  );
-  return baseMaxAgilityBlessings + additionalMaxAgilityBlessings;
-};
-
 const calcNumAgility = (maxAgility: number, config: Configuration): number => {
   if (config.agilityBlessings !== undefined) {
     return config.agilityBlessings;
   }
   return maxAgility;
-};
-
-const calcMaxTenacity = (mods: Mod[], derivedCtx: DerivedCtx): number => {
-  const additionalMaxTenacityBlessings = sumByValue(
-    filterMod(mods, "MaxTenacityBlessing"),
-  );
-  if (derivedCtx.hasBlasphemer) {
-    return 4 - additionalMaxTenacityBlessings;
-  } else {
-    return 4 + additionalMaxTenacityBlessings;
-  }
 };
 
 const calcMaxBlessings = (

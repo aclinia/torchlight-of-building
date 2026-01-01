@@ -1,4 +1,4 @@
-import type { Mod, StatModType } from "@/src/tli/mod";
+import type { Mod } from "@/src/tli/mod";
 
 export const STAT_CATEGORIES = [
   "damage",
@@ -96,19 +96,6 @@ export const groupModsByEffect = (mods: Mod[]): GroupedMods => {
   }
 
   return groups;
-};
-
-const getStatDisplayName = (statModType: StatModType): string => {
-  switch (statModType) {
-    case "str":
-      return "Strength";
-    case "dex":
-      return "Dexterity";
-    case "int":
-      return "Intelligence";
-    case "all":
-      return "All Attributes";
-  }
 };
 
 const formatLargeNumber = (val: number): string => {
