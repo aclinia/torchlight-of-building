@@ -150,4 +150,20 @@ export const activeSkillModFactories: Partial<
       },
     ],
   }),
+  Corruption: (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        dmgModType: "erosion",
+        addn: true,
+        isEnemyDebuff: true,
+        value: v(vals.dmgPct, l),
+      },
+      {
+        type: "InflictWiltPct",
+        isEnemyDebuff: true,
+        value: v(vals.dmgPct, l),
+      },
+    ],
+  }),
 };

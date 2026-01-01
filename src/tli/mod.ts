@@ -244,6 +244,8 @@ interface ModDefinitions {
   GearBasePhysDmg: { value: number };
   GearBaseCritRating: { value: number };
   GearBaseAttackSpeed: { value: number };
+  // ailments
+  InflictWiltPct: { value: number; isEnemyDebuff?: boolean };
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };
