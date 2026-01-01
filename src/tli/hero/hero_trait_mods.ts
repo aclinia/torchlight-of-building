@@ -22,6 +22,24 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory[]>> = {
       cond: "enemy_has_desecration_and_cc",
     }),
   ],
+  "Tarnished Sage": [
+    // todo: too lazy to add conditional on hitting desecrated target for now
+    (i) => ({
+      type: "AspdPct",
+      addn: false,
+      value: [10, 15, 20, 25, 30][i],
+    }),
+    (i) => ({
+      type: "CspdPct",
+      addn: false,
+      value: [10, 15, 20, 25, 30][i],
+    }),
+    (i) => ({
+      type: "MovementSpeedPct",
+      addn: false,
+      value: [10, 15, 20, 25, 30][i],
+    }),
+  ],
   // Rosa 2
   "Unsullied Blade": [() => ({ type: "SpellDmgBonusAppliesToAtkDmg" })],
   "Baptism of Purity": [
