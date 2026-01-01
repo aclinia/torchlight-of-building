@@ -936,6 +936,14 @@ const resolveDerivedCtx = (mods: Mod[]): DerivedCtx => {
   return { hasHasten, hasBlasphemer };
 };
 
+const hasPactspirit = (name: string, loadout: Loadout): boolean => {
+  return (
+    loadout.pactspiritPage.slot1?.pactspiritName === name ||
+    loadout.pactspiritPage.slot2?.pactspiritName === name ||
+    loadout.pactspiritPage.slot3?.pactspiritName === name
+  );
+};
+
 const filterModsByCond = (
   mods: Mod[],
   loadout: Loadout,
@@ -1003,6 +1011,9 @@ const filterModsByCond = (
       .with(
         "equipped_in_right_ring_slot",
         () => m.src?.startsWith("Gear#rightRing") ?? false,
+      )
+      .with("has_portrait_of_a_fallen_saintess_pactspirit", () =>
+        hasPactspirit("Portrait of a Fallen Saintess", loadout),
       )
       .exhaustive();
   });
@@ -1230,6 +1241,16 @@ const calculateImplicitMods = (): Mod[] => {
       addn: true,
       cond: "has_hasten",
       src: "Hasten",
+    },
+    // Pactspirit: Portrait of a Fallen Saintess
+    {
+      type: "DmgPct",
+      value: 4,
+      addn: true,
+      dmgModType: "erosion",
+      cond: "has_portrait_of_a_fallen_saintess_pactspirit",
+      per: { stackable: "repentance", multiplicative: true },
+      src: "Repentance (4% additional dmg per stack, multiplicative)",
     },
   ];
 };
@@ -1890,6 +1911,11 @@ const resolveModsForOffenseSkill = (
 
   mods.push(...calculateTorment(config));
   mods.push(...calculateAffliction(mods, config));
+
+  const repentanceStacks = 4 + sumByValue(filterMod(mods, "MaxRepentance"));
+  mods.push(
+    ...normalizeStackables(prenormMods, "repentance", repentanceStacks),
+  );
 
   mods.push(
     ...normalizeStackables(

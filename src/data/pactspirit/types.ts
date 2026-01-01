@@ -1,3 +1,5 @@
+import { Pactspirits } from "./pactspirits";
+
 export interface PactspiritRingDetails {
   name: string;
   affix: string;

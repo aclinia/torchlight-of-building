@@ -87,7 +87,9 @@ export type Stackable =
   | "additional_max_channel_stack"
   | "channel_stack"
   // skill-specific
-  | "mind_control_link";
+  | "mind_control_link"
+  // pactspirit-specific
+  | "repentance";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -138,7 +140,9 @@ export type Condition =
   | "enemy_is_cursed"
   | "have_both_sealed_mana_and_life"
   | "equipped_in_left_ring_slot"
-  | "equipped_in_right_ring_slot";
+  | "equipped_in_right_ring_slot"
+  // pactspirits
+  | "has_portrait_of_a_fallen_saintess_pactspirit";
 
 export type ConditionThresholdTarget =
   | "num_enemies_nearby"
