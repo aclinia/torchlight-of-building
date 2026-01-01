@@ -109,6 +109,8 @@ export interface Configuration {
   tormentStacks: number;
   // default to false
   hasBlur: boolean;
+  // default to false
+  blurEndedRecently: boolean;
 
   // --------------------
   // hero-specific config

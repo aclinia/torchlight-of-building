@@ -102,6 +102,7 @@ export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   enemyHasDesecration: false,
   tormentStacks: 0,
   hasBlur: false,
+  blurEndedRecently: false,
 });
 
 export const createEmptySkillPage = (): SkillPage => ({

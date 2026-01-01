@@ -127,6 +127,7 @@ export type Condition =
   | "has_hasten"
   | "has_crit_recently"
   | "has_blur"
+  | "blur_ended_recently"
   | "channeling"
   | "sages_insight_fire"
   | "sages_insight_cold"

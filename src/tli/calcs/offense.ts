@@ -970,6 +970,7 @@ const filterModsByCond = (
       .with("has_hasten", () => derivedCtx.hasHasten)
       .with("has_crit_recently", () => config.hasCritRecently)
       .with("has_blur", () => config.hasBlur)
+      .with("blur_ended_recently", () => config.blurEndedRecently)
       .with("channeling", () => config.channeling)
       .with("sages_insight_fire", () => config.sagesInsightFireActivated)
       .with("sages_insight_cold", () => config.sagesInsightColdActivated)

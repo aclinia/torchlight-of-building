@@ -97,6 +97,7 @@ const createMinimalSaveData = (
     enemyHasDesecration: false,
     tormentStacks: 0,
     hasBlur: false,
+    blurEndedRecently: false,
   },
   calculationsPage: { selectedSkillName: undefined },
   ...overrides,

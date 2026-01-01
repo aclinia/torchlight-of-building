@@ -110,5 +110,6 @@ export const useConfiguration = (): Configuration => {
     enemyHasDesecration: configPage.enemyHasDesecration,
     tormentStacks: configPage.tormentStacks,
     hasBlur: configPage.hasBlur,
+    blurEndedRecently: configPage.blurEndedRecently,
   };
 };
