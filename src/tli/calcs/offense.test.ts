@@ -4722,8 +4722,9 @@ describe("desecration mechanics", () => {
     // With Blasphemer: base 3 desecration
     // +2 MaxFocusBlessing, +3 MaxAgilityBlessing, +5 MaxTenacityBlessing (capped at 4)
     // Total: 3 + 2 + 3 + 4 = 12 stacks
-    // Each stack = 15% additional DOT damage = 180% additional = 2.8x multiplier
-    // Base DOT: 100 DPS * 2.8 = 280 DPS
+    // Each stack = 15% additional DOT damage, stacking multiplicatively
+    // 1.15^12 = 5.35025x multiplier
+    // Base DOT: 100 DPS * 5.35025 ≈ 535 DPS
     const input = createDesecrationInput(
       affixLines([
         { type: "Blasphemer" },
@@ -4737,7 +4738,7 @@ describe("desecration mechanics", () => {
 
     expect(results.resourcePool.desecration).toBe(12);
     expect(results.skills[skillName]?.persistentDpsSummary?.total).toBeCloseTo(
-      280,
+      535.025,
     );
   });
 
