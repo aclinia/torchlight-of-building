@@ -319,11 +319,13 @@ export interface GearPage {
 }
 
 export interface SupportSkillSlot {
+  skillType: "support";
   name: SupportSkillName;
   level?: number; // default 20
 }
 
 export interface MagnificentSupportSkillSlot {
+  skillType: "magnificent_support";
   name: MagnificentSupportSkillName;
   tier: 0 | 1 | 2; // lower is better (tier 0 is best)
   rank: 1 | 2 | 3 | 4 | 5; // higher is better (rank 5 is max)
@@ -331,6 +333,7 @@ export interface MagnificentSupportSkillSlot {
 }
 
 export interface NobleSupportSkillSlot {
+  skillType: "noble_support";
   name: NobleSupportSkillName;
   tier: 0 | 1 | 2; // lower is better (tier 0 is best)
   rank: 1 | 2 | 3 | 4 | 5; // higher is better (rank 5 is max)
@@ -338,6 +341,7 @@ export interface NobleSupportSkillSlot {
 }
 
 export interface ActivationMediumSkillSlot {
+  skillType: "activation_medium";
   name: ActivationMediumSkillNmae;
 }
 

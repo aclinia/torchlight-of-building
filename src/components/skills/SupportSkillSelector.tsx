@@ -212,13 +212,18 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
     const type = getSkillType(skillName);
     switch (type) {
       case "regular":
-        onChange({ name: skillName as SupportSkillName, level: 20 });
+        onChange({
+          skillType: "support",
+          name: skillName as SupportSkillName,
+          level: 20,
+        });
         break;
       case "magnificent": {
         const magSkill = getMagnificentSkill(skillName);
         if (magSkill !== undefined) {
           const defaults = getWorstSpecialDefaults(magSkill);
           onChange({
+            skillType: "magnificent_support",
             name: skillName as MagnificentSupportSkillName,
             tier: defaults.tier,
             rank: defaults.rank,
@@ -232,6 +237,7 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
         if (nobleSkillData !== undefined) {
           const defaults = getWorstSpecialDefaults(nobleSkillData);
           onChange({
+            skillType: "noble_support",
             name: skillName as NobleSupportSkillName,
             tier: defaults.tier,
             rank: defaults.rank,
@@ -241,7 +247,10 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
         break;
       }
       case "activationMedium":
-        onChange({ name: skillName as ActivationMediumSkillNmae });
+        onChange({
+          skillType: "activation_medium",
+          name: skillName as ActivationMediumSkillNmae,
+        });
         break;
       default:
         onChange(undefined);
@@ -257,6 +266,7 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
       return;
     // selectedSlot is SupportSkillSlot since skillType === "regular"
     onChange({
+      skillType: "support",
       name: selectedSlot.name as SupportSkillName,
       level,
     });

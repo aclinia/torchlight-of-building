@@ -97,7 +97,7 @@ describe("build-code", () => {
     skillPage.activeSkills[1] = {
       skillName: "Berserking Blade",
       enabled: true,
-      supportSkills: { 1: { name: "Added Fire Damage" } },
+      supportSkills: { 1: { skillType: "support", name: "Added Fire Damage" } },
     };
     skillPage.activeSkills[2] = {
       skillName: "Blazing Dance",

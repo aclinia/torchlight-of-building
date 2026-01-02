@@ -1482,35 +1482,6 @@ const resolveSelectedSkillMods = (
   }));
 };
 
-// Type guards for support skill slot types
-const isRegularSupportSlot = (
-  slot: BaseSupportSkillSlot,
-): slot is SupportSkillSlot => {
-  return !("tier" in slot) && SupportSkills.some((s) => s.name === slot.name);
-};
-
-const isMagnificentSupportSlot = (
-  slot: BaseSupportSkillSlot,
-): slot is MagnificentSupportSkillSlot => {
-  return (
-    "tier" in slot &&
-    "rank" in slot &&
-    "value" in slot &&
-    MagnificentSupportSkills.some((s) => s.name === slot.name)
-  );
-};
-
-const isNobleSupportSlot = (
-  slot: BaseSupportSkillSlot,
-): slot is NobleSupportSkillSlot => {
-  return (
-    "tier" in slot &&
-    "rank" in slot &&
-    "value" in slot &&
-    NobleSupportSkills.some((s) => s.name === slot.name)
-  );
-};
-
 const resolveSelectedSkillSupportMods = (
   slot: SkillSlot,
   loadoutMods: Mod[],
@@ -1528,7 +1499,7 @@ const resolveSelectedSkillSupportMods = (
     if (ss === undefined) continue;
 
     // Handle regular support skills
-    if (isRegularSupportSlot(ss)) {
+    if (ss.skillType === "support") {
       const supportSkill = SupportSkills.find((s) => s.name === ss.name) as
         | BaseSupportSkill
         | undefined;
@@ -1555,7 +1526,7 @@ const resolveSelectedSkillSupportMods = (
       }
     }
     // Handle magnificent support skills
-    else if (isMagnificentSupportSlot(ss)) {
+    else if (ss.skillType === "magnificent_support") {
       const mods = getMagnificentSupportSkillMods(
         ss.name as MagnificentSupportSkillName,
         ss.tier,
@@ -1570,7 +1541,7 @@ const resolveSelectedSkillSupportMods = (
       }
     }
     // Handle noble support skills
-    else if (isNobleSupportSlot(ss)) {
+    else if (ss.skillType === "noble_support") {
       const mods = getNobleSupportSkillMods(
         ss.name as NobleSupportSkillName,
         ss.tier,
