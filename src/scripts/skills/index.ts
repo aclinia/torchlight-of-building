@@ -26,6 +26,7 @@ import {
   criticalStrikeRatingIncreaseParser,
   enhancedAilmentParser,
   extendedDurationParser,
+  grudgeParser,
   guardParser,
   hauntParser,
   increasedAreaParser,
@@ -118,6 +119,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Extended Duration",
     categories: ["support"],
     parser: extendedDurationParser,
+  },
+  {
+    skillName: "Grudge",
+    categories: ["support"],
+    parser: grudgeParser,
   },
   {
     skillName: "Frost Spike",

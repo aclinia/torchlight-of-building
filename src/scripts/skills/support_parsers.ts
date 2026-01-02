@@ -409,3 +409,34 @@ export const extendedDurationParser: SupportLevelParser = (input) => {
 
   return { skillEffDurationPct };
 };
+
+export const grudgeParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  // Extract damage percentage vs cursed enemies from progression table
+  const dmgCol = findColumn(
+    progressionTable,
+    "additional damage to cursed enemies",
+    skillName,
+  );
+  const dmgPctVsCursed: Record<number, number> = {};
+  for (const [levelStr, text] of Object.entries(dmgCol.rows)) {
+    dmgPctVsCursed[Number(levelStr)] = parseNumericValue(text);
+  }
+
+  // Extract paralyze chance vs cursed enemies
+  const paralyzeCol = findColumn(
+    progressionTable,
+    "chance to paralyze",
+    skillName,
+  );
+  const paralyzeChancePct: Record<number, number> = {};
+  for (const [levelStr, text] of Object.entries(paralyzeCol.rows)) {
+    paralyzeChancePct[Number(levelStr)] = parseNumericValue(text);
+  }
+
+  validateAllLevels(dmgPctVsCursed, skillName);
+  validateAllLevels(paralyzeChancePct, skillName);
+
+  return { dmgPctVsCursed, paralyzeChancePct };
+};

@@ -156,4 +156,18 @@ export const supportSkillModFactories: Partial<
   "Extended Duration": (l, vals) => [
     { type: "SkillEffDurationPct", value: v(vals.skillEffDurationPct, l) },
   ],
+  Grudge: (l, vals) => [
+    {
+      type: "DmgPct",
+      value: v(vals.dmgPctVsCursed, l),
+      dmgModType: "global",
+      addn: true,
+      cond: "enemy_is_cursed",
+    },
+    {
+      type: "InflictParalysisPct",
+      value: v(vals.paralyzeChancePct, l),
+      cond: "enemy_is_cursed",
+    },
+  ],
 };

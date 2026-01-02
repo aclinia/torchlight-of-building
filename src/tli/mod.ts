@@ -290,6 +290,7 @@ interface ModDefinitions {
   // ailments
   InflictWiltPct: { value: number; isEnemyDebuff?: boolean };
   BaseWiltFlatDmg: { value: number };
+  InflictParalysisPct: { value: number };
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };
