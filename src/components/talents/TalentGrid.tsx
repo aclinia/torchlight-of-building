@@ -110,7 +110,7 @@ export const TalentGrid: React.FC<TalentGridProps> = ({
   );
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto pt-4">
       <div
         className="relative"
         style={{ width: gridWidth, height: gridHeight }}
