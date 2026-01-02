@@ -1577,6 +1577,18 @@ test("parse max fire resistance", () => {
   ]);
 });
 
+test("parse erosion resistance per stack of repentance", () => {
+  const result = parseMod("+3% Erosion Resistance per stack of Repentance");
+  expect(result).toEqual([
+    {
+      type: "ResistancePct",
+      value: 3,
+      resType: "erosion",
+      per: { stackable: "repentance" },
+    },
+  ]);
+});
+
 test("parse reap", () => {
   const result = parseMod(
     "Reaps 0.17 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",

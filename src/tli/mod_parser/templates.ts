@@ -339,6 +339,11 @@ export const allParsers = [
     value: c.value,
     resType: c.resType,
   })),
+  t("{value:dec%} {resType:ResType} resistance per stack of repentance").output("ResistancePct", (c) => ({
+    value: c.value,
+    resType: c.resType,
+    per: { stackable: "repentance" as const },
+  })),
   t("{value:dec%} {resType:ResType} resistance").output("ResistancePct", (c) => ({
     value: c.value,
     resType: c.resType,
