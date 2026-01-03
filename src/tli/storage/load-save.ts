@@ -796,7 +796,7 @@ const convertSupportSkillSlot = (
       };
     case "activation_medium": {
       const affixTexts = slot.affixes ?? [];
-      const parsedMods = parseActivationMediumAffixes(slot.name, affixTexts);
+      const parsedMods = parseActivationMediumAffixes(affixTexts);
       return {
         skillType: "activation_medium",
         name: slot.name as ActivationMediumSkillNmae,
