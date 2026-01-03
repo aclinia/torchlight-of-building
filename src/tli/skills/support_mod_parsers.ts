@@ -93,14 +93,13 @@ const allSupportParsers = [
       addn: true,
     }),
   ),
-  t("{value:dec%} [additional] damage over time for the supported skill").output(
-    "DmgPct",
-    (c) => ({
-      value: c.value,
-      dmgModType: "damage_over_time" as const,
-      addn: c.additional !== undefined,
-    }),
-  ),
+  t(
+    "{value:dec%} [additional] damage over time for the supported skill",
+  ).output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: "damage_over_time" as const,
+    addn: c.additional !== undefined,
+  })),
   t(
     "the supported skill deals more damage to enemies with more life, up to {value:int%} additional erosion damage",
   ).output("DmgPct", (c) => ({
@@ -152,6 +151,12 @@ const allSupportParsers = [
   ),
   t("{value:dec%} aura effect for the supported skill").output(
     "AuraEffPct",
+    (c) => ({
+      value: c.value,
+    }),
+  ),
+  t("{value:dec%} buff effect for the supported skill").output(
+    "FocusBuffEffPct",
     (c) => ({
       value: c.value,
     }),
