@@ -140,7 +140,7 @@ const resolveCoreTalentMods = (mods: Mod[]): Mod[] => {
   return [...mods.filter((m) => m.type !== "CoreTalent"), ...newMods];
 };
 
-export interface OffenseAttackHitSummary {
+export interface OffenseAttackDpsSummary {
   critChance: number;
   critDmgMult: number;
   aspd: number;
@@ -150,7 +150,7 @@ export interface OffenseAttackHitSummary {
 }
 
 interface OffenseSummary {
-  attackHitSummary?: OffenseAttackHitSummary;
+  attackDpsSummary?: OffenseAttackDpsSummary;
   persistentDpsSummary?: PersistentDpsSummary;
   totalReapDpsSummary?: TotalReapDpsSummary;
   totalDps: number;
@@ -2369,13 +2369,13 @@ const calcTotalReapDps = (
   };
 };
 
-const calcAvgSkillHitDps = (
+const calcAvgAttackDps = (
   mods: Mod[],
   loadout: Loadout,
   perSkillContext: PerSkillModContext,
   skillLevel: number,
   config: Configuration,
-): OffenseAttackHitSummary | undefined => {
+): OffenseAttackDpsSummary | undefined => {
   const gearDmg = calculateGearDmg(loadout, mods);
   const flatDmg = calculateFlatDmg(mods, "attack");
   const skillHit = calculateSkillHit(
@@ -2474,7 +2474,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       derivedCtx,
     );
 
-    const attackHitSummary = calcAvgSkillHitDps(
+    const attackHitSummary = calcAvgAttackDps(
       mods,
       loadout,
       perSkillContext,
@@ -2501,7 +2501,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       (totalReapDpsSummary?.totalReapDps ?? 0);
 
     skills[slot.skillName as ImplementedActiveSkillName] = {
-      attackHitSummary,
+      attackDpsSummary: attackHitSummary,
       persistentDpsSummary,
       totalReapDpsSummary,
       totalDps,

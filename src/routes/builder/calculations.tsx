@@ -340,7 +340,7 @@ function CalculationsPage(): React.ReactNode {
       </div>
 
       {offenseSummary !== undefined &&
-        (offenseSummary.attackHitSummary !== undefined ||
+        (offenseSummary.attackDpsSummary !== undefined ||
           offenseSummary.persistentDpsSummary !== undefined ||
           offenseSummary.totalReapDpsSummary !== undefined) && (
           <div className="rounded-lg border border-amber-500/50 bg-zinc-900 p-6">
@@ -353,7 +353,7 @@ function CalculationsPage(): React.ReactNode {
           </div>
         )}
 
-      {offenseSummary?.attackHitSummary !== undefined && (
+      {offenseSummary?.attackDpsSummary !== undefined && (
         <div className="rounded-lg border border-amber-500/30 bg-zinc-900 p-6">
           <h3 className="mb-4 text-lg font-semibold text-amber-400">
             Attack Hit Summary
@@ -362,20 +362,20 @@ function CalculationsPage(): React.ReactNode {
             <div className="rounded-lg bg-zinc-800 p-4">
               <div className="text-sm text-zinc-400">Average DPS</div>
               <div className="text-2xl font-bold text-amber-400">
-                {formatStatValue.dps(offenseSummary.attackHitSummary.avgDps)}
+                {formatStatValue.dps(offenseSummary.attackDpsSummary.avgDps)}
               </div>
             </div>
             <div className="rounded-lg bg-zinc-800 p-4">
               <div className="text-sm text-zinc-400">Avg Hit (no crit)</div>
               <div className="text-xl font-semibold text-zinc-50">
-                {formatStatValue.damage(offenseSummary.attackHitSummary.avgHit)}
+                {formatStatValue.damage(offenseSummary.attackDpsSummary.avgHit)}
               </div>
             </div>
             <div className="rounded-lg bg-zinc-800 p-4">
               <div className="text-sm text-zinc-400">Avg Hit (with crit)</div>
               <div className="text-xl font-semibold text-zinc-50">
                 {formatStatValue.damage(
-                  offenseSummary.attackHitSummary.avgHitWithCrit,
+                  offenseSummary.attackDpsSummary.avgHitWithCrit,
                 )}
               </div>
             </div>
@@ -383,7 +383,7 @@ function CalculationsPage(): React.ReactNode {
               <div className="text-sm text-zinc-400">Crit Chance</div>
               <div className="text-xl font-semibold text-zinc-50">
                 {formatStatValue.percentage(
-                  offenseSummary.attackHitSummary.critChance,
+                  offenseSummary.attackDpsSummary.critChance,
                 )}
               </div>
             </div>
@@ -391,14 +391,14 @@ function CalculationsPage(): React.ReactNode {
               <div className="text-sm text-zinc-400">Crit Multiplier</div>
               <div className="text-xl font-semibold text-zinc-50">
                 {formatStatValue.multiplier(
-                  offenseSummary.attackHitSummary.critDmgMult,
+                  offenseSummary.attackDpsSummary.critDmgMult,
                 )}
               </div>
             </div>
             <div className="rounded-lg bg-zinc-800 p-4">
               <div className="text-sm text-zinc-400">Attack Speed</div>
               <div className="text-xl font-semibold text-zinc-50">
-                {formatStatValue.aps(offenseSummary.attackHitSummary.aspd)}
+                {formatStatValue.aps(offenseSummary.attackDpsSummary.aspd)}
               </div>
             </div>
           </div>
@@ -415,7 +415,7 @@ function CalculationsPage(): React.ReactNode {
         <ReapDpsSummarySection summary={offenseSummary.totalReapDpsSummary} />
       )}
 
-      {(offenseSummary?.attackHitSummary !== undefined ||
+      {(offenseSummary?.attackDpsSummary !== undefined ||
         offenseSummary?.persistentDpsSummary !== undefined ||
         offenseSummary?.totalReapDpsSummary !== undefined) &&
         groupedMods !== undefined && (

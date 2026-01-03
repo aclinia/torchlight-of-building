@@ -19,7 +19,7 @@ describe("offense golden tests", () => {
       throw new Error("Frost Spike skill not found in results");
     }
 
-    const avgDps = frostSpike.attackHitSummary?.avgDps;
+    const avgDps = frostSpike.attackDpsSummary?.avgDps;
     // With projectile damage from frostbite: trunc(100/35) = 2 projectiles × 8% = 16% additional damage
     const expectedDps = 14.39e12; // ~14.39 trillion
     const tolerance = 0.01; // 1% tolerance

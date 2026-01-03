@@ -179,7 +179,7 @@ export const StatsPanel = (): React.ReactNode => {
         </div>
       </div>
 
-      {offenseSummary?.attackHitSummary !== undefined ||
+      {offenseSummary?.attackDpsSummary !== undefined ||
       offenseSummary?.persistentDpsSummary !== undefined ||
       offenseSummary?.totalReapDpsSummary !== undefined ? (
         <>
@@ -195,12 +195,12 @@ export const StatsPanel = (): React.ReactNode => {
             </div>
           </div>
 
-          {offenseSummary.attackHitSummary !== undefined && (
+          {offenseSummary.attackDpsSummary !== undefined && (
             <div className="space-y-3">
               <div className="rounded bg-zinc-800 p-3">
                 <div className="text-xs text-zinc-400">Average DPS</div>
                 <div className="text-xl font-bold text-amber-400">
-                  {formatStatValue.dps(offenseSummary.attackHitSummary.avgDps)}
+                  {formatStatValue.dps(offenseSummary.attackDpsSummary.avgDps)}
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export const StatsPanel = (): React.ReactNode => {
                 <div className="text-xs text-zinc-400">Avg Hit (no crit)</div>
                 <div className="text-lg font-semibold text-zinc-50">
                   {formatStatValue.damage(
-                    offenseSummary.attackHitSummary.avgHit,
+                    offenseSummary.attackDpsSummary.avgHit,
                   )}
                 </div>
               </div>
@@ -217,7 +217,7 @@ export const StatsPanel = (): React.ReactNode => {
                 <div className="text-xs text-zinc-400">Avg Hit (with crit)</div>
                 <div className="text-lg font-semibold text-zinc-50">
                   {formatStatValue.damage(
-                    offenseSummary.attackHitSummary.avgHitWithCrit,
+                    offenseSummary.attackDpsSummary.avgHitWithCrit,
                   )}
                 </div>
               </div>
@@ -226,7 +226,7 @@ export const StatsPanel = (): React.ReactNode => {
                 <div className="text-xs text-zinc-400">Crit Chance</div>
                 <div className="text-lg font-semibold text-zinc-50">
                   {formatStatValue.percentage(
-                    offenseSummary.attackHitSummary.critChance,
+                    offenseSummary.attackDpsSummary.critChance,
                   )}
                 </div>
               </div>
@@ -235,7 +235,7 @@ export const StatsPanel = (): React.ReactNode => {
                 <div className="text-xs text-zinc-400">Crit Multiplier</div>
                 <div className="text-lg font-semibold text-zinc-50">
                   {formatStatValue.multiplier(
-                    offenseSummary.attackHitSummary.critDmgMult,
+                    offenseSummary.attackDpsSummary.critDmgMult,
                   )}
                 </div>
               </div>
@@ -243,7 +243,7 @@ export const StatsPanel = (): React.ReactNode => {
               <div className="rounded bg-zinc-800 p-3">
                 <div className="text-xs text-zinc-400">Attack Speed</div>
                 <div className="text-lg font-semibold text-zinc-50">
-                  {formatStatValue.aps(offenseSummary.attackHitSummary.aspd)}
+                  {formatStatValue.aps(offenseSummary.attackDpsSummary.aspd)}
                 </div>
               </div>
             </div>

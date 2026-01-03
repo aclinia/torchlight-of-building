@@ -175,10 +175,10 @@ const validate = (
 ) => {
   const actual = results.skills[skillName as ImplementedActiveSkillName];
   expect(actual).toBeDefined();
-  expect(actual?.attackHitSummary).toBeDefined();
+  expect(actual?.attackDpsSummary).toBeDefined();
   for (const [key, value] of Object.entries(expected)) {
     expect(
-      actual?.attackHitSummary?.[key as keyof typeof expected],
+      actual?.attackDpsSummary?.[key as keyof typeof expected],
     ).toBeCloseTo(value);
   }
 };
@@ -2545,7 +2545,7 @@ describe("resolveBuffSkillMods", () => {
     expect(bullsRageBuffMod?.value).toBeCloseTo(27 * 1.7);
 
     // Verify final avgHit includes both Ice Bond's cold buff and Bull's Rage's melee buff
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(201 * 1.561 * 1.459);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(201 * 1.561 * 1.459);
   });
 
   test("supports on main skill do not affect buff skills", () => {
@@ -2856,7 +2856,7 @@ describe("resolveBuffSkillMods", () => {
     expect(preciseCrueltyBuffMod?.value).toBeCloseTo(22 * 3);
 
     // Verify avgHit: 100 base weapon * (1 + 0.66 addn dmg) = 166
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(100 * (1 + 0.22 * 3));
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(100 * (1 + 0.22 * 3));
   });
 
   test("AuraEffPct only affects Aura-tagged skills", () => {
@@ -2936,7 +2936,7 @@ describe("Pactspirit Ring Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.5) = 150
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(150);
   });
 
   test("multiple pactspirit ring affixes stack additively", () => {
@@ -3002,7 +3002,7 @@ describe("Pactspirit Ring Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.3 + 0.3) = 160
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(160);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(160);
   });
 
   test("installed destiny affix overrides original affix", () => {
@@ -3073,7 +3073,7 @@ describe("Pactspirit Ring Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.75 from destiny, NOT 0.25 from original) = 175
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(175);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(175);
   });
 
   test("rings from multiple pactspirit slots contribute to damage", () => {
@@ -3155,7 +3155,7 @@ describe("Pactspirit Ring Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.2 + 0.3) = 150
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(150);
   });
 });
 
@@ -3209,7 +3209,7 @@ describe("Divinity Slate Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.5) = 150
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(150);
   });
 
   test("only placed slates contribute to damage, not inventory-only slates", () => {
@@ -3261,7 +3261,7 @@ describe("Divinity Slate Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * 1 = 100 (no bonus from unplaced slate)
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(100);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(100);
   });
 
   test("multiple placed slates stack additively", () => {
@@ -3334,7 +3334,7 @@ describe("Divinity Slate Mods", () => {
     const actual = results.skills["[Test] Simple Attack"];
 
     // 100 base damage * (1 + 0.3 + 0.2) = 150
-    expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
+    expect(actual?.attackDpsSummary?.avgHit).toBeCloseTo(150);
   });
 });
 
