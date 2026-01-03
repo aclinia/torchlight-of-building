@@ -95,9 +95,9 @@ export const useTooltip = (): UseTooltipReturn => {
       }
     },
     handleClick: (e: MouseEvent) => {
-      // Only toggle pin if clicking on the trigger itself, not child buttons
+      // Only toggle pin if clicking on the trigger itself, not child interactive elements
       const target = e.target as HTMLElement;
-      if (target.tagName === "BUTTON") {
+      if (target.tagName === "BUTTON" || target.tagName === "INPUT") {
         return;
       }
       togglePinRef.current();
