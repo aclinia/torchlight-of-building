@@ -653,6 +653,29 @@ const buildSupportSkillAffixData = (
   const fixedAffixes: string[] = [];
   const templates: SupportSkillTemplate[] = [];
 
+  // Check if this skill has a "Descript" column (full text descriptions)
+  const descriptColumn = progressionTable.find(
+    (col) => col.header.toLowerCase().trim() === "descript",
+  );
+
+  if (descriptColumn !== undefined) {
+    // For Descript columns, treat entire text as a single template value
+    const levelValues: string[] = [];
+    for (let level = 1; level <= 40; level++) {
+      const valueStr = descriptColumn.rows[level];
+      if (valueStr === undefined) {
+        // Missing level - can't use this approach
+        break;
+      }
+      levelValues.push(valueStr);
+    }
+
+    if (levelValues.length === 40) {
+      templates.push({ template: "{value}", levelValues });
+      return { fixedAffixes, templates }; // No fixed affixes for Descript skills
+    }
+  }
+
   // Get the affix lines from description[1] (the second description block)
   const affixDescription = description[1];
   if (affixDescription === undefined) {

@@ -1,7 +1,50 @@
 import type { SupportMod } from "../core";
+import type { Mod } from "../mod";
 import { spec, t } from "../mod_parser";
 
 const GLOBAL = "global" as const;
+
+/**
+ * Willpower parser - handles full text blob for Willpower skill
+ * Extracts:
+ * - MaxWillpowerStacks from "Stacks up to N time(s)"
+ * - DmgPct with per: { stackable: "willpower" } from the damage line
+ */
+const parseWillpowerBlob = (input: string): Mod[] | undefined => {
+  const normalized = input.toLowerCase();
+
+  // Check if this is a Willpower description
+  if (!normalized.includes("for every stack of buffs while standing still")) {
+    return undefined;
+  }
+
+  const mods: Mod[] = [];
+
+  // Extract max stacks: "Stacks up to N time(s)"
+  const stacksMatch = normalized.match(/stacks up to (\d+) time\(s\)/);
+  if (stacksMatch !== null) {
+    mods.push({
+      type: "MaxWillpowerStacks",
+      value: parseInt(stacksMatch[1], 10),
+    });
+  }
+
+  // Extract damage per stack: "+X% additional damage for the supported skill for every stack of buffs while standing still"
+  const dmgMatch = normalized.match(
+    /\+?([\d.]+)%?\s*additional damage for the supported skill for every stack of buffs while standing still/,
+  );
+  if (dmgMatch !== null) {
+    mods.push({
+      type: "DmgPct",
+      value: parseFloat(dmgMatch[1]),
+      dmgModType: GLOBAL,
+      addn: false, // "increased" damage, not "additional/more"
+      per: { stackable: "willpower" as const },
+    });
+  }
+
+  return mods.length > 0 ? mods : undefined;
+};
 
 const allSupportParsers = [
   t("auto-used supported skills {value:int%} additional damage").output(
@@ -71,14 +114,6 @@ const allSupportParsers = [
     value: c.value,
     addn: true,
     modType: GLOBAL,
-  })),
-  t(
-    "{value:dec%} additional damage for the supported skill for every stack of buffs while standing still",
-  ).output("DmgPct", (c) => ({
-    value: c.value,
-    dmgModType: GLOBAL,
-    addn: false,
-    per: { stackable: "willpower" as const },
   })),
   t("{value:dec%} attack speed for the supported skill").output(
     "AspdPct",
@@ -200,6 +235,14 @@ const allSupportParsers = [
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {
   const normalized = text.trim().toLowerCase();
+
+  // Try blob parsers first (for skills with Descript columns like Willpower)
+  const willpowerMods = parseWillpowerBlob(normalized);
+  if (willpowerMods !== undefined) {
+    return willpowerMods.map((mod) => ({ mod }));
+  }
+
+  // Try template-based parsers
   for (const parser of allSupportParsers) {
     const mods = parser.parse(normalized);
     if (mods !== undefined) {

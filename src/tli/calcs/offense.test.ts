@@ -1847,14 +1847,15 @@ describe("resolveSelectedSkillSupportMods via calculateOffense", () => {
   test("all four support skills (haunt, willpower, steamroll, quick decision) combine correctly", () => {
     // All at level 20:
     //   Haunt: DmgPct 0.8% (additional/more, global)
-    //   Willpower: Note: Willpower's damage affix is not in generated data due to HTML structure
+    //   Willpower: MaxWillpowerStacks 6, DmgPct 6% additional per stack (36% total)
     //   Steamroll: AspdPct -15% (increased), DmgPct 40.5% (additional, melee)
     //   Quick Decision: AspdAndCspdPct 24.5% (additional/more)
     //
     // Damage calculation:
     //   Base: 100
     //   Haunt (+0.8% more): 100 * 1.008 = 100.8
-    //   Steamroll (+40.5% more melee): 100.8 * 1.405 = 141.624
+    //   Willpower (+6% * 6 stacks = +36% more): 100.8 * 1.36 = 137.088
+    //   Steamroll (+40.5% more melee): 137.088 * 1.405 = 192.609
     //
     // Attack speed calculation:
     //   Base: 1.0
@@ -1885,7 +1886,7 @@ describe("resolveSelectedSkillSupportMods via calculateOffense", () => {
     });
 
     validate(results, "[Test] Simple Attack", {
-      avgHit: 141.624,
+      avgHit: 192.609,
       aspd: 1.05825,
     });
   });

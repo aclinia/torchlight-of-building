@@ -138,8 +138,8 @@ export type SupportTarget =
 export interface SupportSkillTemplate {
   /** Template string with {value} placeholder, e.g. "+{value}% additional damage for the supported skill" */
   template: string;
-  /** 40-element array of values (index = level - 1) */
-  levelValues: readonly number[];
+  /** 40-element array of values (index = level - 1). Can be numbers or strings (for Descript columns). */
+  levelValues: readonly (number | string)[];
 }
 
 export interface BaseSupportSkill extends BaseSkill {

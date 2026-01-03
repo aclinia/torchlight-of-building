@@ -42,7 +42,19 @@ export const extractProgressionTable = (
 
     cells.slice(1).each((i, cell) => {
       if (columns[i] !== undefined) {
-        columns[i].rows[level] = $(cell).text().trim();
+        const header = columns[i].header.toLowerCase().trim();
+
+        if (header === "descript") {
+          // For Descript columns, preserve structure by converting <br/> to \n
+          let html = $(cell).html() ?? "";
+          // Convert <br/> to \n
+          html = html.replace(/<br\s*\/?>/gi, "\n");
+          // Strip remaining HTML tags (like <span class="text-mod">)
+          const text = html.replace(/<[^>]+>/g, "");
+          columns[i].rows[level] = text.trim();
+        } else {
+          columns[i].rows[level] = $(cell).text().trim();
+        }
       }
     });
   });
