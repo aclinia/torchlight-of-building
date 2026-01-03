@@ -4479,8 +4479,8 @@ describe("persistent damage", () => {
     expect(summary?.total).toBeCloseTo(100);
   });
 
-  test("penetration applies with enemy armor", () => {
-    // Enemy armor reduces physical damage
+  test("persistent damage ignores enemy armor", () => {
+    // Enemy armor should not reduce persistent damage
     const config: Configuration = {
       ...createDefaultConfiguration(),
       enemyArmor: 1000,
@@ -4488,7 +4488,8 @@ describe("persistent damage", () => {
     const input = createPersistentInput([], config);
     const results = calculateOffense(input);
     const summary = results.skills[skillName]?.persistentDpsSummary;
-    expect(summary?.total).toBeLessThan(100);
+    // Persistent damage should be unaffected by armor (still 100)
+    expect(summary?.total).toBeCloseTo(100);
   });
 
   test("spell damage modifier applies", () => {

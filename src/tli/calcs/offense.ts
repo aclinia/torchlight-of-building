@@ -651,25 +651,25 @@ const calculateAllPoolTotals = <T extends DmgRange | number>(
   ),
 });
 
+interface ApplyDmgBonusesAndPenInput {
+  dmgPools: DmgPools<DmgRange> | DmgPools<number>;
+  mods: Mod[];
+  baseDmgModTypes: DmgModType[];
+  config: Configuration;
+  ignoreArmor: boolean;
+}
+
 // Applies damage % bonuses and penetration to damage pools
 function applyDmgBonusesAndPen(
-  dmgPools: DmgPools<DmgRange>,
-  mods: Mod[],
-  baseDmgModTypes: DmgModType[],
-  config: Configuration,
+  input: ApplyDmgBonusesAndPenInput & { dmgPools: DmgPools<DmgRange> },
 ): DmgRanges;
 function applyDmgBonusesAndPen(
-  dmgPools: DmgPools<number>,
-  mods: Mod[],
-  baseDmgModTypes: DmgModType[],
-  config: Configuration,
+  input: ApplyDmgBonusesAndPenInput & { dmgPools: DmgPools<number> },
 ): NumDmgValues;
 function applyDmgBonusesAndPen(
-  dmgPools: DmgPools<DmgRange> | DmgPools<number>,
-  mods: Mod[],
-  baseDmgModTypes: DmgModType[],
-  config: Configuration,
+  input: ApplyDmgBonusesAndPenInput,
 ): DmgRanges | NumDmgValues {
+  const { dmgPools, mods, baseDmgModTypes, config, ignoreArmor } = input;
   const allDmgPcts = filterMod(mods, "DmgPct");
 
   // Determine if we're working with DmgRange or number based on pool contents
@@ -689,7 +689,7 @@ function applyDmgBonusesAndPen(
       baseDmgModTypes,
       { min: 0, max: 0 },
     ) as DmgRanges;
-    return calculatePenetration(beforePen, mods, config);
+    return calculatePenetration({ dmg: beforePen, mods, config, ignoreArmor });
   }
 
   const beforePen = calculateAllPoolTotals(
@@ -698,7 +698,7 @@ function applyDmgBonusesAndPen(
     baseDmgModTypes,
     0,
   ) as NumDmgValues;
-  return calculatePenetration(beforePen, mods, config);
+  return calculatePenetration({ dmg: beforePen, mods, config, ignoreArmor });
 }
 
 interface SkillHitOverview {
@@ -778,21 +778,23 @@ const filterPenMods = (
   return mods.filter((m) => penTypes.includes(m.penType));
 };
 
+interface CalculatePenetrationInput {
+  dmg: DmgRanges | NumDmgValues;
+  mods: Mod[];
+  config: Configuration;
+  ignoreArmor: boolean;
+}
+
 function calculatePenetration(
-  dmg: DmgRanges,
-  mods: Mod[],
-  config: Configuration,
+  input: CalculatePenetrationInput & { dmg: DmgRanges },
 ): DmgRanges;
 function calculatePenetration(
-  dmg: NumDmgValues,
-  mods: Mod[],
-  config: Configuration,
+  input: CalculatePenetrationInput & { dmg: NumDmgValues },
 ): NumDmgValues;
 function calculatePenetration(
-  dmg: DmgRanges | NumDmgValues,
-  mods: Mod[],
-  config: Configuration,
+  input: CalculatePenetrationInput,
 ): DmgRanges | NumDmgValues {
+  const { dmg, mods, config, ignoreArmor } = input;
   const enemyRes = calculateEnemyRes(mods, config);
   const elePenMods = filterMod(mods, "ResPenPct");
   const coldPenMods = filterPenMods(elePenMods, ["all", "elemental", "cold"]);
@@ -812,10 +814,12 @@ function calculatePenetration(
   const enemyErosionResMult =
     1 - enemyRes.erosion / 100 + sumByValue(erosionPenMods) / 100;
 
-  const enemyArmorDmgMitigation = calculateEnemyArmorDmgMitigation(
-    calculateEnemyArmor(config),
-  );
-  const totalArmorPenPct = sumByValue(filterMod(mods, "ArmorPenPct")) / 100;
+  const enemyArmorDmgMitigation = ignoreArmor
+    ? { physical: 0, nonPhysical: 0 }
+    : calculateEnemyArmorDmgMitigation(calculateEnemyArmor(config));
+  const totalArmorPenPct = ignoreArmor
+    ? 0
+    : sumByValue(filterMod(mods, "ArmorPenPct")) / 100;
   const enemyArmorPhysMult =
     1 - enemyArmorDmgMitigation.physical + totalArmorPenPct;
   const enemyArmorNonPhysMult =
@@ -889,12 +893,13 @@ const calculateSkillHit = (
 
   // Damage conversion happens after flat damage, before % bonuses
   const dmgPools = convertDmg(skillBaseDmg, mods);
-  const { physical, cold, lightning, fire, erosion } = applyDmgBonusesAndPen(
+  const { physical, cold, lightning, fire, erosion } = applyDmgBonusesAndPen({
     dmgPools,
     mods,
     baseDmgModTypes,
     config,
-  );
+    ignoreArmor: false,
+  });
 
   const total = {
     min: physical.min + cold.min + lightning.min + fire.min + erosion.min,
@@ -2244,13 +2249,18 @@ export interface PersistentDpsSummary {
   duration: number;
 }
 
+interface CalcAvgPersistentDpsInput {
+  mods: Mod[];
+  loadout: Loadout;
+  perSkillContext: PerSkillModContext;
+  skillLevel: number;
+  config: Configuration;
+}
+
 const calcAvgPersistentDps = (
-  mods: Mod[],
-  _loadout: Loadout,
-  perSkillContext: PerSkillModContext,
-  skillLevel: number,
-  config: Configuration,
+  input: CalcAvgPersistentDpsInput,
 ): PersistentDpsSummary | undefined => {
+  const { mods, perSkillContext, skillLevel, config } = input;
   const skill = perSkillContext.skill as BaseActiveSkill;
   const offense: SkillOffenseOfType<"PersistentDmg"> | undefined = match(
     skill.name,
@@ -2266,16 +2276,17 @@ const calcAvgPersistentDps = (
     });
   if (offense === undefined) return;
 
-  const input: NumDmgValues = { [offense.dmgType]: offense.value };
+  const baseDmg: NumDmgValues = { [offense.dmgType]: offense.value };
   const baseDmgModTypes: DmgModType[] = dmgModTypesForSkill(skill);
 
-  const dmgPools = convertDmg(input, mods);
-  const dmgValues = applyDmgBonusesAndPen(
+  const dmgPools = convertDmg(baseDmg, mods);
+  const dmgValues = applyDmgBonusesAndPen({
     dmgPools,
     mods,
     baseDmgModTypes,
     config,
-  );
+    ignoreArmor: true,
+  });
 
   const physical = dmgValues.physical ?? 0;
   const cold = dmgValues.cold ?? 0;
@@ -2471,13 +2482,13 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       config,
     );
 
-    const persistentDpsSummary = calcAvgPersistentDps(
+    const persistentDpsSummary = calcAvgPersistentDps({
       mods,
       loadout,
       perSkillContext,
       skillLevel,
       config,
-    );
+    });
 
     const totalReapDpsSummary =
       persistentDpsSummary !== undefined
