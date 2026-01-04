@@ -2256,8 +2256,10 @@ export const calculateDefenses = (
     return { max, potential, actual };
   };
 
-  const movementSpeedBonusPct =
-    (calculateEffMultiplier(filterMod(mods, "MovementSpeedPct")) - 1) * 100;
+  const movementSpeedBonusPct = (
+    (calculateEffMultiplier(filterMod(mods, "MovementSpeedPct")) - 1) *
+    100
+  ).toFixed(2);
 
   return {
     coldRes: calcRes(["cold", "elemental"]),
