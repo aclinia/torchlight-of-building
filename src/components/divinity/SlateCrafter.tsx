@@ -49,15 +49,9 @@ export const SlateCrafter: React.FC<SlateCrafterProps> = ({ onSave }) => {
   const availableAffixes = getDivinityAffixes(god);
 
   const getOptionsForSlot = (
-    slotIndex: number,
+    _slotIndex: number,
   ): SearchableSelectOption<string>[] => {
     return availableAffixes
-      .filter(
-        (affix) =>
-          !affixSlots.some(
-            (a, i) => i !== slotIndex && a?.effect === affix.effect,
-          ),
-      )
       .map((affix) => ({
         value: affix.effect,
         label: affix.effect.split("\n").join(" / "),

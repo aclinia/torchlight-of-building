@@ -79,12 +79,6 @@ export const LegendarySlateCrafter: React.FC<LegendarySlateCrafterProps> = ({
     const filtered = filterAffixesByTypes(allAffixes, constraint.allowedTypes);
 
     return filtered
-      .filter(
-        (affix) =>
-          !affixSlots.some(
-            (a, i) => i !== slotIndex && a?.effect === affix.effect,
-          ),
-      )
       .map((affix) => ({
         value: affix.effect,
         label:
