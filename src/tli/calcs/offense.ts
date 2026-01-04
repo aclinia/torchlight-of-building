@@ -1702,17 +1702,17 @@ interface EnemyRes {
 }
 
 const calculateEnemyRes = (mods: Mod[], config: Configuration): EnemyRes => {
-  // enemyRes is stored as whole percentage (40 for 40%)
-  const res = config.enemyRes ?? 40;
   const enemyResMods = filterMod(mods, "EnemyRes");
   const sumEnemyResMods = (resTypes: ResType[]) => {
     return sumByValue(enemyResMods.filter((m) => resTypes.includes(m.resType)));
   };
   return {
-    cold: res + sumEnemyResMods(["cold", "elemental"]),
-    lightning: res + sumEnemyResMods(["lightning", "elemental"]),
-    fire: res + sumEnemyResMods(["fire", "elemental"]),
-    erosion: res + sumEnemyResMods(["erosion"]),
+    cold: (config.enemyColdRes ?? 40) + sumEnemyResMods(["cold", "elemental"]),
+    lightning:
+      (config.enemyLightningRes ?? 40) +
+      sumEnemyResMods(["lightning", "elemental"]),
+    fire: (config.enemyFireRes ?? 40) + sumEnemyResMods(["fire", "elemental"]),
+    erosion: (config.enemyErosionRes ?? 30) + sumEnemyResMods(["erosion"]),
   };
 };
 

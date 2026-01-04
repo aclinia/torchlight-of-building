@@ -40,7 +40,10 @@ const createDefaultConfiguration = (): Configuration => ({
   hasAgilityBlessing: false,
   tenacityBlessings: 0,
   hasTenacityBlessing: false,
-  enemyRes: 0,
+  enemyColdRes: 0,
+  enemyLightningRes: 0,
+  enemyFireRes: 0,
+  enemyErosionRes: 0,
   enemyArmor: 0,
   enemyParalyzed: false,
   hasFullMana: false,
@@ -2363,7 +2366,10 @@ describe("resolveBuffSkillMods", () => {
         hasAgilityBlessing: false,
         tenacityBlessings: 0,
         hasTenacityBlessing: false,
-        enemyRes: undefined,
+        enemyColdRes: undefined,
+        enemyLightningRes: undefined,
+        enemyFireRes: undefined,
+        enemyErosionRes: undefined,
         enemyArmor: undefined,
         enemyParalyzed: false,
         hasFullMana: false,
@@ -3491,14 +3497,18 @@ describe("penetration", () => {
   const skillName = "[Test] Simple Attack" as const;
 
   interface PenConfigInput {
-    enemyRes?: number;
+    enemyColdRes?: number;
+    enemyErosionRes?: number;
     enemyArmor?: number;
   }
 
-  const createPenetrationConfig = (input: PenConfigInput = {}) => {
+  const createPenetrationConfig = (
+    input: PenConfigInput = {},
+  ): Configuration => {
     const config = createDefaultConfiguration();
-    const { enemyRes, enemyArmor } = input;
-    if (enemyRes !== undefined) config.enemyRes = enemyRes;
+    const { enemyColdRes, enemyErosionRes, enemyArmor } = input;
+    if (enemyColdRes !== undefined) config.enemyColdRes = enemyColdRes;
+    if (enemyErosionRes !== undefined) config.enemyErosionRes = enemyErosionRes;
     if (enemyArmor !== undefined) config.enemyArmor = enemyArmor;
     return config;
   };
@@ -3508,7 +3518,7 @@ describe("penetration", () => {
     dmg: number,
     modType: "physical" | "cold" | "erosion",
     options: { mods?: AffixLine[]; res?: number; armor?: number } = {},
-  ) => {
+  ): { loadout: Loadout; configuration: Configuration } => {
     const weapon =
       modType === "physical"
         ? baseWeapon
@@ -3521,16 +3531,22 @@ describe("penetration", () => {
               ]),
             ],
           };
+    // Set element-specific resistance based on damage type
+    const penConfig: PenConfigInput = { enemyArmor: options.armor };
+    if (options.res !== undefined) {
+      if (modType === "cold") {
+        penConfig.enemyColdRes = options.res;
+      } else if (modType === "erosion") {
+        penConfig.enemyErosionRes = options.res;
+      }
+    }
     return {
       loadout: initLoadout({
         gearPage: { equippedGear: { mainHand: weapon }, inventory: [] },
         customAffixLines: options.mods ?? [],
         skillPage: simpleAttackSkillPage(),
       }),
-      configuration: createPenetrationConfig({
-        enemyRes: options.res,
-        enemyArmor: options.armor,
-      }),
+      configuration: createPenetrationConfig(penConfig),
     };
   };
 

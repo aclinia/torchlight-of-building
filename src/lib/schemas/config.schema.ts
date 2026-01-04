@@ -45,7 +45,10 @@ export const ConfigurationPageSchema = z
     numMindControlLinksUsed: z.number().optional().catch(undefined),
     realmOfMercuryEnabled: z.boolean().catch(false),
     baptismOfPurityEnabled: z.boolean().catch(false),
-    enemyRes: z.number().optional().catch(undefined),
+    enemyColdRes: z.number().optional().catch(undefined),
+    enemyLightningRes: z.number().optional().catch(undefined),
+    enemyFireRes: z.number().optional().catch(undefined),
+    enemyErosionRes: z.number().optional().catch(undefined),
     enemyArmor: z.number().optional().catch(undefined),
     customAffixLines: z.array(z.string()).optional().catch(undefined),
   })
@@ -92,7 +95,10 @@ export const ConfigurationPageSchema = z
     numMindControlLinksUsed: undefined,
     realmOfMercuryEnabled: false,
     baptismOfPurityEnabled: false,
-    enemyRes: undefined,
+    enemyColdRes: undefined,
+    enemyLightningRes: undefined,
+    enemyFireRes: undefined,
+    enemyErosionRes: undefined,
     enemyArmor: undefined,
     customAffixLines: undefined,
   });

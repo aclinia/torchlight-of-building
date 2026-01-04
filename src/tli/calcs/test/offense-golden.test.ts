@@ -53,9 +53,9 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // DOT DPS: ~24.80 billion (persistent damage ignores armor, with 40% enemy res default)
+    // DOT DPS: ~26.31 billion (persistent damage ignores armor, with 30% enemy erosion res default)
     const dotDps = mindControl.persistentDpsSummary?.total;
-    const expectedDotDps = 24.8e9;
+    const expectedDotDps = 26.31e9;
     expect(dotDps).toBeGreaterThan(expectedDotDps * (1 - tolerance));
     expect(dotDps).toBeLessThan(expectedDotDps * (1 + tolerance));
 
@@ -63,9 +63,9 @@ describe("offense golden tests", () => {
     const dotDuration = mindControl.persistentDpsSummary?.duration;
     expect(dotDuration).toBeCloseTo(2.28, 2);
 
-    // Reap DPS: ~261.86 billion (scales with DOT, with 40% enemy res default)
+    // Reap DPS: ~277.79 billion (scales with DOT, with 30% enemy erosion res default)
     const reapDps = mindControl.totalReapDpsSummary?.totalReapDps;
-    const expectedReapDps = 261.86e9;
+    const expectedReapDps = 277.79e9;
     expect(reapDps).toBeGreaterThan(expectedReapDps * (1 - tolerance));
     expect(reapDps).toBeLessThan(expectedReapDps * (1 + tolerance));
 
@@ -77,9 +77,9 @@ describe("offense golden tests", () => {
     const reapDuration = mindControl.totalReapDpsSummary?.reapDurationBonusPct;
     expect(reapDuration).toBeCloseTo(182, 0);
 
-    // Total DPS: ~286.65 billion (DOT + Reap, with 40% enemy res default)
+    // Total DPS: ~304.13 billion (DOT + Reap, with 30% enemy erosion res default)
     const totalDps = mindControl.totalDps;
-    const expectedTotalDps = 286.65e9;
+    const expectedTotalDps = 304.13e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
   });

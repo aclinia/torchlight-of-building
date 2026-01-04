@@ -143,8 +143,11 @@ export interface Configuration {
   // enemy config
   // ------------
 
-  // default to 40
-  enemyRes: number | undefined;
+  // defaults: cold/lightning/fire = 40, erosion = 30
+  enemyColdRes: number | undefined;
+  enemyLightningRes: number | undefined;
+  enemyFireRes: number | undefined;
+  enemyErosionRes: number | undefined;
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor: number | undefined;
 

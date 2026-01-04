@@ -370,18 +370,45 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           />
 
           <label className="text-right text-zinc-50">
-            Enemy Resistance %
-            <InfoTooltip text="Enemy elemental resistance. Defaults to 40%." />
+            Enemy Cold Res %
+            <InfoTooltip text="Enemy cold resistance. Defaults to 40%." />
           </label>
           <NumberInput
-            value={
-              config.enemyRes !== undefined
-                ? Math.round(config.enemyRes * 100)
-                : undefined
-            }
-            onChange={(v) =>
-              onUpdate({ enemyRes: v !== undefined ? v / 100 : undefined })
-            }
+            value={config.enemyColdRes}
+            onChange={(v) => onUpdate({ enemyColdRes: v })}
+            min={0}
+            max={100}
+          />
+
+          <label className="text-right text-zinc-50">
+            Enemy Lightning Res %
+            <InfoTooltip text="Enemy lightning resistance. Defaults to 40%." />
+          </label>
+          <NumberInput
+            value={config.enemyLightningRes}
+            onChange={(v) => onUpdate({ enemyLightningRes: v })}
+            min={0}
+            max={100}
+          />
+
+          <label className="text-right text-zinc-50">
+            Enemy Fire Res %
+            <InfoTooltip text="Enemy fire resistance. Defaults to 40%." />
+          </label>
+          <NumberInput
+            value={config.enemyFireRes}
+            onChange={(v) => onUpdate({ enemyFireRes: v })}
+            min={0}
+            max={100}
+          />
+
+          <label className="text-right text-zinc-50">
+            Enemy Erosion Res %
+            <InfoTooltip text="Enemy erosion resistance. Defaults to 30%." />
+          </label>
+          <NumberInput
+            value={config.enemyErosionRes}
+            onChange={(v) => onUpdate({ enemyErosionRes: v })}
             min={0}
             max={100}
           />
