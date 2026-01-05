@@ -69,11 +69,23 @@ t("{value:dec%} attack and cast speed").outputMany([
 ```
 
 **Template capture types:**
-- `{name:int}` - Integer (e.g., "5" → 5)
-- `{name:dec}` - Decimal (e.g., "21.5" → 21.5)
-- `{name:dec%}` - Percentage number (e.g., "96%" → 96)
-- `{name:int%}` - Integer percentage (e.g., "-30%" → -30)
-- `{name:EnumType}` - Enum lookup (e.g., `{dmgType:DmgChunkType}`)
+
+| Type | Matches | Example Input → Output |
+|------|---------|------------------------|
+| `{name:int}` | Unsigned integer | `"5"` → `5` |
+| `{name:dec}` | Unsigned decimal | `"21.5"` → `21.5` |
+| `{name:int%}` | Unsigned integer percent | `"30%"` → `30` |
+| `{name:dec%}` | Unsigned decimal percent | `"96%"` → `96` |
+| `{name:+int}` | **Signed** integer (requires `+` or `-`) | `"+5"` → `5`, `"-3"` → `-3` |
+| `{name:+dec}` | **Signed** decimal (requires `+` or `-`) | `"+21.5"` → `21.5` |
+| `{name:+int%}` | **Signed** integer percent | `"+30%"` → `30`, `"-15%"` → `-15` |
+| `{name:+dec%}` | **Signed** decimal percent | `"+96%"` → `96` |
+| `{name:EnumType}` | Enum lookup | `{dmgType:DmgChunkType}` |
+
+**Signed vs Unsigned Types:**
+- Use **unsigned** (`dec%`, `int`) when input does NOT start with `+` or `-` (e.g., `"8% additional damage applied to Life"`)
+- Use **signed** (`+dec%`, `+int`) when input STARTS with `+` or `-` (e.g., `"+25% additional damage"`)
+- Signed types will NOT match unsigned inputs, and vice versa
 
 **Optional syntax:**
 - `[additional]` - Optional literal, sets `c.additional?: true`
@@ -158,23 +170,35 @@ t("{value:dec%} {statModType:StatWord}").output(...), // Generic
 
 ## Examples
 
-### Simple Value Parser
+### Simple Value Parser (Signed)
 
-**Input:** `"+10% all stats"`
+**Input:** `"+10% all stats"` (starts with `+`)
 
 ```typescript
-t("{value:dec%} all stats").output("StatPct", (c) => ({
+t("{value:+dec%} all stats").output("StatPct", (c) => ({
   value: c.value,
   statModType: "all" as const,
 })),
 ```
 
-### Parser with Condition
+### Simple Value Parser (Unsigned)
+
+**Input:** `"8% additional damage applied to Life"` (no sign)
+
+```typescript
+t("{value:dec%} additional damage applied to life").output("DmgPct", (c) => ({
+  value: c.value,
+  dmgModType: "global" as const,
+  addn: true,
+})),
+```
+
+### Parser with Condition (Signed)
 
 **Input:** `"+40% damage if you have Blocked recently"`
 
 ```typescript
-t("{value:dec%} damage if you have blocked recently").output("DmgPct", (c) => ({
+t("{value:+dec%} damage if you have blocked recently").output("DmgPct", (c) => ({
   value: c.value,
   dmgModType: "global" as const,
   addn: false,
@@ -182,12 +206,14 @@ t("{value:dec%} damage if you have blocked recently").output("DmgPct", (c) => ({
 })),
 ```
 
-### Parser with Per-Stackable
+### Parser with Per-Stackable (Signed in "deals" position)
 
 **Input:** `"Deals +1% additional damage to an enemy for every 2 points of Frostbite Rating the enemy has"`
 
+Note: The `+` appears AFTER "deals", so use `{value:+dec%}`:
+
 ```typescript
-t("deals {value:dec%} additional damage to an enemy for every {amt:int} points of frostbite rating the enemy has")
+t("deals {value:+dec%} additional damage to an enemy for every {amt:int} points of frostbite rating the enemy has")
   .output("DmgPct", (c) => ({
     value: c.value,
     dmgModType: "global" as const,
@@ -196,26 +222,36 @@ t("deals {value:dec%} additional damage to an enemy for every {amt:int} points o
   })),
 ```
 
-### Multi-Output Parser
+### Multi-Output Parser (Signed)
 
 **Input:** `"+6% attack and cast speed"`
 
 ```typescript
-t("{value:dec%} [additional] attack and cast speed").outputMany([
+t("{value:+dec%} [additional] attack and cast speed").outputMany([
   spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined })),
   spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined })),
 ]),
+```
+
+### Flat Stat Parser (Signed)
+
+**Input:** `"+166 Max Mana"`
+
+```typescript
+t("{value:+dec} max mana").output("MaxMana", (c) => ({ value: c.value })),
 ```
 
 ## Common Mistakes
 
 | Mistake | Fix |
 |---------|-----|
+| Using `dec%` for input with `+` prefix | Use `+dec%` for inputs like `"+25% damage"` |
+| Using `+dec%` for input without sign | Use `dec%` for inputs like `"8% damage applied to life"` |
 | Template doesn't match input case | Templates are matched case-insensitively; input is normalized to lowercase |
 | Missing `as const` on string literals | Add `as const` for type narrowing: `statModType: "all" as const` |
 | Handler doesn't account for new variant | Update `offense.ts` to handle new values (e.g., `statModType === "all"`) |
 | Generic template before specific | Move specific templates earlier in `allParsers` array |
-| Forgot to escape special chars | Use `\\` for regex special chars: `\\+`, `\\(`, `\\)` |
+| Forgot to escape special chars | Use `\\` for regex special chars: `\\(`, `\\)` |
 
 ## Data Flow
 

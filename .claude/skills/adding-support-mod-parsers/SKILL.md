@@ -47,10 +47,23 @@ t("{value:dec%} additional damage for the supported skill").output(
 ```
 
 **Template capture types:**
-- `{name:int}` - Integer (e.g., "5" → 5)
-- `{name:dec}` - Decimal (e.g., "21.5" → 21.5)
-- `{name:dec%}` - Percentage number (e.g., "96%" → 96)
-- `{name:int%}` - Integer percentage (e.g., "-30%" → -30)
+
+| Type | Matches | Example Input → Output |
+|------|---------|------------------------|
+| `{name:int}` | Unsigned integer | `"5"` → `5` |
+| `{name:dec}` | Unsigned decimal | `"21.5"` → `21.5` |
+| `{name:int%}` | Unsigned integer percent | `"30%"` → `30` |
+| `{name:dec%}` | Unsigned decimal percent | `"96%"` → `96` |
+| `{name:+int}` | **Signed** integer (requires `+` or `-`) | `"+5"` → `5`, `"-3"` → `-3` |
+| `{name:+dec}` | **Signed** decimal (requires `+` or `-`) | `"+21.5"` → `21.5` |
+| `{name:+int%}` | **Signed** integer percent | `"+30%"` → `30`, `"-15%"` → `-15` |
+| `{name:+dec%}` | **Signed** decimal percent | `"+96%"` → `96` |
+
+**Signed vs Unsigned Types:**
+- Use **unsigned** (`dec%`, `int`) when input does NOT start with `+` or `-` (e.g., `"0.8% additional damage"`)
+- Use **signed** (`+dec%`, `+int`) when input STARTS with `+` or `-` (e.g., `"+19.8% additional damage"`)
+- Signed types will NOT match unsigned inputs, and vice versa
+- **IMPORTANT:** Some support skills have signed inputs, others have unsigned - you may need BOTH templates (see examples below)
 
 **Optional syntax:**
 - `[additional]` - Optional literal, sets `c.additional?: true`
@@ -93,9 +106,25 @@ pnpm check
 
 ## Examples
 
-### Simple Damage Mod
-**Input:** `"+15% additional damage for the supported skill"`
+### Damage Mod with BOTH Signed and Unsigned Variants
+
+Some support skills use `+{value}%` templates (e.g., Increased Area) while others use `{value}%` (e.g., Haunt). You need BOTH templates:
+
+**Inputs:**
+- `"+19.8% additional damage for the supported skill"` (Increased Area - signed)
+- `"0.8% additional damage for the supported skill"` (Haunt - unsigned)
+
 ```typescript
+// Signed version (e.g., "+19.8% additional damage...")
+t("{value:+dec%} additional damage for the supported skill").output(
+  "DmgPct",
+  (c) => ({
+    value: c.value,
+    dmgModType: "global" as const,
+    addn: true,
+  }),
+),
+// Unsigned version (e.g., "0.8% additional damage...")
 t("{value:dec%} additional damage for the supported skill").output(
   "DmgPct",
   (c) => ({
@@ -106,10 +135,10 @@ t("{value:dec%} additional damage for the supported skill").output(
 ),
 ```
 
-### Typed Damage Mod
+### Typed Damage Mod (Signed)
 **Input:** `"+20% additional melee damage for the supported skill"`
 ```typescript
-t("{value:dec%} additional melee damage for the supported skill").output(
+t("{value:+dec%} additional melee damage for the supported skill").output(
   "DmgPct",
   (c) => ({
     value: c.value,
@@ -118,6 +147,20 @@ t("{value:dec%} additional melee damage for the supported skill").output(
   }),
 ),
 ```
+
+### Attack Speed (Signed - can be negative)
+**Input:** `"-15% Attack Speed for the supported skill"` (Steamroll)
+```typescript
+t("{value:+dec%} attack speed for the supported skill").output(
+  "AspdPct",
+  (c) => ({
+    value: c.value,
+    addn: false,
+  }),
+),
+```
+
+Note: `+dec%` matches both `+` and `-` signs.
 
 ### Conditional Mod
 **Input:** `"The supported skill deals +30% additional damage to cursed enemies"`
@@ -170,6 +213,17 @@ t("when the supported skill deals damage over time, it inflicts {value:int} affl
 
 Use `{_:type}` to capture but ignore values.
 
+### Shadow Quantity (Signed Flat Integer)
+**Input:** `"+2 Shadow Quantity for the supported skill"`
+```typescript
+t("{value:+int} shadow quantity for the supported skill").output(
+  "ShadowQuant",
+  (c) => ({
+    value: c.value,
+  }),
+),
+```
+
 ## Template Ordering
 
 **IMPORTANT:** More specific patterns must come before generic ones in `allSupportParsers` array.
@@ -188,11 +242,13 @@ t("{value:dec%} additional melee damage for the supported skill").output(...),  
 
 | Mistake | Fix |
 |---------|-----|
+| Using `dec%` for input with `+` prefix | Use `+dec%` for inputs like `"+25% damage"` |
+| Using `+dec%` for input without sign | Use `dec%` for inputs like `"0.8% damage"` |
+| Only one template when inputs vary | Add BOTH signed and unsigned templates (see examples) |
 | Generic template before specific | Move specific templates earlier in array |
 | Missing `as const` on string literals | Add `as const` for type narrowing |
 | Handler doesn't account for new mod type | Update `offense.ts` to handle new mod types |
 | Forgot the wrapper structure | `parseSupportAffix` already wraps in `{ mod }` |
-| Using wrong capture type | Use `dec%` for decimals like "21.5%", `int%` for integers like "-30%" |
 
 ## Data Flow
 
