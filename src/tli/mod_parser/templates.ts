@@ -386,6 +386,7 @@ export const allParsers = [
   t("max agility blessing stacks {value:+int}").output("MaxAgilityBlessing", (c) => ({ value: c.value })),
   t("max tenacity blessing stacks {value:+int}").output("MaxTenacityBlessing", (c) => ({ value: c.value })),
   t("{value:+int} max repentance stacks").output("MaxRepentance", (c) => ({ value: c.value })),
+  t("{value:+int} max spell burst").output("MaxSpellBurst", (c) => ({ value: c.value })),
   t("{value:+int} max channeled stacks when equipped in the left ring slot").output("MaxChannel", (c) => ({
     value: c.value,
     cond: "equipped_in_left_ring_slot" as const,

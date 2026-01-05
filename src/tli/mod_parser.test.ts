@@ -1375,6 +1375,16 @@ test("parse max repentance stacks", () => {
   ]);
 });
 
+test("parse max spell burst", () => {
+  const result = parseMod("+1 Max Spell Burst");
+  expect(result).toEqual([
+    {
+      type: "MaxSpellBurst",
+      value: 1,
+    },
+  ]);
+});
+
 test("parse max channeled stacks", () => {
   const result = parseMod("Max Channeled Stacks +1");
   expect(result).toEqual([
