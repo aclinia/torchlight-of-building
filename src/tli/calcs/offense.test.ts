@@ -69,6 +69,9 @@ const createDefaultConfiguration = (): Configuration => ({
   hasBlur: false,
   blurEndedRecently: false,
   numMindControlLinksUsed: undefined,
+  hasSquidnova: false,
+  targetEnemyFrozenRecently: false,
+  targetEnemyHasColdInfiltration: false,
 });
 
 // Helper to create Affix objects from mods for tests
@@ -2425,6 +2428,9 @@ describe("resolveBuffSkillMods", () => {
         hasBlur: false,
         blurEndedRecently: false,
         numMindControlLinksUsed: undefined,
+        hasSquidnova: false,
+        targetEnemyFrozenRecently: false,
+        targetEnemyHasColdInfiltration: false,
       },
     });
     const actual = results.skills["[Test] Simple Attack"];

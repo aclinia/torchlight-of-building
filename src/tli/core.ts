@@ -130,6 +130,12 @@ export interface Configuration {
   blurEndedRecently: boolean;
   // default to max
   numMindControlLinksUsed: number | undefined;
+  // default to false
+  hasSquidnova: boolean;
+  // default to false
+  targetEnemyFrozenRecently: boolean;
+  // default to false
+  targetEnemyHasColdInfiltration: boolean;
 
   // --------------------
   // hero-specific config

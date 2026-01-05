@@ -116,5 +116,8 @@ export const useConfiguration = (): Configuration => {
     hasBlur: configPage.hasBlur,
     blurEndedRecently: configPage.blurEndedRecently,
     numMindControlLinksUsed: configPage.numMindControlLinksUsed,
+    hasSquidnova: configPage.hasSquidnova,
+    targetEnemyFrozenRecently: configPage.targetEnemyFrozenRecently,
+    targetEnemyHasColdInfiltration: configPage.targetEnemyHasColdInfiltration,
   };
 };

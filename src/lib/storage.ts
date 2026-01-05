@@ -111,6 +111,9 @@ export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   hasBlur: false,
   blurEndedRecently: false,
   numMindControlLinksUsed: undefined,
+  hasSquidnova: false,
+  targetEnemyFrozenRecently: false,
+  targetEnemyHasColdInfiltration: false,
 });
 
 export const createEmptySkillPage = (): SkillPage => ({
