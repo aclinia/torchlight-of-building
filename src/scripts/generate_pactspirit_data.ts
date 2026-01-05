@@ -10,33 +10,37 @@ import type {
 const RARITIES = ["Magic", "Rare", "Legendary"] as const;
 
 const cleanEffectText = (html: string): string => {
-  // First, add newline placeholders between modifier divs
-  const NEWLINE_PLACEHOLDER = "\x00";
-  let text = html.replace(
-    /<\/div>\s*<div class="modifier">/gi,
-    NEWLINE_PLACEHOLDER,
-  );
+  // Use cheerio to properly extract text content from HTML
+  // This handles tooltips with > characters in attribute values correctly
+  const $ = cheerio.load(`<root>${html}</root>`, { xml: false });
 
-  // Replace <br> tags with placeholder to preserve intentional line breaks
-  text = text.replace(/<br\s*\/?>/gi, NEWLINE_PLACEHOLDER);
+  // Replace br tags with newline markers before text extraction
+  $("root br").replaceWith("\n");
 
-  // Remove all HTML tags
-  text = text.replace(/<[^>]+>/g, "");
+  // Extract text from each modifier div separately, then join with newlines
+  const modifiers = $("root div.modifier");
+  let text: string;
 
-  // Decode common HTML entities
-  text = text
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&nbsp;/g, " ");
-
-  // Normalize whitespace (excluding our placeholder) to single spaces
-  text = text.replace(/[ \t]+/g, " ");
-
-  // Restore newlines from placeholders
-  text = text.replace(new RegExp(NEWLINE_PLACEHOLDER, "g"), "\n");
+  if (modifiers.length > 0) {
+    // Multiple modifier divs - extract each and join with newlines
+    const lines: string[] = [];
+    modifiers.each((_, el) => {
+      // Use [ \t]+ to normalize only spaces/tabs, preserving newlines from <br> tags
+      const modText = $(el)
+        .text()
+        .replace(/[ \t]+/g, " ")
+        .trim();
+      if (modText.length > 0) {
+        lines.push(modText);
+      }
+    });
+    text = lines.join("\n");
+  } else {
+    // No modifier divs - extract from root directly
+    text = $("root").text();
+    // Normalize whitespace to single spaces
+    text = text.replace(/[ \t]+/g, " ");
+  }
 
   // Clean up: trim each line and remove empty lines
   text = text
@@ -49,20 +53,25 @@ const cleanEffectText = (html: string): string => {
 };
 
 const cleanAffixText = (html: string): string => {
-  // Remove all HTML tags but keep content
-  let text = html.replace(/<[^>]+>/g, "");
+  // Use cheerio to properly extract text content from HTML
+  // This handles tooltips with > characters in attribute values correctly
+  const $ = cheerio.load(`<root>${html}</root>`, { xml: false });
 
-  // Decode common HTML entities
+  // Replace br tags with newlines before text extraction
+  $("root br").replaceWith("\n");
+
+  // Get text content (cheerio properly extracts only text, ignoring tooltip attributes)
+  let text = $("root").text();
+
+  // Normalize only spaces/tabs, preserving newlines from <br> tags
+  text = text.replace(/[ \t]+/g, " ");
+
+  // Clean up: trim each line and remove empty lines
   text = text
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&nbsp;/g, " ");
-
-  // Normalize whitespace to single spaces
-  text = text.replace(/\s+/g, " ");
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0)
+    .join("\n");
 
   return text.trim();
 };
