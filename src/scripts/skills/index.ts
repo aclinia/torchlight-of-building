@@ -15,11 +15,14 @@ import {
 import {
   corrosionFocusParser,
   deepPainParser,
+  electricConversionParser,
   erosionAmplificationParser,
+  frigidDomainParser,
   preciseCrueltyParser,
   preciseDeepPainParser,
   preciseErosionAmplificationParser,
   spellAmplificationParser,
+  summonThunderMagusParser,
 } from "./passive_parsers";
 import type { SkillCategory, SkillParserEntry } from "./types";
 
@@ -121,6 +124,21 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Timid",
     categories: ["active"],
     parser: timidParser,
+  },
+  {
+    skillName: "Electric Conversion",
+    categories: ["passive"],
+    parser: electricConversionParser,
+  },
+  {
+    skillName: "Frigid Domain",
+    categories: ["passive"],
+    parser: frigidDomainParser,
+  },
+  {
+    skillName: "Summon Thunder Magus",
+    categories: ["passive"],
+    parser: summonThunderMagusParser,
   },
 ];
 
