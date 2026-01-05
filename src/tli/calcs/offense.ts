@@ -2565,7 +2565,15 @@ const _calcAvgSpellBurstDps = (
   _loadout: Loadout,
   config: Configuration,
   avgHit: number,
-) => {};
+) => {
+  const baseBurstsPerSec = 0.5;
+  const burstsPerSecMult = sumByValue(
+    filterMod(mods, "SpellBurstChargeSpeedPct"),
+  );
+  const burstPerSec = baseBurstsPerSec * burstsPerSecMult;
+
+  const maxSpellBurst = sumByValue(filterMod(mods, "MaxSpellBurst"));
+};
 
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
