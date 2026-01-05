@@ -4420,6 +4420,252 @@ describe("resistance calculations", () => {
   });
 });
 
+const simpleSpellSkillPage = () => ({
+  activeSkills: {
+    1: {
+      skillName: "[Test] Simple Spell" as const,
+      enabled: true,
+      level: 20,
+      supportSkills: {},
+    },
+  },
+  passiveSkills: {},
+});
+
+describe("spell damage", () => {
+  const skillName = "[Test] Simple Spell" as const;
+
+  const createSpellInput = (mods: AffixLine[], config?: Configuration) => ({
+    loadout: initLoadout({
+      gearPage: { equippedGear: {}, inventory: [] },
+      customAffixLines: mods,
+      skillPage: simpleSpellSkillPage(),
+    }),
+    configuration: config ?? defaultConfiguration,
+  });
+
+  type SpellExpectedOutput = Partial<{
+    avgHitWithCrit: number;
+    critChance: number;
+    critDmgMult: number;
+    castsPerSec: number;
+    avgDps: number;
+  }>;
+
+  const validateSpell = (
+    results: OffenseResults,
+    expected: SpellExpectedOutput,
+  ) => {
+    const actual = results.skills[skillName];
+    expect(actual).toBeDefined();
+    expect(actual?.spellDpsSummary).toBeDefined();
+    for (const [key, value] of Object.entries(expected)) {
+      expect(
+        actual?.spellDpsSummary?.[key as keyof SpellExpectedOutput],
+      ).toBeCloseTo(value);
+    }
+  };
+
+  // Helper: base crit is 5% chance, 150% damage
+  // avgHitWithCrit = avg * 0.05 * 1.5 + avg * 0.95 = avg * 1.025
+  const baseCritMult = 1.025;
+
+  test("basic spell damage calculation", () => {
+    // [Test] Simple Spell at level 20: 100 physical damage, 1s cast time
+    // With base crit (5% @ 150%): avgHitWithCrit = 100 * 1.025 = 102.5
+    const input = createSpellInput([]);
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 100 * baseCritMult,
+      castsPerSec: 1,
+      avgDps: 100 * baseCritMult,
+    });
+  });
+
+  test("damage modifiers apply correctly", () => {
+    // 100% increased spell + 100% increased global + 50% more = 100 * 3 * 1.5 = 450 base
+    const input = createSpellInput(
+      affixLines([
+        { type: "DmgPct", value: 100, dmgModType: "spell", addn: false },
+        { type: "DmgPct", value: 100, dmgModType: "global", addn: false },
+        { type: "DmgPct", value: 50, dmgModType: "global", addn: true },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 450 * baseCritMult,
+      avgDps: 450 * baseCritMult,
+    });
+  });
+
+  test("attack damage does not affect spell", () => {
+    // Attack damage modifiers should not apply to spells
+    const input = createSpellInput(
+      affixLines([
+        { type: "DmgPct", value: 100, dmgModType: "attack", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 100 * baseCritMult,
+      avgDps: 100 * baseCritMult,
+    });
+  });
+
+  test("cast speed modifier applies", () => {
+    // 100% increased cast speed: 1 cast/sec * 2 = 2 casts/sec
+    // avgDps = 100 * baseCritMult * 2
+    const input = createSpellInput(
+      affixLines([{ type: "CspdPct", value: 100, addn: false }]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, { castsPerSec: 2, avgDps: 100 * baseCritMult * 2 });
+  });
+
+  test("crit rating and crit damage apply", () => {
+    // Base crit: 5% @ 150%. CritRatingPct is a multiplier on the 5%.
+    // +1900% crit rating = 5% * 20 = 100% crit chance (capped at 100%)
+    // +150% crit dmg = 150% + 150% = 300% crit multiplier
+    // avgHitWithCrit = 100 * 1.0 * 3.0 = 300
+    const input = createSpellInput(
+      affixLines([
+        { type: "CritRatingPct", value: 1900, modType: "global" },
+        { type: "CritDmgPct", value: 150, modType: "global", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      critChance: 1,
+      critDmgMult: 3,
+      avgHitWithCrit: 300,
+    });
+  });
+
+  test("flat damage to spells applies", () => {
+    // +100 flat physical to spells with 100% added dmg effectiveness = +100 base
+    // Total: 100 + 100 = 200 base
+    const input = createSpellInput(
+      affixLines([
+        {
+          type: "FlatDmgToSpells",
+          value: { min: 100, max: 100 },
+          dmgType: "physical",
+        },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 200 * baseCritMult,
+      avgDps: 200 * baseCritMult,
+    });
+  });
+
+  test("flat damage to attacks does not affect spell", () => {
+    // Flat damage to attacks should not apply to spells
+    const input = createSpellInput(
+      affixLines([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 100, max: 100 },
+          dmgType: "physical",
+        },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 100 * baseCritMult,
+      avgDps: 100 * baseCritMult,
+    });
+  });
+
+  test("physical damage modifier applies to physical spell", () => {
+    // [Test] Simple Spell deals physical damage
+    // 100% increased physical damage: 100 * 2 = 200 base
+    const input = createSpellInput(
+      affixLines([
+        { type: "DmgPct", value: 100, dmgModType: "physical", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 200 * baseCritMult,
+      avgDps: 200 * baseCritMult,
+    });
+  });
+
+  test("damage conversion works for spells", () => {
+    // Convert 100% physical to cold, then cold damage bonus applies
+    // 100 phys -> 100 cold, then 100% increased cold = 200 base
+    const input = createSpellInput(
+      affixLines([
+        { type: "ConvertDmgPct", from: "physical", to: "cold", value: 100 },
+        { type: "DmgPct", value: 100, dmgModType: "cold", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 200 * baseCritMult,
+      avgDps: 200 * baseCritMult,
+    });
+  });
+
+  test("enemy resistance reduces spell damage", () => {
+    // Convert to cold, enemy has 50% cold resistance
+    // 100 cold * 0.5 = 50 base
+    const config: Configuration = {
+      ...createDefaultConfiguration(),
+      enemyColdRes: 50,
+    };
+    const input = createSpellInput(
+      affixLines([
+        { type: "ConvertDmgPct", from: "physical", to: "cold", value: 100 },
+      ]),
+      config,
+    );
+    const results = calculateOffense(input);
+    validateSpell(results, {
+      avgHitWithCrit: 50 * baseCritMult,
+      avgDps: 50 * baseCritMult,
+    });
+  });
+
+  test("Chain Lightning basic calculation", () => {
+    // Chain Lightning at level 20: 95-1811 lightning damage (avg 953), 0.65s cast time
+    const input = {
+      loadout: initLoadout({
+        gearPage: { equippedGear: {}, inventory: [] },
+        skillPage: {
+          activeSkills: {
+            1: {
+              skillName: "Chain Lightning" as const,
+              enabled: true,
+              level: 20,
+              supportSkills: {},
+            },
+          },
+          passiveSkills: {},
+        },
+      }),
+      configuration: defaultConfiguration,
+    };
+    const results = calculateOffense(input);
+    const skill = results.skills["Chain Lightning"];
+    expect(skill).toBeDefined();
+    expect(skill?.spellDpsSummary).toBeDefined();
+    // avg damage = (95 + 1811) / 2 = 953
+    // castsPerSec = 1 / 0.65 ≈ 1.538
+    // With base crit: avgHitWithCrit = 953 * 1.025 = 976.825
+    // avgDps = 976.825 * 1.538 ≈ 1502.8
+    expect(skill?.spellDpsSummary?.castsPerSec).toBeCloseTo(1 / 0.65);
+    expect(skill?.spellDpsSummary?.avgHitWithCrit).toBeCloseTo(
+      953 * baseCritMult,
+    );
+    expect(skill?.spellDpsSummary?.avgDps).toBeCloseTo(
+      953 * baseCritMult * (1 / 0.65),
+    );
+  });
+});
+
 describe("persistent damage", () => {
   const skillName = "[Test] Simple Persistent Spell" as const;
 

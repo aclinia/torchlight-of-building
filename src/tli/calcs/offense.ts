@@ -19,7 +19,11 @@ import {
   type SkillTag,
   SupportSkills,
 } from "../../data/skill";
-import type { DmgModType } from "../constants";
+import type {
+  CritDmgModType,
+  CritRatingModType,
+  DmgModType,
+} from "../constants";
 import type {
   Affix,
   BaseSupportSkillSlot,
@@ -151,6 +155,7 @@ export interface OffenseAttackDpsSummary {
 
 interface OffenseSummary {
   attackDpsSummary?: OffenseAttackDpsSummary;
+  spellDpsSummary?: OffenseSpellDpsSummary;
   persistentDpsSummary?: PersistentDpsSummary;
   totalReapDpsSummary?: TotalReapDpsSummary;
   totalDps: number;
@@ -403,17 +408,18 @@ const calculateGearDmg = (loadout: Loadout, allMods: Mod[]): GearDmg => {
 
 const calculateFlatDmg = (
   allMods: Mod[],
-  _skillType: "attack" | "spell",
+  skillType: "attack" | "spell",
 ): DmgRanges => {
-  // TODO: implement for spells
-
   let phys = emptyDamageRange();
   let cold = emptyDamageRange();
   let lightning = emptyDamageRange();
   let fire = emptyDamageRange();
   let erosion = emptyDamageRange();
 
-  const mods = filterMod(allMods, "FlatDmgToAtks");
+  const mods = match(skillType)
+    .with("attack", () => filterMod(allMods, "FlatDmgToAtks"))
+    .with("spell", () => filterMod(allMods, "FlatDmgToSpells"))
+    .exhaustive();
   for (const a of mods) {
     match(a.dmgType)
       .with("physical", () => {
@@ -455,33 +461,35 @@ const calculateGearAspd = (loadout: Loadout, allMods: Mod[]): number => {
   return baseAspd * (1 + gearAspdPctBonus);
 };
 
-const calculateCritChance = (allMods: Mod[]): number => {
-  const critRatingPctMods = filterMod(allMods, "CritRatingPct");
-  const mods = critRatingPctMods.map((a) => {
-    return {
-      type: "CritRatingPct",
-      value: a.value,
-      modType: a.modType,
-      src: a.src,
-    };
-  });
-
-  const inc = calculateInc(mods.map((v) => v.value));
-  return Math.min(0.05 * (1 + inc), 1);
+const calculateCritChance = (
+  allMods: Mod[],
+  skill: BaseActiveSkill,
+): number => {
+  const modTypes: CritRatingModType[] = ["global"];
+  if (skill.tags.includes("Attack")) {
+    modTypes.push("attack");
+  }
+  if (skill.tags.includes("Spell")) {
+    modTypes.push("spell");
+  }
+  const critRatingPctMods = filterMod(allMods, "CritRatingPct").filter((m) =>
+    modTypes.includes(m.modType),
+  );
+  const critRatingMult = calculateEffMultiplier(critRatingPctMods);
+  return Math.min(0.05 * critRatingMult, 1);
 };
 
-const calculateCritDmg = (allMods: Mod[]): number => {
-  const critDmgPctMods = filterMod(allMods, "CritDmgPct");
-  const mods = critDmgPctMods.map((a) => {
-    return {
-      type: "CritDmgPct",
-      value: a.value,
-      addn: a.addn,
-      modType: a.modType,
-      src: a.src,
-    };
-  });
-
+const calculateCritDmg = (allMods: Mod[], skill: BaseActiveSkill): number => {
+  const modTypes: CritDmgModType[] = ["global"];
+  if (skill.tags.includes("Attack")) {
+    modTypes.push("attack");
+  }
+  if (skill.tags.includes("Spell")) {
+    modTypes.push("spell");
+  }
+  const mods = filterMod(allMods, "CritDmgPct").filter((m) =>
+    modTypes.includes(m.modType),
+  );
   const inc = calculateInc(mods.filter((m) => !m.addn).map((v) => v.value));
   const addn = calculateAddn(mods.filter((m) => m.addn).map((v) => v.value));
 
@@ -861,10 +869,7 @@ const calculateAtkHit = (
   level: number,
   config: Configuration,
 ): SkillHitOverview | undefined => {
-  const skillWeaponDR = match(skill.name)
-    .with("Berserking Blade", () => {
-      return multDRs(gearDmg.mainHand, 210 / 100);
-    })
+  const skillWeaponDR = match(skill.name as ActiveSkillName)
     .with("Frost Spike", () => {
       return multDRs(
         gearDmg.mainHand,
@@ -2288,7 +2293,7 @@ const calcAvgPersistentDps = (
   const { mods, perSkillContext, skillLevel, config } = input;
   const skill = perSkillContext.skill as BaseActiveSkill;
   const offense: SkillOffenseOfType<"PersistentDmg"> | undefined = match(
-    skill.name,
+    skill.name as ActiveSkillName,
   )
     .with("[Test] Simple Persistent Spell", () => {
       return getLevelOffense(skill, "PersistentDmg", skillLevel);
@@ -2401,21 +2406,22 @@ const calcAvgAttackDps = (
   skillLevel: number,
   config: Configuration,
 ): OffenseAttackDpsSummary | undefined => {
+  const skill = perSkillContext.skill;
   const gearDmg = calculateGearDmg(loadout, mods);
   const flatDmg = calculateFlatDmg(mods, "attack");
   const skillHit = calculateAtkHit(
     gearDmg,
     flatDmg,
     mods,
-    perSkillContext.skill,
+    skill,
     skillLevel,
     config,
   );
   if (skillHit === undefined) return;
 
   const aspd = calculateAspd(loadout, mods);
-  const critChance = calculateCritChance(mods);
-  const critDmgMult = calculateCritDmg(mods);
+  const critChance = calculateCritChance(mods, skill);
+  const critDmgMult = calculateCritDmg(mods, skill);
   const doubleDmgMult = calculateDoubleDmgMult(mods);
   const extraMult = calculateExtraOffenseMults(mods, config);
 
@@ -2432,16 +2438,117 @@ const calcAvgAttackDps = (
   };
 };
 
+interface CalcSpellHitOutput {
+  base: {
+    physical: DmgRange;
+    cold: DmgRange;
+    lightning: DmgRange;
+    fire: DmgRange;
+    erosion: DmgRange;
+    total: { min: number; max: number };
+  };
+  castTime: number;
+  avg: number;
+}
+
+const calcSpellHit = (
+  flatDmg: DmgRanges,
+  mods: Mod[],
+  skill: BaseActiveSkill,
+  level: number,
+  config: Configuration,
+): CalcSpellHitOutput | undefined => {
+  const implementedSpells: ActiveSkillName[] = [
+    "[Test] Simple Spell",
+    "Chain Lightning",
+  ];
+  const offense = implementedSpells.includes(skill.name as ActiveSkillName)
+    ? getLevelOffense(skill, "SpellDmg", level)
+    : undefined;
+  if (offense === undefined) {
+    return undefined;
+  }
+  const { value: skillSpellDR, dmgType, castTime } = offense;
+  const skillSpellDRs = {
+    ...emptyDmgRanges(),
+    [dmgType]: skillSpellDR,
+  };
+  const skillFlatDRs = multDRs(
+    flatDmg,
+    (getLevelOffenseValue(skill, "AddedDmgEffPct", level) as number) / 100,
+  );
+  const skillBaseDR = addDRs(skillSpellDRs, skillFlatDRs);
+  const baseDmgModTypes = dmgModTypesForSkill(skill);
+
+  const dmgPools = convertDmg(skillBaseDR, mods);
+  const { physical, cold, lightning, fire, erosion } = applyDmgBonusesAndPen({
+    dmgPools,
+    mods,
+    baseDmgModTypes,
+    config,
+    ignoreArmor: false,
+  });
+
+  const total = {
+    min: physical.min + cold.min + lightning.min + fire.min + erosion.min,
+    max: physical.max + cold.max + lightning.max + fire.max + erosion.max,
+  };
+  const totalAvg = (total.min + total.max) / 2;
+
+  return {
+    base: {
+      physical: physical,
+      cold: cold,
+      lightning: lightning,
+      fire: fire,
+      erosion: erosion,
+      total: total,
+    },
+    avg: totalAvg,
+    castTime,
+  };
+};
+
 export interface OffenseSpellDpsSummary {
-  critChange: number;
+  critChance: number;
   critDmgMult: number;
   castsPerSec: number;
   avgHitWithCrit: number;
   avgDps: number;
 }
 
-const _calcAvgSpellDps = (): OffenseSpellDpsSummary | undefined => {
-  return undefined;
+const calcAvgSpellDps = (
+  mods: Mod[],
+  _loadout: Loadout,
+  perSkillContext: PerSkillModContext,
+  skillLevel: number,
+  config: Configuration,
+): OffenseSpellDpsSummary | undefined => {
+  const skill = perSkillContext.skill;
+  const flatDmg = calculateFlatDmg(mods, "spell");
+  const spellHit = calcSpellHit(flatDmg, mods, skill, skillLevel, config);
+  if (spellHit === undefined) {
+    return undefined;
+  }
+  const { avg, castTime } = spellHit;
+
+  const cspdMult = calculateEffMultiplier(filterMod(mods, "CspdPct"));
+  const cspd = (1 / castTime) * cspdMult;
+  const critChance = calculateCritChance(mods, skill);
+  const critDmgMult = calculateCritDmg(mods, skill);
+  const doubleDmgMult = calculateDoubleDmgMult(mods);
+  const extraMult = calculateExtraOffenseMults(mods, config);
+
+  const avgHitWithCrit =
+    avg * critChance * critDmgMult + avg * (1 - critChance);
+  const avgDps = avgHitWithCrit * doubleDmgMult * cspd * extraMult;
+  return {
+    critChance,
+    critDmgMult,
+    castsPerSec: cspd,
+    avgHitWithCrit,
+    avgDps,
+  };
 };
 
 // Calculates offense for all enabled implemented skills
@@ -2520,6 +2627,14 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       config,
     );
 
+    const spellDpsSummary = calcAvgSpellDps(
+      mods,
+      loadout,
+      perSkillContext,
+      skillLevel,
+      config,
+    );
+
     const persistentDpsSummary = calcAvgPersistentDps({
       mods,
       loadout,
@@ -2535,11 +2650,13 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
 
     const totalDps =
       (attackHitSummary?.avgDps ?? 0) +
+      (spellDpsSummary?.avgDps ?? 0) +
       (persistentDpsSummary?.total ?? 0) +
       (totalReapDpsSummary?.totalReapDps ?? 0);
 
     skills[slot.skillName as ImplementedActiveSkillName] = {
       attackDpsSummary: attackHitSummary,
+      spellDpsSummary,
       persistentDpsSummary,
       totalReapDpsSummary,
       totalDps,
