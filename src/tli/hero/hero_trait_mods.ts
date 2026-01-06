@@ -6,6 +6,29 @@ type ModFactory = (levelIndex: number) => Mod[];
 const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
   // Escapist Bing: Creative Genius (#2)
   "Creative Genius": () => [{ type: "MaxSpellBurst", value: 1 }],
+  "Inspiration Overflow": (i) => [
+    { type: "RestoreWhimsyEssenceOnSpellBurst", value: 5 },
+    {
+      type: "RestoreWhimsyEssenceOnSpellBurst",
+      value: 6,
+      per: { stackable: "max_spell_burst", amt: 3 },
+    },
+    {
+      type: "SpellBurstAdditionalDmgPct",
+      value: [20, 25, 30, 35, 40][i],
+      dmgModType: "spell",
+    },
+  ],
+  "Auto-Ingenuity Program": (i) => [
+    { type: "WhimsyEssenceRecoverySpeedPct", value: [-10, -5, 0, 5, 10][i] },
+  ],
+  "Hyper-Resonance Hypothesis": (i) => [
+    {
+      type: "SpellBurstChargeSpeedPct",
+      addn: true,
+      value: [15, 19, 23, 27, 31][i],
+    },
+  ],
   // Oracle Thea: Blasphemer (#3)
   Blasphemer: () => [{ type: "Blasphemer" }],
   "Unholy Baptism": (i) => [
