@@ -314,6 +314,10 @@ export const allParsers = [
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  t("{value:dec%} {penType:ResPenType} penetration for minions").output("MinionResPenPct", (c) => ({
+    value: c.value,
+    penType: c.penType,
+  })),
   t("{value:+dec%} [additional] attack and cast speed when at full mana").outputMany([
     spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
     spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),

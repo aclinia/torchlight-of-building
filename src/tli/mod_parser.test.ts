@@ -2508,6 +2508,17 @@ test("parse minion critical strike damage", () => {
   ]);
 });
 
+test("parse minion cold penetration", () => {
+  const result = parseMod("4.5% Cold Penetration for Minions");
+  expect(result).toEqual([
+    {
+      type: "MinionResPenPct",
+      value: 4.5,
+      penType: "cold",
+    },
+  ]);
+});
+
 test("parse inflicts frail on spell hit", () => {
   const result = parseMod("Inflicts Frail on Spell hit");
   expect(result).toEqual([
