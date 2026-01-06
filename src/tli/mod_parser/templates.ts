@@ -280,6 +280,11 @@ export const allParsers = [
       per: { stackable: "focus_blessing" as const },
     }),
   ),
+  t("{value:+dec%} [additional] lightning skill critical strike damage").output("CritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+    modType: "lightning_skill" as const,
+  })),
   t("{value:+dec%} [additional] [{modType:CritDmgModType}] critical strike damage").output("CritDmgPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,

@@ -29,6 +29,11 @@ export const CRIT_RATING_MOD_TYPES = [
 
 export type CritRatingModType = (typeof CRIT_RATING_MOD_TYPES)[number];
 
-export const CRIT_DMG_MOD_TYPES = ["global", "attack", "spell"] as const;
+export const CRIT_DMG_MOD_TYPES = [
+  "global",
+  "attack",
+  "spell",
+  "lightning_skill",
+] as const;
 
 export type CritDmgModType = (typeof CRIT_DMG_MOD_TYPES)[number];

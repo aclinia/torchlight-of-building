@@ -732,6 +732,9 @@ export const calculateCritDmg = (
   if (skill.tags.includes("Spell")) {
     modTypes.push("spell");
   }
+  if (skill.tags.includes("Lightning")) {
+    modTypes.push("lightning_skill");
+  }
   const mods = filterMods(allMods, "CritDmgPct").filter((m) =>
     modTypes.includes(m.modType),
   );

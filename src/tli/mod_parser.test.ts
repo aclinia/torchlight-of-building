@@ -527,6 +527,18 @@ test("parse additional attack critical strike damage", () => {
   ]);
 });
 
+test("parse lightning skill critical strike damage", () => {
+  const result = parseMod("+26% Lightning Skill Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 26,
+      modType: "lightning_skill",
+      addn: false,
+    },
+  ]);
+});
+
 test("parse crit damage with decimal percentage", () => {
   const result = parseMod("+12.5% Critical Strike Damage");
   expect(result).toEqual([
