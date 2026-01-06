@@ -112,7 +112,7 @@ HTML sources from TLIDB are also cached in a gitignore'd directory: `.garbage`
 - Only add comments that explain complex logic or non-obvious decisions
 - ALWAYS: Run `pnpm test`, `pnpm typecheck`, and `pnpm check` before finalizing changes
 - NEVER throw exceptions in any code that is used by the frontend. Instead, find a reasonable default, and console.error the issue.
-  - This includes any calculations like damage calculations, or loading save data into loadout
+  - This ESPECIALLY includes any calculations like damage calculations, or loading save data into loadout, as the app cannot function without these
 - For scripts in src/scripts, fail early instead of trying to infer intent
 
 ## Data Flow
