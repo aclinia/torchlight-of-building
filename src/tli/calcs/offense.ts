@@ -200,13 +200,8 @@ const findMod = <T extends Mod["type"]>(
   return mods.find((a) => a.type === type) as ModT<T> | undefined;
 };
 
-const filterMods = <T extends Mod["type"]>(
-  mods: Mod[],
-  type: T,
-  predicate?: (mod: ModT<T>) => boolean,
-): ModT<T>[] => {
-  const filtered = mods.filter((a) => a.type === type) as ModT<T>[];
-  return predicate !== undefined ? filtered.filter(predicate) : filtered;
+const filterMods = <T extends Mod["type"]>(mods: Mod[], type: T): ModT<T>[] => {
+  return mods.filter((a) => a.type === type) as ModT<T>[];
 };
 
 // A chunk of damage that tracks its conversion history
