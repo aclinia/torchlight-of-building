@@ -13,6 +13,7 @@ const ENEMY_HAS_AILMENT = "enemy_has_ailment" as const;
 const HAS_FOCUS_BLESSING = "has_focus_blessing" as const;
 const HAS_BLOCKED_RECENTLY = "has_blocked_recently" as const;
 const HAS_CRIT_RECENTLY = "has_crit_recently" as const;
+const TARGET_ENEMY_FROZEN_RECENTLY = "target_enemy_frozen_recently" as const;
 const HAS_BLUR = "has_blur" as const;
 const BLUR_ENDED_RECENTLY = "blur_ended_recently" as const;
 const HAS_SQUIDNOVA = "has_squidnova" as const;
@@ -152,6 +153,13 @@ export const allParsers = [
     dmgModType: GLOBAL,
     addn: false,
     cond: HAS_BLOCKED_RECENTLY,
+  })),
+  t("{value:+dec%} additional damage taken by enemies frozen by you recently").output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: GLOBAL,
+    addn: true,
+    isEnemyDebuff: true,
+    cond: TARGET_ENEMY_FROZEN_RECENTLY,
   })),
   t(
     "deals {value:+dec%} additional damage to an enemy for every {amt:int} points of frostbite rating the enemy has",

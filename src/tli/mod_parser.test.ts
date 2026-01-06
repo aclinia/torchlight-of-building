@@ -2301,3 +2301,19 @@ test("parse armor and evasion", () => {
     { type: "Evasion", value: 685 },
   ]);
 });
+
+test("parse additional damage taken by enemies frozen by you recently", () => {
+  const result = parseMod(
+    "+10% additional damage taken by enemies Frozen by you recently",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 10,
+      dmgModType: "global",
+      addn: true,
+      isEnemyDebuff: true,
+      cond: "target_enemy_frozen_recently",
+    },
+  ]);
+});

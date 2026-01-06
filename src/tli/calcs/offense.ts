@@ -1081,6 +1081,10 @@ const filterModsByCond = (
         "enemy_has_fire_infiltration",
         () => config.targetEnemyHasFireInfiltration,
       )
+      .with(
+        "target_enemy_frozen_recently",
+        () => config.targetEnemyFrozenRecently,
+      )
       .with("has_squidnova", () => config.hasSquidnova)
       .exhaustive();
   });
