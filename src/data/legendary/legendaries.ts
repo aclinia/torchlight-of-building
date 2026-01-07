@@ -6582,7 +6582,7 @@ export const Legendaries: readonly Legendary[] = [
   {
     baseItem: "Dazzling Lightning Ring",
     baseStat: "+4% Lightning Resistance",
-    name: "Unholy Prayer",
+    name: "Unholy Prayer (agility)",
     normalAffixes: [
       "Max Agility Blessing Stacks +1",
       "Gains 1 stack of Agility Blessing upon inflicting damage. Interval: 1 s",
@@ -6590,6 +6590,36 @@ export const Legendaries: readonly Legendary[] = [
     corruptionAffixes: [
       "Max Agility Blessing Stacks +1\n+10% additional damage",
       "Gains 1 stack of Agility Blessing upon inflicting damage. Interval: 0.5 s",
+    ],
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+  },
+  {
+    baseItem: "Dazzling Lightning Ring",
+    baseStat: "+4% Lightning Resistance",
+    name: "Unholy Prayer (focus)",
+    normalAffixes: [
+      "Max Focus Blessing Stacks +1",
+      "Gains 1 stack of Focus Blessing upon inflicting damage. Interval: 1 s",
+    ],
+    corruptionAffixes: [
+      "Max Focus Blessing Stacks +1\n+10% additional damage",
+      "Gains 1 stack of Focus Blessing upon inflicting damage. Interval: 0.5 s",
+    ],
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+  },
+  {
+    baseItem: "Dazzling Lightning Ring",
+    baseStat: "+4% Lightning Resistance",
+    name: "Unholy Prayer (tenacity)",
+    normalAffixes: [
+      "Max Tenacity Blessing Stacks +1",
+      "Gains 1 stack of Tenacity Blessing upon inflicting damage. Interval: 1 s",
+    ],
+    corruptionAffixes: [
+      "Max Tenacity Blessing Stacks +1\n+10% additional damage",
+      "Gains 1 stack of Tenacity Blessing upon inflicting damage. Interval: 0.5 s",
     ],
     equipmentSlot: "Trinket",
     equipmentType: "Ring",

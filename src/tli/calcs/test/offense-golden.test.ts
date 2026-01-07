@@ -176,7 +176,7 @@ describe("offense golden tests", () => {
 
     // Total DPS: ~6.70 billion (dedupe: Beacon only counts once)
     const totalDps = chainLightning.totalDps;
-    const expectedTotalDps = 6.70e9;
+    const expectedTotalDps = 6.7e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 
