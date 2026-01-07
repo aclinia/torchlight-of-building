@@ -20,7 +20,7 @@ export const SlateInventoryItem: React.FC<SlateInventoryItemProps> = ({
   onCopy,
   onDelete,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
   const isLegendary = slate.isLegendary === true;
 
   const displayName = isLegendary
@@ -98,7 +98,6 @@ export const SlateInventoryItem: React.FC<SlateInventoryItemProps> = ({
         isVisible={isVisible}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <SlateTooltipContent slate={slate} />
       </Tooltip>

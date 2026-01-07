@@ -187,6 +187,38 @@ export const internalStore = create(
         });
       },
 
+      updateItem: (itemId: string, updatedItem: Gear) => {
+        set((state) => {
+          const itemIndex = state.saveData.equipmentPage.inventory.findIndex(
+            (i) => i.id === itemId,
+          );
+          if (itemIndex === -1) return;
+
+          state.saveData.equipmentPage.inventory[itemIndex] = updatedItem;
+
+          // Also update equipped slots if this item is equipped
+          const slots: GearSlot[] = [
+            "helmet",
+            "chest",
+            "neck",
+            "gloves",
+            "belt",
+            "boots",
+            "leftRing",
+            "rightRing",
+            "mainHand",
+            "offHand",
+          ];
+          for (const slot of slots) {
+            if (
+              state.saveData.equipmentPage.equippedGear[slot]?.id === itemId
+            ) {
+              state.saveData.equipmentPage.equippedGear[slot] = updatedItem;
+            }
+          }
+        });
+      },
+
       selectItemForSlot: (slot: GearSlot, itemId: string | undefined) => {
         set((state) => {
           if (!itemId) {

@@ -8,6 +8,7 @@ interface InventoryItemProps {
   item: Gear;
   isEquipped: boolean;
   onCopy: (itemId: string) => void;
+  onEdit: (itemId: string) => void;
   onDelete: (id: string) => void;
 }
 
@@ -15,9 +16,10 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
   item,
   isEquipped,
   onCopy,
+  onEdit,
   onDelete,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const isLegendary = item.rarity === "legendary";
 
@@ -47,16 +49,27 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
           type="button"
           // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
           onClick={() => onCopy(item.id!)}
-          className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
+          className="rounded bg-amber-500 px-2 py-1 text-xs text-zinc-950 hover:bg-amber-600"
           title="Copy item"
         >
           Copy
         </button>
+        {!isLegendary && (
+          <button
+            type="button"
+            // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
+            onClick={() => onEdit(item.id!)}
+            className="rounded bg-zinc-600 px-2 py-1 text-xs text-zinc-50 hover:bg-zinc-500"
+            title="Edit item"
+          >
+            Edit
+          </button>
+        )}
         <button
           type="button"
           // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
           onClick={() => onDelete(item.id!)}
-          className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
+          className="rounded bg-red-500 px-2 py-1 text-xs text-white hover:bg-red-600"
           title="Delete item"
         >
           Delete
@@ -67,7 +80,6 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
         isVisible={isVisible}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <GearTooltipContent item={item} />
       </Tooltip>

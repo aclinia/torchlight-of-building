@@ -24,7 +24,7 @@ export const InverseImageInventoryItem: React.FC<
   onSelect,
   selectionMode = false,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const handleClick = () => {
     if (selectionMode && onSelect) {
@@ -100,7 +100,6 @@ export const InverseImageInventoryItem: React.FC<
         triggerRect={triggerRect}
         variant="default"
         width="lg"
-        {...tooltipHandlers}
       >
         <TooltipTitle>
           <span className="text-cyan-400">Inverse Image</span>

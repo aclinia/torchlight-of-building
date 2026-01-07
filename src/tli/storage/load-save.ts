@@ -1,5 +1,10 @@
 import * as R from "remeda";
+import { CoreTalentMods } from "@/src/data/core_talent/core_talent_mods";
 import { CoreTalents } from "@/src/data/core_talent/core_talents";
+import {
+  type CoreTalentName,
+  CoreTalentNames,
+} from "@/src/data/core_talent/types";
 import type { HeroName, HeroTraitName } from "@/src/data/hero_trait/types";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
@@ -109,6 +114,21 @@ const convertBaseStats = (
   };
 };
 
+// Set for fast core talent name lookup (case-insensitive)
+const coreTalentNameSet = new Set(
+  CoreTalentNames.map((name) => name.toLowerCase()),
+);
+
+const getCoreTalentName = (text: string): CoreTalentName | undefined => {
+  const normalized = text.trim().toLowerCase();
+  if (coreTalentNameSet.has(normalized)) {
+    return CoreTalentNames.find((n) => n.toLowerCase() === normalized) as
+      | CoreTalentName
+      | undefined;
+  }
+  return undefined;
+};
+
 const convertAffix = (
   affixTextParam: string,
   src: string | undefined,
@@ -117,6 +137,26 @@ const convertAffix = (
   const maxDivinity = affixTextParam.endsWith(divinityText) ? 1 : undefined;
   const affixText = affixTextParam.replace(divinityText, "");
   const lines = affixText.split(/\n/);
+
+  // Check if the entire affix is a single core talent name
+  if (lines.length === 1) {
+    const coreTalentName = getCoreTalentName(lines[0]);
+    if (coreTalentName !== undefined) {
+      const coreTalentAffix = CoreTalentMods[coreTalentName];
+      if (coreTalentAffix !== undefined) {
+        return {
+          specialName: coreTalentName,
+          affixLines: coreTalentAffix.affixLines.map((line) => ({
+            text: line.text,
+            mods: line.mods?.map((mod) => ({ ...mod, src })),
+          })),
+          src,
+          maxDivinity,
+        };
+      }
+    }
+  }
+
   const affixLines: AffixLine[] = lines.map((lineText) => {
     const mods = parseMod(lineText);
     return {
@@ -138,6 +178,28 @@ const convertAffixArray = (
 ): Affix[] | undefined => {
   if (!affixes || affixes.length === 0) return undefined;
   return affixes.map((text) => convertAffix(text, src));
+};
+
+const convertCoreTalent = (
+  talentName: string,
+  src: string,
+): Affix | undefined => {
+  const coreTalentAffix = CoreTalentMods[talentName as CoreTalentName];
+  if (coreTalentAffix === undefined) {
+    console.error(`Unknown core talent: ${talentName}`);
+    return undefined;
+  }
+
+  const affixLines: AffixLine[] = coreTalentAffix.affixLines.map((line) => ({
+    text: line.text,
+    mods: line.mods?.map((mod) => ({ ...mod, src })),
+  }));
+
+  return {
+    specialName: talentName,
+    affixLines,
+    src,
+  };
 };
 
 const convertCustomAffixLines = (lines: string[] | undefined): AffixLine[] => {
@@ -365,7 +427,9 @@ const convertTalentTree = (
     name: tree.name,
     nodes,
     selectedCoreTalents: tree.selectedCoreTalents
-      ? tree.selectedCoreTalents.map((text) => convertAffix(text, src))
+      ? tree.selectedCoreTalents
+          .map((name) => convertCoreTalent(name, src))
+          .filter((affix): affix is Affix => affix !== undefined)
       : undefined,
     selectedCoreTalentNames: tree.selectedCoreTalents,
     additionalCoreTalentPrismAffix,

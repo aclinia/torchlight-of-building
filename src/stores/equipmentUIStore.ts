@@ -39,6 +39,10 @@ interface EquipmentUIState {
   // Selected gear slot for equipping
   selectedGearSlot: GearSlot;
 
+  // Edit modal state
+  isEditModalOpen: boolean;
+  editModalItemId: string | undefined;
+
   // Actions
   setSelectedEquipmentType: (type: EquipmentType | undefined) => void;
   setAffixSlot: (index: number, update: Partial<AffixSlotState>) => void;
@@ -60,6 +64,10 @@ interface EquipmentUIState {
   resetLegendaryCrafting: () => void;
 
   setSelectedGearSlot: (slot: GearSlot) => void;
+
+  // Edit modal actions
+  openEditModal: (itemId: string) => void;
+  closeEditModal: () => void;
 }
 
 export const useEquipmentUIStore = create<EquipmentUIState>()(
@@ -76,6 +84,8 @@ export const useEquipmentUIStore = create<EquipmentUIState>()(
     selectedLegendaryIndex: undefined,
     legendaryAffixSlots: [],
     selectedGearSlot: "helmet",
+    isEditModalOpen: false,
+    editModalItemId: undefined,
 
     // Actions
     setSelectedEquipmentType: (type) =>
@@ -176,6 +186,18 @@ export const useEquipmentUIStore = create<EquipmentUIState>()(
     setSelectedGearSlot: (slot) =>
       set((state) => {
         state.selectedGearSlot = slot;
+      }),
+
+    openEditModal: (itemId) =>
+      set((state) => {
+        state.isEditModalOpen = true;
+        state.editModalItemId = itemId;
+      }),
+
+    closeEditModal: () =>
+      set((state) => {
+        state.isEditModalOpen = false;
+        state.editModalItemId = undefined;
       }),
   })),
 );

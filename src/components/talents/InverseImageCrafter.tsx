@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NumberInput } from "@/src/components/ui/NumberInput";
 import { validateInverseImageValues } from "@/src/lib/inverse-image-utils";
 import { generateItemId } from "@/src/lib/storage";
 import type { CraftedInverseImage } from "@/src/tli/core";
@@ -77,14 +78,14 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
             />
             <span className="text-xs text-zinc-500">+200%</span>
           </div>
-          <input
-            type="number"
-            min={-100}
-            max={200}
-            value={microEffect}
-            onChange={(e) => setMicroEffect(Number(e.target.value))}
-            className="mt-2 w-24 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-50"
-          />
+          <div className="mt-2">
+            <NumberInput
+              value={microEffect}
+              onChange={setMicroEffect}
+              min={-100}
+              max={200}
+            />
+          </div>
         </div>
 
         <div>
@@ -104,14 +105,14 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
             />
             <span className="text-xs text-zinc-500">+100%</span>
           </div>
-          <input
-            type="number"
-            min={-100}
-            max={100}
-            value={mediumEffect}
-            onChange={(e) => setMediumEffect(Number(e.target.value))}
-            className="mt-2 w-24 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-50"
-          />
+          <div className="mt-2">
+            <NumberInput
+              value={mediumEffect}
+              onChange={setMediumEffect}
+              min={-100}
+              max={100}
+            />
+          </div>
         </div>
 
         <div>
@@ -132,14 +133,14 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
             />
             <span className="text-xs text-zinc-500">+50%</span>
           </div>
-          <input
-            type="number"
-            min={-100}
-            max={50}
-            value={legendaryEffect}
-            onChange={(e) => setLegendaryEffect(Number(e.target.value))}
-            className="mt-2 w-24 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-50"
-          />
+          <div className="mt-2">
+            <NumberInput
+              value={legendaryEffect}
+              onChange={setLegendaryEffect}
+              min={-100}
+              max={50}
+            />
+          </div>
         </div>
       </div>
 

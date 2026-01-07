@@ -339,6 +339,24 @@ export const StatsPanel = (): React.ReactNode => {
           value={formatRes(defenses.erosionRes)}
           color="text-fuchsia-400"
         />
+
+        <div className="h-2" />
+
+        <StatLine
+          label="Attack Block"
+          value={formatStatValue.pct(defenses.attackBlockPct)}
+          color="text-slate-300"
+        />
+        <StatLine
+          label="Spell Block"
+          value={formatStatValue.pct(defenses.spellBlockPct)}
+          color="text-slate-300"
+        />
+        <StatLine
+          label="Block Ratio"
+          value={formatStatValue.pct(defenses.blockRatioPct)}
+          color="text-slate-300"
+        />
       </div>
     </div>
   );

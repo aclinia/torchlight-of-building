@@ -94,17 +94,15 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
   const renderSelectedTooltip = (
     option: SearchableSelectOption<string>,
     triggerRect: DOMRect,
-    tooltipHandlers: { onMouseEnter: () => void; onMouseLeave: () => void },
-  ) => {
+  ): React.ReactNode => {
     const item = itemsById.get(option.value);
-    if (!item) return null;
+    if (item === undefined) return null;
     const isLegendary = item.rarity === "legendary";
     return (
       <Tooltip
         isVisible={true}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <GearTooltipContent item={item} />
       </Tooltip>

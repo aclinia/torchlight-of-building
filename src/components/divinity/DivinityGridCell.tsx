@@ -44,7 +44,7 @@ export const DivinityGridCell: React.FC<DivinityGridCellProps> = ({
   onClick,
   onMouseDown,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   // Should show tooltip only when slate exists and not being dragged
   const showTooltip = slate !== undefined && !isDragging && isVisible;
@@ -79,7 +79,6 @@ export const DivinityGridCell: React.FC<DivinityGridCellProps> = ({
             isVisible={isVisible}
             triggerRect={triggerRect}
             variant={slate.isLegendary === true ? "legendary" : "default"}
-            {...tooltipHandlers}
           >
             <SlateTooltipContent slate={slate} />
           </Tooltip>
@@ -153,7 +152,6 @@ export const DivinityGridCell: React.FC<DivinityGridCellProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant={slate.isLegendary === true ? "legendary" : "default"}
-          {...tooltipHandlers}
         >
           <SlateTooltipContent slate={slate} />
         </Tooltip>

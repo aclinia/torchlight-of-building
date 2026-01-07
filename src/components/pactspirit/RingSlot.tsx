@@ -1,4 +1,3 @@
-import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import {
   Tooltip,
   TooltipContent,
@@ -22,7 +21,7 @@ export const RingSlot: React.FC<RingSlotProps> = ({
   onInstallClick,
   onRevert,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const hasDestiny = !!ringState.installedDestiny;
   const isInner = isInnerRing(ringSlot);
@@ -88,28 +87,30 @@ export const RingSlot: React.FC<RingSlotProps> = ({
         </div>
       </div>
 
-      <Tooltip
-        isVisible={isVisible}
-        triggerRect={triggerRect}
-        {...tooltipHandlers}
-      >
+      <Tooltip isVisible={isVisible} triggerRect={triggerRect}>
         <TooltipTitle>
           {hasDestiny && destinyType
             ? `${destinyType}: ${displayName}`
             : displayName}
         </TooltipTitle>
         <TooltipContent>
-          <ul className="space-y-1">
+          <div>
             {displayAffix.affixLines.map((line, lineIdx) => (
-              <li
+              <div
                 key={lineIdx}
-                className="text-xs text-zinc-400 flex items-center"
+                className={
+                  lineIdx > 0 ? "mt-1 pt-1 border-t border-zinc-800" : ""
+                }
               >
-                <span>{line.text}</span>
-                {line.mods === undefined && <ModNotImplementedIcon />}
-              </li>
+                <div className="text-xs text-zinc-400">{line.text}</div>
+                {line.mods === undefined && (
+                  <div className="text-xs text-red-500">
+                    (Mod not supported in TOB yet)
+                  </div>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         </TooltipContent>
       </Tooltip>
     </div>

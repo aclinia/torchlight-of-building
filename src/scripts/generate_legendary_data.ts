@@ -8,6 +8,7 @@ import type {
   LegendaryAffixChoice,
 } from "../data/legendary/types";
 import type { EquipmentSlot, EquipmentType } from "../tli/gear_data_types";
+import { LegendaryDataOverrides } from "./legendaries/legendary-data-overrides";
 import { readCodexHtml } from "./lib/codex";
 
 const cleanHtmlText = (
@@ -299,6 +300,34 @@ const extractLegendary = (
   };
 };
 
+const applyOverrides = (legendaries: Legendary[]): Legendary[] => {
+  // Create a map for efficient lookup
+  const legendaryMap = new Map(legendaries.map((l) => [l.name, l]));
+
+  // Apply overrides
+  for (const [name, override] of Object.entries(LegendaryDataOverrides)) {
+    if (override === undefined) {
+      // Remove legendary if it exists
+      if (legendaryMap.delete(name)) {
+        console.log(`  Override: Removed "${name}"`);
+      }
+    } else {
+      // Validate that key matches the name property
+      if (override.name !== name) {
+        throw new Error(
+          `Override key "${name}" does not match legendary name "${override.name}"`,
+        );
+      }
+      // Upsert legendary
+      const action = legendaryMap.has(name) ? "Replaced" : "Added";
+      legendaryMap.set(name, override);
+      console.log(`  Override: ${action} "${name}"`);
+    }
+  }
+
+  return Array.from(legendaryMap.values());
+};
+
 const generateDataFile = (items: Legendary[]): string => {
   return `import type { Legendary } from "./types";
 
@@ -352,17 +381,23 @@ const main = async (): Promise<void> => {
     });
   }
 
-  // Sort by name for consistent output
-  legendaries.sort((a, b) => a.name.localeCompare(b.name));
-
   console.log(
     `Extracted ${legendaries.length} legendaries (skipped ${skippedCount} without codex data)`,
   );
 
+  // Apply manual overrides
+  console.log("Applying overrides...");
+  const finalLegendaries = applyOverrides(legendaries);
+
+  // Sort by name for consistent output
+  finalLegendaries.sort((a, b) => a.name.localeCompare(b.name));
+
+  console.log(`Final count: ${finalLegendaries.length} legendaries`);
+
   await mkdir(outDir, { recursive: true });
 
   const dataPath = join(outDir, "legendaries.ts");
-  await writeFile(dataPath, generateDataFile(legendaries), "utf-8");
+  await writeFile(dataPath, generateDataFile(finalLegendaries), "utf-8");
   console.log(`Generated legendaries.ts`);
 
   console.log("\nCode generation complete!");

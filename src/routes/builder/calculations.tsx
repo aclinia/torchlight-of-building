@@ -479,7 +479,7 @@ function CalculationsPage(): React.ReactNode {
 
         <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-3">
           <div className="mb-2 text-sm font-semibold text-zinc-300">
-            Resistances & Movement
+            Defenses & Movement
           </div>
           <div className="grid grid-cols-2 gap-x-6 gap-y-0.5">
             <StatLine
@@ -501,6 +501,21 @@ function CalculationsPage(): React.ReactNode {
               label="Erosion Res"
               value={formatRes(defenses.erosionRes)}
               color="text-fuchsia-400"
+            />
+            <StatLine
+              label="Attack Block"
+              value={formatStatValue.pct(defenses.attackBlockPct)}
+              color="text-slate-300"
+            />
+            <StatLine
+              label="Spell Block"
+              value={formatStatValue.pct(defenses.spellBlockPct)}
+              color="text-slate-300"
+            />
+            <StatLine
+              label="Block Ratio"
+              value={formatStatValue.pct(defenses.blockRatioPct)}
+              color="text-slate-300"
             />
             {offenseSummary !== undefined && (
               <StatLine

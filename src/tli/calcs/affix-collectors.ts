@@ -150,8 +150,27 @@ export const getCustomAffixes = (customAffixLines: AffixLine[]): Affix[] => {
   return [{ affixLines: customAffixLines, src: "CustomAffix" }];
 };
 
+/**
+ * Deduplicate affixes by specialName.
+ * Only deduplicates affixes where specialName is defined.
+ * Keeps the first occurrence of each specialName.
+ */
+const dedupeBySpecialName = (affixes: Affix[]): Affix[] => {
+  const seen = new Set<string>();
+  return affixes.filter((affix) => {
+    if (affix.specialName === undefined) {
+      return true;
+    }
+    if (seen.has(affix.specialName)) {
+      return false;
+    }
+    seen.add(affix.specialName);
+    return true;
+  });
+};
+
 export const getAllAffixes = (loadout: Loadout): Affix[] => {
-  return [
+  const allAffixes = [
     ...getHeroAffixes(loadout.heroPage),
     ...getDivinityAffixes(loadout.divinityPage),
     ...getPactspiritAffixes(loadout.pactspiritPage),
@@ -168,4 +187,6 @@ export const getAllAffixes = (loadout: Loadout): Affix[] => {
     ...getGearAffixes(loadout.gearPage.equippedGear.offHand),
     ...getCustomAffixes(loadout.customAffixLines),
   ];
+
+  return dedupeBySpecialName(allAffixes);
 };

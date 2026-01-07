@@ -1,4 +1,3 @@
-import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import {
   Tooltip,
   TooltipContent,
@@ -60,7 +59,7 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
   // biome-ignore lint/correctness/noUnusedFunctionParameters: reserved for future visual styling
   isInSourceArea = false,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const allocated = node.points;
   const isFullyAllocated = allocated >= node.maxPoints;
@@ -156,7 +155,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="prism"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-purple-400">
@@ -263,7 +261,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="default"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-cyan-400">Inverse Image</span>
@@ -359,16 +356,22 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="default"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-cyan-400">{talentTypeName} (Reflected)</span>
           </TooltipTitle>
           <TooltipContent>
             {node.affix.affixLines.map((line, idx) => (
-              <div key={idx} className="flex items-center">
-                <span>{line.text}</span>
-                {!line.mods && <ModNotImplementedIcon />}
+              <div
+                key={idx}
+                className={idx > 0 ? "mt-1 pt-1 border-t border-zinc-800" : ""}
+              >
+                <div>{line.text}</div>
+                {!line.mods && (
+                  <div className="text-xs text-red-500">
+                    (Mod not supported in TOB yet)
+                  </div>
+                )}
               </div>
             ))}
           </TooltipContent>
@@ -488,14 +491,20 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
         isVisible={isVisible}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <TooltipTitle>{talentTypeName}</TooltipTitle>
         <TooltipContent>
           {node.affix.affixLines.map((line, idx) => (
-            <div key={idx} className="flex items-center">
-              <span>{line.text}</span>
-              {!line.mods && <ModNotImplementedIcon />}
+            <div
+              key={idx}
+              className={idx > 0 ? "mt-1 pt-1 border-t border-zinc-800" : ""}
+            >
+              <div>{line.text}</div>
+              {!line.mods && (
+                <div className="text-xs text-red-500">
+                  (Mod not supported in TOB yet)
+                </div>
+              )}
             </div>
           ))}
         </TooltipContent>

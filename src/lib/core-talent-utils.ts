@@ -1,25 +1,7 @@
-import {
-  type BaseCoreTalent,
-  type CoreTalentName,
-  CoreTalentNames,
-  CoreTalents,
-} from "@/src/data/core_talent";
+import { type BaseCoreTalent, CoreTalents } from "@/src/data/core_talent";
 import { isGodGoddessTree } from "@/src/tli/talent_tree";
 
 export type TreeSlot = "tree1" | "tree2" | "tree3" | "tree4";
-
-/**
- * Check if the given text matches a core talent name and return it.
- * Returns undefined if not a core talent.
- */
-export const getCoreTalentNameFromText = (
-  text: string,
-): CoreTalentName | undefined => {
-  const normalized = text.trim();
-  return CoreTalentNames.find((name) => name === normalized) as
-    | CoreTalentName
-    | undefined;
-};
 
 export const getCoreTalentsForTree = (treeName: string): BaseCoreTalent[] => {
   const normalizedName = treeName.replace(/_/g, " ");

@@ -22,7 +22,7 @@ export const PrismInventoryItem: React.FC<PrismInventoryItemProps> = ({
   onSelect,
   selectionMode = false,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const legendaryGauges = getLegendaryGaugeAffixes();
   const legendaryCount = prism.gaugeAffixes.filter((a) =>
@@ -114,7 +114,6 @@ export const PrismInventoryItem: React.FC<PrismInventoryItemProps> = ({
         triggerRect={triggerRect}
         variant={prism.rarity === "legendary" ? "legendary" : "prism"}
         width="lg"
-        {...tooltipHandlers}
       >
         <TooltipTitle>
           <span className="capitalize">{prism.rarity} Prism</span>

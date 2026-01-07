@@ -1,4 +1,3 @@
-import type { CoreTalentName } from "../data/core_talent";
 import type {
   CritDmgModType,
   CritRatingModType,
@@ -137,6 +136,7 @@ export interface PerStackable {
 }
 
 export type Condition =
+  | "holding_shield"
   | "enemy_frostbitten"
   | "realm_of_mercury"
   | "has_focus_blessing"
@@ -339,7 +339,6 @@ interface ModDefinitions {
   GeneratesRepentance: { value: number };
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
   HeroTraitLevel: { value: number; heroTraitLevelType?: HeroTraitLevelType };
-  CoreTalent: { name: CoreTalentName };
   GearBasePhysDmg: { value: number };
   GearBaseCritRating: { value: number };
   GearBaseAttackSpeed: { value: number };

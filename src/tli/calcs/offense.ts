@@ -64,7 +64,6 @@ import {
   findMod,
   modExists,
   normalizeStackables,
-  resolveCoreTalentMods,
   sumByValue,
 } from "./mod-utils";
 import type { OffenseSkillName } from "./skill_confs";
@@ -173,6 +172,9 @@ export interface Defenses {
   lightningRes: Resistance;
   fireRes: Resistance;
   erosionRes: Resistance;
+  attackBlockPct: number;
+  spellBlockPct: number;
+  blockRatioPct: number;
 }
 
 // === Blessing Calculations ===
@@ -725,6 +727,14 @@ const filterModsByCond = (
         () => config.targetEnemyFrozenRecently,
       )
       .with("has_squidnova", () => config.hasSquidnova)
+      .with("holding_shield", () => {
+        const offhand = loadout.gearPage.equippedGear.offHand?.equipmentType;
+        return (
+          offhand === "Shield (DEX)" ||
+          offhand === "Shield (INT)" ||
+          offhand === "Shield (STR)"
+        );
+      })
       .exhaustive();
   });
 };
@@ -1607,11 +1617,21 @@ export const calculateDefenses = (
     return { max, potential, actual };
   };
 
+  const attackBlockPct = sumByValue(filterMods(mods, "AttackBlockChancePct"));
+  const spellBlockPct = sumByValue(filterMods(mods, "SpellBlockChancePct"));
+  const blockRatioPct = Math.min(
+    60,
+    30 + sumByValue(filterMods(mods, "BlockRatioPct")),
+  );
+
   return {
     coldRes: calcRes(["cold", "elemental"]),
     lightningRes: calcRes(["lightning", "elemental"]),
     fireRes: calcRes(["fire", "elemental"]),
     erosionRes: calcRes(["erosion"]),
+    attackBlockPct,
+    spellBlockPct,
+    blockRatioPct,
   };
 };
 
@@ -1835,6 +1855,15 @@ const calcSpellHit = (
   return { ...baseHitOverview, castTime };
 };
 
+const calcSpellRippleMult = (mods: Mod[]): number => {
+  const spellRipple = findMod(mods, "SpellRipple");
+  const spellRippleMult =
+    spellRipple !== undefined
+      ? 1 + (spellRipple.pctOfHitDmg / 100) * (spellRipple.chancePct / 100)
+      : 1;
+  return spellRippleMult;
+};
+
 export interface OffenseSpellDpsSummary {
   critChance: number;
   critDmgMult: number;
@@ -1872,10 +1901,12 @@ const calcAvgSpellDps = (
   const critDmgMult = calculateCritDmg(mods, skill);
   const doubleDmgMult = calculateDoubleDmgMult(mods);
   const extraMult = calculateExtraOffenseMults(mods, config);
+  const spellRippleMult = calcSpellRippleMult(mods);
 
   const avgHitWithCrit =
     avg * critChance * critDmgMult + avg * (1 - critChance);
-  const avgDps = avgHitWithCrit * doubleDmgMult * cspd * extraMult;
+  const avgDps =
+    avgHitWithCrit * doubleDmgMult * cspd * extraMult * spellRippleMult;
   return {
     critChance,
     critDmgMult,
@@ -1916,9 +1947,15 @@ const calcAvgSpellBurstDps = (
   const spellBurstDmgMult = calculateAddn(
     filterMods(mods, "SpellBurstAdditionalDmgPct").map((m) => m.value),
   );
+  const spellRippleMult = calcSpellRippleMult(mods);
 
   if (derivedCtx.hero !== bing2) {
-    const avgDps = burstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+    const avgDps =
+      burstsPerSec *
+      maxSpellBurst *
+      avgHit *
+      spellBurstDmgMult *
+      spellRippleMult;
     return { burstsPerSec, maxSpellBurst, avgDps };
   }
 
@@ -1950,10 +1987,18 @@ const calcAvgSpellBurstDps = (
 
   const normalBurstsPerSec = burstsPerSec - 0.5 * ingenuityOverloadPerSec;
   const normalAvgDps =
-    normalBurstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+    normalBurstsPerSec *
+    maxSpellBurst *
+    avgHit *
+    spellBurstDmgMult *
+    spellRippleMult;
   // overload triggers +200% additional max spell burst
   const overloadAvgDps =
-    ingenuityOverloadPerSec * (3 * maxSpellBurst) * avgHit * spellBurstDmgMult;
+    ingenuityOverloadPerSec *
+    (3 * maxSpellBurst) *
+    avgHit *
+    spellBurstDmgMult *
+    spellRippleMult;
   return {
     burstsPerSec,
     maxSpellBurst,
@@ -1969,7 +2014,7 @@ const calcAvgSpellBurstDps = (
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
   const { loadout, configuration: config } = input;
   const loadoutMods = [
-    ...resolveCoreTalentMods(collectMods(loadout)),
+    ...collectMods(loadout),
     ...calculateHeroTraitMods(loadout),
   ];
 

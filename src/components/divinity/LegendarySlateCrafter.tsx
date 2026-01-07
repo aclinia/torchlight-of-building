@@ -1,10 +1,8 @@
 import { useMemo, useState } from "react";
-import { CoreTalentInfoIcon } from "@/src/components/ui/CoreTalentInfoIcon";
 import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/components/ui/SearchableSelect";
-import type { CoreTalentName } from "@/src/data/core_talent/types";
 import {
   LEGENDARY_SLATE_BORDER,
   LEGENDARY_SLATE_COLOR,
@@ -392,12 +390,6 @@ export const LegendarySlateCrafter: React.FC<LegendarySlateCrafterProps> = ({
                           <span className="truncate">
                             {getAffixDisplayText(affix)}
                           </span>
-                          {affix.isCoreTalent &&
-                            affix.displayName !== undefined && (
-                              <CoreTalentInfoIcon
-                                talentName={affix.displayName as CoreTalentName}
-                              />
-                            )}
                         </div>
                       )}
                     </div>

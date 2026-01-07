@@ -16,10 +16,17 @@ export const getFilteredAffixes = (
   equipmentType: EquipmentType,
   affixType: FilterAffixType,
 ): BaseGearAffix[] => {
-  return ALL_GEAR_AFFIXES.filter(
+  const filtered = ALL_GEAR_AFFIXES.filter(
     (affix) =>
       affix.equipmentType === equipmentType && affix.affixType === affixType,
   );
+
+  // Reverse base stats so highest values appear first
+  if (affixType === "Base Stats") {
+    return filtered.toReversed();
+  }
+
+  return filtered;
 };
 
 export const formatAffixOption = (affix: BaseGearAffix): string => {

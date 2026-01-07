@@ -1,6 +1,5 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
-import { CoreTalentMods } from "@/src/data/core_talent";
 import type { Affix, Configuration, DmgRange, Loadout } from "../core";
 import type { ConditionThreshold, Mod, ModT, Stackable } from "../mod";
 import { getAllAffixes } from "./affix-collectors";
@@ -72,24 +71,6 @@ export const collectModsFromAffixes = (affixes: Affix[]): Mod[] => {
 
 export const collectMods = (loadout: Loadout): Mod[] => {
   return collectModsFromAffixes(getAllAffixes(loadout));
-};
-
-export const resolveCoreTalentMods = (mods: Mod[]): Mod[] => {
-  const coreTalentNamesAndSrc = R.unique(
-    filterMods(mods, "CoreTalent").map((m) => ({ name: m.name, src: m.src })),
-  );
-  const newMods: Mod[] = coreTalentNamesAndSrc.flatMap(({ name, src }) => {
-    const affix = CoreTalentMods[name];
-    const coreMods = affix.affixLines.flatMap(
-      (affixLine) => affixLine.mods ?? [],
-    );
-    const modsWithSrc = coreMods.map((m) => ({
-      ...m,
-      src: `${src}#CoreTalent: ${name}`,
-    }));
-    return modsWithSrc;
-  });
-  return [...mods.filter((m) => m.type !== "CoreTalent"), ...newMods];
 };
 
 export const condThresholdSatisfied = (
@@ -191,12 +172,7 @@ export const normalizeStackable = <T extends Mod>(
 };
 
 // returns mods that don't need normalization
-// excludes mods with `per` or that need replacement (like CoreTalent mods)
+// excludes mods with `per`
 export const filterOutPerMods = (mods: Mod[]): Mod[] => {
-  const staticMods = mods.filter((m) => {
-    const hasPer = "per" in m && m.per !== undefined;
-    const isCoreTalent = m.type === "CoreTalent";
-    return !(hasPer || isCoreTalent);
-  });
-  return staticMods;
+  return mods.filter((m) => !("per" in m && m.per !== undefined));
 };

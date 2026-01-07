@@ -368,12 +368,11 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
   const renderSelectedTooltip = (
     option: SearchableSelectOption<string>,
     triggerRect: DOMRect,
-    tooltipHandlers: { onMouseEnter: () => void; onMouseLeave: () => void },
   ): React.ReactNode => {
     const skillData = skillsByName.get(option.value);
     if (skillData === undefined || selectedSlot === undefined) return null;
     return (
-      <Tooltip isVisible={true} triggerRect={triggerRect} {...tooltipHandlers}>
+      <Tooltip isVisible={true} triggerRect={triggerRect}>
         <SupportSkillSelectedTooltipContent
           skill={skillData}
           slot={selectedSlot}

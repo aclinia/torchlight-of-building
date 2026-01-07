@@ -3,6 +3,7 @@ import { useCallback, useMemo } from "react";
 import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix, EquipmentType } from "@/src/tli/gear_data_types";
 import { AffixSlotComponent } from "../../components/equipment/AffixSlotComponent";
+import { EditGearModal } from "../../components/equipment/EditGearModal";
 import { EquipmentSlotDropdown } from "../../components/equipment/EquipmentSlotDropdown";
 import { InventoryItem } from "../../components/equipment/InventoryItem";
 import { LegendaryGearModule } from "../../components/equipment/LegendaryGearModule";
@@ -34,7 +35,22 @@ function EquipmentPage(): React.ReactNode {
     deleteItem,
     selectItemForSlot,
     isItemEquipped,
+    updateItem,
   } = useBuilderActions();
+
+  // Edit modal state
+  const isEditModalOpen = useEquipmentUIStore((state) => state.isEditModalOpen);
+  const editModalItemId = useEquipmentUIStore((state) => state.editModalItemId);
+  const openEditModal = useEquipmentUIStore((state) => state.openEditModal);
+  const closeEditModal = useEquipmentUIStore((state) => state.closeEditModal);
+
+  const editingItem = useMemo(
+    () =>
+      editModalItemId !== undefined
+        ? loadout.gearPage.inventory.find((i) => i.id === editModalItemId)
+        : undefined,
+    [editModalItemId, loadout.gearPage.inventory],
+  );
 
   // Equipment UI store - crafting state
   const selectedEquipmentType = useEquipmentUIStore(
@@ -626,6 +642,7 @@ function EquipmentPage(): React.ReactNode {
                   // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
                   isEquipped={isItemEquipped(item.id!)}
                   onCopy={copyItem}
+                  onEdit={openEditModal}
                   onDelete={handleDeleteItem}
                 />
               ))}
@@ -635,6 +652,13 @@ function EquipmentPage(): React.ReactNode {
 
         <LegendaryGearModule onSaveToInventory={addItemToInventory} />
       </div>
+
+      <EditGearModal
+        isOpen={isEditModalOpen}
+        onClose={closeEditModal}
+        item={editingItem}
+        onSave={updateItem}
+      />
     </div>
   );
 }
