@@ -5,7 +5,7 @@ import {
   ComboboxOption,
   ComboboxOptions,
 } from "@headlessui/react";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export interface SearchableSelectOption<T = string> {
   value: T;
@@ -27,6 +27,7 @@ interface SearchableSelectProps<T extends string | number> {
   size?: "sm" | "default" | "lg";
   disabled?: boolean;
   className?: string;
+  autoFocus?: boolean;
   renderOption?: (
     option: SearchableSelectOption<T>,
     props: { active: boolean; selected: boolean },
@@ -68,6 +69,7 @@ export const SearchableSelect = <T extends string | number>({
   size = "default",
   disabled = false,
   className = "",
+  autoFocus = false,
   renderOption,
   renderSelectedTooltip,
 }: SearchableSelectProps<T>) => {
@@ -76,6 +78,13 @@ export const SearchableSelect = <T extends string | number>({
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [inputRect, setInputRect] = useState<DOMRect | undefined>(undefined);
   const inputWrapperRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (autoFocus && inputRef.current !== null) {
+      inputRef.current.focus();
+    }
+  }, [autoFocus]);
 
   const handleInputMouseEnter = (): void => {
     if (inputWrapperRef.current !== null) {
@@ -141,6 +150,7 @@ export const SearchableSelect = <T extends string | number>({
         >
           <ComboboxButton as="div" className="relative">
             <ComboboxInput
+              ref={inputRef}
               className={`
                 w-full bg-zinc-800 border border-zinc-700 rounded
                 ${SIZE_CLASSES[size]}

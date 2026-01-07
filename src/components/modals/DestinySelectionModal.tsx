@@ -84,6 +84,7 @@ export const DestinySelectionModal = ({
             label: formatDestinyOption(destiny),
           }))}
           placeholder="<Select Destiny>"
+          autoFocus={isOpen}
         />
       </div>
 
