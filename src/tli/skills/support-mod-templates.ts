@@ -157,6 +157,7 @@ const allSupportParsers = [
     "{value:+dec%} additional hit damage for skills cast by spell burst when spell burst is activated by the supported skill",
   ).output("SpellBurstAdditionalDmgPct", (c) => ({
     value: c.value,
+    addn: true as const,
   })),
   t(
     "{value:+dec%} additional attack and cast speed for the supported skill",

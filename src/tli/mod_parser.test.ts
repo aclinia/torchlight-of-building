@@ -1858,6 +1858,7 @@ test("parse additional hit damage per spell burst charge speed", () => {
     {
       type: "SpellBurstAdditionalDmgPct",
       value: 19,
+      addn: true,
       per: {
         stackable: "spell_burst_charge_speed_bonus_pct",
         amt: 75,
@@ -2708,6 +2709,7 @@ test("parse additional hit damage for skills cast by spell burst", () => {
     {
       type: "SpellBurstAdditionalDmgPct",
       value: 36,
+      addn: true,
     },
   ]);
 });
@@ -2938,6 +2940,7 @@ test("parse additional max damage", () => {
     {
       type: "AddnMaxDmgPct",
       value: 6,
+      addn: true,
     },
   ]);
 });

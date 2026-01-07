@@ -100,6 +100,7 @@ export const allParsers = [
     "for every {amt:+dec%} spell burst charge speed, {value:+dec%} additional hit damage for skills cast by spell burst, up to {limit:+dec%}",
   ).output("SpellBurstAdditionalDmgPct", (c) => ({
     value: c.value,
+    addn: true as const,
     per: { stackable: "spell_burst_charge_speed_bonus_pct" as const, amt: c.amt, valueLimit: c.limit },
   })),
   t("{value:+dec%} additional damage for the next skill when mana reaches the max").output("DmgPct", (c) => ({
@@ -383,6 +384,7 @@ export const allParsers = [
   })),
   t("{value:+dec%} additional max damage").output("AddnMaxDmgPct", (c) => ({
     value: c.value,
+    addn: true as const,
   })),
   t("{value:+dec%} [additional] attack and cast speed when at full mana").outputMany([
     spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
@@ -610,6 +612,7 @@ export const allParsers = [
   })),
   t("{value:+dec%} additional hit damage for skills cast by spell burst").output("SpellBurstAdditionalDmgPct", (c) => ({
     value: c.value,
+    addn: true as const,
   })),
   t(
     "{value:dec%} of the bonuses and additional bonuses to cast speed is also applied to spell burst charge speed",

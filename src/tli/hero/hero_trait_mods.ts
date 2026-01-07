@@ -16,7 +16,7 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
     {
       type: "SpellBurstAdditionalDmgPct",
       value: [20, 25, 30, 35, 40][i],
-      dmgModType: "spell",
+      addn: true,
     },
   ],
   "Auto-Ingenuity Program": (i) => [
