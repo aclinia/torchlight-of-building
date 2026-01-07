@@ -102,6 +102,7 @@ export type Stackable =
   | "int"
   | "level"
   | "max_spell_burst"
+  | "spell_burst_charge_speed_bonus_pct"
   | "has_hit_enemy_with_elemental_dmg_recently"
   | "num_spell_skills_used_recently"
   // max channel stacks beyond initial skill channel stacks
@@ -229,6 +230,7 @@ interface ModDefinitions {
   MinionCritRatingPct: { value: number; addn?: boolean };
   MinionCritDmgPct: { value: number; addn?: boolean };
   MinionResPenPct: { value: number; penType: ResPenType };
+  MinionArmorPenPct: { value: number };
   // end minions
   ProjectileSpeedPct: { value: number; addn?: boolean };
   ProjectileSizePct: { value: number };

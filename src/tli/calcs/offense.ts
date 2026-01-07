@@ -1323,8 +1323,22 @@ const pushSpellAggression = (mods: Mod[], config: Configuration): void => {
   });
 };
 
+const calcSpellBurstChargeSpeedBonusPct = (mods: Mod[]): number => {
+  const playSafe = findMod(mods, "PlaySafe");
+  const chargeSpeedMods = [
+    ...filterMods(mods, "SpellBurstChargeSpeedPct"),
+    ...(playSafe !== undefined
+      ? filterMods(mods, "CspdPct").map((m) =>
+          multModValue(m, playSafe.value / 100),
+        )
+      : []),
+  ];
+  return (calcEffMult(chargeSpeedMods) - 1) * 100;
+};
+
 interface DerivedOffenseCtx {
   maxSpellBurst: number;
+  spellBurstChargeSpeedBonusPct: number;
   movementSpeedBonusPct: number;
   mods: Mod[];
 }
@@ -1383,6 +1397,7 @@ const resolveModsForOffenseSkill = (
 
   // must happen before movement speed
   pushAttackAggression(mods, config);
+  // must happen before spell burst charge speed calculation (adds CspdPct mods)
   pushSpellAggression(mods, config);
 
   // must happen before max_spell_burst normalization
@@ -1616,7 +1631,23 @@ const resolveModsForOffenseSkill = (
     ),
   );
 
-  return { mods, maxSpellBurst, movementSpeedBonusPct };
+  // must happen after spell aggression and any other normalizations that can
+  // affect cast speed
+  const spellBurstChargeSpeedBonusPct = calcSpellBurstChargeSpeedBonusPct(mods);
+  mods.push(
+    ...normalizeStackables(
+      prenormMods,
+      "spell_burst_charge_speed_bonus_pct",
+      spellBurstChargeSpeedBonusPct,
+    ),
+  );
+
+  return {
+    mods,
+    maxSpellBurst,
+    movementSpeedBonusPct,
+    spellBurstChargeSpeedBonusPct,
+  };
 };
 
 const calculateResourcePool = (
@@ -2032,20 +2063,12 @@ export interface OffenseSpellBurstDpsSummary {
 const calcAvgSpellBurstDps = (
   mods: Mod[],
   avgHit: number,
-  maxSpellBurst: number,
+  derivedOffenseCtx: DerivedOffenseCtx,
   derivedCtx: DerivedCtx,
 ): OffenseSpellBurstDpsSummary => {
-  const playSafe = findMod(mods, "PlaySafe");
+  const { maxSpellBurst, spellBurstChargeSpeedBonusPct } = derivedOffenseCtx;
   const baseBurstsPerSec = 0.5;
-  const chargeSpeedMods = [
-    ...filterMods(mods, "SpellBurstChargeSpeedPct"),
-    ...(playSafe !== undefined
-      ? filterMods(mods, "CspdPct").map((m) =>
-          multModValue(m, playSafe.value / 100),
-        )
-      : []),
-  ];
-  const burstsPerSecMult = calcEffMult(chargeSpeedMods);
+  const burstsPerSecMult = 1 + spellBurstChargeSpeedBonusPct / 100;
   const burstsPerSec = baseBurstsPerSec * burstsPerSecMult;
   const spellBurstDmgMult = calculateAddn(
     filterMods(mods, "SpellBurstAdditionalDmgPct").map((m) => m.value),
@@ -2170,16 +2193,16 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
         derivedCtx,
       );
 
-    const { mods, maxSpellBurst, movementSpeedBonusPct } =
-      resolveModsForOffenseSkill(
-        [...unresolvedLoadoutAndBuffMods, ...perSkillContext.mods],
-        perSkillContext.skill,
-        skillLevel,
-        resourcePool,
-        loadout,
-        config,
-        derivedCtx,
-      );
+    const derivedOffenseCtx = resolveModsForOffenseSkill(
+      [...unresolvedLoadoutAndBuffMods, ...perSkillContext.mods],
+      perSkillContext.skill,
+      skillLevel,
+      resourcePool,
+      loadout,
+      config,
+      derivedCtx,
+    );
+    const { mods, movementSpeedBonusPct } = derivedOffenseCtx;
 
     const attackHitSummary = calcAvgAttackDps(
       mods,
@@ -2204,7 +2227,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
         ? calcAvgSpellBurstDps(
             mods,
             spellDpsSummary.avgHitWithCrit,
-            maxSpellBurst,
+            derivedOffenseCtx,
             derivedCtx,
           )
         : undefined;

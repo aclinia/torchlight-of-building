@@ -1850,6 +1850,23 @@ test("parse movement speed per max spell burst stack", () => {
   ]);
 });
 
+test("parse additional hit damage per spell burst charge speed", () => {
+  const result = parseMod(
+    "For every +75% Spell Burst Charge Speed, +19% additional Hit Damage for skills cast by Spell Burst, up to +80%",
+  );
+  expect(result).toEqual([
+    {
+      type: "SpellBurstAdditionalDmgPct",
+      value: 19,
+      per: {
+        stackable: "spell_burst_charge_speed_bonus_pct",
+        amt: 75,
+        valueLimit: 80,
+      },
+    },
+  ]);
+});
+
 test("parse support skill level", () => {
   const result = parseMod("+7 Support Skill Level");
   expect(result).toEqual([

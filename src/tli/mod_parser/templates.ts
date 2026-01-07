@@ -96,6 +96,12 @@ export const allParsers = [
       per: { stackable: "max_spell_burst" as const, valueLimit: c.limit },
     }),
   ),
+  t(
+    "for every {amt:+dec%} spell burst charge speed, {value:+dec%} additional hit damage for skills cast by spell burst, up to {limit:+dec%}",
+  ).output("SpellBurstAdditionalDmgPct", (c) => ({
+    value: c.value,
+    per: { stackable: "spell_burst_charge_speed_bonus_pct" as const, amt: c.amt, valueLimit: c.limit },
+  })),
   t("{value:+dec%} additional damage for the next skill when mana reaches the max").output("DmgPct", (c) => ({
     value: c.value,
     dmgModType: GLOBAL,
