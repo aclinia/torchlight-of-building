@@ -1349,6 +1349,22 @@ const pushSpellAggression = (mods: Mod[], config: Configuration): void => {
   });
 };
 
+const pushMark = (mods: Mod[], config: Configuration): void => {
+  if (!config.targetEnemyMarked) {
+    return;
+  }
+  const markEffMult = calcEffMult(mods, "MarkEffPct");
+  const baseValue = 20;
+  mods.push({
+    type: "CritDmgPct",
+    value: baseValue * markEffMult,
+    addn: true,
+    modType: "global",
+    isEnemyDebuff: true,
+    src: "Mark",
+  });
+};
+
 const calcSpellBurstChargeSpeedBonusPct = (mods: Mod[]): number => {
   const playSafe = findMod(mods, "PlaySafe");
   const chargeSpeedMods = [
@@ -1425,6 +1441,8 @@ const resolveModsForOffenseSkill = (
   pushAttackAggression(mods, config);
   // must happen before spell burst charge speed calculation (adds CspdPct mods)
   pushSpellAggression(mods, config);
+
+  pushMark(mods, config);
 
   // must happen before max_spell_burst normalization
   // must happen after attack aggression

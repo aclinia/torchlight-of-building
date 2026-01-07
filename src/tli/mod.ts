@@ -216,7 +216,12 @@ interface ModDefinitions {
   FlatDmgToSpells: { value: DmgRange; dmgType: DmgChunkType };
   FlatCritRating: { value: number; modType: CritRatingModType };
   CritRatingPct: { value: number; modType: CritRatingModType };
-  CritDmgPct: { value: number; addn: boolean; modType: CritDmgModType };
+  CritDmgPct: {
+    value: number;
+    addn: boolean;
+    modType: CritDmgModType;
+    isEnemyDebuff?: boolean;
+  };
   AspdPct: { value: number; addn: boolean };
   CspdPct: { value: number; addn: boolean };
   // minions
@@ -369,6 +374,9 @@ interface ModDefinitions {
   InflictFrail: object;
   NumbedEffPct: { value: number };
   NumbedChancePct: { value: number };
+  // non-ailment debuffs
+  InflictsMark: object;
+  MarkEffPct: { value: number };
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };

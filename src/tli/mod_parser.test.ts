@@ -2851,6 +2851,25 @@ test("parse numbed chance and effect combined", () => {
   ]);
 });
 
+test("parse mark effect", () => {
+  const result = parseMod("+20% Mark effect");
+  expect(result).toEqual([
+    {
+      type: "MarkEffPct",
+      value: 20,
+    },
+  ]);
+});
+
+test("parse chance to mark on critical strike", () => {
+  const result = parseMod("+25% chance to Mark the enemy on Critical Strike");
+  expect(result).toEqual([
+    {
+      type: "InflictsMark",
+    },
+  ]);
+});
+
 test("parse additional damage after using mobility skills", () => {
   const result = parseMod(
     "+10% additional damage for 4s after using Mobility Skills",

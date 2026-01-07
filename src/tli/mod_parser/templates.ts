@@ -825,6 +825,10 @@ export const allParsers = [
     spec("NumbedChancePct", (c) => ({ value: c.chance })),
     spec("NumbedEffPct", (c) => ({ value: c.effect })),
   ]),
+  // Mark effect
+  t("{value:+dec%} mark effect").output("MarkEffPct", (c) => ({ value: c.value })),
+  // Mark chance on crit
+  t("{value:+dec%} chance to mark the enemy on critical strike").output("InflictsMark", () => ({})),
   // Mana regen with focus blessing
   t("regenerates {value:dec%} mana per second when focus blessing is active").output("ManaRegenPerSecPct", (c) => ({
     value: c.value,
