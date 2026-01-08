@@ -1871,6 +1871,15 @@ test("parse cast speed when focus blessing is active", () => {
   ]);
 });
 
+test("parse multistrikes deal increasing damage", () => {
+  const result = parseMod(
+    "Multistrikes deal 55% increasing damage",
+  );
+  expect(result).toEqual([
+    { type: "MultistrikeIncDmgPct", value: 55},
+  ]);
+});
+
 test("parse additional hit damage for skills cast by spell burst", () => {
   const result = parseMod(
     "+36% additional Hit Damage for skills cast by Spell Burst",

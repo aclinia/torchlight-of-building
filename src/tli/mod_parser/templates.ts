@@ -591,6 +591,9 @@ export const allParsers = [
     value: c.value,
     addn: true as const,
   })),
+  t("Multistrikes deal {value:dec%} increasing damage").output("MultistrikeIncDmgPct", (c) => ({
+    value: c.value,
+  })),
   t(
     "{value:dec%} of the bonuses and additional bonuses to cast speed is also applied to spell burst charge speed",
   ).output("PlaySafe", (c) => ({ value: c.value })),

@@ -292,6 +292,7 @@ interface ModDefinitions {
   ReapDurationPct: { value: number };
   ReapCdrPct: { value: number; addn?: boolean };
   MultistrikeChancePct: { value: number };
+  MultistrikeIncDmgPct: { value: number };
   ConvertDmgPct: { from: DmgChunkType; to: DmgChunkType; value: number };
   AddsDmgAsPct: { from: DmgChunkType; to: DmgChunkType; value: number };
   MaxWillpowerStacks: { value: number };
