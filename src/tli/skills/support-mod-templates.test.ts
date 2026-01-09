@@ -65,4 +65,11 @@ describe("parseSupportAffixes", () => {
     ]);
     expect(result).toEqual([[]]);
   });
+
+  test("parse multistrike trigger returns no mods", () => {
+    const result = parseSupportAffixes([
+      "Triggers the supported skill upon reaching the max Multistrike Count. Interval: 0.1s",
+    ]);
+    expect(result).toEqual([[]]);
+  });
 });

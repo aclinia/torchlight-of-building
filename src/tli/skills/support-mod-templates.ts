@@ -259,6 +259,9 @@ const allSupportParsers = [
   t(
     "automatically and continuously cast the supported skill at the nearest enemy within {_:int}m while standing still",
   ).outputMany([]),
+  t(
+    "triggers the supported skill upon reaching the max multistrike count. interval: {_:dec}s",
+  ).outputMany([]),
 ];
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {
