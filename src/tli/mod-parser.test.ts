@@ -1209,6 +1209,37 @@ test("parse additional attack damage dealt to nearby enemies", () => {
   ]);
 });
 
+test("parse additional attack damage when holding one-handed weapon", () => {
+  const result = parseMod(
+    "+20% additional Attack Damage when holding a One-Handed Weapon",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 20,
+      dmgModType: "attack",
+      addn: true,
+      cond: "has_one_handed_weapon",
+    },
+  ]);
+});
+
+test("parse additional attack damage per unique weapon type while dual wielding", () => {
+  const result = parseMod(
+    "+5% additional Attack Damage for each unique type of weapon equipped while Dual Wielding",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 5,
+      dmgModType: "attack",
+      addn: true,
+      per: { stackable: "num_unique_weapon_types_equipped" },
+      cond: "is_dual_wielding",
+    },
+  ]);
+});
+
 test("parse has hasten", () => {
   const result = parseMod("Has Hasten");
   expect(result).toEqual([{ type: "HasHasten" }]);

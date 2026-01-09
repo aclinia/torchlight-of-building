@@ -114,6 +114,7 @@ export type Stackable =
   | "spell_burst_charge_speed_bonus_pct"
   | "has_hit_enemy_with_elemental_dmg_recently"
   | "num_spell_skills_used_recently"
+  | "num_unique_weapon_types_equipped"
   // max channel stacks beyond initial skill channel stacks
   | "additional_max_channel_stack"
   | "channel_stack"
@@ -148,6 +149,7 @@ export interface PerStackable {
 export type Condition =
   | "holding_shield"
   | "is_dual_wielding"
+  | "has_one_handed_weapon"
   | "enemy_frostbitten"
   | "realm_of_mercury"
   | "has_focus_blessing"
@@ -424,6 +426,7 @@ interface ModDefinitions {
   // pactspirit stuff
   SquidnovaEffPct: { value: number };
   GeneratesSquidnova: object;
+  // legendary gear
 }
 
 // Generate the Mod union type from ModDefinitions

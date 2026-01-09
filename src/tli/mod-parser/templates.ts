@@ -37,6 +37,10 @@ const HAS_USED_MOBILITY_SKILL_RECENTLY =
   "has_used_mobility_skill_recently" as const;
 const HAS_MOVED_RECENTLY = "has_moved_recently" as const;
 const ENEMY_NUMBED = "enemy_numbed" as const;
+const HAS_ONE_HANDED_WEAPON = "has_one_handed_weapon" as const;
+const IS_DUAL_WIELDING = "is_dual_wielding" as const;
+const NUM_UNIQUE_WEAPON_TYPES_EQUIPPED =
+  "num_unique_weapon_types_equipped" as const;
 
 export const allParsers = [
   t(
@@ -332,6 +336,23 @@ export const allParsers = [
       cond: TARGET_ENEMY_IS_NEARBY,
     }),
   ),
+  t(
+    "{value:+dec%} additional attack damage when holding a one-handed weapon",
+  ).output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: ATTACK,
+    addn: true,
+    cond: HAS_ONE_HANDED_WEAPON,
+  })),
+  t(
+    "{value:+dec%} additional attack damage for each unique type of weapon equipped while dual wielding",
+  ).output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: ATTACK,
+    addn: true,
+    per: { stackable: NUM_UNIQUE_WEAPON_TYPES_EQUIPPED },
+    cond: IS_DUAL_WIELDING,
+  })),
   t(
     "blur gains an additional effect: {value:+dec%} additional damage over time",
   ).output("DmgPct", (c) => ({

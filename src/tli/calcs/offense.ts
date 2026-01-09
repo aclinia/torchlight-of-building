@@ -788,6 +788,13 @@ const filterModsByCond = (
       .with("has_moved_recently", () => config.hasMovedRecently)
       .with("has_cast_curse_recently", () => config.hasCastCurseRecently)
       .with("is_dual_wielding", () => derivedCtx.dualWielding)
+      .with("has_one_handed_weapon", () => {
+        const { mainHand, offHand } = loadout.gearPage.equippedGear;
+        return (
+          (mainHand !== undefined && isOneHandedWeapon(mainHand)) ||
+          (offHand !== undefined && isOneHandedWeapon(offHand))
+        );
+      })
       .exhaustive();
   });
 };
@@ -1663,6 +1670,12 @@ const resolveModsForOffenseSkill = (
   normalize("main_stat", totalMainStats);
   normalize("highest_stat", highestStat);
   normalize("stat", sumStats);
+  const { mainHand, offHand } = loadout.gearPage.equippedGear;
+  normalize(
+    "num_unique_weapon_types_equipped",
+    R.unique([mainHand?.equipmentType ?? "", offHand?.equipmentType ?? ""])
+      .length,
+  );
 
   pushTradeoff(mods, resourcePool);
   pushWhimsy(mods, config);
