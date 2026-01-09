@@ -7,7 +7,7 @@ import type {
   CraftingPool,
   EquipmentSlot,
   EquipmentType,
-} from "../tli/gear_data_types";
+} from "../tli/gear-data-types";
 
 interface BaseGearAffix {
   equipmentSlot: EquipmentSlot;
@@ -388,7 +388,7 @@ const generateEquipmentAffixFile = (
 ): string => {
   const constName = fileKeyToConstName(fileKey);
 
-  return `import type { BaseGearAffix } from "../../tli/gear_data_types";
+  return `import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const ${constName}: readonly BaseGearAffix[] = ${JSON.stringify(affixes)};
 `;

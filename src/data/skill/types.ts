@@ -214,6 +214,6 @@ export interface BaseActiveSkill extends BaseSkill {
   mainStats?: ("str" | "dex" | "int")[];
   kinds: InferredSkillKind[];
   // Named value arrays for level-scaling offense/mods/buffMods (1-40).
-  // Keys must match factory function expectations in active_factories.ts.
+  // Keys must match factory function expectations in active-factories.ts.
   levelValues?: LevelValues;
 }

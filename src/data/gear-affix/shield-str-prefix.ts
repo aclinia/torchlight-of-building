@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const SHIELD_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
   {

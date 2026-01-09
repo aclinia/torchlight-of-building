@@ -5,7 +5,7 @@ import type {
   NobleSupportSkillName,
   SupportSkillName,
 } from "../data/skill";
-import type { EquipmentType } from "./gear_data_types";
+import type { EquipmentType } from "./gear-data-types";
 import type { Mod } from "./mod";
 
 export const PRISM_RARITIES = ["rare", "legendary"] as const;

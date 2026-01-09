@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useMemo } from "react";
 import { craft } from "@/src/tli/crafting/craft";
-import type { BaseGearAffix, EquipmentType } from "@/src/tli/gear_data_types";
+import type { BaseGearAffix, EquipmentType } from "@/src/tli/gear-data-types";
 import { AffixSlotComponent } from "../../components/equipment/AffixSlotComponent";
 import { EditGearModal } from "../../components/equipment/EditGearModal";
 import { EquipmentSlotDropdown } from "../../components/equipment/EquipmentSlotDropdown";

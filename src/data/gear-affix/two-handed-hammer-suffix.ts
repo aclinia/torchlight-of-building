@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const TWO_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {

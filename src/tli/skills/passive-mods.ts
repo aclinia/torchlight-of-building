@@ -5,7 +5,7 @@ import type {
   PassiveSkillName,
 } from "@/src/data/skill/types";
 import type { Mod } from "../mod";
-import { passiveSkillModFactories } from "./passive_factories";
+import { passiveSkillModFactories } from "./passive-factories";
 
 /**
  * Get all mods for a passive skill at a given level.

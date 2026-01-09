@@ -6,7 +6,7 @@ import type {
   SkillOffense,
 } from "@/src/data/skill/types";
 import type { Mod } from "../mod";
-import { activeSkillModFactories } from "./active_factories";
+import { activeSkillModFactories } from "./active-factories";
 
 /**
  * Get all mods and offense stats for an active skill at a given level.

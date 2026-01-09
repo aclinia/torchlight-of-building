@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] =
   [

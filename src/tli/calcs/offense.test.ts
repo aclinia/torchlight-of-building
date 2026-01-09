@@ -19,7 +19,7 @@ import {
   type OffenseResults,
   type WeaponAttackSummary,
 } from "./offense";
-import type { OffenseSkillName } from "./skill_confs";
+import type { OffenseSkillName } from "./skill-confs";
 
 type DmgPctMod = Extract<Mod, { type: "DmgPct" }>;
 

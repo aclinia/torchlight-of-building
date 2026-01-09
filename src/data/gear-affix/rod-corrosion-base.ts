@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const ROD_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {

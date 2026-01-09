@@ -29,8 +29,8 @@ import type {
   NobleSupportSkillSlot,
   SkillSlot,
 } from "../core";
-import type { EquipmentType } from "../gear_data_types";
-import { getHeroTraitMods } from "../hero/hero_trait_mods";
+import type { EquipmentType } from "../gear-data-types";
+import { getHeroTraitMods } from "../hero/hero-trait-mods";
 import type {
   DmgChunkType,
   Mod,
@@ -39,8 +39,8 @@ import type {
   Stackable,
   StatType,
 } from "../mod";
-import { getActiveSkillMods } from "../skills/active_mods";
-import { getPassiveSkillMods } from "../skills/passive_mods";
+import { getActiveSkillMods } from "../skills/active-mods";
+import { getPassiveSkillMods } from "../skills/passive-mods";
 import { buildSupportSkillAffixes } from "../storage/load-save";
 import {
   addDRs,
@@ -75,7 +75,7 @@ import {
   pushNormalizedStackable,
   sumByValue,
 } from "./mod-utils";
-import type { OffenseSkillName } from "./skill_confs";
+import type { OffenseSkillName } from "./skill-confs";
 import { multModValue, multValue } from "./util";
 
 // Re-export types that consumers expect from offense.ts

@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {

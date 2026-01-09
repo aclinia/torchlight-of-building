@@ -14,7 +14,7 @@ import {
   GOD_GODDESS_TREES,
   isGodGoddessTree,
   PROFESSION_TREES,
-} from "@/src/tli/talent_tree";
+} from "@/src/tli/talent-tree";
 import { CoreTalentSelector } from "../../../components/talents/CoreTalentSelector";
 import { InverseImageSection } from "../../../components/talents/InverseImageSection";
 import { PrismCoreTalentEffect } from "../../../components/talents/PrismCoreTalentEffect";

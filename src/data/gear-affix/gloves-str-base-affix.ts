@@ -1,4 +1,4 @@
-import type { BaseGearAffix } from "../../tli/gear_data_types";
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const GLOVES_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {

@@ -7,7 +7,7 @@ import type {
   LegendaryAffix,
   LegendaryAffixChoice,
 } from "../data/legendary/types";
-import type { EquipmentSlot, EquipmentType } from "../tli/gear_data_types";
+import type { EquipmentSlot, EquipmentType } from "../tli/gear-data-types";
 import { LegendaryDataOverrides } from "./legendaries/legendary-data-overrides";
 import { readCodexHtml } from "./lib/codex";
 
