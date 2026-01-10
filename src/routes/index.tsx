@@ -386,6 +386,17 @@ function SavesPage(): React.ReactNode {
             </div>
           )}
         </div>
+
+        <footer className="py-4 border-t border-zinc-800 text-center">
+          <a
+            href="https://github.com/aclinia/torchlight-of-building"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-500 hover:text-zinc-300 transition-colors text-sm"
+          >
+            GitHub
+          </a>
+        </footer>
       </div>
 
       <ImportModal
