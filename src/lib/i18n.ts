@@ -32,8 +32,8 @@ export const setStoredLocale = (locale: Locale): void => {
   loadLocale(locale);
 };
 
-// Initialize with default locale
-loadLocale(defaultLocale);
+// Initialize with stored locale (falls back to default on SSR)
+loadLocale(getStoredLocale());
 
 // Expose for debugging
 if (typeof window !== "undefined") {
