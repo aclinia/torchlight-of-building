@@ -26,7 +26,7 @@ jobs:
         run: pnpm install --frozen-lockfile && pnpm lingui:compile && pnpm tsr generate
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: exit 1
 
       - name: Lint
         run: pnpm check:ci
