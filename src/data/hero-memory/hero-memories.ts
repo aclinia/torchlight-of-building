@@ -160,13 +160,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "(-60–-40)% Cursed Effect",
+    affix: "(-60–-40)% Curse effect against you",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -184,7 +184,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(28–31)% Critical Strike Damage",
+    affix: "+(38–42)% Critical Strike Damage",
     tier: 1,
   },
   {
@@ -292,19 +292,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(24–32)% Reaping Cooldown Recovery Speed",
+    affix: "+(24–32)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(14–22)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–22)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -598,13 +598,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "(-60–-40)% Cursed Effect",
+    affix: "(-60–-40)% Curse effect against you",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -622,7 +622,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(28–31)% Critical Strike Damage",
+    affix: "+(38–42)% Critical Strike Damage",
     tier: 1,
   },
   {
@@ -730,19 +730,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(24–32)% Reaping Cooldown Recovery Speed",
+    affix: "+(24–32)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(14–22)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–22)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -1036,13 +1036,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "(-60–-40)% Cursed Effect",
+    affix: "(-60–-40)% Curse effect against you",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -1060,7 +1060,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(28–31)% Critical Strike Damage",
+    affix: "+(38–42)% Critical Strike Damage",
     tier: 1,
   },
   {
@@ -1168,19 +1168,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(24–32)% Reaping Cooldown Recovery Speed",
+    affix: "+(24–32)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(14–22)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–22)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -1408,13 +1408,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+39% Skill Area",
+    affix: "+(39–45)% Skill Area",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -1480,25 +1480,25 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(26–40)% Reaping Cooldown Recovery Speed",
+    affix: "+(26–40)% Reaping Recovery Speed",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(20–30)% Reaping Cooldown Recovery Speed",
+    affix: "+(20–30)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(14–18)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–18)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -1648,7 +1648,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Physical Skill Critical Strike Damage",
+    affix: "+(55–65)% Physical Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -1672,7 +1672,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Fire Skill Critical Strike Damage",
+    affix: "+(55–65)% Fire Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -1696,7 +1696,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Cold Skill Critical Strike Damage",
+    affix: "+(55–65)% Cold Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -1720,7 +1720,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Lightning Skill Critical Strike Damage",
+    affix: "+(55–65)% Lightning Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -1744,7 +1744,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Erosion Skill Critical Strike Damage",
+    affix: "+(55–65)% Erosion Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -1768,7 +1768,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(55–70)% Minion Critical Strike Damage",
+    affix: "+(55–65)% Minion Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2252,13 +2252,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+39% Skill Area",
+    affix: "+(39–45)% Skill Area",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -2324,25 +2324,25 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(26–40)% Reaping Cooldown Recovery Speed",
+    affix: "+(26–40)% Reaping Recovery Speed",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(20–30)% Reaping Cooldown Recovery Speed",
+    affix: "+(20–30)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(14–18)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–18)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -2492,7 +2492,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Physical Skill Critical Strike Damage",
+    affix: "+(55–65)% Physical Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2516,7 +2516,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Fire Skill Critical Strike Damage",
+    affix: "+(55–65)% Fire Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2540,7 +2540,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Cold Skill Critical Strike Damage",
+    affix: "+(55–65)% Cold Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2564,7 +2564,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Lightning Skill Critical Strike Damage",
+    affix: "+(55–65)% Lightning Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2588,7 +2588,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Erosion Skill Critical Strike Damage",
+    affix: "+(55–65)% Erosion Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -2612,7 +2612,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(55–70)% Minion Critical Strike Damage",
+    affix: "+(55–65)% Minion Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3096,13 +3096,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+39% Skill Area",
+    affix: "+(39–45)% Skill Area",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+30% Skill Area",
+    affix: "+32% Skill Area",
     tier: 1,
   },
   {
@@ -3168,25 +3168,25 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(26–40)% Reaping Cooldown Recovery Speed",
+    affix: "+(26–40)% Reaping Recovery Speed",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(20–30)% Reaping Cooldown Recovery Speed",
+    affix: "+(20–30)% Reaping Recovery Speed",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(14–18)% Reaping Cooldown Recovery Speed",
+    affix: "+(14–18)% Reaping Recovery Speed",
     tier: 2,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(10–12)% Reaping Cooldown Recovery Speed",
+    affix: "+(10–12)% Reaping Recovery Speed",
     tier: 3,
   },
   {
@@ -3336,7 +3336,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Physical Skill Critical Strike Damage",
+    affix: "+(55–65)% Physical Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3360,7 +3360,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Fire Skill Critical Strike Damage",
+    affix: "+(55–65)% Fire Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3384,7 +3384,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Cold Skill Critical Strike Damage",
+    affix: "+(55–65)% Cold Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3408,7 +3408,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Lightning Skill Critical Strike Damage",
+    affix: "+(55–65)% Lightning Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3432,7 +3432,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Erosion Skill Critical Strike Damage",
+    affix: "+(55–65)% Erosion Skill Critical Strike Damage",
     tier: 0,
   },
   {
@@ -3456,7 +3456,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(55–70)% Minion Critical Strike Damage",
+    affix: "+(55–65)% Minion Critical Strike Damage",
     tier: 0,
   },
   {

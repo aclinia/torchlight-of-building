@@ -15,6 +15,9 @@ const TLIDB_HTML_PATH = join(
 const cleanAffixText = (html: string): string => {
   let text = html;
 
+  // Remove data-bs-title attributes (they contain tooltip HTML that breaks parsing)
+  text = text.replace(/\s*data-bs-title="[^"]*"/g, "");
+
   // Convert <br> tags to newlines before removing other HTML tags
   text = text.replace(/<br\s*\/?>/gi, "\n");
 
