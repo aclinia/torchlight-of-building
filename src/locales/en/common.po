@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2026-01-09 14:12-0800\n"
+"POT-Creation-Date: 2026-01-10 19:57+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: zh\n"
+"Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -16,416 +16,416 @@ msgstr ""
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:4
 msgid "Equipment"
-msgstr "装备"
+msgstr "Equipment"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:5
 msgid "Talents"
-msgstr "天赋"
+msgstr "Talents"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:6
 msgid "Skills"
-msgstr "技能"
+msgstr "Skills"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:7
 msgid "Hero"
-msgstr "英雄"
+msgstr "Hero"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:8
 msgid "Pactspirit"
-msgstr "契灵"
+msgstr "Pactspirit"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:9
 msgid "Divinity"
-msgstr "神格石板"
+msgstr "Divinity"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:10
 msgid "Configuration"
-msgstr "配置"
+msgstr "Configuration"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:11
 msgid "Calculations"
-msgstr "计算"
+msgstr "Calculations"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
 #: src/data/translate/equipment-types.ts:5
 msgid "Belt"
-msgstr "腰带"
+msgstr "Belt"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:6
 msgid "Boots"
-msgstr "靴子"
+msgstr "Boots"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:7
 msgid "Boots (DEX)"
-msgstr "鞋子 (敏捷)"
+msgstr "Boots (DEX)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:8
 msgid "Boots (INT)"
-msgstr "鞋子 (智力)"
+msgstr "Boots (INT)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:9
 msgid "Boots (STR)"
-msgstr "鞋子 (力量)"
+msgstr "Boots (STR)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:10
 msgid "Bow"
-msgstr "弓"
+msgstr "Bow"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:11
 msgid "Cane"
-msgstr "手杖"
+msgstr "Cane"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:12
 msgid "Chest"
-msgstr "胸甲"
+msgstr "Chest"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:13
 msgid "Chest Armor (DEX)"
-msgstr "胸甲 (敏捷)"
+msgstr "Chest Armor (DEX)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:14
 msgid "Chest Armor (INT)"
-msgstr "胸甲 (智力)"
+msgstr "Chest Armor (INT)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:15
 msgid "Chest Armor (STR)"
-msgstr "胸甲 (力量)"
+msgstr "Chest Armor (STR)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:16
 msgid "Claw"
-msgstr "爪"
+msgstr "Claw"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:17
 msgid "Crossbow"
-msgstr "弩"
+msgstr "Crossbow"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:18
 msgid "Cudgel"
-msgstr "武杖"
+msgstr "Cudgel"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:19
 msgid "Dagger"
-msgstr "匕首"
+msgstr "Dagger"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:20
 msgid "Fire Cannon"
-msgstr "火炮"
+msgstr "Fire Cannon"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:21
 msgid "Gloves"
-msgstr "手套"
+msgstr "Gloves"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:22
 msgid "Gloves (DEX)"
-msgstr "手套 (敏捷)"
+msgstr "Gloves (DEX)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:23
 msgid "Gloves (INT)"
-msgstr "手套 (智力)"
+msgstr "Gloves (INT)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:24
 msgid "Gloves (STR)"
-msgstr "手套 (力量)"
+msgstr "Gloves (STR)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:25
 msgid "Helmet"
-msgstr "头盔"
+msgstr "Helmet"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:26
 msgid "Helmet (DEX)"
-msgstr "头盔 (敏捷)"
+msgstr "Helmet (DEX)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:27
 msgid "Helmet (INT)"
-msgstr "头盔 (智力)"
+msgstr "Helmet (INT)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:28
 msgid "Helmet (STR)"
-msgstr "头盔 (力量)"
+msgstr "Helmet (STR)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:29
 msgid "Left Ring"
-msgstr "左戒指"
+msgstr "Left Ring"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:30
 msgid "Main Hand"
-msgstr "主手"
+msgstr "Main Hand"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:31
 msgid "Musket"
-msgstr "火枪"
+msgstr "Musket"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:32
 msgid "Neck"
-msgstr "项链"
+msgstr "Neck"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:33
 msgid "Necklace"
-msgstr "项链"
+msgstr "Necklace"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:34
 msgid "Off Hand"
-msgstr "副手"
+msgstr "Off Hand"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:35
 msgid "One-Handed Axe"
-msgstr "单手斧"
+msgstr "One-Handed Axe"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:36
 msgid "One-Handed Hammer"
-msgstr "单手锤"
+msgstr "One-Handed Hammer"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:37
 msgid "One-Handed Sword"
-msgstr "单手剑"
+msgstr "One-Handed Sword"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:38
 msgid "Pistol"
-msgstr "手枪"
+msgstr "Pistol"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:39
 msgid "Right Ring"
-msgstr "右戒指"
+msgstr "Right Ring"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:40
 msgid "Ring"
-msgstr "戒指"
+msgstr "Ring"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:41
 msgid "Rod"
-msgstr "灵杖"
+msgstr "Rod"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:42
 msgid "Scepter"
-msgstr "魔杖"
+msgstr "Scepter"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:43
 msgid "Shield (DEX)"
-msgstr "盾牌 (敏捷)"
+msgstr "Shield (DEX)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:44
 msgid "Shield (INT)"
-msgstr "盾牌 (智力)"
+msgstr "Shield (INT)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:45
 msgid "Shield (STR)"
-msgstr "盾牌 (力量)"
+msgstr "Shield (STR)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:46
 msgid "Spirit Ring"
-msgstr "灵戒"
+msgstr "Spirit Ring"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:47
 msgid "Tin Staff"
-msgstr "锡杖"
+msgstr "Tin Staff"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:48
 msgid "Two-Handed Axe"
-msgstr "双手斧"
+msgstr "Two-Handed Axe"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:49
 msgid "Two-Handed Hammer"
-msgstr "双手锤"
+msgstr "Two-Handed Hammer"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:50
 msgid "Two-Handed Sword"
-msgstr "双手剑"
+msgstr "Two-Handed Sword"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:51
 msgid "Wand"
-msgstr "法杖"
+msgstr "Wand"
 
-#: src/components/equipment/LegendaryGearModule.tsx:185
+#: src/components/equipment/LegendaryGearModule.tsx:186
 msgid "Add Legendary"
-msgstr "增加一个传奇物品"
+msgstr "Add Legendary"
 
 #. placeholder {0}: save.name
 #: src/routes/index.tsx:120
 msgid "Are you sure you want to delete \"{0}\"?"
-msgstr "您确定要删除“{0}”吗？"
+msgstr "Are you sure you want to delete \"{0}\"?"
 
 #: src/routes/builder/equipment.tsx:470
 msgid "Base Affixes (2 max)"
-msgstr "基础词缀 (2 max)"
+msgstr "Base Affixes (2 max)"
 
 #: src/routes/builder/equipment.tsx:449
 msgid "Base Stats (1 max)"
-msgstr "基底词缀 (1 max)"
+msgstr "Base Stats (1 max)"
 
 #: src/routes/builder/equipment.tsx:535
 msgid "Blending (1 max)"
-msgstr "调香词缀 (1 max)"
+msgstr "Blending (1 max)"
 
 #: src/routes/index.tsx:93
 #: src/routes/index.tsx:136
 msgid "Cancel"
-msgstr "取消"
+msgstr "Cancel"
 
 #: src/routes/index.tsx:158
 msgid "Copy"
-msgstr "复制"
+msgstr "Copy"
 
 #: src/routes/builder/equipment.tsx:416
 msgid "Craft New Item"
-msgstr "制作新物品"
+msgstr "Craft New Item"
 
 #: src/routes/index.tsx:348
 msgid "Create New"
-msgstr "新建"
+msgstr "Create New"
 
 #: src/routes/index.tsx:384
 msgid "Create New Build"
-msgstr "创建新流派"
+msgstr "Create New Build"
 
 #: src/routes/index.tsx:375
 msgid "Create your first character build to get started"
-msgstr "创建您的第一个角色流派以开始使用"
+msgstr "Create your first character build to get started"
 
 #. placeholder {0}: formatDate(save.createdAt)
 #: src/routes/index.tsx:104
 msgid "Created: {0}"
-msgstr "创建时间：{0}"
+msgstr "Created: {0}"
 
 #: src/routes/index.tsx:130
 #: src/routes/index.tsx:164
 msgid "Delete"
-msgstr "删除"
+msgstr "Delete"
 
 #: src/routes/index.tsx:321
 msgid "Early Development"
-msgstr "早期预览"
+msgstr "Early Development"
 
 #: src/routes/builder/equipment.tsx:394
 msgid "Equipment Slots"
-msgstr "装备槽位"
+msgstr "Equipment Slots"
 
 #: src/routes/builder/equipment.tsx:424
 msgid "Equipment Type"
-msgstr "装备类型"
+msgstr "Equipment Type"
 
 #: src/routes/index.tsx:342
 msgid "Import Build"
-msgstr "导入流派"
+msgstr "Import Build"
 
 #: src/routes/builder/equipment.tsx:631
 msgid "Inventory"
-msgstr "库存"
+msgstr "Inventory"
 
 #: src/routes/builder/equipment.tsx:632
 msgid "items"
-msgstr "物品"
+msgstr "items"
 
 #: src/routes/index.tsx:335
 msgid "My Builds"
-msgstr "我的配装"
+msgstr "My Builds"
 
 #: src/routes/index.tsx:372
 msgid "No builds yet"
-msgstr "暂无流派"
+msgstr "No builds yet"
 
 #: src/routes/builder/equipment.tsx:636
 msgid "No items in inventory. Craft items above to add them here."
-msgstr "库存中没有物品。在上方制作物品以添加到此处。"
+msgstr "No items in inventory. Craft items above to add them here."
 
 #: src/routes/index.tsx:324
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
-msgstr "请耐心等待，对于这个应用程序在早期开发阶段遇到的任何问题，请多多包涵。"
+msgstr "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 
 #: src/routes/builder/equipment.tsx:576
 msgid "Prefixes (3 max)"
-msgstr "前缀 (3 max)"
+msgstr "Prefixes (3 max)"
 
 #: src/routes/index.tsx:152
 msgid "Rename"
-msgstr "重命名"
+msgstr "Rename"
 
 #: src/routes/index.tsx:87
 msgid "Save"
-msgstr "保存"
+msgstr "Save"
 
 #: src/routes/builder/equipment.tsx:619
 msgid "Save to Inventory"
-msgstr "保存到库存"
+msgstr "Save to Inventory"
 
 #: src/routes/builder/equipment.tsx:624
 msgid "Select an equipment type to begin crafting"
-msgstr "选择一个装备类型以开始制作"
+msgstr "Select an equipment type to begin crafting"
 
 #: src/routes/builder/equipment.tsx:433
 msgid "Select equipment type..."
-msgstr "选择一个装备类型..."
+msgstr "Select equipment type..."
 
-#: src/components/equipment/LegendaryGearModule.tsx:191
+#: src/components/equipment/LegendaryGearModule.tsx:192
 msgid "Select Legendary"
-msgstr "选择一个传奇物品"
+msgstr "Select Legendary"
 
 #: src/routes/builder/equipment.tsx:596
 msgid "Suffixes (3 max)"
-msgstr "后缀 (3 max)"
+msgstr "Suffixes (3 max)"
 
 #: src/routes/builder/equipment.tsx:493
 msgid "Sweet Dream Affix (1 max)"
-msgstr "美梦词缀 (1 max)"
+msgstr "Sweet Dream Affix (1 max)"
 
 #: src/routes/builder/equipment.tsx:514
 msgid "Tower Sequence (1 max)"
-msgstr "高塔词缀 (1 max)"
+msgstr "Tower Sequence (1 max)"
 
 #. placeholder {0}: formatDate(save.updatedAt)
 #: src/routes/index.tsx:108
 msgid "Updated: {0}"
-msgstr "更新时间: {0}"
+msgstr "Updated: {0}"

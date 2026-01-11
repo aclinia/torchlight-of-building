@@ -1,3 +1,4 @@
+import { i18n } from "@lingui/core";
 import { Trans } from "@lingui/react/macro";
 import { useMemo, useState } from "react";
 import { Legendaries } from "@/src/data/legendary/legendaries";
@@ -65,8 +66,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
   const legendaryOptions = useMemo(() => {
     return sortedLegendaries.map((legendary, idx) => ({
       value: idx,
-      label: legendary.name,
-      sublabel: legendary.equipmentType,
+      label: i18n._(legendary.name),
+      sublabel: i18n._(legendary.equipmentType),
     }));
   }, [sortedLegendaries]);
 

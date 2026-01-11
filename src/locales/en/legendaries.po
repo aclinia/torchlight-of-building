@@ -1,0 +1,1599 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-01-10 19:57+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:4
+msgid "Aeterna Martyr"
+msgstr "Aeterna Martyr"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:5
+msgid "Agony of Lost Self"
+msgstr "Agony of Lost Self"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:6
+msgid "Agony's Embrace"
+msgstr "Agony's Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:7
+msgid "Air Treaders"
+msgstr "Air Treaders"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:8
+msgid "Alloy Covenant"
+msgstr "Alloy Covenant"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:9
+msgid "Arcane Shield"
+msgstr "Arcane Shield"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:10
+msgid "Archmage's Hands"
+msgstr "Archmage's Hands"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:11
+msgid "Ardor"
+msgstr "Ardor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:12
+msgid "Arminius Guillotine"
+msgstr "Arminius Guillotine"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:13
+msgid "Arrival of the Polar Night"
+msgstr "Arrival of the Polar Night"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:14
+msgid "Aslan"
+msgstr "Aslan"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:15
+msgid "Awaiting"
+msgstr "Awaiting"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:16
+msgid "Awakening Skull"
+msgstr "Awakening Skull"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:17
+msgid "Berserker Bracer"
+msgstr "Berserker Bracer"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:18
+msgid "Blade-Dancer's Edges"
+msgstr "Blade-Dancer's Edges"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:19
+msgid "Blade-dancer's Fingers"
+msgstr "Blade-dancer's Fingers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:20
+msgid "Blade-dancer's Steps"
+msgstr "Blade-dancer's Steps"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:21
+msgid "Blessing Pendant"
+msgstr "Blessing Pendant"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:22
+msgid "Blight"
+msgstr "Blight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:23
+msgid "Blind Vision"
+msgstr "Blind Vision"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:24
+msgid "Blinding Bracers"
+msgstr "Blinding Bracers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:25
+msgid "Bodhi Girdle"
+msgstr "Bodhi Girdle"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:26
+msgid "Boom Gloves"
+msgstr "Boom Gloves"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:27
+msgid "Boor's Iron Crown"
+msgstr "Boor's Iron Crown"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:28
+msgid "Boots of Devastation"
+msgstr "Boots of Devastation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:29
+msgid "Boots of Sinned Fire"
+msgstr "Boots of Sinned Fire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:30
+msgid "Born in Fire"
+msgstr "Born in Fire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:31
+msgid "Bow of Endless Dusk"
+msgstr "Bow of Endless Dusk"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:32
+msgid "Brainwave Emitter"
+msgstr "Brainwave Emitter"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:33
+msgid "Broken Sun Ring"
+msgstr "Broken Sun Ring"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:34
+msgid "Burning Ice"
+msgstr "Burning Ice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:35
+msgid "Buzzing"
+msgstr "Buzzing"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:36
+msgid "Call of Souls"
+msgstr "Call of Souls"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:37
+msgid "Chain behind the Curtain"
+msgstr "Chain behind the Curtain"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:38
+msgid "Chain of Resistance"
+msgstr "Chain of Resistance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:39
+msgid "Chaos Abyss"
+msgstr "Chaos Abyss"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:40
+msgid "Chaotic Ending"
+msgstr "Chaotic Ending"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:41
+msgid "Cicada Shell"
+msgstr "Cicada Shell"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:42
+msgid "Circular Clearing"
+msgstr "Circular Clearing"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:43
+msgid "Clarity"
+msgstr "Clarity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:44
+msgid "Clay Doll's Broken Finger"
+msgstr "Clay Doll's Broken Finger"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:45
+msgid "Clenched Spring"
+msgstr "Clenched Spring"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:46
+msgid "Cold Breath"
+msgstr "Cold Breath"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:47
+msgid "Cold Sanctuary Prosthetics"
+msgstr "Cold Sanctuary Prosthetics"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:48
+msgid "Coldness Tracer's Tear"
+msgstr "Coldness Tracer's Tear"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:49
+msgid "Compensatory Life"
+msgstr "Compensatory Life"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:50
+msgid "Confusion Elemental Belt"
+msgstr "Confusion Elemental Belt"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:51
+msgid "Corrosion of Manifolds"
+msgstr "Corrosion of Manifolds"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:52
+msgid "Corrupted Bulwark"
+msgstr "Corrupted Bulwark"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:53
+msgid "Corrupted Marrow"
+msgstr "Corrupted Marrow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:54
+msgid "Cover the Sun"
+msgstr "Cover the Sun"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:55
+msgid "Crimson King"
+msgstr "Crimson King"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:56
+msgid "Crosser"
+msgstr "Crosser"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:57
+msgid "Crow's Plume"
+msgstr "Crow's Plume"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:58
+msgid "Cry of Divinity"
+msgstr "Cry of Divinity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:59
+msgid "Cursed Flame"
+msgstr "Cursed Flame"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:60
+msgid "Dawn Break"
+msgstr "Dawn Break"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:61
+msgid "Death's Touch"
+msgstr "Death's Touch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:62
+msgid "Decayed Mind"
+msgstr "Decayed Mind"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:63
+msgid "Decaying Blessing"
+msgstr "Decaying Blessing"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:64
+msgid "Demons' Touch"
+msgstr "Demons' Touch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:65
+msgid "Desire of Survival"
+msgstr "Desire of Survival"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:66
+msgid "Despised Shadow"
+msgstr "Despised Shadow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:67
+msgid "Devouring Tide"
+msgstr "Devouring Tide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:68
+msgid "Divine Ember"
+msgstr "Divine Ember"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:69
+msgid "Double Rainbow"
+msgstr "Double Rainbow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:70
+msgid "Dragon Breath Armor"
+msgstr "Dragon Breath Armor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:71
+msgid "Dragon Scale Shoes"
+msgstr "Dragon Scale Shoes"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:72
+msgid "Dumb Voice"
+msgstr "Dumb Voice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:73
+msgid "Electricity Amplifier"
+msgstr "Electricity Amplifier"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:74
+msgid "Elegy of Immortality"
+msgstr "Elegy of Immortality"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:75
+msgid "Elemental Whirl"
+msgstr "Elemental Whirl"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:76
+msgid "Elemental Whisper Belt"
+msgstr "Elemental Whisper Belt"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:77
+msgid "Embrace of the Dark Surge"
+msgstr "Embrace of the Dark Surge"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:78
+msgid "Enamor"
+msgstr "Enamor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:79
+msgid "End Night Banquet"
+msgstr "End Night Banquet"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:80
+msgid "Endless Fortress"
+msgstr "Endless Fortress"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:81
+msgid "Entangled Root"
+msgstr "Entangled Root"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:82
+msgid "Eternal Moon"
+msgstr "Eternal Moon"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:83
+msgid "Eternal Sea Fog"
+msgstr "Eternal Sea Fog"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:84
+msgid "Eternal Sun"
+msgstr "Eternal Sun"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:85
+msgid "Eternity"
+msgstr "Eternity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:86
+msgid "Everburn Thunderfire"
+msgstr "Everburn Thunderfire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:87
+msgid "Evil Heart Armor"
+msgstr "Evil Heart Armor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:88
+msgid "Exemption Thunderhell"
+msgstr "Exemption Thunderhell"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:89
+msgid "False God's Skin"
+msgstr "False God's Skin"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:90
+msgid "Farewell Desire"
+msgstr "Farewell Desire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:91
+msgid "Feline Gloves"
+msgstr "Feline Gloves"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:92
+msgid "Feline Steps"
+msgstr "Feline Steps"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:93
+msgid "Fiend Crown"
+msgstr "Fiend Crown"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:94
+msgid "Fiery Oath"
+msgstr "Fiery Oath"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:95
+msgid "Fighting Stompers"
+msgstr "Fighting Stompers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:96
+msgid "Final Bastion"
+msgstr "Final Bastion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:97
+msgid "Fire Lord's Promise"
+msgstr "Fire Lord's Promise"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:98
+msgid "Fire Lord's Pyric Stride"
+msgstr "Fire Lord's Pyric Stride"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:99
+msgid "Fire Shielding Prosthetics"
+msgstr "Fire Shielding Prosthetics"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:100
+msgid "Flaming Evil"
+msgstr "Flaming Evil"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:101
+msgid "Fleeting Regret"
+msgstr "Fleeting Regret"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:102
+msgid "Fleeting Sky"
+msgstr "Fleeting Sky"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:103
+msgid "Flying Bird"
+msgstr "Flying Bird"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:104
+msgid "Flying Light at Daybreak"
+msgstr "Flying Light at Daybreak"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:105
+msgid "Folklore of Locking Fingers"
+msgstr "Folklore of Locking Fingers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:106
+msgid "Fool's Crown"
+msgstr "Fool's Crown"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:107
+msgid "Forlorn Crystal"
+msgstr "Forlorn Crystal"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:108
+msgid "Formation Breaker"
+msgstr "Formation Breaker"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:109
+msgid "Frantic Shadow"
+msgstr "Frantic Shadow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:110
+msgid "Friend Nemesis"
+msgstr "Friend Nemesis"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:111
+msgid "Frostbolt"
+msgstr "Frostbolt"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:112
+msgid "Frozen Flame"
+msgstr "Frozen Flame"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:113
+msgid "Frozen Lightning"
+msgstr "Frozen Lightning"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:114
+msgid "Frozen Path"
+msgstr "Frozen Path"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:115
+msgid "Frozen Ripples"
+msgstr "Frozen Ripples"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:116
+msgid "Frozen Sight"
+msgstr "Frozen Sight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:117
+msgid "Frozen Will"
+msgstr "Frozen Will"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:118
+msgid "Furious Man's Body"
+msgstr "Furious Man's Body"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:119
+msgid "Furious Man's Loud Song"
+msgstr "Furious Man's Loud Song"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:120
+msgid "Fury Heart"
+msgstr "Fury Heart"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:121
+msgid "Gauze of Phantom Sin"
+msgstr "Gauze of Phantom Sin"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:122
+msgid "Genius Battlegear"
+msgstr "Genius Battlegear"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:123
+msgid "Ghost Slaughter"
+msgstr "Ghost Slaughter"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:124
+msgid "Glacial Abyss Arrow"
+msgstr "Glacial Abyss Arrow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:125
+msgid "Glacier Caster Shield"
+msgstr "Glacier Caster Shield"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:126
+msgid "Glorious Journey"
+msgstr "Glorious Journey"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:127
+msgid "Grace Boots"
+msgstr "Grace Boots"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:128
+msgid "Grandmaster's Hands"
+msgstr "Grandmaster's Hands"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:129
+msgid "Grasp of Truth"
+msgstr "Grasp of Truth"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:130
+msgid "Gravel"
+msgstr "Gravel"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:131
+msgid "Guild Guard Boots"
+msgstr "Guild Guard Boots"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:132
+msgid "Hand of Malice"
+msgstr "Hand of Malice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:133
+msgid "Hanging Two-Tone Mask"
+msgstr "Hanging Two-Tone Mask"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:134
+msgid "Harbinger's Reversed Plumes"
+msgstr "Harbinger's Reversed Plumes"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:135
+msgid "Headless Crown"
+msgstr "Headless Crown"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:136
+msgid "Heart of Animitta"
+msgstr "Heart of Animitta"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:137
+msgid "Heart of Magic"
+msgstr "Heart of Magic"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:138
+msgid "Heart of Rock"
+msgstr "Heart of Rock"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:139
+msgid "Heart of the Storm"
+msgstr "Heart of the Storm"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:140
+msgid "Heavy Soul"
+msgstr "Heavy Soul"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:141
+msgid "Heavyware"
+msgstr "Heavyware"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:142
+msgid "Heels of Hands"
+msgstr "Heels of Hands"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:143
+msgid "Hekate's Vision"
+msgstr "Hekate's Vision"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:144
+msgid "Highest Glance"
+msgstr "Highest Glance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:145
+msgid "Horn Ring"
+msgstr "Horn Ring"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:146
+msgid "Hot Night's Embrace"
+msgstr "Hot Night's Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:147
+msgid "Howling Wind"
+msgstr "Howling Wind"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:148
+msgid "Hunting the Eye of the Kraken"
+msgstr "Hunting the Eye of the Kraken"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:149
+msgid "Ice and Fire"
+msgstr "Ice and Fire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:150
+msgid "Ice Pulse"
+msgstr "Ice Pulse"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:151
+msgid "Iced Drinker's Cage"
+msgstr "Iced Drinker's Cage"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:152
+msgid "Illusory Ocean Silk - Ash"
+msgstr "Illusory Ocean Silk - Ash"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:153
+msgid "Illusory Ocean Silk - Chilly"
+msgstr "Illusory Ocean Silk - Chilly"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:154
+msgid "Illusory Ocean Silk - Iron Rain"
+msgstr "Illusory Ocean Silk - Iron Rain"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:155
+msgid "Illusory Ocean Silk - Thunder"
+msgstr "Illusory Ocean Silk - Thunder"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:156
+msgid "Illusory Ocean Silk - Unreal"
+msgstr "Illusory Ocean Silk - Unreal"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:157
+msgid "Imperial Iron Sentry"
+msgstr "Imperial Iron Sentry"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:158
+msgid "Imperious Verdict"
+msgstr "Imperious Verdict"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:159
+msgid "Imploration Dagger"
+msgstr "Imploration Dagger"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:160
+msgid "Incorrect Arbitration"
+msgstr "Incorrect Arbitration"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:161
+msgid "Insulation"
+msgstr "Insulation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:162
+msgid "Interlocking Soul"
+msgstr "Interlocking Soul"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:163
+msgid "Iron Nest"
+msgstr "Iron Nest"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:164
+msgid "Israfel's Laws"
+msgstr "Israfel's Laws"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:165
+msgid "Israfel's Sorrow"
+msgstr "Israfel's Sorrow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:166
+msgid "Jumble Ice"
+msgstr "Jumble Ice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:167
+msgid "Kaleidoscope"
+msgstr "Kaleidoscope"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:168
+msgid "King Lionheart's Ambition"
+msgstr "King Lionheart's Ambition"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:169
+msgid "King's Boon"
+msgstr "King's Boon"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:170
+msgid "Kingly Armor"
+msgstr "Kingly Armor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:171
+msgid "Kragol's Roar"
+msgstr "Kragol's Roar"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:172
+msgid "Lady's Tears"
+msgstr "Lady's Tears"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:173
+msgid "Last Stand"
+msgstr "Last Stand"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:174
+msgid "Last Words of Chaos"
+msgstr "Last Words of Chaos"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:175
+msgid "Law of Greed"
+msgstr "Law of Greed"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:176
+msgid "Legendary Soldier Spectacles"
+msgstr "Legendary Soldier Spectacles"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:177
+msgid "Legless Bird's Lament"
+msgstr "Legless Bird's Lament"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:178
+msgid "Light Hunter Belt"
+msgstr "Light Hunter Belt"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:179
+msgid "Lightning Striker's Sacrum"
+msgstr "Lightning Striker's Sacrum"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:180
+msgid "Lone Survivor"
+msgstr "Lone Survivor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:181
+msgid "Lone Walker's Boots"
+msgstr "Lone Walker's Boots"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:182
+msgid "Lonesome"
+msgstr "Lonesome"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:183
+msgid "Machine Lord"
+msgstr "Machine Lord"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:184
+msgid "Mad Doctor's Silver-Plated Lung"
+msgstr "Mad Doctor's Silver-Plated Lung"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:185
+msgid "Magnus' Jealousy"
+msgstr "Magnus' Jealousy"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:186
+msgid "Magnus' Laws"
+msgstr "Magnus' Laws"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:187
+msgid "Magnus' Mindflame"
+msgstr "Magnus' Mindflame"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:188
+msgid "Magnus' Scar"
+msgstr "Magnus' Scar"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:189
+msgid "Marksman Bracers"
+msgstr "Marksman Bracers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:190
+msgid "Martyr's Staff"
+msgstr "Martyr's Staff"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:191
+msgid "Mask of Infernal Iron"
+msgstr "Mask of Infernal Iron"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:192
+msgid "Master Defender Pendant"
+msgstr "Master Defender Pendant"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:193
+msgid "Memory"
+msgstr "Memory"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:194
+msgid "Mercurial Torment"
+msgstr "Mercurial Torment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:195
+msgid "Mere Eternity"
+msgstr "Mere Eternity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:196
+msgid "Mind Infusion"
+msgstr "Mind Infusion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:197
+msgid "Miniature Void Sea"
+msgstr "Miniature Void Sea"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:198
+msgid "Misube's Refusal"
+msgstr "Misube's Refusal"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:199
+msgid "Mortal's Reverie"
+msgstr "Mortal's Reverie"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:200
+msgid "Mother Goddess' Paddock"
+msgstr "Mother Goddess' Paddock"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:201
+msgid "Mountain Howling"
+msgstr "Mountain Howling"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:202
+msgid "Mourner's Shadow"
+msgstr "Mourner's Shadow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:203
+msgid "Necklace of Firebird"
+msgstr "Necklace of Firebird"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:204
+msgid "Necklace of Inverse"
+msgstr "Necklace of Inverse"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:205
+msgid "Oathkeeper"
+msgstr "Oathkeeper"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:206
+msgid "Ocean of Rock"
+msgstr "Ocean of Rock"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:207
+msgid "Ominous Gift"
+msgstr "Ominous Gift"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:208
+msgid "Opening Heart"
+msgstr "Opening Heart"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:209
+msgid "Oversight"
+msgstr "Oversight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:210
+msgid "Ownerless"
+msgstr "Ownerless"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:211
+msgid "Pale Mist's Embrace"
+msgstr "Pale Mist's Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:212
+msgid "Passing of Time"
+msgstr "Passing of Time"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:213
+msgid "Pathfinder's Path"
+msgstr "Pathfinder's Path"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:214
+msgid "Pentagram Astrolabe"
+msgstr "Pentagram Astrolabe"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:215
+msgid "Phantasm"
+msgstr "Phantasm"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:216
+msgid "Phantom"
+msgstr "Phantom"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:217
+msgid "Photophobia"
+msgstr "Photophobia"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:218
+msgid "Plain Echo"
+msgstr "Plain Echo"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:219
+msgid "Polygonal Enclosure"
+msgstr "Polygonal Enclosure"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:220
+msgid "Powered Battle Greaves"
+msgstr "Powered Battle Greaves"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:221
+msgid "Praise for Injury"
+msgstr "Praise for Injury"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:222
+msgid "Prayer Bead of Evil"
+msgstr "Prayer Bead of Evil"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:223
+msgid "Providential Grace"
+msgstr "Providential Grace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:224
+msgid "Quantum Convergence"
+msgstr "Quantum Convergence"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:225
+msgid "Ralph's Ambition"
+msgstr "Ralph's Ambition"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:226
+msgid "Ralph's Burial"
+msgstr "Ralph's Burial"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:227
+msgid "Ralph's Footsteps"
+msgstr "Ralph's Footsteps"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:228
+msgid "Ralph's Journey"
+msgstr "Ralph's Journey"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:229
+msgid "Ralph's Laws"
+msgstr "Ralph's Laws"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:230
+msgid "Rat Herder's Golden Rein"
+msgstr "Rat Herder's Golden Rein"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:231
+msgid "Rat King's Escape Show"
+msgstr "Rat King's Escape Show"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:232
+msgid "Rat King's Megagon Dice"
+msgstr "Rat King's Megagon Dice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:233
+msgid "Resolution Steps"
+msgstr "Resolution Steps"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:234
+msgid "Restless Glacier"
+msgstr "Restless Glacier"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:235
+msgid "Revered Light"
+msgstr "Revered Light"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:236
+msgid "Reverse-Reverse-Reverse Mirror"
+msgstr "Reverse-Reverse-Reverse Mirror"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:237
+msgid "Rock Lizard's Skull"
+msgstr "Rock Lizard's Skull"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:238
+msgid "Royal Cycle"
+msgstr "Royal Cycle"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:239
+msgid "Royal Guard's Boots"
+msgstr "Royal Guard's Boots"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:240
+msgid "Ruinous Star"
+msgstr "Ruinous Star"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:241
+msgid "Sage's Foresight"
+msgstr "Sage's Foresight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:242
+msgid "Sage's Insight"
+msgstr "Sage's Insight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:243
+msgid "Sage's Shackle"
+msgstr "Sage's Shackle"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:244
+msgid "Sarituya"
+msgstr "Sarituya"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:245
+msgid "Scarlet Decree"
+msgstr "Scarlet Decree"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:246
+msgid "Scepter of Excommunication"
+msgstr "Scepter of Excommunication"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:247
+msgid "Scorching Tempo"
+msgstr "Scorching Tempo"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:248
+msgid "Scorching Wave"
+msgstr "Scorching Wave"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:249
+msgid "Scorching Words"
+msgstr "Scorching Words"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:250
+msgid "Sea Splitter"
+msgstr "Sea Splitter"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:251
+msgid "Searing Finger Bone"
+msgstr "Searing Finger Bone"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:252
+msgid "Severed Wrist"
+msgstr "Severed Wrist"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:253
+msgid "Shadow Dance"
+msgstr "Shadow Dance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:254
+msgid "Shadow of Thunderlight's Eyes"
+msgstr "Shadow of Thunderlight's Eyes"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:255
+msgid "Shadow of Thunderlight's Fury"
+msgstr "Shadow of Thunderlight's Fury"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:256
+msgid "Shadow of Thunderlight's Touch"
+msgstr "Shadow of Thunderlight's Touch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:257
+msgid "Shamed"
+msgstr "Shamed"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:258
+msgid "Shattered Moonlight"
+msgstr "Shattered Moonlight"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:259
+msgid "Shield of Judgment"
+msgstr "Shield of Judgment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:260
+msgid "Silent Observer"
+msgstr "Silent Observer"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:261
+msgid "Silent Sentry Shield"
+msgstr "Silent Sentry Shield"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:262
+msgid "Silver Frost"
+msgstr "Silver Frost"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:263
+msgid "Siren Faceguard"
+msgstr "Siren Faceguard"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:264
+msgid "Solid River"
+msgstr "Solid River"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:265
+msgid "Spring Resurrection"
+msgstr "Spring Resurrection"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:266
+msgid "Steel Stagnation"
+msgstr "Steel Stagnation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:267
+msgid "Steel's Lament"
+msgstr "Steel's Lament"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:268
+msgid "Stellar Vestment of Eminence"
+msgstr "Stellar Vestment of Eminence"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:269
+msgid "Strange Snow"
+msgstr "Strange Snow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:270
+msgid "Stray Bird's Return"
+msgstr "Stray Bird's Return"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:271
+msgid "Strayed Healer's Waistguard"
+msgstr "Strayed Healer's Waistguard"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:272
+msgid "Stream of Steel"
+msgstr "Stream of Steel"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:273
+msgid "Sun-shooter Long Bow"
+msgstr "Sun-shooter Long Bow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:274
+msgid "Sun's Embrace"
+msgstr "Sun's Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:275
+msgid "Supreme Throne"
+msgstr "Supreme Throne"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:276
+msgid "Surging Inspiration"
+msgstr "Surging Inspiration"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:277
+msgid "The Coward's Counterfire"
+msgstr "The Coward's Counterfire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:278
+msgid "Thunder Branch"
+msgstr "Thunder Branch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:279
+msgid "Thunder Channeling Prosthetics"
+msgstr "Thunder Channeling Prosthetics"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:280
+msgid "Thunder Jawbone"
+msgstr "Thunder Jawbone"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:281
+msgid "Thunder Manipulator"
+msgstr "Thunder Manipulator"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:282
+msgid "Tide of the Styx"
+msgstr "Tide of the Styx"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:283
+msgid "Time of Vow"
+msgstr "Time of Vow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:284
+msgid "Torturer's Touch"
+msgstr "Torturer's Touch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:285
+msgid "Traceless Pain"
+msgstr "Traceless Pain"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:286
+msgid "Tranquil Stir"
+msgstr "Tranquil Stir"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:287
+msgid "Trauma's Embrace"
+msgstr "Trauma's Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:288
+msgid "Trinity"
+msgstr "Trinity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:289
+msgid "Troublemaker"
+msgstr "Troublemaker"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:290
+msgid "Truth"
+msgstr "Truth"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:291
+msgid "Twilight Vestment"
+msgstr "Twilight Vestment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:292
+msgid "Twisted Branch"
+msgstr "Twisted Branch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:293
+msgid "Tyrant's Iron Fist"
+msgstr "Tyrant's Iron Fist"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:294
+msgid "Tyrant's Smoldering Hold"
+msgstr "Tyrant's Smoldering Hold"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:295
+msgid "Unbreakable Armor"
+msgstr "Unbreakable Armor"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:296
+msgid "Undying Faith"
+msgstr "Undying Faith"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:297
+msgid "Unholy Prayer (agility)"
+msgstr "Unholy Prayer (agility)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:298
+msgid "Unholy Prayer (focus)"
+msgstr "Unholy Prayer (focus)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:299
+msgid "Unholy Prayer (tenacity)"
+msgstr "Unholy Prayer (tenacity)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:300
+msgid "Vajra Handguards"
+msgstr "Vajra Handguards"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:301
+msgid "Valerie's Night Stroll"
+msgstr "Valerie's Night Stroll"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:302
+msgid "Varagon Shroud"
+msgstr "Varagon Shroud"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:303
+msgid "Varagon's Attack"
+msgstr "Varagon's Attack"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:304
+msgid "Varagon's Lament"
+msgstr "Varagon's Lament"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:305
+msgid "Verdant Steps"
+msgstr "Verdant Steps"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:306
+msgid "Vestment of Song"
+msgstr "Vestment of Song"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:307
+msgid "Void Embankment"
+msgstr "Void Embankment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:308
+msgid "Vortex Heart"
+msgstr "Vortex Heart"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:309
+msgid "Vow's Grasp"
+msgstr "Vow's Grasp"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:310
+msgid "Warden's Breastpin"
+msgstr "Warden's Breastpin"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:311
+msgid "Webbed Arcane Headscarf"
+msgstr "Webbed Arcane Headscarf"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:312
+msgid "When Winter Comes"
+msgstr "When Winter Comes"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:313
+msgid "Will"
+msgstr "Will"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:314
+msgid "Wind Chasers"
+msgstr "Wind Chasers"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:315
+msgid "Windbreath Convergence"
+msgstr "Windbreath Convergence"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:316
+msgid "Windbreath Dispersion"
+msgstr "Windbreath Dispersion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:317
+msgid "Wings of Light"
+msgstr "Wings of Light"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:318
+msgid "Winter of Origin"
+msgstr "Winter of Origin"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:319
+msgid "Witchdoctor's Herb Bag"
+msgstr "Witchdoctor's Herb Bag"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:320
+msgid "Wriggling Tango"
+msgstr "Wriggling Tango"
