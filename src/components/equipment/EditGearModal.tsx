@@ -44,6 +44,43 @@ const createNewSlot = (): EditableAffixSlot => ({
   percentage: DEFAULT_QUALITY,
 });
 
+// Convert existing affix to new slot with proper indices
+const convertExistingToNew = (
+  affixText: string,
+  availableAffixes: readonly BaseGearAffix[],
+): EditableAffixSlot => {
+  const groupedAffixes = groupAffixesByBaseName(availableAffixes as BaseGearAffix[]);
+  const baseName = extractAffixBaseName(affixText);
+  
+  // Find the group that matches this affix
+  const groupIndex = groupedAffixes.findIndex(g => g.baseName === baseName);
+  
+  if (groupIndex === -1) {
+    // If we can't find a match, return as existing
+    return createExistingSlot(affixText);
+  }
+  
+  const group = groupedAffixes[groupIndex];
+  
+  // Try to find the exact tier match based on the affix text
+  let tierIndex = 0;
+  for (let i = 0; i < group.affixes.length; i++) {
+    const crafted = craft(group.affixes[i], 100);
+    if (crafted === affixText) {
+      tierIndex = i;
+      break;
+    }
+  }
+  
+  return {
+    type: "new",
+    value: undefined,
+    affixIndex: groupIndex,
+    tierIndex,
+    percentage: 100, // Assume max quality for existing affixes
+  };
+};
+
 // Helper to get text from BaseStats
 const getBaseStatsText = (baseStats: NonNullable<Gear["baseStats"]>): string =>
   baseStats.src ?? baseStats.baseStatLines.map((l) => l.text).join("\n");
@@ -175,7 +212,7 @@ export const EditGearModal = ({
       const initialPrefixes: EditableAffixSlot[] = [];
       if (item.prefixes !== undefined) {
         for (const affix of item.prefixes) {
-          initialPrefixes.push(createExistingSlot(getAffixText(affix)));
+          initialPrefixes.push(convertExistingToNew(getAffixText(affix), prefixAffixes));
         }
       }
       while (initialPrefixes.length < 3) {
@@ -187,7 +224,7 @@ export const EditGearModal = ({
       const initialSuffixes: EditableAffixSlot[] = [];
       if (item.suffixes !== undefined) {
         for (const affix of item.suffixes) {
-          initialSuffixes.push(createExistingSlot(getAffixText(affix)));
+          initialSuffixes.push(convertExistingToNew(getAffixText(affix), suffixAffixes));
         }
       }
       while (initialSuffixes.length < 3) {
