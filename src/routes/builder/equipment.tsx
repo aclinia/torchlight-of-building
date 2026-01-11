@@ -169,10 +169,7 @@ function EquipmentPage(): React.ReactNode {
 
   const equipmentTypeOptions = useMemo(
     () =>
-      allEquipmentTypes.map((type) => ({
-        value: type,
-        label: i18n._(type),
-      })),
+      allEquipmentTypes.map((type) => ({ value: type, label: i18n._(type) })),
     [allEquipmentTypes],
   );
 
@@ -320,9 +317,9 @@ function EquipmentPage(): React.ReactNode {
     const sweet_dream_affix =
       sweetDreamAffixIndex !== undefined
         ? craft(
-          sweetDreamAffixes[sweetDreamAffixIndex],
-          sweetDreamAffixPercentage,
-        )
+            sweetDreamAffixes[sweetDreamAffixIndex],
+            sweetDreamAffixPercentage,
+          )
         : undefined;
 
     // Build tower sequence affix (1 max, no quality)
@@ -457,7 +454,7 @@ function EquipmentPage(): React.ReactNode {
                       percentage: 100,
                     }}
                     onAffixSelect={handleBaseStatsSelect}
-                    onSliderChange={() => { }}
+                    onSliderChange={() => {}}
                     onClear={handleClearBaseStats}
                     hideQualitySlider
                   />
@@ -522,7 +519,7 @@ function EquipmentPage(): React.ReactNode {
                       percentage: 100,
                     }}
                     onAffixSelect={handleTowerSequenceSelect}
-                    onSliderChange={() => { }}
+                    onSliderChange={() => {}}
                     onClear={handleClearTowerSequence}
                     hideQualitySlider
                   />
@@ -549,7 +546,7 @@ function EquipmentPage(): React.ReactNode {
                     }
                     selection={{ affixIndex: blendAffixIndex, percentage: 100 }}
                     onAffixSelect={handleBlendSelect}
-                    onSliderChange={() => { }}
+                    onSliderChange={() => {}}
                     onClear={handleClearBlend}
                     hideQualitySlider
                     formatOption={(affix) => {
