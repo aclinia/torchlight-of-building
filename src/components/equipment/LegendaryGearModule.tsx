@@ -123,10 +123,10 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       prev.map((state, i) =>
         i === index
           ? {
-            ...state,
-            isCorrupted: !state.isCorrupted,
-            selectedChoiceIndex: undefined,
-          }
+              ...state,
+              isCorrupted: !state.isCorrupted,
+              selectedChoiceIndex: undefined,
+            }
           : state,
       ),
     );
@@ -315,10 +315,11 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
             type="button"
             onClick={handleSaveToInventory}
             disabled={hasUnselectedChoices}
-            className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${hasUnselectedChoices
+            className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${
+              hasUnselectedChoices
                 ? "bg-zinc-600 text-zinc-400 cursor-not-allowed"
                 : "bg-amber-500 text-zinc-950 hover:bg-amber-600"
-              }`}
+            }`}
           >
             {hasUnselectedChoices
               ? "Select all affix options to save"
