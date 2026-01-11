@@ -152,7 +152,7 @@ const main = async (options: Options) => {
     await fetchLegendaryPages("cn");
     console.log("");
   }
-  // await generateLegendaryTS();
+  await generateLegendaryTS();
   await generateLegendaryPO();
 };
 
