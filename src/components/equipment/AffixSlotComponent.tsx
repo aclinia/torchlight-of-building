@@ -3,8 +3,11 @@ import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
 import {
   type GroupedAffix,
+  PERCENTAGE_RANGE_PER_TIER,
   formatAffixOption,
   groupAffixesByBaseName,
+  tierAndPercentageToUnifiedValue,
+  unifiedValueToTierAndPercentage,
 } from "../../lib/affix-utils";
 import type { AffixSlotState } from "../../lib/types";
 
@@ -94,21 +97,23 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
       : craft(selectedAffix, selection.percentage)
     : "";
 
-  const numTiers = selectedGroup?.affixes.length ?? 1;
-  const hasMultipleTiers = shouldGroup && numTiers > 1;
+  // Calculate unified slider value (combines tier and quality)
+  const tierCount = selectedGroup?.affixes.length ?? 1;
+  const hasMultipleTiers = shouldGroup && tierCount > 1;
   
-  const invertedTier = hasMultipleTiers ? (numTiers - 1 - clampedTierIndex) : 0;
-  const unifiedValue = invertedTier * 100 + selection.percentage;
+  const unifiedValue = tierAndPercentageToUnifiedValue(
+    tierCount,
+    clampedTierIndex,
+    selection.percentage,
+  );
 
   const handleUnifiedSliderChange = (value: number) => {
-    const newTier = Math.floor(value / 100);
-    const newPercentage = value % 100;
-    const originalTierIndex = numTiers - 1 - newTier;
-    onTierChange(slotIndex, originalTierIndex);
-    onSliderChange(slotIndex, newPercentage.toString());
+    const { tierIndex, percentage } = unifiedValueToTierAndPercentage(tierCount, value);
+    onTierChange(slotIndex, tierIndex);
+    onSliderChange(slotIndex, percentage.toString());
   };
 
-  const maxSliderValue = numTiers * 100 - 1;
+  const maxSliderValue = tierCount * PERCENTAGE_RANGE_PER_TIER - 1;
   const totalPercentage = Math.round((unifiedValue / maxSliderValue) * 100);
 
   return (
@@ -150,7 +155,7 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
                   id={`unified-slider-${slotIndex}`}
                   type="range"
                   min="0"
-                  max={numTiers * 100 - 1}
+                  max={tierCount * PERCENTAGE_RANGE_PER_TIER - 1}
                   value={unifiedValue}
                   onChange={(e) => handleUnifiedSliderChange(Number.parseInt(e.target.value, 10))}
                   className="w-full relative z-10"
@@ -158,9 +163,9 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
                 {/* Tier boundary tick marks - Denotes the tier you are currently in*/}
                 {hasMultipleTiers && (
                   <div className="absolute top-0.5 left-0 right-0 pointer-events-none" style={{ transform: 'translateY(-50%)' }}>
-                    {Array.from({ length: numTiers - 1 }, (_, i) => {
-                      const tierBoundaryValue = (i + 1) * 100;
-                      const sliderMax = numTiers * 100 - 1;
+                    {Array.from({ length: tierCount - 1 }, (_, i) => {
+                      const tierBoundaryValue = (i + 1) * PERCENTAGE_RANGE_PER_TIER;
+                      const sliderMax = tierCount * PERCENTAGE_RANGE_PER_TIER - 1;
                       const position = (tierBoundaryValue / sliderMax) * 100;
 
                       return (

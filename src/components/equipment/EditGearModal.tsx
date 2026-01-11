@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   DEFAULT_TIER,
+  type GroupedAffix,
   extractAffixBaseName,
   getFilteredAffixes,
   groupAffixesByBaseName,
@@ -44,34 +45,47 @@ const createNewSlot = (): EditableAffixSlot => ({
   percentage: DEFAULT_QUALITY,
 });
 
-// Convert existing affix to new slot with proper indices
+// Find the group index for an affix by its base name
+const findAffixGroupIndex = (
+  baseName: string,
+  groupedAffixes: readonly GroupedAffix[],
+): number => {
+  return groupedAffixes.findIndex((g) => g.baseName === baseName);
+};
+
+// Find the tier index that matches the exact affix text
+const findMatchingTierIndex = (
+  affixText: string,
+  affixes: readonly BaseGearAffix[],
+): number => {
+  for (let i = 0; i < affixes.length; i++) {
+    const crafted = craft(affixes[i], 100);
+    if (crafted === affixText) {
+      return i;
+    }
+  }
+  // Default to first tier if no exact match
+  return 0;
+};
+
+// Convert existing affix to editable slot with proper indices
 const convertExistingToNew = (
   affixText: string,
   availableAffixes: readonly BaseGearAffix[],
 ): EditableAffixSlot => {
-  const groupedAffixes = groupAffixesByBaseName(availableAffixes as BaseGearAffix[]);
+  const groupedAffixes = groupAffixesByBaseName(availableAffixes);
   const baseName = extractAffixBaseName(affixText);
-  
-  // Find the group that matches this affix
-  const groupIndex = groupedAffixes.findIndex(g => g.baseName === baseName);
-  
+
+  const groupIndex = findAffixGroupIndex(baseName, groupedAffixes);
+
+  // If we can't find a match, return as existing (fallback)
   if (groupIndex === -1) {
-    // If we can't find a match, return as existing
     return createExistingSlot(affixText);
   }
-  
+
   const group = groupedAffixes[groupIndex];
-  
-  // Try to find the exact tier match based on the affix text
-  let tierIndex = 0;
-  for (let i = 0; i < group.affixes.length; i++) {
-    const crafted = craft(group.affixes[i], 100);
-    if (crafted === affixText) {
-      tierIndex = i;
-      break;
-    }
-  }
-  
+  const tierIndex = findMatchingTierIndex(affixText, group.affixes);
+
   return {
     type: "new",
     value: undefined,

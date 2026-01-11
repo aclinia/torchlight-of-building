@@ -12,6 +12,9 @@ const FILTER_AFFIX_TYPES = [
 
 type FilterAffixType = (typeof FILTER_AFFIX_TYPES)[number];
 
+export const DEFAULT_TIER = 4;
+export const PERCENTAGE_RANGE_PER_TIER = 100;
+
 export const getFilteredAffixes = (
   equipmentType: EquipmentType,
   affixType: FilterAffixType,
@@ -38,15 +41,63 @@ export const formatAffixOption = (affix: BaseGearAffix): string => {
   return display;
 };
 
-export const DEFAULT_TIER = 4;
+
+// Converts tier index and the percentage (quality) to a single slider value
+export const tierAndPercentageToUnifiedValue = (
+  tierCount: number,
+  tierIndex: number,
+  percentage: number,
+): number => {
+  const displayTier = tierCount - 1 - tierIndex;
+  return displayTier * PERCENTAGE_RANGE_PER_TIER + percentage;
+};
+
+// Convert unified slider value back to tier index and percentage
+// tierCount: total number of tiers available
+// unifiedValue: the slider position (0 to tierCount * 100 - 1)
+export const unifiedValueToTierAndPercentage = (
+  tierCount: number,
+  unifiedValue: number,
+): { tierIndex: number; percentage: number } => {
+  const displayTier = Math.floor(unifiedValue / PERCENTAGE_RANGE_PER_TIER);
+  const percentage = unifiedValue % PERCENTAGE_RANGE_PER_TIER;
+  const tierIndex = tierCount - 1 - displayTier;
+  return { tierIndex, percentage };
+};
 
 
 
-// Extracts the base name of an affix by removing the numeric ranges. EG - "+10-20 Fire Damage" becomes "Fire Damage"
+// Extracts the base name of an affix by removing numeric values
+// Examples:
+//   "+(10-20)% Fire Damage" → "% Fire Damage"
+//   "+6% Fire Damage" → "% Fire Damage"
+//   "+(10-20) Max Life" → "# Max Life"
+//   "Max Life" → "# Max Life"
 export const extractAffixBaseName = (affixText: string): string => {
-  let baseName = affixText.replace(/[+-]?\(\d+-\d+\)/g, "").trim();
-  baseName = baseName.replace(/[+-]?\d+/g, "").trim();
-  baseName = baseName.replace(/^[+-]\s*/, "");
+  let baseName = affixText;
+  const hasPercentage = baseName.includes("%");
+
+  // Step 1: Remove ranges like (10-20) or +(10-20)
+  baseName = baseName.replace(/[+-]?\(\d+-\d+\)/g, "");
+
+  // Step 2: Remove all numbers and +/- signs
+  baseName = baseName.replace(/[+-]?\d+/g, "");
+
+  // Step 3: Clean up extra whitespace
+  baseName = baseName.replace(/\s+/g, " ").trim();
+
+  // Step 4: Add appropriate prefix
+  if (hasPercentage) {
+    // For percentage mods, ensure it starts with %
+    baseName = baseName.replace(/^%?\s*/, "% ");
+  } else {
+    // For fixed value mods, add # prefix
+    baseName = `+# ${baseName}`;
+  }
+
+  // Step 5: Capitalize first letter after % or +#
+  baseName = baseName.replace(/^(% |\+# )(\w)/, (_, p1, p2) => p1 + p2.toUpperCase());
+
   return baseName;
 };
 
@@ -62,7 +113,7 @@ export interface GroupedAffix {
 // For Prefix and Suffix types only - these are the ones that should be grouped by tier
 // Affixes like Base / Sweet dream have a single tier with a range
 export const groupAffixesByBaseName = (
-  affixes: BaseGearAffix[],
+  affixes: readonly BaseGearAffix[],
 ): GroupedAffix[] => {
   const groups = new Map<string, BaseGearAffix[]>();
 
