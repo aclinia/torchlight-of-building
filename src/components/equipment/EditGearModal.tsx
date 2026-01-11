@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { getFilteredAffixes } from "@/src/lib/affix-utils";
+import {
+  DEFAULT_TIER,
+  extractAffixBaseName,
+  getFilteredAffixes,
+  groupAffixesByBaseName,
+} from "@/src/lib/affix-utils";
 import {
   formatBlendAffix,
   formatBlendOption,
@@ -19,6 +24,7 @@ interface EditableAffixSlot {
   type: "existing" | "new";
   value: string | undefined;
   affixIndex: number | undefined;
+  tierIndex: number;
   percentage: number;
 }
 
@@ -26,6 +32,7 @@ const createExistingSlot = (value: string): EditableAffixSlot => ({
   type: "existing",
   value,
   affixIndex: undefined,
+  tierIndex: DEFAULT_TIER,
   percentage: DEFAULT_QUALITY,
 });
 
@@ -33,6 +40,7 @@ const createNewSlot = (): EditableAffixSlot => ({
   type: "new",
   value: undefined,
   affixIndex: undefined,
+  tierIndex: DEFAULT_TIER,
   percentage: DEFAULT_QUALITY,
 });
 
@@ -247,7 +255,18 @@ export const EditGearModal = ({
       const affixIndex = value === "" ? undefined : parseInt(value, 10);
       setBaseAffixes((prev) => {
         const updated = [...prev];
-        updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex };
+        updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex, tierIndex: DEFAULT_TIER };
+        return updated;
+      });
+    },
+    [],
+  );
+
+  const handleBaseAffixTierChange = useCallback(
+    (slotIndex: number, tierIndex: number) => {
+      setBaseAffixes((prev) => {
+        const updated = [...prev];
+        updated[slotIndex] = { ...updated[slotIndex], tierIndex };
         return updated;
       });
     },
@@ -315,10 +334,21 @@ export const EditGearModal = ({
     const affixIndex = value === "" ? undefined : parseInt(value, 10);
     setPrefixes((prev) => {
       const updated = [...prev];
-      updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex };
+      updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex, tierIndex: DEFAULT_TIER };
       return updated;
     });
   }, []);
+
+  const handlePrefixTierChange = useCallback(
+    (slotIndex: number, tierIndex: number) => {
+      setPrefixes((prev) => {
+        const updated = [...prev];
+        updated[slotIndex] = { ...updated[slotIndex], tierIndex };
+        return updated;
+      });
+    },
+    [],
+  );
 
   const handlePrefixSliderChange = useCallback(
     (slotIndex: number, value: string) => {
@@ -346,10 +376,21 @@ export const EditGearModal = ({
     const affixIndex = value === "" ? undefined : parseInt(value, 10);
     setSuffixes((prev) => {
       const updated = [...prev];
-      updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex };
+      updated[slotIndex] = { ...updated[slotIndex], type: "new", affixIndex, tierIndex: DEFAULT_TIER };
       return updated;
     });
   }, []);
+
+  const handleSuffixTierChange = useCallback(
+    (slotIndex: number, tierIndex: number) => {
+      setSuffixes((prev) => {
+        const updated = [...prev];
+        updated[slotIndex] = { ...updated[slotIndex], tierIndex };
+        return updated;
+      });
+    },
+    [],
+  );
 
   const handleSuffixSliderChange = useCallback(
     (slotIndex: number, value: string) => {
@@ -377,6 +418,11 @@ export const EditGearModal = ({
   const handleSave = useCallback(() => {
     if (item === undefined || item.id === undefined) return;
 
+    // Group the affixes for working with tiers
+    const groupedPrefixes = groupAffixesByBaseName(prefixAffixes);
+    const groupedSuffixes = groupAffixesByBaseName(suffixAffixes);
+    const groupedBaseAffixes = groupAffixesByBaseName(baseAffixOptions);
+
     // Build base stats
     let newBaseStats: string | undefined;
     if (baseStats.type === "existing" && baseStats.value !== undefined) {
@@ -391,9 +437,11 @@ export const EditGearModal = ({
       if (slot.type === "existing" && slot.value !== undefined) {
         newBaseAffixes.push(slot.value);
       } else if (slot.type === "new" && slot.affixIndex !== undefined) {
-        newBaseAffixes.push(
-          craft(baseAffixOptions[slot.affixIndex], slot.percentage),
-        );
+        const group = groupedBaseAffixes[slot.affixIndex];
+        if (group) {
+          const selectedAffix = group.affixes[slot.tierIndex] ?? group.affixes[0];
+          newBaseAffixes.push(craft(selectedAffix, slot.percentage));
+        }
       }
     }
 
@@ -448,9 +496,11 @@ export const EditGearModal = ({
       if (slot.type === "existing" && slot.value !== undefined) {
         newPrefixes.push(slot.value);
       } else if (slot.type === "new" && slot.affixIndex !== undefined) {
-        newPrefixes.push(
-          craft(prefixAffixes[slot.affixIndex], slot.percentage),
-        );
+        const group = groupedPrefixes[slot.affixIndex];
+        if (group) {
+          const selectedAffix = group.affixes[slot.tierIndex] ?? group.affixes[0];
+          newPrefixes.push(craft(selectedAffix, slot.percentage));
+        }
       }
     }
 
@@ -460,9 +510,11 @@ export const EditGearModal = ({
       if (slot.type === "existing" && slot.value !== undefined) {
         newSuffixes.push(slot.value);
       } else if (slot.type === "new" && slot.affixIndex !== undefined) {
-        newSuffixes.push(
-          craft(suffixAffixes[slot.affixIndex], slot.percentage),
-        );
+        const group = groupedSuffixes[slot.affixIndex];
+        if (group) {
+          const selectedAffix = group.affixes[slot.tierIndex] ?? group.affixes[0];
+          newSuffixes.push(craft(selectedAffix, slot.percentage));
+        }
       }
     }
 
@@ -518,6 +570,7 @@ export const EditGearModal = ({
       | "Blend",
     affixes: BaseGearAffix[],
     onSelect: (slotIndex: number, value: string) => void,
+    onTierChange: (slotIndex: number, tierIndex: number) => void,
     onSliderChange: (slotIndex: number, value: string) => void,
     onClear: (slotIndex: number) => void,
     onDeleteExisting: () => void,
@@ -526,6 +579,7 @@ export const EditGearModal = ({
       hideTierInfo?: boolean;
       formatOption?: (affix: BaseGearAffix) => string;
       formatCraftedText?: (affix: BaseGearAffix) => string;
+      selectedAffixNames?: string[];
     },
   ): React.ReactElement => {
     if (slot.type === "existing" && slot.value !== undefined) {
@@ -544,14 +598,16 @@ export const EditGearModal = ({
         slotIndex={slotIndex}
         affixType={affixType}
         affixes={affixes}
-        selection={{ affixIndex: slot.affixIndex, percentage: slot.percentage }}
+        selection={{ affixIndex: slot.affixIndex, tierIndex: slot.tierIndex, percentage: slot.percentage }}
         onAffixSelect={onSelect}
+        onTierChange={onTierChange}
         onSliderChange={onSliderChange}
         onClear={onClear}
         hideQualitySlider={options?.hideQualitySlider}
         hideTierInfo={options?.hideTierInfo}
         formatOption={options?.formatOption}
         formatCraftedText={options?.formatCraftedText}
+        selectedAffixNames={options?.selectedAffixNames}
       />
     );
   };
@@ -577,6 +633,7 @@ export const EditGearModal = ({
               baseStatsAffixes,
               handleBaseStatsSelect,
               () => {},
+              () => {},
               handleDeleteBaseStats,
               handleDeleteBaseStats,
               { hideQualitySlider: true },
@@ -598,6 +655,7 @@ export const EditGearModal = ({
                   "Base Affix",
                   baseAffixOptions,
                   handleBaseAffixSelect,
+                  handleBaseAffixTierChange,
                   handleBaseAffixSliderChange,
                   handleClearBaseAffix,
                   () => handleDeleteBaseAffix(index),
@@ -620,6 +678,7 @@ export const EditGearModal = ({
               "Sweet Dream Affix",
               sweetDreamAffixes,
               handleSweetDreamSelect,
+              () => {},
               handleSweetDreamSliderChange,
               handleClearSweetDream,
               handleDeleteSweetDream,
@@ -640,6 +699,7 @@ export const EditGearModal = ({
               "Tower Sequence",
               towerSequenceAffixes,
               handleTowerSequenceSelect,
+              () => {},
               () => {},
               handleClearTowerSequence,
               handleDeleteTowerSequence,
@@ -667,6 +727,7 @@ export const EditGearModal = ({
                 craftingPool: "",
               })) as BaseGearAffix[],
               handleBlendSelect,
+              () => {},
               () => {},
               handleClearBlend,
               handleDeleteBlend,
@@ -706,6 +767,7 @@ export const EditGearModal = ({
                 "Prefix",
                 prefixAffixes,
                 handlePrefixSelect,
+                handlePrefixTierChange,
                 handlePrefixSliderChange,
                 handleClearPrefix,
                 () => handleDeletePrefix(index),
@@ -727,6 +789,7 @@ export const EditGearModal = ({
                 "Suffix",
                 suffixAffixes,
                 handleSuffixSelect,
+                handleSuffixTierChange,
                 handleSuffixSliderChange,
                 handleClearSuffix,
                 () => handleDeleteSuffix(index),

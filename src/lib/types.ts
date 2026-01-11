@@ -44,6 +44,7 @@ export type ActivePage =
 
 export interface AffixSlotState {
   affixIndex: number | undefined;
+  tierIndex: number;
   percentage: number;
 }
 

@@ -9,7 +9,12 @@ import { EditGearModal } from "../../components/equipment/EditGearModal";
 import { EquipmentSlotDropdown } from "../../components/equipment/EquipmentSlotDropdown";
 import { InventoryItem } from "../../components/equipment/InventoryItem";
 import { LegendaryGearModule } from "../../components/equipment/LegendaryGearModule";
-import { getFilteredAffixes } from "../../lib/affix-utils";
+import {
+  DEFAULT_TIER,
+  extractAffixBaseName,
+  getFilteredAffixes,
+  groupAffixesByBaseName,
+} from "../../lib/affix-utils";
 import {
   formatBlendAffix,
   formatBlendOption,
@@ -156,6 +161,33 @@ function EquipmentPage(): React.ReactNode {
 
   const isBelt = selectedEquipmentType === "Belt";
 
+  // Compute selected affix base names for filtering
+  const selectedPrefixNames = useMemo(() => {
+    const groupedPrefixes = groupAffixesByBaseName(prefixAffixes);
+    return affixSlots
+      .slice(0, 3)
+      .filter((slot) => slot.affixIndex !== undefined)
+      .map((slot) => groupedPrefixes[slot.affixIndex!]?.baseName)
+      .filter((name): name is string => name !== undefined);
+  }, [affixSlots, prefixAffixes]);
+
+  const selectedSuffixNames = useMemo(() => {
+    const groupedSuffixes = groupAffixesByBaseName(suffixAffixes);
+    return affixSlots
+      .slice(3, 6)
+      .filter((slot) => slot.affixIndex !== undefined)
+      .map((slot) => groupedSuffixes[slot.affixIndex!]?.baseName)
+      .filter((name): name is string => name !== undefined);
+  }, [affixSlots, suffixAffixes]);
+
+  const selectedBaseAffixNames = useMemo(() => {
+    const groupedBaseAffixes = groupAffixesByBaseName(baseAffixes);
+    return baseAffixSlots
+      .filter((slot) => slot.affixIndex !== undefined)
+      .map((slot) => groupedBaseAffixes[slot.affixIndex!]?.baseName)
+      .filter((name): name is string => name !== undefined);
+  }, [baseAffixSlots, baseAffixes]);
+
   const allEquipmentTypes = useMemo(() => {
     const types = new Set<EquipmentType>();
     for (const slotTypes of Object.values(SLOT_TO_VALID_EQUIPMENT_TYPES)) {
@@ -179,11 +211,19 @@ function EquipmentPage(): React.ReactNode {
       const affixIndex = value === "" ? undefined : parseInt(value, 10);
       setAffixSlot(slotIndex, {
         affixIndex,
+        tierIndex: DEFAULT_TIER,
         percentage:
           affixIndex === undefined ? 50 : affixSlots[slotIndex].percentage,
       });
     },
     [setAffixSlot, affixSlots],
+  );
+
+  const handleTierChange = useCallback(
+    (slotIndex: number, tierIndex: number) => {
+      setAffixSlot(slotIndex, { tierIndex });
+    },
+    [setAffixSlot],
   );
 
   const handleSliderChange = useCallback(
@@ -230,11 +270,19 @@ function EquipmentPage(): React.ReactNode {
       const affixIndex = value === "" ? undefined : parseInt(value, 10);
       setBaseAffixSlot(slotIndex, {
         affixIndex,
+        tierIndex: DEFAULT_TIER,
         percentage:
           affixIndex === undefined ? 50 : baseAffixSlots[slotIndex].percentage,
       });
     },
     [setBaseAffixSlot, baseAffixSlots],
+  );
+
+  const handleBaseAffixTierChange = useCallback(
+    (slotIndex: number, tierIndex: number) => {
+      setBaseAffixSlot(slotIndex, { tierIndex });
+    },
+    [setBaseAffixSlot],
   );
 
   const handleBaseAffixSliderChange = useCallback(
@@ -293,11 +341,20 @@ function EquipmentPage(): React.ReactNode {
         ? baseStatsAffixes[baseStatsAffixIndex].craftableAffix
         : undefined;
 
+    // Group the affixes for prefix/suffix
+    const groupedPrefixes = groupAffixesByBaseName(prefixAffixes);
+    const groupedSuffixes = groupAffixesByBaseName(suffixAffixes);
+    const groupedBaseAffixes = groupAffixesByBaseName(baseAffixes);
+
     // Build base affixes (2 max)
     const base_affixes: string[] = [];
     baseAffixSlots.forEach((selection) => {
       if (selection.affixIndex === undefined) return;
-      const selectedAffix = baseAffixes[selection.affixIndex];
+      const group = groupedBaseAffixes[selection.affixIndex];
+      if (!group)  {
+        return;
+      }
+      const selectedAffix = group.affixes[selection.tierIndex] ?? group.affixes[0];
       base_affixes.push(craft(selectedAffix, selection.percentage));
     });
 
@@ -326,7 +383,11 @@ function EquipmentPage(): React.ReactNode {
     const prefixes: string[] = [];
     affixSlots.slice(0, 3).forEach((selection) => {
       if (selection.affixIndex === undefined) return;
-      const selectedAffix = prefixAffixes[selection.affixIndex];
+      const group = groupedPrefixes[selection.affixIndex];
+      if (!group) {
+        return;
+      }
+      const selectedAffix = group.affixes[selection.tierIndex] ?? group.affixes[0];
       prefixes.push(craft(selectedAffix, selection.percentage));
     });
 
@@ -334,7 +395,11 @@ function EquipmentPage(): React.ReactNode {
     const suffixes: string[] = [];
     affixSlots.slice(3, 6).forEach((selection) => {
       if (selection.affixIndex === undefined) return;
-      const selectedAffix = suffixAffixes[selection.affixIndex];
+      const group = groupedSuffixes[selection.affixIndex];
+      if (!group) {
+        return;
+      }
+      const selectedAffix = group.affixes[selection.tierIndex] ?? group.affixes[0];
       suffixes.push(craft(selectedAffix, selection.percentage));
     });
 
@@ -454,9 +519,11 @@ function EquipmentPage(): React.ReactNode {
                     affixes={baseStatsAffixes}
                     selection={{
                       affixIndex: baseStatsAffixIndex,
+                      tierIndex: DEFAULT_TIER,
                       percentage: 100,
                     }}
                     onAffixSelect={handleBaseStatsSelect}
+                    onTierChange={() => {}}
                     onSliderChange={() => {}}
                     onClear={handleClearBaseStats}
                     hideQualitySlider
@@ -478,9 +545,11 @@ function EquipmentPage(): React.ReactNode {
                         affixes={baseAffixes}
                         selection={baseAffixSlots[slotIndex]}
                         onAffixSelect={handleBaseAffixSelect}
+                        onTierChange={handleBaseAffixTierChange}
                         onSliderChange={handleBaseAffixSliderChange}
                         onClear={handleClearBaseAffix}
                         hideTierInfo
+                        selectedAffixNames={selectedBaseAffixNames}
                       />
                     ))}
                   </div>
@@ -498,9 +567,11 @@ function EquipmentPage(): React.ReactNode {
                     affixes={sweetDreamAffixes}
                     selection={{
                       affixIndex: sweetDreamAffixIndex,
+                      tierIndex: DEFAULT_TIER,
                       percentage: sweetDreamAffixPercentage,
                     }}
                     onAffixSelect={handleSweetDreamSelect}
+                    onTierChange={() => {}}
                     onSliderChange={handleSweetDreamSliderChange}
                     onClear={handleClearSweetDream}
                     hideTierInfo
@@ -519,9 +590,11 @@ function EquipmentPage(): React.ReactNode {
                     affixes={towerSequenceAffixes}
                     selection={{
                       affixIndex: towerSequenceAffixIndex,
+                      tierIndex: DEFAULT_TIER,
                       percentage: 100,
                     }}
                     onAffixSelect={handleTowerSequenceSelect}
+                    onTierChange={() => {}}
                     onSliderChange={() => {}}
                     onClear={handleClearTowerSequence}
                     hideQualitySlider
@@ -547,8 +620,9 @@ function EquipmentPage(): React.ReactNode {
                         craftingPool: "",
                       })) as BaseGearAffix[]
                     }
-                    selection={{ affixIndex: blendAffixIndex, percentage: 100 }}
+                    selection={{ affixIndex: blendAffixIndex, tierIndex: 0, percentage: 100 }}
                     onAffixSelect={handleBlendSelect}
+                    onTierChange={() => {}}
                     onSliderChange={() => {}}
                     onClear={handleClearBlend}
                     hideQualitySlider
@@ -584,8 +658,10 @@ function EquipmentPage(): React.ReactNode {
                       affixes={prefixAffixes}
                       selection={affixSlots[slotIndex]}
                       onAffixSelect={handleAffixSelect}
+                      onTierChange={handleTierChange}
                       onSliderChange={handleSliderChange}
                       onClear={handleClearAffix}
+                      selectedAffixNames={selectedPrefixNames}
                     />
                   ))}
                 </div>
@@ -604,8 +680,10 @@ function EquipmentPage(): React.ReactNode {
                       affixes={suffixAffixes}
                       selection={affixSlots[slotIndex]}
                       onAffixSelect={handleAffixSelect}
+                      onTierChange={handleTierChange}
                       onSliderChange={handleSliderChange}
                       onClear={handleClearAffix}
+                      selectedAffixNames={selectedSuffixNames}
                     />
                   ))}
                 </div>

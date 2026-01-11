@@ -5,16 +5,17 @@ import { immer } from "zustand/middleware/immer";
 import type { EquipmentType } from "@/src/tli/gear-data-types";
 import { DEFAULT_QUALITY } from "../lib/constants";
 import type { AffixSlotState, GearSlot } from "../lib/types";
+import { DEFAULT_TIER } from "../lib/affix-utils";
 
 const createEmptyAffixSlots = (): AffixSlotState[] =>
   Array(6)
     .fill(undefined)
-    .map(() => ({ affixIndex: undefined, percentage: DEFAULT_QUALITY }));
+    .map(() => ({ affixIndex: undefined, tierIndex: DEFAULT_TIER, percentage: DEFAULT_QUALITY }));
 
 const createEmptyBaseAffixSlots = (): AffixSlotState[] =>
   Array(2)
     .fill(undefined)
-    .map(() => ({ affixIndex: undefined, percentage: DEFAULT_QUALITY }));
+    .map(() => ({ affixIndex: undefined, tierIndex: DEFAULT_TIER, percentage: DEFAULT_QUALITY }));
 
 interface LegendaryAffixSlotState {
   affixIndex: number | undefined;
@@ -109,6 +110,7 @@ export const useEquipmentUIStore = create<EquipmentUIState>()(
       set((state) => {
         state.affixSlots[index] = {
           affixIndex: undefined,
+          tierIndex: DEFAULT_TIER,
           percentage: DEFAULT_QUALITY,
         };
       }),
@@ -122,6 +124,7 @@ export const useEquipmentUIStore = create<EquipmentUIState>()(
       set((state) => {
         state.baseAffixSlots[index] = {
           affixIndex: undefined,
+          tierIndex: DEFAULT_TIER,
           percentage: DEFAULT_QUALITY,
         };
       }),

@@ -1,7 +1,11 @@
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
-import { formatAffixOption } from "../../lib/affix-utils";
+import {
+  type GroupedAffix,
+  formatAffixOption,
+  groupAffixesByBaseName,
+} from "../../lib/affix-utils";
 import type { AffixSlotState } from "../../lib/types";
 
 const AFFIX_SLOT_TYPES = [
@@ -22,12 +26,14 @@ interface AffixSlotProps {
   affixes: BaseGearAffix[];
   selection: AffixSlotState;
   onAffixSelect: (slotIndex: number, value: string) => void;
+  onTierChange: (slotIndex: number, tierIndex: number) => void;
   onSliderChange: (slotIndex: number, value: string) => void;
   onClear: (slotIndex: number) => void;
   hideQualitySlider?: boolean;
   hideTierInfo?: boolean;
   formatOption?: (affix: BaseGearAffix) => string;
   formatCraftedText?: (affix: BaseGearAffix) => string;
+  selectedAffixNames?: string[]; // List of already selected affix base names to exclude
 }
 
 export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
@@ -36,22 +42,74 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
   affixes,
   selection,
   onAffixSelect,
+  onTierChange,
   onSliderChange,
   onClear,
   hideQualitySlider = false,
   hideTierInfo = false,
   formatOption,
   formatCraftedText,
+  selectedAffixNames = [],
 }) => {
-  const selectedAffix =
-    selection.affixIndex !== undefined
-      ? affixes[selection.affixIndex]
+  // For Prefix, Suffix, and Base Affix, we group by base name (they have tiers)
+  const shouldGroup = 
+    affixType === "Prefix" || 
+    affixType === "Suffix" || 
+    affixType === "Base Affix";
+  const groupedAffixes: GroupedAffix[] = shouldGroup
+    ? groupAffixesByBaseName(affixes)
+    : affixes.map((affix, idx) => ({
+        baseName: affix.craftableAffix,
+        affixes: [affix],
+        displayName: formatOption ? formatOption(affix) : formatAffixOption(affix),
+      }));
+
+  const selectedGroup =
+    selection.affixIndex !== undefined && selection.affixIndex < groupedAffixes.length
+      ? groupedAffixes[selection.affixIndex]
       : undefined;
+
+  // Filter out already selected affixes, but keep the current selection
+  const currentSelectionBaseName = selectedGroup?.baseName;
+  const availableGroups = groupedAffixes.filter(
+    (group) => 
+      group.baseName === currentSelectionBaseName || 
+      !selectedAffixNames.includes(group.baseName),
+  );
+
+
+  // Its possible not all affixes support the same tier range, we default to the lowest one if out of range
+  const clampedTierIndex = selectedGroup 
+    ? Math.min(selection.tierIndex, selectedGroup.affixes.length - 1)
+    : selection.tierIndex;
+
+  const selectedAffix =
+    selectedGroup && clampedTierIndex >= 0
+      ? selectedGroup.affixes[clampedTierIndex]
+      : undefined;
+
   const craftedText = selectedAffix
     ? formatCraftedText
       ? formatCraftedText(selectedAffix)
       : craft(selectedAffix, selection.percentage)
     : "";
+
+  const numTiers = selectedGroup?.affixes.length ?? 1;
+  const hasMultipleTiers = shouldGroup && numTiers > 1;
+  
+  const invertedTier = hasMultipleTiers ? (numTiers - 1 - clampedTierIndex) : 0;
+  const unifiedValue = invertedTier * 100 + selection.percentage;
+
+  const handleUnifiedSliderChange = (value: number) => {
+    const newTier = Math.floor(value / 100);
+    const newPercentage = value % 100;
+    const originalTierIndex = numTiers - 1 - newTier;
+    onTierChange(slotIndex, originalTierIndex);
+    onSliderChange(slotIndex, newPercentage.toString());
+  };
+
+  const maxSliderValue = numTiers * 100 - 1;
+  const totalPercentage = Math.round((unifiedValue / maxSliderValue) * 100);
 
   return (
     <div className="bg-zinc-800 p-4 rounded-lg">
@@ -59,40 +117,66 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
       <SearchableSelect
         value={selection.affixIndex ?? undefined}
         onChange={(value) => onAffixSelect(slotIndex, value?.toString() ?? "")}
-        options={affixes.map((affix, idx) => ({
-          value: idx,
-          label: formatOption ? formatOption(affix) : formatAffixOption(affix),
-        }))}
+        options={availableGroups.map((group, idx) => {
+          const originalIndex = groupedAffixes.findIndex(g => g.baseName === group.baseName);
+          return {
+            value: originalIndex,
+            label: group.displayName,
+          };
+        })}
         placeholder={`<Select ${affixType}>`}
         className="mb-3"
       />
 
       {/* Slider and Preview (only show if affix selected) */}
-      {selectedAffix && (
+      {selectedAffix && selectedGroup && (
         <>
-          {/* Quality Slider */}
+          {/* Unified Quality/Tier Slider */}
           {!hideQualitySlider && (
             <div className="mb-3">
               <div className="flex justify-between items-center mb-1">
                 <label
-                  htmlFor={`quality-slider-${slotIndex}`}
+                  htmlFor={`unified-slider-${slotIndex}`}
                   className="text-xs text-zinc-500"
                 >
                   Quality
                 </label>
                 <span className="text-xs font-medium text-zinc-50">
-                  {selection.percentage}%
+                  {totalPercentage}% {hasMultipleTiers && `- Tier ${selectedAffix.tier}`}
                 </span>
               </div>
-              <input
-                id={`quality-slider-${slotIndex}`}
-                type="range"
-                min="0"
-                max="100"
-                value={selection.percentage}
-                onChange={(e) => onSliderChange(slotIndex, e.target.value)}
-                className="w-full"
-              />
+              <div className="relative">
+                <input
+                  id={`unified-slider-${slotIndex}`}
+                  type="range"
+                  min="0"
+                  max={numTiers * 100 - 1}
+                  value={unifiedValue}
+                  onChange={(e) => handleUnifiedSliderChange(Number.parseInt(e.target.value, 10))}
+                  className="w-full relative z-10"
+                />
+                {/* Tier boundary tick marks - Denotes the tier you are currently in*/}
+                {hasMultipleTiers && (
+                  <div className="absolute top-0.5 left-0 right-0 pointer-events-none" style={{ transform: 'translateY(-50%)' }}>
+                    {Array.from({ length: numTiers - 1 }, (_, i) => {
+                      const tierBoundaryValue = (i + 1) * 100;
+                      const sliderMax = numTiers * 100 - 1;
+                      const position = (tierBoundaryValue / sliderMax) * 100;
+
+                      return (
+                        <div
+                          key={i}
+                          className="absolute h-4 w-0.5 bg-zinc-500"
+                          style={{ 
+                            left: `${position}%`,
+                            transform: 'translateX(-50%)'
+                          }}
+                        />
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
@@ -103,13 +187,6 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
             >
               {craftedText}
             </div>
-            {!hideTierInfo && !hideQualitySlider && (
-              <div className="text-xs text-zinc-500">
-                Tier {selectedAffix.tier}
-                {selectedAffix.craftingPool &&
-                  ` | ${selectedAffix.craftingPool}`}
-              </div>
-            )}
           </div>
 
           {/* Clear Button */}
