@@ -180,9 +180,9 @@ const getDefenseModTypes = (defenseType: DefenseType) => {
       () =>
         ({
           gearFlat: "GearArmor",
-          gearPct: "GearArmorPct",
+          gearMultPct: "GearArmorPct",
           finalFlat: "Armor",
-          finalFlatPct: "ArmorPct",
+          finalMultPct: "ArmorPct",
         }) as const,
     )
     .with(
@@ -190,9 +190,9 @@ const getDefenseModTypes = (defenseType: DefenseType) => {
       () =>
         ({
           gearFlat: "GearEvasion",
-          gearPct: "GearEvasionPct",
+          gearMultPct: "GearEvasionPct",
           finalFlat: "Evasion",
-          finalFlatPct: "EvasionPct",
+          finalMultPct: "EvasionPct",
         }) as const,
     )
     .with(
@@ -200,9 +200,9 @@ const getDefenseModTypes = (defenseType: DefenseType) => {
       () =>
         ({
           gearFlat: "GearEnergyShield",
-          gearPct: "GearEnergyShieldPct",
+          gearMultPct: "GearEnergyShieldPct",
           finalFlat: "MaxEnergyShield",
-          finalFlatPct: "MaxEnergyShieldPct",
+          finalMultPct: "MaxEnergyShieldPct",
         }) as const,
     )
     .exhaustive();
@@ -226,7 +226,7 @@ const calculateDefenseStat = (
     // Sum up the flat defense then apply the pct multipliers
     const gearMods = collectModsFromAffixes(getGearAffixes(gearItem));
     const gearFlatDefense = sumByValue(filterMods(gearMods, modTypes.gearFlat));
-    const gearDefenseMult = calcEffMult(gearMods, modTypes.gearPct);
+    const gearDefenseMult = calcEffMult(gearMods, modTypes.gearMultPct);
 
     totalFromGear += gearFlatDefense * gearDefenseMult;
 
@@ -238,9 +238,9 @@ const calculateDefenseStat = (
   const baseFlatFromMods = sumByValue(filterMods(mods, modTypes.finalFlat));
   const totalFlat = totalFromGear + baseFlatFromMods;
 
-  const finalPctMult = calcEffMult(mods, modTypes.finalFlatPct);
+  const finalMultPct = calcEffMult(mods, modTypes.finalMultPct);
 
-  return totalFlat * finalPctMult;
+  return totalFlat * finalMultPct;
 };
 
 // === Resource Pool Types ===
