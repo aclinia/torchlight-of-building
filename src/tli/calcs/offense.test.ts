@@ -2265,11 +2265,11 @@ describe("resolveBuffSkillMods", () => {
     ): Record<
       number,
       | {
-        skillType: "support";
-        name: string;
-        level: number;
-        affixes: SupportAffix[];
-      }
+          skillType: "support";
+          name: string;
+          level: number;
+          affixes: SupportAffix[];
+        }
       | undefined
     > => {
       return Object.fromEntries(
@@ -2297,11 +2297,11 @@ describe("resolveBuffSkillMods", () => {
         supportSkills: Record<
           number,
           | {
-            skillType: "support";
-            name: string;
-            level: number;
-            affixes: SupportAffix[];
-          }
+              skillType: "support";
+              name: string;
+              level: number;
+              affixes: SupportAffix[];
+            }
           | undefined
         >;
       }
@@ -3515,14 +3515,14 @@ describe("penetration", () => {
       modType === "physical"
         ? baseWeapon
         : {
-          ...baseWeapon,
-          base_affixes: [
-            affix([
-              { type: "FlatGearDmg", modType, value: { min: dmg, max: dmg } },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        };
+            ...baseWeapon,
+            base_affixes: [
+              affix([
+                { type: "FlatGearDmg", modType, value: { min: dmg, max: dmg } },
+                { type: "GearPhysDmgPct", value: -1 },
+              ]),
+            ],
+          };
     // Set element-specific resistance based on damage type
     const penConfig: PenConfigInput = { enemyArmor: options.armor };
     if (options.res !== undefined) {

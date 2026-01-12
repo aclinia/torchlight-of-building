@@ -155,7 +155,7 @@ const calculateStats = (mods: Mod[]): Stats => {
           (m) => m.statModType === statType || m.statModType === "all",
         ),
       ) /
-      100;
+        100;
     return flat * mult;
   };
   return {
@@ -598,7 +598,7 @@ const calculateAddnDmgFromShadows = (
   };
 };
 
-interface SkillHitOverview extends BaseHitOverview { }
+interface SkillHitOverview extends BaseHitOverview {}
 
 const calculateAtkHit = (
   gearDmg: DmgRanges,
@@ -713,7 +713,7 @@ const filterModsByCond = (
         "realm_of_mercury",
         () =>
           loadout.heroPage.selectedHero ===
-          "Lightbringer Rosa: Unsullied Blade (#2)" &&
+            "Lightbringer Rosa: Unsullied Blade (#2)" &&
           config.realmOfMercuryEnabled,
       )
       .with("has_focus_blessing", () => config.hasFocusBlessing)
@@ -1601,8 +1601,8 @@ const calcSpellBurstChargeSpeedBonusPct = (mods: Mod[]): number => {
     ...filterMods(mods, "SpellBurstChargeSpeedPct"),
     ...(playSafe !== undefined
       ? filterMods(mods, "CspdPct").map((m) =>
-        multModValue(m, playSafe.value / 100),
-      )
+          multModValue(m, playSafe.value / 100),
+        )
       : []),
   ];
   return (calcEffMult(chargeSpeedMods) - 1) * 100;
@@ -1650,9 +1650,9 @@ const pushMultistrikeDmgBonus = (
       hitNumber === initialCount
         ? 1.0
         : Math.min(
-          1.0,
-          multistrikeChancePct / 100 - (hitNumber - (1 + initialCount)),
-        );
+            1.0,
+            multistrikeChancePct / 100 - (hitNumber - (1 + initialCount)),
+          );
 
     const hitDamageMultiplier = 1.0 + hitNumber * (multistrikeIncDmgPct / 100);
     expectedDmgMult += hitProbability * hitDamageMultiplier;
@@ -2762,11 +2762,11 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     const spellBurstDpsSummary =
       spellDpsSummary !== undefined
         ? calcAvgSpellBurstDps(
-          mods,
-          spellDpsSummary.avgHitWithCrit,
-          derivedOffenseCtx,
-          derivedCtx,
-        )
+            mods,
+            spellDpsSummary.avgHitWithCrit,
+            derivedOffenseCtx,
+            derivedCtx,
+          )
         : undefined;
 
     const persistentDpsSummary = calcAvgPersistentDps({
