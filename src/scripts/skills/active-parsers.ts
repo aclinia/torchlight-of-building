@@ -167,15 +167,8 @@ export const chargingWarcryParser: SupportLevelParser = (input) => {
     skillName,
   );
 
-  const aspdMatch = findMatch(
-    firstDescription,
-    ts("shadow strike skills gain {aspd:+int%} tracking area"),
-    skillName,
-  );
-
   return {
     shadowStrikeSkillDmgPerEnemy: createConstantLevels(dmgMatch.dmg),
-    shadowStrikeSkillAspd: createConstantLevels(aspdMatch.aspd),
   };
 };
 

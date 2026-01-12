@@ -11,6 +11,8 @@ import mcTheaGolden from "./mc-thea-3-golden-1.json";
 import rosaGolden from "./rosa-2-golden.json";
 
 describe("offense golden tests", () => {
+  // TODO - Charging warcry damage changed, so this test needs to be updated
+  // Charging warcry is in rosaGolden skillset
   it("rosa-2-golden: Frost Spike should calculate ~12.69 trillion DPS", () => {
     const saveData = rosaGolden as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -87,6 +89,8 @@ describe("offense golden tests", () => {
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-1: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -138,6 +142,8 @@ describe("offense golden tests", () => {
     expect(erosionRes).toEqual({ max: 60, potential: 9, actual: 9 });
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-2: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden2 as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -189,6 +195,8 @@ describe("offense golden tests", () => {
     expect(erosionRes).toEqual({ max: 60, potential: 63, actual: 60 });
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-3: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden3 as unknown as SaveData;
     const loadout = loadSave(saveData);
