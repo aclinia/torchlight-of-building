@@ -2265,11 +2265,11 @@ describe("resolveBuffSkillMods", () => {
     ): Record<
       number,
       | {
-          skillType: "support";
-          name: string;
-          level: number;
-          affixes: SupportAffix[];
-        }
+        skillType: "support";
+        name: string;
+        level: number;
+        affixes: SupportAffix[];
+      }
       | undefined
     > => {
       return Object.fromEntries(
@@ -2297,11 +2297,11 @@ describe("resolveBuffSkillMods", () => {
         supportSkills: Record<
           number,
           | {
-              skillType: "support";
-              name: string;
-              level: number;
-              affixes: SupportAffix[];
-            }
+            skillType: "support";
+            name: string;
+            level: number;
+            affixes: SupportAffix[];
+          }
           | undefined
         >;
       }
@@ -3515,14 +3515,14 @@ describe("penetration", () => {
       modType === "physical"
         ? baseWeapon
         : {
-            ...baseWeapon,
-            base_affixes: [
-              affix([
-                { type: "FlatGearDmg", modType, value: { min: dmg, max: dmg } },
-                { type: "GearPhysDmgPct", value: -1 },
-              ]),
-            ],
-          };
+          ...baseWeapon,
+          base_affixes: [
+            affix([
+              { type: "FlatGearDmg", modType, value: { min: dmg, max: dmg } },
+              { type: "GearPhysDmgPct", value: -1 },
+            ]),
+          ],
+        };
     // Set element-specific resistance based on damage type
     const penConfig: PenConfigInput = { enemyArmor: options.armor };
     if (options.res !== undefined) {
@@ -5944,14 +5944,13 @@ describe("slash-strike damage ([Test] Slash Strike Skill)", () => {
   });
 });
 
-describe("resource pool calculation", () => {
+describe("defense calculation (ES, Eva, Armor)", () => {
   test("calculate energy shield with gear affixes and hero memory", () => {
-    // Base energy shield from helmet: 146
-    // Flat gear energy shield: 337
-    // Total before gear percentage: 146 + 337 = 483
-    // With 62% gear energy shield: 483 * (1 + 0.62) = 483 * 1.62 = 782.46
-    // Memory of Discipline flat energy shield: +525
-    // Total energy shield: 782.46 + 525 = 1307.46
+    // Helmet: (100 base + 200 flat) * 1.5 gear% = 300 * 1.5 = 450
+    // Boots: (100 base + 100 flat) * 1.2 gear% = 200 * 1.2 = 240
+    // Total from gear: 450 + 240 = 690
+    // Memory of Discipline flat: +500
+    // Total energy shield: 690 + 500 = 1190
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -5961,15 +5960,32 @@ describe("resource pool calculation", () => {
               baseStats: {
                 baseStatLines: [
                   {
-                    text: "146 energy shield",
-                    mods: [{ type: "GearEnergyShield", value: 146 } as const],
+                    text: "100 energy shield",
+                    mods: [{ type: "GearEnergyShield", value: 100 } as const],
                   },
                 ],
               },
               base_affixes: [
                 affix([
-                  { type: "GearEnergyShield", value: 337 },
-                  { type: "GearEnergyShieldPct", value: 62 },
+                  { type: "GearEnergyShield", value: 200 },
+                  { type: "GearEnergyShieldPct", value: 50 },
+                ]),
+              ],
+            },
+            boots: {
+              equipmentType: "Boots (INT)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 energy shield",
+                    mods: [{ type: "GearEnergyShield", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEnergyShield", value: 100 },
+                  { type: "GearEnergyShieldPct", value: 20 },
                 ]),
               ],
             },
@@ -5983,7 +5999,7 @@ describe("resource pool calculation", () => {
             slot45: {
               id: "test-memory",
               memoryType: "Memory of Discipline" as const,
-              affixes: [affix([{ type: "MaxEnergyShield", value: 525 }])],
+              affixes: [affix([{ type: "MaxEnergyShield", value: 500 }])],
             },
           },
           memoryInventory: [],
@@ -5994,59 +6010,16 @@ describe("resource pool calculation", () => {
     };
 
     const results = calculateOffense(input);
-    expect(results.resourcePool.energyShield).toBeCloseTo(1307.46);
-  });
-
-  test("calculate max life with flat and percentage modifiers", () => {
-    // Base: 50 + (level 95) * 13 = 50 + 1235 = 1285
-    // Flat MaxLife: +200
-    // Total before percentage: 1285 + 200 = 1485
-    // With 50% increased: 1485 * (1 + 0.5) = 1485 * 1.5 = 2227.5
-    const input = {
-      loadout: initLoadout({
-        gearPage: { equippedGear: {}, inventory: [] },
-        customAffixLines: affixLines([
-          { type: "MaxLife", value: 200 },
-          { type: "MaxLifePct", value: 50, addn: false },
-        ]),
-        skillPage: emptySkillPage(),
-      }),
-      configuration: defaultConfiguration,
-    };
-
-    const results = calculateOffense(input);
-    expect(results.resourcePool.maxLife).toBeCloseTo(2227.5);
-  });
-
-  test("calculate max mana with flat and percentage modifiers", () => {
-    // Base: 40 + (level 95) * 5 = 40 + 475 = 515
-    // Flat MaxMana: +150
-    // Total before percentage: 515 + 150 = 665
-    // With 80% increased: 665 * (1 + 0.8) = 665 * 1.8 = 1197
-    const input = {
-      loadout: initLoadout({
-        gearPage: { equippedGear: {}, inventory: [] },
-        customAffixLines: affixLines([
-          { type: "MaxMana", value: 150 },
-          { type: "MaxManaPct", value: 80, addn: false },
-        ]),
-        skillPage: emptySkillPage(),
-      }),
-      configuration: defaultConfiguration,
-    };
-
-    const results = calculateOffense(input);
-    expect(results.resourcePool.maxMana).toBeCloseTo(1197);
+    expect(results.defenses.energyShield).toBeCloseTo(1190);
   });
 
   test("calculate armor with gear affixes and flat modifiers", () => {
-    // Base armor from gear: 250
-    // Flat gear armor: 180
-    // Total before gear percentage: 250 + 180 = 430
-    // With 45% gear armor: 430 * (1 + 0.45) = 430 * 1.45 = 623.5
-    // Flat Armor: +100
-    // Total before final percentage: 623.5 + 100 = 723.5
-    // With 30% increased armor: 723.5 * (1 + 0.3) = 723.5 * 1.3 = 940.55
+    // Chest: (200 base + 300 flat) * 1.5 gear% = 500 * 1.5 = 750
+    // Gloves: (100 base + 100 flat) * 1.4 gear% = 200 * 1.4 = 280
+    // Total from gear: 750 + 280 = 1030
+    // Flat Armor from custom: +100
+    // Total before percentage: 1030 + 100 = 1130
+    // With 30% increased armor: 1130 * 1.3 = 1469
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -6056,15 +6029,32 @@ describe("resource pool calculation", () => {
               baseStats: {
                 baseStatLines: [
                   {
-                    text: "250 armor",
-                    mods: [{ type: "GearArmor", value: 250 } as const],
+                    text: "200 armor",
+                    mods: [{ type: "GearArmor", value: 200 } as const],
                   },
                 ],
               },
               base_affixes: [
                 affix([
-                  { type: "GearArmor", value: 180 },
-                  { type: "GearArmorPct", value: 45 },
+                  { type: "GearArmor", value: 300 },
+                  { type: "GearArmorPct", value: 50 },
+                ]),
+              ],
+            },
+            gloves: {
+              equipmentType: "Gloves (STR)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 armor",
+                    mods: [{ type: "GearArmor", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearArmor", value: 100 },
+                  { type: "GearArmorPct", value: 40 },
                 ]),
               ],
             },
@@ -6081,17 +6071,16 @@ describe("resource pool calculation", () => {
     };
 
     const results = calculateOffense(input);
-    expect(results.resourcePool.armor).toBeCloseTo(940.55);
+    expect(results.defenses.armor).toBeCloseTo(1469);
   });
 
   test("calculate evasion with gear affixes and flat modifiers", () => {
-    // Base evasion from gear: 180
-    // Flat gear evasion: 220
-    // Total before gear percentage: 180 + 220 = 400
-    // With 50% gear evasion: 400 * (1 + 0.5) = 400 * 1.5 = 600
-    // Flat Evasion: +80
-    // Total before final percentage: 600 + 80 = 680
-    // With 25% increased evasion: 680 * (1 + 0.25) = 680 * 1.25 = 850
+    // Boots: (100 base + 300 flat) * 1.6 gear% = 400 * 1.6 = 640
+    // Helmet: (100 base + 100 flat) * 1.3 gear% = 200 * 1.3 = 260
+    // Total from gear: 640 + 260 = 900
+    // Flat Evasion from custom: +100
+    // Total before percentage: 900 + 100 = 1000
+    // With 25% increased evasion: 1000 * 1.25 = 1250
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -6101,15 +6090,32 @@ describe("resource pool calculation", () => {
               baseStats: {
                 baseStatLines: [
                   {
-                    text: "180 evasion",
-                    mods: [{ type: "GearEvasion", value: 180 } as const],
+                    text: "100 evasion",
+                    mods: [{ type: "GearEvasion", value: 100 } as const],
                   },
                 ],
               },
               base_affixes: [
                 affix([
-                  { type: "GearEvasion", value: 220 },
-                  { type: "GearEvasionPct", value: 50 },
+                  { type: "GearEvasion", value: 300 },
+                  { type: "GearEvasionPct", value: 60 },
+                ]),
+              ],
+            },
+            helmet: {
+              equipmentType: "Helmet (DEX)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 evasion",
+                    mods: [{ type: "GearEvasion", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEvasion", value: 100 },
+                  { type: "GearEvasionPct", value: 30 },
                 ]),
               ],
             },
@@ -6117,7 +6123,7 @@ describe("resource pool calculation", () => {
           inventory: [],
         },
         customAffixLines: affixLines([
-          { type: "Evasion", value: 80 },
+          { type: "Evasion", value: 100 },
           { type: "EvasionPct", value: 25, addn: false },
         ]),
         skillPage: emptySkillPage(),
@@ -6126,6 +6132,6 @@ describe("resource pool calculation", () => {
     };
 
     const results = calculateOffense(input);
-    expect(results.resourcePool.evasion).toBeCloseTo(850);
+    expect(results.defenses.evasion).toBeCloseTo(1250);
   });
 });

@@ -74,6 +74,7 @@ import {
 } from "./mod-utils";
 import type { OffenseSkillName } from "./skill-confs";
 import { type ModWithValue, multModValue, multValue } from "./util";
+import { getGearAffixes } from "./affix-collectors";
 
 // Re-export types that consumers expect from offense.ts
 export type { DmgChunk, DmgPools, DmgRanges };
@@ -131,6 +132,12 @@ interface Stats {
   int: number;
 }
 
+enum DefenseType {
+  EnergyShield = "EnergyShield",
+  Armor = "Armor",
+  Evasion = "Evasion",
+}
+
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterMods(mods, "Stat");
@@ -148,7 +155,7 @@ const calculateStats = (mods: Mod[]): Stats => {
           (m) => m.statModType === statType || m.statModType === "all",
         ),
       ) /
-        100;
+      100;
     return flat * mult;
   };
   return {
@@ -170,25 +177,74 @@ const calculateTotalMainStats = (
   return totalMainStats;
 };
 
+const getDefenseModTypes = (defenseType: DefenseType) => {
+  if (defenseType === DefenseType.Armor) {
+    return {
+      gearFlat: "GearArmor",
+      gearPct: "GearArmorPct",
+      finalFlat: "Armor",
+      finalFlatPct: "ArmorPct",
+    } as const;
+  }
+
+  if (defenseType === DefenseType.Evasion) {
+    return {
+      gearFlat: "GearEvasion",
+      gearPct: "GearEvasionPct",
+      finalFlat: "Evasion",
+      finalFlatPct: "EvasionPct",
+    } as const;
+  }
+
+  if (defenseType === DefenseType.EnergyShield) {
+    return {
+      gearFlat: "GearEnergyShield",
+      gearPct: "GearEnergyShieldPct",
+      finalFlat: "MaxEnergyShield",
+      finalFlatPct: "MaxEnergyShieldPct",
+    } as const;
+  }
+
+  return undefined;
+}
+
 const calculateDefenseStat = (
+  loadout: Loadout,
   mods: Mod[],
-  gearFlatModType: "GearEnergyShield" | "GearArmor" | "GearEvasion",
-  gearPctModType: "GearEnergyShieldPct" | "GearArmorPct" | "GearEvasionPct",
-  finalFlatModType: "MaxEnergyShield" | "Armor" | "Evasion",
-  finalPctModType: "MaxEnergyShieldPct" | "ArmorPct" | "EvasionPct",
+  defenseType: DefenseType
 ): number => {
-  // Sum up the flat mods on each item then multiply by the gear percentage mods
-  // The gear total is then multiplied by all other multiplicaiton mods (talents etc...)
+  const modTypes = getDefenseModTypes(defenseType);
+  if (!modTypes) {
+    throw new Error(`Unsupported defense type: ${defenseType}`);
+  }
 
-  const gearFlat = sumByValue(filterMods(mods, gearFlatModType));
-  const gearPctMult = calcEffMult(mods, gearPctModType);
-  const totalFromGear = gearFlat * gearPctMult;
+  const equippedGear = loadout.gearPage.equippedGear;
+  
+  let totalFromGear = 0;
 
-  const finalFlat = sumByValue(filterMods(mods, finalFlatModType));
-  const finalPctMult = calcEffMult(mods, finalPctModType);
-  const finalValue = (totalFromGear + finalFlat) * finalPctMult;
+  for (const gear in equippedGear) {
+    const gearItem = equippedGear[gear as keyof typeof equippedGear];
+    if (!gearItem) {
+      continue;
+    }
 
-  return Math.max(0, finalValue);
+    // Sum up the flat defense then apply the pct multipliers
+    const gearMods = collectModsFromAffixes(getGearAffixes(gearItem));
+    const gearFlatDefense = sumByValue(filterMods(gearMods, modTypes.gearFlat));
+    const gearPctDefense = calcEffMult(gearMods, modTypes.gearPct);
+    totalFromGear += gearFlatDefense * gearPctDefense;
+
+    // TODO - Handle bonuses such as "+15% Energy Shield from Shields"
+    // These bonuses generally dont come from the same gear piece we are evaluating
+  }
+
+  // Now that we have the total from gear, apply final flat then multiply by final pct
+  const baseFlatFromMods = sumByValue(filterMods(mods, modTypes.finalFlat));
+  const totalFlat = totalFromGear + baseFlatFromMods;
+
+  const finalPctMult = calcEffMult(mods, modTypes.finalFlatPct);
+
+  return totalFlat * finalPctMult;
 };
 
 // === Resource Pool Types ===
@@ -197,9 +253,6 @@ export interface ResourcePool {
   stats: Stats;
   maxLife: number;
   maxMana: number;
-  energyShield: number;
-  armor: number;
-  evasion: number;
   mercuryPts?: number;
   focusBlessings: number;
   maxFocusBlessings: number;
@@ -229,6 +282,9 @@ export interface Defenses {
   attackBlockPct: number;
   spellBlockPct: number;
   blockRatioPct: number;
+  energyShield: number;
+  armor: number;
+  evasion: number;
 }
 
 // === Blessing Calculations ===
@@ -542,7 +598,7 @@ const calculateAddnDmgFromShadows = (
   };
 };
 
-interface SkillHitOverview extends BaseHitOverview {}
+interface SkillHitOverview extends BaseHitOverview { }
 
 const calculateAtkHit = (
   gearDmg: DmgRanges,
@@ -657,7 +713,7 @@ const filterModsByCond = (
         "realm_of_mercury",
         () =>
           loadout.heroPage.selectedHero ===
-            "Lightbringer Rosa: Unsullied Blade (#2)" &&
+          "Lightbringer Rosa: Unsullied Blade (#2)" &&
           config.realmOfMercuryEnabled,
       )
       .with("has_focus_blessing", () => config.hasFocusBlessing)
@@ -1545,8 +1601,8 @@ const calcSpellBurstChargeSpeedBonusPct = (mods: Mod[]): number => {
     ...filterMods(mods, "SpellBurstChargeSpeedPct"),
     ...(playSafe !== undefined
       ? filterMods(mods, "CspdPct").map((m) =>
-          multModValue(m, playSafe.value / 100),
-        )
+        multModValue(m, playSafe.value / 100),
+      )
       : []),
   ];
   return (calcEffMult(chargeSpeedMods) - 1) * 100;
@@ -1594,9 +1650,9 @@ const pushMultistrikeDmgBonus = (
       hitNumber === initialCount
         ? 1.0
         : Math.min(
-            1.0,
-            multistrikeChancePct / 100 - (hitNumber - (1 + initialCount)),
-          );
+          1.0,
+          multistrikeChancePct / 100 - (hitNumber - (1 + initialCount)),
+        );
 
     const hitDamageMultiplier = 1.0 + hitNumber * (multistrikeIncDmgPct / 100);
     expectedDmgMult += hitProbability * hitDamageMultiplier;
@@ -1902,30 +1958,6 @@ const calculateResourcePool = (
   const maxManaMult = calcEffMult(mods, "MaxManaPct");
   const maxMana = (40 + config.level * 5 + maxManaFromMods) * maxManaMult;
 
-  const energyShield = calculateDefenseStat(
-    mods,
-    "GearEnergyShield",
-    "GearEnergyShieldPct",
-    "MaxEnergyShield",
-    "MaxEnergyShieldPct",
-  );
-
-  const armor = calculateDefenseStat(
-    mods,
-    "GearArmor",
-    "GearArmorPct",
-    "Armor",
-    "ArmorPct",
-  );
-
-  const evasion = calculateDefenseStat(
-    mods,
-    "GearEvasion",
-    "GearEvasionPct",
-    "Evasion",
-    "EvasionPct",
-  );
-
   // max_mana must be normalized before calculating mercuryPts
   // (for mods with per: { stackable: "max_mana" })
   pushNormalizedStackable(mods, prenormMods, "max_mana", maxMana);
@@ -1954,9 +1986,6 @@ const calculateResourcePool = (
     stats,
     maxLife,
     maxMana,
-    energyShield,
-    armor,
-    evasion,
     mercuryPts,
     maxFocusBlessings,
     focusBlessings,
@@ -2004,6 +2033,10 @@ export const calculateDefenses = (
     30 + sumByValue(filterMods(mods, "BlockRatioPct")),
   );
 
+  const energyShield = calculateDefenseStat(loadout, mods, DefenseType.EnergyShield);
+  const armor = calculateDefenseStat(loadout, mods, DefenseType.Armor);
+  const evasion = calculateDefenseStat(loadout, mods, DefenseType.Evasion);
+
   return {
     coldRes: calcRes(["cold", "elemental"]),
     lightningRes: calcRes(["lightning", "elemental"]),
@@ -2012,6 +2045,9 @@ export const calculateDefenses = (
     attackBlockPct,
     spellBlockPct,
     blockRatioPct,
+    energyShield,
+    armor,
+    evasion,
   };
 };
 
@@ -2722,11 +2758,11 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     const spellBurstDpsSummary =
       spellDpsSummary !== undefined
         ? calcAvgSpellBurstDps(
-            mods,
-            spellDpsSummary.avgHitWithCrit,
-            derivedOffenseCtx,
-            derivedCtx,
-          )
+          mods,
+          spellDpsSummary.avgHitWithCrit,
+          derivedOffenseCtx,
+          derivedCtx,
+        )
         : undefined;
 
     const persistentDpsSummary = calcAvgPersistentDps({
