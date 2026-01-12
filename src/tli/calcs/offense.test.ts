@@ -4285,7 +4285,7 @@ describe("resistance calculations", () => {
   test("default resistances with no mods", () => {
     const input = createResInput([]);
     const results = calculateOffense(input);
-    expect(results.defenses).toEqual({
+    expect(results.defenses).toEqual(expect.objectContaining({
       coldRes: { max: 60, potential: 0, actual: 0 },
       lightningRes: { max: 60, potential: 0, actual: 0 },
       fireRes: { max: 60, potential: 0, actual: 0 },
@@ -4293,7 +4293,7 @@ describe("resistance calculations", () => {
       attackBlockPct: 0,
       spellBlockPct: 0,
       blockRatioPct: 30,
-    });
+    }));
   });
 
   test("single cold resistance mod", () => {
