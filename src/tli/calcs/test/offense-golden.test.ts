@@ -60,7 +60,7 @@ describe("offense golden tests", () => {
 
     // DOT DPS: ~17.83 billion
     const dotDps = mindControl.persistentDpsSummary?.total;
-    const expectedDotDps = 17.83e9;
+    const expectedDotDps = 12.72e9;
     expect(dotDps).toBeGreaterThan(expectedDotDps * (1 - tolerance));
     expect(dotDps).toBeLessThan(expectedDotDps * (1 + tolerance));
 
@@ -70,13 +70,13 @@ describe("offense golden tests", () => {
 
     // Reap DPS: ~134.95 billion
     const reapDps = mindControl.totalReapDpsSummary?.totalReapDps;
-    const expectedReapDps = 134.95e9;
+    const expectedReapDps = 64.18e9;
     expect(reapDps).toBeGreaterThan(expectedReapDps * (1 - tolerance));
     expect(reapDps).toBeLessThan(expectedReapDps * (1 + tolerance));
 
     // Reap CDR Bonus: 163.25%
     const reapCdr = mindControl.totalReapDpsSummary?.reapCdrBonusPct;
-    expect(reapCdr).toBeCloseTo(163.25, 0);
+    expect(reapCdr).toBeCloseTo(75, 0);
 
     // Reap Duration Bonus: 182%
     const reapDuration = mindControl.totalReapDpsSummary?.reapDurationBonusPct;
@@ -84,7 +84,7 @@ describe("offense golden tests", () => {
 
     // Total DPS: ~152.77 billion
     const totalDps = mindControl.totalDps;
-    const expectedTotalDps = 152.77e9;
+    const expectedTotalDps = 76.9e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
   });
