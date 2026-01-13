@@ -448,6 +448,26 @@ export const StatsPanel = (): React.ReactNode => {
         <div className="h-2" />
 
         <StatLine
+          label="Energy Shield"
+          value={formatStatValue.integer(defenses.energyShield)}
+          color="text-teal-400"
+        />
+
+        <StatLine
+          label="Armor"
+          value={formatStatValue.integer(defenses.armor)}
+          color="text-red-400"
+        />
+
+        <StatLine
+          label="Evasion"
+          value={formatStatValue.integer(defenses.evasion)}
+          color="text-green-400"
+        />
+
+        <div className="h-2" />
+
+        <StatLine
           label="Cold Res"
           value={formatRes(defenses.coldRes)}
           color="text-cyan-400"

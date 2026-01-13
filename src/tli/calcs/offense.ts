@@ -39,6 +39,7 @@ import type {
 import { getActiveSkillMods } from "../skills/active-mods";
 import { getPassiveSkillMods } from "../skills/passive-mods";
 import { buildSupportSkillAffixes } from "../storage/load-save";
+import { getGearAffixes } from "./affix-collectors";
 import {
   addDRs,
   applyDmgBonusesAndPen,
@@ -131,6 +132,8 @@ interface Stats {
   int: number;
 }
 
+type DefenseType = "EnergyShield" | "Armor" | "Evasion";
+
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterMods(mods, "Stat");
@@ -170,6 +173,76 @@ const calculateTotalMainStats = (
   return totalMainStats;
 };
 
+const getDefenseModTypes = (defenseType: DefenseType) => {
+  return match(defenseType)
+    .with(
+      "Armor",
+      () =>
+        ({
+          gearFlat: "GearArmor",
+          gearMultPct: "GearArmorPct",
+          finalFlat: "Armor",
+          finalMultPct: "ArmorPct",
+        }) as const,
+    )
+    .with(
+      "Evasion",
+      () =>
+        ({
+          gearFlat: "GearEvasion",
+          gearMultPct: "GearEvasionPct",
+          finalFlat: "Evasion",
+          finalMultPct: "EvasionPct",
+        }) as const,
+    )
+    .with(
+      "EnergyShield",
+      () =>
+        ({
+          gearFlat: "GearEnergyShield",
+          gearMultPct: "GearEnergyShieldPct",
+          finalFlat: "MaxEnergyShield",
+          finalMultPct: "MaxEnergyShieldPct",
+        }) as const,
+    )
+    .exhaustive();
+};
+
+const calculateDefenseStat = (
+  loadout: Loadout,
+  mods: Mod[],
+  defenseType: DefenseType,
+): number => {
+  const modTypes = getDefenseModTypes(defenseType);
+  const equippedGear = loadout.gearPage.equippedGear;
+  let totalFromGear = 0;
+
+  for (const gear in equippedGear) {
+    const gearItem = equippedGear[gear as keyof typeof equippedGear];
+    if (!gearItem) {
+      continue;
+    }
+
+    // Sum up the flat defense then apply the pct multipliers
+    const gearMods = collectModsFromAffixes(getGearAffixes(gearItem));
+    const gearFlatDefense = sumByValue(filterMods(gearMods, modTypes.gearFlat));
+    const gearDefenseMult = calcEffMult(gearMods, modTypes.gearMultPct);
+
+    totalFromGear += gearFlatDefense * gearDefenseMult;
+
+    // TODO - Handle bonuses such as "+15% Energy Shield from Shields"
+    // These bonuses generally dont come from the same gear piece we are evaluating
+  }
+
+  // Now that we have the total from gear, apply final flat then multiply by final pct
+  const baseFlatFromMods = sumByValue(filterMods(mods, modTypes.finalFlat));
+  const totalFlat = totalFromGear + baseFlatFromMods;
+
+  const finalMultPct = calcEffMult(mods, modTypes.finalMultPct);
+
+  return totalFlat * finalMultPct;
+};
+
 // === Resource Pool Types ===
 
 export interface ResourcePool {
@@ -205,6 +278,9 @@ export interface Defenses {
   attackBlockPct: number;
   spellBlockPct: number;
   blockRatioPct: number;
+  energyShield: number;
+  armor: number;
+  evasion: number;
 }
 
 // === Blessing Calculations ===
@@ -1953,6 +2029,10 @@ export const calculateDefenses = (
     30 + sumByValue(filterMods(mods, "BlockRatioPct")),
   );
 
+  const energyShield = calculateDefenseStat(loadout, mods, "EnergyShield");
+  const armor = calculateDefenseStat(loadout, mods, "Armor");
+  const evasion = calculateDefenseStat(loadout, mods, "Evasion");
+
   return {
     coldRes: calcRes(["cold", "elemental"]),
     lightningRes: calcRes(["lightning", "elemental"]),
@@ -1961,6 +2041,9 @@ export const calculateDefenses = (
     attackBlockPct,
     spellBlockPct,
     blockRatioPct,
+    energyShield,
+    armor,
+    evasion,
   };
 };
 

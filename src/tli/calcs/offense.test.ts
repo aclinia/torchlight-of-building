@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+
 import type { ImplementedActiveSkillName } from "../../data/skill";
 import {
   type Affix,
@@ -4284,15 +4285,17 @@ describe("resistance calculations", () => {
   test("default resistances with no mods", () => {
     const input = createResInput([]);
     const results = calculateOffense(input);
-    expect(results.defenses).toEqual({
-      coldRes: { max: 60, potential: 0, actual: 0 },
-      lightningRes: { max: 60, potential: 0, actual: 0 },
-      fireRes: { max: 60, potential: 0, actual: 0 },
-      erosionRes: { max: 60, potential: 0, actual: 0 },
-      attackBlockPct: 0,
-      spellBlockPct: 0,
-      blockRatioPct: 30,
-    });
+    expect(results.defenses).toEqual(
+      expect.objectContaining({
+        coldRes: { max: 60, potential: 0, actual: 0 },
+        lightningRes: { max: 60, potential: 0, actual: 0 },
+        fireRes: { max: 60, potential: 0, actual: 0 },
+        erosionRes: { max: 60, potential: 0, actual: 0 },
+        attackBlockPct: 0,
+        spellBlockPct: 0,
+        blockRatioPct: 30,
+      }),
+    );
   });
 
   test("single cold resistance mod", () => {
@@ -5940,5 +5943,197 @@ describe("slash-strike damage ([Test] Slash Strike Skill)", () => {
     const steepDps = summary.steep.avgDps;
     const expectedAvgDps = 0.2 * sweepDps + 0.8 * steepDps;
     expect(summary.avgDps).toBeCloseTo(expectedAvgDps);
+  });
+});
+
+describe("defense calculation (ES, Eva, Armor)", () => {
+  test("calculate energy shield with gear affixes and hero memory", () => {
+    // Helmet: (100 base + 200 flat) * 1.5 gear% = 300 * 1.5 = 450
+    // Boots: (100 base + 100 flat) * 1.2 gear% = 200 * 1.2 = 240
+    // Total from gear: 450 + 240 = 690
+    // Memory of Discipline flat: +500
+    // Total energy shield: 690 + 500 = 1190
+    const input = {
+      loadout: initLoadout({
+        gearPage: {
+          equippedGear: {
+            helmet: {
+              equipmentType: "Helmet (INT)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 energy shield",
+                    mods: [{ type: "GearEnergyShield", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEnergyShield", value: 200 },
+                  { type: "GearEnergyShieldPct", value: 50 },
+                ]),
+              ],
+            },
+            boots: {
+              equipmentType: "Boots (INT)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 energy shield",
+                    mods: [{ type: "GearEnergyShield", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEnergyShield", value: 100 },
+                  { type: "GearEnergyShieldPct", value: 20 },
+                ]),
+              ],
+            },
+          },
+          inventory: [],
+        },
+        heroPage: {
+          selectedHero: undefined,
+          traits: {},
+          memorySlots: {
+            slot45: {
+              id: "test-memory",
+              memoryType: "Memory of Discipline" as const,
+              affixes: [affix([{ type: "MaxEnergyShield", value: 500 }])],
+            },
+          },
+          memoryInventory: [],
+        },
+        skillPage: emptySkillPage(),
+      }),
+      configuration: defaultConfiguration,
+    };
+
+    const results = calculateOffense(input);
+    expect(results.defenses.energyShield).toBeCloseTo(1190);
+  });
+
+  test("calculate armor with gear affixes and flat modifiers", () => {
+    // Chest: (200 base + 300 flat) * 1.5 gear% = 500 * 1.5 = 750
+    // Gloves: (100 base + 100 flat) * 1.4 gear% = 200 * 1.4 = 280
+    // Total from gear: 750 + 280 = 1030
+    // Flat Armor from custom: +100
+    // Total before percentage: 1030 + 100 = 1130
+    // With 30% increased armor: 1130 * 1.3 = 1469
+    const input = {
+      loadout: initLoadout({
+        gearPage: {
+          equippedGear: {
+            chest: {
+              equipmentType: "Chest Armor (STR)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "200 armor",
+                    mods: [{ type: "GearArmor", value: 200 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearArmor", value: 300 },
+                  { type: "GearArmorPct", value: 50 },
+                ]),
+              ],
+            },
+            gloves: {
+              equipmentType: "Gloves (STR)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 armor",
+                    mods: [{ type: "GearArmor", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearArmor", value: 100 },
+                  { type: "GearArmorPct", value: 40 },
+                ]),
+              ],
+            },
+          },
+          inventory: [],
+        },
+        customAffixLines: affixLines([
+          { type: "Armor", value: 100 },
+          { type: "ArmorPct", value: 30, addn: false },
+        ]),
+        skillPage: emptySkillPage(),
+      }),
+      configuration: defaultConfiguration,
+    };
+
+    const results = calculateOffense(input);
+    expect(results.defenses.armor).toBeCloseTo(1469);
+  });
+
+  test("calculate evasion with gear affixes and flat modifiers", () => {
+    // Boots: (100 base + 300 flat) * 1.6 gear% = 400 * 1.6 = 640
+    // Helmet: (100 base + 100 flat) * 1.3 gear% = 200 * 1.3 = 260
+    // Total from gear: 640 + 260 = 900
+    // Flat Evasion from custom: +100
+    // Total before percentage: 900 + 100 = 1000
+    // With 25% increased evasion: 1000 * 1.25 = 1250
+    const input = {
+      loadout: initLoadout({
+        gearPage: {
+          equippedGear: {
+            boots: {
+              equipmentType: "Boots (DEX)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 evasion",
+                    mods: [{ type: "GearEvasion", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEvasion", value: 300 },
+                  { type: "GearEvasionPct", value: 60 },
+                ]),
+              ],
+            },
+            helmet: {
+              equipmentType: "Helmet (DEX)" as const,
+              baseStats: {
+                baseStatLines: [
+                  {
+                    text: "100 evasion",
+                    mods: [{ type: "GearEvasion", value: 100 } as const],
+                  },
+                ],
+              },
+              base_affixes: [
+                affix([
+                  { type: "GearEvasion", value: 100 },
+                  { type: "GearEvasionPct", value: 30 },
+                ]),
+              ],
+            },
+          },
+          inventory: [],
+        },
+        customAffixLines: affixLines([
+          { type: "Evasion", value: 100 },
+          { type: "EvasionPct", value: 25, addn: false },
+        ]),
+        skillPage: emptySkillPage(),
+      }),
+      configuration: defaultConfiguration,
+    };
+
+    const results = calculateOffense(input);
+    expect(results.defenses.evasion).toBeCloseTo(1250);
   });
 });
