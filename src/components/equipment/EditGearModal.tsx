@@ -652,7 +652,7 @@ export const EditGearModal = ({
               handleSweetDreamSliderChange,
               handleClearSweetDream,
               handleDeleteSweetDream,
-              { hideTierInfo: true },
+              {},
             )}
           </div>
         )}
