@@ -62,7 +62,7 @@ export const HeroTraits = [
     name: "Inspiration Overflow",
     level: 45,
     affix:
-      "Instantly restores 5 Whimsy Essence when consuming Spell Burst Charge, and restores 6 additional Whimsy Essence for every 3 stacks of Spell Burst Charge consumed. Interval: 1s\n(+20/+25/+30/+35/+40)% additional Hit Damage for skills cast by Spell Burst\nInstantly restores 80 Ingenuity Essence after entering a stage or reviving",
+      "Instantly restores 5 Whimsy Essence when consuming Spell Burst Charge, and restores 6 additional Whimsy Essence for every 3 stacks of Spell Burst Charge consumed. Interval: 1s\n(+10/+15/+20/+25/+30)% additional Hit Damage for skills cast by Spell Burst\nInstantly restores 80 Ingenuity Essence after entering a stage or reviving",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
@@ -244,7 +244,7 @@ export const HeroTraits = [
     name: "Zealot of War",
     level: 1,
     affix:
-      "No longer reload when switching shooting modes\nProjectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+20% additional damage",
+      "Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+20% additional damage",
   },
   {
     hero: "Divineshot Carino: Zealot of War (#3)",
@@ -349,14 +349,14 @@ export const HeroTraits = [
     name: "Electroplated Motif",
     level: 45,
     affix:
-      "+1% chance to double the duration of Numbed inflicted by Feline Figure for every +1% Numbed chance\n(+20/+25/+30/+35/+40)% additional Numbed Effect",
+      "The Duration of the Numbed inflicted by Feline Figure is doubled\n(+20/+25/+30/+35/+40)% additional Numbed Effect",
   },
   {
     hero: "Cateye Erika: Lightning Shadow (#2)",
     name: "Wild Lightning",
     level: 60,
     affix:
-      "0.4% Numbed Effect for every +1% Movement Speed, up to (+80/+90/+100/+110/+120)%",
+      "0.4% additional Numbed Effect for every +1% Movement Speed, up to (+80/+90/+100/+110/+120)%",
   },
   {
     hero: "Cateye Erika: Lightning Shadow (#2)",
@@ -371,6 +371,48 @@ export const HeroTraits = [
     level: 75,
     affix:
       "For every 4 stack(s) of Numbed inflicted on the enemy, +2% Movement Speed, (+1/1.5/+2/2.5/+3)% additional damage, and (+3/+4/+5/+6/+7)% Feline Figure Area. Stacks up to 10 time(s). Lasts for 10 s",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Vendetta's Sting",
+    level: 1,
+    affix:
+      "Replace the skill in the third slot with VendettaGains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 300%",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Twinblade Onslaught",
+    level: 45,
+    affix:
+      "No Attack Speed additional bonus is granted while Dual Wielding. Instead, (+25/+30/+35/+40/+45)% additional Attack Damage\nNo Attack Block Chance bonus is granted while Dual Wielding. Instead, converts 50% of Life Regain and Shield Regain to Restoration Over Time",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Leisurely Stroll",
+    level: 60,
+    affix:
+      "Main Skills cannot be supported by Activation MediumVendetta has no Cooldown when you have Hasten\n-80% additional damage for manually used Main Skills while Incisive is active\nMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and gains +5% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is active\nMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and gains +10% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is active\nMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and gains +15% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is active\nMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and gains +20% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is active",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Swift Stalk",
+    level: 60,
+    affix:
+      "Replace Vendetta with Endless VendettaSkills triggered by Vendetta deal (+30/+45/+60/+75/+90)% additional damage to Elites while Endless Vendetta is active\n+333% additional Incisive Duration. +99% Incisive Effect",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Feline Fury",
+    level: 75,
+    affix:
+      "+200 Attack Critical Strike Rating when Dual Wielding the same type of weapons\n+20% additional damage for Critical Strikes when Dual Wielding different types of weapons\nVendetta has a 1% chance to trigger Main Melee Attack Skill 1 additional time for every (5/4/3/2.5/2)% Effective Critical Strike Chance\nVendetta has a 1% chance to trigger Main Melee Attack Skill 1 additional time for every 0.5% Excess Critical Strike Chance, up to 100%",
+  },
+  {
+    hero: "Cateye Erika: Vendetta's Sting (#3)",
+    name: "Mortal Gambit",
+    level: 75,
+    affix:
+      "Incisive gains an additional base effect: Within 5 m, damage taken increases the closer you are to the enemy, up to +5% additional damage taken at 2 m\n+40% Incisive Effect for each stack of Agility Blessing, stacking up to (6/7/8/9/10) time(s)",
   },
   {
     hero: "Frostfire Gemma: Ice-Fire Fusion (#1)",
@@ -418,42 +460,42 @@ export const HeroTraits = [
     name: "Frostbitten Heart",
     level: 1,
     affix:
-      "When dealing Cold Damage, casts Cold Pulse. Interval: 4 s\nCold Pulse inflicts Frostbite on target with 20 Frostbite Rating.\nThe Freeze you inflict gains an additional effect: +45% additional Cold Damage taken",
+      "When dealing Cold Damage, casts Cold Pulse. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+20% additional Cold Damage for 6 s when Cold Pulse hits an enemy",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
-    name: "Frost Tides",
+    name: "Deepfreeze",
     level: 45,
     affix:
-      "Inflicts 100 additional Frostbite Rating when an enemy is hit by Cold Pulse for the first time\n(-2/-2.1/-2.2/-2.3/-2.4) s Cold Pulse Interval",
+      "Frostbite Rating can exceed its upper limit, up to (150/150/200/200/200)\n(+65/+90/+110/+130/+150)% Frostbite Effect",
+  },
+  {
+    hero: "Frostfire Gemma: Frostbitten Heart (#2)",
+    name: "Dance of Frost",
+    level: 60,
+    affix:
+      "-2 s Cold Pulse Interval\n(+8/+10/+12/+15/+18)% additional Cold Damage taken by the enemy for each time it has been hit with Cold Pulse recently. Lasts for 8 seconds and stacks up to 4 times",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
     name: "Glacial Night",
     level: 60,
     affix:
-      "+100% additional Freeze Duration upon Freezing an enemy for the first time\n(+50/+58/+65/+74/+82)% additional damage against Frozen enemies",
-  },
-  {
-    hero: "Frostfire Gemma: Frostbitten Heart (#2)",
-    name: "Wintry Slumber",
-    level: 60,
-    affix:
-      "Eliminates Frozen non-Elite enemies who have less than (30/35/40/45/50)% Life\nEliminates Frozen Elite enemies who have less than (6/7/8/9/10)% Life",
+      "Enemies gain Condensed Frost\nEnemies gain Condensed Frost\n+25% Condensed Frost Effect\nEnemies gain Condensed Frost\n+50% Condensed Frost Effect\nEnemies gain Condensed Frost\n+75% Condensed Frost Effect\nEnemies gain Condensed Frost\n+100% Condensed Frost Effect",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
     name: "Blooming Frost Flower",
     level: 75,
     affix:
-      "Upon inflicting Freeze, additionally casts Cold Pulse at the Frozen target once. Interval: 0.1s\n(+4/+5/+6/+7/+8)% additional Cold Damage taken by the enemy for each time it has been hit with Cold Pulse recently. Lasts for 5 seconds and stacks up to (5/6/7/8/9) times",
+      "Upon inflicting Frostbite, additionally casts Cold Pulse at the Frostbitten target once. Interval: 2s for the same target\n(+35/+45/+55/+65/+75) to Max Frostbite Rating",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
     name: "Frigid Infusion",
     level: 75,
     affix:
-      "When Cold Pulse hits a Frozen enemy, extends the Base Duration of Freeze by (6/7/8/9/10)% and restores (3/4/4/5/5)% Missing Life and Energy Shield\n(-0.9/-1/-1.1/-1.2/-1.3) s Cold Pulse Interval\n(-25/-20/-15/-10/-5)% Cold Pulse Skill Area",
+      "(-20/-25/-35/-40/-45)% Cold Resistance for 6 s when Cold Pulse hits an enemy\n+100% additional Cold Pulse Skill Area",
   },
   {
     hero: "Frostfire Gemma: Flame of Pleasure (#3)",
@@ -502,14 +544,14 @@ export const HeroTraits = [
     name: "Growing Breeze",
     level: 1,
     affix:
-      "When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment",
+      "Spirit Magus Skills can be equipped to Active Skill slotsWhen a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
     name: "Embrace the World",
     level: 45,
     affix:
-      "For every 2% Fire, Cold, or Lightning Resistance, +1% chance for the corresponding Spirit Magi to use an Enhanced Skill, up to (+15/+20/+25/+30/+35)%",
+      "For every 1% Fire, Cold, or Lightning Resistance, +1% chance for the corresponding Spirit Magi to use an Enhanced Skill, up to (+28/+36/+44/+52/+60)%",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
@@ -523,7 +565,7 @@ export const HeroTraits = [
     name: "Amazing Friends",
     level: 60,
     affix:
-      "Spirit Magi -20% chance to use an Enhanced Skill\nAfter gaining a total of (40/35/30/24/18) stacks of Nourishment, Spirit Magi enter Full Bloom for 12 s\nWhen a Spirit Magus casts the Ultimate while having Full Bloom, (+10/+11/+12/+13/+14)% additional Ultimate Cooldown Recovery Speed for every stack of Nourishment",
+      "-20% chance for Spirit Magi to use an Enhanced Skill\nAfter gaining a total of (40/35/30/24/18) stacks of Nourishment, Spirit Magi enter Full Bloom for 12 s\nWhen a Spirit Magus casts the Ultimate while having Full Bloom, (+10/+11/+12/+13/+14)% additional Ultimate Cooldown Recovery Speed for every stack of Nourishment",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
@@ -551,14 +593,14 @@ export const HeroTraits = [
     name: "Vigilant Breeze",
     level: 1,
     affix:
-      "When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s",
+      "Spirit Magus Skills can be equipped to Active Skill slotsWhen a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s",
   },
   {
     hero: "The Forsaken Iris: Vigilant Breeze (#2)",
     name: "Breeze's Whisper",
     level: 45,
     affix:
-      "Spirit Magi +30% chance to use an Enhanced Skill\nWhenever a Merged Spirit Magus casts an Enhanced Skill, restores (2.5/3/3.5/4/5)% of Max Life and +1 to Max Breeze Stacks. Interval: (0.9/0.5/0.2/0.1/0.03) s\nUp to (+4/+5/+6/+7/+8) to Max Breeze Stacks, lasting until Reconjuring",
+      "+30% chance for Spirit Magi to use an Enhanced Skill\nWhenever a Merged Spirit Magus casts an Enhanced Skill, restores (2.5/3/3.5/4/5)% of Max Life and +1 to Max Breeze Stacks. Interval: (0.9/0.5/0.2/0.1/0.03) s\nUp to (+4/+5/+6/+7/+8) to Max Breeze Stacks, lasting until Reconjuring",
   },
   {
     hero: "The Forsaken Iris: Vigilant Breeze (#2)",
@@ -649,7 +691,7 @@ export const HeroTraits = [
     name: "Charge Calling",
     level: 1,
     affix:
-      "Synthetic Troop Minions will initiate the Self-Destruct Protocol when they lose Overload\nAfter the Self-Destruct Protocol is active, Synthetic Troop Minions will charge at the enemies and self-destruct upon hitting an enemy or being defeated\nTheir Charge Speed is affected by Minion Attack Speed\nThe self-destruction deals Physical Attack Damage to enemies within the area\nAfter Self-Destruct Protocol is initiated, Synthetic Troop Minions will Self-Destruct when they are defeated. Self-Destruct deals Physical Damage to enemies within the skill area\nAllows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+20% additional Self-Destruct Damage triggered by Self-Destruct Protocol",
+      "Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+20% additional Self-Destruct Damage triggered by Self-Destruct Protocol",
   },
   {
     hero: "Commander Moto: Charge Calling (#2)",
@@ -733,7 +775,7 @@ export const HeroTraits = [
     name: "Seething Silhouette",
     level: 1,
     affix:
-      "At Max Rage, click the Trait Skill to enter Berserk\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\nChanneling Melee Attack Skills no longer generates Rage and consumes 5 Rage instead while Berserk is active\nWhen not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+30% additional Skill Area while Berserk is active\n+20% additional damage while Berserk is active",
+      "When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+20% additional damage while Berserk is active",
   },
   {
     hero: "Berserker Rehan: Seething Silhouette (#2)",
@@ -775,7 +817,7 @@ export const HeroTraits = [
     name: "Split Form",
     level: 75,
     affix:
-      "Life Regain no longer requires a hit to activate\n(+20/+25/+30/+35/+40)% additional Max Life\n(+1/+1/+2/+2/+2)% Rage gained for every 40 Max Life",
+      "Life Regain no longer requires a hit to activate\n(+5/+10/+15/+20/+25)% additional Max Life\n(+1/+1/+2/+2/+2)% Rage gained for every 40 Max Life",
   },
   {
     hero: "Lightbringer Rosa: High Court Chariot (#1)",
@@ -817,14 +859,14 @@ export const HeroTraits = [
     name: "Desperation",
     level: 75,
     affix:
-      "Trait Skills can be continuously channeled. During this time, the Holy Domain moves with the player, and no Murderous Intent is consumed while channeling. Max channeled stacks: 4\nAt max channeled stacks, loses all channeled stacks and casts Holy Domain again. Based on the number of channeled stacks lost, inflicts a corresponding number of stacks of No Guard on all units in the Holy Domain. No Guard lasts for 8s\nFor every 1% Block Ratio, (0.8/0.9/+1/1.2/1.2)% additional No Guard Effect for enemies and (-0.67/-0.8/-1/-1/-1.2)% additional No Guard Effect on you\n-50% Holy Domain radius",
+      "Trait Skills can be continuously channeled. During this time, the Holy Domain moves with the player, and no Murderous Intent is consumed while channeling. Max channeled stacks: 2\n引导层数达到上限时，失去所有引导层数，重新释放一次圣光领域，对圣光领域内的所有单位施加卸甲，卸甲持续 8 秒\nFor every 1% Block Ratio, (2.4/2.5/2.6/2.8/2.8)% additional No Guard Effect for enemies and (-0.67/-0.8/-1/-1/-1.2)% additional No Guard Effect on you\n-30% Holy Domain radius",
   },
   {
     hero: "Lightbringer Rosa: High Court Chariot (#1)",
     name: "Improvision",
     level: 75,
     affix:
-      "When Blocking in the Holy Domain, +20% additional damage for 2s, up to (+40/+50/+60/+70/+80)%",
+      "When Blocking in the Holy Domain, +20% additional damage for 10s, up to (+40/+50/+60/+70/+80)%",
   },
   {
     hero: "Lightbringer Rosa: Unsullied Blade (#2)",
@@ -838,7 +880,7 @@ export const HeroTraits = [
     name: "Baptism of Purity",
     level: 45,
     affix:
-      "+20% additional Max Mana\nInside Realm of Mercury, selects the enemy with the highest rarity that took damage from you recently and records (12/20/28/36/44)% of the non-Channeled Attack Elemental Hit Damage dealt to this enemy. Every 0.5 s, it casts Mercury Baptism on all enemies within it and gains (5/5/6/6/7) Mercury Pts\nMercury Baptism inflicts an Elemental Ailment of the same type as the highest recorded damage. If the highest recorded damage type is Fire, it inflicts Scorch. If the highest recorded damage type is Lightning, it inflicts 1 stack(s) of Numbed. If the highest recorded damage type is Cold, it inflicts Frostbite and 20 Frostbite Rating",
+      "+20% additional Max Mana\nInside Realm of Mercury, selects the enemy with the highest rarity that took damage from you recently and records (12/20/28/36/44)% of the non-Channeled Attack Elemental Hit Damage dealt to this enemy. Every 0.5 s, it casts Mercury Baptism on all enemies within it and gains (5/5/6/6/7) Mercury Pts\nMercury Baptism inflicts an Infiltration Effect of the same type as the highest recorded damage. If the highest recorded damage type is Fire, it inflicts Fire Infiltration. If the highest recorded damage type is Lightning, it inflicts Lightning Infiltration. If the highest recorded damage type is Cold, it inflicts Cold Infiltration",
   },
   {
     hero: "Lightbringer Rosa: Unsullied Blade (#2)",
@@ -852,7 +894,7 @@ export const HeroTraits = [
     name: "Cleanse Filth",
     level: 60,
     affix:
-      "While Realm of Mercury is in effect, 25% of damage is taken from Mana before Life\nFor every 1000 Max Mana you have, (+3/3.5/+4/4.5/+5)% additional Elemental Damage, up to (+60/+70/+80/+90/+100)%",
+      "While Realm of Mercury is in effect, 25% of damage is taken from Mana before Life\nFor every 1000 Max Mana you have, (+2/2.5/+3/3.5/+4)% additional Elemental Damage, up to (+40/+50/+60/+70/+80)%",
   },
   {
     hero: "Lightbringer Rosa: Unsullied Blade (#2)",
@@ -866,7 +908,7 @@ export const HeroTraits = [
     name: "Utmost Devotion",
     level: 75,
     affix:
-      "Mana can be consumed via methods other than Mystic Mercury. Gains 10% Mercury Pts for every (3000/2900/2800/2700/2600) Mana consumed\nThe cost is fixed at 0 when Mana is lower than 10%\nFor every 1000 Max Mana you have, +10% Max Mercury Pts, up to (+200/+250/+300/+350/+400)%\n(0.12/0.16/0.2/0.24/0.28)% additional Elemental Damage for every Mercury Pt you have",
+      "Mana can be consumed via methods other than Mystic Mercury. Gains 10% Mercury Pts for every (3000/2900/2800/2700/2600) Mana consumed\nThe cost is fixed at 0 when Mana is lower than 10%\nFor every 1000 Max Mana you have, +10% Max Mercury Pts, up to (+200/+250/+300/+350/+400)%\n(0.08/0.08/0.1/0.1/0.1)% additional Elemental Damage for every Mercury Pt you have",
   },
   {
     hero: "Tide Whisper Selena: Sing with the Tide",
@@ -1020,7 +1062,7 @@ export const HeroTraits = [
     name: "Unholy Baptism",
     level: 45,
     affix:
-      "(+5/+10/+15/+20/+25)% additional Erosion Damage\nEnemies within 6m of a Desecrated target have a (30/40/40/50/50)% chance to explode when defeated, dealing Erosion Damage equal to 10% of their Max Life to enemies within a (3/4/4/5/5) m radius",
+      "(+5/+10/+15/+20/+25)% additional Erosion Damage\nEnemies within 6m of a Desecrated target have a (10/20/20/30/30)% chance to explode when defeated, dealing True Damage equal to 125% of their Max Life to enemies within a (3/4/4/5/5) m radius",
   },
   {
     hero: "Oracle Thea: Blasphemer (#3)",
@@ -1034,7 +1076,7 @@ export const HeroTraits = [
     name: "Tarnished Sage",
     level: 60,
     affix:
-      "Up to 2 Elites within 6m of a Desecrated target will also be inflicted with Desecration\nInstantly restores (5/6/7/8/9)% of Max Life, Energy Shield, and Mana when defeating a Desecrated target.\n+ (10/15/20/25/30)% Attack, Movement, and Cast Speed when dealing damage to a Desecrated target. Lasts for 5s. This effect cannot stack",
+      "Up to 2 Elites within 6m of a Desecrated target will also be inflicted with Desecration\nInstantly restores (5/6/7/8/9)% of Max Life, Energy Shield, and Mana when defeating a Desecrated target.\n+ (20/30/40/50/60)% Attack and Cast Speed when dealing damage to a Desecrated target. Lasts for 5s. This effect cannot stack",
   },
   {
     hero: "Oracle Thea: Blasphemer (#3)",
@@ -1055,28 +1097,28 @@ export const HeroTraits = [
     name: "Spacetime Illusion",
     level: 1,
     affix:
-      "-50 Spacetime Energy consumption\nImmediately gains Spacetime Illusion\nOwn Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion",
+      "Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Illusion (#1)",
     name: "Me and Myself",
     level: 45,
     affix:
-      "+30% Spacetime Illusion Cast Frequency\nFor every +5% Cooldown Recovery Speed or 2.5% additional Cooldown Recovery Speed, (+5/+7/+9/+11/+13)% Spacetime Illusion Cast Frequency",
+      "+60% Spacetime Illusion Cast Frequency\nFor every +5% Cooldown Recovery Speed or 2.5% additional Cooldown Recovery Speed, (+5/+7/+9/+11/+13)% Spacetime Illusion Cast Frequency",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Illusion (#1)",
     name: "Eeeendless Mana",
     level: 60,
     affix:
-      "Seals 35% Max Mana. Spacetime Illusion no longer has Cast Frequency limitations\n(+1/1.15/1.3/1.45/1.6)% additional Spacetime Illusion Damage for every +4% Spacetime Illusion Cast Frequency",
+      "Seals 25% Max Mana. Spacetime Illusion no longer has Cast Frequency limitations\n(+1/1.15/1.3/1.45/1.6)% additional Spacetime Illusion Damage for every +4% Spacetime Illusion Cast Frequency",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Illusion (#1)",
     name: "Make it Quick",
     level: 60,
     affix:
-      "Spacetime Illusion no longer has casting actions and is only limited by cast frequency.\n(20/23/26/29/33)% of the bonuses and additional bonuses for Cast Speed is also applied to additional Spacetime Illusion Damage.",
+      "Spacetime Illusion no longer has casting actions and is only limited by cast frequency.\n对于施法速度加成的 (50/55/60/65/70)% 同样作用于时空幻象的额外伤害",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Illusion (#1)",
@@ -1097,14 +1139,14 @@ export const HeroTraits = [
     name: "Spacetime Elapse",
     level: 1,
     affix:
-      "Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 4 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 4\nRecords 40% of Damage Over Time dealt to enemies while Twisted Spacetime is active\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the records",
+      "Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\nRecords 30% of Damage Over Time, Reaping Damage, and Reap Purification Damage dealt to enemies while Twisted Spacetime is active\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the records",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Elapse (#2)",
     name: "Spacetime Speed-up",
     level: 45,
     affix:
-      "Reduces the casting interval of Twisted Spacetime by 1 s on defeat\nFor every 1 s Twisted Spacetime lasts, (+5/6.5/+8/9.5/+11)% recorded Damage Over Time for Twisted Spacetime. Stacks up to 10 time(s)",
+      "Reduces the casting interval of Twisted Spacetime by 1 s on defeat\nFor every 1 s Twisted Spacetime lasts, (+5/6.5/+8/9.5/+11)% to all recorded damage for Twisted Spacetime. Stacks up to 5 time(s)",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Elapse (#2)",
@@ -1118,7 +1160,7 @@ export const HeroTraits = [
     name: "Spacetime Cutting",
     level: 60,
     affix:
-      "For every 1% Twisted Spacetime-recording Damage Over Time dealt to enemies, adds (0.4/0.45/0.5/0.55/0.6)% of the Reaping and Reap Purification damage dealt to enemies to damage recorded by Twisted Spacetime",
+      "Gains a stack of Torment when dealing Damage Over Time\n(-10/-14/-18/-21/-24)% additional damage taken while Twisted Spacetime lasts",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Elapse (#2)",
@@ -1132,6 +1174,6 @@ export const HeroTraits = [
     name: "Spacetime Pause",
     level: 75,
     affix:
-      "(-40/-43/-46/-49/-50)% additional Spacetime Turbulence Duration\n(+125/+160/+195/+230/+265)% Twisted Spacetime-recording Damage Over Time",
+      "(-40/-43/-46/-49/-50)% additional Spacetime Turbulence Duration\n(+60/+70/+80/+90/+100)% to all recorded damage for Twisted Spacetime",
   },
 ] as const satisfies readonly BaseHeroTrait[];
