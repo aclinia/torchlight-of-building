@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { God, Talent, Tree, Type } from "../data/talent/types";
-import { cleanTalentEffectText, readCodexHtml } from "./lib/codex";
+import { cleanEffectTextNew, readCodexHtml } from "./lib/codex";
 
 const extractTalentData = (html: string): Talent[] => {
   const $ = cheerio.load(html);
@@ -32,7 +32,7 @@ const extractTalentData = (html: string): Talent[] => {
       tree: $(tds[1]).text().trim() as Tree,
       type: $(tds[2]).text().trim() as Type,
       name: $(tds[3]).text().trim(),
-      effect: cleanTalentEffectText(effectCell.html() || ""),
+      effect: cleanEffectTextNew(effectCell.html() || ""),
     };
 
     items.push(item);

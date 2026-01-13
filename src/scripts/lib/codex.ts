@@ -31,7 +31,7 @@ export const cleanEffectText = (html: string): string => {
     .join("\n");
 };
 
-export const cleanTalentEffectText = (html: string): string => {
+export const cleanEffectTextNew = (html: string): string => {
   // Note: Tooltip spans should already be removed via cheerio before calling this
 
   // Replace <br> tags with newlines

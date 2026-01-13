@@ -3,7 +3,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { BaseHeroTrait } from "../data/hero-trait/types";
-import { cleanEffectText, readCodexHtml } from "./lib/codex";
+import {
+  cleanEffectText,
+  cleanEffectTextNew,
+  readCodexHtml,
+} from "./lib/codex";
 
 const extractHeroTraitData = (html: string): BaseHeroTrait[] => {
   const $ = cheerio.load(html);
@@ -23,7 +27,6 @@ const extractHeroTraitData = (html: string): BaseHeroTrait[] => {
     const hero = $(tds[0]).text().trim();
     const name = $(tds[1]).text().trim();
     const levelStr = $(tds[2]).text().trim();
-    const effectHtml = $(tds[3]).html() || "";
 
     const level = parseInt(levelStr, 10);
     if (Number.isNaN(level)) {
@@ -31,11 +34,18 @@ const extractHeroTraitData = (html: string): BaseHeroTrait[] => {
       return;
     }
 
+    // Process the effect cell with cheerio to remove tooltips before extracting HTML
+    const effectCell = $(tds[3]);
+    // Replace tooltip spans with just their text content
+    effectCell.find("span.tooltip").each((_, el) => {
+      $(el).replaceWith($(el).text());
+    });
+
     const trait: BaseHeroTrait = {
       hero,
       name,
       level,
-      affix: cleanEffectText(effectHtml),
+      affix: cleanEffectTextNew(effectCell.html() || ""),
     };
 
     traits.push(trait);
