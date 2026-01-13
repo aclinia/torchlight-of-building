@@ -3,11 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { Blend } from "../data/blend/types";
-import {
-  cleanEffectText,
-  cleanEffectTextNew,
-  readCodexHtml,
-} from "./lib/codex";
+import { cleanEffectTextNew, readCodexHtml } from "./lib/codex";
 
 const extractBlendData = (html: string): Blend[] => {
   const $ = cheerio.load(html);
