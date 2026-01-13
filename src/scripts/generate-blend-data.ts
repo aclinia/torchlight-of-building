@@ -15,14 +15,16 @@ const extractBlendData = (html: string): Blend[] => {
   rows.each((_, row) => {
     const tds = $(row).find("td");
 
-    if (tds.length !== 2) {
+    if (tds.length !== 3) {
       console.warn(`Skipping row with ${tds.length} columns (expected 2)`);
       return;
     }
 
     const item: Blend = {
       type: $(tds[0]).text().trim(),
-      affix: cleanEffectText($(tds[1]).html() || ""),
+      affix:
+        `[${$(tds[1]).text().trim()}] ` +
+        cleanEffectText($(tds[2]).html() || ""),
     };
 
     items.push(item);
