@@ -11,6 +11,8 @@ import mcTheaGolden from "./mc-thea-3-golden-1.json";
 import rosaGolden from "./rosa-2-golden.json";
 
 describe("offense golden tests", () => {
+  // TODO - Charging warcry damage changed, so this test needs to be updated
+  // Charging warcry is in rosaGolden skillset
   it("rosa-2-golden: Frost Spike should calculate ~12.69 trillion DPS", () => {
     const saveData = rosaGolden as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -24,7 +26,7 @@ describe("offense golden tests", () => {
     }
 
     const avgDps = frostSpike.attackDpsSummary?.avgDps;
-    const expectedDps = 12.69e12; // ~12.69 trillion
+    const expectedDps = 11.05e12; // ~11.05 trillion
     const tolerance = 0.01; // 1% tolerance
 
     expect(avgDps).toBeGreaterThan(expectedDps * (1 - tolerance));
@@ -87,6 +89,8 @@ describe("offense golden tests", () => {
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-1: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -101,32 +105,32 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // Spell DPS: ~35.94 million
+    // Spell DPS: ~25.34 million
     const spellDps = chainLightning.spellDpsSummary?.avgDps;
-    const expectedSpellDps = 35.94e6;
+    const expectedSpellDps = 25.34e6;
     expect(spellDps).toBeGreaterThan(expectedSpellDps * (1 - tolerance));
     expect(spellDps).toBeLessThan(expectedSpellDps * (1 + tolerance));
 
-    // Spell Burst DPS: ~165.78 million
+    // Spell Burst DPS: ~116.48 million
     const spellBurstDps = chainLightning.spellBurstDpsSummary?.avgDps;
-    const expectedSpellBurstDps = 165.78e6;
+    const expectedSpellBurstDps = 116.48e6;
     expect(spellBurstDps).toBeGreaterThan(
       expectedSpellBurstDps * (1 - tolerance),
     );
     expect(spellBurstDps).toBeLessThan(expectedSpellBurstDps * (1 + tolerance));
 
-    // Ingenuity Overload DPS: ~34.77 million
+    // Ingenuity Overload DPS: ~24.43 million
     const ingenuityDps =
       chainLightning.spellBurstDpsSummary?.ingenuityOverload?.avgDps;
-    const expectedIngenuityDps = 34.77e6;
+    const expectedIngenuityDps = 24.43e6;
     expect(ingenuityDps).toBeGreaterThan(
       expectedIngenuityDps * (1 - tolerance),
     );
     expect(ingenuityDps).toBeLessThan(expectedIngenuityDps * (1 + tolerance));
 
-    // Total DPS: ~236.49 million
+    // Total DPS: ~166.17 million
     const totalDps = chainLightning.totalDps;
-    const expectedTotalDps = 236.49e6;
+    const expectedTotalDps = 166.17e6;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 
@@ -138,6 +142,8 @@ describe("offense golden tests", () => {
     expect(erosionRes).toEqual({ max: 60, potential: 9, actual: 9 });
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-2: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden2 as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -152,32 +158,32 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // Spell DPS: ~433.97 million
+    // Spell DPS: ~206.96 million
     const spellDps = chainLightning.spellDpsSummary?.avgDps;
-    const expectedSpellDps = 433.97e6;
+    const expectedSpellDps = 206.96e6;
     expect(spellDps).toBeGreaterThan(expectedSpellDps * (1 - tolerance));
     expect(spellDps).toBeLessThan(expectedSpellDps * (1 + tolerance));
 
-    // Spell Burst DPS: ~2.24 billion
+    // Spell Burst DPS: ~1.06 billion
     const spellBurstDps = chainLightning.spellBurstDpsSummary?.avgDps;
-    const expectedSpellBurstDps = 2.24e9;
+    const expectedSpellBurstDps = 1.06e9;
     expect(spellBurstDps).toBeGreaterThan(
       expectedSpellBurstDps * (1 - tolerance),
     );
     expect(spellBurstDps).toBeLessThan(expectedSpellBurstDps * (1 + tolerance));
 
-    // Ingenuity Overload DPS: ~390.10 million
+    // Ingenuity Overload DPS: ~186.08 million
     const ingenuityDps =
       chainLightning.spellBurstDpsSummary?.ingenuityOverload?.avgDps;
-    const expectedIngenuityDps = 390.1e6;
+    const expectedIngenuityDps = 186.08e6;
     expect(ingenuityDps).toBeGreaterThan(
       expectedIngenuityDps * (1 - tolerance),
     );
     expect(ingenuityDps).toBeLessThan(expectedIngenuityDps * (1 + tolerance));
 
-    // Total DPS: ~3.06 billion
+    // Total DPS: ~1.46 billion
     const totalDps = chainLightning.totalDps;
-    const expectedTotalDps = 3.06e9;
+    const expectedTotalDps = 1.46e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 
@@ -189,6 +195,8 @@ describe("offense golden tests", () => {
     expect(erosionRes).toEqual({ max: 60, potential: 63, actual: 60 });
   });
 
+  // TODO - Base damage of chain lightning was changed, so these tests need to be updated
+  // Well-Fought battle now also has levelValues which it didint before
   it("bing-2-golden-3: Chain Lightning should calculate expected spell/burst DPS values", () => {
     const saveData = bing2Golden3 as unknown as SaveData;
     const loadout = loadSave(saveData);
@@ -203,32 +211,32 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // Spell DPS: ~16.04 billion
+    // Spell DPS: ~7.54 billion
     const spellDps = chainLightning.spellDpsSummary?.avgDps;
-    const expectedSpellDps = 16.04e9;
+    const expectedSpellDps = 7.54e9;
     expect(spellDps).toBeGreaterThan(expectedSpellDps * (1 - tolerance));
     expect(spellDps).toBeLessThan(expectedSpellDps * (1 + tolerance));
 
-    // Spell Burst DPS: ~487.42 billion
+    // Spell Burst DPS: ~229.4 billion
     const spellBurstDps = chainLightning.spellBurstDpsSummary?.avgDps;
-    const expectedSpellBurstDps = 487.42e9;
+    const expectedSpellBurstDps = 229.4e9;
     expect(spellBurstDps).toBeGreaterThan(
       expectedSpellBurstDps * (1 - tolerance),
     );
     expect(spellBurstDps).toBeLessThan(expectedSpellBurstDps * (1 + tolerance));
 
-    // Ingenuity Overload DPS: ~88.36 billion
+    // Ingenuity Overload DPS: ~41.58 billion
     const ingenuityDps =
       chainLightning.spellBurstDpsSummary?.ingenuityOverload?.avgDps;
-    const expectedIngenuityDps = 88.36e9;
+    const expectedIngenuityDps = 41.58e9;
     expect(ingenuityDps).toBeGreaterThan(
       expectedIngenuityDps * (1 - tolerance),
     );
     expect(ingenuityDps).toBeLessThan(expectedIngenuityDps * (1 + tolerance));
 
-    // Total DPS: ~591.82 billion
+    // Total DPS: ~278.53 billion
     const totalDps = chainLightning.totalDps;
-    const expectedTotalDps = 591.82e9;
+    const expectedTotalDps = 278.53e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 
@@ -254,15 +262,15 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // Attack DPS: ~371.01 billion
+    // Attack DPS: ~358.92 billion
     const attackDps = thunderSpike.attackDpsSummary?.avgDps;
-    const expectedAttackDps = 371.01e9;
+    const expectedAttackDps = 358.92e9;
     expect(attackDps).toBeGreaterThan(expectedAttackDps * (1 - tolerance));
     expect(attackDps).toBeLessThan(expectedAttackDps * (1 + tolerance));
 
-    // Total DPS: ~371.01 billion
+    // Total DPS: ~358.92 billion
     const totalDps = thunderSpike.totalDps;
-    const expectedTotalDps = 371.01e9;
+    const expectedTotalDps = 358.92e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 

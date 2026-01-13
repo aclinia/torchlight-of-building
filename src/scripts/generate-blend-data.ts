@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { Blend } from "../data/blend/types";
-import { cleanEffectText, readCodexHtml } from "./lib/codex";
+import { cleanEffectTextNew, readCodexHtml } from "./lib/codex";
 
 const extractBlendData = (html: string): Blend[] => {
   const $ = cheerio.load(html);
@@ -15,15 +15,22 @@ const extractBlendData = (html: string): Blend[] => {
   rows.each((_, row) => {
     const tds = $(row).find("td");
 
-    if (tds.length !== 2) {
-      console.warn(`Skipping row with ${tds.length} columns (expected 2)`);
+    if (tds.length !== 3) {
+      console.warn(`Skipping row with ${tds.length} columns (expected 3)`);
       return;
     }
 
     const item: Blend = {
       type: $(tds[0]).text().trim(),
-      affix: cleanEffectText($(tds[1]).html() || ""),
+      affix: cleanEffectTextNew($(tds[2]).html() || ""),
     };
+
+    // Only legendary talent nodes are named
+    // To keep consistency with how data was previously scraped, we prefix the name in brackets
+    const name = $(tds[1]).text().trim();
+    if (name !== "") {
+      item.affix = `[${name}]` + ` ${item.affix}`;
+    }
 
     items.push(item);
   });

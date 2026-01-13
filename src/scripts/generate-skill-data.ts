@@ -32,6 +32,8 @@ import type {
   SupportParserInput,
 } from "./skills/types";
 
+const CURRENT_SEASON = "SS11Season";
+
 // ============================================================================
 // Fetching
 // ============================================================================
@@ -306,6 +308,13 @@ const parseSupportTargets = (
     // DoT + Ailment combinations (check before pure DoT)
     {
       pattern: /Supports DoT Skills and skills that can inflict Ailment/i,
+      targets: ["dot", "inflict_ailment"],
+    },
+    {
+      // TODO - Seems like DoT was replaced with "Persistent"
+      // Can clean this up later, however keeping the dot target to re-use current logic / calcs
+      pattern:
+        /Supports Persistent Skills and skills that can inflict Ailment/i,
       targets: ["dot", "inflict_ailment"],
     },
     {
@@ -633,14 +642,14 @@ const extractSkillFromTlidbHtml = (
 
   const $ = cheerio.load(file.html);
 
-  // Find the card with SS10Season (current season) - each skill has multiple season versions
+  // Find the card with CURRENT_SEASON each skill has multiple season versions
   let currentCard = $("div.card.ui_item.popupItem")
     .filter(
-      (_, el) => $(el).find("div.item_ver").text().trim() === "SS10Season",
+      (_, el) => $(el).find("div.item_ver").text().trim() === CURRENT_SEASON,
     )
     .first();
 
-  // Fallback to first non-previousItem card if SS10Season not found
+  // Fallback to first non-previousItem card if CURRENT_SEASON not found
   if (currentCard.length === 0) {
     currentCard = $("div.card.ui_item.popupItem:not(.previousItem)").first();
   }

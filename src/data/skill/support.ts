@@ -27,15 +27,11 @@ export const SupportSkills = [
     name: "Added Erosion Damage",
     tags: ["Erosion"],
     description: [
-      "Supports skills that hit enemies.\nAdds 2 - 2 Erosion Damage to the supported skill\nThe supported skill gains 11% of its damage as Base Wilt Damage\nAdds 7.7% of Main-Hand Weapon Damage to Base Wilt Damage for the supported skill",
-      "Adds 2 - 2 Erosion Damage to the supported skill\nThe supported skill gains 11% of its damage as Base Wilt Damage\nAdds 7.7% of Main-Hand Weapon Damage to Base Wilt Damage for the supported skill",
+      "Supports skills that hit enemies.\nAdds 2 - 2 Erosion Damage to the supported skill",
+      "Adds 2 - 2 Erosion Damage to the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "The supported skill gains 11% of its damage as Base Wilt Damage",
-      "Adds 7.7% of Main-Hand Weapon Damage to Base Wilt Damage for the supported skill",
-    ],
     templates: [
       {
         template: "Adds {value} - 2 Erosion Damage to the supported skill",
@@ -52,15 +48,11 @@ export const SupportSkills = [
     name: "Added Fire Damage",
     tags: ["Fire"],
     description: [
-      "Supports skills that hit enemies.\nThe supported skill adds 1 - 3 Fire Damage\nThe supported skill gains 13.4% of its damage as Base Ignite Damage\nAdds 8.7% of Main-Hand Weapon Damage to Base Ignite Damage for the supported skill",
-      "The supported skill adds 1 - 3 Fire Damage\nThe supported skill gains 13.4% of its damage as Base Ignite Damage\nAdds 8.7% of Main-Hand Weapon Damage to Base Ignite Damage for the supported skill",
+      "Supports skills that hit enemies.\nThe supported skill adds 1 - 3 Fire Damage",
+      "The supported skill adds 1 - 3 Fire Damage",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "The supported skill gains 13.4% of its damage as Base Ignite Damage",
-      "Adds 8.7% of Main-Hand Weapon Damage to Base Ignite Damage for the supported skill",
-    ],
     templates: [
       {
         template: "The supported skill adds {value} - 3 Fire Damage",
@@ -98,15 +90,11 @@ export const SupportSkills = [
     name: "Added Physical Damage",
     tags: ["Physical"],
     description: [
-      "Supports skills that hit enemies.\nSupported skills add 2 - 3 physical damage\nThe supported skill gains 23.5% of its damage as Base Trauma Damage\nAdds 12.4% of the Main-Hand Weapon's damage to Base Trauma Damage for the supported skill",
-      "Supported skills add 2 - 3 physical damage\nThe supported skill gains 23.5% of its damage as Base Trauma Damage\nAdds 12.4% of the Main-Hand Weapon's damage to Base Trauma Damage for the supported skill",
+      "Supports skills that hit enemies.\nSupported skills add 2 - 3 physical damage",
+      "Supported skills add 2 - 3 physical damage",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "The supported skill gains 23.5% of its damage as Base Trauma Damage",
-      "Adds 12.4% of the Main-Hand Weapon's damage to Base Trauma Damage for the supported skill",
-    ],
     templates: [
       {
         template: "Supported skills add {value} - 3 physical damage",
@@ -123,15 +111,25 @@ export const SupportSkills = [
     name: "Additional Ignite",
     tags: ["Fire"],
     description: [
-      "Supports skills that hit enemies.\nThe supported skill inflicts 1 additional stack(s) of Ignite\nFor each stack of Ignite an enemy has, the supported skill deals 6.2% additional Ignite Damage to the enemy, up to 24.8% .\n20.5% Ignite chance for the supported skill",
-      "The supported skill inflicts 1 additional stack(s) of Ignite\nFor each stack of Ignite an enemy has, the supported skill deals 6.2% additional Ignite Damage to the enemy, up to 24.8% .\n20.5% Ignite chance for the supported skill",
+      "Supports skills that hit enemies.\nThe supported skill inflicts 1 additional stack(s) of Ignite\nFor each stack of Ignite an enemy has, the supported skill deals 2.7% additional Ignite Damage to the enemy, up to 10.8% .\n+15% Ignite chance for the supported skill",
+      "The supported skill inflicts 1 additional stack(s) of Ignite\nFor each stack of Ignite an enemy has, the supported skill deals 2.7% additional Ignite Damage to the enemy, up to 10.8% .\n+15% Ignite chance for the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
     fixedAffixes: [
       "The supported skill inflicts 1 additional stack(s) of Ignite",
-      "For each stack of Ignite an enemy has, the supported skill deals 6.2% additional Ignite Damage to the enemy, up to 24.8% .",
-      "20.5% Ignite chance for the supported skill",
+      "+15% Ignite chance for the supported skill",
+    ],
+    templates: [
+      {
+        template:
+          "For each stack of Ignite an enemy has, the supported skill deals 2.7% additional Ignite Damage to the enemy, up to 10.8% .",
+        levelValues: [
+          27, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.7, 4.9, 5.1, 5.3,
+          5.5, 5.7, 5.9, 6.1, 6.3, 6.5, 67, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4,
+          7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6,
+        ],
+      },
     ],
   },
   {
@@ -139,12 +137,12 @@ export const SupportSkills = [
     name: "Ailment Termination",
     tags: [],
     description: [
-      "Supports skills that hit enemies.\n-10% additional damage for the supported skill\nThe supported skill deals 6.7% additional damage for every type of Ailment on enemy (multiplies)",
-      "-10% additional damage for the supported skill\nThe supported skill deals 6.7% additional damage for every type of Ailment on enemy (multiplies)",
+      "Supports skills that hit enemies.\nThe supported skill deals 6.7% additional damage for every type of Ailment on enemy (multiplies)\nThe supported skill -30% Ailment Duration",
+      "The supported skill deals 6.7% additional damage for every type of Ailment on enemy (multiplies)\nThe supported skill -30% Ailment Duration",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: ["-10% additional damage for the supported skill"],
+    fixedAffixes: ["The supported skill -30% Ailment Duration"],
     templates: [
       {
         template:
@@ -316,41 +314,16 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Blinding",
+    name: "Blind",
     tags: [],
     description: [
-      "Supports skills that hit enemies.\n+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
-      "+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
+      "Supports skills that hit enemies.\n+10% chance to Blind the target when the supported skill hits\n+5% Blinding Duration caused by the supported skill",
+      "+10% chance to Blind the target when the supported skill hits\n+5% Blinding Duration caused by the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
     fixedAffixes: [
-      "+10% chance to inflict Blind when the supported skill hits targets",
-    ],
-    templates: [
-      {
-        template: "+{value}% Blinding Duration caused by the supported skill",
-        levelValues: [
-          5, 6.75, 8.5, 10.25, 12, 13.75, 15.5, 17.25, 19, 20.75, 22.5, 24.25,
-          26, 27.75, 29.5, 31.25, 33, 34.75, 36.5, 38.25, 40, 41.75, 43.5,
-          45.25, 47, 48.75, 50.5, 52.25, 54, 55.75, 57.5, 59.25, 61, 62.75,
-          64.5, 66.25, 68, 69.75, 71.5, 73.25,
-        ],
-      },
-    ],
-  },
-  {
-    type: "Support",
-    name: "Blinding",
-    tags: [],
-    description: [
-      "Supports skills that hit enemies.\n+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
-      "+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
-    ],
-    supportTargets: ["hit_enemies"],
-    cannotSupportTargets: [],
-    fixedAffixes: [
-      "+10% chance to inflict Blind when the supported skill hits targets",
+      "+10% chance to Blind the target when the supported skill hits",
     ],
     templates: [
       {
@@ -597,13 +570,22 @@ export const SupportSkills = [
     name: "Critical Charge",
     tags: ["Restoration"],
     description: [
-      "Supports Restoration Skills.\nThe supported skill gains 10 Charging Progress when suffering Severe Injury. Interval: 4s",
-      "The supported skill gains 10 Charging Progress when suffering Severe Injury. Interval: 4s",
+      "Supports Restoration Skills.\nThe supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
+      "The supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "The supported skill gains 10 Charging Progress when suffering Severe Injury. Interval: 4s",
+    templates: [
+      {
+        template:
+          "The supported skill gains {value} Charging Progress when suffering a Severe Injury. Interval: 4s",
+        levelValues: [
+          10, 10.3, 10.6, 10.9, 11.2, 11.5, 11.8, 12.1, 12.4, 12.7, 13, 13.3,
+          13.6, 13.9, 14.2, 14.5, 14.8, 15.1, 15.4, 15.7, 16, 16.2, 16.4, 16.6,
+          16.8, 17, 17.2, 17.4, 17.6, 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19,
+          19.2, 19.4, 19.6, 19.8,
+        ],
+      },
     ],
   },
   {
@@ -654,14 +636,22 @@ export const SupportSkills = [
     name: "Deep Wounds",
     tags: ["Physical"],
     description: [
-      "Supports skills that hit enemies.\n15.5% additional Trauma Damage for the supported skill\n20.5% chance for the supported skill to inflict Trauma",
-      "15.5% additional Trauma Damage for the supported skill\n20.5% chance for the supported skill to inflict Trauma",
+      "Supports skills that hit enemies.\n+7% additional Trauma Damage for the supported skill\n+15% chance for the supported skill to inflict Trauma",
+      "+7% additional Trauma Damage for the supported skill\n+15% chance for the supported skill to inflict Trauma",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "15.5% additional Trauma Damage for the supported skill",
-      "20.5% chance for the supported skill to inflict Trauma",
+    fixedAffixes: ["+15% chance for the supported skill to inflict Trauma"],
+    templates: [
+      {
+        template: "+{value}% additional Trauma Damage for the supported skill",
+        levelValues: [
+          7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14,
+          14.5, 15, 15.5, 16, 16.5, 17, 17.3, 17.6, 17.9, 18.2, 18.5, 18.8,
+          19.1, 19.4, 19.7, 20, 20.3, 20.6, 20.9, 21.2, 21.5, 21.8, 22.1, 22.4,
+          22.7,
+        ],
+      },
     ],
   },
   {
@@ -907,8 +897,8 @@ export const SupportSkills = [
     name: "Emergency restoration",
     tags: ["Restoration"],
     description: [
-      "Supports Restoration Skills.\n45.5% restoration effect at Low Life for the supported skill\n+10% Restoration Effect for the supported skill at Low Mana",
-      "45.5% restoration effect at Low Life for the supported skill\n+10% Restoration Effect for the supported skill at Low Mana",
+      "Supports Restoration Skills.\n45.5% Restoration effect at Low Life for the supported skill\n+10% Restoration Effect for the supported skill at Low Mana",
+      "45.5% Restoration effect at Low Life for the supported skill\n+10% Restoration Effect for the supported skill at Low Mana",
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
@@ -918,7 +908,7 @@ export const SupportSkills = [
     templates: [
       {
         template:
-          "{value}% restoration effect at Low Life for the supported skill",
+          "{value}% Restoration effect at Low Life for the supported skill",
         levelValues: [
           45.5, 46, 46.5, 47, 47.5, 48, 48.5, 49, 49.5, 50, 50.5, 51, 51.5, 52,
           52.5, 53, 53.5, 54, 54.5, 55, 55.5, 56, 56.5, 57, 57.5, 58, 58.5, 59,
@@ -932,22 +922,34 @@ export const SupportSkills = [
     name: "Enhanced Ailment",
     tags: [],
     description: [
-      "Supports skills that hit enemies.\n15.5% additional Ailment Damage for the supported skill",
-      "15.5% additional Ailment Damage for the supported skill",
+      "Supports skills that hit enemies.\n+40% chance for the supported skill to inflict Damaging Ailments\n0.3% additional Ailment Damage for the supported skill",
+      "+40% chance for the supported skill to inflict Damaging Ailments\n0.3% additional Ailment Damage for the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: ["15.5% additional Ailment Damage for the supported skill"],
+    fixedAffixes: [
+      "+40% chance for the supported skill to inflict Damaging Ailments",
+    ],
+    templates: [
+      {
+        template: "{value}% additional Ailment Damage for the supported skill",
+        levelValues: [
+          0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9, 4.2,
+          4.5, 4.8, 5.1, 5.4, 5.7, 6, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.1,
+          7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2,
+        ],
+      },
+    ],
   },
   {
     type: "Support",
     name: "Extended Duration",
     tags: ["Persistent"],
     description: [
-      "Supports DoT Skills.\n+13% Duration for the supported skill",
+      "Supports Duration Skills.\n+13% Duration for the supported skill",
       "+13% Duration for the supported skill",
     ],
-    supportTargets: ["dot"],
+    supportTargets: [{ tags: ["Duration"] }],
     cannotSupportTargets: [],
     templates: [
       {
@@ -1066,28 +1068,6 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Freeze Chance",
-    tags: ["Cold"],
-    description: [
-      "Supports skills that deal damage.\n15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
-      "15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
-    ],
-    supportTargets: ["deal_damage"],
-    cannotSupportTargets: [],
-    fixedAffixes: ["+50% Frostbite chance for the supported skill"],
-    templates: [
-      {
-        template: "{value}% additional Cold Damage for the supported skill",
-        levelValues: [
-          15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22,
-          22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29,
-          29.5, 30, 30.5, 31, 31.5, 32, 32.5, 33, 33.5, 34, 34.5, 35,
-        ],
-      },
-    ],
-  },
-  {
-    type: "Support",
     name: "Friend of Spirit Magi",
     tags: ["Summon", "Spirit Magus"],
     description: [
@@ -1112,17 +1092,27 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Freeze Chance",
+    name: "Glacial Freeze",
     tags: ["Cold"],
     description: [
-      "Supports skills that deal damage.\n15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
-      "15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
+      "Supports skills that deal damage.\n10.3% additional Cold Damage for the supported skill\nInflicts Frostbite when the supported skill deals Hit Cold Damage",
+      "10.3% additional Cold Damage for the supported skill\nInflicts Frostbite when the supported skill deals Hit Cold Damage",
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
     fixedAffixes: [
-      "15.5% additional Cold Damage for the supported skill",
-      "+50% Frostbite chance for the supported skill",
+      "Inflicts Frostbite when the supported skill deals Hit Cold Damage",
+    ],
+    templates: [
+      {
+        template: "{value}% additional Cold Damage for the supported skill",
+        levelValues: [
+          10.3, 10.6, 10.9, 11.2, 11.5, 11.8, 12.1, 12.4, 12.7, 13, 13.3, 13.6,
+          13.9, 14.2, 14.5, 14.8, 15.1, 15.4, 15.7, 16, 16.3, 16.4, 16.5, 16.6,
+          16.7, 16.8, 16.9, 17, 17.1, 17.2, 17.3, 17.4, 17.5, 17.6, 17.7, 17.8,
+          17.9, 18, 18.1, 18.2,
+        ],
+      },
     ],
   },
   {
@@ -1293,14 +1283,25 @@ export const SupportSkills = [
     name: "High Voltage",
     tags: ["Lightning"],
     description: [
-      "Supports skills that hit enemies.\n15.5% additional Lightning Damage for the supported skill\n20.5% Numbed chance for the supported skill",
-      "15.5% additional Lightning Damage for the supported skill\n20.5% Numbed chance for the supported skill",
+      "Supports skills that hit enemies.\n10.3% additional Lightning Damage for the supported skill\nInflicts Numbed when the supported skill deals Hit Lightning Damage",
+      "10.3% additional Lightning Damage for the supported skill\nInflicts Numbed when the supported skill deals Hit Lightning Damage",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
     fixedAffixes: [
-      "15.5% additional Lightning Damage for the supported skill",
-      "20.5% Numbed chance for the supported skill",
+      "Inflicts Numbed when the supported skill deals Hit Lightning Damage",
+    ],
+    templates: [
+      {
+        template:
+          "{value}% additional Lightning Damage for the supported skill",
+        levelValues: [
+          10.3, 10.6, 10.9, 11.2, 11.5, 11.8, 12.1, 12.4, 12.7, 13, 13.3, 13.6,
+          13.9, 14.2, 14.5, 14.8, 15.1, 15.4, 15.7, 16, 16.3, 16.4, 16.5, 16.6,
+          16.7, 16.8, 16.9, 17, 17.1, 17.2, 17.3, 17.4, 17.5, 17.6, 17.7, 17.8,
+          17.9, 18, 18.1, 18.2,
+        ],
+      },
     ],
   },
   {
@@ -1336,15 +1337,23 @@ export const SupportSkills = [
     name: "Improved Corrosion",
     tags: ["Erosion"],
     description: [
-      "Supports skills that hit enemies.\n29.5% chance for the supported skill to inflict 1 additional stacks of Wilt\n20.5% Wilt chance for the supported skill\n-10% additional Wilt Damage for the supported skill",
-      "29.5% chance for the supported skill to inflict 1 additional stacks of Wilt\n20.5% Wilt chance for the supported skill\n-10% additional Wilt Damage for the supported skill",
+      "Supports skills that hit enemies.\n+23% chance for the supported skill to inflict 1 additional stacks of Wilt\n+15% Wilt chance for the supported skill",
+      "+23% chance for the supported skill to inflict 1 additional stacks of Wilt\n+15% Wilt chance for the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "29.5% chance for the supported skill to inflict 1 additional stacks of Wilt",
-      "20.5% Wilt chance for the supported skill",
-      "-10% additional Wilt Damage for the supported skill",
+    fixedAffixes: ["+15% Wilt chance for the supported skill"],
+    templates: [
+      {
+        template:
+          "+{value}% chance for the supported skill to inflict 1 additional stacks of Wilt",
+        levelValues: [
+          23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5,
+          30, 30.5, 31, 31.5, 32, 32.5, 33, 33.3, 33.6, 33.9, 34.2, 34.5, 34.8,
+          35.1, 35.4, 35.7, 36, 36.3, 36.6, 36.9, 37.2, 37.5, 37.8, 38.1, 38.4,
+          38.7,
+        ],
+      },
     ],
   },
   {
@@ -1449,14 +1458,24 @@ export const SupportSkills = [
     name: "Lightning to Cold",
     tags: ["Lightning", "Cold"],
     description: [
-      "Supports skills that hit enemies.\nConverts 100% of the supported skill's Lightning Damage to Cold Damage\n15.5% additional Lightning Damage for the supported skill",
-      "Converts 100% of the supported skill's Lightning Damage to Cold Damage\n15.5% additional Lightning Damage for the supported skill",
+      "Supports skills that hit enemies.\nConverts 50% of the supported skill's Lightning Damage to Cold Damage\n5.5% additional Lightning Damage for the supported skill",
+      "Converts 50% of the supported skill's Lightning Damage to Cold Damage\n5.5% additional Lightning Damage for the supported skill",
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
     fixedAffixes: [
-      "Converts 100% of the supported skill's Lightning Damage to Cold Damage",
-      "15.5% additional Lightning Damage for the supported skill",
+      "Converts 50% of the supported skill's Lightning Damage to Cold Damage",
+    ],
+    templates: [
+      {
+        template:
+          "{value}% additional Lightning Damage for the supported skill",
+        levelValues: [
+          5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13,
+          13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20,
+          20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25,
+        ],
+      },
     ],
   },
   {
@@ -1647,14 +1666,14 @@ export const SupportSkills = [
     name: "Melee Knockback",
     tags: ["Attack", "Melee"],
     description: [
-      "Supports Melee Attack Skills.\n+20% Knockback chance for the supported skill\n15.5% additional damage for the supported skill\n+40% Knockback distance for the supported skill",
-      "+20% Knockback chance for the supported skill\n15.5% additional damage for the supported skill\n+40% Knockback distance for the supported skill",
+      "Supports Melee Attack Skills.\n+20% Knockback Chance for the supported skill\n15.5% additional damage for the supported skill\n+40% Knockback distance for the supported skill",
+      "+20% Knockback Chance for the supported skill\n15.5% additional damage for the supported skill\n+40% Knockback distance for the supported skill",
     ],
     supportTargets: [{ tags: ["Melee", "Attack"] }],
     cannotSupportTargets: [],
     templates: [
       {
-        template: "+{value}% Knockback chance for the supported skill",
+        template: "+{value}% Knockback Chance for the supported skill",
         levelValues: [
           20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
@@ -1795,13 +1814,22 @@ export const SupportSkills = [
     name: "Overload",
     tags: ["Spell"],
     description: [
-      "Supports Spell Skills.\n3.05% additional damage for the supported skill for every stack of Focus Blessing, stacking up to 8 times",
-      "3.05% additional damage for the supported skill for every stack of Focus Blessing, stacking up to 8 times",
+      "Supports Spell Skills.\n3.05% additional damage for the supported skill for each stack of Focus Blessing, stacking up to 8 time(s)",
+      "3.05% additional damage for the supported skill for each stack of Focus Blessing, stacking up to 8 time(s)",
     ],
     supportTargets: [{ tags: ["Spell"] }],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "3.05% additional damage for the supported skill for every stack of Focus Blessing, stacking up to 8 times",
+    templates: [
+      {
+        template:
+          "{value}% additional damage for the supported skill for each stack of Focus Blessing, stacking up to 8 time(s)",
+        levelValues: [
+          3.05, 3.1, 3.15, 3.2, 3.25, 3.3, 3.35, 3.4, 3.45, 3.5, 3.55, 3.6,
+          3.65, 3.7, 3.75, 3.8, 3.85, 3.9, 3.95, 4, 4.05, 4.1, 4.15, 4.2, 4.25,
+          4.3, 4.35, 4.4, 4.45, 4.5, 4.55, 4.6, 4.65, 4.7, 4.75, 4.8, 4.85, 4.9,
+          4.95, 5,
+        ],
+      },
     ],
   },
   {
@@ -1809,7 +1837,7 @@ export const SupportSkills = [
     name: "Pain Amplification",
     tags: ["Persistent"],
     description: [
-      "Supports DoT Skills and skills that can inflict Ailment.\n12.5% additional Damage Over Time against enemies with Max Affliction for the supported skill",
+      "Supports Persistent Skills and skills that can inflict Ailment.\n12.5% additional Damage Over Time against enemies with Max Affliction for the supported skill",
       "12.5% additional Damage Over Time against enemies with Max Affliction for the supported skill",
     ],
     supportTargets: ["dot", "inflict_ailment"],
@@ -2077,14 +2105,22 @@ export const SupportSkills = [
     name: "Precise: Safety in Numbers",
     tags: ["Aura"],
     description: [
-      "Supports Aura Skills.\n3.1% Aura Effect for each ally affected by the supported skill, up to 7 time(s)\n-12% Sealed Mana Compensation for the supported skill",
-      "3.1% Aura Effect for each ally affected by the supported skill, up to 7 time(s)\n-12% Sealed Mana Compensation for the supported skill",
+      "Supports Aura Skills.\n3.1% Aura Effect for each ally affected by the supported skill, stacking up to 7 time(s)\n-12% Sealed Mana Compensation for the supported skill",
+      "3.1% Aura Effect for each ally affected by the supported skill, stacking up to 7 time(s)\n-12% Sealed Mana Compensation for the supported skill",
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "3.1% Aura Effect for each ally affected by the supported skill, up to 7 time(s)",
-      "-12% Sealed Mana Compensation for the supported skill",
+    fixedAffixes: ["-12% Sealed Mana Compensation for the supported skill"],
+    templates: [
+      {
+        template:
+          "{value}% Aura Effect for each ally affected by the supported skill, stacking up to 7 time(s)",
+        levelValues: [
+          3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4,
+          4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8,
+          5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7,
+        ],
+      },
     ],
   },
   {
@@ -2170,13 +2206,21 @@ export const SupportSkills = [
     name: "Precise: Stand as One",
     tags: ["Aura"],
     description: [
-      "Supports Aura Skills.\nFor every Aura that affects you, the supported skill 4.1% Aura Effect, up to 5 time(s)",
-      "For every Aura that affects you, the supported skill 4.1% Aura Effect, up to 5 time(s)",
+      "Supports Aura Skills.\nThe supported skill 4.1% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
+      "The supported skill 4.1% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
-    fixedAffixes: [
-      "For every Aura that affects you, the supported skill 4.1% Aura Effect, up to 5 time(s)",
+    templates: [
+      {
+        template:
+          "The supported skill {value}% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
+        levelValues: [
+          4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4,
+          5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8,
+          6.9, 7, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8,
+        ],
+      },
     ],
   },
   {
@@ -2511,29 +2555,6 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Reaping Agony",
-    tags: [],
-    description: [
-      "Supports skills that hit enemies or deal Damage Over Time.\nReaps 0.61 s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
-      "Reaps 0.61 s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
-    ],
-    supportTargets: ["hit_enemies", "dot"],
-    cannotSupportTargets: [],
-    templates: [
-      {
-        template:
-          "Reaps {value} s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
-        levelValues: [
-          0.61, 0.62, 0.63, 0.64, 0.65, 0.66, 0.67, 0.68, 0.69, 0.7, 0.71, 0.72,
-          0.73, 0.74, 0.75, 0.76, 0.77, 0.78, 0.79, 0.8, 0.81, 0.82, 0.83, 0.84,
-          0.85, 0.86, 0.87, 0.88, 0.89, 0.9, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96,
-          0.97, 0.98, 0.99, 1,
-        ],
-      },
-    ],
-  },
-  {
-    type: "Support",
     name: "Recklessness",
     tags: ["Attack"],
     description: [
@@ -2594,14 +2615,24 @@ export const SupportSkills = [
     name: "Recuperation",
     tags: ["Combo"],
     description: [
-      "Supports Combo Skills.\n+1 Combo Points gained from Combo Starters for the supported skill\n4.4% additional damage for the supported skill",
-      "+1 Combo Points gained from Combo Starters for the supported skill\n4.4% additional damage for the supported skill",
+      "Supports Combo Skills.\n+1 Combo Points gained from Combo Starters for the supported skill\n5.5% Combo Finisher Amplification for the supported skill",
+      "+1 Combo Points gained from Combo Starters for the supported skill\n5.5% Combo Finisher Amplification for the supported skill",
     ],
     supportTargets: [{ tags: ["Combo"] }],
     cannotSupportTargets: [],
     fixedAffixes: [
       "+1 Combo Points gained from Combo Starters for the supported skill",
-      "4.4% additional damage for the supported skill",
+    ],
+    templates: [
+      {
+        template:
+          "{value}% Combo Finisher Amplification for the supported skill",
+        levelValues: [
+          5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13,
+          13.5, 14, 14.5, 15, 15.5, 15.8, 16.1, 16.4, 16.7, 17, 17.3, 17.6,
+          17.9, 18.2, 18.5, 18.8, 19.1, 19.4, 19.7, 20, 20.3, 20.6, 20.9, 21.2,
+        ],
+      },
     ],
   },
   {
@@ -2837,7 +2868,7 @@ export const SupportSkills = [
     name: "Shortened Duration",
     tags: ["Persistent"],
     description: [
-      "Supports DoT Skills and skills that can inflict Ailment.\n-10% Duration for the supported skill\n+20% additional Damage Over Time for the supported skill",
+      "Supports Persistent Skills and skills that can inflict Ailment.\n-10% Duration for the supported skill\n+20% additional Damage Over Time for the supported skill",
       "-10% Duration for the supported skill\n+20% additional Damage Over Time for the supported skill",
     ],
     supportTargets: ["dot", "inflict_ailment"],
@@ -3012,13 +3043,22 @@ export const SupportSkills = [
     name: "Well-Fought Battle",
     tags: ["Empower"],
     description: [
-      "Supports Empower Skills. Cannot support Summon Skills.\nThe supported skill 5.25% Effect every time it is cast, up to 3 time(s)",
-      "The supported skill 5.25% Effect every time it is cast, up to 3 time(s)",
+      "Supports Empower Skills. Cannot support Summon Skills.\nThe supported skill 5.25% Effect every time it is cast, stacking up to 3 time(s)",
+      "The supported skill 5.25% Effect every time it is cast, stacking up to 3 time(s)",
     ],
     supportTargets: [{ tags: ["Empower"] }],
     cannotSupportTargets: [{ tags: ["Summon"] }],
-    fixedAffixes: [
-      "The supported skill 5.25% Effect every time it is cast, up to 3 time(s)",
+    templates: [
+      {
+        template:
+          "The supported skill {value}% Effect every time it is cast, stacking up to 3 time(s)",
+        levelValues: [
+          5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5,
+          8.75, 9, 9.25, 9.5, 9.75, 10, 10.25, 10.5, 10.75, 11, 11.25, 11.5,
+          11.75, 12, 12.25, 12.5, 12.75, 13, 13.25, 13.5, 13.75, 14, 14.25,
+          14.5, 14.75, 15,
+        ],
+      },
     ],
   },
   {

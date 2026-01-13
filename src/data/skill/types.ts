@@ -33,6 +33,7 @@ export const SKILL_TAGS = [
   "Defensive",
   "Demolisher",
   "Dexterity",
+  "Duration",
   "Empower",
   "Enhanced Skill",
   "Erosion",

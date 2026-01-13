@@ -39,6 +39,7 @@ import type {
 import { getActiveSkillMods } from "../skills/active-mods";
 import { getPassiveSkillMods } from "../skills/passive-mods";
 import { buildSupportSkillAffixes } from "../storage/load-save";
+import { getGearAffixes } from "./affix-collectors";
 import {
   addDRs,
   applyDmgBonusesAndPen,
@@ -131,6 +132,8 @@ interface Stats {
   int: number;
 }
 
+type DefenseType = "EnergyShield" | "Armor" | "Evasion";
+
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
 const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterMods(mods, "Stat");
@@ -170,6 +173,76 @@ const calculateTotalMainStats = (
   return totalMainStats;
 };
 
+const getDefenseModTypes = (defenseType: DefenseType) => {
+  return match(defenseType)
+    .with(
+      "Armor",
+      () =>
+        ({
+          gearFlat: "GearArmor",
+          gearMultPct: "GearArmorPct",
+          finalFlat: "Armor",
+          finalMultPct: "ArmorPct",
+        }) as const,
+    )
+    .with(
+      "Evasion",
+      () =>
+        ({
+          gearFlat: "GearEvasion",
+          gearMultPct: "GearEvasionPct",
+          finalFlat: "Evasion",
+          finalMultPct: "EvasionPct",
+        }) as const,
+    )
+    .with(
+      "EnergyShield",
+      () =>
+        ({
+          gearFlat: "GearEnergyShield",
+          gearMultPct: "GearEnergyShieldPct",
+          finalFlat: "MaxEnergyShield",
+          finalMultPct: "MaxEnergyShieldPct",
+        }) as const,
+    )
+    .exhaustive();
+};
+
+const calculateDefenseStat = (
+  loadout: Loadout,
+  mods: Mod[],
+  defenseType: DefenseType,
+): number => {
+  const modTypes = getDefenseModTypes(defenseType);
+  const equippedGear = loadout.gearPage.equippedGear;
+  let totalFromGear = 0;
+
+  for (const gear in equippedGear) {
+    const gearItem = equippedGear[gear as keyof typeof equippedGear];
+    if (!gearItem) {
+      continue;
+    }
+
+    // Sum up the flat defense then apply the pct multipliers
+    const gearMods = collectModsFromAffixes(getGearAffixes(gearItem));
+    const gearFlatDefense = sumByValue(filterMods(gearMods, modTypes.gearFlat));
+    const gearDefenseMult = calcEffMult(gearMods, modTypes.gearMultPct);
+
+    totalFromGear += gearFlatDefense * gearDefenseMult;
+
+    // TODO - Handle bonuses such as "+15% Energy Shield from Shields"
+    // These bonuses generally dont come from the same gear piece we are evaluating
+  }
+
+  // Now that we have the total from gear, apply final flat then multiply by final pct
+  const baseFlatFromMods = sumByValue(filterMods(mods, modTypes.finalFlat));
+  const totalFlat = totalFromGear + baseFlatFromMods;
+
+  const finalMultPct = calcEffMult(mods, modTypes.finalMultPct);
+
+  return totalFlat * finalMultPct;
+};
+
 // === Resource Pool Types ===
 
 export interface ResourcePool {
@@ -205,6 +278,9 @@ export interface Defenses {
   attackBlockPct: number;
   spellBlockPct: number;
   blockRatioPct: number;
+  energyShield: number;
+  armor: number;
+  evasion: number;
 }
 
 // === Blessing Calculations ===
@@ -559,6 +635,7 @@ export interface OffenseInput {
 }
 
 export interface OffenseResults {
+  errors: string[];
   skills: Partial<Record<ImplementedActiveSkillName, OffenseSummary>>;
   resourcePool: ResourcePool;
   defenses: Defenses;
@@ -1471,34 +1548,6 @@ const pushAttackAggression = (mods: Mod[], config: Configuration): void => {
   });
 };
 
-const pushSpellAggression = (mods: Mod[], config: Configuration): void => {
-  if (!config.hasSpellAggression) {
-    return;
-  }
-  const cspdBase = 7;
-  const dmgBase = 7;
-  const mobilityCdr = 7;
-  const mult = calcEffMult(mods, "SpellAggressionEffPct");
-  mods.push({
-    type: "CspdPct",
-    value: cspdBase * mult,
-    addn: true,
-    src: "Spell Aggression",
-  });
-  mods.push({
-    type: "DmgPct",
-    value: dmgBase * mult,
-    dmgModType: "spell",
-    addn: true,
-    src: "Spell Aggression",
-  });
-  mods.push({
-    type: "MobilitySkillCdrPct",
-    value: mobilityCdr * mult,
-    src: "Spell Aggression",
-  });
-};
-
 const pushMark = (mods: Mod[], config: Configuration): void => {
   if (!config.targetEnemyMarked) {
     return;
@@ -1625,29 +1674,6 @@ const pushMainStatDmgPct = (mods: Mod[], totalMainStats: number): void => {
   });
 };
 
-const pushErika1 = (
-  mods: Mod[],
-  prenormMods: Mod[],
-  config: Configuration,
-): void => {
-  if (!modExists(mods, "WindStalker")) {
-    return;
-  }
-  const addedMaxStacks = sumByValue(filterMods(mods, "MaxStalker"));
-  const defaultStacks = 3 + addedMaxStacks;
-  const stacks = config.stalkerStacks ?? defaultStacks;
-  // This assumes that the player's multistrike chance is >= 100%
-  // Therefore, it's an overestimation if not. However, if your
-  // multistrike is below, 100%, why tf are you using e1
-  mods.push({
-    type: "DmgPct",
-    dmgModType: "global",
-    addn: true,
-    value: 13 * stacks,
-  });
-  mods.push(...normalizeStackables(prenormMods, "stalker", stacks));
-};
-
 interface DerivedOffenseCtx {
   maxSpellBurst: number;
   spellBurstChargeSpeedBonusPct: number;
@@ -1655,7 +1681,34 @@ interface DerivedOffenseCtx {
   multistrikeChancePct: number;
   multistrikeIncDmgPct: number;
   mods: Mod[];
+  errors: string[];
 }
+
+// over-engineered way to get type safety on self-referential associative graph
+const createSelfReferential = <T extends Record<string, (keyof T)[]>>(
+  obj: T,
+): T => {
+  return obj;
+};
+
+// dependency graph of mod resolution steps that much be done in order
+// examples:
+//   * stalker, from erika1's hero trait, affects multistrike calculations
+//     and this is a dependency of multistrike
+//   * spell burst charge speed may be dependent on dependent on cast speed (from core talent playsafe)
+//   * cast speed depends on many other things, including spell aggression
+// WHENEVER ADDING A TEMPLATE WITH DEPENDENCY, CHECK HERE TO MAKE SURE IT'S CODIFIED
+const stepDeps = createSelfReferential({
+  stalker: [],
+  multistrike: ["stalker"],
+  spellAggression: [],
+  castSpeed: ["spellAggression"],
+  spellBurstChargeSpeed: ["castSpeed"],
+});
+
+const modSteps = Object.keys(stepDeps) as (keyof typeof stepDeps)[];
+
+type ModStep = (typeof modSteps)[number];
 
 // resolves mods, removing unmatched conditions, and normalizing per mods
 const resolveModsForOffenseSkill = (
@@ -1684,12 +1737,136 @@ const resolveModsForOffenseSkill = (
     derivedCtx,
   );
   const mods = [...baseMods, ...calculateSkillLevelDmgMods(skillLevel)];
+  const steps: ModStep[] = [];
+  // collect and verify in unit tests, rather than throw error
+  // in case this somehow makes it past CI, we'd rather the user get
+  //   potentially wrong results than simply crashing the app.
+  const errors: string[] = [];
+  const step = (stepName: ModStep) => {
+    if (steps.includes(stepName)) {
+      errors.push(`Duplicate step calculation occuring ${stepName}`);
+    } else {
+      steps.push(stepName);
+    }
+    const deps = stepDeps[stepName];
+    if (R.intersection(steps, deps).length !== deps.length) {
+      errors.push(
+        `Step ${stepName} has deps ${deps}, but not all have been resolved yet`,
+      );
+    }
+  };
+  const pm = (...ms: Mod[]) => {
+    mods.push(...ms);
+  };
 
   // Local helper - captures mods and prenormMods in closure
   const normalize = (stackable: Stackable, value: number | undefined): void => {
     if (value !== undefined) {
-      mods.push(...normalizeStackables(prenormMods, stackable, value));
+      pm(...normalizeStackables(prenormMods, stackable, value));
     }
+  };
+
+  // actual mod resolvers below
+  const pushErika1 = (): void => {
+    step("stalker");
+    if (!modExists(mods, "WindStalker")) {
+      return;
+    }
+    const addedMaxStacks = sumByValue(filterMods(mods, "MaxStalker"));
+    const defaultStacks = 3 + addedMaxStacks;
+    const stacks = config.stalkerStacks ?? defaultStacks;
+    // This assumes that the player's multistrike chance is >= 100%
+    // Therefore, it's an overestimation if not. However, if your
+    // multistrike is below, 100%, why tf are you using e1
+    mods.push({
+      type: "DmgPct",
+      dmgModType: "global",
+      addn: true,
+      value: 13 * stacks,
+    });
+    mods.push(...normalizeStackables(prenormMods, "stalker", stacks));
+  };
+  const pushMultistrike = () => {
+    step("multistrike");
+    const multistrikeChancePct = sumByValue(
+      filterMods(mods, "MultistrikeChancePct"),
+    );
+    const multistrikeIncDmgPct = sumByValue(
+      filterMods(mods, "MultistrikeIncDmgPct"),
+    );
+    pushMultistrikeAspd(mods, multistrikeChancePct);
+    pushMultistrikeDmgBonus(mods, multistrikeChancePct, multistrikeIncDmgPct);
+    return { multistrikeChancePct, multistrikeIncDmgPct };
+  };
+  const pushShadowStrike = () => {
+    if (skill.tags.includes("Shadow Strike")) {
+      const numShadowHits = calculateNumShadowHits(mods, config);
+      const dmgFromShadowMod = calculateAddnDmgFromShadows(numShadowHits);
+      if (dmgFromShadowMod !== undefined) {
+        const shadowDmgPctMods = filterMods(mods, "ShadowDmgPct");
+        const shadowDmgMult = calcEffMult(shadowDmgPctMods);
+        mods.push({
+          ...multModValue(dmgFromShadowMod, shadowDmgMult),
+          per: undefined,
+        });
+      }
+    }
+  };
+  const pushProjectiles = () => {
+    const maxProjectiles = findMod(mods, "MaxProjectile")?.value;
+    const projectiles = Math.trunc(
+      Math.min(
+        sumByValue(filterMods(mods, "Projectile")),
+        maxProjectiles ?? Infinity,
+      ),
+    );
+    normalize("projectile", projectiles);
+  };
+  const pushFervor = () => {
+    if (resourcePool.hasFervor) {
+      mods.push(calculateFervorCritRateMod(mods, resourcePool));
+      normalize("fervor", resourcePool.fervorPts);
+    }
+  };
+  const pushSpellAggression = (): void => {
+    step("spellAggression");
+    if (!config.hasSpellAggression) {
+      return;
+    }
+    const cspdBase = 7;
+    const dmgBase = 7;
+    const mobilityCdr = 7;
+    const mult = calcEffMult(mods, "SpellAggressionEffPct");
+    mods.push({
+      type: "CspdPct",
+      value: cspdBase * mult,
+      addn: true,
+      src: "Spell Aggression",
+    });
+    mods.push({
+      type: "DmgPct",
+      value: dmgBase * mult,
+      dmgModType: "spell",
+      addn: true,
+      src: "Spell Aggression",
+    });
+    mods.push({
+      type: "MobilitySkillCdrPct",
+      value: mobilityCdr * mult,
+      src: "Spell Aggression",
+    });
+  };
+  const pushSpellBurstChargeSpeed = () => {
+    // cast speed required for burst charge speed so we verify all cast speed deps have been resolved
+    step("castSpeed");
+    step("spellBurstChargeSpeed");
+    const spellBurstChargeSpeedBonusPct =
+      calcSpellBurstChargeSpeedBonusPct(mods);
+    normalize(
+      "spell_burst_charge_speed_bonus_pct",
+      spellBurstChargeSpeedBonusPct,
+    );
+    return { spellBurstChargeSpeedBonusPct };
   };
 
   const totalMainStats = calculateTotalMainStats(skill, stats);
@@ -1718,7 +1895,7 @@ const resolveModsForOffenseSkill = (
   pushMainStatDmgPct(mods, totalMainStats);
   pushWhimsy(mods, config);
   pushAttackAggression(mods, config); // must happen before movement speed
-  pushSpellAggression(mods, config); // must happen before spell burst charge speed calculation
+  pushSpellAggression();
   pushMark(mods, config);
 
   // must happen before max_spell_burst normalization, after attack aggression
@@ -1772,33 +1949,9 @@ const resolveModsForOffenseSkill = (
   normalize("willpower", willpowerStacks);
   normalize("frostbite_rating", frostbitten.points);
 
-  // Note: BaseProjectileQuant is NOT counted toward "projectile" stackable
-  const maxProjectiles = findMod(mods, "MaxProjectile")?.value;
-  const projectiles = Math.trunc(
-    Math.min(
-      sumByValue(filterMods(mods, "Projectile")),
-      maxProjectiles ?? Infinity,
-    ),
-  );
-  normalize("projectile", projectiles);
-
-  if (resourcePool.hasFervor) {
-    mods.push(calculateFervorCritRateMod(mods, resourcePool));
-    normalize("fervor", resourcePool.fervorPts);
-  }
-
-  if (skill.tags.includes("Shadow Strike")) {
-    const numShadowHits = calculateNumShadowHits(mods, config);
-    const dmgFromShadowMod = calculateAddnDmgFromShadows(numShadowHits);
-    if (dmgFromShadowMod !== undefined) {
-      const shadowDmgPctMods = filterMods(mods, "ShadowDmgPct");
-      const shadowDmgMult = calcEffMult(shadowDmgPctMods);
-      mods.push({
-        ...multModValue(dmgFromShadowMod, shadowDmgMult),
-        per: undefined,
-      });
-    }
-  }
+  pushProjectiles();
+  pushFervor();
+  pushShadowStrike();
 
   const unsealedManaPct = 100 - (config.sealedManaPct ?? 0);
   const unsealedLifePct = 100 - (config.sealedLifePct ?? 0);
@@ -1815,28 +1968,13 @@ const resolveModsForOffenseSkill = (
 
   // must happen after spell aggression and any other normalizations that can
   // affect cast speed
-  const spellBurstChargeSpeedBonusPct = calcSpellBurstChargeSpeedBonusPct(mods);
-  normalize(
-    "spell_burst_charge_speed_bonus_pct",
-    spellBurstChargeSpeedBonusPct,
-  );
-
-  // miust happen before multistrike
-  pushErika1(mods, prenormMods, config);
-
-  // Must happen after any multistrike chance normalization
-  // must happen after erika1
-  const multistrikeChancePct = sumByValue(
-    filterMods(mods, "MultistrikeChancePct"),
-  );
-  const multistrikeIncDmgPct = sumByValue(
-    filterMods(mods, "MultistrikeIncDmgPct"),
-  );
-  pushMultistrikeAspd(mods, multistrikeChancePct);
-  pushMultistrikeDmgBonus(mods, multistrikeChancePct, multistrikeIncDmgPct);
+  const { spellBurstChargeSpeedBonusPct } = pushSpellBurstChargeSpeed();
+  pushErika1();
+  const { multistrikeChancePct, multistrikeIncDmgPct } = pushMultistrike();
 
   return {
     mods,
+    errors,
     maxSpellBurst,
     movementSpeedBonusPct,
     multistrikeChancePct,
@@ -1953,6 +2091,10 @@ export const calculateDefenses = (
     30 + sumByValue(filterMods(mods, "BlockRatioPct")),
   );
 
+  const energyShield = calculateDefenseStat(loadout, mods, "EnergyShield");
+  const armor = calculateDefenseStat(loadout, mods, "Armor");
+  const evasion = calculateDefenseStat(loadout, mods, "Evasion");
+
   return {
     coldRes: calcRes(["cold", "elemental"]),
     lightningRes: calcRes(["lightning", "elemental"]),
@@ -1961,6 +2103,9 @@ export const calculateDefenses = (
     attackBlockPct,
     spellBlockPct,
     blockRatioPct,
+    energyShield,
+    armor,
+    evasion,
   };
 };
 
@@ -2573,6 +2718,7 @@ const calcAvgSpellBurstDps = (
 
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
+  const errors: string[] = [];
   const { loadout, configuration: config } = input;
   const loadoutMods = [
     ...collectMods(loadout),
@@ -2638,6 +2784,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       derivedCtx,
     );
     const { mods, movementSpeedBonusPct } = derivedOffenseCtx;
+    errors.push(...derivedOffenseCtx.errors);
 
     const attackHitSummary = calcAvgAttackDps(
       mods,
@@ -2713,5 +2860,5 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     };
   }
 
-  return { skills, resourcePool, defenses };
+  return { errors, skills, resourcePool, defenses };
 };
