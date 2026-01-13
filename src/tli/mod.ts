@@ -126,6 +126,7 @@ export type Stackable =
   | "berserking_blade_buff"
   // hero-specific
   | "stalker"
+  | "pure_heart"
   // pactspirit-specific
   | "repentance";
 
@@ -192,6 +193,7 @@ export type Condition =
   | "has_used_mobility_skill_recently"
   | "has_moved_recently"
   | "has_cast_curse_recently"
+  | "has_pure_heart"
   // pactspirits
   | "has_portrait_of_a_fallen_saintess_pactspirit"
   | "has_squidnova";
@@ -418,6 +420,7 @@ interface ModDefinitions {
   ChainLightningWebOfLightning: object;
   ChainLightningMerge: { shotgunFalloffCoefficient: number };
   MaxBerserkingBladeStacks: { value: number };
+  MaxPureHeartStacks: { value: number };
   // enemy mods
   EnemyRes: { value: number; resType: ResType };
   // core talent specific

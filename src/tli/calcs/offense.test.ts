@@ -5942,3 +5942,40 @@ describe("slash-strike damage ([Test] Slash Strike Skill)", () => {
     expect(summary.avgDps).toBeCloseTo(expectedAvgDps);
   });
 });
+
+describe("miscellaneous damage related configuration values", () => {
+  const skillName = "[Test] Simple Attack" as const;
+
+  // Bespoke helper: 100 phys weapon + custom mods
+  const createModsInput = (
+    mods: AffixLine[],
+    configOverride?: Partial<Configuration>,
+  ) => ({
+    loadout: initLoadout({
+      gearPage: { equippedGear: { mainHand: baseWeapon }, inventory: [] },
+      customAffixLines: mods,
+      skillPage: simpleAttackSkillPage(),
+    }),
+    configuration: { ...defaultConfiguration, ...configOverride },
+  });
+
+  describe("Pure Heart calculations", () => {
+    test.each([
+      0, 2, 3, 4, 5, 6,
+    ])("Pure heart properly calculates with ($i)", (stacks) => {
+      // base * bonusdmg
+      // 100 * 2 = 200
+      // 200 * (a * 5% Pure Heart) = 200 * (1 + a * 0.05)
+      const input = createModsInput(
+        affixLines([
+          { type: "DmgPct", value: 100, dmgModType: "global", addn: false },
+        ]),
+        { hasPureHeart: true, pureHeartStacks: stacks },
+      );
+      const results = calculateOffense(input);
+      const expectedAvgHit = 200 * (1 + stacks * 0.05);
+      console.log(expectedAvgHit);
+      validate(results, skillName, { avgHit: expectedAvgHit });
+    });
+  });
+});

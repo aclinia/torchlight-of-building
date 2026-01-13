@@ -438,6 +438,29 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
           />
 
+          <label className="text-right text-zinc-50">Has Pure Heart</label>
+          <input
+            type="checkbox"
+            checked={config.hasPureHeart}
+            onChange={(e) => onUpdate({ hasPureHeart: e.target.checked })}
+            className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
+          />
+
+          {config.hasPureHeart && (
+            <>
+              <label className="text-right text-zinc-50">
+                Pure Heart Stacks
+                <InfoTooltip text="Defaults to 5 (Set to 6 if level 6 Azure)" />
+              </label>
+              <NumberInput
+                value={config.pureHeartStacks}
+                onChange={(v) => onUpdate({ pureHeartStacks: v })}
+                min={0}
+                max={6}
+              />
+            </>
+          )}
+
           <label className="text-right text-zinc-50">Enemy Numbed</label>
           <input
             type="checkbox"

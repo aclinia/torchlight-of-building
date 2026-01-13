@@ -198,6 +198,11 @@ export interface Configuration {
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor?: number;
 
+  // default to false
+  hasPureHeart: boolean;
+  // default to 5 can be set manually in config to 6 for level 6 Azure
+  pureHeartStacks?: number;
+
   // custom affix lines for injecting arbitrary mods
   customAffixLines?: string[];
 }
@@ -273,6 +278,8 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   enemyFireRes: undefined,
   enemyErosionRes: undefined,
   enemyArmor: undefined,
+  hasPureHeart: false,
+  pureHeartStacks: undefined,
   customAffixLines: undefined,
 };
 

@@ -398,6 +398,15 @@ const calculateImplicitMods = (): Mod[] => {
       src: "Additional Damage over TIme from desecration (15% per stack)",
     },
     {
+      type: "DmgPct",
+      value: 5,
+      dmgModType: "global",
+      addn: true,
+      per: { stackable: "pure_heart" },
+      cond: "has_pure_heart",
+      src: "Additional Damage from Pure Heart (5% per stack)",
+    },
+    {
       type: "AspdPct",
       value: 2,
       addn: true,
@@ -738,6 +747,7 @@ const filterModsByCond = (
           (offHand !== undefined && isOneHandedWeapon(offHand))
         );
       })
+      .with("has_pure_heart", () => config.hasPureHeart)
       .exhaustive();
   });
 };
@@ -1785,6 +1795,10 @@ const resolveModsForOffenseSkill = (
   if (resourcePool.hasFervor) {
     mods.push(calculateFervorCritRateMod(mods, resourcePool));
     normalize("fervor", resourcePool.fervorPts);
+  }
+
+  if (config.hasPureHeart) {
+    normalize("pure_heart", config.pureHeartStacks ?? 5);
   }
 
   if (skill.tags.includes("Shadow Strike")) {
