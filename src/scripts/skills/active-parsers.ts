@@ -162,21 +162,12 @@ export const chargingWarcryParser: SupportLevelParser = (input) => {
   const dmgMatch = findMatch(
     firstDescription,
     ts(
-      "shadow strike skills gain {dmg:int%} additional damage for every enemy",
+      "shadow strike skills gain {dmg:int%} additional damage and Ailment Damage for every enemy",
     ),
     skillName,
   );
 
-  const aspdMatch = findMatch(
-    firstDescription,
-    ts("shadow strike skills gain {aspd:+int%} additional attack speed"),
-    skillName,
-  );
-
-  return {
-    shadowStrikeSkillDmgPerEnemy: createConstantLevels(dmgMatch.dmg),
-    shadowStrikeSkillAspd: createConstantLevels(aspdMatch.aspd),
-  };
+  return { shadowStrikeSkillDmgPerEnemy: createConstantLevels(dmgMatch.dmg) };
 };
 
 export const mindControlParser: SupportLevelParser = (input) => {

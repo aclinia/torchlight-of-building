@@ -159,12 +159,6 @@ export const activeSkillModFactories: Partial<
         value: v(vals.shadowStrikeSkillDmgPerEnemy, l),
         per: { stackable: "num_enemies_affected_by_warcry" },
       },
-      {
-        // TODO: THIS SHOULD ONLY AFFECT SHADOW STRIKE SKILLS
-        type: "AspdPct",
-        addn: true,
-        value: v(vals.shadowStrikeSkillAspd, l),
-      },
     ],
   }),
   "Entangled Pain": (l, vals) => ({

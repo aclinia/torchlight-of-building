@@ -103,7 +103,7 @@ export const ActivationMediumSkills = [
     tags: [],
     description: [
       "Supports Channeled Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
-      "When channeling the supported skill, sends 1 Instruction for every 2 stack(s) channeled.",
+      "When channeling the Supported Skill, sends 1 Instruction for every 2 stack(s) channeled",
     ],
     supportTargets: [{ tags: ["Channeled"] }],
     cannotSupportTargets: [],
@@ -417,8 +417,8 @@ export const ActivationMediumSkills = [
     description: [
       "Supports Active Skill that deal damage.\nCannot support Channeled Skills and Attack Mobility Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
       "Triggers the supported skill on the closest enemy within 20m every (0.4–1.0)s.",
-      "The next skill triggered by the supported skill deals +(6–7)% additional damage for every Instruction received during the trigger interval, up to +(54–63)% additional damage.",
-      "Manually used supported skills -80% additional damage",
+      "During the trigger interval, each Instruction adds +(6–7)% damage to the next skill triggered by the Supported Skill, up to +(54–63)% additional damage",
+      "-80% additional damage for manually used Supported Skill",
     ],
     supportTargets: [{ skillType: "active", requiredKind: "deal_damage" }],
     cannotSupportTargets: [
@@ -474,7 +474,7 @@ export const ActivationMediumSkills = [
     tags: [],
     description: [
       "Supports Restoration Skills.\nCannot support Channeled Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
-      "When HP is lower than (20–95)% , always attempts to trigger the supported skill. This effect will be invalid while a Restoration Skill Effect is active.",
+      "Always attempts to trigger the Supported Skill when HP is lower than (20–95)% . Disabled while any Restoration Skill is active",
       "<Cooldown Recovery Speed or Duration Bonus>",
     ],
     supportTargets: [{ tags: ["Restoration"] }],
@@ -1051,7 +1051,7 @@ export const ActivationMediumSkills = [
       "Supports Active Skill that deal damage.\nCannot support Channeled Skills and Attack Mobility Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
       "Triggers the supported skill on the closest enemy within 20m every (0.3–0.5)s.",
       "The next skill triggered by the supported skill +3% additional damage for every 1m of movement made during the trigger interval, up to +(18–21)%.",
-      "Manually used supported skills -80% additional damage",
+      "-80% additional damage for manually used Supported Skill",
     ],
     supportTargets: [{ skillType: "active", requiredKind: "deal_damage" }],
     cannotSupportTargets: [
@@ -1188,7 +1188,7 @@ export const ActivationMediumSkills = [
     description: [
       "Supports Attack Skills that deal damage.\nCannot support Passive Skills and Channeled Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
       "Automatically attempts to use a supported Attack Skill on the closest enemy when stopping moving. Interval: (0.2–0.3) s",
-      "The next time when a skill is automatically used, the supported skill +(10–20)% additional damage for every 1m of movement made, up to +(46–65)% . When performing a Multistrike, the bonus will last until the Multistrike ends.",
+      "Every 1m moved adds +(10–20)% damage to the next auto used supported skill, up to +(46–65)% . During Multistrike, the bonus persists until the multistrike ends",
     ],
     supportTargets: [{ tags: ["Attack"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
@@ -1241,7 +1241,7 @@ export const ActivationMediumSkills = [
     tags: [],
     description: [
       "Supports Sentry Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
-      "Always attempts to trigger the supported skill when there are no Sentries within (10–20) m. Interval: 0.3 s.",
+      "Always attempts to trigger the Supported Skill if no Sentries are within (10–20) m. Interval: 0.3 s",
       "+(16–19)% additional damage for the supported skill",
       "+2 Sentries that can be deployed at a time by the supported skill",
     ],
@@ -1534,7 +1534,7 @@ export const ActivationMediumSkills = [
     tags: [],
     description: [
       "Supports Attack Skills that deal damage.\nCannot support Passive Skills and Channeled Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
-      "Automatically attacks the closest enemy within 25m continuously with the supported Attack Skill while standing still.",
+      "Automatically use the Supported Attack Skill to continuously attack the nearest enemy within 25m while standing still",
       "The supported skill is supported by Lv. (16–20) Willpower",
     ],
     supportTargets: [{ tags: ["Attack"], requiredKind: "deal_damage" }],
@@ -1639,7 +1639,7 @@ export const ActivationMediumSkills = [
       "Supports Spell Skills that deal damage.\nCannot support Passive Skills and Channeled Skills.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.",
       "Always attempts to trigger the supported skill on the closest enemy within 25m. Cooldown: 0.6 s",
       "(80–85)% of the bonuses and additional bonuses for Cast Speed is also applied to the Cooldown Recovery Speed of this Support Skill and the supported skill",
-      "Manually used supported skills -80% additional damage",
+      "-80% additional damage for manually used Supported Skill",
     ],
     supportTargets: [{ tags: ["Spell"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
