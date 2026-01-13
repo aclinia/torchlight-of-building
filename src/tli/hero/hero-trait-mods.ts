@@ -128,6 +128,38 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
       per: { stackable: "mercury_pt" },
     },
   ],
+  "Spacetime Elapse": () => [
+    { type: "DmgPct", dmgModType: "erosion", addn: true, value: 30 },
+  ],
+  "Spacetime Speed-up": (i) => [
+    { type: "SpaceTimeSpeedUp" },
+    {
+      type: "DmgPct",
+      dmgModType: "erosion",
+      addn: true,
+      value: [5, 6.5, 8, 9.5, 11][i],
+      per: { stackable: "twisted_spacetime" },
+    },
+  ],
+  "Spacetime Upheaval": (i) => [
+    {
+      type: "DmgPct",
+      dmgModType: "damage_over_time",
+      addn: true,
+      value: [30, 37, 44, 51, 58][i],
+    },
+  ],
+  "Spacetime Cutting": (i) => [
+    { type: "DmgTakenPct", addn: true, value: [-10, -14, -18, -21, -24][i] },
+  ],
+  "Spacetime Pause": (i) => [
+    {
+      type: "DmgPct",
+      dmgModType: "erosion",
+      addn: true,
+      value: [60, 70, 80, 90, 100][i],
+    },
+  ],
 };
 
 export const getHeroTraitMods = (name: HeroTraitName, level: number): Mod[] => {

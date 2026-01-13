@@ -1949,6 +1949,10 @@ const resolveModsForOffenseSkill = (
   normalize("willpower", willpowerStacks);
   normalize("frostbite_rating", frostbitten.points);
 
+  if (modExists(mods, "SpaceTimeSpeedUp")) {
+    normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
+  }
+
   pushProjectiles();
   pushFervor();
   pushShadowStrike();

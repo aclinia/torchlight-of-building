@@ -103,6 +103,7 @@ export const ConfigurationPageSchema = z
     enemyFireRes: z.number().optional().catch(d.enemyFireRes),
     enemyErosionRes: z.number().optional().catch(d.enemyErosionRes),
     enemyArmor: z.number().optional().catch(d.enemyArmor),
+    twistedSpacetimeStacks: z.number().optional().catch(d.twistedSpacetimeStacks),
     customAffixLines: z.array(z.string()).optional().catch(d.customAffixLines),
   })
   .catch(DEFAULT_CONFIGURATION) satisfies z.ZodType<Configuration>;

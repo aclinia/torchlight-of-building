@@ -127,7 +127,8 @@ export type Stackable =
   // hero-specific
   | "stalker"
   // pactspirit-specific
-  | "repentance";
+  | "repentance"
+  | "twisted_spacetime";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -443,6 +444,9 @@ interface ModDefinitions {
   GeneratesSquidnova: object;
   // legendary gear
   DisableMainStatDmg: object;
+  // youga 2
+  SpaceTimeSpeedUp: object;
+  TwistedSpacetimeStacks: { value: number };
 }
 
 // Generate the Mod union type from ModDefinitions
