@@ -2926,6 +2926,41 @@ export const Legendaries: readonly Legendary[] = [
     equipmentType: "Ring",
   },
   {
+    baseItem: "Footman's Chestguard",
+    baseStat: "+274 Gear Armor",
+    name: "Futile Tradeoff",
+    normalAffixes: [
+      "+1% Max Life",
+      "+1% Max Energy Shield",
+      "+1% Max Mana",
+      {
+        choiceDescriptor: "Random stat affix",
+        choices: [
+          "+(165-230) Strength. -100 Dexterity and Intelligence",
+          "+(165-230) Dexterity. -100 Strength and Intelligence",
+          "+(165-230) Intelligence. -100 Dexterity and Strength",
+        ],
+      },
+      "When the sum of All Stats is (165-240) or less, -20% additional Elemental Damage taken",
+    ],
+    corruptionAffixes: [
+      "+5% Max Life",
+      "+5% Max Energy Shield",
+      "+5% Max Mana",
+      {
+        choiceDescriptor: "Random stat affix",
+        choices: [
+          "+(250-300) Strength. -100 Dexterity and Intelligence",
+          "+(250-300) Dexterity. -100 Strength and Intelligence",
+          "+(250-300) Intelligence. -100 Dexterity and Strength",
+        ],
+      },
+      "When the sum of All Stats is (280-300) or less, -20% additional Elemental Damage taken",
+    ],
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (STR)",
+  },
+  {
     baseItem: "Shaman's Short Robe",
     baseStat: "+50 gear Energy Shield",
     name: "Gauze of Phantom Sin",
@@ -3772,6 +3807,25 @@ export const Legendaries: readonly Legendary[] = [
     equipmentType: "One-Handed Hammer",
   },
   {
+    baseItem: "Ranger's Broken Mask",
+    baseStat: "+1920 Gear Armor",
+    name: "Iron and Bloom",
+    normalAffixes: [
+      "+(6-8)% Minion Attack and Cast Speed",
+      "The damage of Minion Multistrikes increments by an additional (60-80)%",
+      "+1 initial Multistrike Count for Minions",
+      "+(8-10)% Elemental Resistance",
+    ],
+    corruptionAffixes: [
+      "+(10-12)% Minion Attack and Cast Speed",
+      "The damage of Minion Multistrikes increments by an additional (90-100)%",
+      "+2% chance for this attack of Synthetic Troop Minions to deal damage equal to the Max Multistrike Count for every 1 Command",
+      "+(11-13)% Elemental Resistance",
+    ],
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+  },
+  {
     baseItem: "Lunar Corona Necklace",
     baseStat: "+8 Intelligence",
     name: "Iron Nest",
@@ -4307,6 +4361,25 @@ export const Legendaries: readonly Legendary[] = [
     equipmentType: "Helmet (STR)",
   },
   {
+    baseItem: "All Magic Crown",
+    baseStat: "+120 gear Energy Shield",
+    name: "Malign Embrace",
+    normalAffixes: [
+      "+(250-350) gear Energy Shield",
+      "+2 Max Tangle Quantity",
+      "+(15-20)% additional damage on Critical Strike for each activated Tangle",
+      "Unlucky Critical Strike",
+    ],
+    corruptionAffixes: [
+      "+(400-450) gear Energy Shield",
+      "+2 Max Tangle Quantity\n+(12-20)% additional Spell Damage",
+      "+(21-25)% additional damage on Critical Strike for each activated Tangle",
+      "Unlucky Critical Strike\n+(12-20)% additional Critical Strike Rating",
+    ],
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (INT)",
+  },
+  {
     baseItem: "Prospector Handguards",
     baseStat: "+599 gear Evasion",
     name: "Marksman Bracers",
@@ -4646,6 +4719,25 @@ export const Legendaries: readonly Legendary[] = [
       "+(385-455) Max Energy Shield",
       "[Shrink Back] Gains Barrier every 1s\n+50% Barrier Shield\n(-20--10)% additional Regain Interval",
       "Adds (16-20)% of Max Life to Energy Shield",
+    ],
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+  },
+  {
+    baseItem: "Shaman's Necklace",
+    baseStat: "+5 Intelligence",
+    name: "Old Grudge",
+    normalAffixes: [
+      "+(10-16)% Max Life, Max Mana, and Max Energy Shield",
+      "+1 Max Tangle Quantity",
+      "+50% Tangle Duration",
+      "+(50-80) Tangle Critical Strike Rating",
+    ],
+    corruptionAffixes: [
+      "+(20-24)% Max Life, Max Mana, and Max Energy Shield",
+      "+1 Max Tangle Quantity\n+(10-15)% Tangle Damage Enhancement",
+      "+70% Tangle Duration",
+      "+(100-120) Tangle Critical Strike Rating",
     ],
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
@@ -5771,6 +5863,25 @@ export const Legendaries: readonly Legendary[] = [
     equipmentType: "Shield (STR)",
   },
   {
+    baseItem: "Ranger's Rag",
+    baseStat: "+2240 Gear Armor",
+    name: "Silent Avowal",
+    normalAffixes: [
+      "Castling",
+      "Cause Without Effect",
+      "Wield My Sword",
+      "Absolve My Sin",
+    ],
+    corruptionAffixes: [
+      "Castling\n+(20-25)% Attack and Spell Block Chance",
+      "Cause Without Effect\n+(20-25)% Attack and Spell Block Chance",
+      "Wield My Sword\n+(12-15)% Block Ratio",
+      "Absolve My Sin\n+(12-15)% Block Ratio",
+    ],
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (STR)",
+  },
+  {
     baseItem: "Wayfarer Waistguard",
     baseStat: "+110 Max Life",
     name: "Silent Observer",
@@ -6131,6 +6242,26 @@ export const Legendaries: readonly Legendary[] = [
     equipmentType: "Shield (INT)",
   },
   {
+    baseItem: "Scarlet River Claw",
+    baseStat:
+      "57 - 57 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
+    name: "Throat-Slasher",
+    normalAffixes: [
+      "Adds (21-23) - (25-27) Physical Damage to the gear",
+      "+25% Gear Physical Damage",
+      "+(1-100)% Attack Critical Strike Rating for this gear",
+      "+100 Attack Critical Strike Rating if you haven't used a Main Skill recently",
+    ],
+    corruptionAffixes: [
+      "Adds (36-38) - (44-46) Physical Damage to the gear",
+      "+(30-35)% Gear Physical Damage",
+      "+123% Attack Critical Strike Rating for this gear",
+      "+150 Attack Critical Strike Rating if you haven't used a Main Skill recently",
+    ],
+    equipmentSlot: "One-Handed",
+    equipmentType: "Claw",
+  },
+  {
     baseItem: "Battlefield Longsword",
     baseStat:
       "16 - 16 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
@@ -6328,6 +6459,23 @@ export const Legendaries: readonly Legendary[] = [
     ],
     equipmentSlot: "Helmet",
     equipmentType: "Helmet (DEX)",
+  },
+  {
+    baseItem: "Prospector's Short Boots",
+    baseStat: "+599 gear Evasion",
+    name: "Trickster's Tread",
+    normalAffixes: [
+      "+(20-30)% Movement Speed",
+      "+(20-30)% Attack Speed",
+      "Has Hasten when reaching Max Agility Blessing stacks",
+    ],
+    corruptionAffixes: [
+      "+40% Movement Speed",
+      "+(30-40)% Attack Speed",
+      "When having Agility Blessing, has Hasten",
+    ],
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (DEX)",
   },
   {
     baseItem: "Demon Slayer's Skin",
@@ -6658,6 +6806,23 @@ export const Legendaries: readonly Legendary[] = [
     ],
     equipmentSlot: "Chest Armor",
     equipmentType: "Chest Armor (STR)",
+  },
+  {
+    baseItem: "Hunter's Gloves",
+    baseStat: "+461 gear Evasion",
+    name: "Vendetta's Sleeve-Blade",
+    normalAffixes: [
+      "+(50-60) Max Life",
+      "+(20-30) Dexterity",
+      "+(40-80)% Melee Damage if you have recently moved more than 10 m",
+    ],
+    corruptionAffixes: [
+      "+(70-100) Max Life",
+      "+(35-50) Dexterity",
+      "+(90-120)% Melee Damage if you have recently moved more than 10 m",
+    ],
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (DEX)",
   },
   {
     baseItem: "Long Night Sorcerer's Boots",

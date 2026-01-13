@@ -190,7 +190,10 @@ const extractCodexLegendaryData = (
 
     const equipmentSlot = $(tds[0]).text().trim() as EquipmentSlot;
     const equipmentType = $(tds[1]).text().trim() as EquipmentType;
-    const name = $(tds[2]).text().trim();
+
+    // Search for the span with class = name
+    const nameSpan = $(tds[2]).find("span.name").get(0);
+    const name = $(nameSpan).text().trim();
 
     if (name) {
       legendaryMap.set(name, { equipmentSlot, equipmentType });
@@ -445,6 +448,7 @@ const main = async (options: Options): Promise<void> => {
 
     // Step 3: Merge with codex data
     const codexInfo = codexLegendaryMap.get(tlidbData.name);
+    console.log(tlidbData.name);
     if (!codexInfo) {
       console.warn(`No codex data found for: ${tlidbData.name} - skipping`);
       skippedCount++;
