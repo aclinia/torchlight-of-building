@@ -1,17 +1,28 @@
-import { i18n } from "@lingui/core";
-import { messages as enCommonMessages } from "@/src/locales/en/common";
-import { messages as enLegendariesMessages } from "@/src/locales/en/legendaries";
-import { messages as enTalentMessages } from "@/src/locales/en/talents";
-import { messages as zhCommonMessages } from "@/src/locales/zh/common";
-import { messages as zhLegendariesMessages } from "@/src/locales/zh/legendaries";
-import { messages as zhTalentMessages } from "@/src/locales/zh/talents";
+import { i18n, type Messages } from "@lingui/core";
 
 export type Locale = "en" | "zh";
 
-const localeMessages: Record<Locale, typeof enCommonMessages> = {
-  en: { ...enCommonMessages, ...enLegendariesMessages, ...enTalentMessages },
-  zh: { ...zhCommonMessages, ...zhLegendariesMessages, ...zhTalentMessages },
-};
+const modules = ["common", "legendaries", "talents"] as const;
+
+async function loadMessages(locale: Locale): Promise<Messages> {
+  const allMessages: Messages = {};
+
+  await Promise.all(
+    modules.map(async (module) => {
+      try {
+        const mod = await import(`../locales/${locale}/${module}`);
+        if (mod.messages) {
+          Object.assign(allMessages, mod.messages);
+        }
+      } catch (e) {
+        console.warn(`[i18n] Failed to load ${locale}/${module}:`, e);
+      }
+    }),
+  );
+  return allMessages;
+}
+
+const messageCache: Record<Locale, Messages | null> = { en: null, zh: null };
 
 export const defaultLocale: Locale = "en";
 
@@ -20,8 +31,13 @@ export const SUPPORTED_LOCALES = [
   { locale: "zh" as const, name: "简体中文" },
 ] as const;
 
-export const loadLocale = (locale: Locale): void => {
-  i18n.load(locale, localeMessages[locale]);
+export const loadLocale = async (locale: Locale): Promise<void> => {
+  let messages = messageCache[locale];
+  if (!messages) {
+    messages = await loadMessages(locale);
+    messageCache[locale] = messages;
+  }
+  i18n.load(locale, messages);
   i18n.activate(locale);
 };
 
@@ -50,9 +66,9 @@ export const detectBrowserLocale = (): Locale => {
   return defaultLocale;
 };
 
-export const setStoredLocale = (locale: Locale): void => {
+export const setStoredLocale = async (locale: Locale): Promise<void> => {
   localStorage.setItem("locale", locale);
-  loadLocale(locale);
+  await loadLocale(locale);
 };
 
 // Initialize with stored locale, or auto-detect from browser language
@@ -68,7 +84,8 @@ const initialLocale = ((): Locale => {
   setStoredLocale(detected);
   return detected;
 })();
-loadLocale(initialLocale);
+
+await loadLocale(initialLocale);
 
 // Expose for debugging
 if (typeof window !== "undefined") {
