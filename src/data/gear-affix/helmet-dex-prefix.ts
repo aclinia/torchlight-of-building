@@ -477,7 +477,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Converts (16-20)% of Physical Damage taken to Lightning Damage",
+      "Converts (21-26)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -486,7 +486,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
+      "Converts (16-20)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -495,7 +495,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Converts (7-8)% of Physical Damage taken to Lightning Damage",
+      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -503,7 +503,8 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "3",
-    craftableAffix: "Converts 6% of Physical Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (8-9)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -639,7 +640,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Converts (36-45)% of Erosion Damage taken to Lightning Damage",
+      "Converts (46-60)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -648,7 +649,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
+      "Converts (36-45)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -657,7 +658,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Converts (20-26)% of Erosion Damage taken to Lightning Damage",
+      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",

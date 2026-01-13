@@ -130,7 +130,7 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
+      "Converts (16-20)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -139,7 +139,7 @@ export const HELMET_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
+      "Converts (36-45)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",

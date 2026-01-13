@@ -39,6 +39,14 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
+    craftableAffix: "+1% Elemental Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
     craftableAffix: "+4% Fire Resistance",
   },
   {
@@ -64,6 +72,14 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix: "+4% Erosion Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
+    craftableAffix: "+2% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -103,6 +119,14 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
+    craftableAffix: "+3% Elemental Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
     craftableAffix: "+9% Fire Resistance",
   },
   {
@@ -128,6 +152,14 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix: "+9% Erosion Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
+    craftableAffix: "+4% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -167,6 +199,14 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
+    craftableAffix: "+5% Elemental Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
     craftableAffix: "+12% Fire Resistance",
   },
   {
@@ -192,5 +232,13 @@ export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix: "+12% Erosion Resistance",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Base Stats",
+    craftingPool: "",
+    tier: "",
+    craftableAffix: "+6% Elemental Resistance",
   },
 ];

@@ -33,7 +33,7 @@ export const TWO_HANDED_HAMMER_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Corrosion Base",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "+(15-25)% gear Physical Damage",
+      craftableAffix: "+(15-25)% Gear Physical Damage",
     },
     {
       equipmentSlot: "Two-Handed",

@@ -8,7 +8,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "7 - 7 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "7 - 7 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,7 +17,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "8 - 8 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "8 - 8 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -26,7 +26,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "10 - 10 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "10 - 10 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -35,7 +35,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "12 - 12 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "12 - 12 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -44,7 +44,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "16 - 16 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "16 - 16 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -53,7 +53,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "20 - 20 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "20 - 20 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -62,7 +62,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "25 - 25 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "25 - 25 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -71,7 +71,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "31 - 31 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "31 - 31 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -80,7 +80,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "37 - 37 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "37 - 37 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -89,7 +89,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "43 - 43 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "43 - 43 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -98,7 +98,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "50 - 50 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "50 - 50 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -107,7 +107,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "60 - 60 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "60 - 60 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -116,7 +116,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "70 - 70 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "70 - 70 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -125,7 +125,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "90 - 90 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "90 - 90 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -134,7 +134,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "110 - 110 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "110 - 110 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -143,7 +143,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "135 - 135 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "135 - 135 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,7 +152,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "160 - 160 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "160 - 160 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -161,7 +161,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "175 - 175 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "175 - 175 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -170,7 +170,7 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "190 - 190 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "190 - 190 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -179,6 +179,6 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "",
     craftableAffix:
-      "220 - 220 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
+      "220 - 220 Physical Damage500 Critical Strike Rating1.5 Attack Speed",
   },
 ];

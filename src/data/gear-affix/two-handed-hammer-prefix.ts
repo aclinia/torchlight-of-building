@@ -247,7 +247,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(81-104)% gear Physical Damage",
+    craftableAffix: "+(81-104)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -255,7 +255,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(49-80)% gear Physical Damage",
+    craftableAffix: "+(49-80)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -263,7 +263,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "+(33-48)% gear Physical Damage",
+    craftableAffix: "+(33-48)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -271,7 +271,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "+(22-32)% gear Physical Damage",
+    craftableAffix: "+(22-32)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -279,7 +279,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+(9-21)% gear Physical Damage",
+    craftableAffix: "+(9-21)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -405,14 +405,6 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Hammer",
     affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
-    craftableAffix: "+(46-59)% Attack and Spell Block Chance",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Hammer",
-    affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix: "+(51-64)% Armor DMG Mitigation Penetration",
@@ -512,7 +504,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(111-145)% gear Physical Damage\nAdds (69-71) - (85-87) Physical Damage to the gear",
+      "+(111-145)% Gear Physical Damage\nAdds (69-71) - (85-87) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -521,7 +513,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(77-110)% gear Physical Damage\nAdds (53-55) - (65-67) Physical Damage to the gear",
+      "+(77-110)% Gear Physical Damage\nAdds (53-55) - (65-67) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -530,7 +522,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (77-79) - (438-440) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (77-79) - (438-440) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -539,7 +531,7 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (59-61) - (337-339) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (59-61) - (337-339) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -548,6 +540,6 @@ export const TWO_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Adds (23-25) - (133-135) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (23-25) - (133-135) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
 ];

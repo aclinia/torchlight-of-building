@@ -643,6 +643,24 @@ export const NECKLACE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
+    craftableAffix:
+      "Has Profane. Minions have Profane\n+(40-50)% Erosion Damage\n+(40-50)% Minion Erosion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Has Profane. Minions have Profane\n+(20-30)% Erosion Damage\n+(20-30)% Minion Erosion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
     craftableAffix: "+(33-42)% Deterioration Chance",
   },
   {
@@ -764,6 +782,24 @@ export const NECKLACE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "3",
     craftableAffix: "Multistrikes deal (17-20)% increasing damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix:
+      "You can apply 1 additional Tangle(s) to enemies\n+(12-15)% Tangle Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix:
+      "You can apply 1 additional Tangle(s) to enemies\n+(5-8)% Tangle Damage Enhancement",
   },
   {
     equipmentSlot: "Trinket",

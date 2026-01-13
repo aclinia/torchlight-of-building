@@ -7,7 +7,7 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Gloves",
@@ -31,7 +31,7 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts 50% Physical Damage to Fire Damage",
+    craftableAffix: "Converts 50% of Physical Damage to Fire Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -63,7 +63,7 @@ export const GLOVES_DEX_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% chance to cause Blinding on hit",
+    craftableAffix: "+(15-20)% chance to Blind the target on hit",
   },
   {
     equipmentSlot: "Gloves",

@@ -129,6 +129,6 @@ export const ROD_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
 ];

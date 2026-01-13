@@ -88,7 +88,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(11-15)% Movement Speed",
+    craftableAffix: "+(8-10)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -112,7 +112,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -120,16 +120,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Spirit Ring",
-    affixType: "Base Affix",
-    craftingPool: "",
-    tier: "0",
-    craftableAffix:
-      "Triggers Lv. 20 Blind Curse upon inflicting damage. Cooldown: 0.2 s",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -138,7 +129,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20 Timid Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Dazzled Curse when Minions deal damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -147,7 +138,16 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20 Entangled Pain Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Timid Curse when Minions deal damage. Cooldown: 0.2 s",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "0",
+    craftableAffix:
+      "Triggers Lv. 20 Entangled Pain Curse when Minions deal damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -172,5 +172,23 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix: "Immune to curse",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix:
+      "Gains Attack Aggression when Minions land a Critical Strike",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix:
+      "Gains Spell Aggression when Minion Spells land a Critical Strike",
   },
 ];

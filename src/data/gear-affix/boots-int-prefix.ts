@@ -605,6 +605,14 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
+    craftableAffix: "Converts (21-26)% of Physical Damage taken to Cold Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
     craftableAffix: "Converts (16-20)% of Physical Damage taken to Cold Damage",
   },
   {
@@ -612,7 +620,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentType: "Boots (INT)",
     affixType: "Prefix",
     craftingPool: "Ultimate",
-    tier: "1",
+    tier: "2",
     craftableAffix: "Converts (12-15)% of Physical Damage taken to Cold Damage",
   },
   {
@@ -620,16 +628,8 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentType: "Boots (INT)",
     affixType: "Prefix",
     craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix: "Converts (7-8)% of Physical Damage taken to Cold Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (46-60)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -637,7 +637,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -645,7 +645,52 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (20-26)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix:
+      "-45% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix:
+      "-40% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix:
+      "-35% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "3",
+    craftableAffix:
+      "-30% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "4",
+    craftableAffix:
+      "-25% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
   },
   {
     equipmentSlot: "Boots",

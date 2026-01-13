@@ -130,7 +130,7 @@ export const HELMET_DEX_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
+      "Converts (16-20)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -139,7 +139,7 @@ export const HELMET_DEX_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
+      "Converts (36-45)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -149,5 +149,13 @@ export const HELMET_DEX_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "1",
     craftableAffix:
       "When dealing damage, inflicts Lightning Infiltration. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Lightning Infiltration. Interval for each enemy: 1 s",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (DEX)",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "Has Profane. Minions have Profane",
   },
 ];

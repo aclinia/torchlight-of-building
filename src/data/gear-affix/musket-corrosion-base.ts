@@ -32,7 +32,7 @@ export const MUSKET_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-25)% gear Physical Damage",
+    craftableAffix: "+(15-25)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -72,6 +72,6 @@ export const MUSKET_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12-15)% chance for Attacks to cause Ailment",
+    craftableAffix: "+(12-15)% chance for Attacks to inflict Damaging Ailments",
   },
 ];

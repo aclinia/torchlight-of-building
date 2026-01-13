@@ -435,7 +435,7 @@ export const GLOVES_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84-108)% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -443,7 +443,7 @@ export const GLOVES_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59-83)% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -451,7 +451,7 @@ export const GLOVES_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "+(43-58)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(43-58)% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -459,7 +459,7 @@ export const GLOVES_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "3",
-    craftableAffix: "+(34-42)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(34-42)% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",

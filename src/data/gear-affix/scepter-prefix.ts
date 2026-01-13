@@ -128,7 +128,7 @@ export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps (0.19-0.24) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.19-0.24) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -137,7 +137,7 @@ export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps (0.13-0.18) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.13-0.18) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -146,7 +146,7 @@ export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "2",
     craftableAffix:
-      "Reaps (0.09-0.12) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.09-0.12) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -155,7 +155,7 @@ export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "3",
     craftableAffix:
-      "Reaps 0.08 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps 0.08 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -164,7 +164,7 @@ export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "4",
     craftableAffix:
-      "Reaps 0.07 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps 0.07 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",

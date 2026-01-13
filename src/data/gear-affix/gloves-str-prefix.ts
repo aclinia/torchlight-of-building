@@ -87,38 +87,6 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(26-37)% Frostbite inflicted",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (STR)",
-    affixType: "Prefix",
-    craftingPool: "Basic",
-    tier: "1",
-    craftableAffix: "+(20-25)% Frostbite inflicted",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (STR)",
-    affixType: "Prefix",
-    craftingPool: "Basic",
-    tier: "2",
-    craftableAffix: "+(16-19)% Frostbite inflicted",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (STR)",
-    affixType: "Prefix",
-    craftingPool: "Basic",
-    tier: "3",
-    craftableAffix: "+(12-15)% Frostbite inflicted",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (STR)",
-    affixType: "Prefix",
-    craftingPool: "Basic",
-    tier: "0",
     craftableAffix: "+(73-94)% damage",
   },
   {
@@ -591,7 +559,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9-10)% additional Fire Damage and +(16-18)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
+      "+(9-10)% additional Fire Damage and +(16-18)% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -600,7 +568,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6-8)% additional Fire Damage and +(12-15)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
+      "+(6-8)% additional Fire Damage and +(12-15)% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -609,7 +577,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "+(3-5)% additional Fire Damage and +(9-11)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
+      "+(3-5)% additional Fire Damage and +(9-11)% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -618,7 +586,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9-10)% additional Lightning Damage and +(16-18)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
+      "+(9-10)% additional Lightning Damage and +(16-18)% Lightning Penetration when you have at least 8 stack(s) of Agility Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -627,7 +595,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6-8)% additional Lightning Damage and +(12-15)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
+      "+(6-8)% additional Lightning Damage and +(12-15)% Lightning Penetration when you have at least 8 stack(s) of Agility Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -636,7 +604,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "+(3-5)% additional Lightning Damage and +(9-11)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
+      "+(3-5)% additional Lightning Damage and +(9-11)% Lightning Penetration when you have at least 8 stack(s) of Agility Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -645,7 +613,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9-10)% additional Cold Damage and +(16-18)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
+      "+(9-10)% additional Cold Damage and +(16-18)% Cold Penetration when you have at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -654,7 +622,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6-8)% additional Cold Damage and +(12-15)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
+      "+(6-8)% additional Cold Damage and +(12-15)% Cold Penetration when you have at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -663,7 +631,7 @@ export const GLOVES_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "+(3-5)% additional Cold Damage and +(9-11)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
+      "+(3-5)% additional Cold Damage and +(9-11)% Cold Penetration when you have at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",

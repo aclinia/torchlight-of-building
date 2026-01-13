@@ -95,7 +95,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(11-15)% Movement Speed",
+    craftableAffix: "+(8-10)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -119,7 +119,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds 10 Base Ailment Damage",
+    craftableAffix: "Adds 10 - 10 Base Ailment Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -173,5 +173,13 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "0",
     craftableAffix:
       "Triggers Lv. 20 Corruption Curse upon inflicting damage. Cooldown: 0.2 s",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "Has Profane. Minions have Profane",
   },
 ];

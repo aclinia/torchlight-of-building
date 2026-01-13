@@ -476,7 +476,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (21-26)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -484,7 +484,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -492,7 +492,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (7-8)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -500,7 +500,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "3",
-    craftableAffix: "Converts 6% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (8-9)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -590,7 +590,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (46-60)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -598,7 +598,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -606,7 +606,7 @@ export const HELMET_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (20-26)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",

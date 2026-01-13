@@ -652,4 +652,28 @@ export const TIN_STAFF_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftableAffix:
       "+(50-70)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Tin Staff",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "+(110-130)% Tangle Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Tin Staff",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(80-100)% Tangle Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Tin Staff",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix: "+(50-70)% Tangle Damage Enhancement",
+  },
 ];

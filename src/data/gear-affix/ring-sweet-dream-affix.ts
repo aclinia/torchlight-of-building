@@ -87,7 +87,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(11-15)% Movement Speed",
+    craftableAffix: "+(8-10)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -112,7 +112,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -120,7 +120,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +1",
+    craftableAffix: "+1 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -128,7 +128,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,7 +137,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20 Blind Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Dazzled Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",

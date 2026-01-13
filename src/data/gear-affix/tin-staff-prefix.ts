@@ -487,7 +487,7 @@ export const TIN_STAFF_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Channeled Stacks +5",
+    craftableAffix: "+5 to Max Channeled Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -495,7 +495,7 @@ export const TIN_STAFF_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Channeled Stacks +4",
+    craftableAffix: "+4 to Max Channeled Stacks",
   },
   {
     equipmentSlot: "Two-Handed",

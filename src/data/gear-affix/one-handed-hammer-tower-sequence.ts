@@ -8,7 +8,7 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Tower Sequence",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+8% additional damage for Weapons",
+      craftableAffix: "+8% additional damage for Main-Hand Weapons",
     },
     {
       equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] 
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
+        "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to 250% of their Max Life to enemies within a 6 m radius",
     },
     {
       equipmentSlot: "One-Handed",
@@ -139,7 +139,7 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] 
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "+80% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
+        "+80% Gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
     },
     {
       equipmentSlot: "One-Handed",
@@ -156,7 +156,6 @@ export const ONE_HANDED_HAMMER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Tower Sequence",
       craftingPool: "",
       tier: "0",
-      craftableAffix:
-        "+25% Elemental Damage for the gear\n-25% gear Physical Damage",
+      craftableAffix: "+25% Gear Elemental Damage\n-25% Gear Physical Damage",
     },
   ];

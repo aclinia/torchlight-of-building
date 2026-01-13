@@ -15,7 +15,7 @@ export const BELT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Restoration Skills: +(30-40)% restoration effect",
+    craftableAffix: "Restoration Skills: +(30-40)% Restoration Effect",
   },
   {
     equipmentSlot: "Trinket",

@@ -79,7 +79,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(15-20)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(15-20)% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +1",
+    craftableAffix: "+1 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,6 +127,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
 ];

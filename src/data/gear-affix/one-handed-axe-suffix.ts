@@ -483,46 +483,6 @@ export const ONE_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(54-69)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix: "+(38-53)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix: "+(28-37)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "3",
-    craftableAffix: "+(22-27)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "4",
-    craftableAffix: "+(18-21)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "0",
     craftableAffix:
       "+30% Steep Strike chance.\n+(23-29)% additional Steep Strike Damage",
   },
@@ -561,51 +521,6 @@ export const ONE_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "4",
     craftableAffix:
       "+9% Steep Strike chance.\n+(8-9)% additional Steep Strike Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix:
-      "Adds 45% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix:
-      "Adds 38% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix:
-      "Adds 27% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "3",
-    craftableAffix:
-      "Adds 19% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "4",
-    craftableAffix:
-      "Adds 15% of the Main-Hand Weapon's damage to Base Trauma Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -697,5 +612,29 @@ export const ONE_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "2",
     craftableAffix:
       "+(25-35)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "+(55-65)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(40-50)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix: "+(25-35)% Ailment Damage Enhancement",
   },
 ];

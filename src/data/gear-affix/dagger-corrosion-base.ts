@@ -32,7 +32,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-25)% gear Physical Damage",
+    craftableAffix: "+(15-25)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -56,7 +56,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "(5-8)% chance to inflict 1 additional stacks of Wilt",
+    craftableAffix: "(5-8)% chance to inflict 1 additional stack(s) of Wilt",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,6 +73,6 @@ export const DAGGER_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Wilted enemies defeated by you will explode, dealing Secondary Erosion Damage equal to (5-10)% of their Max Life to enemies within a 5m radius",
+      "被你击败的凋零敌人会爆炸，对半径 6 米内的敌人造成被击败的敌人最大生命 (50-100)% 的真实伤害",
   },
 ];

@@ -129,7 +129,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -137,7 +137,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -155,5 +155,13 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "1",
     craftableAffix:
       "When dealing damage, inflicts Fire Infiltration. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Fire Infiltration. Interval for each enemy: 1 s",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "Has Profane. Minions have Profane",
   },
 ];

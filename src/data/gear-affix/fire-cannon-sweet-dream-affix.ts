@@ -119,7 +119,7 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -127,7 +127,7 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +1",
+    craftableAffix: "+1 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -135,7 +135,7 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -143,7 +143,7 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(24-32)% gear Physical Damage",
+    craftableAffix: "+(24-32)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,7 +159,7 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike\n(-80--50)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -168,6 +168,6 @@ export const FIRE_CANNON_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (250-300)% of their Max Life to enemies within a 6 m radius",
   },
 ];

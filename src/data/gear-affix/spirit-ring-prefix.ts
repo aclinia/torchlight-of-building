@@ -637,10 +637,46 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
+    craftableAffix:
+      "Gains Attack Aggression when Minions land a Critical Strike\n+(5-8)% additional Minion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Gains Attack Aggression when Minions land a Critical Strike\n+(3-4)% additional Minion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
+    craftableAffix:
+      "Gains Spell Aggression when Minion Spells land a Critical Strike\n+(5-8)% additional Minion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Gains Spell Aggression when Minion Spells land a Critical Strike\n+(3-4)% additional Minion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Tenacity Blessing Stacks +1\n+5% additional Minion Damage",
+      "+1 to Max Tenacity Blessing Stacks\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -648,7 +684,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Tenacity Blessing Stacks +1",
+    craftableAffix: "+1 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -657,7 +693,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Agility Blessing Stacks +1\n+5% additional Minion Damage",
+      "+1 to Max Agility Blessing Stacks\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -665,7 +701,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Agility Blessing Stacks +1",
+    craftableAffix: "+1 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -674,7 +710,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Focus Blessing Stacks +1\n+5% additional Minion Damage",
+      "+1 to Max Focus Blessing Stacks\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -682,7 +718,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Trinket",

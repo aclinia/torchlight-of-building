@@ -131,7 +131,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Converts (12-15)% of Physical Damage taken to Fire Damage",
+        "Converts (16-20)% of Physical Damage taken to Fire Damage",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -148,7 +148,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Converts (27-35)% of Erosion Damage taken to Fire Damage",
+        "Converts (36-45)% of Erosion Damage taken to Fire Damage",
     },
     {
       equipmentSlot: "Chest Armor",

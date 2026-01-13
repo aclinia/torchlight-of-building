@@ -407,7 +407,7 @@ export const ROD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Spirit Magi +(31-39)% chance to use an Enhanced Skill",
+    craftableAffix: "+(31-39)% chance for Spirit Magi to use an Enhanced Skill",
   },
   {
     equipmentSlot: "One-Handed",
@@ -415,7 +415,7 @@ export const ROD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Spirit Magi +(22-30)% chance to use an Enhanced Skill",
+    craftableAffix: "+(22-30)% chance for Spirit Magi to use an Enhanced Skill",
   },
   {
     equipmentSlot: "One-Handed",
@@ -423,7 +423,7 @@ export const ROD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "Spirit Magi +(16-21)% chance to use an Enhanced Skill",
+    craftableAffix: "+(16-21)% chance for Spirit Magi to use an Enhanced Skill",
   },
   {
     equipmentSlot: "One-Handed",
@@ -431,7 +431,7 @@ export const ROD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "Spirit Magi +(13-15)% chance to use an Enhanced Skill",
+    craftableAffix: "+(13-15)% chance for Spirit Magi to use an Enhanced Skill",
   },
   {
     equipmentSlot: "One-Handed",
@@ -439,7 +439,7 @@ export const ROD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "Spirit Magi +(11-12)% chance to use an Enhanced Skill",
+    craftableAffix: "+(11-12)% chance for Spirit Magi to use an Enhanced Skill",
   },
   {
     equipmentSlot: "One-Handed",

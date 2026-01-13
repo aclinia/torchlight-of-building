@@ -24,7 +24,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+25% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+25% Reaping Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+12% Movement Speed",
+    craftableAffix: "+10% Movement Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to 250% of their Max Life to enemies within a 6 m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -114,7 +114,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Upon inflicting damage, +5% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
+      "Upon inflicting damage, +8% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
   },
   {
     equipmentSlot: "One-Handed",
@@ -132,7 +132,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "+25% Movement Speed when standing on a Terra Skill. The effect lasts 2s.\n+100% Skill Area when standing on a Terra Skill. Lasts for 2 s",
+      "+20% Movement Speed when standing on a Terra Skill. The effect lasts 2s.\n+100% Skill Area when standing on a Terra Skill. Lasts for 2 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -149,6 +149,6 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Max Tenacity Blessing Stacks +1\nMax Focus Blessing Stacks -1\nMax Agility Blessing Stacks +1",
+      "+1 to Max Tenacity Blessing Stacks\n-1 to Max Focus Blessing Stacks\n+1 to Max Agility Blessing Stacks",
   },
 ];

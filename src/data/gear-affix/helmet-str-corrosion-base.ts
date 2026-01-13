@@ -7,7 +7,7 @@ export const HELMET_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1",
+    craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Helmet",
@@ -65,7 +65,7 @@ export const HELMET_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "(-50--30)% Cursed Effect",
+    craftableAffix: "(-50--30)% Curse effect against you",
   },
   {
     equipmentSlot: "Helmet",

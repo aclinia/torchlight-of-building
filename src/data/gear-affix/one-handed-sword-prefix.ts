@@ -247,8 +247,48 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
+    craftableAffix: "Adds 455 - 845 Base Ignite Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Prefix",
+    craftingPool: "Basic",
+    tier: "1",
+    craftableAffix: "Adds 350 - 650 Base Ignite Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Prefix",
+    craftingPool: "Basic",
+    tier: "2",
+    craftableAffix: "Adds 245 - 455 Base Ignite Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Prefix",
+    craftingPool: "Basic",
+    tier: "3",
+    craftableAffix: "Adds 175 - 325 Base Ignite Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Prefix",
+    craftingPool: "Basic",
+    tier: "4",
+    craftableAffix: "Adds 125 - 235 Base Ignite Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Prefix",
+    craftingPool: "Basic",
+    tier: "0",
     craftableAffix:
-      "Reaps (0.19-0.24) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.19-0.24) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -257,7 +297,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps (0.13-0.18) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.13-0.18) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -266,7 +306,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "2",
     craftableAffix:
-      "Reaps (0.09-0.12) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.09-0.12) s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -275,7 +315,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "3",
     craftableAffix:
-      "Reaps 0.08 s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps 0.08 s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -284,7 +324,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "4",
     craftableAffix:
-      "Reaps 0.07 s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps 0.07 s of Ignite Damage when dealing Damage Over Time. The effect has a 1 s Restoration Duration against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -300,7 +340,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(101-130)% gear Physical Damage",
+    craftableAffix: "+(101-130)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -308,7 +348,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(56-100)% gear Physical Damage",
+    craftableAffix: "+(56-100)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -316,7 +356,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "+(46-55)% gear Physical Damage",
+    craftableAffix: "+(46-55)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -324,7 +364,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "+(36-45)% gear Physical Damage",
+    craftableAffix: "+(36-45)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -332,7 +372,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+(26-35)% gear Physical Damage",
+    craftableAffix: "+(26-35)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -589,7 +629,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -598,7 +638,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -607,7 +647,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Adds (18-20) - (107-109) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (18-20) - (107-109) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",

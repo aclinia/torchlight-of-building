@@ -113,7 +113,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -137,6 +137,6 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
   },
 ];

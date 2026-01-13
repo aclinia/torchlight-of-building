@@ -487,7 +487,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (16-20)% of Physical Damage taken to Cold Damage",
+    craftableAffix: "Converts (21-26)% of Physical Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -495,7 +495,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (12-15)% of Physical Damage taken to Cold Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -503,7 +503,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (7-8)% of Physical Damage taken to Cold Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -512,7 +512,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (250-300)% of their Max Life to enemies within a 6 m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -521,7 +521,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 4 m radius",
+      "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (200-250)% of their Max Life to enemies within a 6 m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -553,7 +553,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "You can cast 1 additional Curses\n+(8-10)% curse effect",
+    craftableAffix: "You can cast 1 additional Curses\n+(8-10)% Curse Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -649,7 +649,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (46-60)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -657,7 +657,7 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -665,6 +665,51 @@ export const CHEST_ARMOR_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (20-26)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
+  },
+  {
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix:
+      "-45% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix:
+      "-40% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix:
+      "-35% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "3",
+    craftableAffix:
+      "-30% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  },
+  {
+    equipmentSlot: "Chest Armor",
+    equipmentType: "Chest Armor (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "4",
+    craftableAffix:
+      "-25% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
   },
 ];

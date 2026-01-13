@@ -120,7 +120,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Tenacity Blessing Stacks +1",
+      craftableAffix: "+1 to Max Tenacity Blessing Stacks",
     },
     {
       equipmentSlot: "Two-Handed",
@@ -128,7 +128,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Agility Blessing Stacks +1",
+      craftableAffix: "+1 to Max Agility Blessing Stacks",
     },
     {
       equipmentSlot: "Two-Handed",
@@ -136,7 +136,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Focus Blessing Stacks +1",
+      craftableAffix: "+1 to Max Focus Blessing Stacks",
     },
     {
       equipmentSlot: "Two-Handed",
@@ -144,7 +144,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(24-32)% gear Physical Damage",
+      craftableAffix: "+(24-32)% Gear Physical Damage",
     },
     {
       equipmentSlot: "Two-Handed",
@@ -161,6 +161,6 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
+        "Lucky Critical Strike\n(-80--50)% Critical Strike Rating",
     },
   ];

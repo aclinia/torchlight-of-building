@@ -7,7 +7,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Parabolic Projectile Splits quantity +(1-2)",
+    craftableAffix: "+(1-2) to Parabolic Projectile Splits quantity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -32,7 +32,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-25)% gear Physical Damage",
+    craftableAffix: "+(15-25)% Gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",

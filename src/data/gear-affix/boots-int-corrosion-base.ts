@@ -15,7 +15,7 @@ export const BOOTS_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +1",
+    craftableAffix: "+1 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "Boots",

@@ -120,7 +120,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Tenacity Blessing Stacks +1",
+      craftableAffix: "+1 to Max Tenacity Blessing Stacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -128,7 +128,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Agility Blessing Stacks +1",
+      craftableAffix: "+1 to Max Agility Blessing Stacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -136,6 +136,6 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "Max Focus Blessing Stacks +1",
+      craftableAffix: "+1 to Max Focus Blessing Stacks",
     },
   ];

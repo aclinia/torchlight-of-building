@@ -595,4 +595,28 @@ export const SHIELD_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftableAffix:
       "+(25-35)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
+  {
+    equipmentSlot: "Shield",
+    equipmentType: "Shield (STR)",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "+(55-65)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Shield",
+    equipmentType: "Shield (STR)",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(40-50)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Shield",
+    equipmentType: "Shield (STR)",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix: "+(25-35)% Ailment Damage Enhancement",
+  },
 ];

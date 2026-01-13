@@ -495,6 +495,24 @@ export const BELT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
+    craftableAffix:
+      "Has Profane. Minions have Profane\n+(40-50)% Erosion Damage\n+(40-50)% Minion Erosion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Belt",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Has Profane. Minions have Profane\n+(20-30)% Erosion Damage\n+(20-30)% Minion Erosion Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Belt",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
     craftableAffix: "+(33-42)% Deterioration Chance",
   },
   {
@@ -551,7 +569,7 @@ export const BELT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Channeled Stacks +2",
+    craftableAffix: "+2 to Max Channeled Stacks",
   },
   {
     equipmentSlot: "Trinket",
@@ -559,7 +577,7 @@ export const BELT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Channeled Stacks +1",
+    craftableAffix: "+1 to Max Channeled Stacks",
   },
   {
     equipmentSlot: "Trinket",

@@ -247,7 +247,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(101-130)% gear Physical Damage",
+    craftableAffix: "+(101-130)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -255,7 +255,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(56-100)% gear Physical Damage",
+    craftableAffix: "+(56-100)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -263,7 +263,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "+(46-55)% gear Physical Damage",
+    craftableAffix: "+(46-55)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -271,7 +271,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "+(36-45)% gear Physical Damage",
+    craftableAffix: "+(36-45)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -279,7 +279,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+(26-35)% gear Physical Damage",
+    craftableAffix: "+(26-35)% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -512,7 +512,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -521,7 +521,7 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -530,6 +530,6 @@ export const CANE_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Adds (18-20) - (107-109) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (18-20) - (107-109) Elemental Damage to the gear\n-100% Gear Physical Damage",
   },
 ];

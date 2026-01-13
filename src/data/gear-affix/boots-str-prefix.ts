@@ -610,6 +610,14 @@ export const BOOTS_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
+    craftableAffix: "Converts (21-26)% of Physical Damage taken to Fire Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (STR)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
     craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
   },
   {
@@ -617,7 +625,7 @@ export const BOOTS_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentType: "Boots (STR)",
     affixType: "Prefix",
     craftingPool: "Ultimate",
-    tier: "1",
+    tier: "2",
     craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
@@ -625,16 +633,8 @@ export const BOOTS_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentType: "Boots (STR)",
     affixType: "Prefix",
     craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix: "Converts (7-8)% of Physical Damage taken to Fire Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (STR)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (46-60)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -642,7 +642,7 @@ export const BOOTS_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -650,7 +650,7 @@ export const BOOTS_STR_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "Converts (20-26)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",

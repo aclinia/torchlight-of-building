@@ -491,46 +491,6 @@ export const TWO_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(106-137)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix: "+(75-105)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix: "+(54-74)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "3",
-    craftableAffix: "+(43-53)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "4",
-    craftableAffix: "+(39-42)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "0",
     craftableAffix:
       "+60% Steep Strike chance.\n+(49-62)% additional Steep Strike Damage",
   },
@@ -569,51 +529,6 @@ export const TWO_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "4",
     craftableAffix:
       "+18% Steep Strike chance.\n+(16-19)% additional Steep Strike Damage",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix:
-      "Adds 90% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix:
-      "Adds 77% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "2",
-    craftableAffix:
-      "Adds 54% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "3",
-    craftableAffix:
-      "Adds 39% of the Main-Hand Weapon's damage to Base Trauma Damage",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Axe",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "4",
-    craftableAffix:
-      "Adds 31% of the Main-Hand Weapon's damage to Base Trauma Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -705,5 +620,29 @@ export const TWO_HANDED_AXE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "2",
     craftableAffix:
       "+(50-70)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Two-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "+(110-130)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Two-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(80-100)% Ailment Damage Enhancement",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Two-Handed Axe",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "2",
+    craftableAffix: "+(60-70)% Ailment Damage Enhancement",
   },
 ];

@@ -88,7 +88,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to 250% of their Max Life to enemies within a 6 m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -148,6 +148,6 @@ export const WAND_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Max Tenacity Blessing Stacks -1\nMax Focus Blessing Stacks +1\nMax Agility Blessing Stacks +1",
+      "-1 to Max Tenacity Blessing Stacks\n+1 to Max Focus Blessing Stacks\n+1 to Max Agility Blessing Stacks",
   },
 ];

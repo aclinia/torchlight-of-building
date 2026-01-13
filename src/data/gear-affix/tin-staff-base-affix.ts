@@ -119,7 +119,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +2",
+    craftableAffix: "+2 to Max Tenacity Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -127,7 +127,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +2",
+    craftableAffix: "+2 to Max Agility Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -135,7 +135,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +2",
+    craftableAffix: "+2 to Max Focus Blessing Stacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,6 +144,14 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (250-300)% of their Max Life to enemies within a 6 m radius",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Tin Staff",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "Projectile Quantity +2",
   },
 ];

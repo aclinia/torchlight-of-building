@@ -129,7 +129,7 @@ export const HELMET_INT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (12-15)% of Physical Damage taken to Cold Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -137,7 +137,7 @@ export const HELMET_INT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -147,5 +147,13 @@ export const HELMET_INT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "1",
     craftableAffix:
       "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration. Interval for each enemy: 1 s",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (INT)",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "Has Profane. Minions have Profane",
   },
 ];

@@ -39,7 +39,7 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+12% Movement Speed",
+    craftableAffix: "+10% Movement Speed",
   },
   {
     equipmentSlot: "Shield",
