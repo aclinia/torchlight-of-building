@@ -118,7 +118,11 @@ const TraitItem = ({
     <Tooltip isVisible={isVisible} triggerRect={triggerRect} width="lg">
       <TooltipTitle>{trait.name}</TooltipTitle>
       <TooltipContent>
-        <div className="max-h-64 overflow-y-auto">{trait.affix}</div>
+        <div className="max-h-192 overflow-y-auto space-y-1">
+          {trait.affix.split("\n").map((line, idx) => (
+            <div key={idx}>{line}</div>
+          ))}
+        </div>
       </TooltipContent>
       {!implemented && (
         <>
