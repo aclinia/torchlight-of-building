@@ -440,8 +440,8 @@ interface ModDefinitions {
   GeneratesStalker: object;
   MaxStalker: { value: number };
   // youga 2
-  HasSpacetimeElapse: { value: number };
-  SpacetimeRecordedDmgMore: { value: number; perStack?: boolean };
+  SpacetimeElapsePct: { value: number };
+  SpacetimeRecordedDmgBonusPct: { value: number; perStack?: boolean };
   TwistedSpacetimeStacks: { value: number };
   // pactspirit stuff
   SquidnovaEffPct: { value: number };

@@ -128,10 +128,10 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
       per: { stackable: "mercury_pt" },
     },
   ],
-  "Spacetime Elapse": () => [{ type: "HasSpacetimeElapse", value: 30 }],
+  "Spacetime Elapse": () => [{ type: "SpacetimeElapsePct", value: 30 }],
   "Spacetime Speed-up": (i) => [
     {
-      type: "SpacetimeRecordedDmgMore",
+      type: "SpacetimeRecordedDmgBonusPct",
       value: [5, 6.5, 8, 9.5, 11][i],
       per: { stackable: "twisted_spacetime", limit: 5 },
       addn: true,
@@ -151,7 +151,7 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
   ],
   "Spacetime Pause": (i) => [
     {
-      type: "SpacetimeRecordedDmgMore",
+      type: "SpacetimeRecordedDmgBonusPct",
       value: [60, 70, 80, 90, 100][i],
       addn: true,
     },
