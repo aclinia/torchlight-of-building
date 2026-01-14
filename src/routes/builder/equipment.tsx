@@ -629,7 +629,7 @@ function EquipmentPage(): React.ReactNode {
 
         <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
           <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            <Trans>Inventory</Trans> ({loadout.gearPage.inventory.length}
+            <Trans>Inventory</Trans> ({loadout.gearPage.inventory.length}{" "}
             <Trans>items</Trans>)
           </h2>
           {loadout.gearPage.inventory.length === 0 ? (
