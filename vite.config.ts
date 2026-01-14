@@ -12,7 +12,10 @@ export default defineConfig({
     rollupOptions: {
       onwarn(warning, warn) {
         // Catch warnings related to dynamic-import-vars plugin
-        if (warning.plugin === 'vite:dynamic-import-vars' || warning.code === 'DYNAMIC_IMPORT_VARIABLE') {
+        if (
+          warning.plugin === "vite:dynamic-import-vars" ||
+          warning.code === "DYNAMIC_IMPORT_VARIABLE"
+        ) {
           throw new Error(`Invalid dynamic import path: ${warning.message}`);
         }
         // Other warnings are displayed normally
