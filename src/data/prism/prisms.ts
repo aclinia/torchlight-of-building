@@ -10,9 +10,9 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nBlind\nTarget's damage has a 20% chance to miss before addressed\">Blinds enemies within 15 m when casting Dazzling Bloom\n+12% additional damage for Spirit Magi against Blind\nTarget's damage has a 20% chance to miss before addressed\">Blinded enemies",
+      "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nBlinds enemies within 15 m when casting Dazzling Bloom\n+12% additional damage for Spirit Magi against Blinded enemies",
     addedCoreTalentAffix:
-      "Blind\nTarget's damage has a 20% chance to miss before addressed\">Blinds enemies within 15 m when casting Dazzling Bloom\n+12% additional damage for Spirit Magi against Blind\nTarget's damage has a 20% chance to miss before addressed\">Blinded enemies",
+      "Blinds enemies within 15 m when casting Dazzling Bloom\n+12% additional damage for Spirit Magi against Blinded enemies",
   },
   {
     type: "Base Affix",
@@ -26,17 +26,17 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      'Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+12% additional Ailment Damage\nTrauma, Ignite, and Wilt">Ailment Damage dealt by Attack Damage and attacks while standing still. -5% additional damage taken',
+      "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+12% additional Ailment Damage dealt by Attack Damage and attacks while standing still. -5% additional damage taken",
     addedCoreTalentAffix:
-      '+12% additional Ailment Damage\nTrauma, Ignite, and Wilt">Ailment Damage dealt by Attack Damage and attacks while standing still. -5% additional damage taken',
+      "+12% additional Ailment Damage dealt by Attack Damage and attacks while standing still. -5% additional damage taken",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
-      'Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+12% additional Attack Damage and Ailment Damage\nTrauma, Ignite, and Wilt">Ailment Damage dealt by attacks when there are Elite\nElite monsters include rare monsters and bosses">Elites within 10m Nearby\nWithin 6m">nearby\n+50% Skill Area when there are no Elite\nElite monsters include rare monsters and bosses">Elites within 10m Nearby\nWithin 6m">nearby',
+      "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+12% additional Attack Damage and Ailment Damage dealt by attacks when there are Elites within 10m nearby\n+50% Skill Area when there are no Elites within 10m nearby",
     addedCoreTalentAffix:
-      '+12% additional Attack Damage and Ailment Damage\nTrauma, Ignite, and Wilt">Ailment Damage dealt by attacks when there are Elite\nElite monsters include rare monsters and bosses">Elites within 10m Nearby\nWithin 6m">nearby\n+50% Skill Area when there are no Elite\nElite monsters include rare monsters and bosses">Elites within 10m Nearby\nWithin 6m">nearby',
+      "+12% additional Attack Damage and Ailment Damage dealt by attacks when there are Elites within 10m nearby\n+50% Skill Area when there are no Elites within 10m nearby",
   },
   {
     type: "Base Affix",
@@ -66,9 +66,9 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      'Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nFor every stack of Max Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst, +4% additional Spell Damage, up to +16% additional Spell Damage',
+      "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nFor every stack of Max Spell Burst, +4% additional Spell Damage, up to +16% additional Spell Damage",
     addedCoreTalentAffix:
-      'For every stack of Max Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst, +4% additional Spell Damage, up to +16% additional Spell Damage',
+      "For every stack of Max Spell Burst, +4% additional Spell Damage, up to +16% additional Spell Damage",
   },
   {
     type: "Base Affix",
@@ -114,7 +114,7 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      'Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Ignite Damage, up to +150%, for every +1% Ignite Chance above 100%\n+3% additional Wilt Damage, up to +150%, for every +1% Wilt Chance above 100%\n+3% additional Trauma Damage, up to +150%, for every +1% Trauma Chance above 100%">Fiery Fantasy',
+      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Fiery Fantasy",
     replacementCoreTalent: {
       name: "Fiery Fantasy",
       affix:
@@ -136,7 +136,7 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Main-Hand Weapon's Damage to Spells\nAdds 75% of Main-Hand Weapon's Critical Strike Rating to the Base Critical Strike Rating of Spell Skills\nYou cannot deal Ailment Damage\">Towering Presence",
+      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Towering Presence",
     replacementCoreTalent: {
       name: "Towering Presence",
       affix:
@@ -223,7 +223,7 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      'Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Deflection every 0.5s">Adaptive Defense',
+      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Adaptive Defense",
     replacementCoreTalent: {
       name: "Adaptive Defense",
       affix:
@@ -234,7 +234,7 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Scorch instead of Ignite\n-10% Fire Resistance for each stack of Scorch on the enemies within 10m\">Fire's Allure",
+      "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with Fire's Allure",
     replacementCoreTalent: {
       name: "Fire's Allure",
       affix:
@@ -376,19 +376,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +1 to Max Agility Blessing\nEvery stack of Agility Blessing grants +4% Attack and Cast Speed and +2% additional damage. Initial max stacks: 4">Agility Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +1 to Max Agility Blessing Stacks",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +1 to Max Focus Blessing\nEvery stack of Focus Blessing grants +5% additional damage. Initial max stacks: 4">Focus Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +1 to Max Focus Blessing Stacks",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +1 to Max Tenacity Blessing\nEvery stack of Tenacity Blessing grants an additional 4% damage reduction (multiplies). Initial max stacks: 4.">Tenacity Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +1 to Max Tenacity Blessing Stacks",
   },
   {
     type: "Prism Gauge",
@@ -406,19 +406,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +2 to Max Agility Blessing\nEvery stack of Agility Blessing grants +4% Attack and Cast Speed and +2% additional damage. Initial max stacks: 4">Agility Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +2 to Max Agility Blessing Stacks",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +2 to Max Focus Blessing\nEvery stack of Focus Blessing grants +5% additional damage. Initial max stacks: 4">Focus Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +2 to Max Focus Blessing Stacks",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, +2 to Max Tenacity Blessing\nEvery stack of Tenacity Blessing grants an additional 4% damage reduction (multiplies). Initial max stacks: 4.">Tenacity Blessing Stacks',
+      "When activating 2 Legendary Medium Talent within the area, +2 to Max Tenacity Blessing Stacks",
   },
   {
     type: "Prism Gauge",
@@ -430,109 +430,109 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains Attack Aggression\nAdditionally increases Attack Speed and Attack Damage by 5%. Increases Movement Speed by 10%">Attack Aggression when casting an Attack Skill\n+100% Attack Aggression\nAdditionally increases Attack Speed and Attack Damage by 5%. Increases Movement Speed by 10%">Attack Aggression Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains Attack Aggression when casting an Attack Skill\n+100% Attack Aggression Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains Attack Aggression\nAdditionally increases Attack Speed and Attack Damage by 5%. Increases Movement Speed by 10%">Attack Aggression when casting an Attack Skill\n+40% Attack Aggression\nAdditionally increases Attack Speed and Attack Damage by 5%. Increases Movement Speed by 10%">Attack Aggression Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains Attack Aggression when casting an Attack Skill\n+40% Attack Aggression Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains Spell Aggression\nAdditionally increases Cast Speed and Spell Damage by 7%. Increases Mobility Skill Cooldown Recovery Speed by 7%">Spell Aggression when casting a Spell Skill\n+100% Spell Aggression\nAdditionally increases Cast Speed and Spell Damage by 7%. Increases Mobility Skill Cooldown Recovery Speed by 7%">Spell Aggression Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains Spell Aggression when casting a Spell Skill\n+100% Spell Aggression Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains Spell Aggression\nAdditionally increases Cast Speed and Spell Damage by 7%. Increases Mobility Skill Cooldown Recovery Speed by 7%">Spell Aggression when casting a Spell Skill\n+40% Spell Aggression\nAdditionally increases Cast Speed and Spell Damage by 7%. Increases Mobility Skill Cooldown Recovery Speed by 7%">Spell Aggression Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains Spell Aggression when casting a Spell Skill\n+40% Spell Aggression Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains a stack of Fortitude\nEach stack of Fortitude additionally reduces Hit Damage taken by 5% for 10s.\nBase Max Fortitude Stacks: 3.">Fortitude when using a Melee Skill\nOwns 1 additional stack(s) of Fortitude\nEach stack of Fortitude additionally reduces Hit Damage taken by 5% for 10s.\nBase Max Fortitude Stacks: 3.">Fortitude',
+      "When activating 2 Legendary Medium Talent within the area, Gains a stack of Fortitude when using a Melee Skill\nOwns 1 additional stack(s) of Fortitude",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains a stack of Fortitude\nEach stack of Fortitude additionally reduces Hit Damage taken by 5% for 10s.\nBase Max Fortitude Stacks: 3.">Fortitude when using a Melee Skill\nOwns 2 additional stack(s) of Fortitude\nEach stack of Fortitude additionally reduces Hit Damage taken by 5% for 10s.\nBase Max Fortitude Stacks: 3.">Fortitude',
+      "When activating 2 Legendary Medium Talent within the area, Gains a stack of Fortitude when using a Melee Skill\nOwns 2 additional stack(s) of Fortitude",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains a stack of Torment\nEach stack of Torment additionally increases Damage Over Time dealt by 5% for 4s. Stacks up to 3 times">Torment when dealing Damage Over Time\n+100% Torment\nEach stack of Torment additionally increases Damage Over Time dealt by 5% for 4s. Stacks up to 3 times">Torment Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains a stack of Torment when dealing Damage Over Time\n+100% Torment Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Gains a stack of Torment\nEach stack of Torment additionally increases Damage Over Time dealt by 5% for 4s. Stacks up to 3 times">Torment when dealing Damage Over Time\n+40% Torment\nEach stack of Torment additionally increases Damage Over Time dealt by 5% for 4s. Stacks up to 3 times">Torment Effect',
+      "When activating 2 Legendary Medium Talent within the area, Gains a stack of Torment when dealing Damage Over Time\n+40% Torment Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Has 100 point(s) of fixed Blur Rating\n+0.3% Evasion and +0.2% chance to avoid damage for every point of Blur Rating you have. The Max Blur Rating is 100">Blur Rating',
+      "When activating 2 Legendary Medium Talent within the area, Has 100 point(s) of fixed Blur Rating",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Has 120 point(s) of fixed Blur Rating\n+0.3% Evasion and +0.2% chance to avoid damage for every point of Blur Rating you have. The Max Blur Rating is 100">Blur Rating',
+      "When activating 2 Legendary Medium Talent within the area, Has 120 point(s) of fixed Blur Rating",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Cold Infiltration\nAdditionally increases Cold Damage taken by 13%. Reduces Movement Speed by 5%">Cold Infiltration on hit\n+100% Cold Infiltration\nAdditionally increases Cold Damage taken by 13%. Reduces Movement Speed by 5%">Cold Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Cold Infiltration on hit\n+100% Cold Infiltration Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Cold Infiltration\nAdditionally increases Cold Damage taken by 13%. Reduces Movement Speed by 5%">Cold Infiltration on hit\n+40% Cold Infiltration\nAdditionally increases Cold Damage taken by 13%. Reduces Movement Speed by 5%">Cold Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Cold Infiltration on hit\n+40% Cold Infiltration Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Fire Infiltration\nAdditionally increases Fire Damage taken by 13%. Reduces Skill Area by 8%">Fire Infiltration on hit\n+100% Fire Infiltration\nAdditionally increases Fire Damage taken by 13%. Reduces Skill Area by 8%">Fire Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Fire Infiltration on hit\n+100% Fire Infiltration Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Fire Infiltration\nAdditionally increases Fire Damage taken by 13%. Reduces Skill Area by 8%">Fire Infiltration on hit\n+40% Fire Infiltration\nAdditionally increases Fire Damage taken by 13%. Reduces Skill Area by 8%">Fire Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Fire Infiltration on hit\n+40% Fire Infiltration Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Frail\nAdditionally increases Spell Damage taken by 15%">Frail when dealing Spell Damage\n+100% Frail\nAdditionally increases Spell Damage taken by 15%">Frail Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Frail when dealing Spell Damage\n+100% Frail Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Frail\nAdditionally increases Spell Damage taken by 15%">Frail when dealing Spell Damage\n+40% Frail\nAdditionally increases Spell Damage taken by 15%">Frail Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Frail when dealing Spell Damage\n+40% Frail Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Lightning Infiltration\nAdditionally increases Lightning Damage taken by 13%. Reduces Attack Speed by 5%">Lightning Infiltration on hit\n+100% Lightning Infiltration\nAdditionally increases Lightning Damage taken by 13%. Reduces Attack Speed by 5%">Lightning Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Lightning Infiltration on hit\n+100% Lightning Infiltration Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      'When activating 2 Legendary Medium Talent within the area, Inflicts Lightning Infiltration\nAdditionally increases Lightning Damage taken by 13%. Reduces Attack Speed by 5%">Lightning Infiltration on hit\n+40% Lightning Infiltration\nAdditionally increases Lightning Damage taken by 13%. Reduces Attack Speed by 5%">Lightning Infiltration Effect',
+      "When activating 2 Legendary Medium Talent within the area, Inflicts Lightning Infiltration on hit\n+40% Lightning Infiltration Effect",
   },
   {
     type: "Prism Gauge",
@@ -544,67 +544,67 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Legendary Medium Talent within the area also gain: + 3 Command\nEvery point of Command will grant Synthetic Troop Minions +3% additional damage and a bigger Tracking Area.\nThe lowest Command is -100 while the highest is 100. When Command is not 0, 13 point(s) will be returned (reduced/granted) every second until it becomes 0. For every 10 Command increased, +7 additional points will be returned.\nSynthetic Troop Minions' Duration will not reduce when Command is a positive value.\">Command per second",
+      "All Legendary Medium Talent within the area also gain: + 3 Command per second",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Legendary Medium Talent within the area also gain: + 5.5 Command\nEvery point of Command will grant Synthetic Troop Minions +3% additional damage and a bigger Tracking Area.\nThe lowest Command is -100 while the highest is 100. When Command is not 0, 13 point(s) will be returned (reduced/granted) every second until it becomes 0. For every 10 Command increased, +7 additional points will be returned.\nSynthetic Troop Minions' Duration will not reduce when Command is a positive value.\">Command per second",
+      "All Legendary Medium Talent within the area also gain: + 5.5 Command per second",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: Multistrike\nChance to perform an additional attack when using Attack Skills. If the chance exceeds 100%, one additional attack will be performed with every 100% of the chance.\n+20% Attack Speed during Multistrikes.\nMultistrikes consume skill resources as normal and will be interrupted if there are insufficient resources. Moving or using other non-instant skills will interrupt Multistrike.\nMobility, Channeled Skills, and Sentry skills cannot Multistrike">Multistrikes deal 12% increasing damage',
+      "All Legendary Medium Talent within the area also gain: Multistrikes deal 12% increasing damage",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: Multistrike\nChance to perform an additional attack when using Attack Skills. If the chance exceeds 100%, one additional attack will be performed with every 100% of the chance.\n+20% Attack Speed during Multistrikes.\nMultistrikes consume skill resources as normal and will be interrupted if there are insufficient resources. Moving or using other non-instant skills will interrupt Multistrike.\nMobility, Channeled Skills, and Sentry skills cannot Multistrike">Multistrikes deal 21% increasing damage',
+      "All Legendary Medium Talent within the area also gain: Multistrikes deal 21% increasing damage",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +10 to Max Frostbite\nEnemies are inflicted with a fixed amount of Frostbite Rating when they are Frostbitten. This can be increased by raising Max Frostbite Rating. The Max Frostbite Rating is 100.">Frostbite Rating',
+      "All Legendary Medium Talent within the area also gain: +10 to Max Frostbite Rating",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +12% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Legendary Medium Talent within the area also gain: +12% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +15% Numbed\nAn Elemental Ailment that has a chance to be inflicted when Lightning Damage hits its target.\nWhen hitting a Numbed enemy, Lightning Damage inflicts 1 stack of Numbed for every 10% of the sum of Max Energy Shield and Life dealt by Lightning Damage. This threshold can be lowered or raised, but the minimum is 1%.\nThe default duration of Numbed is 2s, and the duration of each stack is calculated independently.\nMax Numbed stacks: 10. Each stack of Numbed increases the Lightning Damage taken by an additional +5%.">Numbed Effect',
+      "All Legendary Medium Talent within the area also gain: +15% Numbed Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +16% Deterioration\nLasts for 1s. When the duration ends, deals True Damage equal to 60% of the Hit Erosion Damage dealt. Stacks up to 99 times. Each stack is calculated independently">Deterioration Chance',
+      "All Legendary Medium Talent within the area also gain: +16% Deterioration Chance",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +16% Steep Strike\nSlash Strike Skills are cast in Sweep Slash form by default. When casting the skill, there is a chance that it will be cast in Steep Strike form. Some skills gain Steep Strike attempts at specific times. When there are Steep Strike attempts, the skill will be cast in Steep Strike form and consume 1 Steep Strike attempt.">Steep Strike chance.',
+      "All Legendary Medium Talent within the area also gain: +16% Steep Strike chance.",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +21% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Legendary Medium Talent within the area also gain: +21% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +24 initial Growth\nSpirit Magi grow into the next Stage for every 100 Growth. They start at Stage 1 and can grow until they reach Stage 5. For every 8 Growth they have, Spirit Magi gain +1% Physique, +5% additional Skill Area, and a bonus every stage:\nAt Stage 2, +30% chance for them to use Enhanced Skill chance.\nAt Stage 3, their Enhanced Skills become stronger.\nAt Stage 4, their Empower Skills become stronger.\nAt Stage 5, they +25% additional damage, +10% additional Skill Area, and gain increased Movement Speed and Tracking Area.\nThe max Growth is 1000.">Growth for Spirit Magi',
+      "All Legendary Medium Talent within the area also gain: +24 initial Growth for Spirit Magi",
   },
   {
     type: "Prism Gauge",
@@ -616,19 +616,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +28% Deterioration\nLasts for 1s. When the duration ends, deals True Damage equal to 60% of the Hit Erosion Damage dealt. Stacks up to 99 times. Each stack is calculated independently">Deterioration Chance',
+      "All Legendary Medium Talent within the area also gain: +28% Deterioration Chance",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +30% Demolisher Charge\nImpact Skills gain 1 Demolisher Charge at regular intervals.\nUsing a Demolisher Skill will consume its charges and convert the skill into a stronger form">Demolisher Charge Restoration Speed',
+      "All Legendary Medium Talent within the area also gain: +30% Demolisher Charge Restoration Speed",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +42 initial Growth\nSpirit Magi grow into the next Stage for every 100 Growth. They start at Stage 1 and can grow until they reach Stage 5. For every 8 Growth they have, Spirit Magi gain +1% Physique, +5% additional Skill Area, and a bonus every stage:\nAt Stage 2, +30% chance for them to use Enhanced Skill chance.\nAt Stage 3, their Enhanced Skills become stronger.\nAt Stage 4, their Empower Skills become stronger.\nAt Stage 5, they +25% additional damage, +10% additional Skill Area, and gain increased Movement Speed and Tracking Area.\nThe max Growth is 1000.">Growth for Spirit Magi',
+      "All Legendary Medium Talent within the area also gain: +42 initial Growth for Spirit Magi",
   },
   {
     type: "Prism Gauge",
@@ -640,13 +640,13 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +5% Block Ratio\nBy default, Blocking absorbs 30% damage. Increase Block Ratio to increase the damage absorption ratio.">Block Ratio',
+      "All Legendary Medium Talent within the area also gain: +5% Block Ratio",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Legendary Medium Talent within the area also gain: +6% additional Phantom\nShadow Strike creates a Shadow that strikes at other targets with the same attack. If no other targets are present, it will strike the character's target.\nMultiple Shadows can attack the same target, and the Shadows' Shotgun Effect falloff coefficient is 70%\nShadow damage and character damage are independent of each other\">Shadow Damage",
+      "All Legendary Medium Talent within the area also gain: +6% additional Shadow Damage",
   },
   {
     type: "Prism Gauge",
@@ -664,19 +664,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +9% Block Ratio\nBy default, Blocking absorbs 30% damage. Increase Block Ratio to increase the damage absorption ratio.">Block Ratio',
+      "All Legendary Medium Talent within the area also gain: +9% Block Ratio",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: +9% Steep Strike\nSlash Strike Skills are cast in Sweep Slash form by default. When casting the skill, there is a chance that it will be cast in Steep Strike form. Some skills gain Steep Strike attempts at specific times. When there are Steep Strike attempts, the skill will be cast in Steep Strike form and consume 1 Steep Strike attempt.">Steep Strike chance.',
+      "All Legendary Medium Talent within the area also gain: +9% Steep Strike chance.",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Legendary Medium Talent within the area also gain: 10.5% additional Phantom\nShadow Strike creates a Shadow that strikes at other targets with the same attack. If no other targets are present, it will strike the character's target.\nMultiple Shadows can attack the same target, and the Shadows' Shotgun Effect falloff coefficient is 70%\nShadow damage and character damage are independent of each other\">Shadow Damage",
+      "All Legendary Medium Talent within the area also gain: 10.5% additional Shadow Damage",
   },
   {
     type: "Prism Gauge",
@@ -694,25 +694,25 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: 17.5 to Max Frostbite\nEnemies are inflicted with a fixed amount of Frostbite Rating when they are Frostbitten. This can be increased by raising Max Frostbite Rating. The Max Frostbite Rating is 100.">Frostbite Rating',
+      "All Legendary Medium Talent within the area also gain: 17.5 to Max Frostbite Rating",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: 26.5% Numbed\nAn Elemental Ailment that has a chance to be inflicted when Lightning Damage hits its target.\nWhen hitting a Numbed enemy, Lightning Damage inflicts 1 stack of Numbed for every 10% of the sum of Max Energy Shield and Life dealt by Lightning Damage. This threshold can be lowered or raised, but the minimum is 1%.\nThe default duration of Numbed is 2s, and the duration of each stack is calculated independently.\nMax Numbed stacks: 10. Each stack of Numbed increases the Lightning Damage taken by an additional +5%.">Numbed Effect',
+      "All Legendary Medium Talent within the area also gain: 26.5% Numbed Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Legendary Medium Talent within the area also gain: 52.5% Demolisher Charge\nImpact Skills gain 1 Demolisher Charge at regular intervals.\nUsing a Demolisher Skill will consume its charges and convert the skill into a stronger form">Demolisher Charge Restoration Speed',
+      "All Legendary Medium Talent within the area also gain: 52.5% Demolisher Charge Restoration Speed",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: +1% Elemental\nFire, Cold, and Lightning">Elemental and Erosion Resistance',
+      "All Medium Talent within the area also gain: +1% Elemental and Erosion Resistance",
   },
   {
     type: "Prism Gauge",
@@ -743,14 +743,13 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Medium Talent within the area also gain: +2% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense',
+    affix: "All Medium Talent within the area also gain: +2% Defense",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: +2% Elemental\nFire, Cold, and Lightning">Elemental and Erosion Resistance',
+      "All Medium Talent within the area also gain: +2% Elemental and Erosion Resistance",
   },
   {
     type: "Prism Gauge",
@@ -784,7 +783,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: +4% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Medium Talent within the area also gain: +4% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
@@ -816,14 +815,13 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Medium Talent within the area also gain: +6% Affliction\nWhen the Affliction inflicted per second is not 0, the Damage Over Time dealt will continuously inflicts Affliction on the target\nThe target takes 1% additional Damage Over Time for every Affliction point\nThe max Affliction is 100">Affliction Effect',
+    affix: "All Medium Talent within the area also gain: +6% Affliction Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: +6% Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge Speed',
+      "All Medium Talent within the area also gain: +6% Spell Burst Charge Speed",
   },
   {
     type: "Prism Gauge",
@@ -855,7 +853,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: +7% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Medium Talent within the area also gain: +7% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
@@ -893,13 +891,13 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: 10.5% Affliction\nWhen the Affliction inflicted per second is not 0, the Damage Over Time dealt will continuously inflicts Affliction on the target\nThe target takes 1% additional Damage Over Time for every Affliction point\nThe max Affliction is 100">Affliction Effect',
+      "All Medium Talent within the area also gain: 10.5% Affliction Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Medium Talent within the area also gain: 10.5% Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge Speed',
+      "All Medium Talent within the area also gain: 10.5% Spell Burst Charge Speed",
   },
   {
     type: "Prism Gauge",
@@ -952,8 +950,7 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Medium Talent within the area also gain: 3.5% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense',
+    affix: "All Medium Talent within the area also gain: 3.5% Defense",
   },
   {
     type: "Prism Gauge",
@@ -987,7 +984,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: +1% Elemental\nFire, Cold, and Lightning">Elemental and Erosion Resistance',
+      "All Micro Talent within the area also gain: +1% Elemental and Erosion Resistance",
   },
   {
     type: "Prism Gauge",
@@ -1018,14 +1015,13 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Micro Talent within the area also gain: +2% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense',
+    affix: "All Micro Talent within the area also gain: +2% Defense",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: +2% Elemental\nFire, Cold, and Lightning">Elemental and Erosion Resistance',
+      "All Micro Talent within the area also gain: +2% Elemental and Erosion Resistance",
   },
   {
     type: "Prism Gauge",
@@ -1059,7 +1055,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: +4% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Micro Talent within the area also gain: +4% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
@@ -1090,14 +1086,13 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Micro Talent within the area also gain: +6% Affliction\nWhen the Affliction inflicted per second is not 0, the Damage Over Time dealt will continuously inflicts Affliction on the target\nThe target takes 1% additional Damage Over Time for every Affliction point\nThe max Affliction is 100">Affliction Effect',
+    affix: "All Micro Talent within the area also gain: +6% Affliction Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: +6% Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge Speed',
+      "All Micro Talent within the area also gain: +6% Spell Burst Charge Speed",
   },
   {
     type: "Prism Gauge",
@@ -1129,7 +1124,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: +7% Origin of Spirit Magus\nBuff effect gained after Activating a Spirit Magus summoning skill.">Origin of Spirit Magus effect',
+      "All Micro Talent within the area also gain: +7% Origin of Spirit Magus effect",
   },
   {
     type: "Prism Gauge",
@@ -1166,13 +1161,13 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: 10.5% Affliction\nWhen the Affliction inflicted per second is not 0, the Damage Over Time dealt will continuously inflicts Affliction on the target\nThe target takes 1% additional Damage Over Time for every Affliction point\nThe max Affliction is 100">Affliction Effect',
+      "All Micro Talent within the area also gain: 10.5% Affliction Effect",
   },
   {
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      'All Micro Talent within the area also gain: 10.5% Spell Burst\nAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge Speed',
+      "All Micro Talent within the area also gain: 10.5% Spell Burst Charge Speed",
   },
   {
     type: "Prism Gauge",
@@ -1224,8 +1219,7 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
-    affix:
-      'All Micro Talent within the area also gain: 3.5% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense',
+    affix: "All Micro Talent within the area also gain: 3.5% Defense",
   },
   {
     type: "Prism Gauge",
@@ -1259,163 +1253,163 @@ export const Prisms: readonly Prism[] = [
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Adaptive Defense',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Adaptive Defense",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Circle of Life',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Circle of Life",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-15 to All Stats\nStrength, Dexterity, and Intelligence\">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Commander's Gambit",
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Commander's Gambit",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Crushing Blast',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Crushing Blast",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Dark Advance',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Dark Advance",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Effortless Command',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Effortless Command",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Escalating Affliction',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Escalating Affliction",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Extreme Power',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Extreme Power",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fiery Fantasy',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fiery Fantasy",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-15 to All Stats\nStrength, Dexterity, and Intelligence\">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fire's Allure",
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fire's Allure",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-15 to All Stats\nStrength, Dexterity, and Intelligence\">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fortune's Flip",
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fortune's Flip",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Guaranteed Reaping',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Guaranteed Reaping",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-15 to All Stats\nStrength, Dexterity, and Intelligence\">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Hare's Agility",
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Hare's Agility",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Juggernaut',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Juggernaut",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Keen Intellect',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Keen Intellect",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Miraculous Touch',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Miraculous Touch",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: One For All',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: One For All",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Self-Delusion',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Self-Delusion",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Spell Ripple',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Spell Ripple",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-15 to All Stats\nStrength, Dexterity, and Intelligence\">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Storm's Command",
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Storm's Command",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Sweeping Fury',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Sweeping Fury",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Tainted Flesh',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Tainted Flesh",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Towering Presence',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Towering Presence",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Trinity',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Trinity",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unmatched Valor',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unmatched Valor",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unstoppable Force',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unstoppable Force",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-15 to All Stats\nStrength, Dexterity, and Intelligence">All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unwavering Fortress',
+      "-15 to All Stats\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unwavering Fortress",
   },
   {
     type: "",
@@ -1583,163 +1577,163 @@ export const Prisms: readonly Prism[] = [
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Adaptive Defense',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Adaptive Defense",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Circle of Life',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Circle of Life",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-8% Defense\nThe sum of Armor, Evasion, and Energy Shield\">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Commander's Gambit",
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Commander's Gambit",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Crushing Blast',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Crushing Blast",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Dark Advance',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Dark Advance",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Effortless Command',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Effortless Command",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Escalating Affliction',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Escalating Affliction",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Extreme Power',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Extreme Power",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fiery Fantasy',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fiery Fantasy",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-8% Defense\nThe sum of Armor, Evasion, and Energy Shield\">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fire's Allure",
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fire's Allure",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-8% Defense\nThe sum of Armor, Evasion, and Energy Shield\">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fortune's Flip",
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Fortune's Flip",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Guaranteed Reaping',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Guaranteed Reaping",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-8% Defense\nThe sum of Armor, Evasion, and Energy Shield\">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Hare's Agility",
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Hare's Agility",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Juggernaut',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Juggernaut",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Keen Intellect',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Keen Intellect",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Miraculous Touch',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Miraculous Touch",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: One For All',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: One For All",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Self-Delusion',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Self-Delusion",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Spell Ripple',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Spell Ripple",
   },
   {
     type: "",
     rarity: "",
     affix:
-      "-8% Defense\nThe sum of Armor, Evasion, and Energy Shield\">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Storm's Command",
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Storm's Command",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Sweeping Fury',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Sweeping Fury",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Tainted Flesh',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Tainted Flesh",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Towering Presence',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Towering Presence",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Trinity',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Trinity",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unmatched Valor',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unmatched Valor",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unstoppable Force',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unstoppable Force",
   },
   {
     type: "",
     rarity: "",
     affix:
-      '-8% Defense\nThe sum of Armor, Evasion, and Energy Shield">Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unwavering Fortress',
+      "-8% Defense\nMutated Core Talents no longer replace the original talent, but add the following to the Core Talent in the current Talent Panel: Unwavering Fortress",
   },
   {
     type: "",

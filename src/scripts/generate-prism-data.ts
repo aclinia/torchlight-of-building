@@ -28,7 +28,7 @@ const extractPrismData = (html: string): Prism[] => {
     const item: Prism = {
       type: $(tds[0]).text().trim(),
       rarity: $(tds[1]).text().trim(),
-      affix: cleanEffectText(affixTd.html() || ""),
+      affix: cleanEffectTextNew(affixTd.html() || ""),
     };
 
     // Extract replacement core talent if present
