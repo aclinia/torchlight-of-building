@@ -127,6 +127,20 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n67 Max Energy Shield, and 3.2% additional Max Energy Shield.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n319.7 Max Energy Shield\n13.37% additional Max Energy Shield",
     ],
+    levelValues: {
+      energyShield: [
+        67, 80.3, 93.6, 106.9, 120.2, 133.5, 146.8, 160.1, 173.4, 186.7, 200,
+        213.3, 226.6, 239.9, 253.2, 266.5, 279.8, 293.1, 306.4, 319.7, 333,
+        336.4, 339.7, 343.1, 346.4, 349.8, 353.1, 356.5, 359.8, 363.2, 366.5,
+        369.9, 373.2, 376.6, 379.9, 383.3, 386.6, 390, 393.3, 396.7,
+      ],
+      energyShieldPct: [
+        3.2, 3.735, 4.27, 4.805, 5.34, 5.875, 6.41, 6.945, 7.48, 8.015, 8.55,
+        9.085, 9.62, 10.16, 10.69, 11.23, 11.76, 12.3, 12.83, 13.37, 13.9, 14.1,
+        14.3, 14.5, 14.7, 14.9, 15.1, 15.3, 15.5, 15.7, 15.9, 16.1, 16.3, 16.5,
+        16.7, 16.9, 17.1, 17.3, 17.5, 17.7,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -208,6 +222,19 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n2200 Evasion. 0.5% additional Evasion.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+6000 Evasion\n+10% additional Evasion",
     ],
+    levelValues: {
+      evasion: [
+        2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400,
+        4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6250, 6300, 6350,
+        6400, 6450, 6500, 6550, 6600, 6650, 6700, 6750, 6800, 6850, 6900, 6950,
+        7000, 7050, 7100, 7150,
+      ],
+      evasionPct: [
+        0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9,
+        9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16,
+        16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -336,6 +363,20 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n67 Max Energy Shield, and 7.9% additional Max Energy Shield.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n319.7 Max Energy Shield\n17.97% additional Max Energy Shield",
     ],
+    levelValues: {
+      energyShield: [
+        67, 80.3, 93.6, 106.9, 120.2, 133.5, 146.8, 160.1, 173.4, 186.7, 200,
+        213.3, 226.6, 239.9, 253.2, 266.5, 279.8, 293.1, 306.4, 319.7, 333,
+        336.4, 339.7, 343.1, 346.4, 349.8, 353.1, 356.5, 359.8, 363.2, 366.5,
+        369.9, 373.2, 376.6, 379.9, 383.3, 386.6, 390, 393.3, 396.7,
+      ],
+      energyShieldPct: [
+        7.9, 8.43, 8.96, 9.49, 10.02, 10.55, 11.08, 11.61, 12.14, 12.67, 13.2,
+        13.73, 14.26, 14.79, 15.32, 15.85, 16.38, 16.91, 17.44, 17.97, 18.5,
+        18.7, 18.9, 19.1, 19.3, 19.5, 19.7, 19.9, 20.1, 20.3, 20.5, 20.7, 20.9,
+        21.1, 21.3, 21.5, 21.7, 21.9, 22.1, 22.3,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -433,6 +474,19 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n2200 Evasion. 10.5% additional Evasion.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+6000 Evasion\n+20% additional Evasion",
     ],
+    levelValues: {
+      evasion: [
+        2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400,
+        4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6250, 6300, 6350,
+        6400, 6450, 6500, 6550, 6600, 6650, 6700, 6750, 6800, 6850, 6900, 6950,
+        7000, 7050, 7100, 7150,
+      ],
+      evasionPct: [
+        10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17,
+        17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24,
+        24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -485,6 +539,19 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n2200 Armor and 10.5% additional Armor.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+6000 Armor\n+20% additional Armor",
     ],
+    levelValues: {
+      armor: [
+        2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400,
+        4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6250, 6300, 6350,
+        6400, 6450, 6500, 6550, 6600, 6650, 6700, 6750, 6800, 6850, 6900, 6950,
+        7000, 7050, 7100, 7150,
+      ],
+      armorPct: [
+        10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17,
+        17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24,
+        24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -574,6 +641,19 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n2200 Armor and 0.5% additional Armor.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+6000 Armor\n+10% additional Armor",
     ],
+    levelValues: {
+      armor: [
+        2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400,
+        4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6250, 6300, 6350,
+        6400, 6450, 6500, 6550, 6600, 6650, 6700, 6750, 6800, 6850, 6900, 6950,
+        7000, 7050, 7100, 7150,
+      ],
+      armorPct: [
+        0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9,
+        9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16,
+        16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20,
+      ],
+    },
   },
   {
     type: "Passive",

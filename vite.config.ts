@@ -8,6 +8,21 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: { port: 3000 },
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        // Catch warnings related to dynamic-import-vars plugin
+        if (
+          warning.plugin === "vite:dynamic-import-vars" ||
+          warning.code === "DYNAMIC_IMPORT_VARIABLE"
+        ) {
+          throw new Error(`Invalid dynamic import path: ${warning.message}`);
+        }
+        // Other warnings are displayed normally
+        warn(warning);
+      },
+    },
+  },
   plugins: [
     tsconfigPaths(),
     tanstackStart(),

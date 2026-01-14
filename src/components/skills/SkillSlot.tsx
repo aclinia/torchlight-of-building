@@ -5,6 +5,7 @@ import {
 } from "@/src/components/ui/SearchableSelect";
 import { Tooltip } from "@/src/components/ui/Tooltip";
 import type { BaseActiveSkill, BaseSkill } from "@/src/data/skill/types";
+import { i18n } from "@/src/lib/i18n";
 import type { BaseSupportSkillSlot as SaveDataBaseSupportSkillSlot } from "@/src/lib/save-data";
 import type { SkillSlot as SkillSlotType } from "@/src/tli/core";
 import { OptionWithSkillTooltip } from "./OptionWithSkillTooltip";
@@ -113,7 +114,7 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
                 options={filteredSkills.map(
                   (s): SearchableSelectOption<string> => ({
                     value: s.name,
-                    label: s.name,
+                    label: i18n._(s.name),
                   }),
                 )}
                 placeholder="<Empty slot>"

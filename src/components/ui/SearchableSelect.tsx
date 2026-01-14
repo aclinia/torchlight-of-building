@@ -11,6 +11,7 @@ export interface SearchableSelectOption<T = string> {
   value: T;
   label: string;
   sublabel?: string;
+  header?: string;
 }
 
 export interface SearchableSelectOptionGroup<T = string> {
@@ -208,7 +209,7 @@ export const SearchableSelect = <T extends string | number>({
         </div>
 
         <ComboboxOptions
-          anchor="bottom start"
+          anchor={{ to: "bottom start", padding: 64 }}
           className="
             w-[var(--input-width)] z-50 mt-1 max-h-60 overflow-auto rounded
             bg-zinc-800 border border-zinc-700 shadow-lg
@@ -277,37 +278,53 @@ export const SearchableSelect = <T extends string | number>({
               ),
             )
           ) : (
-            (filteredOptions as SearchableSelectOption<T>[]).map((option) => (
-              <ComboboxOption
-                key={String(option.value)}
-                value={option}
-                className={({ active, selected }) => `
+            (filteredOptions as SearchableSelectOption<T>[]).map((option) => {
+              // Non-clickable headers can be rendered as options
+              if (option.header) {
+                return (
+                  <ComboboxOption
+                    key={`header-${option.header}`}
+                    value={option}
+                    disabled
+                    className={`
+                      ${SIZE_CLASSES[size]} text-zinc-500 font-medium
+                      border-t border-zinc-700 cursor-default
+                    `}
+                  >
+                    {option.header}
+                  </ComboboxOption>
+                );
+              }
+
+              return (
+                <ComboboxOption
+                  key={String(option.value)}
+                  value={option}
+                  className={({ active, selected }) => `
                   ${SIZE_CLASSES[size]} cursor-pointer
                   ${active ? "bg-zinc-700" : ""}
                   ${selected ? "text-amber-400" : "text-zinc-50"}
                 `}
-              >
-                {({ active, selected }) => (
-                  <div
-                    onMouseEnter={(e) => handleOptionMouseEnter(option, e)}
-                    onMouseLeave={handleOptionMouseLeave}
-                  >
-                    {renderOption ? (
-                      renderOption(option, { active, selected })
-                    ) : (
-                      <>
-                        <span>{option.label}</span>
-                        {option.sublabel && (
-                          <span className="text-zinc-500 ml-2 text-xs">
-                            {option.sublabel}
-                          </span>
-                        )}
-                      </>
-                    )}
-                  </div>
-                )}
-              </ComboboxOption>
-            ))
+                >
+                  {({ active, selected }) => (
+                    <div>
+                      {renderOption ? (
+                        renderOption(option, { active, selected })
+                      ) : (
+                        <>
+                          <span>{option.label}</span>
+                          {option.sublabel && (
+                            <span className="text-zinc-500 ml-2 text-xs">
+                              {option.sublabel}
+                            </span>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  )}
+                </ComboboxOption>
+              );
+            })
           )}
         </ComboboxOptions>
 

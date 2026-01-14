@@ -1,6 +1,8 @@
+import { Trans } from "@lingui/react/macro";
 import { useMemo } from "react";
 import { ActiveSkills } from "@/src/data/skill";
 import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
+import { i18n } from "@/src/lib/i18n";
 import type { Loadout } from "@/src/tli/core";
 import {
   SearchableSelect,
@@ -31,7 +33,7 @@ export const SkillSelector: React.FC<SkillSelectorProps> = ({
   }, [loadout.skillPage.activeSkills]);
 
   const options: SearchableSelectOption<ImplementedActiveSkillName>[] =
-    availableSkills.map((name) => ({ value: name, label: name }));
+    availableSkills.map((name) => ({ value: name, label: i18n._(name) }));
 
   const handleChange = (value: ImplementedActiveSkillName | undefined) => {
     onSkillChange(value);
@@ -40,7 +42,7 @@ export const SkillSelector: React.FC<SkillSelectorProps> = ({
   return (
     <div>
       <label className="mb-2 block text-sm font-medium text-zinc-400">
-        Active Skill
+        <Trans>Active Skill</Trans>
       </label>
       <SearchableSelect
         options={options}

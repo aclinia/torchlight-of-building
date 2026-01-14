@@ -14,9 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/routes/builder/equipment.tsx:436
-msgid "Select equipment type..."
-msgstr ""
+#: src/routes/builder/skills.tsx:56
+msgid "Active Skills"
+msgstr "主动技能"
 
 #. js-lingui-explicit-id
 #: src/routes/builder/talents/$slot.tsx:333
@@ -32,6 +32,11 @@ msgstr ""
 #: src/routes/builder/talents/$slot.tsx:355
 msgid "Slot"
 msgstr ""
+
+#. js-lingui-explicit-id
+#: src/routes/builder/equipment.tsx:437
+msgid "Select equipment type..."
+msgstr "选择装备类型..."
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:4
@@ -344,6 +349,10 @@ msgstr ""
 msgid "Core Talent 2"
 msgstr ""
 
+#: src/components/calculations/SkillSelector.tsx:45
+msgid "Active Skill"
+msgstr ""
+
 #: src/components/equipment/LegendaryGearModule.tsx:232
 msgid "Add Legendary"
 msgstr "增加一个传奇物品"
@@ -353,15 +362,15 @@ msgstr "增加一个传奇物品"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "您确定要删除“{0}”吗？"
 
-#: src/routes/builder/equipment.tsx:467
+#: src/routes/builder/equipment.tsx:468
 msgid "Base Affixes (2 max)"
 msgstr "基础词缀 (2 max)"
 
-#: src/routes/builder/equipment.tsx:446
+#: src/routes/builder/equipment.tsx:447
 msgid "Base Stats (1 max)"
 msgstr "基底词缀 (1 max)"
 
-#: src/routes/builder/equipment.tsx:532
+#: src/routes/builder/equipment.tsx:534
 msgid "Blending (1 max)"
 msgstr "调香词缀 (1 max)"
 
@@ -379,7 +388,7 @@ msgstr "复制"
 msgid "Core Talents"
 msgstr "核心天赋"
 
-#: src/routes/builder/equipment.tsx:422
+#: src/routes/builder/equipment.tsx:423
 msgid "Craft New Item"
 msgstr "制作新物品"
 
@@ -409,11 +418,11 @@ msgstr "删除"
 msgid "Early Development"
 msgstr "早期预览"
 
-#: src/routes/builder/equipment.tsx:400
+#: src/routes/builder/equipment.tsx:401
 msgid "Equipment Slots"
 msgstr "装备槽位"
 
-#: src/routes/builder/equipment.tsx:430
+#: src/routes/builder/equipment.tsx:431
 msgid "Equipment Type"
 msgstr "装备类型"
 
@@ -421,11 +430,11 @@ msgstr "装备类型"
 msgid "Import Build"
 msgstr "导入流派"
 
-#: src/routes/builder/equipment.tsx:628
+#: src/routes/builder/equipment.tsx:632
 msgid "Inventory"
 msgstr "库存"
 
-#: src/routes/builder/equipment.tsx:629
+#: src/routes/builder/equipment.tsx:633
 msgid "items"
 msgstr "物品"
 
@@ -437,7 +446,7 @@ msgstr "我的配装"
 msgid "No builds yet"
 msgstr "暂无流派"
 
-#: src/routes/builder/equipment.tsx:633
+#: src/routes/builder/equipment.tsx:637
 msgid "No items in inventory. Craft items above to add them here."
 msgstr "库存中没有物品。在上方制作物品以添加到此处。"
 
@@ -445,7 +454,7 @@ msgstr "库存中没有物品。在上方制作物品以添加到此处。"
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 msgstr "请耐心等待，对于这个应用程序在早期开发阶段遇到的任何问题，请多多包涵。"
 
-#: src/routes/builder/equipment.tsx:573
+#: src/routes/builder/equipment.tsx:575
 msgid "Prefixes (3 max)"
 msgstr "前缀 (3 max)"
 
@@ -461,11 +470,11 @@ msgstr "重命名"
 msgid "Save"
 msgstr "保存"
 
-#: src/routes/builder/equipment.tsx:616
+#: src/routes/builder/equipment.tsx:620
 msgid "Save to Inventory"
 msgstr "保存到库存"
 
-#: src/routes/builder/equipment.tsx:621
+#: src/routes/builder/equipment.tsx:625
 msgid "Select an equipment type to begin crafting"
 msgstr "选择一个装备类型以开始制作"
 
@@ -486,11 +495,11 @@ msgstr "为 {0} 选择天赋树"
 msgid "Suffixes (3 max)"
 msgstr "后缀 (3 max)"
 
-#: src/routes/builder/equipment.tsx:490
+#: src/routes/builder/equipment.tsx:492
 msgid "Sweet Dream Affix (1 max)"
 msgstr "美梦词缀 (1 max)"
 
-#: src/routes/builder/equipment.tsx:511
+#: src/routes/builder/equipment.tsx:513
 msgid "Tower Sequence (1 max)"
 msgstr "高塔词缀 (1 max)"
 

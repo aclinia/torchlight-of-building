@@ -1,16 +1,28 @@
 import { i18n } from "@lingui/core";
 import { messages as enCommonMessages } from "@/src/locales/en/common";
 import { messages as enLegendariesMessages } from "@/src/locales/en/legendaries";
+import { messages as enSkillMessages } from "@/src/locales/en/skills";
 import { messages as enTalentMessages } from "@/src/locales/en/talents";
 import { messages as zhCommonMessages } from "@/src/locales/zh/common";
 import { messages as zhLegendariesMessages } from "@/src/locales/zh/legendaries";
+import { messages as zhSkillMessages } from "@/src/locales/zh/skills";
 import { messages as zhTalentMessages } from "@/src/locales/zh/talents";
 
 export type Locale = "en" | "zh";
 
 const localeMessages: Record<Locale, typeof enCommonMessages> = {
-  en: { ...enCommonMessages, ...enLegendariesMessages, ...enTalentMessages },
-  zh: { ...zhCommonMessages, ...zhLegendariesMessages, ...zhTalentMessages },
+  en: {
+    ...enCommonMessages,
+    ...enLegendariesMessages,
+    ...enTalentMessages,
+    ...enSkillMessages,
+  },
+  zh: {
+    ...zhCommonMessages,
+    ...zhLegendariesMessages,
+    ...zhTalentMessages,
+    ...zhSkillMessages,
+  },
 };
 
 export const defaultLocale: Locale = "en";

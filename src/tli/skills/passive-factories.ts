@@ -197,4 +197,49 @@ export const passiveSkillModFactories: Partial<
       { type: "MovementSpeedPct", value: v(vals.movementSpeedPct, l) },
     ],
   }),
+  "Energy Fortress": (l, vals) => ({
+    buffMods: [
+      { type: "MaxEnergyShield", value: v(vals.energyShield, l) },
+      {
+        type: "MaxEnergyShieldPct",
+        value: v(vals.energyShieldPct, l),
+        addn: true,
+      },
+    ],
+  }),
+  "Precise: Energy Fortress": (l, vals) => ({
+    buffMods: [
+      { type: "MaxEnergyShield", value: v(vals.energyShield, l) },
+      {
+        type: "MaxEnergyShieldPct",
+        value: v(vals.energyShieldPct, l),
+        addn: true,
+      },
+    ],
+  }),
+  Nimbleness: (l, vals) => ({
+    buffMods: [
+      { type: "Evasion", value: v(vals.evasion, l) },
+      { type: "EvasionPct", value: v(vals.evasionPct, l), addn: true },
+    ],
+  }),
+  "Precise: Nimbleness": (l, vals) => ({
+    buffMods: [
+      { type: "Evasion", value: v(vals.evasion, l) },
+      { type: "EvasionPct", value: v(vals.evastionPct, l), addn: true },
+    ],
+  }),
+
+  Steadfast: (l, vals) => ({
+    buffMods: [
+      { type: "Armor", value: v(vals.armor, l) },
+      { type: "ArmorPct", value: v(vals.armorPct, l), addn: true },
+    ],
+  }),
+  "Precise: Steadfast": (l, vals) => ({
+    buffMods: [
+      { type: "Armor", value: v(vals.armor, l) },
+      { type: "ArmorPct", value: v(vals.armorPct, l), addn: true },
+    ],
+  }),
 };

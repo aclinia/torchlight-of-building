@@ -126,6 +126,7 @@ export type Stackable =
   | "berserking_blade_buff"
   // hero-specific
   | "stalker"
+  | "twisted_spacetime"
   // pactspirit-specific
   | "repentance";
 
@@ -438,6 +439,10 @@ interface ModDefinitions {
   WindStalker: object;
   GeneratesStalker: object;
   MaxStalker: { value: number };
+  // youga 2
+  HasSpacetimeElapse: { value: number };
+  SpacetimeRecordedDmgMore: { value: number; perStack?: boolean };
+  TwistedSpacetimeStacks: { value: number };
   // pactspirit stuff
   SquidnovaEffPct: { value: number };
   GeneratesSquidnova: object;
