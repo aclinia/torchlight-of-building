@@ -50,7 +50,7 @@ export const AffixPreviewSection = ({
 
       <div className="bg-zinc-900 p-3 rounded border border-zinc-700 flex">
         <div
-          className={`text-sm font-medium whitespace-pre-line flex-70 ${hideQualitySlider || !showTierInfo ? "text-purple-400" : "text-amber-400"}`}
+          className={`text-sm font-medium whitespace-pre-line flex-1 ${hideQualitySlider || !showTierInfo ? "text-purple-400" : "text-amber-400"}`}
         >
           {previewText}
         </div>

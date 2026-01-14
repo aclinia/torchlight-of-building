@@ -173,18 +173,12 @@ export const getPercentageWithinTier = (
 };
 
 export const getSortedGroups = (affixGroups: CollapsedAffixGroup[]) => {
-  return affixGroups.sort((a, b) => {
-    if (a.craftingPool === b.craftingPool) {
-      return 0;
-    }
-    if (a.craftingPool === "Basic") {
+  return affixGroups.toSorted((a, b) => {
+    const prio = ["Basic", "Advanced", "Ultimate"];
+    if (!prio.includes(a.craftingPool) || !prio.includes(b.craftingPool)) {
       return -1;
     }
-    if (a.craftingPool === "Advanced" && b.craftingPool === "Ultimate") {
-      return -1;
-    }
-
-    return 1;
+    return prio.indexOf(a.craftingPool) - prio.indexOf(b.craftingPool);
   });
 };
 
