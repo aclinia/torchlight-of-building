@@ -7,6 +7,7 @@ import type { BaseGearAffix, EquipmentType } from "@/src/tli/gear-data-types";
 import { AffixSlotComponent } from "../../components/equipment/AffixSlotComponent";
 import { EditGearModal } from "../../components/equipment/EditGearModal";
 import { EquipmentSlotDropdown } from "../../components/equipment/EquipmentSlotDropdown";
+import { GroupedAffixSlotComponent } from "../../components/equipment/GroupedAffixSlotComponent";
 import { InventoryItem } from "../../components/equipment/InventoryItem";
 import { LegendaryGearModule } from "../../components/equipment/LegendaryGearModule";
 import { SearchableSelect } from "../../components/ui/SearchableSelect";
@@ -468,7 +469,7 @@ function EquipmentPage(): React.ReactNode {
                   </h3>
                   <div className="space-y-4">
                     {[0, 1].map((slotIndex) => (
-                      <AffixSlotComponent
+                      <GroupedAffixSlotComponent
                         key={slotIndex}
                         slotIndex={slotIndex}
                         affixType="Base Affix"
@@ -478,6 +479,7 @@ function EquipmentPage(): React.ReactNode {
                         onSliderChange={handleBaseAffixSliderChange}
                         onClear={handleClearBaseAffix}
                         hideTierInfo
+                        allSlotStates={baseAffixSlots}
                       />
                     ))}
                   </div>
@@ -574,7 +576,7 @@ function EquipmentPage(): React.ReactNode {
                 </h3>
                 <div className="space-y-4">
                   {[0, 1, 2].map((slotIndex) => (
-                    <AffixSlotComponent
+                    <GroupedAffixSlotComponent
                       key={slotIndex}
                       slotIndex={slotIndex}
                       affixType="Prefix"
@@ -583,6 +585,7 @@ function EquipmentPage(): React.ReactNode {
                       onAffixSelect={handleAffixSelect}
                       onSliderChange={handleSliderChange}
                       onClear={handleClearAffix}
+                      allSlotStates={affixSlots.slice(0, 3)}
                     />
                   ))}
                 </div>
@@ -594,7 +597,7 @@ function EquipmentPage(): React.ReactNode {
                 </h3>
                 <div className="space-y-4">
                   {[3, 4, 5].map((slotIndex) => (
-                    <AffixSlotComponent
+                    <GroupedAffixSlotComponent
                       key={slotIndex}
                       slotIndex={slotIndex}
                       affixType="Suffix"
@@ -603,6 +606,7 @@ function EquipmentPage(): React.ReactNode {
                       onAffixSelect={handleAffixSelect}
                       onSliderChange={handleSliderChange}
                       onClear={handleClearAffix}
+                      allSlotStates={affixSlots.slice(3, 6)}
                     />
                   ))}
                 </div>

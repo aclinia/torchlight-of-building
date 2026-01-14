@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { getFilteredAffixes } from "@/src/lib/affix-utils";
+import {
+  type FilterAffixType,
+  getFilteredAffixes,
+  isGroupableAffixType,
+} from "@/src/lib/affix-utils";
 import {
   formatBlendAffix,
   formatBlendOption,
@@ -8,12 +12,14 @@ import {
 } from "@/src/lib/blend-utils";
 import { DEFAULT_QUALITY } from "@/src/lib/constants";
 import type { Gear as SaveDataGear } from "@/src/lib/save-data";
+import type { AffixSlotState } from "@/src/lib/types";
 import { type Gear, getAffixText } from "@/src/tli/core";
 import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
 import { Modal, ModalActions, ModalButton } from "../ui/Modal";
 import { AffixSlotComponent } from "./AffixSlotComponent";
 import { ExistingAffixDisplay } from "./ExistingAffixDisplay";
+import { GroupedAffixSlotComponent } from "./GroupedAffixSlotComponent";
 
 interface EditableAffixSlot {
   type: "existing" | "new";
@@ -505,17 +511,17 @@ export const EditGearModal = ({
 
   if (item === undefined) return null;
 
+  const toAffixSlotStates = (slots: EditableAffixSlot[]): AffixSlotState[] => {
+    return slots.map((slot) => ({
+      affixIndex: slot.affixIndex,
+      percentage: slot.percentage,
+    }));
+  };
+
   const renderAffixSlot = (
     slot: EditableAffixSlot,
     slotIndex: number,
-    affixType:
-      | "Prefix"
-      | "Suffix"
-      | "Base Affix"
-      | "Sweet Dream Affix"
-      | "Tower Sequence"
-      | "Base Stats"
-      | "Blend",
+    affixType: FilterAffixType,
     affixes: BaseGearAffix[],
     onSelect: (slotIndex: number, value: string) => void,
     onSliderChange: (slotIndex: number, value: string) => void,
@@ -523,9 +529,9 @@ export const EditGearModal = ({
     onDeleteExisting: () => void,
     options?: {
       hideQualitySlider?: boolean;
-      hideTierInfo?: boolean;
       formatOption?: (affix: BaseGearAffix) => string;
       formatCraftedText?: (affix: BaseGearAffix) => string;
+      allSlotStates?: AffixSlotState[];
     },
   ): React.ReactElement => {
     if (slot.type === "existing" && slot.value !== undefined) {
@@ -538,6 +544,29 @@ export const EditGearModal = ({
       );
     }
 
+    // Use GroupedAffixSlotComponent for Prefix, Suffix, Base Affix
+    if (isGroupableAffixType(affixType)) {
+      return (
+        <GroupedAffixSlotComponent
+          key={slotIndex}
+          slotIndex={slotIndex}
+          affixType={affixType}
+          affixes={affixes}
+          selection={{
+            affixIndex: slot.affixIndex,
+            percentage: slot.percentage,
+          }}
+          onAffixSelect={onSelect}
+          onSliderChange={onSliderChange}
+          onClear={onClear}
+          hideTierInfo={false}
+          formatCraftedText={options?.formatCraftedText}
+          allSlotStates={options?.allSlotStates}
+        />
+      );
+    }
+
+    // Use AffixSlotComponent for Base Stats, Sweet Dream, Tower Sequence, Blend
     return (
       <AffixSlotComponent
         key={slotIndex}
@@ -549,7 +578,7 @@ export const EditGearModal = ({
         onSliderChange={onSliderChange}
         onClear={onClear}
         hideQualitySlider={options?.hideQualitySlider}
-        hideTierInfo={options?.hideTierInfo}
+        hideTierInfo={true}
         formatOption={options?.formatOption}
         formatCraftedText={options?.formatCraftedText}
       />
@@ -601,7 +630,7 @@ export const EditGearModal = ({
                   handleBaseAffixSliderChange,
                   handleClearBaseAffix,
                   () => handleDeleteBaseAffix(index),
-                  { hideTierInfo: true },
+                  { allSlotStates: toAffixSlotStates(baseAffixes) },
                 ),
               )}
             </div>
@@ -623,7 +652,7 @@ export const EditGearModal = ({
               handleSweetDreamSliderChange,
               handleClearSweetDream,
               handleDeleteSweetDream,
-              { hideTierInfo: true },
+              {},
             )}
           </div>
         )}
@@ -709,6 +738,7 @@ export const EditGearModal = ({
                 handlePrefixSliderChange,
                 handleClearPrefix,
                 () => handleDeletePrefix(index),
+                { allSlotStates: toAffixSlotStates(prefixes) },
               ),
             )}
           </div>
@@ -730,6 +760,7 @@ export const EditGearModal = ({
                 handleSuffixSliderChange,
                 handleClearSuffix,
                 () => handleDeleteSuffix(index),
+                { allSlotStates: toAffixSlotStates(suffixes) },
               ),
             )}
           </div>
