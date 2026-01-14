@@ -126,9 +126,9 @@ export type Stackable =
   | "berserking_blade_buff"
   // hero-specific
   | "stalker"
+  | "twisted_spacetime"
   // pactspirit-specific
-  | "repentance"
-  | "twisted_spacetime";
+  | "repentance";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -439,14 +439,15 @@ interface ModDefinitions {
   WindStalker: object;
   GeneratesStalker: object;
   MaxStalker: { value: number };
+  // youga 2
+  HasSpacetimeElapse: { value: number };
+  SpacetimeRecordedDmgMore: { value: number; perStack?: boolean };
+  TwistedSpacetimeStacks: { value: number };
   // pactspirit stuff
   SquidnovaEffPct: { value: number };
   GeneratesSquidnova: object;
   // legendary gear
   DisableMainStatDmg: object;
-  // youga 2
-  SpaceTimeSpeedUp: object;
-  TwistedSpacetimeStacks: { value: number };
 }
 
 // Generate the Mod union type from ModDefinitions
