@@ -198,6 +198,9 @@ export interface Configuration {
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor?: number;
 
+  // defaults to max of 5
+  twistedSpacetimeStacks?: number;
+
   // custom affix lines for injecting arbitrary mods
   customAffixLines?: string[];
 }
@@ -273,6 +276,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   enemyFireRes: undefined,
   enemyErosionRes: undefined,
   enemyArmor: undefined,
+  twistedSpacetimeStacks: undefined,
   customAffixLines: undefined,
 };
 

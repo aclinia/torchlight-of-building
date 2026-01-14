@@ -1,0 +1,2482 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:4
+msgid "Aegis of Fire"
+msgstr "烈火神盾"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:5
+msgid "Aim"
+msgstr "瞄准"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:6
+msgid "Aimed Shot"
+msgstr "瞄准射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:7
+msgid "Arcane Circle"
+msgstr "秘法阵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:8
+msgid "Archery Bond"
+msgstr "射术羁绊"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:9
+msgid "Arrow Einherjar"
+msgstr "飞箭英灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:10
+msgid "Berserking Blade"
+msgstr "暴走巨刃"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:11
+msgid "Biting Cold"
+msgstr "蚀骨之寒"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:12
+msgid "Black Hole"
+msgstr "黑洞"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:13
+msgid "Blazing Bullet"
+msgstr "炽炎穿弹"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:14
+msgid "Blazing Dance"
+msgstr "烈焰挥舞"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:15
+msgid "Blazing Incineration"
+msgstr "烈焰暴燃"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:16
+msgid "Blazing Spin"
+msgstr "烈焰飞旋"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:17
+msgid "Bleak Grass"
+msgstr "哀草丛生"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:18
+msgid "Blind"
+msgstr "致盲"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:19
+msgid "Blink"
+msgstr "闪现"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:20
+msgid "Blink Arrow"
+msgstr "瞬闪弓"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:21
+msgid "Blizzard"
+msgstr "暴风雪"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:22
+msgid "Blurry Steps"
+msgstr "迷踪步"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:23
+msgid "Bombard"
+msgstr "炮轰"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:24
+msgid "Brisk Wind"
+msgstr "迅疾之风"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:25
+msgid "Bull's Rage"
+msgstr "公牛之怒"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:26
+msgid "Burning Shot"
+msgstr "燃烧射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:27
+msgid "Burst of Anger"
+msgstr "怒火狂飙"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:28
+msgid "Centralized Loading"
+msgstr "集中上膛"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:29
+msgid "Chain Lightning"
+msgstr "闪电链"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:30
+msgid "Charged Pummel"
+msgstr "充能猛击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:31
+msgid "Charging Warcry"
+msgstr "冲锋战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:32
+msgid "Chromatic Shot"
+msgstr "五彩魔矢"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:33
+msgid "Compound Source"
+msgstr "复合源泉"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:34
+msgid "Corrosive Shot"
+msgstr "侵蚀弹"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:35
+msgid "Corrosive Throw"
+msgstr "侵蚀投掷"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:36
+msgid "Corruption"
+msgstr "邪恶侵蚀"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:37
+msgid "Crescent Slash"
+msgstr "碎月弧光斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:38
+msgid "Dark Gate"
+msgstr "黑暗之门"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:39
+msgid "Dazzling Bloom"
+msgstr "夺目绽放"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:40
+msgid "Defensive Buffer"
+msgstr "缓冲防御"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:41
+msgid "Delayed Pain"
+msgstr "痛觉延迟"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:42
+msgid "Destructive Light Cannon"
+msgstr "毁灭光炮"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:43
+msgid "Double Thrusts"
+msgstr "双重突刺"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:44
+msgid "Drinking Recovery"
+msgstr "渴饮疗愈"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:45
+msgid "Electrifying Shot"
+msgstr "电光弹"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:46
+msgid "Electrocute"
+msgstr "感电"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:47
+msgid "Elemental Shock"
+msgstr "元素震荡"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:48
+msgid "Entangled Pain"
+msgstr "苦痛纠缠"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:49
+msgid "Fearless Warcry"
+msgstr "狂猛战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:50
+msgid "Fire Burst"
+msgstr "爆炎术"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:51
+msgid "Fixate"
+msgstr "聚焦"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:52
+msgid "Flame Core"
+msgstr "聚焰之核"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:53
+msgid "Flame Jet"
+msgstr "烈焰释放"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:54
+msgid "Flame Slash"
+msgstr "烈焰斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:55
+msgid "Focused Shot"
+msgstr "专注射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:56
+msgid "Focused Slash"
+msgstr "专注斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:57
+msgid "Forced Start"
+msgstr "强制启动"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:58
+msgid "Frigid Transmission"
+msgstr "寒冰传送"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:59
+msgid "Frost Core"
+msgstr "寒霜之核"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:60
+msgid "Frost Impact"
+msgstr "寒霜破击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:61
+msgid "Frost Release"
+msgstr "寒潮缓释"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:62
+msgid "Frost Shield"
+msgstr "寒冰盾"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:63
+msgid "Frost Spike"
+msgstr "碎冰刺击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:64
+msgid "Frost Terra"
+msgstr "寒霜地面"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:65
+msgid "Gale Slash"
+msgstr "疾风裂地斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:66
+msgid "Ghost Blade Einherjar"
+msgstr "幽刃英灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:67
+msgid "Glacier Ripples"
+msgstr "冰川涟漪"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:68
+msgid "Gold Rush"
+msgstr "聚石碎金"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:69
+msgid "Groundshaker"
+msgstr "震撼大地"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:70
+msgid "Hammer of Ash"
+msgstr "灰烬之锤"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:71
+msgid "Harmonious Field"
+msgstr "调谐力场"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:72
+msgid "Haunting Abomination"
+msgstr "恶煞缠身"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:73
+msgid "High Energy Beam"
+msgstr "高能光束"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:74
+msgid "Howling Gale"
+msgstr "呼啸烈风"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:75
+msgid "Ice Bond"
+msgstr "冰霜羁绊"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:76
+msgid "Ice Earthshaker"
+msgstr "撼地冰暴"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:77
+msgid "Ice Lances"
+msgstr "冰锥术"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:78
+msgid "Ice Shot"
+msgstr "寒冰射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:79
+msgid "Icebound Beam"
+msgstr "冰魄射线"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:80
+msgid "Icy Blade"
+msgstr "冰凌斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:81
+msgid "Inexhaustible Barrage"
+msgstr "不竭弹雨"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:82
+msgid "Leap Attack"
+msgstr "跃击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:83
+msgid "Life Source"
+msgstr "生命源泉"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:84
+msgid "Lightning Beam"
+msgstr "雷暴射线"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:85
+msgid "Lightning Shot"
+msgstr "闪电射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:86
+msgid "Lightning Star"
+msgstr "闪电流星"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:87
+msgid "Lightning Storm"
+msgstr "闪电风暴"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:88
+msgid "Lightning Surge"
+msgstr "雷驰电涌"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:89
+msgid "Machine Army"
+msgstr "机械行军"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:90
+msgid "Mana Boil"
+msgstr "魔力沸腾"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:91
+msgid "Mana Source"
+msgstr "魔力源泉"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:92
+msgid "Marked Rain of Arrows"
+msgstr "标记箭雨"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:93
+msgid "Mind Control"
+msgstr "摄念夺识"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:94
+msgid "Molten Rising"
+msgstr "熔火升腾"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:95
+msgid "Moon Strike"
+msgstr "月华斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:96
+msgid "Nourishment of Life"
+msgstr "生息滋养"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:97
+msgid "Obscure"
+msgstr "模糊"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:98
+msgid "Onslaught Punch"
+msgstr "进击之拳"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:99
+msgid "Overpower"
+msgstr "压制重击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:100
+msgid "Path of Flames"
+msgstr "烈焰之径"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:101
+msgid "Permafrost Cast"
+msgstr "冰浇雪铸"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:102
+msgid "Prayer"
+msgstr "祈愿"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:103
+msgid "Raging Warcry"
+msgstr "暴怒战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:104
+msgid "Rain of Arrows"
+msgstr "箭雨"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:105
+msgid "Reform"
+msgstr "重整阵势"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:106
+msgid "Resurrection Warcry"
+msgstr "复苏战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:107
+msgid "Ring of Blades"
+msgstr "环绕飞刃"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:108
+msgid "Ring of Ice"
+msgstr "冰环术"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:109
+msgid "Rising Edge"
+msgstr "新锐崛起"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:110
+msgid "Rock Blast"
+msgstr "乱石横飞"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:111
+msgid "Rocket Jump"
+msgstr "火箭跳"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:112
+msgid "Safeguard Ring"
+msgstr "绝境阵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:113
+msgid "Savage Charge"
+msgstr "野蛮冲锋"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:114
+msgid "Scattered Mud"
+msgstr "零落成泥"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:115
+msgid "Scorch"
+msgstr "炽热"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:116
+msgid "Scorching Beam"
+msgstr "灼热射线"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:117
+msgid "Scorching Pulse"
+msgstr "灼热波纹"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:118
+msgid "Secret Origin Unleash"
+msgstr "秘源释放"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:119
+msgid "Serpent Beam"
+msgstr "流焰炎蛇引"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:120
+msgid "Shackles of Malice"
+msgstr "恶意枷锁"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:121
+msgid "Shadow Dash"
+msgstr "暗影冲刺"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:122
+msgid "Shadow Shot"
+msgstr "暗影弹"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:123
+msgid "Shadow Swamp"
+msgstr "暗影之沼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:124
+msgid "Shattered Stone"
+msgstr "裂石打击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:125
+msgid "Shockwave Warcry"
+msgstr "破势战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:126
+msgid "Sparkle"
+msgstr "电火花"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:127
+msgid "Spectral Slash"
+msgstr "分身灵爆斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:128
+msgid "Speed Phantom"
+msgstr "迅法幻身"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:129
+msgid "Spiral Strike"
+msgstr "螺旋击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:130
+msgid "Split Firebolt"
+msgstr "裂变火球"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:131
+msgid "Split Shot"
+msgstr "分裂射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:132
+msgid "Star Stalker"
+msgstr "追猎星芒"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:133
+msgid "Stoneskin"
+msgstr "石肤术"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:134
+msgid "Summon Grim Phantom"
+msgstr "召唤幽浮魅影"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:135
+msgid "Summon Machine Guard"
+msgstr "召唤机械警卫"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:136
+msgid "Summon Spider Tank"
+msgstr "召唤蜘蛛坦克"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:137
+msgid "Swift Shadow Raid"
+msgstr "迅影奔袭"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:138
+msgid "Thunder Core"
+msgstr "雷降之核"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:139
+msgid "Thunder Slash"
+msgstr "雷影斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:140
+msgid "Thunder Spike"
+msgstr "雷光刺击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:141
+msgid "Thunderbolt Overload"
+msgstr "超载雷球"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:142
+msgid "Thundercloud"
+msgstr "雷云放射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:143
+msgid "Thundercloud Surge"
+msgstr "雷云激荡"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:144
+msgid "Thunderlight Arrow"
+msgstr "雷光飞矢"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:145
+msgid "Thunderlight Bond"
+msgstr "雷光羁绊"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:146
+msgid "Timid"
+msgstr "胆怯"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:147
+msgid "Towering Mountains"
+msgstr "群峰压顶"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:148
+msgid "Vulnerability"
+msgstr "易伤"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:149
+msgid "Whirlwind"
+msgstr "旋风斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:150
+msgid "Whirlwind Blade"
+msgstr "刀锋回旋"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:151
+msgid "Wilt Spike"
+msgstr "凋零刺击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:152
+msgid "Wilting Beam"
+msgstr "枯萎射线"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:153
+msgid "Withering Payback"
+msgstr "凋敝奉还"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:154
+msgid "World of Thorns"
+msgstr "荆天棘地"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:155
+msgid "[Test] Simple Attack"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:156
+msgid "[Test] Simple Persistent Spell"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:157
+msgid "[Test] Simple Spell"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:158
+msgid "[Test] Slash Strike Skill"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:159
+msgid "Acuteness Focus"
+msgstr "锐利贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:160
+msgid "Ailment Amplification"
+msgstr "异常增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:161
+msgid "Charged Flames"
+msgstr "烈焰充能"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:162
+msgid "Corrosion Focus"
+msgstr "侵蚀贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:163
+msgid "Cruelty"
+msgstr "暴虐"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:164
+msgid "Deep Pain"
+msgstr "深层苦痛"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:165
+msgid "Domain Expansion"
+msgstr "领域扩张"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:166
+msgid "Electric Conversion"
+msgstr "电能转化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:167
+msgid "Elemental Resistance"
+msgstr "元素抵抗"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:168
+msgid "Energy Fortress"
+msgstr "能量壁垒"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:169
+msgid "Erosion Amplification"
+msgstr "腐蚀增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:170
+msgid "Fearless"
+msgstr "狂猛"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:171
+msgid "Flame Focus"
+msgstr "熔火贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:172
+msgid "Frigid Domain"
+msgstr "冰寒领域"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:173
+msgid "Ice Focus"
+msgstr "寒冰贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:174
+msgid "Magical Source"
+msgstr "魔源"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:175
+msgid "Nimbleness"
+msgstr "灵敏"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:176
+msgid "Precise: Acuteness Focus"
+msgstr "精密 锐利贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:177
+msgid "Precise: Ailment Amplification"
+msgstr "精密 异常增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:178
+msgid "Precise: Charged Flames"
+msgstr "精密 烈焰充能"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:179
+msgid "Precise: Corrosion Focus"
+msgstr "精密 侵蚀贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:180
+msgid "Precise: Cruelty"
+msgstr "精密 暴虐"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:181
+msgid "Precise: Deep Pain"
+msgstr "精密 深层苦痛"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:182
+msgid "Precise: Domain Expansion"
+msgstr "精密 领域扩张"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:183
+msgid "Precise: Electric Conversion"
+msgstr "精密 电能转化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:184
+msgid "Precise: Elemental Resistance"
+msgstr "精密 元素抵抗"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:185
+msgid "Precise: Energy Fortress"
+msgstr "精密 能量壁垒"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:186
+msgid "Precise: Erosion Amplification"
+msgstr "精密 腐蚀增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:187
+msgid "Precise: Fearless"
+msgstr "精密 狂猛"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:188
+msgid "Precise: Flame Focus"
+msgstr "精密 熔火贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:189
+msgid "Precise: Frigid Domain"
+msgstr "精密 冰寒领域"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:190
+msgid "Precise: Ice Focus"
+msgstr "精密 寒冰贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:191
+msgid "Precise: Magical Source"
+msgstr "精密 魔源"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:192
+msgid "Precise: Nimbleness"
+msgstr "精密 灵敏"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:193
+msgid "Precise: Precise Projectiles"
+msgstr "精密 精准投射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:194
+msgid "Precise: Radical Order"
+msgstr "精密 激进号令"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:195
+msgid "Precise: Rejuvenation"
+msgstr "精密 再生"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:196
+msgid "Precise: Spell Amplification"
+msgstr "精密 法术增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:197
+msgid "Precise: Steadfast"
+msgstr "精密 坚固"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:198
+msgid "Precise: Swiftness"
+msgstr "精密 疾速"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:199
+msgid "Precise: Thunder Focus"
+msgstr "精密 雷霆贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:200
+msgid "Precise: Weapon Amplification"
+msgstr "精密 武器增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:201
+msgid "Precise Projectiles"
+msgstr "精准投射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:202
+msgid "Radical Order"
+msgstr "激进号令"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:203
+msgid "Rejuvenation"
+msgstr "再生"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:204
+msgid "Spell Amplification"
+msgstr "法术增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:205
+msgid "Steadfast"
+msgstr "坚固"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:206
+msgid "Summon Erosion Magus"
+msgstr "召唤腐化之灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:207
+msgid "Summon Fire Magus"
+msgstr "召唤火焰之灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:208
+msgid "Summon Frost Magus"
+msgstr "召唤寒冰之灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:209
+msgid "Summon Rock Magus"
+msgstr "召唤磐石之灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:210
+msgid "Summon Thunder Magus"
+msgstr "召唤雷霆之灵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:211
+msgid "Swiftness"
+msgstr "疾速"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:212
+msgid "Thunder Focus"
+msgstr "雷霆贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:213
+msgid "Weapon Amplification"
+msgstr "武器增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:214
+msgid "Added Cold Damage"
+msgstr "附加冰冷伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:215
+msgid "Added Erosion Damage"
+msgstr "附加腐蚀伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:216
+msgid "Added Fire Damage"
+msgstr "附加火焰伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:217
+msgid "Added Lightning Damage"
+msgstr "附加闪电伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:218
+msgid "Added Physical Damage"
+msgstr "附加物理伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:219
+msgid "Additional Ignite"
+msgstr "额外点燃"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:220
+msgid "Ailment Termination"
+msgstr "异常终结"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:221
+msgid "All In"
+msgstr "一鼓作气"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:222
+msgid "Assault Command"
+msgstr "袭击命令"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:223
+msgid "Attack Focus"
+msgstr "攻击专注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:224
+msgid "Aura Amplification"
+msgstr "光环增幅"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:225
+msgid "Auto-Charge"
+msgstr "自动充能"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:226
+msgid "Blinding"
+msgstr "致盲"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:227
+msgid "Carpet Bombardment"
+msgstr "地毯轰炸"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:228
+msgid "Cataclysm"
+msgstr "催化剂"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:229
+msgid "Channel Preparation"
+msgstr "预备引导"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:230
+msgid "Charge"
+msgstr "蓄势"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:231
+msgid "Concentration Warcry"
+msgstr "集中战吼"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:232
+msgid "Control Spell"
+msgstr "法术控制"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:233
+msgid "Cooldown Reduction"
+msgstr "加速冷却"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:234
+msgid "Cost Conversion"
+msgstr "耗能转化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:235
+msgid "Critical Charge"
+msgstr "濒危充能"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:236
+msgid "Critical Strike Damage Increase"
+msgstr "提高暴击伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:237
+msgid "Critical Strike Rating Increase"
+msgstr "提高暴击值"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:238
+msgid "Deep Wounds"
+msgstr "伤口加深"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:239
+msgid "Defense Form"
+msgstr "防御姿态"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:240
+msgid "Defense Layers"
+msgstr "层层防御"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:241
+msgid "Electric Overload"
+msgstr "电能超载"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:242
+msgid "Electric Punishment"
+msgstr "电能惩击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:243
+msgid "Elemental Duo"
+msgstr "元素双雄"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:244
+msgid "Elemental Fusion"
+msgstr "元素融合"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:245
+msgid "Elemental Impact"
+msgstr "元素冲击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:246
+msgid "Emergency Avoidance"
+msgstr "紧急回避"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:247
+msgid "Emergency restoration"
+msgstr "应急回复"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:248
+msgid "Enhanced Ailment"
+msgstr "强化异常"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:249
+msgid "Extended Duration"
+msgstr "持续时间延长"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:250
+msgid "Fire Explosion"
+msgstr "火焰爆发"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:251
+msgid "Focus Acceleration"
+msgstr "贯注强化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:252
+msgid "Focus Buff"
+msgstr "贯注增效"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:253
+msgid "Focused Beam"
+msgstr "聚能光束"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:254
+msgid "Fragile Resurrection"
+msgstr "脆弱复苏"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:255
+msgid "Freeze Chance"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:256
+msgid "Friend of Spirit Magi"
+msgstr "魔灵之友"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:257
+msgid "Gladiator's Roar"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:258
+msgid "Ground Divide"
+msgstr "地面分化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:259
+msgid "Grudge"
+msgstr "幽怨"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:260
+msgid "Guard"
+msgstr "守护"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:261
+msgid "Harvest Time"
+msgstr "丰收时刻"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:262
+msgid "Haunt"
+msgstr "惑影重重"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:263
+msgid "High Voltage"
+msgstr "高压电"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:264
+msgid "Hunting Tempo"
+msgstr "狩猎节奏"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:265
+msgid "Improved Corrosion"
+msgstr "强烈侵蚀"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:266
+msgid "Increased Area"
+msgstr "范围扩大"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:267
+msgid "Instant restoration"
+msgstr "瞬时回复"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:268
+msgid "Iron Fortification"
+msgstr "铁甲仍在"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:269
+msgid "Jump"
+msgstr "弹射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:270
+msgid "Lightning to Cold"
+msgstr "闪电转冰冷"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:271
+msgid "Lion's Roars"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:272
+msgid "Magic Dash"
+msgstr "御法飞驰"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:273
+msgid "Maniacal Army"
+msgstr "狂热之军"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:274
+msgid "Manifold Entanglement"
+msgstr "多重纠缠"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:275
+msgid "Mass Effect"
+msgstr "质量效应"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:276
+msgid "Mechanical Modification"
+msgstr "机械改造"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:277
+msgid "Melee Knockback"
+msgstr "近战击退"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:278
+msgid "Multifaceted Guard"
+msgstr "多面护卫"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:279
+msgid "Multiple Projectiles"
+msgstr "散射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:280
+msgid "Multistrike"
+msgstr "连续攻击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:281
+msgid "Nova Shot"
+msgstr "坠星射击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:282
+msgid "Overload"
+msgstr "过载"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:283
+msgid "Pain Amplification"
+msgstr "痛楚加剧"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:284
+msgid "Passivation"
+msgstr "钝化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:285
+msgid "Periodic Burst"
+msgstr "间歇性爆发"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:286
+msgid "Physical to Fire"
+msgstr "物理转火焰"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:287
+msgid "Precise: Concentrated"
+msgstr "精密 全神贯注"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:288
+msgid "Precise: Disciplined"
+msgstr "精密 律己"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:289
+msgid "Precise: Focus Buff"
+msgstr "精密 贯注增效"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:290
+msgid "Precise: Friend of Spirit Magi"
+msgstr "精密 魔灵之友"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:291
+msgid "Precise: Harmony"
+msgstr "精密 调合"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:292
+msgid "Precise: Malleable"
+msgstr "精密 遇强则强"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:293
+msgid "Precise: Protection Field"
+msgstr "精密 保护力场"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:294
+msgid "Precise: Purify"
+msgstr "精密 净化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:295
+msgid "Precise: Safety in Numbers"
+msgstr "精密 人多势众"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:296
+msgid "Precise: Seal Conversion"
+msgstr "精密 封印转化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:297
+msgid "Precise: Selfishness"
+msgstr "精密 自私"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:298
+msgid "Precise: Selfless"
+msgstr "精密 无私"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:299
+msgid "Precise: Stand as One"
+msgstr "精密 多则能成"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:300
+msgid "Precise: Superpower"
+msgstr "精密 超能共生"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:301
+msgid "Precise Restrain"
+msgstr "精密 节流"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:302
+msgid "Precision Strike"
+msgstr "精确打击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:303
+msgid "Preparation"
+msgstr "预备"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:304
+msgid "Projectile Penetration"
+msgstr "投射物穿透"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:305
+msgid "Projectile Split"
+msgstr "投射物分裂"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:306
+msgid "Protection Field"
+msgstr "保护力场"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:307
+msgid "Psychic Burst"
+msgstr "灵能乍泄"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:308
+msgid "Psychic Surge"
+msgstr "灵能奔涌"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:309
+msgid "Quick Decision"
+msgstr "速决"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:310
+msgid "Quick Mobility"
+msgstr "急速位移"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:311
+msgid "Quick Return"
+msgstr "快速回气"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:312
+msgid "Raging Slash"
+msgstr "怒斩"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:313
+msgid "Reaping Agony"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:314
+msgid "Recklessness"
+msgstr "狂莽"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:315
+msgid "Reclusion"
+msgstr "隐遁"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:316
+msgid "Recuperation"
+msgstr "调息"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:317
+msgid "Refracted Prism"
+msgstr "折射光棱"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:318
+msgid "Residues"
+msgstr "药性残留"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:319
+msgid "Restoration Charge"
+msgstr "回复充能"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:320
+msgid "Restrain"
+msgstr "节流"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:321
+msgid "Savage Growth"
+msgstr "野蛮生长"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:322
+msgid "Scattershot Beam"
+msgstr "散射光束"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:323
+msgid "Seal Conversion"
+msgstr "封印转化"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:324
+msgid "Sentry Modification"
+msgstr "改装哨卫"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:325
+msgid "Servant Damage"
+msgstr "仆从伤害"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:326
+msgid "Servant Life"
+msgstr "仆从生命"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:327
+msgid "Shortened Duration"
+msgstr "持续时间缩短"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:328
+msgid "Slow Projectile"
+msgstr "慢速投射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:329
+msgid "Spell Concentration"
+msgstr "法术集中"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:330
+msgid "Spell Tangle"
+msgstr "法术纠缠"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:331
+msgid "Steamroll"
+msgstr "碾压"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:332
+msgid "Tendonslicer"
+msgstr "断筋锋刃"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:333
+msgid "Terrain of Malice"
+msgstr "恶意之域"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:334
+msgid "Well-Fought Battle"
+msgstr "酣战"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:335
+msgid "Willpower"
+msgstr "定力"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:336
+msgid "Wind Projectiles"
+msgstr "疾风投射"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:337
+msgid "Activation Medium: Boss"
+msgstr "触媒：首领"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:338
+msgid "Activation Medium: Burst Activation"
+msgstr "触媒：激活迸发"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:339
+msgid "Activation Medium: Channel"
+msgstr "触媒：引导"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:340
+msgid "Activation Medium: Critical Strike"
+msgstr "触媒：暴击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:341
+msgid "Activation Medium: Demolisher"
+msgstr "触媒：破击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:342
+msgid "Activation Medium: Elite"
+msgstr "触媒：劲敌"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:343
+msgid "Activation Medium: Energy Shield"
+msgstr "触媒：护盾"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:344
+msgid "Activation Medium: Instruction"
+msgstr "触媒：指令"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:345
+msgid "Activation Medium: Life"
+msgstr "触媒：生命"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:346
+msgid "Activation Medium: Lock On"
+msgstr "触媒：锁定"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:347
+msgid "Activation Medium: Minion"
+msgstr "触媒：召唤物"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:348
+msgid "Activation Medium: Motionless"
+msgstr "触媒：静止"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:349
+msgid "Activation Medium: Multistrike"
+msgstr "触媒：连续攻击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:350
+msgid "Activation Medium: Perpetual Motion"
+msgstr "触媒：永动"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:351
+msgid "Activation Medium: Preparation"
+msgstr "触媒：预备"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:352
+msgid "Activation Medium: Resonance"
+msgstr "触媒：共鸣"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:353
+msgid "Activation Medium: Resonance Activation"
+msgstr "触媒：激活共鸣"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:354
+msgid "Activation Medium: Rhythm"
+msgstr "触媒：律动"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:355
+msgid "Activation Medium: Root"
+msgstr "触媒：止步"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:356
+msgid "Activation Medium: Root Attack"
+msgstr "触媒：止步攻击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:357
+msgid "Activation Medium: Sentry"
+msgstr "触媒：哨卫"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:358
+msgid "Activation Medium: Severe Injury"
+msgstr "触媒：重创"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:359
+msgid "Activation Medium: Spell Burst"
+msgstr "触媒：法术迸发"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:360
+msgid "Activation Medium: Start"
+msgstr "触媒：起步"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:361
+msgid "Activation Medium: Still Attack"
+msgstr "触媒：静止攻击"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:362
+msgid "Activation Medium: Tangle"
+msgstr "触媒：纠缠"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:363
+msgid "Activation Medium: Track"
+msgstr "触媒：追踪"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:364
+msgid "Activation Medium: Wind Rhythm"
+msgstr "触媒：疾风律动"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:365
+msgid "Acuteness Focus: Piercing Agony (Magnificent)"
+msgstr "锐利贯注：锐痛（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:366
+msgid "Acuteness Focus: Sharpening (Magnificent)"
+msgstr "锐利贯注：砥砺（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:367
+msgid "Arrow Einherjar: Arrowstorm (Magnificent)"
+msgstr "飞箭英灵：万箭（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:368
+msgid "Berserking Blade: Desperation (Magnificent)"
+msgstr "暴走巨刃：亡命（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:369
+msgid "Berserking Blade: Sweep (Magnificent)"
+msgstr "暴走巨刃：扫荡（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:370
+msgid "Blazing Bullet: Fiery Blast (Magnificent)"
+msgstr "炽炎穿弹：炎爆（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:371
+msgid "Blizzard: Freezing Point (Magnificent)"
+msgstr "暴风雪：冰点（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:372
+msgid "Blizzard: Hail (Magnificent)"
+msgstr "暴风雪：冰雹（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:373
+msgid "Bombard: Cannon (Magnificent)"
+msgstr "炮轰：重炮（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:374
+msgid "Bombard: Guided (Magnificent)"
+msgstr "炮轰：制导（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:375
+msgid "Burning Shot: Combustion (Magnificent)"
+msgstr "燃烧射击：助燃（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:376
+msgid "Burning Shot: Fiery Blast (Magnificent)"
+msgstr "燃烧射击：炎爆（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:377
+msgid "Chain Lightning: Augmentation (Magnificent)"
+msgstr "闪电链：增幅（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:378
+msgid "Chain Lightning: Web of Lightning (Magnificent)"
+msgstr "闪电链：电网（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:379
+msgid "Charged Pummel: Connected (Magnificent)"
+msgstr "充能猛击：贯通（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:380
+msgid "Charged Pummel: Drastic Shift (Magnificent)"
+msgstr "充能猛击：剧变（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:381
+msgid "Corrosion Focus: Clustering (Magnificent)"
+msgstr "侵蚀贯注：类聚（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:382
+msgid "Corrosion Focus: Infection (Magnificent)"
+msgstr "侵蚀贯注：侵染（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:383
+msgid "Corrosive Shot: Swift Action (Magnificent)"
+msgstr "侵蚀弹：迅发（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:384
+msgid "Corrosive Throw: Augmentation (Magnificent)"
+msgstr "侵蚀投掷：增幅（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:385
+msgid "Crescent Slash: Raid (Magnificent)"
+msgstr "碎月弧光斩：强袭（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:386
+msgid "Crescent Slash: Vile (Magnificent)"
+msgstr "碎月弧光斩：恶刃（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:387
+msgid "Double Thrusts: Restless (Magnificent)"
+msgstr "双重突刺：躁动（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:388
+msgid "Electrifying Shot: Close-Range (Magnificent)"
+msgstr "电光弹：短程（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:389
+msgid "Fire Burst: Heart of Flame (Magnificent)"
+msgstr "爆炎术：焰心（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:390
+msgid "Fire Burst: Violent Blast (Magnificent)"
+msgstr "爆炎术：暴烈（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:391
+msgid "Flame Core: Lone Vanguard (Magnificent)"
+msgstr "聚焰之核：孤军（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:392
+msgid "Flame Focus: Flint (Magnificent)"
+msgstr "熔火贯注：火石（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:393
+msgid "Flame Focus: Kindling (Magnificent)"
+msgstr "熔火贯注：传火（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:394
+msgid "Flame Jet: Burst (Magnificent)"
+msgstr "烈焰释放：爆裂（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:395
+msgid "Flame Jet: Scorched Earth (Magnificent)"
+msgstr "烈焰释放：焦土（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:396
+msgid "Flame Slash: Immediate Threat (Magnificent)"
+msgstr "烈焰斩：近患（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:397
+msgid "Focused Shot: Aspire (Magnificent)"
+msgstr "专注射击：奋起（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:398
+msgid "Focused Shot: Long Shot (Magnificent)"
+msgstr "专注射击：远射（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:399
+msgid "Focused Slash: Duel (Magnificent)"
+msgstr "专注斩：决斗（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:400
+msgid "Focused Slash: Tranquility (Magnificent)"
+msgstr "专注斩：静息（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:401
+msgid "Frost Core: Chase (Magnificent)"
+msgstr "寒霜之核：追击（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:402
+msgid "Frost Impact: Frozen Trajectory (Magnificent)"
+msgstr "寒霜破击：凝冻（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:403
+msgid "Frost Impact: Ice Cluster (Magnificent)"
+msgstr "寒霜破击：冰丛（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:404
+msgid "Frost Spike: Offshoot (Magnificent)"
+msgstr "碎冰刺击：衍生（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:405
+msgid "Frost Terra: Rime (Magnificent)"
+msgstr "寒霜地面：霜冻（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:406
+msgid "Frost Terra: Snow Shell (Magnificent)"
+msgstr "寒霜地面：雪壳（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:407
+msgid "Gale Slash: Dominance (Magnificent)"
+msgstr "疾风裂地斩：强横（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:408
+msgid "Gale Slash: Onslaught (Magnificent)"
+msgstr "疾风裂地斩：突进（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:409
+msgid "Ghost Blade Einherjar: Prestige (Magnificent)"
+msgstr "幽刃英灵：积威（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:410
+msgid "Ghost Blade Einherjar: Unbroken (Magnificent)"
+msgstr "幽刃英灵：无间（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:411
+msgid "Groundshaker: Epicenter (Magnificent)"
+msgstr "震撼大地：震源（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:412
+msgid "Groundshaker: Frequent Quake (Magnificent)"
+msgstr "震撼大地：频发（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:413
+msgid "Hammer of Ash: Rekindle (Magnificent)"
+msgstr "灰烬之锤：复燃（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:414
+msgid "Hammer of Ash: Upheaval (Magnificent)"
+msgstr "灰烬之锤：激荡（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:415
+msgid "Haunting Abomination: Feud (Magnificent)"
+msgstr "恶煞缠身：宿怨（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:416
+msgid "Haunting Abomination: Misdeeds (Magnificent)"
+msgstr "恶煞缠身：劣迹（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:417
+msgid "Howling Gale: Headwind (Magnificent)"
+msgstr "呼啸烈风：逆风（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:418
+msgid "Howling Gale: Rapid Sweep (Magnificent)"
+msgstr "呼啸烈风：疾掠（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:419
+msgid "Ice Focus: Permafrost (Magnificent)"
+msgstr "寒冰贯注：久冻（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:420
+msgid "Ice Focus: Shattered Ice (Magnificent)"
+msgstr "寒冰贯注：碎冰（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:421
+msgid "Ice Lances: Ice Corrosion (Magnificent)"
+msgstr "冰锥术：冰蚀（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:422
+msgid "Ice Lances: Rebound (Magnificent)"
+msgstr "冰锥术：回弹（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:423
+msgid "Ice Shot: Ice Blast (Magnificent)"
+msgstr "寒冰射击：冰爆（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:424
+msgid "Icebound Beam: Frostbitten (Magnificent)"
+msgstr "冰魄射线：冻伤（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:425
+msgid "Icebound Beam: Numbing Cold (Magnificent)"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:426
+msgid "Icy Blade: Frozen Edge (Magnificent)"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:427
+msgid "Icy Blade: Quick Freeze (Magnificent)"
+msgstr "冰凌斩：速冻（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:428
+msgid "Inexhaustible Barrage: Bombard (Magnificent)"
+msgstr "不竭弹雨：狂轰（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:429
+msgid "Lightning Beam: Aftershock (Magnificent)"
+msgstr "雷暴射线：次生（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:430
+msgid "Lightning Beam: Relentless (Magnificent)"
+msgstr "雷暴射线：凌厉（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:431
+msgid "Lightning Shot: Offshoot (Magnificent)"
+msgstr "闪电射击：衍生（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:432
+msgid "Lightning Storm: Surging Thunder (Magnificent)"
+msgstr "闪电风暴：雷潮（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:433
+msgid "Marked Rain of Arrows: Chain Reaction (Magnificent)"
+msgstr "标记箭雨：株连（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:434
+msgid "Marked Rain of Arrows: Heartpiercer (Magnificent)"
+msgstr "标记箭雨：穿心（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:435
+msgid "Mind Control: Befuddle (Magnificent)"
+msgstr "摄念夺识：惑乱（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:436
+msgid "Mind Control: Concentrate (Magnificent)"
+msgstr "摄念夺识：凝神（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:437
+msgid "Moon Strike: Lunar Ring (Magnificent)"
+msgstr "月华斩：月环（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:438
+msgid "Moon Strike: Rainbow (Magnificent)"
+msgstr "月华斩：长虹（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:439
+msgid "Path of Flames: Spontaneous Combustion (Magnificent)"
+msgstr "烈焰之径：自燃（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:440
+msgid "Rain of Arrows: Swift Flight (Magnificent)"
+msgstr "箭雨：疾驰（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:441
+msgid "Ring of Blades: Blade Formation (Magnificent)"
+msgstr "环绕飞刃：刀阵（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:442
+msgid "Ring of Ice: Ice Seal (Magnificent)"
+msgstr "冰环术：封冻（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:443
+msgid "Savage Charge: Bulldoze (Magnificent)"
+msgstr "野蛮冲锋：猛进（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:444
+msgid "Savage Charge: Infuriate (Magnificent)"
+msgstr "野蛮冲锋：触怒（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:445
+msgid "Scorching Beam: Shockwave (Magnificent)"
+msgstr "灼热射线：震波（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:446
+msgid "Scorching Beam: Supercharge (Magnificent)"
+msgstr "灼热射线：增压（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:447
+msgid "Serpent Beam: Barrage (Magnificent)"
+msgstr "流焰炎蛇引：火线（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:448
+msgid "Serpent Beam: Inferno (Magnificent)"
+msgstr "流焰炎蛇引：火海（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:449
+msgid "Shackles of Malice: Defile (Magnificent)"
+msgstr "恶意枷锁：玷污（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:450
+msgid "Shackles of Malice: Vendetta (Magnificent)"
+msgstr "恶意枷锁：怀恨（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:451
+msgid "Shadow Shot: Eradicate (Magnificent)"
+msgstr "暗影弹：围剿（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:452
+msgid "Shadow Swamp: Gushing Spring (Magnificent)"
+msgstr "暗影之沼：涌泉（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:453
+msgid "Shadow Swamp: Splatter (Magnificent)"
+msgstr "暗影之沼：溅污（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:454
+msgid "Sparkle: Magnetic Field (Magnificent)"
+msgstr "电火花：磁场（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:455
+msgid "Spectral Slash: Detonation (Magnificent)"
+msgstr "分身灵爆斩：引爆（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:456
+msgid "Split Firebolt: Split (Magnificent)"
+msgstr "裂变火球：分裂（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:457
+msgid "Split Shot: Diversion (Magnificent)"
+msgstr "分裂射击：分流（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:458
+msgid "Split Shot: Volley (Magnificent)"
+msgstr "分裂射击：齐射（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:459
+msgid "Summon Erosion Magus: Frequent Quake (Magnificent)"
+msgstr "召唤腐化之灵：频发（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:460
+msgid "Summon Erosion Magus: Plague Source (Magnificent)"
+msgstr "召唤腐化之灵：疫源（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:461
+msgid "Summon Erosion Magus: Wicked (Magnificent)"
+msgstr "召唤腐化之灵：坏种（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:462
+msgid "Summon Fire Magus: Aflame (Magnificent)"
+msgstr "召唤火焰之灵：炽烈（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:463
+msgid "Summon Fire Magus: Fire Ward (Magnificent)"
+msgstr "召唤火焰之灵：辟火（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:464
+msgid "Summon Fire Magus: Flowing Flames (Magnificent)"
+msgstr "召唤火焰之灵：浴火（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:465
+msgid "Summon Frost Magus: Cold Ward (Magnificent)"
+msgstr "召唤寒冰之灵：辟寒（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:466
+msgid "Summon Frost Magus: Ice Crusher (Magnificent)"
+msgstr "召唤寒冰之灵：破冰（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:467
+msgid "Summon Frost Magus: Piercing Cold (Magnificent)"
+msgstr "召唤寒冰之灵：冷冽（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:468
+msgid "Summon Grim Phantom: Glare (Magnificent)"
+msgstr "召唤幽浮魅影：炫光（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:469
+msgid "Summon Grim Phantom: Spur (Magnificent)"
+msgstr "召唤幽浮魅影：驱策（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:470
+msgid "Summon Machine Guard: Iron Fist (Magnificent)"
+msgstr "召唤机械警卫：铁拳（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:471
+msgid "Summon Machine Guard: Pummel (Magnificent)"
+msgstr "召唤机械警卫：连击（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:472
+msgid "Summon Rock Magus: Clustering Sand (Magnificent)"
+msgstr "召唤磐石之灵：聚砂（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:473
+msgid "Summon Rock Magus: Forging (Magnificent)"
+msgstr "召唤磐石之灵：锻压（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:474
+msgid "Summon Rock Magus: Unyielding (Magnificent)"
+msgstr "召唤磐石之灵：强硬（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:475
+msgid "Summon Spider Tank: Steamroll (Magnificent)"
+msgstr "召唤蜘蛛坦克：碾压（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:476
+msgid "Summon Thunder Magus: Continuation (Magnificent)"
+msgstr "召唤雷霆之灵：延袭（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:477
+msgid "Summon Thunder Magus: Lightning Ward (Magnificent)"
+msgstr "召唤雷霆之灵：辟雷（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:478
+msgid "Synthetic Troop: Force Field (Magnificent)"
+msgstr "智械：力场（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:479
+msgid "Thunder Core: Electric Field (Magnificent)"
+msgstr "雷降之核：电场（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:480
+msgid "Thunder Core: Lone Vanguard (Magnificent)"
+msgstr "雷降之核：孤军（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:481
+msgid "Thunder Focus: Haste (Magnificent)"
+msgstr "雷霆贯注：从速（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:482
+msgid "Thunder Focus: Quickstep (Magnificent)"
+msgstr "雷霆贯注：捷足（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:483
+msgid "Thunder Slash: Blade Cluster (Magnificent)"
+msgstr "雷影斩：刀丛（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:484
+msgid "Thunder Slash: Keen Edge (Magnificent)"
+msgstr "雷影斩：疾锋（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:485
+msgid "Thunder Spike: Numb (Magnificent)"
+msgstr "雷光刺击：麻木（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:486
+msgid "Thunderbolt Overload: Leap (Magnificent)"
+msgstr "超载雷球：飞跃（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:487
+msgid "Thunderbolt Overload: Retribution (Magnificent)"
+msgstr "超载雷球：惩恶（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:488
+msgid "Thundercloud: Alarmed Awakening (Magnificent)"
+msgstr "雷云放射：惊蛰（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:489
+msgid "Thundercloud: Billowing Cloud (Magnificent)"
+msgstr "雷云放射：云涌（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:490
+msgid "Whirlwind: Endless Wind (Magnificent)"
+msgstr "旋风斩：长风（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:491
+msgid "Whirlwind: Wind Barrier (Magnificent)"
+msgstr "旋风斩：风障（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:492
+msgid "Whirlwind Blade: Swift Slash (Magnificent)"
+msgstr "刀锋回旋：快刀（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:493
+msgid "Whirlwind Blade: Unsheath (Magnificent)"
+msgstr "刀锋回旋：出鞘（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:494
+msgid "Wilt Spike: Languish (Magnificent)"
+msgstr "凋零刺击：颓靡（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:495
+msgid "Wilt Spike: Wither (Magnificent)"
+msgstr "凋零刺击：凋残（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:496
+msgid "Wilting Beam: Dispirit (Magnificent)"
+msgstr "枯萎射线：萎靡（华贵）"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:497
+msgid "Wilting Beam: Reflection (Magnificent)"
+msgstr "枯萎射线：反射（华贵）"

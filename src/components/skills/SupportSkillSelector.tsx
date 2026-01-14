@@ -25,6 +25,7 @@ import {
   getActivationMediumSkill,
   getWorstActivationMediumDefaults,
 } from "@/src/lib/activation-medium-utils";
+import { i18n } from "@/src/lib/i18n";
 import type {
   BaseSupportSkillSlot as SaveDataBaseSupportSkillSlot,
   MagnificentSupportSkillSlot as SaveDataMagnificentSlot,
@@ -184,7 +185,7 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
     );
 
     const opts: SearchableSelectOption<string>[] = filteredSkills.map(
-      (skill) => ({ value: skill.name, label: skill.name }),
+      (skill) => ({ value: skill.name, label: i18n._(skill.name) }),
     );
 
     if (mainSkill === undefined) {
@@ -204,7 +205,7 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
           (name) =>
             name === selectedSkillName || !excludedSkills.includes(name),
         )
-        .map((name) => ({ value: name, label: name }));
+        .map((name) => ({ value: name, label: i18n._(name) }));
 
     // Add groups only if they have options
     if (available.activationMedium.length > 0) {

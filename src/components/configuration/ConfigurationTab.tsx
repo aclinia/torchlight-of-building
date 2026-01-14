@@ -917,6 +917,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             onChange={(v) => onUpdate({ numBerserkingBladeBuffStacks: v })}
             min={0}
           />
+          <label className="text-right text-zinc-50">
+            Twisted Spacetime Stacks
+            <InfoTooltip text="Defaults to max stacks 5" />
+          </label>
+          <NumberInput
+            value={config.twistedSpacetimeStacks}
+            onChange={(v) => onUpdate({ twistedSpacetimeStacks: v })}
+            min={0}
+            max={5}
+          />
         </div>
       </div>
     </div>

@@ -5950,7 +5950,10 @@ describe("defense calculation (ES, Eva, Armor)", () => {
     // Boots: (100 base + 100 flat) * 1.2 gear% = 200 * 1.2 = 240
     // Total from gear: 450 + 240 = 690
     // Memory of Discipline flat: +500
-    // Total energy shield: 690 + 500 = 1190
+    // Energy Fortress level 20 flat: +319.7
+    // Total flat ES: 690 + 500 + 319.7 = 1509.7
+    // Energy Fortress level 20 increased ES: 13.37%
+    // Total energy shield: 1509.7 * 1.1337 = 1711.5
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -6004,22 +6007,33 @@ describe("defense calculation (ES, Eva, Armor)", () => {
           },
           memoryInventory: [],
         },
-        skillPage: emptySkillPage(),
+        skillPage: {
+          activeSkills: {},
+          passiveSkills: {
+            1: {
+              skillName: "Energy Fortress",
+              enabled: true,
+              level: 20,
+              supportSkills: {},
+            },
+          },
+        },
       }),
       configuration: defaultConfiguration,
     };
 
     const results = calculateOffense(input);
-    expect(results.defenses.energyShield).toBeCloseTo(1190);
+    expect(Math.round(results.defenses.energyShield)).toEqual(1712);
   });
 
   test("calculate armor with gear affixes and flat modifiers", () => {
     // Chest: (200 base + 300 flat) * 1.5 gear% = 500 * 1.5 = 750
     // Gloves: (100 base + 100 flat) * 1.4 gear% = 200 * 1.4 = 280
     // Total from gear: 750 + 280 = 1030
-    // Flat Armor from custom: +100
-    // Total before percentage: 1030 + 100 = 1130
-    // With 30% increased armor: 1130 * 1.3 = 1469
+    // Steadfast level 20 flat: +6000
+    // Total flat armor: 1030 + 100 + 6000 = 7030
+    // Steadfast level 20 increased armor: 10%
+    // Total armor: 7130 * 1.1 = 7733
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -6061,26 +6075,33 @@ describe("defense calculation (ES, Eva, Armor)", () => {
           },
           inventory: [],
         },
-        customAffixLines: affixLines([
-          { type: "Armor", value: 100 },
-          { type: "ArmorPct", value: 30, addn: false },
-        ]),
-        skillPage: emptySkillPage(),
+        skillPage: {
+          activeSkills: {},
+          passiveSkills: {
+            1: {
+              skillName: "Steadfast",
+              enabled: true,
+              level: 20,
+              supportSkills: {},
+            },
+          },
+        },
       }),
       configuration: defaultConfiguration,
     };
 
     const results = calculateOffense(input);
-    expect(results.defenses.armor).toBeCloseTo(1469);
+    expect(results.defenses.armor).toBeCloseTo(7733);
   });
 
   test("calculate evasion with gear affixes and flat modifiers", () => {
     // Boots: (100 base + 300 flat) * 1.6 gear% = 400 * 1.6 = 640
     // Helmet: (100 base + 100 flat) * 1.3 gear% = 200 * 1.3 = 260
     // Total from gear: 640 + 260 = 900
-    // Flat Evasion from custom: +100
-    // Total before percentage: 900 + 100 = 1000
-    // With 25% increased evasion: 1000 * 1.25 = 1250
+    // Nimbleness level 20 flat: +6000
+    // Total flat evasion: 900 + 100 + 6000 = 7000
+    // Nimbleness level 20 increased evasion: 10%
+    // Total evasion: 7000 * 1.1 = 7590
     const input = {
       loadout: initLoadout({
         gearPage: {
@@ -6122,17 +6143,23 @@ describe("defense calculation (ES, Eva, Armor)", () => {
           },
           inventory: [],
         },
-        customAffixLines: affixLines([
-          { type: "Evasion", value: 100 },
-          { type: "EvasionPct", value: 25, addn: false },
-        ]),
-        skillPage: emptySkillPage(),
+        skillPage: {
+          activeSkills: {},
+          passiveSkills: {
+            1: {
+              skillName: "Nimbleness",
+              enabled: true,
+              level: 20,
+              supportSkills: {},
+            },
+          },
+        },
       }),
       configuration: defaultConfiguration,
     };
 
     const results = calculateOffense(input);
-    expect(results.defenses.evasion).toBeCloseTo(1250);
+    expect(results.defenses.evasion).toBeCloseTo(7590);
   });
 });
 

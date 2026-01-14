@@ -25,6 +25,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile && pnpm lingui:compile && pnpm tsr generate
 
+      - name: Check Lingui extractions are in sync
+        run: |
+          pnpm lingui:extract
+          git diff --exit-code || (echo "Lingui message extractions are out of sync. Run 'pnpm lingui:extract' and commit the changes." && exit 1)
+
       - name: Typecheck
         run: pnpm typecheck
 

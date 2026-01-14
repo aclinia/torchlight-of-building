@@ -399,3 +399,100 @@ export const preciseSwiftnessParser: SupportLevelParser = (input) => {
 
   return { movementSpeedPct };
 };
+
+export const energyFortressParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const energyShield: Record<number, number> = {};
+  const energyShieldPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    const esMatch = findMatch(
+      text,
+      ts("{value:?dec} max energy shield"),
+      skillName,
+    );
+    energyShield[level] = esMatch.value;
+
+    const esPctMatch = findMatch(
+      text,
+      ts("{value:?dec%} additional max energy shield"),
+      skillName,
+    );
+    energyShieldPct[level] = esPctMatch.value;
+  }
+
+  validateAllLevels(energyShield, skillName);
+  validateAllLevels(energyShieldPct, skillName);
+
+  return { energyShield, energyShieldPct };
+};
+
+export const preciseEnergyFortressParser: SupportLevelParser = (input) => {
+  return energyFortressParser(input);
+};
+
+export const steadFastParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const armor: Record<number, number> = {};
+  const armorPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    const armorMatch = findMatch(text, ts("{value:?dec} Armor"), skillName);
+    armor[level] = armorMatch.value;
+
+    const armorPctMatch = findMatch(
+      text,
+      ts("{value:?dec%} additional Armor"),
+      skillName,
+    );
+    armorPct[level] = armorPctMatch.value;
+  }
+
+  validateAllLevels(armor, skillName);
+  validateAllLevels(armorPct, skillName);
+
+  return { armor, armorPct };
+};
+
+export const preciseSteadFastParser: SupportLevelParser = (input) => {
+  return steadFastParser(input);
+};
+
+export const nimblenessParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const evasion: Record<number, number> = {};
+  const evasionPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    const evasionMatch = findMatch(text, ts("{value:?dec} Evasion"), skillName);
+    evasion[level] = evasionMatch.value;
+
+    const evasionPctMatch = findMatch(
+      text,
+      ts("{value:?dec%} additional Evasion"),
+      skillName,
+    );
+    evasionPct[level] = evasionPctMatch.value;
+  }
+
+  validateAllLevels(evasion, skillName);
+  validateAllLevels(evasionPct, skillName);
+
+  return { evasion, evasionPct };
+};
+
+export const preciseNimblenessParser: SupportLevelParser = (input) => {
+  return nimblenessParser(input);
+};

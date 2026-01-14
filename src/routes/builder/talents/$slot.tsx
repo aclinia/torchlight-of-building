@@ -304,7 +304,7 @@ function TalentsSlotPage(): React.ReactNode {
       <div>
         <div className="mb-6">
           <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            <Trans>Tree Slots</Trans>
+            <Trans>Tree Slots</Trans>{" "}
             <span className={isOverAllocated ? "text-red-500" : ""}>
               ({totalPointsUsed}/{totalPointsAvailable})
             </span>

@@ -716,7 +716,10 @@ export const calculateGearAspd = (weapon: Gear, allMods: Mod[]): number => {
   const baseAspd =
     baseAspdMod?.type === "GearBaseAttackSpeed" ? baseAspdMod.value : 0;
   const gearAspdPctBonus = calculateInc(
-    filterMods(allMods, "GearAspdPct").map((b) => b.value),
+    filterMods(
+      collectModsFromAffixes(getGearAffixes(weapon)),
+      "GearAspdPct",
+    ).map((b) => b.value),
   );
   return baseAspd * (1 + gearAspdPctBonus);
 };

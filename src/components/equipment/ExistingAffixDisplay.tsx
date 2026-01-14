@@ -9,7 +9,7 @@ export const ExistingAffixDisplay = ({
 }: ExistingAffixDisplayProps): React.ReactElement => {
   return (
     <div className="rounded-lg bg-zinc-800 p-4">
-      <div className="flex items-start justify-between">
+      <div className="flex">
         <div className="flex-1 whitespace-pre-line text-sm font-medium text-amber-400">
           {value}
         </div>

@@ -12,31 +12,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:119
-msgid "Furious Man's Loud Song"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:202
-msgid "Mourner's Shadow"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:297
-msgid "Unholy Prayer (agility)"
-msgstr "污秽祝祷 (灵动)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:298
-msgid "Unholy Prayer (focus)"
-msgstr "污秽祝祷 (聚能)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:299
-msgid "Unholy Prayer (tenacity)"
-msgstr "污秽祝祷 (坚韧)"
-
-#. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:4
 msgid "Aeterna Martyr"
 msgstr "殉永恒者"
@@ -612,6 +587,11 @@ msgid "Furious Man's Body"
 msgstr "怒汉之躯"
 
 #. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:119
+msgid "Furious Man's Loud Song"
+msgstr ""
+
+#. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:120
 msgid "Fury Heart"
 msgstr "狂怒之心"
@@ -1020,6 +1000,11 @@ msgstr "母神围场"
 #: src/data/translate/legendary-names.ts:201
 msgid "Mountain Howling"
 msgstr "山峦尖啸"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:202
+msgid "Mourner's Shadow"
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:203
@@ -1490,6 +1475,21 @@ msgstr "不破胸甲"
 #: src/data/translate/legendary-names.ts:296
 msgid "Undying Faith"
 msgstr "不灭信仰"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:297
+msgid "Unholy Prayer (agility)"
+msgstr "污秽祝祷 (灵动)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:298
+msgid "Unholy Prayer (focus)"
+msgstr "污秽祝祷 (聚能)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:299
+msgid "Unholy Prayer (tenacity)"
+msgstr "污秽祝祷 (坚韧)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:300

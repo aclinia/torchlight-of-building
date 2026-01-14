@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ActiveSkills, PassiveSkills } from "@/src/data/skill";
+import { i18n } from "@/src/lib/i18n";
 import { SkillSlot } from "../../components/skills/SkillSlot";
 import { useBuilderActions, useLoadout } from "../../stores/builderStore";
 import type { ActiveSkillSlots, PassiveSkillSlots } from "../../tli/core";
@@ -51,7 +52,9 @@ function SkillsPage(): React.ReactNode {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="mb-4 text-xl font-bold text-zinc-50">Active Skills</h2>
+        <h2 className="mb-4 text-xl font-bold text-zinc-50">
+          {i18n._("Active Skills")}
+        </h2>
 
         <div className="space-y-3">
           {ACTIVE_SKILL_SLOT_KEYS.map((slotKey) => (

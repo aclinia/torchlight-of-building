@@ -21,17 +21,23 @@ import {
   corrosionFocusParser,
   deepPainParser,
   electricConversionParser,
+  energyFortressParser,
   erosionAmplificationParser,
   frigidDomainParser,
+  nimblenessParser,
   preciseCrueltyParser,
   preciseDeepPainParser,
   preciseElectricConversionParser,
+  preciseEnergyFortressParser,
   preciseErosionAmplificationParser,
   preciseFearlessParser,
   preciseFrigidDomainParser,
+  preciseNimblenessParser,
   preciseSpellAmplificationParser,
+  preciseSteadFastParser,
   preciseSwiftnessParser,
   spellAmplificationParser,
+  steadFastParser,
   summonFireMagusParser,
   summonThunderMagusParser,
 } from "./passive-parsers";
@@ -178,6 +184,32 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     parser: berserkingBladeParser,
   },
   { skillName: "Ice Lances", categories: ["active"], parser: iceLancesParser },
+  {
+    skillName: "Energy Fortress",
+    categories: ["passive"],
+    parser: energyFortressParser,
+  },
+  {
+    skillName: "Precise: Energy Fortress",
+    categories: ["passive"],
+    parser: preciseEnergyFortressParser,
+  },
+  { skillName: "Steadfast", categories: ["passive"], parser: steadFastParser },
+  {
+    skillName: "Precise: Steadfast",
+    categories: ["passive"],
+    parser: preciseSteadFastParser,
+  },
+  {
+    skillName: "Nimbleness",
+    categories: ["passive"],
+    parser: nimblenessParser,
+  },
+  {
+    skillName: "Precise: Nimbleness",
+    categories: ["passive"],
+    parser: preciseNimblenessParser,
+  },
 ];
 
 export const getParserForSkill = (
