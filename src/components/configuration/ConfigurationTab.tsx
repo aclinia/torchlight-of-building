@@ -1,10 +1,13 @@
 import { useRef } from "react";
+import { hasPactspirit } from "../../lib/pactspirit-utils";
 import type { ConfigurationPage } from "../../lib/save-data";
+import type { Loadout } from "../../tli/core";
 import { parseMod } from "../../tli/mod-parser";
 
 interface ConfigurationTabProps {
   config: ConfigurationPage;
   onUpdate: (updates: Partial<ConfigurationPage>) => void;
+  loadout: Loadout;
 }
 
 interface NumberInputProps {
@@ -152,6 +155,7 @@ const CustomAffixesSection: React.FC<{
 export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
   config,
   onUpdate,
+  loadout,
 }) => {
   return (
     <div className="space-y-6">
@@ -438,19 +442,11 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
           />
 
-          <label className="text-right text-zinc-50">Has Pure Heart</label>
-          <input
-            type="checkbox"
-            checked={config.hasPureHeart}
-            onChange={(e) => onUpdate({ hasPureHeart: e.target.checked })}
-            className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
-          />
-
-          {config.hasPureHeart && (
+          {hasPactspirit("Azure Gunslinger", loadout) && (
             <>
               <label className="text-right text-zinc-50">
                 Pure Heart Stacks
-                <InfoTooltip text="Defaults to 5 (Set to 6 if level 6 Azure)" />
+                <InfoTooltip text="Defaults to 6" />
               </label>
               <NumberInput
                 value={config.pureHeartStacks}
@@ -765,14 +761,6 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             value={config.numMindControlLinksUsed}
             onChange={(v) => onUpdate({ numMindControlLinksUsed: v })}
             min={0}
-          />
-
-          <label className="text-right text-zinc-50">Has Squidnova</label>
-          <input
-            type="checkbox"
-            checked={config.hasSquidnova}
-            onChange={(e) => onUpdate({ hasSquidnova: e.target.checked })}
-            className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
           />
 
           <label className="text-right text-zinc-50">

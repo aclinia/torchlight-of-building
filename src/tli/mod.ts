@@ -127,7 +127,8 @@ export type Stackable =
   // hero-specific
   | "stalker"
   // pactspirit-specific
-  | "repentance";
+  | "repentance"
+  | "pure_heart";
 
 export type StatType = "str" | "dex" | "int";
 

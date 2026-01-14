@@ -3,8 +3,10 @@ import type { Destiny } from "@/src/data/destiny/types";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type {
   Pactspirit,
+  PactspiritName,
   PactspiritRingDetails,
 } from "@/src/data/pactspirit/types";
+import type { Loadout } from "@/src/tli/core";
 import type { RingSlotKey } from "./types";
 
 export const getPactspiritByName = (name: string): Pactspirit | undefined =>
@@ -56,3 +58,14 @@ export const getPactspiritRing = (
 
 export const isInnerRing = (ringSlot: RingSlotKey): boolean =>
   ringSlot.startsWith("innerRing");
+
+export const hasPactspirit = (
+  name: PactspiritName,
+  loadout: Loadout,
+): boolean => {
+  return (
+    loadout.pactspiritPage.slot1?.pactspiritName === name ||
+    loadout.pactspiritPage.slot2?.pactspiritName === name ||
+    loadout.pactspiritPage.slot3?.pactspiritName === name
+  );
+};

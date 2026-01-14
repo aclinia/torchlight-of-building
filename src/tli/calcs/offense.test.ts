@@ -1,5 +1,4 @@
 import { describe, expect, test } from "vitest";
-import { Pactspirits } from "@/src/data/pactspirit";
 import type { ImplementedActiveSkillName } from "../../data/skill";
 import {
   type Affix,
@@ -6200,7 +6199,7 @@ describe("Pactspirits", () => {
         { hasPureHeart: true, pureHeartStacks: stacks },
       );
       const results = calculateOffense(input);
-      const expectedAvgHit = 200 * (1 + stacks * 0.05);
+      const expectedAvgHit = 200 * 1.05 ** stacks;
       validate(results, skillName, { avgHit: expectedAvgHit });
     });
   });

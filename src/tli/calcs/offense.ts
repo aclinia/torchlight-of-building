@@ -1,7 +1,7 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
 import { bing2, type HeroName } from "@/src/data/hero-trait";
-import type { PactspiritName } from "@/src/data/pactspirit";
+import { hasPactspirit } from "@/src/lib/pactspirit-utils";
 import {
   type ActiveSkillName,
   ActiveSkills,
@@ -396,6 +396,38 @@ const calculateHeroTraitMods = (loadout: Loadout): Mod[] => {
   return mods;
 };
 
+const calculatePactspiritMods = (
+  loadout: Loadout,
+  loadoutMods: Mod[],
+): Mod[] => {
+  const mods: Mod[] = [];
+
+  if (hasPactspirit("Azure Gunslinger", loadout)) {
+    mods.push({
+      type: "DmgPct",
+      value: 5,
+      dmgModType: "global",
+      per: { stackable: "pure_heart", multiplicative: true, limit: 6 },
+      addn: true,
+      src: "Pure Heart",
+    });
+  }
+
+  if (hasPactspirit("Squiddle", loadout)) {
+    const squidNovaEffMult = calcEffMult(loadoutMods, "SquidnovaEffPct");
+    const squidNovaDmgPctValue = 16 * squidNovaEffMult;
+    mods.push({
+      type: "DmgPct",
+      value: squidNovaDmgPctValue,
+      dmgModType: "hit",
+      addn: true,
+      src: "Squidnova",
+    });
+  }
+
+  return mods;
+};
+
 // === Implicit Mods ===
 
 // includes any mods that always apply, but don't come from loadout, like damage from stats, non-skill buffs, etc
@@ -679,14 +711,6 @@ const resolveDerivedCtx = (loadout: Loadout, mods: Mod[]): DerivedCtx => {
   return { hasHasten, hasBlasphemer, luckyDmg, hero, dualWielding };
 };
 
-const hasPactspirit = (name: PactspiritName, loadout: Loadout): boolean => {
-  return (
-    loadout.pactspiritPage.slot1?.pactspiritName === name ||
-    loadout.pactspiritPage.slot2?.pactspiritName === name ||
-    loadout.pactspiritPage.slot3?.pactspiritName === name
-  );
-};
-
 const isHero = (name: HeroName, loadout: Loadout): boolean => {
   return loadout.heroPage.selectedHero === name;
 };
@@ -791,7 +815,7 @@ const filterModsByCond = (
         "target_enemy_frozen_recently",
         () => config.targetEnemyFrozenRecently,
       )
-      .with("has_squidnova", () => config.hasSquidnova)
+      .with("has_squidnova", () => hasPactspirit("Squiddle", loadout))
       .with("holding_shield", () => {
         const offhand = loadout.gearPage.equippedGear.offHand?.equipmentType;
         return (
@@ -1467,19 +1491,6 @@ const pushNumbed = (mods: Mod[], config: Configuration): void => {
   }
 };
 
-const pushSquidnova = (mods: Mod[], config: Configuration): void => {
-  if (!config.hasSquidnova) return;
-  const squidNovaEffMult = calcEffMult(mods, "SquidnovaEffPct");
-  const squidNovaDmgPctValue = 16 * squidNovaEffMult;
-  mods.push({
-    type: "DmgPct",
-    value: squidNovaDmgPctValue,
-    dmgModType: "hit",
-    addn: true,
-    src: "Squidnova",
-  });
-};
-
 const pushChainLightning = (
   mods: Mod[],
   config: Configuration,
@@ -1868,18 +1879,6 @@ const resolveModsForOffenseSkill = (
     );
     return { spellBurstChargeSpeedBonusPct };
   };
-  const pushAzureGunslingerPureHeart = (mods: Mod[], config: Configuration) => {
-    if (hasPactspirit("Azure Gunslinger", loadout)) {
-      const pureHeartStacks = config.pureHeartStacks ?? 6;
-      mods.push({
-        type: "DmgPct",
-        value: 5 * pureHeartStacks,
-        dmgModType: "global",
-        addn: true,
-        src: "Additional Damage from Pure Heart (5% per stack)",
-      });
-    }
-  };
 
   const totalMainStats = calculateTotalMainStats(skill, stats);
   const highestStat = Math.max(stats.dex, stats.int, stats.str);
@@ -1917,8 +1916,6 @@ const resolveModsForOffenseSkill = (
 
   pushInfiltrations(mods, config);
   pushNumbed(mods, config);
-  pushSquidnova(mods, config);
-  pushAzureGunslingerPureHeart(mods, config);
 
   const jumps = sumByValue(filterMods(mods, "Jump"));
   normalize("jump", jumps);
@@ -1978,6 +1975,7 @@ const resolveModsForOffenseSkill = (
     "num_enemies_affected_by_warcry",
     config.numEnemiesAffectedByWarcry,
   );
+  normalize("pure_heart", config.pureHeartStacks ?? 6);
 
   // must happen after spell aggression and any other normalizations that can
   // affect cast speed
@@ -2737,6 +2735,8 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     ...collectMods(loadout),
     ...calculateHeroTraitMods(loadout),
   ];
+
+  loadoutMods.push(...calculatePactspiritMods(loadout, loadoutMods));
 
   const derivedCtx = resolveDerivedCtx(loadout, loadoutMods);
   const resourcePool = calculateResourcePool(

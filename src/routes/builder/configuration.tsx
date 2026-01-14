@@ -4,6 +4,7 @@ import { createEmptyConfigurationPage } from "../../lib/storage";
 import {
   useBuilderActions,
   useConfigurationPage,
+  useLoadout,
 } from "../../stores/builderStore";
 
 export const Route = createFileRoute("/builder/configuration")({
@@ -12,9 +13,16 @@ export const Route = createFileRoute("/builder/configuration")({
 
 function ConfigurationPage_(): React.ReactNode {
   const configPage = useConfigurationPage();
+  const loadout = useLoadout();
   const { updateConfiguration } = useBuilderActions();
 
   const config = configPage ?? createEmptyConfigurationPage();
 
-  return <ConfigurationTab config={config} onUpdate={updateConfiguration} />;
+  return (
+    <ConfigurationTab
+      config={config}
+      onUpdate={updateConfiguration}
+      loadout={loadout}
+    />
+  );
 }

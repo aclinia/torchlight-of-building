@@ -200,7 +200,7 @@ export interface Configuration {
 
   // default to false
   hasPureHeart: boolean;
-  // default to 5 can be set manually in config to 6 for level 6 Azure
+  // default to 6
   pureHeartStacks?: number;
 
   // custom affix lines for injecting arbitrary mods
