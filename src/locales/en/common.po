@@ -19,11 +19,6 @@ msgid "Active Skills"
 msgstr "Active Skills"
 
 #. js-lingui-explicit-id
-#: src/routes/builder/equipment.tsx:436
-msgid "Select equipment type..."
-msgstr "Select equipment type..."
-
-#. js-lingui-explicit-id
 #: src/routes/builder/talents/$slot.tsx:333
 msgid "Slot 1 (God/Goddess)"
 msgstr "Slot 1 (God/Goddess)"
@@ -37,6 +32,51 @@ msgstr "Slot 1"
 #: src/routes/builder/talents/$slot.tsx:355
 msgid "Slot"
 msgstr "Slot"
+
+#. js-lingui-explicit-id
+#: src/routes/builder/equipment.tsx:437
+msgid "Select equipment type..."
+msgstr "Select equipment type..."
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:4
+msgid "Equipment"
+msgstr "Equipment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:5
+msgid "Talents"
+msgstr "Talents"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:6
+msgid "Skills"
+msgstr "Skills"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:7
+msgid "Hero"
+msgstr "Hero"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:8
+msgid "Pactspirit"
+msgstr "Pactspirit"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:9
+msgid "Divinity"
+msgstr "Divinity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:10
+msgid "Configuration"
+msgstr "Configuration"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:11
+msgid "Calculations"
+msgstr "Calculations"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
@@ -275,46 +315,6 @@ msgid "Wand"
 msgstr "Wand"
 
 #. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:4
-msgid "Equipment"
-msgstr "Equipment"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:5
-msgid "Talents"
-msgstr "Talents"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:6
-msgid "Skills"
-msgstr "Skills"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:7
-msgid "Hero"
-msgstr "Hero"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:8
-msgid "Pactspirit"
-msgstr "Pactspirit"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:9
-msgid "Divinity"
-msgstr "Divinity"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:10
-msgid "Configuration"
-msgstr "Configuration"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:11
-msgid "Calculations"
-msgstr "Calculations"
-
-#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "Micro Talent"
@@ -362,15 +362,15 @@ msgstr "Add Legendary"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Are you sure you want to delete \"{0}\"?"
 
-#: src/routes/builder/equipment.tsx:467
+#: src/routes/builder/equipment.tsx:468
 msgid "Base Affixes (2 max)"
 msgstr "Base Affixes (2 max)"
 
-#: src/routes/builder/equipment.tsx:446
+#: src/routes/builder/equipment.tsx:447
 msgid "Base Stats (1 max)"
 msgstr "Base Stats (1 max)"
 
-#: src/routes/builder/equipment.tsx:532
+#: src/routes/builder/equipment.tsx:534
 msgid "Blending (1 max)"
 msgstr "Blending (1 max)"
 
@@ -388,7 +388,7 @@ msgstr "Copy"
 msgid "Core Talents"
 msgstr "Core Talents"
 
-#: src/routes/builder/equipment.tsx:422
+#: src/routes/builder/equipment.tsx:423
 msgid "Craft New Item"
 msgstr "Craft New Item"
 
@@ -418,11 +418,11 @@ msgstr "Delete"
 msgid "Early Development"
 msgstr "Early Development"
 
-#: src/routes/builder/equipment.tsx:400
+#: src/routes/builder/equipment.tsx:401
 msgid "Equipment Slots"
 msgstr "Equipment Slots"
 
-#: src/routes/builder/equipment.tsx:430
+#: src/routes/builder/equipment.tsx:431
 msgid "Equipment Type"
 msgstr "Equipment Type"
 
@@ -430,11 +430,11 @@ msgstr "Equipment Type"
 msgid "Import Build"
 msgstr "Import Build"
 
-#: src/routes/builder/equipment.tsx:628
+#: src/routes/builder/equipment.tsx:632
 msgid "Inventory"
 msgstr "Inventory"
 
-#: src/routes/builder/equipment.tsx:629
+#: src/routes/builder/equipment.tsx:633
 msgid "items"
 msgstr "items"
 
@@ -450,7 +450,7 @@ msgstr "No builds yet"
 #~ msgid "No implemented active skills enabled. Enable an active skill in the Skills section (currently supported: Berserking Blade, Frost Spike)."
 #~ msgstr "No implemented active skills enabled. Enable an active skill in the Skills section (currently supported: Berserking Blade, Frost Spike)."
 
-#: src/routes/builder/equipment.tsx:633
+#: src/routes/builder/equipment.tsx:637
 msgid "No items in inventory. Craft items above to add them here."
 msgstr "No items in inventory. Craft items above to add them here."
 
@@ -458,7 +458,7 @@ msgstr "No items in inventory. Craft items above to add them here."
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 msgstr "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 
-#: src/routes/builder/equipment.tsx:573
+#: src/routes/builder/equipment.tsx:575
 msgid "Prefixes (3 max)"
 msgstr "Prefixes (3 max)"
 
@@ -474,11 +474,11 @@ msgstr "Rename"
 msgid "Save"
 msgstr "Save"
 
-#: src/routes/builder/equipment.tsx:616
+#: src/routes/builder/equipment.tsx:620
 msgid "Save to Inventory"
 msgstr "Save to Inventory"
 
-#: src/routes/builder/equipment.tsx:621
+#: src/routes/builder/equipment.tsx:625
 msgid "Select an equipment type to begin crafting"
 msgstr "Select an equipment type to begin crafting"
 
@@ -495,15 +495,15 @@ msgstr "Select Legendary"
 msgid "Select Tree for {0}"
 msgstr "Select Tree for {0}"
 
-#: src/routes/builder/equipment.tsx:593
+#: src/routes/builder/equipment.tsx:596
 msgid "Suffixes (3 max)"
 msgstr "Suffixes (3 max)"
 
-#: src/routes/builder/equipment.tsx:490
+#: src/routes/builder/equipment.tsx:492
 msgid "Sweet Dream Affix (1 max)"
 msgstr "Sweet Dream Affix (1 max)"
 
-#: src/routes/builder/equipment.tsx:511
+#: src/routes/builder/equipment.tsx:513
 msgid "Tower Sequence (1 max)"
 msgstr "Tower Sequence (1 max)"
 
