@@ -815,7 +815,6 @@ const filterModsByCond = (
           (offHand !== undefined && isOneHandedWeapon(offHand))
         );
       })
-      .with("has_pure_heart", () => config.hasPureHeart)
       .exhaustive();
   });
 };
