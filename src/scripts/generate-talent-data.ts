@@ -3,11 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { God, Talent, Tree, Type } from "../data/talent/types";
-import {
-  cleanEffectText,
-  cleanEffectTextNew,
-  readCodexHtml,
-} from "./lib/codex";
+import { cleanEffectTextNew, readCodexHtml } from "./lib/codex";
 
 const extractTalentData = (html: string): Talent[] => {
   const $ = cheerio.load(html);

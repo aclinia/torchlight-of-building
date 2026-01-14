@@ -3,11 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { BaseHeroTrait } from "../data/hero-trait/types";
-import {
-  cleanEffectText,
-  cleanEffectTextNew,
-  readCodexHtml,
-} from "./lib/codex";
+import { cleanEffectTextNew, readCodexHtml } from "./lib/codex";
 
 const extractHeroTraitData = (html: string): BaseHeroTrait[] => {
   const $ = cheerio.load(html);
