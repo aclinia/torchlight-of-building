@@ -315,16 +315,6 @@ msgid "Wand"
 msgstr "法杖"
 
 #. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Edit Prism"
-msgstr "编辑棱镜"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Craft Prism"
-msgstr "制作棱镜"
-
-#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "微型天赋"
@@ -338,6 +328,16 @@ msgstr "中型天赋"
 #: src/components/talents/TalentNodeDisplay.tsx:84
 msgid "Legendary Talent"
 msgstr "传奇天赋"
+
+#. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Edit Prism"
+msgstr "编辑棱镜"
+
+#. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Craft Prism"
+msgstr "制作棱镜"
 
 #. js-lingui-explicit-id
 #: src/components/talents/CoreTalentSelector.tsx:56
