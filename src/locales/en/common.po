@@ -19,6 +19,11 @@ msgid "Active Skills"
 msgstr "Active Skills"
 
 #. js-lingui-explicit-id
+#: src/routes/builder/equipment.tsx:437
+msgid "Select equipment type..."
+msgstr "Select equipment type..."
+
+#. js-lingui-explicit-id
 #: src/routes/builder/talents/$slot.tsx:333
 msgid "Slot 1 (God/Goddess)"
 msgstr "Slot 1 (God/Goddess)"
@@ -32,11 +37,6 @@ msgstr "Slot 1"
 #: src/routes/builder/talents/$slot.tsx:355
 msgid "Slot"
 msgstr "Slot"
-
-#. js-lingui-explicit-id
-#: src/routes/builder/equipment.tsx:437
-msgid "Select equipment type..."
-msgstr "Select equipment type..."
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:4
@@ -315,6 +315,16 @@ msgid "Wand"
 msgstr "Wand"
 
 #. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Edit Prism"
+msgstr "Edit Prism"
+
+#. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Craft Prism"
+msgstr "Craft Prism"
+
+#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "Micro Talent"
@@ -328,16 +338,6 @@ msgstr "Medium Talent"
 #: src/components/talents/TalentNodeDisplay.tsx:84
 msgid "Legendary Talent"
 msgstr "Legendary Talent"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Edit Prism"
-msgstr "Edit Prism"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Craft Prism"
-msgstr "Craft Prism"
 
 #. js-lingui-explicit-id
 #: src/components/talents/CoreTalentSelector.tsx:56

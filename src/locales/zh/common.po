@@ -19,6 +19,11 @@ msgid "Active Skills"
 msgstr "主动技能"
 
 #. js-lingui-explicit-id
+#: src/routes/builder/equipment.tsx:437
+msgid "Select equipment type..."
+msgstr "选择装备类型..."
+
+#. js-lingui-explicit-id
 #: src/routes/builder/talents/$slot.tsx:333
 msgid "Slot 1 (God/Goddess)"
 msgstr ""
@@ -32,11 +37,6 @@ msgstr ""
 #: src/routes/builder/talents/$slot.tsx:355
 msgid "Slot"
 msgstr ""
-
-#. js-lingui-explicit-id
-#: src/routes/builder/equipment.tsx:437
-msgid "Select equipment type..."
-msgstr "选择装备类型..."
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:4
@@ -315,6 +315,16 @@ msgid "Wand"
 msgstr "法杖"
 
 #. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Edit Prism"
+msgstr "编辑棱镜"
+
+#. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Craft Prism"
+msgstr "制作棱镜"
+
+#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "微型天赋"
@@ -328,16 +338,6 @@ msgstr "中型天赋"
 #: src/components/talents/TalentNodeDisplay.tsx:84
 msgid "Legendary Talent"
 msgstr "传奇天赋"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Edit Prism"
-msgstr "编辑棱镜"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Craft Prism"
-msgstr "制作棱镜"
 
 #. js-lingui-explicit-id
 #: src/components/talents/CoreTalentSelector.tsx:56
