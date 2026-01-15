@@ -315,6 +315,16 @@ msgid "Wand"
 msgstr "Wand"
 
 #. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Edit Prism"
+msgstr "Edit Prism"
+
+#. js-lingui-explicit-id
+#: src/components/talents/PrismCrafter.tsx:149
+msgid "Craft Prism"
+msgstr "Craft Prism"
+
+#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "Micro Talent"
@@ -328,16 +338,6 @@ msgstr "Medium Talent"
 #: src/components/talents/TalentNodeDisplay.tsx:84
 msgid "Legendary Talent"
 msgstr "Legendary Talent"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Edit Prism"
-msgstr "Edit Prism"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:149
-msgid "Craft Prism"
-msgstr "Craft Prism"
 
 #. js-lingui-explicit-id
 #: src/components/talents/CoreTalentSelector.tsx:56

@@ -3,7 +3,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { Prism } from "../data/prism/types";
-import { cleanEffectText, readCodexHtml } from "./lib/codex";
+import {
+  cleanEffectText,
+  cleanEffectTextNew,
+  readCodexHtml,
+} from "./lib/codex";
 
 const extractPrismData = (html: string): Prism[] => {
   const $ = cheerio.load(html);
@@ -24,7 +28,7 @@ const extractPrismData = (html: string): Prism[] => {
     const item: Prism = {
       type: $(tds[0]).text().trim(),
       rarity: $(tds[1]).text().trim(),
-      affix: cleanEffectText(affixTd.html() || ""),
+      affix: cleanEffectTextNew(affixTd.html() || ""),
     };
 
     // Extract replacement core talent if present
@@ -36,7 +40,10 @@ const extractPrismData = (html: string): Prism[] => {
       const name = tooltipSpan.text().trim();
       const rawAffix = tooltipSpan.attr("data-title") || "";
       if (name !== "" && rawAffix !== "") {
-        item.replacementCoreTalent = { name, affix: cleanEffectText(rawAffix) };
+        item.replacementCoreTalent = {
+          name,
+          affix: cleanEffectTextNew(rawAffix),
+        };
       }
     }
 
