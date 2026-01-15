@@ -1787,14 +1787,17 @@ const resolveModsForOffenseSkill = (
     mods.push(...normalizeStackables(prenormMods, "stalker", stacks));
   };
   const pushYouga2 = (): void => {
-    if (!modExists(mods, "HasSpacetimeElapse")) {
+    if (!modExists(mods, "SpacetimeElapsePct")) {
       return;
     }
 
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
 
-    const baseRecordPct = calcEffMult(filterMods(mods, "HasSpacetimeElapse"));
-    const recordedDmgMoreMods = filterMods(mods, "SpacetimeRecordedDmgMore");
+    const baseRecordPct = calcEffMult(filterMods(mods, "SpacetimeElapsePct"));
+    const recordedDmgMoreMods = filterMods(
+      mods,
+      "SpacetimeRecordedDmgBonusPct",
+    );
     const recordedDmgMoreMult = calcEffMult(recordedDmgMoreMods);
     const finalDamagePct = (baseRecordPct - 1) * recordedDmgMoreMult * 100;
 
