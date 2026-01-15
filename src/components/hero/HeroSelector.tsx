@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
+import { i18n } from "@/src/lib/i18n";
 import { getUniqueHeroes } from "../../lib/hero-utils";
 
 interface HeroSelectorProps {
@@ -19,7 +20,10 @@ export const HeroSelector = ({
       <SearchableSelect
         value={selectedHero}
         onChange={onHeroChange}
-        options={uniqueHeroes.map((hero) => ({ value: hero, label: hero }))}
+        options={uniqueHeroes.map((hero) => ({
+          value: hero,
+          label: i18n._(hero),
+        }))}
         placeholder="Select a hero..."
         size="lg"
       />
