@@ -410,6 +410,7 @@ const calculatePactspiritMods = (
       per: { stackable: "pure_heart", multiplicative: true, limit: 6 },
       addn: true,
       src: "Pure Heart",
+      cond: "target_enemy_is_nearby",
     });
   }
 

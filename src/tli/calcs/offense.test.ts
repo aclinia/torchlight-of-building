@@ -6227,7 +6227,7 @@ describe("Pactspirits", () => {
             },
           },
         },
-        { pureHeartStacks: stacks },
+        { pureHeartStacks: stacks, targetEnemyIsNearby: true },
       );
       const results = calculateOffense(input);
       const expectedAvgHit = 200 * 1.05 ** stacks;
@@ -6271,6 +6271,7 @@ describe("Pactspirits", () => {
             },
           },
         },
+        { targetEnemyIsNearby: true },
       );
 
       const getExpectedStacksPerLevel = (level: number) => {
@@ -6283,6 +6284,44 @@ describe("Pactspirits", () => {
 
       const results = calculateOffense(input);
       const expectedAvgHit = 200 * 1.05 ** getExpectedStacksPerLevel(level);
+      validate(results, skillName, { avgHit: expectedAvgHit });
+    });
+
+    test("Pure heart does not apply if target enemy is not nearby", () => {
+      const pureHeartStacks = 6;
+
+      // base * bonusdmg
+      // 100 * 2 = 200
+      const input = createModsInput(
+        affixLines([
+          { type: "DmgPct", value: 100, dmgModType: "global", addn: false },
+        ]),
+        {
+          pactspiritPage: {
+            slot1: {
+              pactspiritName: "Azure Gunslinger",
+              level: 6,
+              mainAffix: emptyAffix(),
+              rings: {
+                innerRing1: emptyRingSlotState(),
+                innerRing2: emptyRingSlotState(),
+                innerRing3: emptyRingSlotState(),
+                innerRing4: emptyRingSlotState(),
+                innerRing5: emptyRingSlotState(),
+                innerRing6: emptyRingSlotState(),
+                midRing1: emptyRingSlotState(),
+                midRing2: emptyRingSlotState(),
+                midRing3: emptyRingSlotState(),
+              },
+            },
+          },
+        },
+        { pureHeartStacks, targetEnemyIsNearby: false },
+      );
+
+      // expected 200 since targetEnemyIsNerby is false so mod doesnt apply
+      const results = calculateOffense(input);
+      const expectedAvgHit = 200;
       validate(results, skillName, { avgHit: expectedAvgHit });
     });
   });
