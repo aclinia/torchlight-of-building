@@ -1,4 +1,8 @@
 import { describe, expect, test } from "vitest";
+import {
+  getPactspiritByName,
+  getPactspiritMainAffixModsByLevel,
+} from "@/src/lib/pactspirit-utils";
 import type { ImplementedActiveSkillName } from "../../data/skill";
 import {
   type Affix,
@@ -6195,7 +6199,7 @@ describe("Pactspirits", () => {
 
     test.each([
       0, 1, 2, 3, 4, 5, 6,
-    ])("Pure heart properly calculates with (%s) stacks", (stacks) => {
+    ])("Pure heart properly calculates with (%s) stacks config override", (stacks) => {
       // base * bonusdmg
       // 100 * 2 = 200
       // 200 * (a * 5% Pure Heart) = 200 * (1 + a * 0.05)
@@ -6223,10 +6227,101 @@ describe("Pactspirits", () => {
             },
           },
         },
-        { hasPureHeart: true, pureHeartStacks: stacks },
+        { pureHeartStacks: stacks, targetEnemyIsNearby: true },
       );
       const results = calculateOffense(input);
       const expectedAvgHit = 200 * 1.05 ** stacks;
+      validate(results, skillName, { avgHit: expectedAvgHit });
+    });
+
+    test.each([
+      1, 2, 3, 4, 5, 6,
+    ])("Pure heart properly calculates with Azure Gunslinger Level (%s)", (level) => {
+      const azureGunslinger = getPactspiritByName("Azure Gunslinger");
+      if (!azureGunslinger) {
+        return;
+      }
+
+      const pactspiritAffixes = getPactspiritMainAffixModsByLevel(
+        azureGunslinger,
+        level,
+      );
+
+      const input = createModsInput(
+        affixLines([
+          { type: "DmgPct", value: 100, dmgModType: "global", addn: false },
+        ]),
+        {
+          pactspiritPage: {
+            slot1: {
+              pactspiritName: "Azure Gunslinger",
+              level,
+              mainAffix: { affixLines: pactspiritAffixes },
+              rings: {
+                innerRing1: emptyRingSlotState(),
+                innerRing2: emptyRingSlotState(),
+                innerRing3: emptyRingSlotState(),
+                innerRing4: emptyRingSlotState(),
+                innerRing5: emptyRingSlotState(),
+                innerRing6: emptyRingSlotState(),
+                midRing1: emptyRingSlotState(),
+                midRing2: emptyRingSlotState(),
+                midRing3: emptyRingSlotState(),
+              },
+            },
+          },
+        },
+        { targetEnemyIsNearby: true },
+      );
+
+      const getExpectedStacksPerLevel = (level: number) => {
+        if (level < 6) {
+          return 5;
+        }
+
+        return 6;
+      };
+
+      const results = calculateOffense(input);
+      const expectedAvgHit = 200 * 1.05 ** getExpectedStacksPerLevel(level);
+      validate(results, skillName, { avgHit: expectedAvgHit });
+    });
+
+    test("Pure heart does not apply if target enemy is not nearby", () => {
+      const pureHeartStacks = 6;
+
+      // base * bonusdmg
+      // 100 * 2 = 200
+      const input = createModsInput(
+        affixLines([
+          { type: "DmgPct", value: 100, dmgModType: "global", addn: false },
+        ]),
+        {
+          pactspiritPage: {
+            slot1: {
+              pactspiritName: "Azure Gunslinger",
+              level: 6,
+              mainAffix: emptyAffix(),
+              rings: {
+                innerRing1: emptyRingSlotState(),
+                innerRing2: emptyRingSlotState(),
+                innerRing3: emptyRingSlotState(),
+                innerRing4: emptyRingSlotState(),
+                innerRing5: emptyRingSlotState(),
+                innerRing6: emptyRingSlotState(),
+                midRing1: emptyRingSlotState(),
+                midRing2: emptyRingSlotState(),
+                midRing3: emptyRingSlotState(),
+              },
+            },
+          },
+        },
+        { pureHeartStacks, targetEnemyIsNearby: false },
+      );
+
+      // expected 200 since targetEnemyIsNerby is false so mod doesnt apply
+      const results = calculateOffense(input);
+      const expectedAvgHit = 200;
       validate(results, skillName, { avgHit: expectedAvgHit });
     });
   });

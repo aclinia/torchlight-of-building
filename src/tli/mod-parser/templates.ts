@@ -1482,4 +1482,11 @@ export const allParsers = [
       addn: true,
       per: { stackable: c.stat, amt: c.amt },
     })),
+  t("{value:+int} Max Pure Heart Stacks").output("MaxPureHeartStacks", (c) => ({
+    value: c.value,
+  })),
+  t("{value:+dec%} additional damage taken when Pure Heart is active").output(
+    "DmgTakenPct",
+    (c) => ({ value: c.value }),
+  ),
 ];

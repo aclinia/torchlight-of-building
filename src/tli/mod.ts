@@ -447,6 +447,7 @@ interface ModDefinitions {
   // pactspirit stuff
   SquidnovaEffPct: { value: number };
   GeneratesSquidnova: object;
+  MaxPureHeartStacks: { value: number };
   // legendary gear
   DisableMainStatDmg: object;
 }

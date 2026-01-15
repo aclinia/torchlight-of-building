@@ -7,6 +7,7 @@ import type {
   PactspiritRingDetails,
 } from "@/src/data/pactspirit/types";
 import type { Loadout } from "@/src/tli/core";
+import { parseMod } from "../tli/mod-parser";
 import type { RingSlotKey } from "./types";
 
 export const getPactspiritByName = (name: string): Pactspirit | undefined =>
@@ -68,4 +69,16 @@ export const hasPactspirit = (
     loadout.pactspiritPage.slot2?.pactspiritName === name ||
     loadout.pactspiritPage.slot3?.pactspiritName === name
   );
+};
+
+export const getPactspiritMainAffixModsByLevel = (
+  pactspirit: Pactspirit,
+  level: number,
+) => {
+  const levelAffixText = getPactspiritLevelAffix(pactspirit, level);
+  const levelAffixLines = levelAffixText
+    .split("\n")
+    .map((text) => ({ text, mods: parseMod(text) }));
+
+  return levelAffixLines;
 };

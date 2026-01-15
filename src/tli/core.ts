@@ -198,8 +198,6 @@ export interface Configuration {
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor?: number;
 
-  // default to false
-  hasPureHeart: boolean;
   // default to 6
   pureHeartStacks?: number;
   // defaults to max of 5
@@ -280,7 +278,6 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   enemyFireRes: undefined,
   enemyErosionRes: undefined,
   enemyArmor: undefined,
-  hasPureHeart: false,
   pureHeartStacks: undefined,
   twistedSpacetimeStacks: undefined,
   customAffixLines: undefined,
