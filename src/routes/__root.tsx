@@ -11,6 +11,7 @@ import "@fontsource-variable/geist";
 import "@fontsource-variable/geist-mono";
 import "../globals.css";
 import { DisclaimerModal } from "@/src/components/modals/DisclaimerModal";
+import { MigrationModal } from "@/src/components/modals/MigrationModal";
 import { i18n } from "@/src/lib/i18n";
 
 function AnalyticsOnce(): React.ReactNode {
@@ -52,6 +53,7 @@ function RootLayout(): React.ReactNode {
       <body className="antialiased">
         <I18nProvider i18n={i18n}>
           <Outlet />
+          <MigrationModal />
           <DisclaimerModal />
         </I18nProvider>
         <AnalyticsOnce />
