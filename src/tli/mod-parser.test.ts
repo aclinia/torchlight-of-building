@@ -3020,3 +3020,46 @@ test("parse terra charge recovery speed", () => {
   const result = parseMod("+44% Terra Charge Recovery Speed");
   expect(result).toEqual([{ type: "TerraChargeRecoverySpeedPct", value: 44 }]);
 });
+
+test("parse flat armor", () => {
+  const result = parseMod("+860 Armor");
+  expect(result).toEqual([{ type: "Armor", value: 860 }]);
+});
+
+test("parse flat evasion", () => {
+  const result = parseMod("+860 Evasion");
+  expect(result).toEqual([{ type: "Evasion", value: 860 }]);
+});
+
+test("parse cold penetration for minions (signed)", () => {
+  const result = parseMod("+8% Cold Penetration for Minions");
+  expect(result).toEqual([
+    { type: "MinionResPenPct", value: 8, penType: "cold" },
+  ]);
+});
+
+test("parse mana regeneration speed", () => {
+  const result = parseMod("+70% Mana Regeneration Speed");
+  expect(result).toEqual([{ type: "ManaRegenSpeedPct", value: 70 }]);
+});
+
+test("parse chance to gain agility blessing on defeat", () => {
+  const result = parseMod(
+    "+6% chance to gain 1 stack of Agility Blessing on defeat",
+  );
+  expect(result).toEqual([{ type: "GeneratesAgilityBlessing" }]);
+});
+
+test("parse chance to gain focus blessing on defeat", () => {
+  const result = parseMod(
+    "+6% chance to gain 1 stack of Focus Blessing on defeat",
+  );
+  expect(result).toEqual([{ type: "GeneratesFocusBlessing" }]);
+});
+
+test("parse chance to gain tenacity blessing on defeat", () => {
+  const result = parseMod(
+    "+6% chance to gain 1 stack of Tenacity Blessing on defeat",
+  );
+  expect(result).toEqual([{ type: "GeneratesTenacityBlessing" }]);
+});

@@ -577,6 +577,10 @@ export const allParsers = [
   t("{value:+dec%} minion max life").output("MinionMaxLifePct", (c) => ({
     value: c.value,
   })),
+  t("{value:+dec%} {penType:ResPenType} penetration for minions").output(
+    "MinionResPenPct",
+    (c) => ({ value: c.value, penType: c.penType }),
+  ),
   t("{value:dec%} {penType:ResPenType} penetration for minions").output(
     "MinionResPenPct",
     (c) => ({ value: c.value, penType: c.penType }),
@@ -921,6 +925,8 @@ export const allParsers = [
     spec("Armor", (c) => ({ value: c.value })),
     spec("Evasion", (c) => ({ value: c.value })),
   ]),
+  t("{value:+int} armor").output("Armor", (c) => ({ value: c.value })),
+  t("{value:+int} evasion").output("Evasion", (c) => ({ value: c.value })),
   t("{value:+dec%} max elemental and erosion resistance").outputMany([
     spec("MaxResistancePct", (c) => ({
       value: c.value,
@@ -1470,6 +1476,15 @@ export const allParsers = [
     () => ({}),
   ),
   t(
+    "{value:+dec%} chance to gain {stacks:int} stack of agility blessing on defeat",
+  ).output("GeneratesAgilityBlessing", () => ({})),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stack of focus blessing on defeat",
+  ).output("GeneratesFocusBlessing", () => ({})),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stack of tenacity blessing on defeat",
+  ).output("GeneratesTenacityBlessing", () => ({})),
+  t(
     "{value:+dec%} chance to gain blur when inflicting crowd control effects",
   ).output("GeneratesBlur", (c) => ({ value: c.value })),
   t("{value:+dec%} numbed effect").output("NumbedEffPct", (c) => ({
@@ -1510,6 +1525,10 @@ export const allParsers = [
     value: c.value,
     cond: HAS_FOCUS_BLESSING,
   })),
+  t("{value:+dec%} mana regeneration speed").output(
+    "ManaRegenSpeedPct",
+    (c) => ({ value: c.value }),
+  ),
   t("{value:+int%} additional damage taken from cursed enemies").output(
     "DmgTakenPct",
     (c) => ({ value: c.value, cond: ENEMY_IS_CURSED }),

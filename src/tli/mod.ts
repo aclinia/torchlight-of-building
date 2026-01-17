@@ -382,6 +382,7 @@ interface ModDefinitions {
   MaxMana: { value: number };
   MaxManaPct: { value: number; addn: boolean };
   ManaRegenPerSecPct: { value: number };
+  ManaRegenSpeedPct: { value: number };
   MercuryBaptismDmgPct: { value: number };
   MaxMercuryPtsPct: { value: number };
   MaxFocusBlessing: { value: number };
