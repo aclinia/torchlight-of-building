@@ -141,7 +141,7 @@ export const ActiveSkills = [
     name: "Biting Cold",
     tags: ["Spell", "Area", "Persistent", "Cold", "Curse"],
     description: [
-      "Casts the skill and Curses enemies within the target area. Cursed enemies take 20% additional Cold Damage.",
+      "Casts this skill and Curses enemies within the target area. Cursed enemies take 20% additional Cold Damage.",
       "Casts the skill and Curses enemies within the target area.\nCursed enemies +39% additional Cold Damage taken.\nLasts 5s.",
     ],
     kinds: [],
@@ -194,7 +194,7 @@ export const ActiveSkills = [
     description: [
       "Casts the skill to attack in a circular area in front, dealing Spell Fire Damage equal to 278% of Base Damage. This skill deals additional Damage if a Critical Strike of it was dealt recently.",
       "Blazing Incineration:\nDeals Spell Fire Damage equal to 278% of Base Damage.\n#skillstone, 1894, affix#",
-      "+10% additional Damage if the skill has dealt a Critical Strike recently\nWhen at Stage 3 or higher, this skill grants 1 buff stack on Critical Strike. Interval: 0.01s.\n+15% Skill Area for 2 s for every stack of buff, stacking up to 15 time(s)\nWhen at Stage 3 or higher, +30% additional damage for this skill",
+      "+10% additional Damage if the skill has dealt a Critical Strike recently\nWhen at Stage 3 or higher, this skill grants 1 stack of buff on Critical Strike. Interval: 0.01s.\n+15% Skill Area for 2 s for every stack of buff, stacking up to 15 time(s)\nWhen at Stage 3 or higher, +30% additional damage for this skill",
     ],
     mainStats: ["str", "int"],
     kinds: ["hit_enemies"],
@@ -219,10 +219,20 @@ export const ActiveSkills = [
       "Launches a spike that tracks enemies, dealing Spell Erosion Damage equal to 162% of Base Damage. The spike explodes after reaching the target, dealing Spell Erosion Damage equal to 162% of Base Damage.",
       "Spike:\nDeals Spell Erosion Damage equal to 162% of Base Damage",
       "Spike Explosion:\nDeals Spell Erosion Damage equal to 162% of Base Damage",
-      "When at Stage 3 or higher, +15% base radius for the skill\nWhen at Stage 3 or higher, +50% travel speed for the spikes launched by the skill\nWhen at Stage 3 or higher, enemies take +4% additional Erosion Damage (multiplies) for 2 s after being hit by the skill. Stacks up to 4 time(s)\nWhen at Stage 3 or higher, -8% additional Movement Speed (multiplies) for enemies for 2 s after being hit by the skill. Stacks up to 4 time(s)",
+      "When at Stage 3 or higher, +15% base radius for the skill\nWhen at Stage 3 or higher, +50% travel speed for the spikes launched by the skill\nWhen at Stage 3 or higher, enemies take +4% additional Erosion Damage (multiplies) for 2 s after being hit by the skill. Stacks up to 4 time(s)\nWhen at Stage 3 or higher, -8% additional Movement Speed (multiplies) for enemies for 2 s after being hit by this skill. Stacks up to 4 time(s)",
     ],
     mainStats: ["int"],
     kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Blind",
+    tags: ["Spell", "Area", "Persistent", "Curse"],
+    description: [
+      "Casts the skill and Curses enemies within the target area. Enemies Cursed will be Blinded and gains -1% additional Movement Speed.",
+      "Casts the skill and Curses enemies within the target area.\n-20% additional Movement Speed for Cursed enemies\nCursed enemies will become Blinded\nLasts 5s.",
+    ],
+    kinds: [],
   },
   {
     type: "Active",
@@ -293,7 +303,7 @@ export const ActiveSkills = [
     name: "Brisk Wind",
     tags: ["Spell", "Persistent", "Defensive"],
     description: [
-      "Casts the skill and gains a defensive effect: 1180 Evasion for 5s.\nWhile the skill lasts, each evasion grants a buff: 8% Movement Speed for 6s. Stacks up to 3 time(s).",
+      "Casts this skill and gains a defensive effect: 1180 Evasion for 5s.\nWhile this skill lasts, each evasion grants a buff: 8% Movement Speed for 6s. Stacks up to 3 time(s).",
       "Casts the skill and gains defensive effect:\n+2700 Evasion while the skill lasts\nGains a stack of buff for each Evasion while the skill lasts\nLasts 5s.",
       "Buff:\nBuffs grant +8% character Movement Speed\nLasts 6s.\nStacks up to 3 time(s).",
     ],
@@ -335,9 +345,9 @@ export const ActiveSkills = [
     name: "Burst of Anger",
     tags: ["Spell", "Persistent", "Empower"],
     description: [
-      "Casts the skill and gains Euphoria: Gains Attack Aggression, 10% Physique, and 7.1% additional Attack Damage. Lasts 6s.\nWhile the skill lasts, defeating an enemy or hitting an Elite has a chance to refresh the skill's duration.\nLoses 2% Max Life and Energy Shield every second.",
+      "Casts this skill and gains Euphoria: Gains Attack Aggression, 10% Physique, and 7.1% additional Attack Damage. Lasts 6s.\nWhile this skill lasts, defeating an enemy or hitting an Elite has a chance to refresh this skill's duration.\nLoses 2% Max Life and Energy Shield every second.",
       "Casts the skill and gains Euphoria:\nGains Attack Aggression while the skill lasts\n+10% Physique while the skill lasts\n+9% additional Attack Damage while the skill lasts\n+100% chance to refresh Duration on defeat while the skill lasts\n+10% chance to refresh the skill's Duration upon hitting an Elite while the skill lasts\nLasts for 6s",
-      "While the skill lasts, loses 2% Max Life and Max Energy Shield every second",
+      "While this skill lasts, loses 2% Max Life and Max Energy Shield every second",
     ],
     kinds: ["hit_enemies"],
   },
@@ -417,7 +427,7 @@ export const ActiveSkills = [
     name: "Charging Warcry",
     tags: ["Warcry", "Area", "Persistent"],
     description: [
-      "Casts the skill and lets out a Warcry. Taunts nearby enemies. Shadow Strike Skills gain 4% additional damage and Ailment Damage for every enemy affected by this skill. While the Warcry lasts, Shadow Strike Skills gain +20% Tracking Area. Lasts for 3s.",
+      "Casts this skill and lets out a Warcry. Taunts nearby enemies. Shadow Strike Skills gain 4% additional damage and Ailment Damage for every enemy affected by this skill. While the Warcry lasts, Shadow Strike Skills gain +20% Tracking Area. Lasts 3s.",
       "Casts the skill and lets out a Warcry:\nTaunts Nearby enemies.\n+20% Tracking Area for Shadow Strike Skills while the skill lasts\n+20% Tracking Area for Shadow Strike Skills while the skill lasts\nLasts for 3s",
     ],
     kinds: [],
@@ -639,7 +649,7 @@ export const ActiveSkills = [
     name: "Electrocute",
     tags: ["Spell", "Area", "Persistent", "Lightning", "Curse"],
     description: [
-      "Casts the skill and Curses enemies within the target area. Cursed enemies take 20% additional Lightning Damage.",
+      "Casts this skill and Curses enemies within the target area. Cursed enemies take 20% additional Lightning Damage.",
       "Casts the skill and Curses enemies within the target area.\n+39% additional Lightning Damage taken by Cursed enemies\nLasts 5s.",
     ],
     kinds: [],
@@ -658,6 +668,15 @@ export const ActiveSkills = [
     description: [
       "Casts the skill and gains Euphoria: 15% additional Elemental Damage for Minions. Lasts 6s.",
       "Casts the skill and gains Euphoria:\n24.5% additional Minion Elemental Damage while the skill lasts\nLasts 6s.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Endless Vendetta",
+    tags: ["Attack", "Melee", "Area"],
+    description: [
+      "Repeatedly casts Vendetta, targeting a random enemy within a 12m radius each time. Starts with -30% additional Attack Speed, +5% additional Attack Speed per repeat cast. Repeat limit: 30 times.\nThis skill cannot be supported by Activation Medium Skills.\nClick it again while casting to interrupt.",
     ],
     kinds: [],
   },
@@ -798,12 +817,12 @@ export const ActiveSkills = [
     name: "Frigid Transmission",
     tags: ["Spell", "Cold", "Area", "Mobility"],
     description: [
-      "释放该技能向指定位置位移，在起点和落点一定范围内留下寒冰，对其中敌人造成 693-1040 法术Cold伤害。\n任意情况下造成冰冻时，刷新该技能的冷却时间。",
-      "寒冰传送：\n造成 693-1040 SpellCold伤害\n任意情况下造成冰冻时，刷新该技能的冷却时间，间隔 0.03 秒",
+      "Casts this skill to move to the target spot, leaving cold ice within a certain area at the starting point and the target location, dealing 693 - 1040 Spell Cold Damage.\nRefreshes this skill's Cooldown upon inflicting Frost-Seal in any situation.",
+      "Frigid Transmission:\nDeals 693-1040 Spell Cold Damage.\nRefreshes this skill's Cooldown upon inflicting Frost-Seal in any situation. Interval: 0.03s",
       "Refreshes this skill's Cooldown upon inflicting Frost-Seal in any situation. Interval: 0.03 s",
     ],
     mainStats: ["int"],
-    kinds: [],
+    kinds: ["deal_damage", "hit_enemies"],
   },
   {
     type: "Active",
@@ -822,8 +841,7 @@ export const ActiveSkills = [
     tags: ["Attack", "Melee", "Area", "Cold", "Demolisher"],
     description: [
       "Casts the skill, pummels the ground in front, and generates a wave of Ice Spikes within a certain area, dealing 202% Weapon Attack Damage.\nWhen the skill consumes Demolisher Charge, generates 3 additional waves of Ice Spikes, with each wave dealing additional damage and having a bigger skill area.\nAll of the skill's Physical Damage will be converted to Cold Damage.",
-      "Ice Spike:\nDeals 202% Weapon Attack Damage.\n+30% additional Hit Damage for each wave of Ice Spikes.\n+20% additional Skill Area for each wave of Ice Spikes.\nThe skill's Demolisher Charge Restoration Speed bonuses are also applied to Ice Spike generation interval.\nThe skill gains 1 Demolisher Charge\nevery 3s.Converts 100% of the skill's Physical Damage to Cold Damage\nIn any situation, when inflicting Freeze, if this skill doesn't have Demolisher Charge, it immediately gains Demolisher Charge. Interval: 3 s",
-      "Converts 100% of the skill's Physical Damage to Cold Damage\nIn any situation, when inflicting Freeze, if this skill doesn't have Demolisher Charge, it immediately gains Demolisher Charge. Interval: 3 s",
+      "Ice Spike:\nDeals 202% Weapon Attack Damage.\n+30% additional Hit Damage for each wave of Ice Spikes.\n+20% additional Skill Area for each wave of Ice Spikes.\nThis skill's Demolisher Charge Restoration Speed bonuses are also applied to Ice Spike generation interval.\nThis skill gains 1 Demolisher Charge\nevery 3s.Converts 100% of the skill's Physical Damage to Cold Damage\nIn any situation, when inflicting Freeze, if this skill doesn't have Demolisher Charge, it immediately gains Demolisher Charge. Interval: 3 s",
     ],
     mainStats: ["str", "int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -833,8 +851,8 @@ export const ActiveSkills = [
     name: "Frost Release",
     tags: ["Empower", "Spell", "Cold", "Area", "Persistent"],
     description: [
-      "Casts this skill and spreads Freezing Air within a certain area around the caster, dealing Spell Cold Damage equal to 72% Base Damage.\nCasts this skill and gains Euphoria: The next 5 other skill(s) deal 81% additional damage. After casting another skill, this bonus becomes -15% for 6s, stacking up to 5 time(s). Multiple stacks of the skill effect multiply.\nWhile this skill lasts, you gain 20 Max Frostbite Rating",
-      "Casts the skill and gains Euphoria:\nThe next 5 use(s) of other non-Channeled Skills deal +81% additional Hit Damage while the skill lasts. -15% to this damage bonus after casting another skill\nLasts 6s.\nStacks up to 5 time(s)\nMultiple stacks of the skill effect multiplies.",
+      "Casts this skill and spreads Freezing Air within a certain area around you, dealing Spell Cold Damage equal to 72% Base Damage.\nCasts this skill and gains Euphoria: The next 5 other skill(s) deal 81% additional damage. After casting another skill, this bonus becomes -15% for 6s, stacking up to 5 time(s). Multiple stacks of the skill effect multiply.\nWhile this skill lasts, you gain 20 Max Frostbite Rating",
+      "Casts the skill and gains Euphoria:\nThe next 5 use(s) of other non-Channeled Skills deal +81% additional Hit Damage while the skill lasts. -15% to this damage bonus after casting another skill\nLasts 6s.\nStacks up to 5 time(s)\nMultiple stacks of the skill effect multiply.",
       "Frost Release:\nDeals Spell Cold Damage equal to 72% of Base Damage",
       "+20 Max Frostbite Rating while this skill lasts\nWhen at Stage 4 or higher, triggers this skill after casting 5 other skills",
     ],
@@ -929,11 +947,11 @@ export const ActiveSkills = [
       "Combo Starter 2: Launches a spinning attack while moving forward, dealing 392% Weapon Attack Damage.",
       "Combo Finisher: Leaps and pummels the ground ahead, dealing 392% Weapon Attack Damage.",
       "Combo Starter 1:\nDeals 392% Weapon Attack Damage.\nCharges forward 3.5m. If the enemy is too far away, instead charges 6m\n+20% additional Attack Speed for the Combo Starter 1 of this skill",
-      "Combo Starter 2:\nDeals 392% Weapon Attack Damage\nMove forward 2.5m\nWhen the Starter 2 hits, it knocks back enemies in the direction the skill was cast",
+      "Combo Starter 2:\nDeals 392% Weapon Attack Damage\nMove forward 2.5m\nWhen the Starter 2 hits, it knocks back enemies in the direction this skill was cast",
       "Combo Finisher:\nDeals 392% Weapon Attack Damage\nJump forward 4m\n-50% additional Attack Speed for the Combo Finisher of this skill",
       "+30% Combo Finisher Amplification for this skill\nThis skill's Attack Speed bonus falls off at a rate equal to that of a normal Mobility Skill\n0.2% additional damage for this skill for every +1% Attack Speed",
-      "After casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each Combo Point. Stacks up to 4 time(s)\nThis skill cannot be triggered\nThis skill cannot be supported by Activation Medium Skills",
-      "+20% additional Attack Speed for the Combo Starter 1 of this skill\n-50% additional Attack Speed for the Combo Finisher of this skill\nAfter casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each Combo Point. Stacks up to 4 time(s)\n+30% Combo Finisher Amplification for this skill\n1.5% additional Critical Strike Rating for this skill for each stack of buff\nThis skill cannot be triggered\n0.2% additional damage for this skill for every +1% Attack Speed",
+      "After casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each current Combo Point. Stacks up to 4 time(s)\nThis skill cannot be triggered\nThis skill cannot be supported by Activation Medium Skills",
+      "+20% additional Attack Speed for the Combo Starter 1 of this skill\n-50% additional Attack Speed for the Combo Finisher of this skill\nAfter casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each current Combo Point. Stacks up to 4 time(s)\n+30% Combo Finisher Amplification for this skill\n1.5% additional Critical Strike Rating for this skill for each stack of buff\nThis skill cannot be triggered\n0.2% additional damage for this skill for every +1% Attack Speed",
     ],
     mainStats: ["str", "dex"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -993,7 +1011,6 @@ export const ActiveSkills = [
       "Fission:\nDeals 227% Weapon Attack Damage.",
       "Fissure Secondary Damage:\nDeals 1135% Weapon Attack Damage",
       "This skill gains 1 Demolisher Charge every 3s.\nThis skill's Demolisher Charge Restoration Speed bonuses are also applied to the speed at which the fissure spreads.\n+10% additional Skill Area when the skill consumes Demolisher Charge",
-      "+10% additional Skill Area when the skill consumes Demolisher Charge",
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -1042,7 +1059,6 @@ export const ActiveSkills = [
       "Haunting Terra:\nHaunting Terra lasts 4s.\nDeals 405-405 Spell Erosion Damage to enemies within it every 0.65s. Bonuses and additional bonuses for Cast Speed are also applied to the Interval.\nHaunting Terra expands gradually over its duration, gaining +20% additional Skill Area per second.",
       "The maximum stacks of Terra Charge are 1.\nGain 1 stack of Terra Charge every 0.5s.\n+26% additional damage for this skill for every Terra Charge consumed",
       "This skill's max base Terra quantity is 1.",
-      "+26% additional damage for this skill for every Terra Charge consumed",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -1430,10 +1446,6 @@ export const ActiveSkills = [
         0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
         0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
       ],
-      restoreLifePctInterval: [
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-      ],
     },
   },
   {
@@ -1508,7 +1520,7 @@ export const ActiveSkills = [
     name: "Path of Flames",
     tags: ["Spell", "Fire", "Channeled", "Persistent", "Area"],
     description: [
-      "Channeling this skill leaves a fire path and allows you to pass through enemies, dealing 909 Persistent Fire Damage every second to enemies in it.\nEach channeled stack 43/2% additional damage.",
+      "Channeling this skill leaves a fire path and allows you to pass through enemies, dealing 909 Persistent Fire Damage every second to enemies in it.\nEach channeled stack 43/2% additional damage for this skill.",
       "Fire Path:\nDeals 909 Persistent Fire Damage every second.\nDamage Over Time effect lasts 2s.",
       "This skill 21.5 % additional damage for every +1 additional Max Channeled Stack(s)",
     ],
@@ -1575,7 +1587,7 @@ export const ActiveSkills = [
     tags: ["Warcry", "Area", "Persistent", "Restoration"],
     description: [
       "Casts the skill and lets out a Warcry: Weakens nearby enemies. For each enemy affected, -2% additional damage taken, up to -60% additional damage taken, for 3s.\nCasts the skill and gains restoration: Restores 40 Life within 4s. This effect is not affected by Warcry Effects.",
-      "Casts the skill and lets out a Warcry:\nWeakens Nearby enemies.\n-2% additional damage taken for each enemy affected, stacking up to 8 times\nLasts 3s.",
+      "Casts the skill and lets out a Warcry:\nWeakens Nearby enemies.\n-2% additional damage taken by you for each enemy affected, stacking up to 8 times\nLasts 3s.",
       "Casts the skill and gains restoration: Restores 40 Life within 4s.\nThe effect is not affected by Warcry effects.",
       "Restores 40 Life in 4 s",
     ],
@@ -1594,7 +1606,7 @@ export const ActiveSkills = [
       "Horizontal",
     ],
     description: [
-      "When channeling this skill, generates ring blades around the caster, dealing 379-631 Spell Physical Damage to enemies within range.\nThe ring blades will remain for 5s after the channeling is over.\nMovement is not restricted when this skill is being channeled.",
+      "When channeling this skill, generates ring blades around you, dealing 379-631 Spell Physical Damage to enemies within range.\nThe ring blades will remain for 5s after the channeling is over.\nMovement is not restricted when this skill is being channeled.",
       "Ring of Blades:\nDeals 379-631 Spell Physical Damage\nFor the same enemy, Projectiles can deal damage once every 0.25s at the fastest\nMax channeled stacks: 5\nGenerates 1 Projectile for each channeling, up to 5 Projectile(s)\nAfter channeling, Projectiles will remain for 5s\nMovement is not restricted when the skill is being channeled",
       "This skill 21.5 % additional damage for every +1 additional Max Channeled Stack(s)",
       "The orbiting radius of Projectiles is also affected by the skill's Skill Area bonuses.",
@@ -1619,7 +1631,7 @@ export const ActiveSkills = [
     name: "Rising Edge",
     tags: ["Spell", "Persistent", "Summon", "Empower"],
     description: [
-      "Casts the skill and gains Euphoria: 3.1% additional Minion Damage for every Summon Skill you cast. Stacks up to 5 time(s). Lasts for 6s.",
+      "Casts this skill and gains Euphoria: 3.1% additional Minion Damage for each time you cast a Summon Skill. Stacks up to 5 time(s). Lasts 6s.",
       "Casts the skill and gains Euphoria:\n+5% additional Minion Damage for every Summon Skill cast. Stacks up to 5 time(s)\nLasts 6s.",
     ],
     kinds: ["summon_minions"],
@@ -1630,7 +1642,7 @@ export const ActiveSkills = [
     tags: ["Enhanced Skill", "Attack", "Melee", "Physical", "Area"],
     description: [
       "Casts the skill to launch 3 strike(s) in a circular area nearby, dealing Attack Physical Damage equal to 47% of Base Damage with each strike. Movement is not restricted when casting this skill.",
-      "Rock Blast: Every use of the skill launches 3 strike(s)\nEach strike deals Attack Physical Damage equal to 47% of Base Damage\nWhen at Stage 3 or higher, for each enemy within 8 m, 3.5% additional damage and +3% Skill Area for the skill. Stacks up to 8 time(s)",
+      "Rock Blast: Every use of the skill launches 3 strike(s)\nEach strike deals Attack Physical Damage equal to 47% of Base Damage\nWhen at Stage 3 or higher, for each enemy within 8 m, 3.5% additional damage and +3% Skill Area for this skill. Stacks up to 8 time(s)",
     ],
     mainStats: ["str", "int"],
     kinds: ["hit_enemies"],
@@ -1823,7 +1835,7 @@ export const ActiveSkills = [
     name: "Shockwave Warcry",
     tags: ["Warcry", "Area", "Persistent"],
     description: [
-      "释放该技能发出战吼，嘲讽周围敌人。该技能每影响一个敌人，连携终结技额外 3.1% 伤害和异常伤害，持续 3 秒。\n战吼持续时，每释放一次连携终结技，连携技能 6% 技能范围，上限 5 层。",
+      "Casts this skill and lets out a Warcry. Taunts Nearby enemies. Combo Finishers gain 3.1% additional damage and Ailment Damage for every enemy affected by this skill for 3s.\nWhile the Warcry lasts, Combo skills gain 6% additional Skill Area for each Combo Finisher cast, stacking up to 5 time(s).",
       "Casts the skill and lets out a Warcry:\nTaunts Nearby enemies.\n5.95% additional damage and Ailment Damage for Combo Finishers for each enemy affected, stacking up to 8 time(s)\nWhile the skill lasts, +6% Skill Area for Combo skills for each Combo Finisher cast. Stacks up to 5 time(s)\nLasts for 3s",
     ],
     kinds: [],
@@ -1849,7 +1861,7 @@ export const ActiveSkills = [
       "Combo Finisher: Pummels the ground ahead, dealing 145% Weapon Attack Damage, and generates several clones that launch a Steep Strike to enemies with Mark, dealing 145% Weapon Attack Damage.",
       "Combo Starter 1:\nDeals 448% Weapon Attack Damage\nThis skill can only hit 1 enemy\nOn hit, inflicts Mark to the enemy\nWhen defeating an enemy, this skill directly spreads the target's Mark to other enemies within 8m",
       "Combo Starter 2:\nDeals 448% Weapon Attack Damage\nOn hit, spreads the target's Mark to other enemies within 8m (affected by Skill Area)",
-      "Combo Finisher:\nDeals 145% Weapon Attack Damage\nGenerates 1 additional Clone for every Combo Point consumed, up to 4 Clone(s)\nThe falloff coefficient of the Clones' Shotgun Effect is 70%\nRemoves Mark from enemies after the skill ends",
+      "Combo Finisher:\nDeals 145% Weapon Attack Damage\nGenerates 1 additional Clone for every Combo Point consumed, up to 4 Clone(s)\nThe falloff coefficient of the Clones' Shotgun Effect is 70%\nRemoves Mark from enemies after this skill ends",
       "-40% additional Attack Speed for the Combo Finisher of this skill\n+30% Combo Finisher Amplification for this skill",
     ],
     mainStats: ["str"],
@@ -1862,7 +1874,7 @@ export const ActiveSkills = [
     description: [
       "Casts the skill and moves in the target direction, leaving behind a Remnant before and after moving, and inflicting Reversed Knockback on nearby enemies within a certain distance.\nThe Remnant explodes after 0.65s, dealing damage to enemies once. Gains 1 stack of Euphoria for each enemy hit:\nFor every 1 stack(s) of Euphoria, 2.5% additional Spell Damage, up to 8 stacks, lasting for 1.2s.",
       "Remnant:\nRemnant lasts 0.65s.\nYou can have up to 2 Remnant(s).\nRemnant explosions deal 542-904 Spell Physical Damage on hit.\nGains 1 stack of Euphoria for each enemy hit by a Remnant explosion.\nEuphoria:\nFor every 1 stack(s) of Euphoria, 2.5% additional Spell Damage, up to 8 stacks, lasting for 1.2s",
-      "Gains 1 stack of a buff for each enemy hit with the skill, stacking up to 8 times\nKnockback effect from this skill is reversed",
+      "Gains 1 stack of buff for each enemy hit with this skill, stacking up to 8 times\nKnockback effect from this skill is reversed",
     ],
     kinds: ["deal_damage", "hit_enemies"],
   },
@@ -1896,9 +1908,9 @@ export const ActiveSkills = [
     name: "Split Shot",
     tags: ["Attack", "Projectile", "Physical", "Ranged", "Horizontal"],
     description: [
-      "Casts the skill and fires 3 Projectile(s) forward, dealing 347% Weapon Attack Damage.\nAfter defeating enemies, Projectiles fired by the skill each have a 50% chance to fire 1 Projectile at up to 2 enemy(ies) within 8m.",
+      "Casts the skill and fires 3 Projectile(s) forward, dealing 347% Weapon Attack Damage.\nAfter defeating enemies, Projectiles fired by this skill each have a 50% chance to fire 1 Projectile at up to 2 enemy(ies) within 8m.",
       "Split Shot:\nDeals 347% Weapon Attack Damage.\nThe skill fires 1 Projectile in its base state.\nProjectile Quantity of this skill +2\nIn general, the Projectiles shot by this skill cannot hit the same enemy.\nThe skill's Shotgun Effect falloff coefficient is 77%.",
-      "After defeating enemies, Projectiles fired by the skill each have a 50% chance to fire 1 Projectile at up to 2 enemy(ies) within 8m",
+      "After defeating enemies, Projectiles fired by this skill each have a 50% chance to fire 1 Projectile at up to 2 enemy(ies) within 8m",
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -2105,10 +2117,19 @@ export const ActiveSkills = [
     tags: ["Ultimate", "Attack", "Melee", "Physical", "Area"],
     description: [
       "Casts the skill and leaps up to the target spot to pummel the ground, dealing Attack Physical Damage equal to 1138% of Base Damage to enemies within a certain area. This skill's damage increases with the number of enemies within the area.",
-      "Towering Mountains:\nDeals Attack Physical Damage equal to 1138% of Base Damage\nWhen this skill deals damage, +5% additional damage for each enemy in the area. Stacks up to 8 time(s)",
+      "Towering Mountains:\nDeals Attack Physical Damage equal to 1138% of Base Damage\nWhen this skill deals damage, +5% additional damage for each enemy in the area of effect. Stacks up to 8 time(s)",
     ],
     mainStats: ["str", "int"],
     kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Vendetta",
+    tags: ["Attack", "Melee", "Area"],
+    description: [
+      "Teleports to a random enemy within 9m, then triggers the Main Skill 1 time and +40% additional attack damage for the triggered skill.\nThis skill cannot be supported by Activation Medium Skills.\nCan only be used when a non-Channeled, non-Mobility, or Main Melee Attack Skill is equipped.",
+    ],
+    kinds: [],
   },
   {
     type: "Active",

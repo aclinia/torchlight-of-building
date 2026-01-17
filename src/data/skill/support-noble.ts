@@ -8,7 +8,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Acuteness Focus.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+30 Max Focus Pts for the supported skill\n+30 Focus Pts required to trigger the supported skill",
       "+30 Max Focus Pts for the supported skill\n+30 Focus Pts required to trigger the supported skill",
-      "The supported skill no longer casts Acute Strike. Instead it casts Acute Smash on up to 1 enemy, dealing +(42–44)% additional Hit Damage",
+      "The supported skill no longer casts Acute Strike. Instead it casts Acute Smash on up to 1 enemy. +(42–44)% additional Hit Damage dealt by Smash.",
     ],
     supportTarget: "Acuteness Focus",
   },
@@ -267,8 +267,8 @@ export const NobleSupportSkills = [
     name: "Crescent Slash: Flash (Noble)",
     tags: ["Physical"],
     description: [
-      "Supports Crescent Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe Combo Finisher of the supported skill deals damage 1 additional time(s) per +40% Attack Speed. Stacks up to 4 time(s)",
-      "The Combo Finisher of the supported skill deals damage 1 additional time(s) per +40% Attack Speed. Stacks up to 4 time(s)",
+      "Supports Crescent Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe Combo Finisher of the supported skill deals damage 1 additional time(s) for every +40% Attack Speed. Stacks up to 4 time(s)",
+      "The Combo Finisher of the supported skill deals damage 1 additional time(s) for every +40% Attack Speed. Stacks up to 4 time(s)",
       "(-11–-10)% additional damage for the supported skill",
     ],
     supportTarget: "Crescent Slash",
@@ -534,8 +534,8 @@ export const NobleSupportSkills = [
     name: "Gale Slash: Soaring (Noble)",
     tags: ["Physical"],
     description: [
-      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals an instance of damage again after a brief delay",
-      "-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals an instance of damage again after a brief delay",
+      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals 1 instance of damage again after a brief delay",
+      "-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals 1 instance of damage again after a brief delay",
       "(-15.0–-14.0)% additional damage for the supported skill",
     ],
     supportTarget: "Gale Slash",
@@ -736,7 +736,17 @@ export const NobleSupportSkills = [
     description: [
       "Supports Icy Blade.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill cannot obtain Steep Strike attempts with Steep Strike Chance",
       "The supported skill cannot obtain Steep Strike attempts with Steep Strike Chance",
-      "For every +1% Steep Strike chance, +(1.20–1.25)% additional Hit Damage for the skill's Steep Strike form",
+      "For every +1% Steep Strike chance, +(1.20–1.25)% additional Hit Damage for this skill's Steep Strike form",
+    ],
+    supportTarget: "Icy Blade",
+  },
+  {
+    type: "Support (Noble)",
+    name: "Icy Blade: Ice Blast (Noble)",
+    tags: ["Cold"],
+    description: [
+      "Supports Icy Blade.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
+      "When the supported skill's Steep Strike hits a Frozen enemy, +(5.3–5.6)% additional Explosion Damage and +3% additional Explosion Area for explosions per 0.1s Freeze Duration the enemy has. Removes Freeze from the enemy afterwards",
     ],
     supportTarget: "Icy Blade",
   },
@@ -790,7 +800,7 @@ export const NobleSupportSkills = [
     tags: ["Lightning"],
     description: [
       "Supports Lightning Shot.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "For every (70–80) Dexterity, +1 Chain Lightning Quantity for the supported skill, stacking up to 6 time(s)",
+      "+1 Chain Lightning Quantity for the supported skill for every (70–80) Dexterity, stacking up to 6 time(s)",
       "When having at least 240 Dexterity, +(42–44)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Shot",
@@ -832,8 +842,8 @@ export const NobleSupportSkills = [
     name: "Marked Rain of Arrows: Rainfall (Noble)",
     tags: ["Fire"],
     description: [
-      "Supports Marked Rain of Arrows.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill becomes a Channeled Skill and no longer launches Marked Arrows.\nWhen the supported skill is at max channeled stacks, it loses all channeled stacks, marking you and enemies within 8 m (affected by Skill Area), and casting Marked Rain of Arrows centered around you. Max Channeled Stacks: 5\nMarked Rain of Arrows' explosion deals a small amount of Attack Fire Damage to you. Each skill can only hit once\nThe supported skill's Attack Speed is fixed at 3\n100% of the bonus and additional bonus to the supported skill's Attack Speed is also applied to additional damage\n-30% Movement Speed while channeling the supported skill",
-      "The supported skill becomes a Channeled Skill and no longer launches Marked Arrows.\nWhen the supported skill is at max channeled stacks, it loses all channeled stacks, marking you and enemies within 8 m (affected by Skill Area), and casting Marked Rain of Arrows centered around you. Max Channeled Stacks: 5\nMarked Rain of Arrows' explosion deals a small amount of Attack Fire Damage to you. Each skill can only hit once\nThe supported skill's Attack Speed is fixed at 3\n100% of the bonus and additional bonus to the supported skill's Attack Speed is also applied to additional damage\n-30% Movement Speed while channeling the supported skill",
+      "Supports Marked Rain of Arrows.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill becomes a Channeled Skill and no longer launches Marked Arrows.\nWhen the supported skill is at max channeled stacks, it loses all channeled stacks, marking you and enemies within 8 m (affected by Skill Area), and casting Marked Rain of Arrows centered around you. Max Channeled Stacks: 5\nMarked Rain of Arrows' explosion deals a small amount of Attack Fire Damage to you. Each skill can only hit once\nThe supported skill's Attack Speed is fixed at 3\n100% of the bonus and additional bonus to the supported skill's Attack Speed is also applied to additional Hit Damage\n-30% Movement Speed while channeling the supported skill",
+      "The supported skill becomes a Channeled Skill and no longer launches Marked Arrows.\nWhen the supported skill is at max channeled stacks, it loses all channeled stacks, marking you and enemies within 8 m (affected by Skill Area), and casting Marked Rain of Arrows centered around you. Max Channeled Stacks: 5\nMarked Rain of Arrows' explosion deals a small amount of Attack Fire Damage to you. Each skill can only hit once\nThe supported skill's Attack Speed is fixed at 3\n100% of the bonus and additional bonus to the supported skill's Attack Speed is also applied to additional Hit Damage\n-30% Movement Speed while channeling the supported skill",
       "+(113–116)% additional damage for the supported skill",
     ],
     supportTarget: "Marked Rain of Arrows",
@@ -864,8 +874,8 @@ export const NobleSupportSkills = [
     name: "Mind Control: Entice (Noble)",
     tags: ["Erosion"],
     description: [
-      "Supports Mind Control.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill is affected by Skill Area Bonus\nThe supported skill deals -99% additional damage to enemies in proximity",
-      "The supported skill is affected by Skill Area Bonus\nThe supported skill deals -99% additional damage to enemies in proximity",
+      "Supports Mind Control.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill is affected by Skill Area Bonus\nThe supported skill deals -10% additional damage to enemies in proximity",
+      "The supported skill is affected by Skill Area Bonus\nThe supported skill deals -10% additional damage to enemies in proximity",
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Mind Control",
@@ -907,7 +917,7 @@ export const NobleSupportSkills = [
     tags: ["Fire"],
     description: [
       "Supports Path of Flames.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "+(8.0–8.5)% additional damage for the supported skill for 2s when passing by an Elite while channeling the supported skill. Stacks up to 8 times\nThe effect has a 2 s interval against the same target. The interval refreshes immediately when 2 m away from the target",
+      "+(8.0–8.5)% additional damage for the supported skill for 2s when passing by an Elite while channeling the supported skill. Stacks up to 8 times\nThe effect has a 2 s interval against the same target. The interval refreshes immediately when you are 2 m away from the target",
     ],
     supportTarget: "Path of Flames",
   },
@@ -1487,7 +1497,7 @@ export const NobleSupportSkills = [
     tags: ["Erosion"],
     description: [
       "Supports Wilting Beam.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "For every +1 Beam the supported skill has, +(25.5–26.0)% additional Reaping Recovery Speed for Reaping when this skill reaches max channeled stacks",
+      "For every +1 Beam the supported skill has, +(25.5–26.0)% additional Reaping Recovery Speed for Reaping that is triggered when this skill reaches max channeled stacks",
     ],
     supportTarget: "Wilting Beam",
   },

@@ -313,7 +313,7 @@ interface ModDefinitions {
   LifeRegainPct: { value: number };
   EnergyShieldRegainPct: { value: number };
   EnergyShieldChargeSpeedPct: { value: number };
-  RestoreLifePct: { value: number; interval: number };
+  RestoreLifePctPerSec: { value: number };
   DmgTakenPct: { value: number; addn?: boolean };
   // end defenses
   Reap: { duration: number; cooldown: number };

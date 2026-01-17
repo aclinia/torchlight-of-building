@@ -122,11 +122,7 @@ export const activeSkillModFactories: Partial<
         value: v(vals.movementSpeedPctWhileChanneling, l),
         cond: "channeling",
       },
-      {
-        type: "RestoreLifePct",
-        value: v(vals.restoreLifePctValue, l),
-        interval: v(vals.restoreLifePctInterval, l),
-      },
+      { type: "RestoreLifePctPerSec", value: v(vals.restoreLifePctValue, l) },
     ],
   }),
   "Ice Bond": (l, vals) => ({

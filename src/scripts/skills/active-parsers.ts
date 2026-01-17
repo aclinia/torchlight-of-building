@@ -278,7 +278,6 @@ export const mindControlParser: SupportLevelParser = (input) => {
       movementSpeedPctWhileChanneling,
     ),
     restoreLifePctValue: createConstantLevels(restoreLifePctValue),
-    restoreLifePctInterval: createConstantLevels(1),
   };
 };
 

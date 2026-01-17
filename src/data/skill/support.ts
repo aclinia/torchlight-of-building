@@ -339,6 +339,31 @@ export const SupportSkills = [
   },
   {
     type: "Support",
+    name: "Blinding",
+    tags: [],
+    description: [
+      "Supports skills that hit enemies.\n+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
+      "+10% chance to inflict Blind when the supported skill hits targets\n+5% Blinding Duration caused by the supported skill",
+    ],
+    supportTargets: ["hit_enemies"],
+    cannotSupportTargets: [],
+    fixedAffixes: [
+      "+10% chance to inflict Blind when the supported skill hits targets",
+    ],
+    templates: [
+      {
+        template: "+{value}% Blinding Duration caused by the supported skill",
+        levelValues: [
+          5, 6.75, 8.5, 10.25, 12, 13.75, 15.5, 17.25, 19, 20.75, 22.5, 24.25,
+          26, 27.75, 29.5, 31.25, 33, 34.75, 36.5, 38.25, 40, 41.75, 43.5,
+          45.25, 47, 48.75, 50.5, 52.25, 54, 55.75, 57.5, 59.25, 61, 62.75,
+          64.5, 66.25, 68, 69.75, 71.5, 73.25,
+        ],
+      },
+    ],
+  },
+  {
+    type: "Support",
     name: "Carpet Bombardment",
     tags: ["Barrage"],
     description: [
@@ -1064,6 +1089,28 @@ export const SupportSkills = [
       "+40% Restoration effect for the supported skill",
       "-20% Restoration Duration for the supported skill",
       "+10% additional damage taken during the supported skill's restoration effect",
+    ],
+  },
+  {
+    type: "Support",
+    name: "Freeze Chance",
+    tags: ["Cold"],
+    description: [
+      "Supports skills that deal damage.\n15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
+      "15.5% additional Cold Damage for the supported skill\n+50% Frostbite chance for the supported skill",
+    ],
+    supportTargets: ["deal_damage"],
+    cannotSupportTargets: [],
+    fixedAffixes: ["+50% Frostbite chance for the supported skill"],
+    templates: [
+      {
+        template: "{value}% additional Cold Damage for the supported skill",
+        levelValues: [
+          15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22,
+          22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29,
+          29.5, 30, 30.5, 31, 31.5, 32, 32.5, 33, 33.5, 34, 34.5, 35,
+        ],
+      },
     ],
   },
   {
@@ -2206,15 +2253,15 @@ export const SupportSkills = [
     name: "Precise: Stand as One",
     tags: ["Aura"],
     description: [
-      "Supports Aura Skills.\nThe supported skill 4.1% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
-      "The supported skill 4.1% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
+      "Supports Aura Skills.\nThe supported skill 4.1% Aura Effect for each Aura that affects you, stacking up to 5 time(s)",
+      "The supported skill 4.1% Aura Effect for each Aura that affects you, stacking up to 5 time(s)",
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
     templates: [
       {
         template:
-          "The supported skill {value}% Aura Effect for each Aura that affects the character, stacking up to 5 time(s)",
+          "The supported skill {value}% Aura Effect for each Aura that affects you, stacking up to 5 time(s)",
         levelValues: [
           4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4,
           5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8,
@@ -2549,6 +2596,29 @@ export const SupportSkills = [
           21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
           38, 39, 40, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46,
           46.5, 47, 47.5, 48, 48.5, 49, 49.5, 50, 50.5,
+        ],
+      },
+    ],
+  },
+  {
+    type: "Support",
+    name: "Reaping Agony",
+    tags: [],
+    description: [
+      "Supports skills that hit enemies or deal Damage Over Time.\nReaps 0.61 s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
+      "Reaps 0.61 s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
+    ],
+    supportTargets: ["hit_enemies", "dot"],
+    cannotSupportTargets: [],
+    templates: [
+      {
+        template:
+          "Reaps {value} s of Damage Over Time when the supported skill deals damage. The effect has a 4 s cooldown against the same target",
+        levelValues: [
+          0.61, 0.62, 0.63, 0.64, 0.65, 0.66, 0.67, 0.68, 0.69, 0.7, 0.71, 0.72,
+          0.73, 0.74, 0.75, 0.76, 0.77, 0.78, 0.79, 0.8, 0.81, 0.82, 0.83, 0.84,
+          0.85, 0.86, 0.87, 0.88, 0.89, 0.9, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96,
+          0.97, 0.98, 0.99, 1,
         ],
       },
     ],

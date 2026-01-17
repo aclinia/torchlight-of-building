@@ -1575,9 +1575,10 @@ export const ActivationMediumSkills = [
     name: "Activation Medium: Tangle",
     tags: [],
     description: [
-      "Supports Active Spell Skills.\nCannot support Channeled Skills, Sentry Skills or skills that summon Minions.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.\nThe supported skill is cast as a Spell Tangle\nWhen the number of Tangles within 20 m is below the upper limit, triggers the supported skill, creating it in the form of a Tangle. Interval: 0.3 s",
-      "The supported skill is cast as a Spell Tangle\nWhen the number of Tangles within 20 m is below the upper limit, triggers the supported skill, creating it in the form of a Tangle. Interval: 0.3 s",
+      "Supports Active Spell Skills.\nCannot support Channeled Skills, Sentry Skills or skills that summon Minions.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.\nThe supported skill is cast as a Spell Tangle",
+      "The supported skill is cast as a Spell Tangle",
       "+(11–15)% additional damage for the supported skill",
+      "When the number of Tangles within 20 m is below the upper limit, triggers the supported skill, creating it in the form of a Tangle. Interval: 0.4 s",
     ],
     supportTargets: [{ skillType: "active", tags: ["Spell"] }],
     cannotSupportTargets: [{ tags: ["Channeled"] }],

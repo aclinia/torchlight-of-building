@@ -174,7 +174,7 @@ export const PassiveSkills = [
     description: [
       "Activates Focus and gains a buff:\n+7% additional Fire Damage\n+10% chance to Ignite targets\nAdds 2 - 2 Base Ignite Damage\nThis skill gains 15 Focus Pts when inflicting Ignite. Upon defeating an enemy, there is a 100% chance to consume 40 Focus Pts and trigger this skill on the enemy, dealing True Damage equal to 25% of their Max Life to enemies within 3m.\nAdditionally increases this skill's area for each time Ignite has been inflicted recently.",
       "Activates Focus and gains a buff:\n+7% additional Fire Damage\n+10% chance to Ignite targets\nAdds 2 - 2 Base Ignite Damage",
-      "Flame Focus:\nThis skill gains 15 Focus Pts when inflicting Ignite. This skill can be triggered up to 3 time(s) every 0.5 s\nUpon defeating an enemy, there is a 100% chance to consume 40 Focus Pts of this skill and trigger this skill at the location of the defeated enemy, dealing True Damage equal to 25% of the defeated enemy's Max Life\n+10% additional Skill Area for every time Ignite was inflicted recently. Stacks up to 6 time(s)",
+      "Flame Focus:\nThis skill gains 15 Focus Pts when inflicting Ignite. This skill can be triggered up to 3 time(s) every 0.5 s\nUpon defeating an enemy, there is a 100% chance to consume 40 Focus Pts of this skill and trigger this skill at the location of the defeated enemy, dealing True Damage equal to 25% of the defeated enemy's Max Life\n+10% additional Skill Area for this skill for each time you inflict Ignite recently. Stacks up to 6 time(s)",
     ],
     mainStats: ["str", "int"],
   },
@@ -199,8 +199,8 @@ export const PassiveSkills = [
     name: "Ice Focus",
     tags: ["Area", "Spell", "Focus", "Cold"],
     description: [
-      "Activates Focus and gains a buff:\n13.5% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts and generates Glacial Spikes that deal Spell Cold Damage to the enemies every 0.5 s.\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.",
-      "Activates Focus and gains a buff:\n13.5% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts and generates Glacial Spikes that deal Spell Cold Damage to the enemies every 0.5 s.\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.",
+      "Activates Focus and gains a buff:\n13.5% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts every 0.5 s to generate Glacial Spikes that deal Spell Cold Damage to the enemies\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.",
+      "Activates Focus and gains a buff:\n13.5% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts every 0.5 s to generate Glacial Spikes that deal Spell Cold Damage to the enemies\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.",
       "Glacial Spike:\nDeals 467-701 Spell Cold Damage.",
     ],
     mainStats: ["int"],
@@ -426,7 +426,7 @@ export const PassiveSkills = [
     description: [
       "Activates Focus and gains a buff:\n+9% additional Fire Damage\n+15% chance to Ignite targets\nAdds 2 - 2 Base Ignite Damage\nThis skill gains 15 Focus Pts when inflicting Ignite. Upon defeating an enemy, there is a 100% chance to consume 40 Focus Pts and trigger this skill on the enemy, dealing Secondary Fire Damage equal to 25% of their Max Life to enemies within 3m (not affected by bonuses).\nAdditionally increases this skill's area for each time Ignite has been inflicted recently.",
       "Activates Focus and gains a buff:\n+9% additional Fire Damage\n+15% chance to Ignite targets\nAdds 2 - 2 Base Ignite Damage",
-      "Flame Focus:\nThis skill gains 15 Focus Pts when inflicting Ignite. This skill can be triggered up to 3 time(s) every 0.5 s\nUpon defeating an enemy, there is a 100% chance to consume 40 Focus Pts of this skill and trigger this skill at the location of the defeated enemy, dealing True Damage equal to 25% of the defeated enemy's Max Life\n+10% additional Skill Area for every time Ignite was inflicted recently. Stacks up to 6 time(s)\n+4% additional damage for this skill",
+      "Flame Focus:\nThis skill gains 15 Focus Pts when inflicting Ignite. This skill can be triggered up to 3 time(s) every 0.5 s\nUpon defeating an enemy, there is a 100% chance to consume 40 Focus Pts of this skill and trigger this skill at the location of the defeated enemy, dealing True Damage equal to 25% of the defeated enemy's Max Life\n+10% additional Skill Area for this skill for each time you inflict Ignite recently. Stacks up to 6 time(s)\n+4% additional damage for this skill",
     ],
     mainStats: ["str", "int"],
   },
@@ -451,8 +451,8 @@ export const PassiveSkills = [
     name: "Precise: Ice Focus",
     tags: ["Area", "Spell", "Focus", "Cold"],
     description: [
-      "Activates Focus and gains a buff:\n15.6% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts and generates Glacial Spikes that deal Spell Cold Damage to the enemies every 0.5 s.\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.\n+4% additional damage for this skill",
-      "Activates Focus and gains a buff:\n15.6% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts and generates Glacial Spikes that deal Spell Cold Damage to the enemies every 0.5 s.\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.\n+4% additional damage for this skill",
+      "Activates Focus and gains a buff:\n15.6% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts every 0.5 s to generate Glacial Spikes that deal Spell Cold Damage to the enemies\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.\n+4% additional damage for this skill",
+      "Activates Focus and gains a buff:\n15.6% additional Cold Damage\nGains 30 Focus Pts when dealing damage to Frostbitten enemies. Interval: 0.4 s.\nUpon reaching 100 Focus Pts, creates an Ice Storm that follows the character. When there are enemies inside the storm, consumes 45 Focus Pts every 0.5 s to generate Glacial Spikes that deal Spell Cold Damage to the enemies\nFor every 1% Focus Speed, +1% Focus Pts gained, up to +200%. The Ice Storm ends when Focus Pts drop to 0.\n+4% additional damage for this skill",
       "Glacial Spike:\nDeals 467-701 Spell Cold Damage.",
     ],
     mainStats: ["int"],
@@ -692,7 +692,7 @@ export const PassiveSkills = [
     tags: ["Spell", "Summon", "Cold", "Spirit Magus"],
     description: [
       "Activates the skill and summons 1 Frost Magus.\nActivating the skill grants the character Origin of Spirit Magus: Restores 2.4% Max Life and Max Energy Shield every second.",
-      "Summon Frost Magus:\nSummons 1 Frost Magus\nThis skill summons up to 1 Minions\n+1 Max Frostbite Rating to the Minions summoned by this skill for every +1 Max Frostbite Rating\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring",
+      "Summon Frost Magus:\nSummons 1 Frost Magus\nThis skill summons up to 1 Minions\n+1 Max Frostbite Rating for the Minions summoned by this skill for every +1 Max Frostbite Rating\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring",
       "Origin of Spirit Magus:\nGains Origin of Ice, restoring 3.825% of Max Life and Max Energy Shield per second to the summoner",
       "Frost Magus:\nBase Skill: Glacier Ripples.\nEmpower Skill: Frost Release.\nEnhanced Skill: Permafrost Cast.\nUltimate: Ice Earthshaker.",
     ],
