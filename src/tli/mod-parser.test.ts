@@ -2930,3 +2930,54 @@ test("parse immune to curse", () => {
   const result = parseMod("Immune to curse");
   expect(result).toEqual([{ type: "ImmuneToCurse" }]);
 });
+
+test("parse converts physical damage to cold damage", () => {
+  const result = parseMod("Converts 50% of Physical Damage to Cold Damage");
+  expect(result).toEqual([
+    { type: "ConvertDmgPct", from: "physical", to: "cold", value: 50 },
+  ]);
+});
+
+test("parse converts 100% physical to lightning", () => {
+  const result = parseMod(
+    "Converts 100% of Physical Damage to Lightning Damage",
+  );
+  expect(result).toEqual([
+    { type: "ConvertDmgPct", from: "physical", to: "lightning", value: 100 },
+  ]);
+});
+
+test("parse eliminates enemies under life threshold", () => {
+  const result = parseMod(
+    "Eliminates enemies under 15% Life upon inflicting damage",
+  );
+  expect(result).toEqual([{ type: "EliminationPct", value: 15 }]);
+});
+
+test("parse flat lightning damage to attacks per dexterity", () => {
+  const result = parseMod(
+    "Adds 1 - 7 Lightning Damage to Attacks per 10 Dexterity",
+  );
+  expect(result).toEqual([
+    {
+      type: "FlatDmgToAtks",
+      value: { min: 1, max: 7 },
+      dmgType: "lightning",
+      per: { stackable: "dex", amt: 10 },
+    },
+  ]);
+});
+
+test("parse flat physical damage to attacks per armor", () => {
+  const result = parseMod(
+    "Adds 1 - 1 Physical Damage to Attacks per 2260 Armor",
+  );
+  expect(result).toEqual([
+    {
+      type: "FlatDmgToAtks",
+      value: { min: 1, max: 1 },
+      dmgType: "physical",
+      per: { stackable: "armor", amt: 2260 },
+    },
+  ]);
+});

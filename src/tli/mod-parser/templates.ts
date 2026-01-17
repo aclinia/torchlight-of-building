@@ -747,6 +747,13 @@ export const allParsers = [
     "adds {value:dec%} of {from:DmgChunkType} damage (to|as) {to:DmgChunkType} damage",
   ).output("AddsDmgAsPct", (c) => ({ from: c.from, to: c.to, value: c.value })),
   t(
+    "converts {value:dec%} of {from:DmgChunkType} damage to {to:DmgChunkType} damage",
+  ).output("ConvertDmgPct", (c) => ({
+    from: c.from,
+    to: c.to,
+    value: c.value,
+  })),
+  t(
     "{value:+dec%} elemental resistance penetration when hitting an enemy with elemental damage, stacking up to {limit:int} times",
   ).output("ResPenPct", (c) => ({
     value: c.value,
@@ -1691,4 +1698,24 @@ export const allParsers = [
     () => ({}),
   ),
   t("immune to curse").output("ImmuneToCurse", () => ({})),
+  t("eliminates enemies under {value:dec%} life upon inflicting damage").output(
+    "EliminationPct",
+    (c) => ({ value: c.value }),
+  ),
+  t(
+    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks per {amt:int} {statModType:StatWord}",
+  )
+    .enum("StatWord", StatWordMapping)
+    .output("FlatDmgToAtks", (c) => ({
+      value: { min: c.min, max: c.max },
+      dmgType: c.dmgType,
+      per: { stackable: c.statModType, amt: c.amt },
+    })),
+  t(
+    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks per {amt:int} armor",
+  ).output("FlatDmgToAtks", (c) => ({
+    value: { min: c.min, max: c.max },
+    dmgType: c.dmgType,
+    per: { stackable: "armor" as const, amt: c.amt },
+  })),
 ];

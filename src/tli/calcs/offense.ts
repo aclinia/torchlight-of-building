@@ -1556,6 +1556,7 @@ const resolveModsForOffenseSkill = (
   skill: BaseActiveSkill | BasePassiveSkill,
   skillLevel: number,
   resourcePool: ResourcePool,
+  defenses: Defenses,
   loadout: Loadout,
   config: Configuration,
   derivedCtx: DerivedCtx,
@@ -1607,6 +1608,37 @@ const resolveModsForOffenseSkill = (
   };
 
   // actual mod resolvers below
+  const pushStatNorms = (): void => {
+    const totalMainStats = calculateTotalMainStats(skill, stats);
+    const highestStat = Math.max(stats.dex, stats.int, stats.str);
+    const sumStats = stats.dex + stats.int + stats.str;
+    normalize("main_stat", totalMainStats);
+    normalize("highest_stat", highestStat);
+    normalize("stat", sumStats);
+    normalize("str", stats.str);
+    normalize("dex", stats.dex);
+    normalize("int", stats.int);
+    if (findMod(mods, "DisableMainStatDmg") === undefined) {
+      const value = 0.5 * totalMainStats;
+      mods.push({
+        type: "DmgPct",
+        value,
+        dmgModType: "global",
+        addn: true,
+        src: "Additional Damage from skill Main Stat (.5% per stat)",
+      });
+    }
+  };
+  const pushDefenseNorms = (): void => {
+    normalize("armor", defenses.armor);
+    normalize("evasion", defenses.evasion);
+    normalize("energy_shield", defenses.energyShield);
+    normalize(
+      "total_block_pct",
+      defenses.attackBlockPct + defenses.spellBlockPct,
+    );
+    normalize("block_ratio", defenses.blockRatioPct);
+  };
   const pushErika1 = (): void => {
     step("stalker");
     if (!modExists(mods, "WindStalker")) {
@@ -1760,19 +1792,6 @@ const resolveModsForOffenseSkill = (
         src: "Tradeoff",
       });
     }
-  };
-  const pushMainStatDmgPct = (): void => {
-    if (findMod(mods, "DisableMainStatDmg") !== undefined) {
-      return;
-    }
-    const value = 0.5 * totalMainStats;
-    mods.push({
-      type: "DmgPct",
-      value,
-      dmgModType: "global",
-      addn: true,
-      src: "Additional Damage from skill Main Stat (.5% per stat)",
-    });
   };
   const pushWhimsy = (): void => {
     if (!config.targetEnemyHasWhimsySignal) return;
@@ -1940,17 +1959,9 @@ const resolveModsForOffenseSkill = (
     normalize("unused_mind_control_link", mcMaxLinks - mcLinks);
   };
 
-  const totalMainStats = calculateTotalMainStats(skill, stats);
-  const highestStat = Math.max(stats.dex, stats.int, stats.str);
-  const sumStats = stats.dex + stats.int + stats.str;
-
   normalize("level", config.level);
-  normalize("main_stat", totalMainStats);
-  normalize("highest_stat", highestStat);
-  normalize("stat", sumStats);
-  normalize("str", stats.str);
-  normalize("dex", stats.dex);
-  normalize("int", stats.int);
+  pushStatNorms();
+  pushDefenseNorms();
   normalize("num_max_multistrikes_recently", config.numMaxMultistrikesRecently);
   const { mainHand, offHand } = loadout.gearPage.equippedGear;
   normalize(
@@ -1960,7 +1971,6 @@ const resolveModsForOffenseSkill = (
   );
   pushBerserkingBlade();
   pushTradeoff();
-  pushMainStatDmgPct();
   pushWhimsy();
   pushAttackAggression();
   pushSpellAggression();
@@ -2828,6 +2838,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       perSkillContext.skill,
       skillLevel,
       resourcePool,
+      defenses,
       loadout,
       config,
       derivedCtx,

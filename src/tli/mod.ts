@@ -135,7 +135,13 @@ export type Stackable =
   | "twisted_spacetime"
   // pactspirit-specific
   | "repentance"
-  | "pure_heart";
+  | "pure_heart"
+  // defenses
+  | "armor"
+  | "evasion"
+  | "energy_shield"
+  | "total_block_pct"
+  | "block_ratio";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -410,6 +416,7 @@ interface ModDefinitions {
   GeneratesSpellAggression: object;
   SpellAggressionEffPct: { value: number };
   MainSkillSupportedBy: { skillName: string; level: number };
+  EliminationPct: { value: number };
   // infiltrations
   InflictsInfiltration: { infiltrationType: InfiltrationType };
   InfiltrationEffPct: {
