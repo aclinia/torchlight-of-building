@@ -2697,3 +2697,27 @@ test("parse energy shield restore while moving", () => {
     { type: "EnergyShieldRegenPerSecPct", value: 2, cond: "is_moving" },
   ]);
 });
+
+test("parse command per second", () => {
+  const result = parseMod("+10 Command per second");
+  expect(result).toEqual([{ type: "CommandPerSec", value: 10 }]);
+});
+
+test("parse max fortitude stacks", () => {
+  const result = parseMod("+1 Max Fortitude Stacks");
+  expect(result).toEqual([{ type: "MaxFortitudeStack", value: 1 }]);
+});
+
+test("parse additional armor while moving", () => {
+  const result = parseMod("+10% additional Armor while moving");
+  expect(result).toEqual([
+    { type: "ArmorPct", value: 10, addn: true, cond: "is_moving" },
+  ]);
+});
+
+test("parse additional evasion while moving", () => {
+  const result = parseMod("+10% additional Evasion while moving");
+  expect(result).toEqual([
+    { type: "EvasionPct", value: 10, addn: true, cond: "is_moving" },
+  ]);
+});

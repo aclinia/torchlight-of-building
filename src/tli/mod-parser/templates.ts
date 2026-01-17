@@ -836,6 +836,22 @@ export const allParsers = [
   t("{value:dec} max energy shield").output("MaxEnergyShield", (c) => ({
     value: c.value,
   })),
+  t("{value:+dec%} [additional] armor while moving").output(
+    "ArmorPct",
+    (c) => ({
+      value: c.value,
+      addn: c.additional !== undefined,
+      cond: "is_moving" as const,
+    }),
+  ),
+  t("{value:+dec%} [additional] evasion while moving").output(
+    "EvasionPct",
+    (c) => ({
+      value: c.value,
+      addn: c.additional !== undefined,
+      cond: "is_moving" as const,
+    }),
+  ),
   t("{value:+dec%} [additional] armor").output("ArmorPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
@@ -1512,7 +1528,6 @@ export const allParsers = [
     "MainSkillSupportedBy",
     (c) => ({ skillName: c.skillName, level: c.level }),
   ),
-  // Life, Mana, Energy Shield regeneration (conditional - must come before generic)
   t("regenerates {value:dec%} mana per second while moving").output(
     "ManaRegenPerSecPct",
     (c) => ({ value: c.value, cond: "is_moving" as const }),
@@ -1531,7 +1546,6 @@ export const allParsers = [
     "EnergyShieldRegenPerSecPct",
     (c) => ({ value: c.value, cond: "is_moving" as const }),
   ),
-  // Life regeneration (generic)
   t("regenerates {value:dec%} life per second").output(
     "LifeRegenPerSecPct",
     (c) => ({ value: c.value }),
@@ -1540,15 +1554,12 @@ export const allParsers = [
     "FlatLifeRegenPerSec",
     (c) => ({ value: c.value }),
   ),
-  // Minion damage penetration
   t(
     "minion damage penetrates {value:dec%} {penType:ResPenType} resistance",
   ).output("MinionResPenPct", (c) => ({ value: c.value, penType: c.penType })),
-  // Min/Max Channeled Stacks
   t("min channeled stacks {value:+int}").output("MinChannel", (c) => ({
     value: c.value,
   })),
-  // Terra and Sentry quantities
   t("max terra charge stacks {value:+int}").output(
     "MaxTerraChargeStack",
     (c) => ({ value: c.value }),
@@ -1557,6 +1568,12 @@ export const allParsers = [
     value: c.value,
   })),
   t("max sentry quantity {value:+int}").output("MaxSentryQuant", (c) => ({
+    value: c.value,
+  })),
+  t("{value:+int} command per second").output("CommandPerSec", (c) => ({
+    value: c.value,
+  })),
+  t("{value:+int} max fortitude stacks").output("MaxFortitudeStack", (c) => ({
     value: c.value,
   })),
   // Attack Aggression generation

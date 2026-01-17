@@ -380,12 +380,14 @@ interface ModDefinitions {
   GeneratesFocusBlessing: object;
   GeneratesAgilityBlessing: object;
   GeneratesTenacityBlessing: object;
+  MaxFortitudeStack: { value: number };
   GeneratesFortitude: object;
   MaxChannel: { value: number };
   MinChannel: { value: number };
   MaxTerraChargeStack: { value: number };
   MaxTerraQuant: { value: number };
   MaxSentryQuant: { value: number };
+  CommandPerSec: { value: number };
   GeneratesBarrier: object;
   GeneratesTorment: object;
   GeneratesDeflection: object;
