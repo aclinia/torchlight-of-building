@@ -5945,6 +5945,38 @@ describe("slash-strike damage ([Test] Slash Strike Skill)", () => {
     const expectedAvgDps = 0.2 * sweepDps + 0.8 * steepDps;
     expect(summary.avgDps).toBeCloseTo(expectedAvgDps);
   });
+
+  test("SweepSlashDmgPct and SteepStrikeDmgPct apply as separate multipliers", () => {
+    // Get baseline DPS without any damage mods
+    const baseInput = createTestSlashStrikeInput([]);
+    const baseResults = calculateOffense(baseInput);
+    const baseSummary =
+      baseResults.skills[skillName as ImplementedActiveSkillName]
+        ?.slashStrikeDpsSummary;
+    expect(baseSummary).toBeDefined();
+    if (baseSummary === undefined) return;
+
+    // Add +50% sweep slash damage and +100% steep strike damage
+    const input = createTestSlashStrikeInput(
+      affixLines([
+        { type: "SweepSlashDmgPct", value: 50, addn: true },
+        { type: "SteepStrikeDmgPct", value: 100, addn: true },
+      ]),
+    );
+    const results = calculateOffense(input);
+    const summary =
+      results.skills[skillName as ImplementedActiveSkillName]
+        ?.slashStrikeDpsSummary;
+
+    expect(summary).toBeDefined();
+    if (summary === undefined) return;
+
+    // Sweep DPS should be multiplied by 1.5 (1 + 50/100)
+    expect(summary.sweep.avgDps).toBeCloseTo(baseSummary.sweep.avgDps * 1.5);
+
+    // Steep DPS should be multiplied by 2.0 (1 + 100/100)
+    expect(summary.steep.avgDps).toBeCloseTo(baseSummary.steep.avgDps * 2.0);
+  });
 });
 
 describe("defense calculation (ES, Eva, Armor)", () => {

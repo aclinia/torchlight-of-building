@@ -2538,13 +2538,15 @@ const calcAvgSlashStrikeDps = (
     disableOffhand,
   );
 
-  // Apply final multipliers
   const doubleDmgMult = calculateDoubleDmgMult(mods, skill);
   const extraMult = calculateExtraOffenseMults(mods, config);
-  const sweepDps = sweepDpsWithoutExtras * doubleDmgMult * extraMult;
-  const steepDps = steepDpsWithoutExtras * doubleDmgMult * extraMult;
+  const sweepSlashDmgMult = calcEffMult(mods, "SweepSlashDmgPct");
+  const steepStrikeDmgMult = calcEffMult(mods, "SteepStrikeDmgPct");
+  const sweepDps =
+    sweepDpsWithoutExtras * doubleDmgMult * extraMult * sweepSlashDmgMult;
+  const steepDps =
+    steepDpsWithoutExtras * doubleDmgMult * extraMult * steepStrikeDmgMult;
 
-  // Weighted average based on steep strike chance
   const avgDps = (1 - steepChance) * sweepDps + steepChance * steepDps;
 
   return {

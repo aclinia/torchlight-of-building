@@ -2838,12 +2838,16 @@ test("parse ignite duration", () => {
 
 test("parse additional steep strike damage", () => {
   const result = parseMod("+56% additional Steep Strike Damage");
-  expect(result).toEqual([{ type: "SteepStrikeDmg", value: 56, addn: true }]);
+  expect(result).toEqual([
+    { type: "SteepStrikeDmgPct", value: 56, addn: true },
+  ]);
 });
 
 test("parse steep strike damage (non-additional)", () => {
   const result = parseMod("+56% Steep Strike Damage");
-  expect(result).toEqual([{ type: "SteepStrikeDmg", value: 56, addn: false }]);
+  expect(result).toEqual([
+    { type: "SteepStrikeDmgPct", value: 56, addn: false },
+  ]);
 });
 
 test("parse additional wilt damage", () => {
@@ -2863,5 +2867,5 @@ test("parse additional ignite damage", () => {
 
 test("parse sweep slash damage", () => {
   const result = parseMod("+56% additional Sweep Slash Damage");
-  expect(result).toEqual([{ type: "SweepSlashDmg", value: 56, addn: true }]);
+  expect(result).toEqual([{ type: "SweepSlashDmgPct", value: 56, addn: true }]);
 });

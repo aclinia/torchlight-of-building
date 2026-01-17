@@ -278,8 +278,8 @@ interface ModDefinitions {
   FervorEffPct: { value: number };
   FrailEffPct: { value: number };
   SteepStrikeChancePct: { value: number };
-  SteepStrikeDmg: { value: number; addn: boolean };
-  SweepSlashDmg: { value: number; addn: boolean };
+  SteepStrikeDmgPct: { value: number; addn: boolean };
+  SweepSlashDmgPct: { value: number; addn: boolean };
   AddnMainHandDmgPct: { value: number };
   GearAspdPct: { value: number };
   GearCritRatingPct: { value: number };

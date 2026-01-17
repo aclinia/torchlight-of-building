@@ -726,11 +726,11 @@ export const allParsers = [
     (c) => ({ value: c.value }),
   ),
   t("{value:+dec%} [additional] steep strike damage").output(
-    "SteepStrikeDmg",
+    "SteepStrikeDmgPct",
     (c) => ({ value: c.value, addn: c.additional !== undefined }),
   ),
   t("{value:+dec%} [additional] sweep slash damage").output(
-    "SweepSlashDmg",
+    "SweepSlashDmgPct",
     (c) => ({ value: c.value, addn: c.additional !== undefined }),
   ),
   t
