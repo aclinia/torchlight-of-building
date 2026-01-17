@@ -1449,6 +1449,9 @@ export const allParsers = [
       | "erosion"
       | "elemental",
   })),
+  t("{value:+dec%} gear physical damage").output("GearPhysDmgPct", (c) => ({
+    value: c.value,
+  })),
   // Legendary gear mods
   t("the main stat base no longer additionally increases damage").output(
     "DisableMainStatDmg",

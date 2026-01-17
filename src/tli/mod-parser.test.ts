@@ -2476,6 +2476,11 @@ test("parse flat gear erosion damage", () => {
   ]);
 });
 
+test("parse gear physical damage percent", () => {
+  const result = parseMod("+94% Gear Physical Damage");
+  expect(result).toEqual([{ type: "GearPhysDmgPct", value: 94 }]);
+});
+
 test("parse disable main stat damage", () => {
   const result = parseMod(
     "The main stat base no longer additionally increases damage",

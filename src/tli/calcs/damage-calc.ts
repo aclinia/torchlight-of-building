@@ -600,7 +600,7 @@ export function applyDmgBonusesAndPen(
 
 // currently only calculating mainhand
 export const calculateGearDmg = (gear: Gear, allMods: Mod[]): GearDmg => {
-  const mainhandMods = collectModsFromAffixes(getGearAffixes(gear));
+  const gearMods = collectModsFromAffixes(getGearAffixes(gear));
   const basePhysDmgMod = gear.baseStats?.baseStatLines
     .flatMap((l) => l.mods ?? [])
     .find((m) => m.type === "GearBasePhysDmg");
@@ -622,12 +622,12 @@ export const calculateGearDmg = (gear: Gear, allMods: Mod[]): GearDmg => {
   phys.max += basePhysDmg;
   let physBonusPct = 0;
 
-  const gearPhysDmgPct = findMod(mainhandMods, "GearPhysDmgPct");
+  const gearPhysDmgPct = findMod(gearMods, "GearPhysDmgPct");
   if (gearPhysDmgPct !== undefined) {
     physBonusPct += gearPhysDmgPct.value;
   }
 
-  filterMods(mainhandMods, "FlatGearDmg").forEach((a) => {
+  filterMods(gearMods, "FlatGearDmg").forEach((a) => {
     match(a.modType)
       .with("physical", () => {
         phys = addDR(phys, a.value);

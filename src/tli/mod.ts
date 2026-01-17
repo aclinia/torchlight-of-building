@@ -386,6 +386,7 @@ interface ModDefinitions {
   MaxSentryQuant: { value: number };
   GeneratesBarrier: object;
   GeneratesTorment: object;
+  GeneratesDeflection: object;
   GeneratesBlur: { value: number };
   MaxRepentance: { value: number };
   GeneratesRepentance: { value: number };
