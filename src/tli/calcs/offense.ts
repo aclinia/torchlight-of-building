@@ -2107,6 +2107,7 @@ const calculateSealedResources = (
     { sealedManaPct?: number; sealedLifePct?: number }
   > = {};
   let totalSealedManaPct = 0;
+  let totalSealedLifePct = 0;
 
   const passiveSlots = loadout.skillPage.passiveSkills;
   for (const slotKey of [1, 2, 3, 4] as const) {
@@ -2149,14 +2150,25 @@ const calculateSealedResources = (
     // Apply mana cost multiplier and both global + support sealed mana compensation
     const totalSealedManaCompMult =
       globalSealedManaCompMult * supportSealedManaCompMult;
-    const skillSealedManaPct =
+    const skillSealedPct =
       (baseSealedManaPct * combinedManaCostMult) / totalSealedManaCompMult;
 
-    sealPerSkill[slot.skillName] = { sealedManaPct: skillSealedManaPct };
-    totalSealedManaPct += skillSealedManaPct;
+    // SealConversion converts sealed mana to sealed life
+    const hasSealConversion = modExists(supportMods, "SealConversion");
+    if (hasSealConversion) {
+      sealPerSkill[slot.skillName] = { sealedLifePct: skillSealedPct };
+      totalSealedLifePct += skillSealedPct;
+    } else {
+      sealPerSkill[slot.skillName] = { sealedManaPct: skillSealedPct };
+      totalSealedManaPct += skillSealedPct;
+    }
   }
 
-  return { sealedManaPct: totalSealedManaPct, sealedLifePct: 0, sealPerSkill };
+  return {
+    sealedManaPct: totalSealedManaPct,
+    sealedLifePct: totalSealedLifePct,
+    sealPerSkill,
+  };
 };
 
 const calculateResourcePool = (

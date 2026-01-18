@@ -108,4 +108,20 @@ describe("parseSupportAffixes", () => {
       [{ mod: { type: "SealedManaCompPct", value: 10, addn: true } }],
     ]);
   });
+
+  test("parse negative sealed mana compensation", () => {
+    const result = parseSupportAffixes([
+      "-70% additional Sealed Mana Compensation for the supported skill",
+    ]);
+    expect(result).toEqual([
+      [{ mod: { type: "SealedManaCompPct", value: -70, addn: true } }],
+    ]);
+  });
+
+  test("parse seal conversion", () => {
+    const result = parseSupportAffixes([
+      "Replaces Sealed Mana of the supported skill with Sealed Life",
+    ]);
+    expect(result).toEqual([[{ mod: { type: "SealConversion" } }]]);
+  });
 });

@@ -268,12 +268,23 @@ const allSupportParsers = [
   t(
     "multistrikes of the supported skill deal {value:int%} increasing damage",
   ).output("MultistrikeIncDmgPct", (c) => ({ value: c.value })),
+  // Signed version (e.g., "-70% additional Sealed Mana Compensation...")
+  t(
+    "{value:+dec%} [additional] sealed mana compensation for the supported skill",
+  ).output("SealedManaCompPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
+  // Unsigned version (e.g., "0.5% Sealed Mana Compensation...")
   t(
     "{value:dec%} [additional] sealed mana compensation for the supported skill",
   ).output("SealedManaCompPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  t("replaces sealed mana of the supported skill with sealed life").output(
+    "SealConversion",
+  ),
 ];
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {
