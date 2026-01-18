@@ -3291,3 +3291,39 @@ test("parse support skill mana multiplier override", () => {
     { type: "OverrideSupportSkillManaMultPct", value: 95 },
   ]);
 });
+
+test("parse gains stacks of all blessings when casting restoration skill", () => {
+  const result = parseMod(
+    "Gains 1 stack(s) of all Blessings when casting a Restoration Skill",
+  );
+  expect(result).toEqual([
+    { type: "GeneratesFocusBlessing" },
+    { type: "GeneratesAgilityBlessing" },
+    { type: "GeneratesTenacityBlessing" },
+  ]);
+});
+
+test("parse unsigned additional damage taken", () => {
+  const result = parseMod("-7% additional damage taken");
+  expect(result).toEqual([{ type: "DmgTakenPct", value: -7, addn: true }]);
+});
+
+test("parse additional damage when channeling", () => {
+  const result = parseMod("+70% additional damage when channeling");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 70,
+      dmgModType: "global",
+      addn: true,
+      cond: "channeling",
+    },
+  ]);
+});
+
+test("parse additional damage taken at low mana", () => {
+  const result = parseMod("-13% additional damage taken at Low Mana");
+  expect(result).toEqual([
+    { type: "DmgTakenPct", value: -13, addn: true, cond: "has_low_mana" },
+  ]);
+});

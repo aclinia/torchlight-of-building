@@ -1882,4 +1882,28 @@ export const allParsers = [
     "OverrideSupportSkillManaMultPct",
     (c) => ({ value: c.value }),
   ),
+  t(
+    "gains {stacks:int} stack\\(s\\) of all blessings when casting a restoration skill",
+  ).outputMany([
+    spec("GeneratesFocusBlessing", () => ({})),
+    spec("GeneratesAgilityBlessing", () => ({})),
+    spec("GeneratesTenacityBlessing", () => ({})),
+  ]),
+  t("{value:+dec%} additional damage taken").output("DmgTakenPct", (c) => ({
+    value: c.value,
+    addn: true,
+  })),
+  t("{value:+dec%} additional damage when channeling").output(
+    "DmgPct",
+    (c) => ({
+      value: c.value,
+      dmgModType: GLOBAL,
+      addn: true,
+      cond: C.channeling,
+    }),
+  ),
+  t("{value:+dec%} additional damage taken at low mana").output(
+    "DmgTakenPct",
+    (c) => ({ value: c.value, addn: true, cond: C.has_low_mana }),
+  ),
 ];

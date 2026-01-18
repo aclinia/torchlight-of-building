@@ -86,6 +86,8 @@ export interface Configuration {
   // default to false
   hasFullMana: boolean;
   // default to false
+  hasLowMana: boolean;
+  // default to false
   enemyParalyzed: boolean;
   // default to false
   enemyNumbed: boolean;
@@ -229,6 +231,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   tenacityBlessings: undefined,
   hasTenacityBlessing: false,
   hasFullMana: false,
+  hasLowMana: false,
   enemyParalyzed: false,
   enemyNumbed: false,
   enemyNumbedStacks: undefined,

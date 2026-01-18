@@ -853,6 +853,7 @@ const filterModsByCond = (
         );
       })
       .with("taking_damage_over_time", () => config.takingDamageOverTime)
+      .with("has_low_mana", () => config.hasLowMana)
       .exhaustive();
   });
 };
@@ -2116,7 +2117,7 @@ const calculateSealedResources = (
   const passiveSlots = loadout.skillPage.passiveSkills;
   for (const slotKey of [1, 2, 3, 4] as const) {
     const slot = passiveSlots[slotKey];
-    if (slot === undefined || slot.skillName === undefined) {
+    if (slot === undefined || slot.skillName === undefined || !slot.enabled) {
       continue;
     }
     const passiveSkill = PassiveSkills.find((s) => s.name === slot.skillName);

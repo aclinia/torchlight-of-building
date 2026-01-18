@@ -27,6 +27,7 @@ export const ConfigurationPageSchema = z
     tenacityBlessings: z.number().optional().catch(d.tenacityBlessings),
     hasTenacityBlessing: z.boolean().catch(d.hasTenacityBlessing),
     hasFullMana: z.boolean().catch(d.hasFullMana),
+    hasLowMana: z.boolean().catch(d.hasLowMana),
     enemyParalyzed: z.boolean().catch(d.enemyParalyzed),
     enemyNumbed: z.boolean().catch(d.enemyNumbed),
     enemyNumbedStacks: z.number().optional().catch(d.enemyNumbedStacks),
