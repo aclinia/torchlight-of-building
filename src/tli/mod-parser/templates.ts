@@ -1602,7 +1602,7 @@ export const allParsers = [
     "InflictFrail",
     () => ({}),
   ),
-  t("main skill is supported by lv\\. {level:int} {skillName:words}").output(
+  t("main skill is supported by lv. {level:int} {skillName:words}").output(
     "MainSkillSupportedBy",
     (c) => ({ skillName: c.skillName, level: c.level }),
   ),
@@ -1772,31 +1772,31 @@ export const allParsers = [
   // MUST come before non-curse triggers, or else the Curse keyword will be
   // captured by {skillName:words}
   t(
-    "triggers lv\\. {level:int} {skillName1:words} curse and {skillName2:words} curse when a minion deals damage\\. cooldown: {cooldown:dec} s",
+    "triggers lv. {level:int} {skillName1:words} curse and {skillName2:words} curse when a minion deals damage. cooldown: {cooldown:dec} s",
   ).outputMany([
     spec("TriggersSkill", (c) => ({ skillName: c.skillName1, level: c.level })),
     spec("TriggersSkill", (c) => ({ skillName: c.skillName2, level: c.level })),
   ]),
   t(
-    "triggers lv\\. {level:int} {skillName:words} curse upon inflicting damage\\. cooldown: {cooldown:dec} s",
+    "triggers lv. {level:int} {skillName:words} curse upon inflicting damage. cooldown: {cooldown:dec} s",
   ).output("TriggersSkill", (c) => ({
     skillName: c.skillName,
     level: c.level,
   })),
   t(
-    "triggers lv\\. {level:int} {skillName:words} upon starting to move\\. interval: {interval:dec} s",
+    "triggers lv. {level:int} {skillName:words} upon starting to move. interval: {interval:dec} s",
   ).output("TriggersSkill", (c) => ({
     skillName: c.skillName,
     level: c.level,
   })),
   t(
-    "triggers lv\\. {level:int} {skillName:words} while standing still\\. interval: {interval:dec} s",
+    "triggers lv. {level:int} {skillName:words} while standing still. interval: {interval:dec} s",
   ).output("TriggersSkill", (c) => ({
     skillName: c.skillName,
     level: c.level,
   })),
   t(
-    "triggers lv\\. {level:int} {skillName:words} when moving\\. interval: {interval:dec} s",
+    "triggers lv. {level:int} {skillName:words} when moving. interval: {interval:dec} s",
   ).output("TriggersSkill", (c) => ({
     skillName: c.skillName,
     level: c.level,

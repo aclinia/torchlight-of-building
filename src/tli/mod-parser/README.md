@@ -63,7 +63,13 @@ Note: `m[0]` is the full match, `m[1]` is the first capture, etc. Count capture 
 
 ### Escape Sequences
 
-Use `\` to escape special characters:
+Regex special characters (`.`, `*`, `+`, `?`, etc.) are **automatically escaped** - you don't need to do anything special:
+
+```typescript
+t("lv. {level:int}"); // The period is auto-escaped, matches "lv. 5"
+```
+
+Use `\` only to escape **template syntax characters** (`(`, `)`, `[`, `]`, `{`, `}`):
 
 ```typescript
 t("stacks up to {limit:int} time\\(s\\)"); // Matches "time(s)"
