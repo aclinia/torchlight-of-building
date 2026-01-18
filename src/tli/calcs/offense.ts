@@ -3,6 +3,7 @@ import { match } from "ts-pattern";
 import { bing2, type HeroName } from "@/src/data/hero-trait";
 import { hasPactspirit } from "@/src/lib/pactspirit-utils";
 import {
+  ActivationMediumSkills,
   type ActiveSkillName,
   ActiveSkills,
   type BaseActiveSkill,
@@ -10,6 +11,8 @@ import {
   type BaseSkill,
   type BaseSupportSkill,
   type ImplementedActiveSkillName,
+  MagnificentSupportSkills,
+  NobleSupportSkills,
   type PassiveSkillName,
   PassiveSkills,
   SupportSkills,
@@ -260,6 +263,14 @@ export interface ResourcePool {
   additionalMaxChanneledStacks: number;
   hasFervor: boolean;
   fervorPts: number;
+  sealedResources: {
+    sealedManaPct: number;
+    sealedLifePct: number;
+    sealPerSkill: Record<
+      string,
+      { sealedManaPct?: number; sealedLifePct?: number }
+    >;
+  };
 }
 
 // === Defense Types ===
@@ -2058,6 +2069,73 @@ const resolveModsForOffenseSkill = (
   };
 };
 
+const getSupportSkillManaCostMultiplierPct = (
+  slot: BaseSupportSkillSlot,
+): number => {
+  switch (slot.skillType) {
+    case "support": {
+      const skill = SupportSkills.find((s) => s.name === slot.name);
+      return skill?.manaCostMultiplierPct ?? 100;
+    }
+    case "magnificent_support": {
+      const skill = MagnificentSupportSkills.find((s) => s.name === slot.name);
+      return skill?.manaCostMultiplierPct ?? 100;
+    }
+    case "noble_support": {
+      const skill = NobleSupportSkills.find((s) => s.name === slot.name);
+      return skill?.manaCostMultiplierPct ?? 100;
+    }
+    case "activation_medium": {
+      const skill = ActivationMediumSkills.find((s) => s.name === slot.name);
+      return skill?.manaCostMultiplierPct ?? 100;
+    }
+  }
+};
+
+const calculateSealedResources = (
+  loadout: Loadout,
+  mods: Mod[],
+): ResourcePool["sealedResources"] => {
+  const sealedManaCompMult = calcEffMult(mods, "SealedManaCompPct");
+  const sealPerSkill: Record<
+    string,
+    { sealedManaPct?: number; sealedLifePct?: number }
+  > = {};
+  let totalSealedManaPct = 0;
+  const passiveSlots = loadout.skillPage.passiveSkills;
+  for (const slotKey of [1, 2, 3, 4] as const) {
+    const slot = passiveSlots[slotKey];
+    if (slot === undefined || slot.skillName === undefined) {
+      continue;
+    }
+    const passiveSkill = PassiveSkills.find((s) => s.name === slot.skillName);
+    if (passiveSkill === undefined) {
+      continue;
+    }
+
+    const baseSealedManaPct = passiveSkill.sealedManaPct;
+
+    let combinedManaCostMult = 1;
+    const supportSlots = slot.supportSkills;
+    for (const supportSlotKey of [1, 2, 3, 4, 5] as const) {
+      const supportSlot = supportSlots[supportSlotKey];
+      if (supportSlot === undefined) {
+        continue;
+      }
+      const manaCostMultPct = getSupportSkillManaCostMultiplierPct(supportSlot);
+      combinedManaCostMult *= manaCostMultPct / 100;
+    }
+
+    const skillSealedManaPct =
+      (baseSealedManaPct * combinedManaCostMult) / sealedManaCompMult;
+
+    sealPerSkill[slot.skillName] = { sealedManaPct: skillSealedManaPct };
+    totalSealedManaPct += skillSealedManaPct;
+  }
+
+  return { sealedManaPct: totalSealedManaPct, sealedLifePct: 0, sealPerSkill };
+};
+
 const calculateResourcePool = (
   paramMods: Mod[],
   loadout: Loadout,
@@ -2113,6 +2191,7 @@ const calculateResourcePool = (
   const hasFervor = config.fervorEnabled || haveFervor;
   const fixedFervorPts = findMod(mods, "FixedFervorPts");
   const fervorPts = fixedFervorPts?.value ?? config.fervorPoints ?? 100;
+  const sealedResources = calculateSealedResources(loadout, mods);
 
   return {
     stats,
@@ -2129,6 +2208,7 @@ const calculateResourcePool = (
     additionalMaxChanneledStacks,
     hasFervor,
     fervorPts,
+    sealedResources,
   };
 };
 

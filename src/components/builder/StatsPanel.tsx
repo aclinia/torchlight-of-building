@@ -437,6 +437,24 @@ export const StatsPanel = (): React.ReactNode => {
           value={formatStatValue.integer(resourcePool.maxMana)}
           color="text-blue-400"
         />
+        {resourcePool.sealedResources.sealedManaPct > 0 && (
+          <StatLine
+            label="Sealed Mana"
+            value={formatStatValue.pct(
+              resourcePool.sealedResources.sealedManaPct,
+            )}
+            color="text-blue-300"
+          />
+        )}
+        {resourcePool.sealedResources.sealedLifePct > 0 && (
+          <StatLine
+            label="Sealed Life"
+            value={formatStatValue.pct(
+              resourcePool.sealedResources.sealedLifePct,
+            )}
+            color="text-red-300"
+          />
+        )}
         {resourcePool.mercuryPts !== undefined && (
           <StatLine
             label="Mercury"
