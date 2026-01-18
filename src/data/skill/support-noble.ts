@@ -11,6 +11,7 @@ export const NobleSupportSkills = [
       "The supported skill no longer casts Acute Strike. Instead it casts Acute Smash on up to 1 enemy. +(42–44)% additional Hit Damage dealt by Smash.",
     ],
     supportTarget: "Acuteness Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -21,6 +22,7 @@ export const NobleSupportSkills = [
       "For every 100 Focus Pts gained by the supported skill recently, + (3.2–3.4)% additional damage. Stacks up to 20 times",
     ],
     supportTarget: "Acuteness Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -32,6 +34,7 @@ export const NobleSupportSkills = [
       "+(1–2)% additional damage for the supported skill",
     ],
     supportTarget: "Arrow Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -43,6 +46,7 @@ export const NobleSupportSkills = [
       "+(10–11)% additional damage for the supported skill",
     ],
     supportTarget: "Arrow Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -53,6 +57,7 @@ export const NobleSupportSkills = [
       "When the supported skill hits, a target that has less than (57–59)% Life is considered to have Low Life",
     ],
     supportTarget: "Berserking Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -63,6 +68,7 @@ export const NobleSupportSkills = [
       "(25–27)% of the bonuses and additional bonuses to Skill Area is also applied to the skill's additional Steep Strike Damage",
     ],
     supportTarget: "Berserking Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -74,6 +80,7 @@ export const NobleSupportSkills = [
       "When an explosion of the supported skill hits, there is a (54–57)% chance to generate a smaller secondary explosion at the enemy's location, which deals the same damage as the original explosion\nMultiple secondary explosions can hit the same enemy, and the Shotgun Effect falloff coefficient is 50%",
     ],
     supportTarget: "Blazing Bullet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -85,6 +92,7 @@ export const NobleSupportSkills = [
       "+(43–45)% additional damage for the supported skill when the bonus and additional bonus to Skill Area reach at least 120%",
     ],
     supportTarget: "Blazing Bullet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -96,6 +104,7 @@ export const NobleSupportSkills = [
       "+(8–10)% additional damage for the supported skill",
     ],
     supportTarget: "Blizzard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -107,6 +116,7 @@ export const NobleSupportSkills = [
       "+(16.0–18.0)% additional damage for the supported skill",
     ],
     supportTarget: "Blizzard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -118,6 +128,7 @@ export const NobleSupportSkills = [
       "(-19.0–-18.0)% additional damage for the supported skill",
     ],
     supportTarget: "Bombard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -129,6 +140,7 @@ export const NobleSupportSkills = [
       "For every +1 Split Quantity, +(17.2–18.0)% additional damage for the supported skill",
     ],
     supportTarget: "Bombard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -140,6 +152,7 @@ export const NobleSupportSkills = [
       "The supported skill deals +(33–35)% additional damage to debuffed enemies",
     ],
     supportTarget: "Bombard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -151,6 +164,7 @@ export const NobleSupportSkills = [
       "When the supported skill's explosions deal damage, +(33–35)% additional Ignite Damage taken by enemies for 4 s",
     ],
     supportTarget: "Burning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -162,6 +176,7 @@ export const NobleSupportSkills = [
       "+(12–14)% additional damage for the supported skill",
     ],
     supportTarget: "Burning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -173,6 +188,7 @@ export const NobleSupportSkills = [
       "(-7–-5)% additional damage for the supported skill",
     ],
     supportTarget: "Chain Lightning",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -184,6 +200,7 @@ export const NobleSupportSkills = [
       "(-14.0–-12.0)% additional damage for the supported skill",
     ],
     supportTarget: "Chain Lightning",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -195,6 +212,7 @@ export const NobleSupportSkills = [
       "+(16–18)% additional damage for the supported skill",
     ],
     supportTarget: "Charged Pummel",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -206,6 +224,7 @@ export const NobleSupportSkills = [
       "(-49.0–-48.0)% additional damage for the supported skill",
     ],
     supportTarget: "Charged Pummel",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -217,6 +236,7 @@ export const NobleSupportSkills = [
       "(-5–-2)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosion Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -228,6 +248,7 @@ export const NobleSupportSkills = [
       "+(24–26)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -239,6 +260,7 @@ export const NobleSupportSkills = [
       "(-19.0–-18.0)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -250,6 +272,7 @@ export const NobleSupportSkills = [
       "(-2–-1)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Throw",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -261,6 +284,7 @@ export const NobleSupportSkills = [
       "Buffs gained from Multistrikes of the supported skill also +(5.5–6.0)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Throw",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -272,6 +296,7 @@ export const NobleSupportSkills = [
       "(-11–-10)% additional damage for the supported skill",
     ],
     supportTarget: "Crescent Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -283,6 +308,7 @@ export const NobleSupportSkills = [
       "(-39.5–-38.5)% additional damage for the supported skill",
     ],
     supportTarget: "Crescent Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -293,6 +319,7 @@ export const NobleSupportSkills = [
       "Reaps (0.060–0.062) s of Damage Over Time when the supported skill hits. Only Reaps Trauma Damage dealt by the supported skill",
     ],
     supportTarget: "Double Thrusts",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -303,6 +330,7 @@ export const NobleSupportSkills = [
       "Inflicts 1 stack of debuff when the supported skill hits. +(620–660)% additional hit damage for this hit and removes all debuff stacks when the supported skill's Shadows hit an enemy with 33 or more stacks of debuffs",
     ],
     supportTarget: "Double Thrusts",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -314,6 +342,7 @@ export const NobleSupportSkills = [
       "(-15–-13)% additional damage for the supported skill",
     ],
     supportTarget: "Electrifying Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -325,6 +354,7 @@ export const NobleSupportSkills = [
       "(-27.0–-26.0)% additional damage for the supported skill",
     ],
     supportTarget: "Fire Burst",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -336,6 +366,7 @@ export const NobleSupportSkills = [
       "+(17.5–18.5)% additional Hit Damage for skills cast by Spell Burst each time Spell Burst is activated by the supported skill. Stacks up to 6 time(s)",
     ],
     supportTarget: "Fire Burst",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -347,6 +378,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -358,6 +390,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -369,6 +402,7 @@ export const NobleSupportSkills = [
       "+(20–21)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Jet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -379,6 +413,7 @@ export const NobleSupportSkills = [
       "(100–110)% of the Cooldown Recovery Speed bonus of the supported skill is also applied to the Eruption Interval reduction of this skill's Flame Terra, reducing the Interval by up to 40%",
     ],
     supportTarget: "Flame Jet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -390,6 +425,7 @@ export const NobleSupportSkills = [
       "(-33.5–-32.5)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -401,6 +437,7 @@ export const NobleSupportSkills = [
       "The supported skill +(4.5–5.0)% additional damage every 0.2 s when you have at least 50 Fervor Rating, stacking up to 10 time(s)",
     ],
     supportTarget: "Focused Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -411,6 +448,7 @@ export const NobleSupportSkills = [
       "While having Fervor, +20% Knockback Chance and +(8.5–9.0)% additional damage on Critical Strike for the supported skill. This effect is affected by Fervor Effect",
     ],
     supportTarget: "Focused Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -421,6 +459,7 @@ export const NobleSupportSkills = [
       "While an Aiming Skill is active, increases the Critical Strike Rating of the supported skill based on the distance between the character and the enemy, up to +(370–390)% Critical Strike Rating against distant enemies",
     ],
     supportTarget: "Focused Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -432,6 +471,7 @@ export const NobleSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Focused Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -442,6 +482,7 @@ export const NobleSupportSkills = [
       "The supported skill's Steep Strike consumes 5 Fervor Rating to make the skill deal +(62–65)% additional damage",
     ],
     supportTarget: "Focused Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -453,6 +494,7 @@ export const NobleSupportSkills = [
       "For every 1 time the Projectiles of a Sentry deployed by the supported skill Penetrate, +(6.0–7.0)% additional Hit Damage",
     ],
     supportTarget: "Frost Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -464,6 +506,7 @@ export const NobleSupportSkills = [
       "+(40–42)% additional Hit Damage for each wave of Ice Spikes launched by the supported skill",
     ],
     supportTarget: "Frost Impact",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -475,6 +518,7 @@ export const NobleSupportSkills = [
       "+(40–42)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Impact",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -486,6 +530,7 @@ export const NobleSupportSkills = [
       "(-60.5–-60.0)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -497,6 +542,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -507,6 +553,7 @@ export const NobleSupportSkills = [
       "+(17–19)% additional damage and -20% base radius for the Terra created by the supported skill every 0.5s. Stacks up to 3 times",
     ],
     supportTarget: "Frost Terra",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -517,6 +564,7 @@ export const NobleSupportSkills = [
       "The Terra spawned by the supported skill inflicts a debuff on enemies on it, making them take +13% additional Cold Damage. When casting this skill, each stack of Terra Charge makes the debuff effect additionally +(80–85)% but no longer additionally increases the skill's damage",
     ],
     supportTarget: "Frost Terra",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -528,6 +576,7 @@ export const NobleSupportSkills = [
       "+(7.7–8.0)% additional Critical Strike Damage for the Combo Finisher of the supported skill for each Combo Point consumed, stacking up to 12 time(s)",
     ],
     supportTarget: "Gale Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -539,6 +588,7 @@ export const NobleSupportSkills = [
       "(-15.0–-14.0)% additional damage for the supported skill",
     ],
     supportTarget: "Gale Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -549,6 +599,7 @@ export const NobleSupportSkills = [
       "When a Sentry deployed by the supported skill casts a skill, +(21.0–22.0)% chance for this skill's Multistrike Count to reach the max",
     ],
     supportTarget: "Ghost Blade Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -559,6 +610,7 @@ export const NobleSupportSkills = [
       "+(12.0–13.0)% additional Multistrike Damage Increment for every 1 Sentry(ies) deployed by the supported skill",
     ],
     supportTarget: "Ghost Blade Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -569,6 +621,7 @@ export const NobleSupportSkills = [
       "When the supported skill consumes Demolisher Charge, extends the Duration of fissures that have spread to the max by 0.5 s and activates them once. +(40–50)% additional Hit Damage for fissures activated in this way. Interval: 1 s",
     ],
     supportTarget: "Groundshaker",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -580,6 +633,7 @@ export const NobleSupportSkills = [
       "+(44–46)% additional damage when the Supported Skill consumes Demolisher Charge",
     ],
     supportTarget: "Groundshaker",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -591,6 +645,7 @@ export const NobleSupportSkills = [
       "+(20–22)% additional damage for the supported skill",
     ],
     supportTarget: "Groundshaker",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -602,6 +657,7 @@ export const NobleSupportSkills = [
       "(-18.0–-17.0)% additional damage for the supported skill",
     ],
     supportTarget: "Hammer of Ash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -612,6 +668,7 @@ export const NobleSupportSkills = [
       "Ember Projectiles leave a burning Terra on the ground after exploding. The effective speed of Ignite increases by (45–47)% for enemies on the burning Terra",
     ],
     supportTarget: "Hammer of Ash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -623,6 +680,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Haunting Abomination",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -633,6 +691,7 @@ export const NobleSupportSkills = [
       "The supported skill no longer deals damage once at intervals. Instead, it launches 1 additional high-damage Batter for every stack of Terra Charge consumed when cast. Batter deals +(46–48)% additional Hit Damage. Batter Interval: 0.3s",
     ],
     supportTarget: "Haunting Abomination",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -643,6 +702,7 @@ export const NobleSupportSkills = [
       "The supported skill's Gale follows the character instead of tracking enemies. +(20–22)% additional Attack and Cast Speed and +20% Projectile Speed when your character is within this skill's Gale",
     ],
     supportTarget: "Howling Gale",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -653,6 +713,7 @@ export const NobleSupportSkills = [
       "+(7.2–7.6)% additional Attack Frequency for this skill's Gale for each channeled stack instead of increasing the Skill Area of this skill's Gale",
     ],
     supportTarget: "Howling Gale",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -663,6 +724,7 @@ export const NobleSupportSkills = [
       "(-50–-41)% additional Skill Area for the supported skill\n+25% additional Skill Area and +5% additional damage every second for the supported skill while the Ice Storm lasts. Stacks up to 4 time(s)",
     ],
     supportTarget: "Ice Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -673,6 +735,7 @@ export const NobleSupportSkills = [
       "+(21–28)% additional Damage Over Time for the supported skill",
     ],
     supportTarget: "Ice Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -684,6 +747,7 @@ export const NobleSupportSkills = [
       "+(22–24)% additional damage for the supported skill",
     ],
     supportTarget: "Ice Lances",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -695,6 +759,7 @@ export const NobleSupportSkills = [
       "+(3.0–4.5)% additional damage for the supported skill",
     ],
     supportTarget: "Ice Lances",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -706,6 +771,7 @@ export const NobleSupportSkills = [
       "(-31.0–-30.0)% additional damage for the supported skill",
     ],
     supportTarget: "Ice Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -717,6 +783,7 @@ export const NobleSupportSkills = [
       "(-2–-1)% additional Hit Damage for the supported skill",
     ],
     supportTarget: "Icebound Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -728,6 +795,7 @@ export const NobleSupportSkills = [
       "+(8–10)% additional damage for the supported skill",
     ],
     supportTarget: "Icebound Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -739,6 +807,7 @@ export const NobleSupportSkills = [
       "For every +1% Steep Strike chance, +(1.20–1.25)% additional Hit Damage for this skill's Steep Strike form",
     ],
     supportTarget: "Icy Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -750,6 +819,7 @@ export const NobleSupportSkills = [
       "+(27–29)% additional damage for the supported skill when using a gun",
     ],
     supportTarget: "Inexhaustible Barrage",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -761,6 +831,7 @@ export const NobleSupportSkills = [
       "(-5–-4)% additional damage for the supported skill when using a cannon",
     ],
     supportTarget: "Inexhaustible Barrage",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -772,6 +843,7 @@ export const NobleSupportSkills = [
       "(-15.0–-13.0)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -783,6 +855,7 @@ export const NobleSupportSkills = [
       "+(53–55)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -794,6 +867,7 @@ export const NobleSupportSkills = [
       "When having at least 240 Dexterity, +(42–44)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -804,6 +878,7 @@ export const NobleSupportSkills = [
       "+(41–43)% additional Duration for the supported skill",
     ],
     supportTarget: "Lightning Storm",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -815,6 +890,7 @@ export const NobleSupportSkills = [
       "(-53.0–-52.5)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Storm",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -826,6 +902,7 @@ export const NobleSupportSkills = [
       "(-10.0–-9.0)% additional damage for the supported skill",
     ],
     supportTarget: "Marked Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -837,6 +914,7 @@ export const NobleSupportSkills = [
       "+(113–116)% additional damage for the supported skill",
     ],
     supportTarget: "Marked Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -848,6 +926,7 @@ export const NobleSupportSkills = [
       "+(3–4)% additional damage for the supported skill",
     ],
     supportTarget: "Marked Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -858,6 +937,7 @@ export const NobleSupportSkills = [
       "The supported skill links to your own Minions whenever possible, removing 10% of Minions' Life per second. This skill deals +(13–14)% additional damage to enemies for every Minion it is linked to, up to 6 Minions",
     ],
     supportTarget: "Mind Control",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -869,6 +949,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Mind Control",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -880,6 +961,7 @@ export const NobleSupportSkills = [
       "When the supported skill is installed, seal 10% Max Mana\nFor every 100 Mana sealed, +1% additional damage for the supported skill, up to +(57–60)% additional damage",
     ],
     supportTarget: "Moon Strike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -890,6 +972,7 @@ export const NobleSupportSkills = [
       "The supported skill can activate Spell Burst. +(20–22)% additional Hit Damage for skills cast by Spell Burst when Spell Burst is activated by the supported skill",
     ],
     supportTarget: "Moon Strike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -900,6 +983,7 @@ export const NobleSupportSkills = [
       "Gains up to (59–66)% Movement Speed based on the enemy's rarity when passing by an enemy while channeling the supported skill. This effect falls off to 0 within 2s\nThe effect has a 10s interval against the same target. The interval refreshes immediately when 10m away from the target",
     ],
     supportTarget: "Path of Flames",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -910,6 +994,7 @@ export const NobleSupportSkills = [
       "+(8.0–8.5)% additional damage for the supported skill for 2s when passing by an Elite while channeling the supported skill. Stacks up to 8 times\nThe effect has a 2 s interval against the same target. The interval refreshes immediately when you are 2 m away from the target",
     ],
     supportTarget: "Path of Flames",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -921,6 +1006,7 @@ export const NobleSupportSkills = [
       "(-33.5–-32.5)% additional damage for the supported skill",
     ],
     supportTarget: "Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -932,6 +1018,7 @@ export const NobleSupportSkills = [
       "+(7–9)% additional damage for the supported skill",
     ],
     supportTarget: "Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -942,6 +1029,7 @@ export const NobleSupportSkills = [
       "+(4.6–4.8)% additional Projectile Speed for every channeled stack of the supported skill",
     ],
     supportTarget: "Ring of Blades",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -953,6 +1041,7 @@ export const NobleSupportSkills = [
       "(-34–-33)% additional damage for the supported skill",
     ],
     supportTarget: "Ring of Blades",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -964,6 +1053,7 @@ export const NobleSupportSkills = [
       "(-29.0–-28.0)% additional damage for the supported skill",
     ],
     supportTarget: "Ring of Ice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -975,6 +1065,7 @@ export const NobleSupportSkills = [
       "+(21–23)% additional damage for the supported skill",
     ],
     supportTarget: "Savage Charge",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -985,6 +1076,7 @@ export const NobleSupportSkills = [
       "For each stack of Ignite additionally inflicted, +(21–22)% additional Ignite Damage for the supported skill",
     ],
     supportTarget: "Scorching Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -996,6 +1088,7 @@ export const NobleSupportSkills = [
       "+(5–7)% additional damage for the supported skill",
     ],
     supportTarget: "Scorching Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1007,6 +1100,7 @@ export const NobleSupportSkills = [
       "(-27.0–-25.0)% additional Hit Damage for the Combo Finisher of the supported skill",
     ],
     supportTarget: "Serpent Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1018,6 +1112,7 @@ export const NobleSupportSkills = [
       "(-18–-17)% additional damage for the supported skill",
     ],
     supportTarget: "Serpent Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1028,6 +1123,7 @@ export const NobleSupportSkills = [
       "(21–22)% of the Elemental Resistance Penetration of the supported skill is also applied to Erosion Resistance Penetration",
     ],
     supportTarget: "Shackles of Malice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1038,6 +1134,7 @@ export const NobleSupportSkills = [
       "When the chain hits and explodes, the explosion deals +(9.0–9.5)% additional Hit Damage (multiplies) for every Curse affecting you",
     ],
     supportTarget: "Shackles of Malice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1048,6 +1145,7 @@ export const NobleSupportSkills = [
       "For every time the enemy has been hit by Shadow Shot recently, the supported skill deals +(2.1–2.2)% additional damage to it. Stacks up to 66 times",
     ],
     supportTarget: "Shadow Swamp",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1059,6 +1157,7 @@ export const NobleSupportSkills = [
       "+(6–7)% additional damage for the supported skill",
     ],
     supportTarget: "Shadow Swamp",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1070,6 +1169,7 @@ export const NobleSupportSkills = [
       "When a Projectile of the supported skill vanishes, +(35–37)% chance to generate a stationary Projectile where the Projectile vanished. The new Projectile will not trigger this effect again",
     ],
     supportTarget: "Sparkle",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1081,6 +1181,7 @@ export const NobleSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Sparkle",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1092,6 +1193,7 @@ export const NobleSupportSkills = [
       "+(10–12)% additional damage for the supported skill",
     ],
     supportTarget: "Spectral Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1103,6 +1205,7 @@ export const NobleSupportSkills = [
       "+(30–32)% additional damage for the supported skill",
     ],
     supportTarget: "Spectral Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1114,6 +1217,7 @@ export const NobleSupportSkills = [
       "(-14–-12)% additional damage for the supported skill",
     ],
     supportTarget: "Split Firebolt",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1124,6 +1228,7 @@ export const NobleSupportSkills = [
       "+(4.2–4.4)% additional damage for the supported skill for every +1 Projectile Quantity",
     ],
     supportTarget: "Split Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1135,6 +1240,7 @@ export const NobleSupportSkills = [
       "+(22.0–23.0)% additional damage for the supported skill for every +1 to additional Max Channeled Stacks, stacking up to 15 time(s)",
     ],
     supportTarget: "Split Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1146,6 +1252,7 @@ export const NobleSupportSkills = [
       "+(20–22)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Erosion Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1157,6 +1264,7 @@ export const NobleSupportSkills = [
       "(-23.0–-21.0)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Erosion Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1167,6 +1275,7 @@ export const NobleSupportSkills = [
       "Minions summoned by the supported skill Reap (0.014–0.015) s of Damage Over Time on Critical Strikes for every 30% their Critical Strike Damage",
     ],
     supportTarget: "Summon Fire Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1178,6 +1287,7 @@ export const NobleSupportSkills = [
       "When a Minion summoned by the supported skill triggers double casting, the skill +(15–20)% additional Critical Strike Damage for each casting",
     ],
     supportTarget: "Summon Fire Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1189,6 +1299,7 @@ export const NobleSupportSkills = [
       "When a Minion summoned by the supported skill takes damage, triggers its Empower Skill. Cooldown: (4–4.5) s",
     ],
     supportTarget: "Summon Frost Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1200,6 +1311,7 @@ export const NobleSupportSkills = [
       "For every 1m that Minions summoned by the supported skill Blink, +(2.20–2.30)% additional damage for the activated Self-Destruct Protocol",
     ],
     supportTarget: "Summon Grim Phantom",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1211,6 +1323,7 @@ export const NobleSupportSkills = [
       "While the buff is active, +(20–23) additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Grim Phantom",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1222,6 +1335,7 @@ export const NobleSupportSkills = [
       "(-36.0–-35.0)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Grim Phantom",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1232,6 +1346,7 @@ export const NobleSupportSkills = [
       "When casting Dark Gate, Minions summoned by the supported skill gain a buff: +(165–175)% additional damage for the next Onslaught Punch",
     ],
     supportTarget: "Summon Machine Guard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1243,6 +1358,7 @@ export const NobleSupportSkills = [
       "+(41–43)% additional damage dealt to enemies in the center of Self-Destruct Protocol activated by Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Machine Guard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1253,6 +1369,7 @@ export const NobleSupportSkills = [
       "(0.84–0.88)% additional damage for Minions summoned by the supported skill for every 1 Command. Stacks up to 50 time(s)",
     ],
     supportTarget: "Summon Machine Guard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1264,6 +1381,7 @@ export const NobleSupportSkills = [
       "+1% additional damage for Minions summoned by the supported skill for every (2500–2600) Armor they have, up to 75%",
     ],
     supportTarget: "Summon Rock Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1275,6 +1393,7 @@ export const NobleSupportSkills = [
       "While the buff is active, (0.75–0.80)% additional damage for Minions summoned by the supported skill for every 1 Command the summoner has, stacking up to 50 time(s)",
     ],
     supportTarget: "Summon Spider Tank",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1286,6 +1405,7 @@ export const NobleSupportSkills = [
       "(-45.0–-44.0)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Spider Tank",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1297,6 +1417,7 @@ export const NobleSupportSkills = [
       "(-18.0–-16.5)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Thunder Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1308,6 +1429,7 @@ export const NobleSupportSkills = [
       "+(15–17)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Thunder Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1319,6 +1441,7 @@ export const NobleSupportSkills = [
       "+(7.5–8)% additional Hit Damage (multiplies) for the supported skill for every Jump",
     ],
     supportTarget: "Thunder Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1329,6 +1452,7 @@ export const NobleSupportSkills = [
       "The supported skill cannot Jump, launches 2 bolt(s) of lightning in its base state, and launches 1 additional bolt of lightning at Numbed enemies within 10m nearby, up to (3–4) bolts of lightning",
     ],
     supportTarget: "Thunder Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1340,6 +1464,7 @@ export const NobleSupportSkills = [
       "+(1.0–3.0)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1351,6 +1476,7 @@ export const NobleSupportSkills = [
       "(-12–-10)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1362,6 +1488,7 @@ export const NobleSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1373,6 +1500,7 @@ export const NobleSupportSkills = [
       "(-22–-21)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1384,6 +1512,7 @@ export const NobleSupportSkills = [
       "When the supported skill's Shadow Strike True Body hits an enemy, +(45–48)% additional Lightning Damage dealt by the skill to the enemy for 2 s",
     ],
     supportTarget: "Thunder Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1394,6 +1523,7 @@ export const NobleSupportSkills = [
       "The supported skill gains a buff on Critical Strike: +(66–71)% Numbed Effect for 2 s",
     ],
     supportTarget: "Thunder Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1405,6 +1535,7 @@ export const NobleSupportSkills = [
       "+(29–31)% additional damage for every time the supported skill Jumps",
     ],
     supportTarget: "Thunderbolt Overload",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1416,6 +1547,7 @@ export const NobleSupportSkills = [
       "(-34–-33)% additional damage for the supported skill",
     ],
     supportTarget: "Thundercloud",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1427,6 +1559,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Thundercloud",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1438,6 +1571,7 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Whirlwind",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1449,6 +1583,7 @@ export const NobleSupportSkills = [
       "+(44–46)% additional damage for the supported skill",
     ],
     supportTarget: "Whirlwind Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1459,6 +1594,7 @@ export const NobleSupportSkills = [
       "For every 0.2s duration of the supported skill's Projectiles, +(3.3–3.5)% additional Hit Damage, stacking up to 25 time(s)",
     ],
     supportTarget: "Whirlwind Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1469,6 +1605,7 @@ export const NobleSupportSkills = [
       "For every stack of Wilt inflicted by the supported skill recently, (0.7–0.8)% additional Deterioration Damage and -0.2% additional Deterioration Duration for the supported skill. Stacks up to 80 time(s)",
     ],
     supportTarget: "Wilt Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1480,6 +1617,7 @@ export const NobleSupportSkills = [
       "+(7–8)% additional damage for the supported skill",
     ],
     supportTarget: "Wilt Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1490,6 +1628,7 @@ export const NobleSupportSkills = [
       "For every +1 Beam the supported skill has, +(25.5–26.0)% additional Reaping Recovery Speed for Reaping that is triggered when this skill reaches max channeled stacks",
     ],
     supportTarget: "Wilting Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Noble)",
@@ -1501,5 +1640,6 @@ export const NobleSupportSkills = [
       "+(70–73)% additional damage for the supported skill",
     ],
     supportTarget: "Wilting Beam",
+    manaCostMultiplierPct: 110,
   },
 ] as const satisfies readonly BaseNobleSupportSkill[];

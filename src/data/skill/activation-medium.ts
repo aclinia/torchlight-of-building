@@ -18,6 +18,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -96,6 +97,7 @@ export const ActivationMediumSkills = [
       "spell_burst",
     ],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
   },
   {
     type: "Activation Medium",
@@ -107,6 +109,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Channeled"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -144,6 +147,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [{ tags: ["Summon"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -188,6 +192,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -268,6 +273,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -347,6 +353,7 @@ export const ActivationMediumSkills = [
       { tags: ["Curse"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -425,6 +432,7 @@ export const ActivationMediumSkills = [
       { tags: ["Channeled"] },
       { tags: ["Attack", "Mobility"] },
     ],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -479,6 +487,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -552,6 +561,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ skillType: "active" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
   },
   {
     type: "Activation Medium",
@@ -564,6 +574,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Synthetic Troop"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -621,6 +632,7 @@ export const ActivationMediumSkills = [
       { tags: ["Spell"], requiredKind: "deal_damage" },
     ],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         { affix: "Auto-used supported skills +(12-15)% additional damage" },
@@ -670,6 +682,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }, { skillType: "active" }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -750,6 +763,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -824,6 +838,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ skillType: "active" }],
     cannotSupportTargets: [{ tags: ["Channeled"] }, { tags: ["Attack"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -900,6 +915,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -980,6 +996,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1058,6 +1075,7 @@ export const ActivationMediumSkills = [
       { tags: ["Channeled"] },
       { tags: ["Attack", "Mobility"] },
     ],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1118,6 +1136,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1192,6 +1211,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Attack"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1247,6 +1267,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Sentry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         { affix: "+(20-25)% additional damage for the supported skill" },
@@ -1306,6 +1327,7 @@ export const ActivationMediumSkills = [
       { tags: ["Curse"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1385,6 +1407,7 @@ export const ActivationMediumSkills = [
       { tags: ["Curse"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1465,6 +1488,7 @@ export const ActivationMediumSkills = [
       { tags: ["Warcry"] },
     ],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1539,6 +1563,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Attack"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         { affix: "The supported skill is supported by Lv. (20-30) Willpower" },
@@ -1582,6 +1607,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ skillType: "active", tags: ["Spell"] }],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
   },
   {
     type: "Activation Medium",
@@ -1597,6 +1623,7 @@ export const ActivationMediumSkills = [
       { tags: ["Channeled"] },
       { tags: ["Attack", "Mobility"] },
     ],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {
@@ -1644,6 +1671,7 @@ export const ActivationMediumSkills = [
     ],
     supportTargets: [{ tags: ["Spell"], requiredKind: "deal_damage" }],
     cannotSupportTargets: [{ skillType: "passive" }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 100,
     affixDefs: {
       0: [
         {

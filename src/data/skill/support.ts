@@ -11,6 +11,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "Adds {value} - 3 Cold Damage to the supported skill",
@@ -32,6 +33,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "Adds {value} - 2 Erosion Damage to the supported skill",
@@ -53,6 +55,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "The supported skill adds {value} - 3 Fire Damage",
@@ -74,6 +77,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "The supported skill adds {value} - 4 Lightning Damage",
@@ -95,6 +99,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "Supported skills add {value} - 3 physical damage",
@@ -116,6 +121,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "The supported skill inflicts 1 additional stack(s) of Ignite",
       "+15% Ignite chance for the supported skill",
@@ -142,6 +148,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["The supported skill -30% Ailment Duration"],
     templates: [
       {
@@ -165,6 +172,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Defensive"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}",
@@ -223,6 +231,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+56 Critical Strike Rating for Minions summoned by the supported skill when having at least 40 Command",
     ],
@@ -249,6 +258,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Gains 2 Fervor Rating when the supported skill hits an enemy",
       "For every 10 Fervor Rating, the supported skill +3% Critical Strike Rating",
@@ -276,6 +286,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["+100% Skill Area for the supported skill"],
     templates: [
       {
@@ -299,6 +310,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -322,6 +334,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+10% chance to Blind the target when the supported skill hits",
     ],
@@ -347,6 +360,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Barrage"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}% additional damage for the supported skill",
@@ -385,6 +399,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["dot", "inflict_ailment"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "When the supported skill deals Damage Over Time, it inflicts 8 Affliction on the enemy. Effect Cooldown: 1 s",
     ],
@@ -410,6 +425,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Channeled"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "+{value}% additional damage for the supported skill",
@@ -440,6 +456,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}",
@@ -498,6 +515,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Warcry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-15% Skill Area for the supported skill"],
     templates: [
       {
@@ -520,6 +538,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spell"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-100% Critical Strike Rating for the supported skill"],
     templates: [
       {
@@ -542,6 +561,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["any"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "+{value}% Cooldown Recovery Speed for the supported skill",
@@ -563,6 +583,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "active" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 250,
     fixedAffixes: ["Replace Mana Cost from the supported skill with Life cost"],
   },
   {
@@ -575,6 +596,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -598,6 +620,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -620,6 +643,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "+{value}% Critical Strike Rating for the supported skill",
@@ -641,6 +665,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+15% chance for the supported skill to inflict Trauma"],
     templates: [
       {
@@ -664,6 +689,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+10% chance to Weaken the enemy for every 20 Command when hit by a Minion summoned by the supported skill",
     ],
@@ -700,6 +726,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Defensive"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "When casting the supported skill, Energy Shield cannot be interrupted by damage for 1 s",
     ],
@@ -726,6 +753,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "The supported skill gains a buff on Critical Strike. The buff lasts 2 s.",
     ],
@@ -752,6 +780,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -774,6 +803,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_spirit_magus"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+1 to Max Summonable Minions for the supported skill"],
     templates: [
       {
@@ -797,6 +827,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "The supported skill cannot inflict Ignite, Frostbite or Numbed",
     ],
@@ -822,6 +853,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -844,6 +876,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}",
@@ -902,6 +935,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+10% Restoration Effect for the supported skill at Low Mana",
     ],
@@ -927,6 +961,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+40% chance for the supported skill to inflict Damaging Ailments",
     ],
@@ -951,6 +986,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Duration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "+{value}% Duration for the supported skill",
@@ -972,6 +1008,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+4% additional Ignite Damage for the supported skill"],
     templates: [
       {
@@ -994,6 +1031,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Focus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     templates: [
       {
         template: "{value}% Focus Speed for the supported skill",
@@ -1016,6 +1054,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Focus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-30% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -1038,6 +1077,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Beam"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+15% additional Beam Length for the supported Beam Skill"],
     templates: [
       {
@@ -1060,6 +1100,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+40% Restoration effect for the supported skill",
       "-20% Restoration Duration for the supported skill",
@@ -1076,6 +1117,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spirit Magus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-30% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -1100,6 +1142,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Inflicts Frostbite when the supported skill deals Hit Cold Damage",
     ],
@@ -1125,6 +1168,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Warcry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "When casting the supported skill, Reverse Knocks Back nearby enemies with a Knockback Distance of 2 m",
       "The effective area of this effect is affected by Skill Area bonuses",
@@ -1150,6 +1194,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Terra"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+1 Max Terra Charge stacks for the supported skill"],
     templates: [
       {
@@ -1183,6 +1228,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spell"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -1214,6 +1260,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Channeled"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Every 5 time(s) the supported skill is used, gains a Barrier if there's no Barrier. Interval: 6 s",
     ],
@@ -1238,6 +1285,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_spirit_magus"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Minions summoned by the supported skill prepare the Empower Skill every 5 s",
       "When Minions summoned by the supported skill are at Stage 2 or higher, +15% chance to use an Enhanced Skill",
@@ -1266,6 +1314,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Shadow Strike"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+2 Shadow Quantity for the supported skill"],
     templates: [
       {
@@ -1288,6 +1337,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Inflicts Numbed when the supported skill deals Hit Lightning Damage",
     ],
@@ -1314,6 +1364,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack", "Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "While this buff is in effect, 30.5% additional damage for the skill when using the supported skill",
       "While this buff is in effect, +40% Knockback Chance when using the supported skill",
@@ -1342,6 +1393,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+15% Wilt chance for the supported skill"],
     templates: [
       {
@@ -1366,6 +1418,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Area"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+20% Skill Area for the supported skill"],
     templates: [
       {
@@ -1389,6 +1442,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["The supported skill's Restoration effect becomes instant"],
     templates: [
       {
@@ -1413,6 +1467,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Defensive"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+2% Armor Effective Rate against non-Physical Damage while the supported skill lasts",
     ],
@@ -1441,6 +1496,7 @@ export const SupportSkills = [
       { tags: ["Chain"] },
     ],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+2 Jumps for the supported skill"],
     templates: [
       {
@@ -1463,6 +1519,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Converts 50% of the supported skill's Lightning Damage to Cold Damage",
     ],
@@ -1488,6 +1545,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Warcry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+20% Warcry Cast Speed for the supported skill",
       "+2 Max Charges for the supported skill",
@@ -1515,6 +1573,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+1 Max Charges for the supported skill",
       "Gains a 2 s buff after casting the supported skill",
@@ -1530,6 +1589,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}",
@@ -1588,6 +1648,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "active", tags: ["Spell"] }],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Creates Tangles equal to Max Tangle Quantity when you use the supported skill",
     ],
@@ -1612,6 +1673,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Empower"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+1 Max Charges for the supported skill"],
     templates: [
       {
@@ -1635,6 +1697,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+40% Physique for Minions summoned by the supported skill",
       "+40% additional Skill Area for Minions summoned by the supported skill",
@@ -1671,6 +1734,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Melee", "Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "+{value}% Knockback Chance for the supported skill",
@@ -1708,6 +1772,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Sentry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+1 Max Sentries that can be deployed at the same time by the supported skill",
     ],
@@ -1732,6 +1797,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["Projectile Quantity of the supported skill +2"],
     templates: [
       {
@@ -1755,6 +1821,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }],
     cannotSupportTargets: [{ tags: ["Mobility"] }, { tags: ["Channeled"] }],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Multistrikes of the supported skill deal 27% increasing damage",
     ],
@@ -1780,6 +1847,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Vertical", "Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}% additional damage for the supported skill",
@@ -1819,6 +1887,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spell"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -1842,6 +1911,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["dot", "inflict_ailment"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -1864,6 +1934,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["The supported skill cannot inflict Wilt"],
     templates: [
       {
@@ -1887,6 +1958,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Gains a stack of buff when using the supported skill every 6 s. The buff lasts 2s",
     ],
@@ -1901,6 +1973,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["hit_enemies"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Converts 100% of the supported skill's Physical Damage to Fire Damage",
     ],
@@ -1926,6 +1999,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     templates: [
       {
         template:
@@ -1948,6 +2022,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["+35% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -1971,6 +2046,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Focus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-18% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -1993,6 +2069,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spirit Magus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-30% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -2016,6 +2093,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2038,6 +2116,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-15% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -2061,6 +2140,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spirit Magus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: [
       "-30% Sealed Mana Compensation for the supported skill",
       "Minions summoned by the supported skill Taunt nearby enemies every 6 s.",
@@ -2088,6 +2168,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2110,6 +2191,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-12% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -2133,6 +2215,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "passive" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: [
       "Replaces Sealed Mana of the supported skill with Sealed Life",
     ],
@@ -2159,6 +2242,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: [
       "The supported skill does not take effect on other allies",
       "-12% Sealed Mana Compensation for the supported skill",
@@ -2185,6 +2269,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: [
       "-90% additional Aura Effect received from the supported skill.",
       "-12% Sealed Mana Compensation for the supported skill",
@@ -2211,6 +2296,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Aura"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     templates: [
       {
         template:
@@ -2233,6 +2319,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spirit Magus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-20% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -2257,6 +2344,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "passive" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     templates: [
       {
         template: "{value}% Sealed Mana Compensation for the supported skill",
@@ -2278,6 +2366,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Melee", "Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-30% Skill Area for the supported skill"],
     templates: [
       {
@@ -2317,6 +2406,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "active" }],
     cannotSupportTargets: [{ tags: ["Channeled"] }, { tags: ["Attack"] }],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "Prepares the supported skill every {value} s",
@@ -2338,6 +2428,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Horizontal", "Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2367,6 +2458,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Parabolic", "Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "When casting the supported skill, +50% chance to +2 Split Quantity for the skill",
     ],
@@ -2392,6 +2484,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spirit Magus"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: ["-30% Sealed Mana Compensation for the supported skill"],
     templates: [
       {
@@ -2416,6 +2509,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Spell"] }, "spell_burst"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+16% Cast Speed for the supported skill"],
     templates: [
       {
@@ -2439,6 +2533,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2461,6 +2556,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }, { tags: ["Spell"] }],
     cannotSupportTargets: [{ tags: ["Mobility"] }],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2483,6 +2579,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Mobility"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}% Attack and Cast Speed for the supported skill",
@@ -2512,6 +2609,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Melee", "Demolisher"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2542,6 +2640,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Slash-Strike", "Melee"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "The supported skill +{value}% Steep Strike chance.",
@@ -2563,6 +2662,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Adds 5% of Missing Life as Physical Damage to the supported skill; Only has 40% effect on Minion Skills",
     ],
@@ -2595,6 +2695,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Defensive"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Gains a buff: Does not lose Deflection when you are hit while the supported skill lasts. Loses the buff after taking 1 hit(s)",
     ],
@@ -2620,6 +2721,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Combo"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+1 Combo Points gained from Combo Starters for the supported skill",
     ],
@@ -2645,6 +2747,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Beam"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+2 additional refractions for the supported Beam Skill",
       "-10% additional Beam Length for the supported Beam Skill",
@@ -2670,6 +2773,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+70% Restoration Duration for the supported skill",
       "The Restoration Effect from supported skills cannot be removed",
@@ -2685,6 +2789,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+1 Max Charges for the supported skill"],
     templates: [
       {
@@ -2708,6 +2813,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "passive" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     templates: [
       {
         template: "{value}% Sealed Mana Compensation for the supported skill",
@@ -2729,6 +2835,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_spirit_magus"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "Gains a buff when Minions summoned by the supported skill cast skills 8 time(s). Lasts 5 s. You will not receive another buff while the buff is active",
     ],
@@ -2755,6 +2862,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Beam"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+2 additional Beams for the supported Beam Skill"],
     templates: [
       {
@@ -2777,6 +2885,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "passive" }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 100,
     fixedAffixes: [
       "Replaces Sealed Mana of the supported skill with Sealed Life",
     ],
@@ -2803,6 +2912,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Sentry"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "+1 Sentries that can be deployed at a time by the supported skill",
     ],
@@ -2828,6 +2938,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_minions"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2850,6 +2961,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["summon_minions"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -2873,6 +2985,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["dot", "inflict_ailment"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}% Duration for the supported skill",
@@ -2904,6 +3017,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-30% additional Projectile Speed for the supported skill"],
     templates: [
       {
@@ -2926,6 +3040,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Area", "Spell"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-30% Skill Area for the supported skill"],
     templates: [
       {
@@ -2948,6 +3063,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ skillType: "active", tags: ["Spell"] }],
     cannotSupportTargets: [{ tags: ["Channeled"] }],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["The supported skill is cast as a Spell Tangle"],
     templates: [
       {
@@ -2970,6 +3086,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Melee", "Attack"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["-15% Attack Speed for the supported skill"],
     templates: [
       {
@@ -3000,6 +3117,7 @@ export const SupportSkills = [
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "When the supported skill deals damage, there is a 40% chance to inflict a debuff: +10% damage taken by the enemy from the supported skill for 2 s",
     ],
@@ -3024,6 +3142,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Curse"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: [
       "The supported Curse Skill becomes an instant-cast skill. Upon being cast, it inflicts its Curse Effect persistently on enemies within an area centered around the caster. The Duration of the area is equal to the Duration of the Curse Effect of the supported skill. CD of the supported skill is changed to 8s",
     ],
@@ -3048,6 +3167,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Empower"] }],
     cannotSupportTargets: [{ tags: ["Summon"] }],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template:
@@ -3071,6 +3191,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Attack"] }, { tags: ["Spell"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     templates: [
       {
         template: "{value}",
@@ -3129,6 +3250,7 @@ export const SupportSkills = [
     ],
     supportTargets: [{ tags: ["Projectile"] }],
     cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
     fixedAffixes: ["+20% Projectile Speed for the supported skill"],
     templates: [
       {

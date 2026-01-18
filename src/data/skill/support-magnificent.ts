@@ -11,6 +11,7 @@ export const MagnificentSupportSkills = [
       "For every 10 Focus Pts consumed by the supported skill, +(4.0–4.2)% additional damage",
     ],
     supportTarget: "Acuteness Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -21,6 +22,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional Focus Speed for the supported skill",
     ],
     supportTarget: "Acuteness Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -32,6 +34,7 @@ export const MagnificentSupportSkills = [
       "+(20–22)% additional damage for the supported skill",
     ],
     supportTarget: "Arrow Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -42,6 +45,7 @@ export const MagnificentSupportSkills = [
       "For every 5% Life lost, +(2.7–2.9)% additional damage for the supported skill, up to 38% additional damage",
     ],
     supportTarget: "Berserking Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -52,6 +56,7 @@ export const MagnificentSupportSkills = [
       "Doubles the skills buff stack upper limit. Each buff grants (0.40–0.45)% additional Skill Area for the skill",
     ],
     supportTarget: "Berserking Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -63,6 +68,7 @@ export const MagnificentSupportSkills = [
       "For every stack of debuff an enemy has, +(10.5–11.0)% additional Hit Damage dealt to that enemy by the supported skill's explosions",
     ],
     supportTarget: "Blazing Bullet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -74,6 +80,7 @@ export const MagnificentSupportSkills = [
       "+(170–190)% additional Empower Effect for the supported skill",
     ],
     supportTarget: "Blizzard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -85,6 +92,7 @@ export const MagnificentSupportSkills = [
       "(-3–-2)% additional damage for the supported skill",
     ],
     supportTarget: "Blizzard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -96,6 +104,7 @@ export const MagnificentSupportSkills = [
       "+(2460–2500)% additional Hit Damage for the supported skill",
     ],
     supportTarget: "Bombard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -107,6 +116,7 @@ export const MagnificentSupportSkills = [
       "+(3–4)% additional damage for the supported skill",
     ],
     supportTarget: "Bombard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -118,6 +128,7 @@ export const MagnificentSupportSkills = [
       "+(16–18)% additional damage for the supported skill",
     ],
     supportTarget: "Burning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -129,6 +140,7 @@ export const MagnificentSupportSkills = [
       "+(23–25)% additional damage for the supported skill",
     ],
     supportTarget: "Burning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -139,6 +151,7 @@ export const MagnificentSupportSkills = [
       "+(5.5–5.9)% additional damage for every 1 Jump(s) remaining of the supported skill (multiplies)",
     ],
     supportTarget: "Chain Lightning",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -150,6 +163,7 @@ export const MagnificentSupportSkills = [
       "+(16–18)% additional damage for the supported skill",
     ],
     supportTarget: "Chain Lightning",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -161,6 +175,7 @@ export const MagnificentSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Charged Pummel",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -172,6 +187,7 @@ export const MagnificentSupportSkills = [
       "+(230–235)% additional Hit Damage for the supported skill",
     ],
     supportTarget: "Charged Pummel",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -182,6 +198,7 @@ export const MagnificentSupportSkills = [
       "If the character is within 6 m of a Projectile launched by the supported skill, +(41–43)% additional damage for the Projectile",
     ],
     supportTarget: "Corrosion Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -192,6 +209,7 @@ export const MagnificentSupportSkills = [
       "(-9–-8)% Elemental and Erosion Resistance for enemies when the supported skill hits. Lasts for 1 s",
     ],
     supportTarget: "Corrosion Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -203,6 +221,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -214,6 +233,7 @@ export const MagnificentSupportSkills = [
       "(-5–-3)% additional damage for the supported skill",
     ],
     supportTarget: "Corrosive Throw",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -225,6 +245,7 @@ export const MagnificentSupportSkills = [
       "+(42–45)% additional Hit Damage for the Combo Finisher of the supported skill",
     ],
     supportTarget: "Crescent Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -236,6 +257,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Crescent Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -246,6 +268,7 @@ export const MagnificentSupportSkills = [
       "+(5.6–6.0)% additional Attack Speed, up to +30% , for the supported skill for every enemy with Trauma nearby",
     ],
     supportTarget: "Double Thrusts",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -257,6 +280,7 @@ export const MagnificentSupportSkills = [
       "(-23–-21)% additional damage for the supported skill",
     ],
     supportTarget: "Electrifying Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -267,6 +291,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill activates Spell Burst, skills cast by Spell Burst deal +(10.0–11.0)% additional Hit Damage to enemies at the center for every 1 stack(s) of Spell Burst Charge consumed. Stacks up to 6 time(s)",
     ],
     supportTarget: "Fire Burst",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -278,6 +303,7 @@ export const MagnificentSupportSkills = [
       "(-25.0–-24.0)% additional damage for the supported skill",
     ],
     supportTarget: "Fire Burst",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -289,6 +315,7 @@ export const MagnificentSupportSkills = [
       "Sentries deployed by the supported skill deal more damage based on the distance between them and the enemy, up to +(36–38)% additional damage to enemies in proximity",
     ],
     supportTarget: "Flame Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -300,6 +327,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -310,6 +338,7 @@ export const MagnificentSupportSkills = [
       "The supported skill gains (6–7) Focus Pts upon defeating an enemy. Interval: 0.1 s",
     ],
     supportTarget: "Flame Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -321,6 +350,7 @@ export const MagnificentSupportSkills = [
       "The supported skill's Projectiles can Split and deal (-6–-5)% additional damage",
     ],
     supportTarget: "Flame Jet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -332,6 +362,7 @@ export const MagnificentSupportSkills = [
       "(-40–-39)% additional damage for the supported skill",
     ],
     supportTarget: "Flame Jet",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -342,6 +373,7 @@ export const MagnificentSupportSkills = [
       "The supported skill deals more damage to enemies that are closer within 8 m, dealing up to +(38–40)% additional damage to enemies within 3 m",
     ],
     supportTarget: "Flame Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -352,6 +384,7 @@ export const MagnificentSupportSkills = [
       "While having 100 Fervor Rating, +(7.5–8.0)% additional damage for the supported skill every time it is used. Stacks up to 6 time(s). The damage bonus is lost when Fervor Rating is lower than 50",
     ],
     supportTarget: "Focused Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -362,6 +395,7 @@ export const MagnificentSupportSkills = [
       "When there are no enemies nearby, Fervor's effect on the supported skill additionally +(60–65)% (does not apply to the basic effects of Fervor)",
     ],
     supportTarget: "Focused Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -372,6 +406,7 @@ export const MagnificentSupportSkills = [
       "+(65–70)% additional damage for the supported skill when there is only 1 enemy nearby",
     ],
     supportTarget: "Focused Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -382,6 +417,7 @@ export const MagnificentSupportSkills = [
       "While standing still, Fervor's bonus to the supported skill additionally +(12.0–13.0)% every 0.1s, up to 10 time(s). When moving, loses this bonus",
     ],
     supportTarget: "Focused Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -393,6 +429,7 @@ export const MagnificentSupportSkills = [
       "(-4–-1)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -404,6 +441,7 @@ export const MagnificentSupportSkills = [
       "+(17–19)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Impact",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -415,6 +453,7 @@ export const MagnificentSupportSkills = [
       "+(35–37)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Impact",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -426,6 +465,7 @@ export const MagnificentSupportSkills = [
       "+(14–16)% additional damage for the supported skill",
     ],
     supportTarget: "Frost Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -436,6 +476,7 @@ export const MagnificentSupportSkills = [
       "The supported skill deals +(33–35)% additional damage to Frozen enemies",
     ],
     supportTarget: "Frost Terra",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -446,6 +487,7 @@ export const MagnificentSupportSkills = [
       "When you and your allies are on a Terra spawned by the supported skill, (12.0–12.5)% Max Energy Shield will be restored per second",
     ],
     supportTarget: "Frost Terra",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -457,6 +499,7 @@ export const MagnificentSupportSkills = [
       "+(22–24)% additional damage for the supported skill",
     ],
     supportTarget: "Gale Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -467,6 +510,7 @@ export const MagnificentSupportSkills = [
       "+(7.5–7.8)% additional damage (multiplies) for the supported skill for every 5 m moved recently. Stacks up to 5 time(s)",
     ],
     supportTarget: "Gale Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -478,6 +522,7 @@ export const MagnificentSupportSkills = [
       "(0.28–0.30)% additional Detonation Hit Damage for every 1% Multistrike chance of the Sentry deployed by the supported skill. Stacks up to 200 time(s)",
     ],
     supportTarget: "Ghost Blade Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -489,6 +534,7 @@ export const MagnificentSupportSkills = [
       "+(39–41)% additional damage for the supported skill",
     ],
     supportTarget: "Ghost Blade Einherjar",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -500,6 +546,7 @@ export const MagnificentSupportSkills = [
       "The supported skill deals up to +(31–33)% additional damage to enemies at the Center",
     ],
     supportTarget: "Groundshaker",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -511,6 +558,7 @@ export const MagnificentSupportSkills = [
       "+(70–72)% additional Hit Damage for the supported skill",
     ],
     supportTarget: "Groundshaker",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -522,6 +570,7 @@ export const MagnificentSupportSkills = [
       "Adds (231–266) - (429–494) Base Ignite Damage to the supported skill",
     ],
     supportTarget: "Hammer of Ash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -533,6 +582,7 @@ export const MagnificentSupportSkills = [
       "+(35–38)% additional Hit Damage for the explosions of the supported skill's Projectiles",
     ],
     supportTarget: "Hammer of Ash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -543,6 +593,7 @@ export const MagnificentSupportSkills = [
       "+(16–18)% additional damage taken by the enemy selected by the supported skill\n+5% additional damage taken by the selected enemy for every enemy defeated by the supported skill. Stacks up to 4 time(s)",
     ],
     supportTarget: "Haunting Abomination",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -553,6 +604,7 @@ export const MagnificentSupportSkills = [
       "Additionally increases this skill's damage when the supported skill's Terra expands: +(14–15)% additional damage for every 1s the expansion lasts",
     ],
     supportTarget: "Haunting Abomination",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -563,6 +615,7 @@ export const MagnificentSupportSkills = [
       "+50% Knockback Chance for this skill. +(22–24)% additional damage taken by enemies recently knocked back by this skill",
     ],
     supportTarget: "Howling Gale",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -573,6 +626,7 @@ export const MagnificentSupportSkills = [
       "+(3.4–3.7)% additional damage for every 1s the Gale of the skill lasts. Stacks up to 10 time(s). For every channeled stack this skill loses, loses 2 stacks of this buff. All stacks of this buff are lost when all channeled stacks are lost",
     ],
     supportTarget: "Howling Gale",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -583,6 +637,7 @@ export const MagnificentSupportSkills = [
       "The bonus and additional bonus to Cast Speed are also applied to the Interval of Glacial Spikes generated by the supported skill, up to 120%",
     ],
     supportTarget: "Ice Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -594,6 +649,7 @@ export const MagnificentSupportSkills = [
       "+(60–75)% additional Focus Pts consumed for the supported skill",
     ],
     supportTarget: "Ice Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -605,6 +661,7 @@ export const MagnificentSupportSkills = [
       "The supported skill deals +(47–50)% additional damage to enemies on a Frost Terra",
     ],
     supportTarget: "Ice Lances",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -616,6 +673,7 @@ export const MagnificentSupportSkills = [
       "+(14–16)% additional damage for the supported skill",
     ],
     supportTarget: "Ice Lances",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -627,6 +685,7 @@ export const MagnificentSupportSkills = [
       "When a Projectile of the supported skill hits, for every 1 Frostbite Rating the enemy has, (0.90–0.95)% additional damage for the generated explosion, stacks up to 100 time(s)",
     ],
     supportTarget: "Ice Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -637,6 +696,7 @@ export const MagnificentSupportSkills = [
       "The supported skill's Beam inflicts 1 stack of debuff that lasts for 1s on enemies on hit, with each stack of debuff additionally increasing the skill's damage by +(4.0–4.3)% . Stacks up to 8 times",
     ],
     supportTarget: "Icebound Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -647,6 +707,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill's Steep Strike hits a Frozen enemy, explosions generated deal +(46–50)% additional Hit Damage",
     ],
     supportTarget: "Icy Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -658,6 +719,7 @@ export const MagnificentSupportSkills = [
       "(-2.0–-1.0)% additional damage for the supported skill",
     ],
     supportTarget: "Inexhaustible Barrage",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -669,6 +731,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -679,6 +742,7 @@ export const MagnificentSupportSkills = [
       "For 2s, +(3.0–3.2)% additional damage for the supported skill every time it is used. Stacks up to 10 time(s)",
     ],
     supportTarget: "Lightning Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -690,6 +754,7 @@ export const MagnificentSupportSkills = [
       "+(12–14)% additional damage for the supported skill",
     ],
     supportTarget: "Lightning Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -701,6 +766,7 @@ export const MagnificentSupportSkills = [
       "The supported skill +(7–9)% additional Cooldown Recovery Speed",
     ],
     supportTarget: "Lightning Storm",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -712,6 +778,7 @@ export const MagnificentSupportSkills = [
       "+(12–13)% additional damage for the supported skill",
     ],
     supportTarget: "Marked Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -722,6 +789,7 @@ export const MagnificentSupportSkills = [
       "For every time you used the supported skill recently, +(40–43)% Mark Effect, stacking up to 8 time(s)",
     ],
     supportTarget: "Marked Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -732,6 +800,7 @@ export const MagnificentSupportSkills = [
       "+(32–34)% additional damage when the target of the supported skill are affected by 3 or more crowd control effects",
     ],
     supportTarget: "Mind Control",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -742,6 +811,7 @@ export const MagnificentSupportSkills = [
       "+(6.1–6.6)% additional damage for this skill for every link less than maximum links",
     ],
     supportTarget: "Mind Control",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -752,6 +822,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill casts a Steep Strike, there is a (16–18)% chance to launch a circular attack. For every 150 Max Mana, +1% to the trigger chance of this effect, up to +(16–18)%",
     ],
     supportTarget: "Moon Strike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -762,6 +833,7 @@ export const MagnificentSupportSkills = [
       "+1% Steep Strike chance for the supported skill for every 100 Max Mana, up to +(41–44)%",
     ],
     supportTarget: "Moon Strike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -773,6 +845,7 @@ export const MagnificentSupportSkills = [
       "After Reaping an enemy on a Fire Terra, +(20–21)% additional damage taken by this enemy until it leaves the Fire Terra",
     ],
     supportTarget: "Path of Flames",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -783,6 +856,7 @@ export const MagnificentSupportSkills = [
       "Increases the Projectile Speed additional damage bonus for the supported skill to 45%",
     ],
     supportTarget: "Rain of Arrows",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -794,6 +868,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Ring of Blades",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -805,6 +880,7 @@ export const MagnificentSupportSkills = [
       "+(10–12)% additional damage for the supported skill",
     ],
     supportTarget: "Ring of Ice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -815,6 +891,7 @@ export const MagnificentSupportSkills = [
       "Gains (40–50)% Movement Speed when starting to channel the supported skill. The effect gradually falls off to 0 within 2 s",
     ],
     supportTarget: "Savage Charge",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -826,6 +903,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Savage Charge",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -836,6 +914,7 @@ export const MagnificentSupportSkills = [
       "For every explosion generated by the supported skill recently, +2% additional Skill Area and +(1.2–1.3)% additional damage for this skill, up to 20 time(s)",
     ],
     supportTarget: "Scorching Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -846,6 +925,7 @@ export const MagnificentSupportSkills = [
       "+(6.0–6.4)% additional damage for the supported skill for every channeled stack",
     ],
     supportTarget: "Scorching Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -856,6 +936,7 @@ export const MagnificentSupportSkills = [
       "+(39.0–40.0)% chance for the Combo Finisher of the supported skill to fire an additional beam per +1 Beam(s) (guaranteed to fire multiple beams when above 100%)",
     ],
     supportTarget: "Serpent Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -867,6 +948,7 @@ export const MagnificentSupportSkills = [
       "+(4.6–5.0)% additional Hit Damage for Combo Finishers for each time the supported skill casts a Combo Finisher recently. Stacks up to 5 time(s) (multiplies)",
     ],
     supportTarget: "Serpent Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -877,6 +959,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill hits a target, +(40–43)% additional Curse Effect for the target for 4s",
     ],
     supportTarget: "Shackles of Malice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -888,6 +971,7 @@ export const MagnificentSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Shackles of Malice",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -899,6 +983,7 @@ export const MagnificentSupportSkills = [
       "+(120–140)% additional Empower Effect for the supported skill",
     ],
     supportTarget: "Shadow Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -910,6 +995,7 @@ export const MagnificentSupportSkills = [
       "Whenever the Swamp Terra generated by the supported skill moves, +(16–17)% additional Damage Over Time (does not apply to Ailment Damage). This effect stacks with the Base Movement Bonus",
     ],
     supportTarget: "Shadow Swamp",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -921,6 +1007,7 @@ export const MagnificentSupportSkills = [
       "+(11–13)% additional damage for the supported skill",
     ],
     supportTarget: "Shadow Swamp",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -932,6 +1019,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Sparkle",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -943,6 +1031,7 @@ export const MagnificentSupportSkills = [
       "+(22–24)% additional damage for the supported skill",
     ],
     supportTarget: "Spectral Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -954,6 +1043,7 @@ export const MagnificentSupportSkills = [
       "+(16–19)% additional damage for the supported skill",
     ],
     supportTarget: "Split Firebolt",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -965,6 +1055,7 @@ export const MagnificentSupportSkills = [
       "+(11–13)% additional damage for the supported skill",
     ],
     supportTarget: "Split Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -976,6 +1067,7 @@ export const MagnificentSupportSkills = [
       "(-39.0–-38.0)% additional damage for the supported skill",
     ],
     supportTarget: "Split Shot",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -987,6 +1079,7 @@ export const MagnificentSupportSkills = [
       "(-25–-20)% additional duration for the Empower Skill of Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Erosion Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -998,6 +1091,7 @@ export const MagnificentSupportSkills = [
       "-50% Sealed Mana Compensation for the supported skill",
     ],
     supportTarget: "Summon Erosion Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1009,6 +1103,7 @@ export const MagnificentSupportSkills = [
       "Origin of Spirit Magus provided by the supported skill gains an additional effect: +(2.0–2.5)% additional Erosion Damage for all Spirit Magi for each Minion you have",
     ],
     supportTarget: "Summon Erosion Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1020,6 +1115,7 @@ export const MagnificentSupportSkills = [
       "(-18.0–-16.0)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Fire Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1031,6 +1127,7 @@ export const MagnificentSupportSkills = [
       "-50% Sealed Mana Compensation for the supported skill",
     ],
     supportTarget: "Summon Fire Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1042,6 +1139,7 @@ export const MagnificentSupportSkills = [
       "+(50–55)% additional Damage Over Time for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Fire Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1053,6 +1151,7 @@ export const MagnificentSupportSkills = [
       "-50% Sealed Mana Compensation for the supported skill",
     ],
     supportTarget: "Summon Frost Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1064,6 +1163,7 @@ export const MagnificentSupportSkills = [
       "(-59–-58)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Frost Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1074,6 +1174,7 @@ export const MagnificentSupportSkills = [
       "+(45–49)% additional damage dealt to Frozen enemies for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Frost Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1085,6 +1186,7 @@ export const MagnificentSupportSkills = [
       "For every 4 time(s) a Minion summoned by the supported skill casts High Energy Beam, +(2.3–2.5)% additional damage for that cast for every 1 Command the character has, stacking up to 50 time(s)",
     ],
     supportTarget: "Summon Grim Phantom",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1096,6 +1198,7 @@ export const MagnificentSupportSkills = [
       "+(72–78)% additional damage for the Destructive Light Cannon cast by Minions summoned by the supported skill when having at least 30 Command",
     ],
     supportTarget: "Summon Grim Phantom",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1107,6 +1210,7 @@ export const MagnificentSupportSkills = [
       "+(42–45)% additional damage for the Onslaught Punch cast by Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Machine Guard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1117,6 +1221,7 @@ export const MagnificentSupportSkills = [
       "Upon casting Onslaught Punch, Minions summoned by the supported skill gain a buff that lasts for 2 s. While the buff is active:\n+(50–54)% additional damage for the Overpower of Minions summoned by the supported skill\n+15% additional Skill Area for the Overpower of Minions summoned by the supported skill\n+30% Physique for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Machine Guard",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1128,6 +1233,7 @@ export const MagnificentSupportSkills = [
       "+(47–50)% additional damage while the Empower Skill of Minions summoned by the supported skill lasts",
     ],
     supportTarget: "Summon Rock Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1139,6 +1245,7 @@ export const MagnificentSupportSkills = [
       "For each time Minions summoned by the supported skill use their Ultimate, +(12.0–13.0)% additional Hit Damage (multiplies) for their Ultimate. Lasts for 6 s. Stacks up to 3 time(s)",
     ],
     supportTarget: "Summon Rock Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1150,6 +1257,7 @@ export const MagnificentSupportSkills = [
       "-50% Sealed Mana Compensation for the supported skill",
     ],
     supportTarget: "Summon Rock Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1161,6 +1269,7 @@ export const MagnificentSupportSkills = [
       "+(9.0–11.0)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Spider Tank",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1172,6 +1281,7 @@ export const MagnificentSupportSkills = [
       "(-17.0–-15.5)% additional damage for Minions summoned by the supported skill",
     ],
     supportTarget: "Summon Thunder Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1183,6 +1293,7 @@ export const MagnificentSupportSkills = [
       "-50% Sealed Mana Compensation for the supported skill",
     ],
     supportTarget: "Summon Thunder Magus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1193,6 +1304,7 @@ export const MagnificentSupportSkills = [
       "+(75–80)% Max Life as Energy Shield for Minions summoned by the supported skill when having at least 30 Command",
     ],
     supportTarget: "Synthetic Troop Skill",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1203,6 +1315,7 @@ export const MagnificentSupportSkills = [
       "For each Numbed enemy within 10m of a Sentry generated by this skill, +(5.5–6)% additional Sentry Cast Frequency. Stacks up to 8 time(s)",
     ],
     supportTarget: "Thunder Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1214,6 +1327,7 @@ export const MagnificentSupportSkills = [
       "+(68–72)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Core",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1225,6 +1339,7 @@ export const MagnificentSupportSkills = [
       "(-30–-28) Focus Pts required to trigger the supported skill",
     ],
     supportTarget: "Thunder Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1235,6 +1350,7 @@ export const MagnificentSupportSkills = [
       "+(5.5–5.9)% additional damage (multiplies) for the supported skill for every 5 m moved recently. Stacks up to 5 time(s)",
     ],
     supportTarget: "Thunder Focus",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1246,6 +1362,7 @@ export const MagnificentSupportSkills = [
       "+(3.0–4.0)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1257,6 +1374,7 @@ export const MagnificentSupportSkills = [
       "+(6–7)% additional Attack Speed when the supported skill launches Multistrikes",
     ],
     supportTarget: "Thunder Slash",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1268,6 +1386,7 @@ export const MagnificentSupportSkills = [
       "+(3–4)% additional damage for the supported skill",
     ],
     supportTarget: "Thunder Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1279,6 +1398,7 @@ export const MagnificentSupportSkills = [
       "(-15.0–-13.0)% additional damage for the supported skill",
     ],
     supportTarget: "Thunderbolt Overload",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1290,6 +1410,7 @@ export const MagnificentSupportSkills = [
       "(-41.0–-40.0)% additional damage for the supported skill",
     ],
     supportTarget: "Thunderbolt Overload",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1300,6 +1421,7 @@ export const MagnificentSupportSkills = [
       "The supported skill consumes 1 stack of Numbed on the enemy on hit, dealing (41–43)% additional damage to the enemy over the next 1s. Interval: 1s",
     ],
     supportTarget: "Thundercloud",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1311,6 +1433,7 @@ export const MagnificentSupportSkills = [
       "+(6–8)% additional damage for the supported skill",
     ],
     supportTarget: "Thundercloud",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1322,6 +1445,7 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Whirlwind",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1333,6 +1457,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill is channeled, +(1.5–1.9)% chance to avoid damage for every channeled stack, up to 8 time(s)",
     ],
     supportTarget: "Whirlwind",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1344,6 +1469,7 @@ export const MagnificentSupportSkills = [
       "+(26–28)% additional damage for the supported skill",
     ],
     supportTarget: "Whirlwind Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1354,6 +1480,7 @@ export const MagnificentSupportSkills = [
       "+(38–40)% additional Hit Damage when the supported skill's Projectiles are flying in the air",
     ],
     supportTarget: "Whirlwind Blade",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1364,6 +1491,7 @@ export const MagnificentSupportSkills = [
       "Changes the buff effect of the supported skill to: +(5.6–6.0)% additional Deterioration Damage",
     ],
     supportTarget: "Wilt Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1374,6 +1502,7 @@ export const MagnificentSupportSkills = [
       "+(5.6–6.0)% chance for the supported skill to inflict 1 additional stack(s) of Wilt for every stack of buff of the supported skill",
     ],
     supportTarget: "Wilt Spike",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1384,6 +1513,7 @@ export const MagnificentSupportSkills = [
       "When the supported skill deals damage, inflict Weaken on the enemy and +(17–19)% additional Erosion Damage taken by the enemy",
     ],
     supportTarget: "Wilting Beam",
+    manaCostMultiplierPct: 110,
   },
   {
     type: "Support (Magnificent)",
@@ -1395,5 +1525,6 @@ export const MagnificentSupportSkills = [
       "+(28–30)% additional damage for the supported skill",
     ],
     supportTarget: "Wilting Beam",
+    manaCostMultiplierPct: 110,
   },
 ] as const satisfies readonly BaseMagnificentSupportSkill[];

@@ -265,6 +265,7 @@ interface RawSkill {
   tags: string[];
   description: string[];
   mainStats?: ("str" | "dex" | "int")[];
+  manaCostMultiplierPct?: number;
   parsedLevelModValues?: Record<string, Record<number, number>>;
   parsedAffixDefs?: Record<0 | 1 | 2 | 3, ActivationMediumAffixDef[]>;
   progressionTable?: ProgressionColumn[];
@@ -740,6 +741,20 @@ const extractSkillFromTlidbHtml = (
     }
   });
 
+  // Extract Mana Cost Multiplier for support skills (e.g., "110.0%" → 110)
+  let manaCostMultiplierPct: number | undefined;
+  currentCard.find("div.d-flex").each((_, elem) => {
+    const label = $(elem).find("div").first().text().trim();
+    if (label === "Mana Cost Multiplier") {
+      const value = $(elem).find("div.ps-2").text().trim();
+      // Parse "110.0%" to 110
+      const match = value.match(/^([\d.]+)%$/);
+      if (match?.[1] !== undefined) {
+        manaCostMultiplierPct = parseFloat(match[1]);
+      }
+    }
+  });
+
   // Remove <small class="description"> elements (level scaling info)
   currentCard.find("small.description").remove();
 
@@ -823,6 +838,7 @@ const extractSkillFromTlidbHtml = (
     tags,
     description,
     mainStats,
+    manaCostMultiplierPct,
     parsedLevelModValues,
     parsedAffixDefs,
     progressionTable,
@@ -1183,6 +1199,15 @@ const main = async (options: Options): Promise<void> => {
     BaseActivationMediumSkill[]
   >();
 
+  const requireManaCostMultiplier = (raw: RawSkill): number => {
+    if (raw.manaCostMultiplierPct === undefined) {
+      throw new Error(
+        `Missing Mana Cost Multiplier for skill "${raw.name}" (${raw.type})`,
+      );
+    }
+    return raw.manaCostMultiplierPct;
+  };
+
   for (const raw of rawData) {
     const skillType = raw.type as SkillTypeKey;
 
@@ -1215,6 +1240,7 @@ const main = async (options: Options): Promise<void> => {
         description: raw.description,
         supportTargets,
         cannotSupportTargets,
+        manaCostMultiplierPct: requireManaCostMultiplier(raw),
         ...(fixedAffixes.length > 0 && { fixedAffixes }),
         ...(templates.length > 0 && { templates }),
       };
@@ -1232,6 +1258,7 @@ const main = async (options: Options): Promise<void> => {
         tags: raw.tags as unknown as BaseMagnificentSupportSkill["tags"],
         description: raw.description,
         supportTarget,
+        manaCostMultiplierPct: requireManaCostMultiplier(raw),
       };
 
       if (!magnificentSupportSkillGroups.has(skillType)) {
@@ -1247,6 +1274,7 @@ const main = async (options: Options): Promise<void> => {
         tags: raw.tags as unknown as BaseNobleSupportSkill["tags"],
         description: raw.description,
         supportTarget,
+        manaCostMultiplierPct: requireManaCostMultiplier(raw),
       };
 
       if (!nobleSupportSkillGroups.has(skillType)) {
@@ -1267,6 +1295,7 @@ const main = async (options: Options): Promise<void> => {
         description: raw.description,
         supportTargets,
         cannotSupportTargets,
+        manaCostMultiplierPct: requireManaCostMultiplier(raw),
         ...(raw.parsedAffixDefs !== undefined && {
           affixDefs: raw.parsedAffixDefs,
         }),

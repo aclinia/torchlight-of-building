@@ -149,6 +149,8 @@ export interface BaseSupportSkill extends BaseSkill {
   supportTargets: SupportTarget[];
   // cannot support any of the matched targets (takes precedence over supportTargets)
   cannotSupportTargets: SupportTarget[];
+  // how much the supported skill's mana cost is increased by
+  manaCostMultiplierPct: number;
   // Fixed affixes that don't scale with level
   fixedAffixes?: readonly string[];
   // Templates for affixes that scale with level
@@ -157,10 +159,12 @@ export interface BaseSupportSkill extends BaseSkill {
 
 export interface BaseMagnificentSupportSkill extends BaseSkill {
   supportTarget: string;
+  manaCostMultiplierPct: number;
 }
 
 export interface BaseNobleSupportSkill extends BaseSkill {
   supportTarget: string;
+  manaCostMultiplierPct: number;
 }
 
 /**
@@ -178,6 +182,8 @@ export interface BaseActivationMediumSkill extends BaseSkill {
   supportTargets: SupportTarget[];
   // cannot support any of the matched targets (takes precedence over supportTargets)
   cannotSupportTargets: SupportTarget[];
+  // how much the supported skill's mana cost is increased by
+  manaCostMultiplierPct: number;
   /** Affix definitions organized by tier (skill has one tier, not each affix) */
   affixDefs?: Record<0 | 1 | 2 | 3, ActivationMediumAffixDef[]>;
 }
