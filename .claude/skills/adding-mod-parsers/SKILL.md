@@ -40,28 +40,21 @@ interface ModDefinitions {
 
 ### 2. Add Template in `templates.ts`
 
-Templates use a DSL for pattern matching:
+Templates use a DSL for pattern matching. **Do not add comments to templates.ts** - the template string itself is self-documenting.
 
 ```typescript
-// Simple template
 t("{value:dec%} all stats").output("StatPct", (c) => ({
   value: c.value,
   statModType: "all" as const,
 })),
-
-// Template with enum lookup
 t("{value:dec%} {statModType:StatWord}")
   .enum("StatWord", StatWordMapping)
   .output("StatPct", (c) => ({ value: c.value, statModType: c.statModType })),
-
-// Template with optional parts (brackets)
 t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
   value: c.value,
   dmgModType: c.modType ?? "global",
   addn: c.additional !== undefined,
 })),
-
-// Template outputting multiple mods
 t("{value:dec%} attack and cast speed").outputMany([
   spec("AspdPct", (c) => ({ value: c.value, addn: false })),
   spec("CspdPct", (c) => ({ value: c.value, addn: false })),
@@ -97,14 +90,12 @@ t("{value:dec%} attack and cast speed").outputMany([
 If you need custom word → value mapping, add to `enums.ts`:
 
 ```typescript
-// Custom word mappings (input word -> output value)
 export const StatWordMapping: Record<string, string> = {
   strength: "str",
   dexterity: "dex",
   intelligence: "int",
 };
 
-// Register for validation
 registerEnum("StatWord", ["strength", "dexterity", "intelligence"]);
 ```
 
@@ -114,18 +105,13 @@ If you added a new mod type, add handling in `calculateOffense()` or relevant he
 
 ```typescript
 case "NewModType": {
-  // Apply the mod effect
   break;
 }
 ```
 
-For existing mod types with new variants (like adding `statModType: "all"`), update existing handlers:
+For existing mod types with new variants (like adding `statModType: "all"`), update existing handlers to also filter for the new variant:
 
 ```typescript
-// Before: only handled individual stats
-const flat = sumByValue(statMods.filter((m) => m.statModType === statType));
-
-// After: also handles "all"
 const flat = sumByValue(
   statMods.filter((m) => m.statModType === statType || m.statModType === "all"),
 );

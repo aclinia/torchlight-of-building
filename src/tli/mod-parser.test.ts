@@ -3063,3 +3063,72 @@ test("parse chance to gain tenacity blessing on defeat", () => {
   );
   expect(result).toEqual([{ type: "GeneratesTenacityBlessing" }]);
 });
+
+// Damage taken mods
+test("parse DoT damage taken with armor threshold", () => {
+  const result = parseMod(
+    "-25% additional Damage Over Time taken when having at least 50000 Armor",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgTakenPct",
+      value: -25,
+      addn: true,
+      dmgTakenType: "damage_over_time",
+      condThreshold: { target: "armor", comparator: "gte", value: 50000 },
+    },
+  ]);
+});
+
+test("parse DoT damage taken with evasion threshold", () => {
+  const result = parseMod(
+    "-25% additional Damage Over Time taken when having at least 50000 Evasion",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgTakenPct",
+      value: -25,
+      addn: true,
+      dmgTakenType: "damage_over_time",
+      condThreshold: { target: "evasion", comparator: "gte", value: 50000 },
+    },
+  ]);
+});
+
+test("parse DoT damage taken with energy shield threshold", () => {
+  const result = parseMod(
+    "-25% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgTakenPct",
+      value: -25,
+      addn: true,
+      dmgTakenType: "damage_over_time",
+      condThreshold: {
+        target: "energy_shield",
+        comparator: "gte",
+        value: 8000,
+      },
+    },
+  ]);
+});
+
+test("parse additional physical damage taken", () => {
+  const result = parseMod("-11% additional Physical Damage taken");
+  expect(result).toEqual([
+    { type: "DmgTakenPct", value: -11, addn: true, dmgTakenType: "physical" },
+  ]);
+});
+
+test("parse damage dealt by nearby enemies", () => {
+  const result = parseMod("-13% additional Damage dealt by Nearby enemies");
+  expect(result).toEqual([
+    {
+      type: "DmgTakenPct",
+      value: -13,
+      addn: true,
+      cond: "target_enemy_is_nearby",
+    },
+  ]);
+});

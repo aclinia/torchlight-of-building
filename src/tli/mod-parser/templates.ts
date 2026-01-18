@@ -1754,4 +1754,52 @@ export const allParsers = [
     dmgType: c.dmgType,
     per: { stackable: "armor" as const, amt: c.amt },
   })),
+  t(
+    "{value:+dec%} additional damage over time taken when having at least {threshold:int} armor",
+  ).output("DmgTakenPct", (c) => ({
+    value: c.value,
+    addn: true,
+    dmgTakenType: "damage_over_time" as const,
+    condThreshold: {
+      target: "armor" as const,
+      comparator: "gte" as const,
+      value: c.threshold,
+    },
+  })),
+  t(
+    "{value:+dec%} additional damage over time taken when having at least {threshold:int} evasion",
+  ).output("DmgTakenPct", (c) => ({
+    value: c.value,
+    addn: true,
+    dmgTakenType: "damage_over_time" as const,
+    condThreshold: {
+      target: "evasion" as const,
+      comparator: "gte" as const,
+      value: c.threshold,
+    },
+  })),
+  t(
+    "{value:+dec%} additional damage over time taken when you have at least {threshold:int} max energy shield",
+  ).output("DmgTakenPct", (c) => ({
+    value: c.value,
+    addn: true,
+    dmgTakenType: "damage_over_time" as const,
+    condThreshold: {
+      target: "energy_shield" as const,
+      comparator: "gte" as const,
+      value: c.threshold,
+    },
+  })),
+  t("{value:+dec%} additional physical damage taken").output(
+    "DmgTakenPct",
+    (c) => ({ value: c.value, addn: true, dmgTakenType: "physical" as const }),
+  ),
+  t("{value:+dec%} additional damage dealt by nearby enemies").output(
+    "DmgTakenPct",
+    (c) => ({
+      value: c.value,
+      addn: true,
+      cond: "target_enemy_is_nearby" as const,
+    }),
+  ),
 ];
