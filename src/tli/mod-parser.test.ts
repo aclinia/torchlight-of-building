@@ -3205,3 +3205,82 @@ test("parse damage dealt by nearby enemies", () => {
     },
   ]);
 });
+
+test("parse additional cold damage and penetration with focus blessing threshold", () => {
+  const result = parseMod(
+    "+7% additional Cold Damage and +14% Cold Penetration when you have at least 8 stack(s) of Focus Blessing",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 7,
+      dmgModType: "cold",
+      addn: true,
+      condThreshold: { target: "focus_blessing", comparator: "gte", value: 8 },
+    },
+    {
+      type: "ResPenPct",
+      value: 14,
+      penType: "cold",
+      condThreshold: { target: "focus_blessing", comparator: "gte", value: 8 },
+    },
+  ]);
+});
+
+test("parse additional fire damage and penetration with tenacity blessing threshold", () => {
+  const result = parseMod(
+    "+7% additional Fire Damage and +14% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 7,
+      dmgModType: "fire",
+      addn: true,
+      condThreshold: {
+        target: "tenacity_blessing",
+        comparator: "gte",
+        value: 8,
+      },
+    },
+    {
+      type: "ResPenPct",
+      value: 14,
+      penType: "fire",
+      condThreshold: {
+        target: "tenacity_blessing",
+        comparator: "gte",
+        value: 8,
+      },
+    },
+  ]);
+});
+
+test("parse additional lightning damage and penetration with agility blessing threshold", () => {
+  const result = parseMod(
+    "+7% additional Lightning Damage and +14% Lightning Penetration when you have at least 8 stack(s) of Agility Blessing",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 7,
+      dmgModType: "lightning",
+      addn: true,
+      condThreshold: {
+        target: "agility_blessing",
+        comparator: "gte",
+        value: 8,
+      },
+    },
+    {
+      type: "ResPenPct",
+      value: 14,
+      penType: "lightning",
+      condThreshold: {
+        target: "agility_blessing",
+        comparator: "gte",
+        value: 8,
+      },
+    },
+  ]);
+});

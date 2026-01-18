@@ -977,6 +977,75 @@ export const allParsers = [
     value: c.value,
     statModType: "all" as const,
   })),
+  t(
+    "{dmgValue:+dec%} additional cold damage and {penValue:+dec%} cold penetration when you have at least {threshold:int} stack\\(s\\) of focus blessing",
+  ).outputMany([
+    spec("DmgPct", (c) => ({
+      value: c.dmgValue,
+      dmgModType: "cold" as const,
+      addn: true,
+      condThreshold: {
+        target: S.focus_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+    spec("ResPenPct", (c) => ({
+      value: c.penValue,
+      penType: "cold" as const,
+      condThreshold: {
+        target: S.focus_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+  ]),
+  t(
+    "{dmgValue:+dec%} additional fire damage and {penValue:+dec%} fire penetration when you have at least {threshold:int} stack\\(s\\) of tenacity blessing",
+  ).outputMany([
+    spec("DmgPct", (c) => ({
+      value: c.dmgValue,
+      dmgModType: "fire" as const,
+      addn: true,
+      condThreshold: {
+        target: S.tenacity_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+    spec("ResPenPct", (c) => ({
+      value: c.penValue,
+      penType: "fire" as const,
+      condThreshold: {
+        target: S.tenacity_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+  ]),
+  t(
+    "{dmgValue:+dec%} additional lightning damage and {penValue:+dec%} lightning penetration when you have at least {threshold:int} stack\\(s\\) of agility blessing",
+  ).outputMany([
+    spec("DmgPct", (c) => ({
+      value: c.dmgValue,
+      dmgModType: "lightning" as const,
+      addn: true,
+      condThreshold: {
+        target: S.agility_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+    spec("ResPenPct", (c) => ({
+      value: c.penValue,
+      penType: "lightning" as const,
+      condThreshold: {
+        target: S.agility_blessing,
+        comparator: "gte" as const,
+        value: c.threshold,
+      },
+    })),
+  ]),
   t("max focus blessing stacks {value:+int}").output(
     "MaxFocusBlessing",
     (c) => ({ value: c.value }),
