@@ -2,6 +2,7 @@ import { useLingui } from "@lingui/react";
 import { Trans } from "@lingui/react/macro";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { z } from "zod";
 import { ImportModal } from "../components/modals/ImportModal";
 import { decodeBuildCode } from "../lib/build-code";
 import {
@@ -10,6 +11,7 @@ import {
   SUPPORTED_LOCALES,
   setStoredLocale,
 } from "../lib/i18n";
+import { importBuild } from "../lib/import-utils";
 import {
   deleteSaveData,
   generateSaveId,
@@ -22,7 +24,14 @@ import {
 } from "../lib/saves";
 import { createEmptySaveData } from "../lib/storage";
 
-export const Route = createFileRoute("/")({ component: SavesPage });
+const searchSchema = z.object({
+  importError: z.enum(["invalid", "save_failed"]).optional(),
+});
+
+export const Route = createFileRoute("/")({
+  component: SavesPage,
+  validateSearch: searchSchema,
+});
 
 const formatDate = (timestamp: number): string => {
   return new Date(timestamp).toLocaleDateString(getStoredLocale(), {
@@ -177,18 +186,29 @@ const SaveCard: React.FC<SaveCardProps> = ({
 function SavesPage(): React.ReactNode {
   const navigate = useNavigate();
   const { i18n } = useLingui();
+  const { importError } = Route.useSearch();
   const [savesIndex, setSavesIndex] = useState<SavesIndex>({
     currentSaveId: undefined,
     saves: [],
   });
   const [mounted, setMounted] = useState(false);
   const [importModalOpen, setImportModalOpen] = useState(false);
+  const [showImportError, setShowImportError] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const index = loadSavesIndex();
     setSavesIndex(index);
   }, []);
+
+  // Show import error banner when redirected with error
+  useEffect(() => {
+    if (importError !== undefined) {
+      setShowImportError(true);
+      // Clear the error from URL after showing it
+      navigate({ to: "/", search: {}, replace: true });
+    }
+  }, [importError, navigate]);
 
   // Force re-render when locale changes
   void i18n.locale;
@@ -276,26 +296,15 @@ function SavesPage(): React.ReactNode {
       return false;
     }
 
-    const now = Date.now();
-    const newSaveId = generateSaveId();
-    const newMetadata: SaveMetadata = {
-      id: newSaveId,
-      name: "Imported Build",
-      createdAt: now,
-      updatedAt: now,
-    };
-
-    const success = saveSaveData(newSaveId, decoded);
-    if (success) {
-      const newIndex: SavesIndex = {
-        currentSaveId: newSaveId,
-        saves: [...savesIndex.saves, newMetadata],
-      };
-      saveSavesIndex(newIndex);
-      setSavesIndex(newIndex);
-      navigate({ to: "/builder", search: { id: newSaveId } });
+    const result = importBuild(decoded);
+    if (result === undefined) {
+      return false;
     }
-    return success;
+
+    // Refresh local state from storage (importBuild already updated storage)
+    setSavesIndex(loadSavesIndex());
+    navigate({ to: "/builder", search: { id: result.saveId } });
+    return true;
   };
 
   if (!mounted) {
@@ -347,6 +356,33 @@ function SavesPage(): React.ReactNode {
             </div>
           </div>
         </div>
+
+        {showImportError && (
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 text-lg">⚠️</span>
+                <div>
+                  <p className="text-red-200 font-medium">
+                    <Trans>Import Failed</Trans>
+                  </p>
+                  <p className="text-zinc-400 text-sm mt-1">
+                    <Trans>
+                      The build code in the URL was invalid or could not be
+                      imported.
+                    </Trans>
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowImportError(false)}
+                className="text-zinc-400 hover:text-zinc-200 transition-colors"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-zinc-50">

@@ -14,16 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:657
-msgid "Craft New Item"
-msgstr "Craft New Item"
-
-#. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:658
-msgid "Edit {equipmentType}"
-msgstr "Edit {equipmentType}"
-
-#. js-lingui-explicit-id
 #: src/routes/builder/skills.tsx:56
 msgid "Active Skills"
 msgstr "Active Skills"
@@ -42,46 +32,6 @@ msgstr "Slot 1"
 #: src/routes/builder/talents/$slot.tsx:355
 msgid "Slot"
 msgstr "Slot"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:4
-msgid "Equipment"
-msgstr "Equipment"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:5
-msgid "Talents"
-msgstr "Talents"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:6
-msgid "Skills"
-msgstr "Skills"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:7
-msgid "Hero"
-msgstr "Hero"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:8
-msgid "Pactspirit"
-msgstr "Pactspirit"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:9
-msgid "Divinity"
-msgstr "Divinity"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:10
-msgid "Configuration"
-msgstr "Configuration"
-
-#. js-lingui-explicit-id
-#: src/data/translate/translate-tab.ts:11
-msgid "Calculations"
-msgstr "Calculations"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
@@ -320,6 +270,46 @@ msgid "Wand"
 msgstr "Wand"
 
 #. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:4
+msgid "Equipment"
+msgstr "Equipment"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:5
+msgid "Talents"
+msgstr "Talents"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:6
+msgid "Skills"
+msgstr "Skills"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:7
+msgid "Hero"
+msgstr "Hero"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:8
+msgid "Pactspirit"
+msgstr "Pactspirit"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:9
+msgid "Divinity"
+msgstr "Divinity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:10
+msgid "Configuration"
+msgstr "Configuration"
+
+#. js-lingui-explicit-id
+#: src/data/translate/translate-tab.ts:11
+msgid "Calculations"
+msgstr "Calculations"
+
+#. js-lingui-explicit-id
 #: src/components/talents/TalentNodeDisplay.tsx:81
 msgid "Micro Talent"
 msgstr "Micro Talent"
@@ -376,6 +366,16 @@ msgstr ""
 "+20 to Maximum Life\n"
 "+5% Attack Speed"
 
+#. js-lingui-explicit-id
+#: src/components/equipment/EditGearModal.tsx:657
+msgid "Craft New Item"
+msgstr "Craft New Item"
+
+#. js-lingui-explicit-id
+#: src/components/equipment/EditGearModal.tsx:658
+msgid "Edit {equipmentType}"
+msgstr "Edit {equipmentType}"
+
 #: src/components/calculations/SkillSelector.tsx:45
 msgid "Active Skill"
 msgstr "Active Skill"
@@ -393,7 +393,7 @@ msgid "Affix Lines (one per line)"
 msgstr "Affix Lines (one per line)"
 
 #. placeholder {0}: save.name
-#: src/routes/index.tsx:125
+#: src/routes/index.tsx:134
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Are you sure you want to delete \"{0}\"?"
 
@@ -411,12 +411,12 @@ msgstr "Blending (1 max)"
 
 #: src/components/equipment/AdvancedCraftingModal.tsx:142
 #: src/components/equipment/EditGearModal.tsx:869
-#: src/routes/index.tsx:98
-#: src/routes/index.tsx:141
+#: src/routes/index.tsx:107
+#: src/routes/index.tsx:150
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/routes/index.tsx:163
+#: src/routes/index.tsx:172
 msgid "Copy"
 msgstr "Copy"
 
@@ -433,29 +433,29 @@ msgstr "Craft Item"
 msgid "Craft New Item"
 msgstr "Craft New Item"
 
-#: src/routes/index.tsx:366
+#: src/routes/index.tsx:402
 msgid "Create New"
 msgstr "Create New"
 
-#: src/routes/index.tsx:402
+#: src/routes/index.tsx:438
 msgid "Create New Build"
 msgstr "Create New Build"
 
-#: src/routes/index.tsx:393
+#: src/routes/index.tsx:429
 msgid "Create your first character build to get started"
 msgstr "Create your first character build to get started"
 
 #. placeholder {0}: formatDate(save.createdAt)
-#: src/routes/index.tsx:109
+#: src/routes/index.tsx:118
 msgid "Created: {0}"
 msgstr "Created: {0}"
 
-#: src/routes/index.tsx:135
-#: src/routes/index.tsx:169
+#: src/routes/index.tsx:144
+#: src/routes/index.tsx:178
 msgid "Delete"
 msgstr "Delete"
 
-#: src/routes/index.tsx:339
+#: src/routes/index.tsx:348
 msgid "Early Development"
 msgstr "Early Development"
 
@@ -472,9 +472,13 @@ msgstr "Equipment Slots"
 msgid "Equipment Type"
 msgstr "Equipment Type"
 
-#: src/routes/index.tsx:360
+#: src/routes/index.tsx:396
 msgid "Import Build"
 msgstr "Import Build"
+
+#: src/routes/index.tsx:367
+msgid "Import Failed"
+msgstr "Import Failed"
 
 #: src/routes/builder/equipment.tsx:132
 msgid "Inventory"
@@ -484,11 +488,11 @@ msgstr "Inventory"
 msgid "items"
 msgstr "items"
 
-#: src/routes/index.tsx:353
+#: src/routes/index.tsx:389
 msgid "My Builds"
 msgstr "My Builds"
 
-#: src/routes/index.tsx:390
+#: src/routes/index.tsx:426
 msgid "No builds yet"
 msgstr "No builds yet"
 
@@ -500,7 +504,7 @@ msgstr "No builds yet"
 msgid "No items in inventory. Craft items above to add them here."
 msgstr "No items in inventory. Craft items above to add them here."
 
-#: src/routes/index.tsx:342
+#: src/routes/index.tsx:351
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 msgstr "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 
@@ -512,12 +516,12 @@ msgstr "Prefixes (3 max)"
 msgid "Prisms"
 msgstr "Prisms"
 
-#: src/routes/index.tsx:157
+#: src/routes/index.tsx:166
 msgid "Rename"
 msgstr "Rename"
 
 #: src/components/equipment/EditGearModal.tsx:879
-#: src/routes/index.tsx:92
+#: src/routes/index.tsx:101
 msgid "Save"
 msgstr "Save"
 
@@ -551,6 +555,10 @@ msgstr "Suffixes (3 max)"
 msgid "Sweet Dream Affix (1 max)"
 msgstr "Sweet Dream Affix (1 max)"
 
+#: src/routes/index.tsx:370
+msgid "The build code in the URL was invalid or could not be imported."
+msgstr "The build code in the URL was invalid or could not be imported."
+
 #: src/components/equipment/EditGearModal.tsx:752
 msgid "Tower Sequence (1 max)"
 msgstr "Tower Sequence (1 max)"
@@ -560,6 +568,6 @@ msgid "Tree Slots"
 msgstr "Tree Slots"
 
 #. placeholder {0}: formatDate(save.updatedAt)
-#: src/routes/index.tsx:113
+#: src/routes/index.tsx:122
 msgid "Updated: {0}"
 msgstr "Updated: {0}"
