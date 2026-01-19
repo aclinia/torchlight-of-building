@@ -991,8 +991,16 @@ export const allParsers = [
     "AvoidElementalAilmentsChancePct",
     (c) => ({ value: c.value }),
   ),
+  t("{value:+dec%} chance to avoid elemental ailment").output(
+    "AvoidElementalAilmentsChancePct",
+    (c) => ({ value: c.value }),
+  ),
   t("{value:+dec%} chance to avoid spell damage").output(
     "AvoidSpellDmgChancePct",
+    (c) => ({ value: c.value }),
+  ),
+  t("{value:+dec%} critical strike damage mitigation").output(
+    "CriticalStrikeDmgMitigationPct",
     (c) => ({ value: c.value }),
   ),
 

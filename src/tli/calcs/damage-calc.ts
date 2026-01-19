@@ -356,6 +356,7 @@ export const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
   Channeled: "channeled",
   "Shadow Strike": "shadow_strike_skill",
   Projectile: "projectile",
+  Ranged: "ranged",
 };
 
 export const dmgModTypesForSkill = (skill: BaseActiveSkill): DmgModType[] => {

@@ -3544,3 +3544,24 @@ test("parse max life and max mana percentage", () => {
     { type: "MaxManaPct", value: 15, addn: false },
   ]);
 });
+
+test("parse chance to avoid elemental ailment", () => {
+  const result = parseMod("+10% chance to avoid Elemental Ailment");
+  expect(result).toEqual([
+    { type: "AvoidElementalAilmentsChancePct", value: 10 },
+  ]);
+});
+
+test("parse ranged damage", () => {
+  const result = parseMod("+22% Ranged Damage");
+  expect(result).toEqual([
+    { type: "DmgPct", value: 22, dmgModType: "ranged", addn: false },
+  ]);
+});
+
+test("parse critical strike damage mitigation", () => {
+  const result = parseMod("+28% Critical Strike Damage Mitigation");
+  expect(result).toEqual([
+    { type: "CriticalStrikeDmgMitigationPct", value: 28 },
+  ]);
+});
