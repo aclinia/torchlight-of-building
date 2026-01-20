@@ -187,8 +187,8 @@ msgstr "Create New Build"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:9
-msgid "Divinity"
-msgstr "Divinity"
+msgid "Divinity Slate"
+msgstr "Divinity Slate"
 
 #: src/routes/index.tsx:396
 msgid "Import Build"
