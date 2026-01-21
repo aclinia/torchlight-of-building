@@ -1047,7 +1047,10 @@ export const CoreTalentMods: Record<CoreTalentName, Affix> = {
   "Shrink Back": {
     affixLines: [
       { text: "Gains Barrier every 1s" },
-      { text: "+50% Barrier Shield" },
+      {
+        text: "+50% Barrier Shield",
+        mods: [{ type: "BarrierShieldPct", value: 50, addn: false }],
+      },
     ],
   },
   "Mighty Guard": {
@@ -1225,7 +1228,10 @@ export const CoreTalentMods: Record<CoreTalentName, Affix> = {
         mods: [{ type: "GeneratesBarrier" }],
       },
       { text: "Refreshes Barrier when gaining Barrier" },
-      { text: "-40% additional Barrier Shield" },
+      {
+        text: "-40% additional Barrier Shield",
+        mods: [{ type: "BarrierShieldPct", value: -40, addn: true }],
+      },
     ],
   },
   "Shared Fate": {
