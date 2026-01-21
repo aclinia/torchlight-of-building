@@ -2062,4 +2062,20 @@ export const allParsers = [
     () => ({}),
   ),
   t("energy shield starts to charge when blocking").outputNone(),
+  t("you can cast {value:int} additional curse\\(s\\)").output(
+    "AddnCurse",
+    (c) => ({ value: c.value }),
+  ),
+  t(
+    "restores {value:dec%} energy shield on block\\. interval: {interval:dec}s",
+  ).outputNone(),
+  t(
+    "restores {value:dec%} life on block\\. interval: {interval:dec}s",
+  ).outputNone(),
+  t("takes {value:int} true damage every {interval:dec}s").outputNone(),
+  t("warcry is cast immediately").outputNone(),
+  t("gains hasten when minions land a critical strike").output(
+    "GeneratesHasten",
+    () => ({}),
+  ),
 ];

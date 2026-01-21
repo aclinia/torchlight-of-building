@@ -3594,3 +3594,33 @@ test("parse energy shield starts to charge when blocking (empty)", () => {
   const result = parseMod("Energy Shield starts to Charge when Blocking");
   expect(result).toEqual([]);
 });
+
+test("parse you can cast additional curses", () => {
+  const result = parseMod("You can cast 1 additional Curse(s)");
+  expect(result).toEqual([{ type: "AddnCurse", value: 1 }]);
+});
+
+test("parse restores energy shield on block (empty)", () => {
+  const result = parseMod("Restores 3% Energy Shield on Block. Interval: 0.3s");
+  expect(result).toEqual([]);
+});
+
+test("parse restores life on block (empty)", () => {
+  const result = parseMod("Restores 3% Life on Block. Interval: 0.3s");
+  expect(result).toEqual([]);
+});
+
+test("parse takes true damage (empty)", () => {
+  const result = parseMod("Takes 10 True Damage every 0.1s");
+  expect(result).toEqual([]);
+});
+
+test("parse warcry is cast immediately (empty)", () => {
+  const result = parseMod("Warcry is cast immediately");
+  expect(result).toEqual([]);
+});
+
+test("parse gains hasten when minions crit", () => {
+  const result = parseMod("Gains Hasten when Minions land a Critical Strike");
+  expect(result).toEqual([{ type: "GeneratesHasten" }]);
+});
