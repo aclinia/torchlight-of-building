@@ -2,15 +2,17 @@ import { CoreTalents } from "@/src/data/core-talent";
 import { ALL_GEAR_AFFIXES } from "@/src/data/gear-affix/all-affixes";
 import { HeroMemories } from "@/src/data/hero-memory";
 import { Talents } from "@/src/data/talent";
+import { craftHeroMemoryAffix } from "@/src/lib/hero-utils";
 import { craft } from "@/src/tli/crafting/craft";
 import { parseMod } from "@/src/tli/mod-parser";
 
 const addLines = (allLines: Set<string>, text: string): void => {
   const lines = text.split("\n");
   for (const line of lines) {
-    const trimmed = line.trim();
-    if (trimmed.length > 0) {
-      allLines.add(trimmed);
+    // Strip divinity effect suffix since it gets removed before parsing
+    const cleaned = line.trim().replace(/ \(Max Divinity Effect: \d+\)$/, "");
+    if (cleaned.length > 0) {
+      allLines.add(cleaned);
     }
   }
 };
@@ -35,7 +37,7 @@ const main = (): void => {
     if (memory.type === "Base Stats") {
       continue;
     }
-    addLines(allLines, memory.affix);
+    addLines(allLines, craftHeroMemoryAffix(memory.affix, 50));
   }
 
   // Talents

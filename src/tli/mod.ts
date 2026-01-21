@@ -480,6 +480,7 @@ interface ModDefinitions {
   // ailments
   AilmentDurationPct: { value: number };
   InflictWiltPct: { value: number; isEnemyDebuff?: boolean };
+  WiltChancePct: { value: number };
   WiltDurationPct: { value: number };
   BaseWiltFlatDmg: { value: number };
   WiltDmgPct: { value: number; addn?: boolean };
