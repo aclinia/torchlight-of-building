@@ -24,6 +24,7 @@ import {
   collectModsFromAffixes,
   filterMods,
   findMod,
+  modExists,
   sumByValue,
 } from "./mod-utils";
 import { multValue } from "./util";
@@ -779,7 +780,11 @@ export const calculateCritChance = (
     modTypes.includes(m.modType),
   );
   const critRatingMult = calcEffMult(critRatingPctMods);
-  return Math.min(baseCritChance * critRatingMult, 1);
+  const critRate = Math.min(baseCritChance * critRatingMult, 1);
+  if (modExists(allMods, "LuckyCrit")) {
+    return Math.min(2 * critRate - critRate ** 2, 1);
+  }
+  return critRate;
 };
 
 export const calculateCritDmg = (

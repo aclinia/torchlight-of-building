@@ -1661,6 +1661,7 @@ export const allParsers = [
     "LuckyDmg",
     () => ({ cond: C.enemy_numbed }),
   ),
+  t("lucky critical strike").output("LuckyCrit", () => ({})),
   // Joined Force (core talent)
   t(
     "off-hand weapons do not participate in attacks while dual wielding",

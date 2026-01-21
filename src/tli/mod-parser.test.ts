@@ -2097,6 +2097,11 @@ test("parse lucky damage against numbed enemies", () => {
   expect(result).toEqual([{ type: "LuckyDmg", cond: "enemy_numbed" }]);
 });
 
+test("parse lucky critical strike", () => {
+  const result = parseMod("Lucky Critical Strike");
+  expect(result).toEqual([{ type: "LuckyCrit" }]);
+});
+
 test("parse numbed chance and effect combined", () => {
   const result = parseMod("+15% Numbed chance, and 7.5% Numbed Effect");
   expect(result).toEqual([

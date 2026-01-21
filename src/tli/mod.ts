@@ -374,6 +374,7 @@ interface ModDefinitions {
   ShadowQuant: { value: number };
   ShadowDmgPct: { value: number; addn: boolean };
   LuckyDmg: object;
+  LuckyCrit: object;
   Jump: { value: number };
   BaseProjectileQuant: { value: number };
   Projectile: { value: number };
