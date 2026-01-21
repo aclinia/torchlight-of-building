@@ -139,6 +139,8 @@ export interface Configuration {
   afflictionPts?: number;
   // default to false
   enemyHasDesecration: boolean;
+  // default to false
+  enemyHasTrauma: boolean;
   // default to 0
   tormentStacks: number;
   // default to false
@@ -258,6 +260,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   enemyHasAffliction: false,
   afflictionPts: undefined,
   enemyHasDesecration: false,
+  enemyHasTrauma: false,
   tormentStacks: 0,
   hasBlur: false,
   blurEndedRecently: false,

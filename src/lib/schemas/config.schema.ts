@@ -58,6 +58,7 @@ export const ConfigurationPageSchema = z
     enemyHasAffliction: z.boolean().catch(d.enemyHasAffliction),
     afflictionPts: z.number().optional().catch(d.afflictionPts),
     enemyHasDesecration: z.boolean().catch(d.enemyHasDesecration),
+    enemyHasTrauma: z.boolean().catch(d.enemyHasTrauma),
     tormentStacks: z.number().catch(d.tormentStacks),
     hasBlur: z.boolean().catch(d.hasBlur),
     blurEndedRecently: z.boolean().catch(d.blurEndedRecently),

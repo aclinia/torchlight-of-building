@@ -769,6 +769,7 @@ const filterModsByCond = (
       .with("has_agility_blessing", () => config.hasAgilityBlessing)
       .with("has_tenacity_blessing", () => config.hasTenacityBlessing)
       .with("enemy_has_desecration", () => config.enemyHasDesecration)
+      .with("enemy_has_trauma", () => config.enemyHasTrauma)
       .with("enemy_paralyzed", () => config.enemyParalyzed)
       .with("has_full_mana", () => config.hasFullMana)
       .with("target_enemy_is_elite", () => config.targetEnemyIsElite)

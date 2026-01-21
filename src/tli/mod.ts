@@ -198,6 +198,7 @@ const ConditionValues = [
   "has_agility_blessing",
   "has_tenacity_blessing",
   "enemy_has_desecration",
+  "enemy_has_trauma",
   "has_full_mana",
   "has_low_mana",
   "enemy_paralyzed",
