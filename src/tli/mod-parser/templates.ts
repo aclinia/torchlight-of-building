@@ -2076,6 +2076,10 @@ export const allParsers = [
     "restores {value:dec%} life on block. interval: {interval:dec}s",
   ).outputNone(),
   t("takes {value:int} true damage every {interval:dec}s").outputNone(),
+  t("{value:+dec%} [additional] warcry effect").output("WarcryEffPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
   t("warcry is cast immediately").outputNone(),
   t("gains hasten when minions land a critical strike").output(
     "GeneratesHasten",

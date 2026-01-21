@@ -1554,6 +1554,16 @@ test("parse additional curse effect", () => {
   expect(result).toEqual([{ type: "CurseEffPct", value: 4, addn: true }]);
 });
 
+test("parse warcry effect", () => {
+  const result = parseMod("+43% Warcry Effect");
+  expect(result).toEqual([{ type: "WarcryEffPct", value: 43, addn: false }]);
+});
+
+test("parse additional warcry effect", () => {
+  const result = parseMod("+6% additional Warcry Effect");
+  expect(result).toEqual([{ type: "WarcryEffPct", value: 6, addn: true }]);
+});
+
 test("parse sage's insight fire", () => {
   const result = parseMod(
     "When a Spell hit inflicts Fire Damage, -15% Cold, Lightning, and Erosion Resistance for the target for 3 s",

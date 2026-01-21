@@ -402,6 +402,7 @@ interface ModDefinitions {
   CurseEffPct: { value: number; addn?: boolean };
   CurseDurationPct: { value: number };
   AddnCurse: { value: number };
+  WarcryEffPct: { value: number; addn?: boolean };
   SealedManaCompPct: { value: number; addn?: boolean; skillName?: string };
   ResPenPct: { value: number; penType: ResPenType };
   ArmorPenPct: { value: number };
