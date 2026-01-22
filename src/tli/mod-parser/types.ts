@@ -60,6 +60,9 @@ export interface TemplateBuilder<
   // Output multiple mods from same template
   outputMany(specs: MultiOutput<TCaptures>[]): ModParser;
 
+  // Output no mods (recognizes the pattern but produces empty array)
+  outputNone(): ModParser;
+
   // Match against input (full string), returning captures. Throws if no match.
   match(input: string, context?: string): TCaptures;
 

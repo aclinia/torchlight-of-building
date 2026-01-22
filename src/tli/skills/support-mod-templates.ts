@@ -159,7 +159,7 @@ const allSupportParsers = [
     (c) => ({ value: c.value }),
   ),
   t(
-    "the supported skill {value:dec%} effect every time it is cast, up to {_:int} time\\(s\\)",
+    "the supported skill {value:dec%} effect every time it is cast, up to {_:int} time(s)",
   ).output("SkillEffPct", (c) => ({
     value: c.value,
     per: { stackable: "skill_use" as const },
@@ -206,7 +206,7 @@ const allSupportParsers = [
   })),
   t("the supported skill cannot inflict wilt").output("CannotInflictWilt"),
   t(
-    "every {_:int} time\\(s\\) the supported skill is used, gains a barrier if there's no barrier. interval: {_:int} s",
+    "every {_:int} time(s) the supported skill is used, gains a barrier if there's no barrier. interval: {_:int} s",
   ).output("GeneratesBarrier"),
   t("gains a barrier if there's no barrier").output("GeneratesBarrier"),
   t("{value:int%} projectile size for the supported skill").output(
@@ -245,7 +245,7 @@ const allSupportParsers = [
     per: { stackable: "focus_blessing" as const, limit: c.limit },
   })),
   t(
-    "for every 1 jump, the supported skill releases 1 additional chain lightning \\(does not target the same enemy\\). each chain lightning can only jump 1 time\\(s\\)",
+    "for every 1 jump, the supported skill releases 1 additional chain lightning (does not target the same enemy). each chain lightning can only jump 1 time(s)",
   ).output("ChainLightningWebOfLightning"),
   t(
     "multiple chain lightnings released by the supported skill can target the same enemy, but will prioritize different enemies. the shotgun effect falloff coefficient of the supported skill is {value:int}%",

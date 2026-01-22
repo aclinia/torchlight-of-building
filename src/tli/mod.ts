@@ -80,6 +80,7 @@ export const SkillLevelTypes = [
   "physical",
   "projectile",
   "all",
+  "spirit_magus",
 ] as const;
 
 export type SkillLevelType = (typeof SkillLevelTypes)[number];
@@ -198,6 +199,7 @@ const ConditionValues = [
   "has_agility_blessing",
   "has_tenacity_blessing",
   "enemy_has_desecration",
+  "enemy_has_trauma",
   "has_full_mana",
   "has_low_mana",
   "enemy_paralyzed",
@@ -374,6 +376,7 @@ interface ModDefinitions {
   ShadowQuant: { value: number };
   ShadowDmgPct: { value: number; addn: boolean };
   LuckyDmg: object;
+  LuckyCrit: object;
   Jump: { value: number };
   BaseProjectileQuant: { value: number };
   Projectile: { value: number };
@@ -398,9 +401,12 @@ interface ModDefinitions {
     skillName?: string;
   };
   FocusBuffEffPct: { value: number; addn?: boolean };
+  FocusSpeedPct: { value: number; addn?: boolean };
   SpiritMagusOriginEffPct: { value: number; addn?: boolean };
   CurseEffPct: { value: number; addn?: boolean };
   CurseDurationPct: { value: number };
+  AddnCurse: { value: number };
+  WarcryEffPct: { value: number; addn?: boolean };
   SealedManaCompPct: { value: number; addn?: boolean; skillName?: string };
   ResPenPct: { value: number; penType: ResPenType };
   ArmorPenPct: { value: number };
@@ -440,9 +446,12 @@ interface ModDefinitions {
   MaxSentryQuant: { value: number };
   CommandPerSec: { value: number };
   GeneratesBarrier: object;
+  BarrierShieldPct: { value: number; addn?: boolean };
+  GeneratesHardened: object;
   GeneratesTorment: object;
   GeneratesDeflection: object;
   GeneratesBlur: { value: number };
+  BlurEffPct: { value: number };
   MaxRepentance: { value: number };
   GeneratesRepentance: { value: number };
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
@@ -472,6 +481,7 @@ interface ModDefinitions {
   // ailments
   AilmentDurationPct: { value: number };
   InflictWiltPct: { value: number; isEnemyDebuff?: boolean };
+  WiltChancePct: { value: number };
   WiltDurationPct: { value: number };
   BaseWiltFlatDmg: { value: number };
   WiltDmgPct: { value: number; addn?: boolean };

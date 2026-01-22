@@ -1494,6 +1494,34 @@ test("parse reap", () => {
   expect(result).toEqual([{ type: "Reap", duration: 0.17, cooldown: 1 }]);
 });
 
+test("parse reap with recovery time wording", () => {
+  const result = parseMod(
+    "Reaps 0.07 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s Recovery Time against the same target",
+  );
+  expect(result).toEqual([{ type: "Reap", duration: 0.07, cooldown: 1 }]);
+});
+
+test("parse reap when inflicting ignite", () => {
+  const result = parseMod(
+    "Reaps 0.04 s of Damage Over Time when inflicting Ignite. The effect has a 1 s Recovery Time against the same target",
+  );
+  expect(result).toEqual([{ type: "Reap", duration: 0.04, cooldown: 1 }]);
+});
+
+test("parse reap when inflicting trauma", () => {
+  const result = parseMod(
+    "Reaps 0.04 s of Damage Over Time when inflicting Trauma. The effect has a 1 s Recovery Time against the same target",
+  );
+  expect(result).toEqual([{ type: "Reap", duration: 0.04, cooldown: 1 }]);
+});
+
+test("parse reap when inflicting wilt", () => {
+  const result = parseMod(
+    "Reaps 0.04 s of Damage Over Time when inflicting Wilt. The effect has a 1 s Recovery Time against the same target",
+  );
+  expect(result).toEqual([{ type: "Reap", duration: 0.04, cooldown: 1 }]);
+});
+
 test("parse reaping duration", () => {
   const result = parseMod("+56% Reaping Duration");
   expect(result).toEqual([{ type: "ReapDurationPct", value: 56 }]);
@@ -1524,6 +1552,16 @@ test("parse curse effect", () => {
 test("parse additional curse effect", () => {
   const result = parseMod("+4% additional Curse Effect");
   expect(result).toEqual([{ type: "CurseEffPct", value: 4, addn: true }]);
+});
+
+test("parse warcry effect", () => {
+  const result = parseMod("+43% Warcry Effect");
+  expect(result).toEqual([{ type: "WarcryEffPct", value: 43, addn: false }]);
+});
+
+test("parse additional warcry effect", () => {
+  const result = parseMod("+6% additional Warcry Effect");
+  expect(result).toEqual([{ type: "WarcryEffPct", value: 6, addn: true }]);
 });
 
 test("parse sage's insight fire", () => {
@@ -2057,6 +2095,11 @@ test("parse lucky damage against numbed enemies", () => {
     "You and Minions deal Lucky Damage against Numbed enemies",
   );
   expect(result).toEqual([{ type: "LuckyDmg", cond: "enemy_numbed" }]);
+});
+
+test("parse lucky critical strike", () => {
+  const result = parseMod("Lucky Critical Strike");
+  expect(result).toEqual([{ type: "LuckyCrit" }]);
 });
 
 test("parse numbed chance and effect combined", () => {
@@ -3563,5 +3606,127 @@ test("parse critical strike damage mitigation", () => {
   const result = parseMod("+28% Critical Strike Damage Mitigation");
   expect(result).toEqual([
     { type: "CriticalStrikeDmgMitigationPct", value: 28 },
+  ]);
+});
+
+test("parse minions can cast additional curses", () => {
+  const result = parseMod("Minions can cast 1 additional Curse(s)");
+  expect(result).toEqual([{ type: "AddnCurse", value: 1 }]);
+});
+
+test("parse gains spell aggression when minion spells crit", () => {
+  const result = parseMod(
+    "Gains Spell Aggression when Minion Spells land a Critical Strike",
+  );
+  expect(result).toEqual([{ type: "GeneratesSpellAggression" }]);
+});
+
+test("parse gains deflection when moving", () => {
+  const result = parseMod(
+    "For every 5 m moved, gains 1 stack(s) of Deflection",
+  );
+  expect(result).toEqual([{ type: "GeneratesDeflection" }]);
+});
+
+test("parse gains torment when reaping", () => {
+  const result = parseMod("Gains a stack of Torment when Reaping");
+  expect(result).toEqual([{ type: "GeneratesTorment" }]);
+});
+
+test("parse energy shield starts to charge when blocking (empty)", () => {
+  const result = parseMod("Energy Shield starts to Charge when Blocking");
+  expect(result).toEqual([]);
+});
+
+test("parse you can cast additional curses", () => {
+  const result = parseMod("You can cast 1 additional Curse(s)");
+  expect(result).toEqual([{ type: "AddnCurse", value: 1 }]);
+});
+
+test("parse restores energy shield on block (empty)", () => {
+  const result = parseMod("Restores 3% Energy Shield on Block. Interval: 0.3s");
+  expect(result).toEqual([]);
+});
+
+test("parse restores life on block (empty)", () => {
+  const result = parseMod("Restores 3% Life on Block. Interval: 0.3s");
+  expect(result).toEqual([]);
+});
+
+test("parse takes true damage (empty)", () => {
+  const result = parseMod("Takes 10 True Damage every 0.1s");
+  expect(result).toEqual([]);
+});
+
+test("parse warcry is cast immediately (empty)", () => {
+  const result = parseMod("Warcry is cast immediately");
+  expect(result).toEqual([]);
+});
+
+test("parse gains hasten when minions crit", () => {
+  const result = parseMod("Gains Hasten when Minions land a Critical Strike");
+  expect(result).toEqual([{ type: "GeneratesHasten" }]);
+});
+
+test("parse chance to gain barrier on defeat", () => {
+  const result = parseMod("13% chance to gain a Barrier on defeat");
+  expect(result).toEqual([{ type: "GeneratesBarrier" }]);
+});
+
+test("parse chance to gain hardened when hit", () => {
+  const result = parseMod("50% chance to gain Hardened when you are hit");
+  expect(result).toEqual([{ type: "GeneratesHardened" }]);
+});
+
+test("parse chance to inflict additional wilt stacks", () => {
+  const result = parseMod("7% chance to inflict 1 additional stack(s) of Wilt");
+  expect(result).toEqual([{ type: "InflictWiltPct", value: 7 }]);
+});
+
+test("parse blur effect", () => {
+  const result = parseMod("+7% Blur Effect");
+  expect(result).toEqual([{ type: "BlurEffPct", value: 7 }]);
+});
+
+test("parse focus speed", () => {
+  const result = parseMod("+65% Focus Speed");
+  expect(result).toEqual([{ type: "FocusSpeedPct", value: 65, addn: false }]);
+});
+
+test("parse barrier shield", () => {
+  const result = parseMod("+52% Barrier Shield");
+  expect(result).toEqual([
+    { type: "BarrierShieldPct", value: 52, addn: false },
+  ]);
+});
+
+test("parse wilt chance", () => {
+  const result = parseMod("+3% Wilt chance");
+  expect(result).toEqual([{ type: "WiltChancePct", value: 3 }]);
+});
+
+test("parse to all stats", () => {
+  const result = parseMod("+10 to All Stats");
+  expect(result).toEqual([{ type: "Stat", statModType: "all", value: 10 }]);
+});
+
+test("parse sentry skill critical strike rating", () => {
+  const result = parseMod("+30% Sentry Skill Critical Strike Rating");
+  expect(result).toEqual([
+    { type: "CritRatingPct", value: 30, modType: "sentry_skill" },
+  ]);
+});
+
+test("parse sentry skill critical strike damage", () => {
+  const result = parseMod("+15% Sentry Skill Critical Strike Damage");
+  expect(result).toEqual([
+    { type: "CritDmgPct", value: 15, addn: false, modType: "sentry_skill" },
+  ]);
+});
+
+test("parse spirit magus skill level", () => {
+  const result = parseMod("+1 Spirit Magus Skill Level");
+  expect(result).toEqual([
+    { type: "SkillLevel", value: 1, skillLevelType: "spirit_magus" },
   ]);
 });

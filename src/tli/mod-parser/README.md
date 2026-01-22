@@ -42,18 +42,18 @@ t("{value:dec%} [{modType:DmgModType}] damage");
 
 ### Alternations
 
-Use `(a|b|c)` for alternation:
+Use `{(a|b|c)}` for alternation:
 
 ```typescript
 t(
-  "adds {value:dec%} of {from:DmgChunkType} damage (to|as) {to:DmgChunkType} damage",
+  "adds {value:dec%} of {from:DmgChunkType} damage {(to|as)} {to:DmgChunkType} damage",
 );
 ```
 
 To extract the matched alternative, use `.capture()`:
 
 ```typescript
-t("{value:dec%} (elemental|erosion) resistance penetration").capture(
+t("{value:dec%} {(elemental|erosion)} resistance penetration").capture(
   "penType",
   (m) => m[2].toLowerCase() as "elemental" | "erosion",
 );
@@ -63,17 +63,14 @@ Note: `m[0]` is the full match, `m[1]` is the first capture, etc. Count capture 
 
 ### Escape Sequences
 
-Regex special characters (`.`, `*`, `+`, `?`, etc.) are **automatically escaped** - you don't need to do anything special:
+Regex special characters (`.`, `*`, `+`, `?`, `(`, `)`, etc.) are **automatically escaped** - you don't need to do anything special:
 
 ```typescript
 t("lv. {level:int}"); // The period is auto-escaped, matches "lv. 5"
+t("stacks up to {limit:int} time(s)"); // Parentheses are auto-escaped, matches "time(s)"
 ```
 
-Use `\` only to escape **template syntax characters** (`(`, `)`, `[`, `]`, `{`, `}`):
-
-```typescript
-t("stacks up to {limit:int} time\\(s\\)"); // Matches "time(s)"
-```
+Use `\` only to escape **template syntax characters** (`[`, `]`, `{`, `}`).
 
 ## Builder API
 
@@ -94,7 +91,7 @@ t("{value:dec} {statType:StatWord}").enum("StatWord", {
 Add custom capture extraction:
 
 ```typescript
-t("{value:dec%} (cold|fire|lightning) penetration").capture(
+t("{value:dec%} {(cold|fire|lightning)} penetration").capture(
   "penType",
   (m) => m[2].toLowerCase() as "cold" | "fire" | "lightning",
 );

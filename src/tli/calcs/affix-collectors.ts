@@ -131,6 +131,10 @@ export const getPactspiritAffixes = (
     if (slot === undefined) continue;
     affixes.push(slot.mainAffix);
     for (const ring of Object.values(slot.rings)) {
+      // TODO: implement dual kismets
+      if (ring.installedDestiny?.destinyType === "Dual Kismet") {
+        continue;
+      }
       affixes.push(ring.installedDestiny?.affix ?? ring.originalAffix);
     }
   }

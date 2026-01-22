@@ -83,7 +83,7 @@ t("{value:dec%} attack and cast speed").outputMany([
 **Optional syntax:**
 - `[additional]` - Optional literal, sets `c.additional?: true`
 - `[{modType:DmgModType}]` - Optional capture, sets `c.modType?: DmgModType`
-- `(effect|damage)` - Alternation (regex-style)
+- `{(effect|damage)}` - Alternation (regex-style)
 
 ### 3. Add Enum Mapping (if needed)
 
@@ -227,6 +227,16 @@ t("{value:+dec%} [additional] attack and cast speed").outputMany([
 t("{value:+dec} max mana").output("MaxMana", (c) => ({ value: c.value })),
 ```
 
+### No-Op Parser (Recognized but produces no mods)
+
+**Input:** `"Energy Shield starts to Charge when Blocking"`
+
+Use `outputNone()` when a mod string should be recognized (not flagged as unparsed) but has no effect on calculations:
+
+```typescript
+t("energy shield starts to charge when blocking").outputNone(),
+```
+
 ## Common Mistakes
 
 | Mistake | Fix |
@@ -237,7 +247,6 @@ t("{value:+dec} max mana").output("MaxMana", (c) => ({ value: c.value })),
 | Missing `as const` on string literals | Add `as const` for type narrowing: `statModType: "all" as const` |
 | Handler doesn't account for new variant | Update `offense.ts` to handle new values (e.g., `statModType === "all"`) |
 | Generic template before specific | Move specific templates earlier in `allParsers` array |
-| Forgot to escape special chars | Use `\\` for regex special chars: `\\(`, `\\)` |
 
 ## Data Flow
 

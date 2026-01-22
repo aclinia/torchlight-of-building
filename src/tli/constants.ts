@@ -28,6 +28,7 @@ export const CRIT_RATING_MOD_TYPES = [
   "spell",
   "projectile",
   "melee",
+  "sentry_skill",
 ] as const;
 
 export type CritRatingModType = (typeof CRIT_RATING_MOD_TYPES)[number];
@@ -41,6 +42,7 @@ export const CRIT_DMG_MOD_TYPES = [
   "lightning_skill",
   "fire_skill",
   "erosion_skill",
+  "sentry_skill",
 ] as const;
 
 export type CritDmgModType = (typeof CRIT_DMG_MOD_TYPES)[number];

@@ -258,6 +258,15 @@ const createBuilder = (config: BuilderConfig): TemplateBuilder<any> => ({
     return createMultiModParser(compiled, specs as never, config);
   },
 
+  outputNone() {
+    const compiled = compileTemplate(
+      config.template,
+      config.enumMappings,
+      config.compileOptions,
+    );
+    return createMultiModParser(compiled, [], config);
+  },
+
   match(input: string, context?: string) {
     const compiled = compileTemplate(
       config.template,

@@ -48,7 +48,7 @@ src/components/          # Feature-organized React components
 ├── divinity/            # DivinityTab, DivinityGrid, SlateCrafter, SlateInventory
 ├── equipment/           # EditGearModal, InventoryItem, AffixSlotComponent
 ├── hero/                # HeroTab, HeroSelector, MemoryInventory, TraitSelector
-├── modals/              # ImportModal, ExportModal, DisclaimerModal, DestinySelectionModal
+├── modals/              # ImportModal, ExportModal, DestinySelectionModal
 ├── pactspirit/          # PactspiritTab, PactspiritColumn, RingSlot
 ├── skills/              # SkillSlot, SupportSkillSelector, SkillTooltipContent
 ├── talents/             # TalentGrid, PrismSection, InverseImageSection, CoreTalentSelector

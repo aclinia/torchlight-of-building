@@ -22,8 +22,8 @@ type ParseOptionalContent<S extends string> =
  * Extract all required captures from template.
  * Required captures are `{name:type}` NOT inside brackets.
  *
- * Strategy: Process left-to-right, skipping optional `[...]` sections first,
- * then extracting `{name:type}` patterns.
+ * Strategy: Process left-to-right, skipping optional `[...]` sections
+ * and alternation `{(alt)}` patterns first, then extracting `{name:type}` patterns.
  */
 type ExtractRequiredCaptures<
   T extends string,
@@ -32,14 +32,17 @@ type ExtractRequiredCaptures<
   infer _Before // First, skip any optional section [...] and continue after it
 }[${infer _Content}]${infer Rest}`
   ? ExtractRequiredCaptures<`${_Before}${Rest}`, Acc>
-  : // Now extract {name:type} patterns from what remains
-    T extends `${infer _Before}{${infer Name}:${infer Type}}${infer Rest}`
-    ? ExtractRequiredCaptures<
-        Rest,
-        Acc & { [K in Name]: LookupCaptureType<Type> }
-      >
-    : // No more patterns - return accumulated type
-      Acc;
+  : // Skip alternation patterns {(a|b)} - they don't capture
+    T extends `${infer Before}{(${infer _Alt})}${infer Rest}`
+    ? ExtractRequiredCaptures<`${Before}${Rest}`, Acc>
+    : // Now extract {name:type} patterns from what remains
+      T extends `${infer _Before}{${infer Name}:${infer Type}}${infer Rest}`
+      ? ExtractRequiredCaptures<
+          Rest,
+          Acc & { [K in Name]: LookupCaptureType<Type> }
+        >
+      : // No more patterns - return accumulated type
+        Acc;
 
 // ============= Optional Captures Extraction =============
 

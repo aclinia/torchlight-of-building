@@ -117,7 +117,7 @@ const formatLargeNumber = (val: number): string => {
 
 export const formatStatValue = {
   percentage: (val: number): string => `${(val * 100).toFixed(1)}%`,
-  pct: (val: number): string => `${val.toFixed(1)}%`,
+  pct: (val: number): string => `${val.toFixed(2)}%`,
   multiplier: (val: number): string => `${(val * 100).toFixed(0)}%`,
   aps: (val: number): string => `${val.toFixed(2)} APS`,
   damage: formatLargeNumber,

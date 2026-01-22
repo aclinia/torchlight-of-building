@@ -769,6 +769,7 @@ const filterModsByCond = (
       .with("has_agility_blessing", () => config.hasAgilityBlessing)
       .with("has_tenacity_blessing", () => config.hasTenacityBlessing)
       .with("enemy_has_desecration", () => config.enemyHasDesecration)
+      .with("enemy_has_trauma", () => config.enemyHasTrauma)
       .with("enemy_paralyzed", () => config.enemyParalyzed)
       .with("has_full_mana", () => config.hasFullMana)
       .with("target_enemy_is_elite", () => config.targetEnemyIsElite)
@@ -926,7 +927,7 @@ const findSkill = (
 
 const calcBuffSkillType = (
   skill: BaseActiveSkill | BasePassiveSkill,
-): "aura" | "curse" | "spirit_magus_origin" | "other" => {
+): "aura" | "curse" | "spirit_magus_origin" | "warcry" | "other" => {
   if (skill.type === "Passive" && skill.tags?.includes("Aura")) {
     return "aura";
   }
@@ -935,6 +936,9 @@ const calcBuffSkillType = (
   }
   if (skill.type === "Passive" && skill.tags?.includes("Spirit Magus")) {
     return "spirit_magus_origin";
+  }
+  if (skill.tags?.includes("Warcry")) {
+    return "warcry";
   }
   return "other";
 };
@@ -1029,6 +1033,7 @@ const resolveBuffSkillMods = (
       auraEffMult,
       curseEffMult,
       spiritMagusOriginEffMult,
+      warcryEffMult,
     } = resolveBuffSkillEffMults(
       prenormMods,
       loadout,
@@ -1054,6 +1059,8 @@ const resolveBuffSkillMods = (
           finalValue = multValue(finalValue, curseEffMult);
         } else if (buffSkillType === "spirit_magus_origin") {
           finalValue = multValue(finalValue, spiritMagusOriginEffMult);
+        } else if (buffSkillType === "warcry") {
+          finalValue = multValue(finalValue, warcryEffMult);
         } else {
           finalValue = multValue(finalValue, skillEffMult);
         }
@@ -1285,12 +1292,14 @@ const resolveBuffSkillEffMults = (
   auraEffMult: number;
   curseEffMult: number;
   spiritMagusOriginEffMult: number;
+  warcryEffMult: number;
 } => {
   const buffSkillEffMods = unresolvedModsFromParam.filter(
     (m) =>
       m.type === "SkillEffPct" ||
       m.type === "CurseEffPct" ||
       m.type === "SpiritMagusOriginEffPct" ||
+      m.type === "WarcryEffPct" ||
       // AuraEffPct: include if no skillName (global) or skillName matches
       (m.type === "AuraEffPct" &&
         (m.skillName === undefined || m.skillName === buffSkillName)),
@@ -1315,8 +1324,15 @@ const resolveBuffSkillEffMults = (
   const auraEffMult = calcEffMult(mods, "AuraEffPct");
   const curseEffMult = calcEffMult(mods, "CurseEffPct");
   const spiritMagusOriginEffMult = calcEffMult(mods, "SpiritMagusOriginEffPct");
+  const warcryEffMult = calcEffMult(mods, "WarcryEffPct");
 
-  return { skillEffMult, auraEffMult, curseEffMult, spiritMagusOriginEffMult };
+  return {
+    skillEffMult,
+    auraEffMult,
+    curseEffMult,
+    spiritMagusOriginEffMult,
+    warcryEffMult,
+  };
 };
 
 const calcMaxBlessings = (
@@ -1396,6 +1412,7 @@ const calculateAddedSkillLevels = (
       .with("physical", () => skill.tags.includes("Physical"))
       .with("projectile", () => skill.tags.includes("Projectile"))
       .with("all", () => true)
+      .with("spirit_magus", () => skill.tags.includes("Spirit Magus"))
       .exhaustive();
     if (matches) {
       addedSkillLevels += mod.value;

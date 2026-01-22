@@ -121,11 +121,32 @@ export const compileTemplate = (
       continue;
     }
 
-    // Check for capture: {name:type}
+    // Check for brace: {name:type} or {(alt1|alt2)}
     if (template[pos] === "{") {
       const endBrace = template.indexOf("}", pos);
       if (endBrace !== -1) {
         const captureContent = template.slice(pos + 1, endBrace);
+
+        // Check for alternation: {(a|b|c)}
+        if (captureContent.startsWith("(") && captureContent.endsWith(")")) {
+          // Flush pending space
+          if (pendingSpace) {
+            regexStr += "\\s+";
+            pendingSpace = false;
+          }
+
+          const alternatives = captureContent.slice(1, -1); // strip parens
+          // Use capturing group for alternation so we can extract the matched value
+          const altCaptureName = `_alt${captureNames.length}`;
+          captureNames.push(altCaptureName);
+          extractors.set(altCaptureName, (s) => s.toLowerCase());
+          regexStr += `(${escapeRegexLiteral(alternatives)})`;
+
+          pos = endBrace + 1;
+          continue;
+        }
+
+        // Check for capture: {name:type}
         const colonIdx = captureContent.indexOf(":");
         if (colonIdx !== -1) {
           const name = captureContent.slice(0, colonIdx);
@@ -188,28 +209,6 @@ export const compileTemplate = (
       }
     }
 
-    // Check for alternation: (a|b|c)
-    if (template[pos] === "(") {
-      const endParen = findMatchingParen(template, pos);
-      if (endParen !== -1) {
-        // Flush pending space
-        if (pendingSpace) {
-          regexStr += "\\s+";
-          pendingSpace = false;
-        }
-
-        const content = template.slice(pos + 1, endParen);
-        // Use capturing group for alternation so we can extract the matched value
-        // The capture name is based on position
-        const altCaptureName = `_alt${captureNames.length}`;
-        captureNames.push(altCaptureName);
-        extractors.set(altCaptureName, (s) => s.toLowerCase());
-        regexStr += `(${escapeRegexLiteral(content)})`;
-        pos = endParen + 1;
-        continue;
-      }
-    }
-
     // Check for whitespace - mark as pending
     if (/\s/.test(template[pos])) {
       // Skip all consecutive whitespace
@@ -250,11 +249,23 @@ const compileInner = (
   let pos = 0;
 
   while (pos < template.length) {
-    // Check for capture: {name:type}
+    // Check for brace: {name:type} or {(alt1|alt2)}
     if (template[pos] === "{") {
       const endBrace = template.indexOf("}", pos);
       if (endBrace !== -1) {
         const captureContent = template.slice(pos + 1, endBrace);
+
+        // Check for alternation: {(a|b|c)}
+        if (captureContent.startsWith("(") && captureContent.endsWith(")")) {
+          const alternatives = captureContent.slice(1, -1); // strip parens
+          // Use non-capturing group for alternation inside optionals
+          regexStr += `(?:${escapeRegexLiteral(alternatives)})`;
+
+          pos = endBrace + 1;
+          continue;
+        }
+
+        // Check for capture: {name:type}
         const colonIdx = captureContent.indexOf(":");
         if (colonIdx !== -1) {
           const name = captureContent.slice(0, colonIdx);
@@ -267,17 +278,6 @@ const compileInner = (
           pos = endBrace + 1;
           continue;
         }
-      }
-    }
-
-    // Check for alternation: (a|b|c)
-    if (template[pos] === "(") {
-      const endParen = findMatchingParen(template, pos);
-      if (endParen !== -1) {
-        const content = template.slice(pos + 1, endParen);
-        regexStr += `(?:${escapeRegexLiteral(content)})`;
-        pos = endParen + 1;
-        continue;
       }
     }
 
@@ -305,18 +305,6 @@ const findMatchingBracket = (str: string, start: number): number => {
   while (i < str.length && depth > 0) {
     if (str[i] === "[") depth++;
     else if (str[i] === "]") depth--;
-    i++;
-  }
-  return depth === 0 ? i - 1 : -1;
-};
-
-// Find matching ) parenthesis
-const findMatchingParen = (str: string, start: number): number => {
-  let depth = 1;
-  let i = start + 1;
-  while (i < str.length && depth > 0) {
-    if (str[i] === "(") depth++;
-    else if (str[i] === ")") depth--;
     i++;
   }
   return depth === 0 ? i - 1 : -1;
