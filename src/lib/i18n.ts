@@ -2,7 +2,7 @@ import { i18n, type Messages } from "@lingui/core";
 
 export type Locale = "en" | "zh";
 
-const modules = ["common", "legendaries", "talents", "skills"] as const;
+const modules = ["common", "legendaries", "talents", "skills", "hero"] as const;
 
 async function loadMessages(locale: Locale): Promise<Messages> {
   const allMessages: Messages = {};

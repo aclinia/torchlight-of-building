@@ -1,3 +1,4 @@
+import { i18n } from "@lingui/core";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import {
   Tooltip,
@@ -108,7 +109,9 @@ const TraitItem = ({
 
   const content = (
     <div className="flex-1">
-      <div className="font-medium text-zinc-50 text-sm">{trait.name}</div>
+      <div className="font-medium text-zinc-50 text-sm">
+        {i18n._(trait.name)}
+      </div>
     </div>
   );
 
