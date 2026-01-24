@@ -7,7 +7,7 @@ export const TABS = [
   { path: "/builder/skills", label: "Skills" },
   { path: "/builder/hero", label: "Hero" },
   { path: "/builder/pactspirit", label: "Pactspirit" },
-  { path: "/builder/divinity", label: "Divinity" },
+  { path: "/builder/divinity", label: "Divinity Slate" },
   { path: "/builder/configuration", label: "Configuration" },
   { path: "/builder/calculations", label: "Calculations" },
 ] as const;

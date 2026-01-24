@@ -184,7 +184,7 @@ msgstr "创建新流派"
 
 #. js-lingui-explicit-id
 #: src/data/translate/translate-tab.ts:9
-msgid "Divinity"
+msgid "Divinity Slate"
 msgstr "神格石板"
 
 #: src/routes/index.tsx:396
