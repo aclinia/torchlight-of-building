@@ -278,33 +278,27 @@ export const SearchableSelect = <T extends string | number>({
               ),
             )
           ) : (
-            (filteredOptions as SearchableSelectOption<T>[]).map((option) => {
-              // Non-clickable headers can be rendered as options
-              if (option.header) {
-                return (
-                  <ComboboxOption
-                    key={`header-${option.header}`}
-                    value={option}
-                    disabled
+            (filteredOptions as SearchableSelectOption<T>[]).map((option) => (
+              <div key={String(option.value)}>
+                {/* Render header as non-clickable separator if present */}
+                {option.header !== undefined && (
+                  <div
                     className={`
                       ${SIZE_CLASSES[size]} text-zinc-500 font-medium
                       border-t border-zinc-700 cursor-default
                     `}
                   >
                     {option.header}
-                  </ComboboxOption>
-                );
-              }
-
-              return (
+                  </div>
+                )}
+                {/* Always render the actual option */}
                 <ComboboxOption
-                  key={String(option.value)}
                   value={option}
                   className={({ active, selected }) => `
-                  ${SIZE_CLASSES[size]} cursor-pointer
-                  ${active ? "bg-zinc-700" : ""}
-                  ${selected ? "text-amber-400" : "text-zinc-50"}
-                `}
+                    ${SIZE_CLASSES[size]} cursor-pointer
+                    ${active ? "bg-zinc-700" : ""}
+                    ${selected ? "text-amber-400" : "text-zinc-50"}
+                  `}
                 >
                   {({ active, selected }) => (
                     <div>
@@ -323,8 +317,8 @@ export const SearchableSelect = <T extends string | number>({
                     </div>
                   )}
                 </ComboboxOption>
-              );
-            })
+              </div>
+            ))
           )}
         </ComboboxOptions>
 
