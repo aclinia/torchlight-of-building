@@ -590,12 +590,30 @@ interface BaseHitOverview {
 const calcBaseHitOverview = (
   dmgRanges: DmgRanges,
   derivedCtx: DerivedCtx,
+  mods: Mod[],
 ): BaseHitOverview => {
   // AddnMinDmgPct/AddnMaxDmgPct are now applied in calculateChunkDmg
   // which properly respects the dmgType property for damage type filtering
   const { physical, cold, lightning, fire, erosion } = dmgRanges;
-  const min = physical.min + cold.min + lightning.min + fire.min + erosion.min;
-  const max = physical.max + cold.max + lightning.max + fire.max + erosion.max;
+
+  let min: number;
+  let max: number;
+  if (findMod(mods, "TrinitySingleElement") !== undefined) {
+    // Average the elemental dmg instead of summing
+    // This isn't 100% accurate, as there's some weighted probability
+    // based on the flat damage ratios, but close enough.
+    const eleComponents = [cold, lightning, fire];
+    const nonZeroEle = eleComponents.filter((dr) => dr.min > 0 || dr.max > 0);
+    const eleCount = Math.max(nonZeroEle.length, 1);
+    const eleMin = R.sumBy(eleComponents, (dr) => dr.min) / eleCount;
+    const eleMax = R.sumBy(eleComponents, (dr) => dr.max) / eleCount;
+    min = physical.min + eleMin + erosion.min;
+    max = physical.max + eleMax + erosion.max;
+  } else {
+    min = physical.min + cold.min + lightning.min + fire.min + erosion.min;
+    max = physical.max + cold.max + lightning.max + fire.max + erosion.max;
+  }
+
   const total = { min, max };
   let avg: number;
   if (derivedCtx.luckyDmg) {
@@ -623,7 +641,7 @@ const calculateAddnDmgFromShadows = (
 
 interface SkillHitOverview extends BaseHitOverview {}
 
-const calculateAtkHit = (
+const calcAtkHit = (
   gearDmg: DmgRanges,
   flatDmg: DmgRanges,
   mods: Mod[],
@@ -653,7 +671,7 @@ const calculateAtkHit = (
     config,
     ignoreArmor: false,
   });
-  return calcBaseHitOverview(finalDmgRanges, derivedCtx);
+  return calcBaseHitOverview(finalDmgRanges, derivedCtx, mods);
 };
 
 export interface OffenseInput {
@@ -2007,6 +2025,20 @@ const resolveModsForOffenseSkill = (
       src: "Frail",
     });
   };
+  const pushTrinity = (): void => {
+    if (findMod(mods, "TrinityElePen") === undefined) return;
+    const minEffEleRes = Math.min(
+      defenses.coldRes.actual,
+      defenses.lightningRes.actual,
+      defenses.fireRes.actual,
+    );
+    pm({
+      type: "ResPenPct",
+      value: minEffEleRes,
+      penType: "elemental",
+      src: "Trinity: Elemental Penetration",
+    });
+  };
   const pushBerserkingBlade = (): void => {
     const maxBBStacks = sumByValue(
       filterMods(mods, "MaxBerserkingBladeStacks"),
@@ -2055,6 +2087,7 @@ const resolveModsForOffenseSkill = (
   pushMark();
   const movementSpeedBonusPct = pushMspd();
   pushInfiltrations();
+  pushTrinity();
   pushNumbed();
   pushFrostbite();
   const jumps = sumByValue(filterMods(mods, "Jump"));
@@ -2510,7 +2543,7 @@ const calcWeaponAttack = (
   } = input;
   const gearDmg = calculateGearDmg(weapon, mods);
   const flatDmg = calculateFlatDmg(mods, "attack");
-  const skillHit = calculateAtkHit(
+  const skillHit = calcAtkHit(
     gearDmg.mainHand,
     flatDmg,
     mods,
@@ -2830,7 +2863,7 @@ const calcSpellHit = (
     config,
     ignoreArmor: false,
   });
-  const baseHitOverview = calcBaseHitOverview(finalDmgRanges, derivedCtx);
+  const baseHitOverview = calcBaseHitOverview(finalDmgRanges, derivedCtx, mods);
   return { ...baseHitOverview, castTime };
 };
 

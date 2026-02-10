@@ -1724,6 +1724,23 @@ export const allParsers = [
     () => ({}),
   ),
   t(
+    "randomly selects a type of elemental damage on hit, and only elemental damage of this type can be dealt. other elements cannot deal damage. the lower the flat damage percentage of an elemental damage, the higher the chance of it being chosen",
+  ).output("TrinitySingleElement", () => ({})),
+  t(
+    "gains elemental resistance penetration equal to your minimum effective elemental resistance",
+  ).output("TrinityElePen", () => ({})),
+  t("damage types cannot be converted").output(
+    "TrinityNoConversion",
+    () => ({}),
+  ),
+  t(
+    "any hit dealing elemental damage is guaranteed to deal {value:int}x elemental damage",
+  ).output("DmgPct", (c) => ({
+    value: (c.value - 1) * 100,
+    dmgModType: "elemental" as const,
+    addn: true,
+  })),
+  t(
     "{value:+dec%} additional {dmgType:DmgChunkType} damage per {amt:int} {stat:StatWord}",
   )
     .enum("StatWord", StatWordMapping)

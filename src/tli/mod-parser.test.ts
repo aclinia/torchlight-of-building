@@ -2582,6 +2582,34 @@ test("parse disable main stat damage", () => {
   expect(result).toEqual([{ type: "DisableMainStatDmg" }]);
 });
 
+test("parse trinity single element", () => {
+  const result = parseMod(
+    "Randomly selects a type of Elemental Damage on hit, and only Elemental Damage of this type can be dealt. Other elements cannot deal damage. The lower the Flat Damage percentage of an Elemental Damage, the higher the chance of it being chosen",
+  );
+  expect(result).toEqual([{ type: "TrinitySingleElement" }]);
+});
+
+test("parse trinity elemental resistance penetration", () => {
+  const result = parseMod(
+    "Gains Elemental Resistance Penetration equal to your minimum effective Elemental Resistance",
+  );
+  expect(result).toEqual([{ type: "TrinityElePen" }]);
+});
+
+test("parse trinity no conversion", () => {
+  const result = parseMod("Damage types cannot be converted");
+  expect(result).toEqual([{ type: "TrinityNoConversion" }]);
+});
+
+test("parse guaranteed 5x elemental damage", () => {
+  const result = parseMod(
+    "Any hit dealing Elemental Damage is guaranteed to deal 5x Elemental Damage",
+  );
+  expect(result).toEqual([
+    { type: "DmgPct", value: 400, dmgModType: "elemental", addn: true },
+  ]);
+});
+
 test("parse additional lightning damage per dexterity", () => {
   const result = parseMod("+9% additional Lightning Damage per 10 Dexterity");
   expect(result).toEqual([

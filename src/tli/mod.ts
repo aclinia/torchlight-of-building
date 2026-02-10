@@ -543,6 +543,9 @@ interface ModDefinitions {
   MaxPureHeartStacks: { value: number };
   // legendary gear
   DisableMainStatDmg: object;
+  TrinityElePen: object;
+  TrinitySingleElement: object;
+  TrinityNoConversion: object;
   // immunities
   ImmuneToBlinding: object;
   ImmuneToElementalAilments: object;
