@@ -94,17 +94,20 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
   "Unsullied Blade": () => [{ type: "SpellDmgBonusAppliesToAtkDmg" }],
   "Baptism of Purity": (i) => [
     { type: "MaxManaPct", value: 20, addn: true },
+    { type: "InflictsInfiltration", infiltrationType: "cold" },
+    { type: "InflictsInfiltration", infiltrationType: "lightning" },
+    { type: "InflictsInfiltration", infiltrationType: "fire" },
     { type: "MercuryBaptismDmgPct", value: [12, 20, 28, 36, 44][i] },
   ],
   "Cleanse Filth": (i) => [
     {
       type: "DmgPct",
-      value: [3, 3.5, 4, 4.5, 5][i],
+      value: [2, 2.5, 3, 3.5, 4][i],
       dmgModType: "elemental",
       addn: true,
       per: {
         stackable: "max_mana",
-        valueLimit: [60, 70, 80, 90, 100][i],
+        valueLimit: [40, 50, 60, 70, 80][i],
         amt: 1000,
       },
     },
@@ -122,7 +125,7 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
     },
     {
       type: "DmgPct",
-      value: [0.12, 0.16, 0.2, 0.24, 0.28][i],
+      value: [0.08, 0.08, 0.1, 0.1, 0.1][i],
       dmgModType: "elemental",
       addn: true,
       per: { stackable: "mercury_pt" },
