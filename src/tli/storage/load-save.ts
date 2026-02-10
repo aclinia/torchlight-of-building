@@ -6,6 +6,11 @@ import {
   CoreTalentNames,
 } from "@/src/data/core-talent/types";
 import type { HeroName, HeroTraitName } from "@/src/data/hero-trait/types";
+import {
+  type HyperlinkName,
+  HyperlinkNames,
+  Hyperlinks,
+} from "@/src/data/hyperlink";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
 import { Prisms } from "@/src/data/prism/prisms";
@@ -123,6 +128,15 @@ const getCoreTalentName = (text: string): CoreTalentName | undefined => {
   return undefined;
 };
 
+const hyperlinkNameSet = new Set<string>(HyperlinkNames);
+
+const getHyperlinkName = (text: string): HyperlinkName | undefined => {
+  if (hyperlinkNameSet.has(text)) {
+    return text as HyperlinkName;
+  }
+  return undefined;
+};
+
 const convertAffix = (
   affixTextParam: string,
   src: string | undefined,
@@ -148,6 +162,17 @@ const convertAffix = (
           maxDivinity,
         };
       }
+    }
+
+    const hyperlinkName = getHyperlinkName(lines[0]);
+    if (hyperlinkName !== undefined) {
+      const description = Hyperlinks[hyperlinkName];
+      const descriptionLines = description.split("\n");
+      const affixLines: AffixLine[] = descriptionLines.map((lineText) => {
+        const mods = parseMod(lineText);
+        return { text: lineText, mods: mods?.map((mod) => ({ ...mod, src })) };
+      });
+      return { specialName: hyperlinkName, affixLines, src, maxDivinity };
     }
   }
 
