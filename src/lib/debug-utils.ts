@@ -47,6 +47,39 @@ const findSkillByName = (name: string): BaseSkill | undefined => {
   );
 };
 
+export interface UnimplementedSupportAffix {
+  text: string;
+  skillName: string;
+}
+
+export const collectUnimplementedSupportAffixes = (
+  loadout: Loadout,
+): UnimplementedSupportAffix[] => {
+  const result: UnimplementedSupportAffix[] = [];
+
+  const processSupportSlots = (slot: SkillSlot | undefined): void => {
+    if (slot === undefined || slot.enabled !== true) return;
+    for (const supportKey of [1, 2, 3, 4, 5] as const) {
+      const support = slot.supportSkills[supportKey];
+      if (support === undefined) continue;
+      for (const affix of support.affixes) {
+        if (affix.mods === undefined) {
+          result.push({ text: affix.text, skillName: support.name });
+        }
+      }
+    }
+  };
+
+  for (const slotKey of [1, 2, 3, 4, 5] as const) {
+    processSupportSlots(loadout.skillPage.activeSkills[slotKey]);
+  }
+  for (const slotKey of [1, 2, 3, 4] as const) {
+    processSupportSlots(loadout.skillPage.passiveSkills[slotKey]);
+  }
+
+  return result;
+};
+
 export const collectUnimplementedItems = (
   loadout: Loadout,
 ): UnimplementedItem[] => {

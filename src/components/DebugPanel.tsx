@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   collectUnimplementedItems,
+  collectUnimplementedSupportAffixes,
   collectUnparseableAffixes,
 } from "@/src/lib/debug-utils";
 import type { SaveData } from "@/src/lib/save-data";
@@ -385,7 +386,14 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
     () => collectUnimplementedItems(loadout),
     [loadout],
   );
-  const totalIssues = unparseableAffixes.length + unimplementedItems.length;
+  const unimplementedSupportAffixes = useMemo(
+    () => collectUnimplementedSupportAffixes(loadout),
+    [loadout],
+  );
+  const totalIssues =
+    unparseableAffixes.length +
+    unimplementedItems.length +
+    unimplementedSupportAffixes.length;
 
   const loadoutAffixLines = useMemo(() => {
     return loadoutAffixes.flatMap((affix) =>
@@ -582,6 +590,31 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
                           {item.type}
                         </span>
                         <span className="text-orange-400">{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Unimplemented Support Skill Affixes Section */}
+              {unimplementedSupportAffixes.length > 0 && (
+                <div>
+                  <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wide mb-2">
+                    Unimplemented Support Skill Affixes (
+                    {unimplementedSupportAffixes.length})
+                  </h4>
+                  <div className="space-y-1">
+                    {unimplementedSupportAffixes.map((affix, idx) => (
+                      <div
+                        key={`support-affix-${affix.skillName}-${idx}`}
+                        className="flex items-start gap-2 text-sm"
+                      >
+                        <span className="shrink-0 px-2 py-0.5 bg-purple-900/50 text-purple-300 rounded text-xs font-medium">
+                          {affix.skillName}
+                        </span>
+                        <span className="font-mono text-purple-400">
+                          {affix.text}
+                        </span>
                       </div>
                     ))}
                   </div>
