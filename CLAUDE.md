@@ -316,6 +316,7 @@ Guided workflows for common tasks (invoke with `/skill-name`):
 | `/adding-mod-parsers`              | Adding new mod parsers (template → Mod objects)         |
 | `/adding-support-mod-parsers`      | Adding new support mod parsers (template → Mod objects) |
 | `/implementing-game-skill-parsers` | Adding active/passive skill data parsers                |
+| `/add-mod-resolver`                | Adding push* resolvers in resolveModsForOffenseSkill    |
 | `/add-configuration`               | Adding new configuration fields (booleans, numbers)     |
 
 ## Gotchas
