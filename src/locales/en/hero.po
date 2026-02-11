@@ -6,81 +6,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:4
-msgid "Escapist Bing: Blast Nova (#1)"
-msgstr "Escapist Bing: Blast Nova (#1)"
+#: src/data/translate/hero.ts:125
+msgid "All In"
+msgstr "All In"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:5
-msgid "Escapist Bing: Creative Genius (#2)"
-msgstr "Escapist Bing: Creative Genius (#2)"
+#: src/data/translate/hero.ts:113
+msgid "Amazing Friends"
+msgstr "Amazing Friends"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:6
-msgid "Divineshot Carino: Ranger of Glory (#1)"
-msgstr "Divineshot Carino: Ranger of Glory (#1)"
+#: src/data/translate/hero.ts:54
+msgid "Ammo Expert"
+msgstr "Ammo Expert"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:7
-msgid "Divineshot Carino: Lethal Flash (#2)"
-msgstr "Divineshot Carino: Lethal Flash (#2)"
+#: src/data/translate/hero.ts:136
+msgid "Anger"
+msgstr "Anger"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:8
-msgid "Divineshot Carino: Zealot of War (#3)"
-msgstr "Divineshot Carino: Zealot of War (#3)"
+#: src/data/translate/hero.ts:49
+msgid "Auto-Ingenuity Program"
+msgstr "Auto-Ingenuity Program"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:9
-msgid "Cateye Erika: Wind Stalker (#1)"
-msgstr "Cateye Erika: Wind Stalker (#1)"
+#: src/data/translate/hero.ts:107
+msgid "Banquet of Bliss"
+msgstr "Banquet of Bliss"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:10
-msgid "Cateye Erika: Lightning Shadow (#2)"
-msgstr "Cateye Erika: Lightning Shadow (#2)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:11
-msgid "Cateye Erika: Vendetta's Sting (#3)"
-msgstr "Cateye Erika: Vendetta's Sting (#3)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:12
-msgid "Frostfire Gemma: Ice-Fire Fusion (#1)"
-msgstr "Frostfire Gemma: Ice-Fire Fusion (#1)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:13
-msgid "Frostfire Gemma: Frostbitten Heart (#2)"
-msgstr "Frostfire Gemma: Frostbitten Heart (#2)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:14
-msgid "Frostfire Gemma: Flame of Pleasure (#3)"
-msgstr "Frostfire Gemma: Flame of Pleasure (#3)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:15
-msgid "The Forsaken Iris: Growing Breeze (#1)"
-msgstr "The Forsaken Iris: Growing Breeze (#1)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:16
-msgid "The Forsaken Iris: Vigilant Breeze (#2)"
-msgstr "The Forsaken Iris: Vigilant Breeze (#2)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:17
-msgid "Commander Moto: Order Calling (#1)"
-msgstr "Commander Moto: Order Calling (#1)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:18
-msgid "Commander Moto: Charge Calling (#2)"
-msgstr "Commander Moto: Charge Calling (#2)"
+#: src/data/translate/hero.ts:157
+msgid "Baptism of Purity"
+msgstr "Baptism of Purity"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:19
@@ -93,6 +59,531 @@ msgid "Berserker Rehan: Seething Silhouette (#2)"
 msgstr "Berserker Rehan: Seething Silhouette (#2)"
 
 #. js-lingui-explicit-id
+#: src/data/translate/hero.ts:182
+msgid "Blasphemer"
+msgstr "Blasphemer"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:35
+msgid "Blast Barrage"
+msgstr "Blast Barrage"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:32
+msgid "Blast Nova"
+msgstr "Blast Nova"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:102
+msgid "Blooming Frost Flower"
+msgstr "Blooming Frost Flower"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:95
+msgid "Bone-piercing Heat"
+msgstr "Bone-piercing Heat"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:161
+msgid "Born to Cleanse"
+msgstr "Born to Cleanse"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:159
+msgid "Boundless Sanctuary"
+msgstr "Boundless Sanctuary"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:43
+msgid "Brainstorm"
+msgstr "Brainstorm"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:118
+msgid "Breeze's Whisper"
+msgstr "Breeze's Whisper"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:78
+msgid "Cat Dive"
+msgstr "Cat Dive"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:77
+msgid "Cat's Punches"
+msgstr "Cat's Punches"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:76
+msgid "Cat's Scratch"
+msgstr "Cat's Scratch"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:75
+msgid "Cat's Vision"
+msgstr "Cat's Vision"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:10
+msgid "Cateye Erika: Lightning Shadow (#2)"
+msgstr "Cateye Erika: Lightning Shadow (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:11
+msgid "Cateye Erika: Vendetta's Sting (#3)"
+msgstr "Cateye Erika: Vendetta's Sting (#3)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:9
+msgid "Cateye Erika: Wind Stalker (#1)"
+msgstr "Cateye Erika: Wind Stalker (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:68
+msgid "Ceasefire"
+msgstr "Ceasefire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:167
+msgid "Chantey of Sinking"
+msgstr "Chantey of Sinking"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:130
+msgid "Charge Calling"
+msgstr "Charge Calling"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:128
+msgid "Charge Forward"
+msgstr "Charge Forward"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:84
+msgid "Charging Equation"
+msgstr "Charging Equation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:158
+msgid "Cleanse Filth"
+msgstr "Cleanse Filth"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:18
+msgid "Commander Moto: Charge Calling (#2)"
+msgstr "Commander Moto: Charge Calling (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:17
+msgid "Commander Moto: Order Calling (#1)"
+msgstr "Commander Moto: Order Calling (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:52
+msgid "Contingency Inspiration Delivery"
+msgstr "Contingency Inspiration Delivery"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:39
+msgid "Creative Genius"
+msgstr "Creative Genius"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:56
+msgid "Crushing Gale Trigger"
+msgstr "Crushing Gale Trigger"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:100
+msgid "Dance of Frost"
+msgstr "Dance of Frost"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:34
+msgid "Dangerous Runaway"
+msgstr "Dangerous Runaway"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:61
+msgid "Dart Shot"
+msgstr "Dart Shot"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:80
+msgid "Dazzling Lightning"
+msgstr "Dazzling Lightning"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:98
+msgid "Deepfreeze"
+msgstr "Deepfreeze"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:65
+msgid "Desperate Measure"
+msgstr "Desperate Measure"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:154
+msgid "Desperation"
+msgstr "Desperation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:184
+msgid "Disgraced Minister"
+msgstr "Disgraced Minister"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:153
+msgid "Divine Intervention"
+msgstr "Divine Intervention"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:172
+msgid "Divine Realm Power"
+msgstr "Divine Realm Power"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:174
+msgid "Divine Spirit"
+msgstr "Divine Spirit"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:7
+msgid "Divineshot Carino: Lethal Flash (#2)"
+msgstr "Divineshot Carino: Lethal Flash (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:6
+msgid "Divineshot Carino: Ranger of Glory (#1)"
+msgstr "Divineshot Carino: Ranger of Glory (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:8
+msgid "Divineshot Carino: Zealot of War (#3)"
+msgstr "Divineshot Carino: Zealot of War (#3)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:170
+msgid "Divinity"
+msgstr "Divinity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:108
+msgid "Dress Licker"
+msgstr "Dress Licker"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:191
+msgid "Eeeendless Mana"
+msgstr "Eeeendless Mana"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:81
+msgid "Electroplated Motif"
+msgstr "Electroplated Motif"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:110
+msgid "Embrace the World"
+msgstr "Embrace the World"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:70
+msgid "Endless Frenzy"
+msgstr "Endless Frenzy"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:4
+msgid "Escapist Bing: Blast Nova (#1)"
+msgstr "Escapist Bing: Blast Nova (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:5
+msgid "Escapist Bing: Creative Genius (#2)"
+msgstr "Escapist Bing: Creative Genius (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:135
+msgid "Essential Speed"
+msgstr "Essential Speed"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:71
+msgid "Eternal Flames"
+msgstr "Eternal Flames"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:62
+msgid "Evil Ouroboros"
+msgstr "Evil Ouroboros"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:187
+msgid "Extreme Desecration"
+msgstr "Extreme Desecration"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:69
+msgid "Extreme Heat"
+msgstr "Extreme Heat"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:180
+msgid "Farewell Prophecy"
+msgstr "Farewell Prophecy"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:89
+msgid "Feline Fury"
+msgstr "Feline Fury"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:177
+msgid "Finale Prophecy"
+msgstr "Finale Prophecy"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:33
+msgid "Firepower Coverage"
+msgstr "Firepower Coverage"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:103
+msgid "Flame of Pleasure"
+msgstr "Flame of Pleasure"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:105
+msgid "Flames of Desire"
+msgstr "Flames of Desire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:44
+msgid "Flash of Brilliance"
+msgstr "Flash of Brilliance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:138
+msgid "Frenzy Furious"
+msgstr "Frenzy Furious"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:38
+msgid "Frenzy Hound"
+msgstr "Frenzy Hound"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:101
+msgid "Frigid Infusion"
+msgstr "Frigid Infusion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:97
+msgid "Frostbitten Heart"
+msgstr "Frostbitten Heart"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:14
+msgid "Frostfire Gemma: Flame of Pleasure (#3)"
+msgstr "Frostfire Gemma: Flame of Pleasure (#3)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:13
+msgid "Frostfire Gemma: Frostbitten Heart (#2)"
+msgstr "Frostfire Gemma: Frostbitten Heart (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:12
+msgid "Frostfire Gemma: Ice-Fire Fusion (#1)"
+msgstr "Frostfire Gemma: Ice-Fire Fusion (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:134
+msgid "Fuel War with War"
+msgstr "Fuel War with War"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:144
+msgid "Fury's Onslaught"
+msgstr "Fury's Onslaught"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:99
+msgid "Glacial Night"
+msgstr "Glacial Night"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:129
+msgid "Go for Broke"
+msgstr "Go for Broke"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:104
+msgid "Groaning Echo"
+msgstr "Groaning Echo"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:115
+msgid "Grow With It"
+msgstr "Grow With It"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:146
+msgid "Growing Anger"
+msgstr "Growing Anger"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:109
+msgid "Growing Breeze"
+msgstr "Growing Breeze"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:133
+msgid "Guerilla Tactics"
+msgstr "Guerilla Tactics"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:119
+msgid "Happiest Reunion"
+msgstr "Happiest Reunion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:74
+msgid "Have Fun"
+msgstr "Have Fun"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:132
+msgid "Heroic Sacrifice"
+msgstr "Heroic Sacrifice"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:149
+msgid "High Court Chariot"
+msgstr "High Court Chariot"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:51
+msgid "Hyper-Resonance Hypothesis"
+msgstr "Hyper-Resonance Hypothesis"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:145
+msgid "Hysteria"
+msgstr "Hysteria"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:193
+msgid "I'm Out of Mana"
+msgstr "I'm Out of Mana"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:192
+msgid "I'm an Illusion"
+msgstr "I'm an Illusion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:96
+msgid "Ice to Blaze"
+msgstr "Ice to Blaze"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:92
+msgid "Ice-Fire Embrace"
+msgstr "Ice-Fire Embrace"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:91
+msgid "Ice-Fire Fusion"
+msgstr "Ice-Fire Fusion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:94
+msgid "Ice-Fire Radiance"
+msgstr "Ice-Fire Radiance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:166
+msgid "Idyll of the Tide"
+msgstr "Idyll of the Tide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:155
+msgid "Improvision"
+msgstr "Improvision"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:173
+msgid "Incarnation"
+msgstr "Incarnation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:169
+msgid "Incarnation of the Gods"
+msgstr "Incarnation of the Gods"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:67
+msgid "Incinerated Glory"
+msgstr "Incinerated Glory"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:106
+msgid "Infernal Damnation"
+msgstr "Infernal Damnation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:48
+msgid "Ingenious Chaos Principle"
+msgstr "Ingenious Chaos Principle"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:40
+msgid "Inspiration Overflow"
+msgstr "Inspiration Overflow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:73
+msgid "Interest"
+msgstr "Interest"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:152
+msgid "Invulnerability"
+msgstr "Invulnerability"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:55
+msgid "Landslide"
+msgstr "Landslide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:127
+msgid "Last Stand"
+msgstr "Last Stand"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:47
+msgid "Law of Ingenuity"
+msgstr "Law of Ingenuity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:87
+msgid "Leisurely Stroll"
+msgstr "Leisurely Stroll"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:59
+msgid "Lethal Flash"
+msgstr "Lethal Flash"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:63
+msgid "Lethal Interval"
+msgstr "Lethal Interval"
+
+#. js-lingui-explicit-id
 #: src/data/translate/hero.ts:21
 msgid "Lightbringer Rosa: High Court Chariot (#1)"
 msgstr "Lightbringer Rosa: High Court Chariot (#1)"
@@ -103,9 +594,74 @@ msgid "Lightbringer Rosa: Unsullied Blade (#2)"
 msgstr "Lightbringer Rosa: Unsullied Blade (#2)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:23
-msgid "Tide Whisper Selena: Sing with the Tide"
-msgstr "Tide Whisper Selena: Sing with the Tide"
+#: src/data/translate/hero.ts:79
+msgid "Lightning Shadow"
+msgstr "Lightning Shadow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:190
+msgid "Make it Quick"
+msgstr "Make it Quick"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:64
+msgid "Malice Charge"
+msgstr "Malice Charge"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:189
+msgid "Me and Myself"
+msgstr "Me and Myself"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:121
+msgid "Merging Stream"
+msgstr "Merging Stream"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:171
+msgid "Might Flow"
+msgstr "Might Flow"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:41
+msgid "Mind Domain"
+msgstr "Mind Domain"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:90
+msgid "Mortal Gambit"
+msgstr "Mortal Gambit"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:50
+msgid "Multi-Coupling Equation"
+msgstr "Multi-Coupling Equation"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:168
+msgid "Murmurs of the Distant Tide"
+msgstr "Murmurs of the Distant Tide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:57
+msgid "Never Stopping"
+msgstr "Never Stopping"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:122
+msgid "Nurturing Breeze"
+msgstr "Nurturing Breeze"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:186
+msgid "Onset of Depravity"
+msgstr "Onset of Depravity"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:26
+msgid "Oracle Thea: Blasphemer (#3)"
+msgstr "Oracle Thea: Blasphemer (#3)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:24
@@ -118,89 +674,9 @@ msgid "Oracle Thea: Wisdom of The Gods (#2)"
 msgstr "Oracle Thea: Wisdom of The Gods (#2)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:26
-msgid "Oracle Thea: Blasphemer (#3)"
-msgstr "Oracle Thea: Blasphemer (#3)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:27
-msgid "Spacetime Witness Youga: Spacetime Illusion (#1)"
-msgstr "Spacetime Witness Youga: Spacetime Illusion (#1)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:28
-msgid "Spacetime Witness Youga: Spacetime Elapse (#2)"
-msgstr "Spacetime Witness Youga: Spacetime Elapse (#2)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:32
-msgid "Blast Nova"
-msgstr "Blast Nova"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:33
-msgid "Firepower Coverage"
-msgstr "Firepower Coverage"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:34
-msgid "Dangerous Runaway"
-msgstr "Dangerous Runaway"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:35
-msgid "Blast Barrage"
-msgstr "Blast Barrage"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:36
-msgid "Phantom Delivery"
-msgstr "Phantom Delivery"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:37
-msgid "Radiation Effect"
-msgstr "Radiation Effect"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:38
-msgid "Frenzy Hound"
-msgstr "Frenzy Hound"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:39
-msgid "Creative Genius"
-msgstr "Creative Genius"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:40
-msgid "Inspiration Overflow"
-msgstr "Inspiration Overflow"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:41
-msgid "Mind Domain"
-msgstr "Mind Domain"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:42
-msgid "Trouble Maker"
-msgstr "Trouble Maker"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:43
-msgid "Brainstorm"
-msgstr "Brainstorm"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:44
-msgid "Flash of Brilliance"
-msgstr "Flash of Brilliance"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:45
-msgid "Super Sonic Protocol"
-msgstr "Super Sonic Protocol"
+#: src/data/translate/hero.ts:123
+msgid "Order Calling"
+msgstr "Order Calling"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:46
@@ -208,649 +684,9 @@ msgid "Over-Shield Module"
 msgstr "Over-Shield Module"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:47
-msgid "Law of Ingenuity"
-msgstr "Law of Ingenuity"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:48
-msgid "Ingenious Chaos Principle"
-msgstr "Ingenious Chaos Principle"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:49
-msgid "Auto-Ingenuity Program"
-msgstr "Auto-Ingenuity Program"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:50
-msgid "Multi-Coupling Equation"
-msgstr "Multi-Coupling Equation"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:51
-msgid "Hyper-Resonance Hypothesis"
-msgstr "Hyper-Resonance Hypothesis"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:52
-msgid "Contingency Inspiration Delivery"
-msgstr "Contingency Inspiration Delivery"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:53
-msgid "Ranger of Glory"
-msgstr "Ranger of Glory"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:54
-msgid "Ammo Expert"
-msgstr "Ammo Expert"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:55
-msgid "Landslide"
-msgstr "Landslide"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:56
-msgid "Crushing Gale Trigger"
-msgstr "Crushing Gale Trigger"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:57
-msgid "Never Stopping"
-msgstr "Never Stopping"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:58
-msgid "Well Prepared"
-msgstr "Well Prepared"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:59
-msgid "Lethal Flash"
-msgstr "Lethal Flash"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:60
-msgid "Shadow Magazine"
-msgstr "Shadow Magazine"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:61
-msgid "Dart Shot"
-msgstr "Dart Shot"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:62
-msgid "Evil Ouroboros"
-msgstr "Evil Ouroboros"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:63
-msgid "Lethal Interval"
-msgstr "Lethal Interval"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:64
-msgid "Malice Charge"
-msgstr "Malice Charge"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:65
-msgid "Desperate Measure"
-msgstr "Desperate Measure"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:66
-msgid "Zealot of War"
-msgstr "Zealot of War"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:67
-msgid "Incinerated Glory"
-msgstr "Incinerated Glory"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:68
-msgid "Ceasefire"
-msgstr "Ceasefire"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:69
-msgid "Extreme Heat"
-msgstr "Extreme Heat"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:70
-msgid "Endless Frenzy"
-msgstr "Endless Frenzy"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:71
-msgid "Eternal Flames"
-msgstr "Eternal Flames"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:72
-msgid "Wind Stalker"
-msgstr "Wind Stalker"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:73
-msgid "Interest"
-msgstr "Interest"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:74
-msgid "Have Fun"
-msgstr "Have Fun"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:75
-msgid "Cat's Vision"
-msgstr "Cat's Vision"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:76
-msgid "Cat's Scratch"
-msgstr "Cat's Scratch"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:77
-msgid "Cat's Punches"
-msgstr "Cat's Punches"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:78
-msgid "Cat Dive"
-msgstr "Cat Dive"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:79
-msgid "Lightning Shadow"
-msgstr "Lightning Shadow"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:80
-msgid "Dazzling Lightning"
-msgstr "Dazzling Lightning"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:81
-msgid "Electroplated Motif"
-msgstr "Electroplated Motif"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:82
-msgid "Wild Lightning"
-msgstr "Wild Lightning"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:83
-msgid "Swift as Lightning"
-msgstr "Swift as Lightning"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:84
-msgid "Charging Equation"
-msgstr "Charging Equation"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:85
-msgid "Vendetta's Sting"
-msgstr "Vendetta's Sting"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:86
-msgid "Twinblade Onslaught"
-msgstr "Twinblade Onslaught"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:87
-msgid "Leisurely Stroll"
-msgstr "Leisurely Stroll"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:88
-msgid "Swift Stalk"
-msgstr "Swift Stalk"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:89
-msgid "Feline Fury"
-msgstr "Feline Fury"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:90
-msgid "Mortal Gambit"
-msgstr "Mortal Gambit"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:91
-msgid "Ice-Fire Fusion"
-msgstr "Ice-Fire Fusion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:92
-msgid "Ice-Fire Embrace"
-msgstr "Ice-Fire Embrace"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:93
-msgid "Restless Ice-Fire"
-msgstr "Restless Ice-Fire"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:94
-msgid "Ice-Fire Radiance"
-msgstr "Ice-Fire Radiance"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:95
-msgid "Bone-piercing Heat"
-msgstr "Bone-piercing Heat"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:96
-msgid "Ice to Blaze"
-msgstr "Ice to Blaze"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:97
-msgid "Frostbitten Heart"
-msgstr "Frostbitten Heart"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:98
-msgid "Deepfreeze"
-msgstr "Deepfreeze"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:99
-msgid "Glacial Night"
-msgstr "Glacial Night"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:100
-msgid "Dance of Frost"
-msgstr "Dance of Frost"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:101
-msgid "Frigid Infusion"
-msgstr "Frigid Infusion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:102
-msgid "Blooming Frost Flower"
-msgstr "Blooming Frost Flower"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:103
-msgid "Flame of Pleasure"
-msgstr "Flame of Pleasure"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:104
-msgid "Groaning Echo"
-msgstr "Groaning Echo"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:105
-msgid "Flames of Desire"
-msgstr "Flames of Desire"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:106
-msgid "Infernal Damnation"
-msgstr "Infernal Damnation"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:107
-msgid "Banquet of Bliss"
-msgstr "Banquet of Bliss"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:108
-msgid "Dress Licker"
-msgstr "Dress Licker"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:109
-msgid "Growing Breeze"
-msgstr "Growing Breeze"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:110
-msgid "Embrace the World"
-msgstr "Embrace the World"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:111
-msgid "Struggle Free"
-msgstr "Struggle Free"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:112
-msgid "Socialite"
-msgstr "Socialite"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:113
-msgid "Amazing Friends"
-msgstr "Amazing Friends"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:114
-msgid "Run With the Wind"
-msgstr "Run With the Wind"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:115
-msgid "Grow With It"
-msgstr "Grow With It"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:116
-msgid "Vigilant Breeze"
-msgstr "Vigilant Breeze"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:117
-msgid "Whirlwind Tango"
-msgstr "Whirlwind Tango"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:118
-msgid "Breeze's Whisper"
-msgstr "Breeze's Whisper"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:119
-msgid "Happiest Reunion"
-msgstr "Happiest Reunion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:120
-msgid "Warmest Vigilance"
-msgstr "Warmest Vigilance"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:121
-msgid "Merging Stream"
-msgstr "Merging Stream"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:122
-msgid "Nurturing Breeze"
-msgstr "Nurturing Breeze"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:123
-msgid "Order Calling"
-msgstr "Order Calling"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:124
-msgid "Veteran"
-msgstr "Veteran"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:125
-msgid "All In"
-msgstr "All In"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:126
-msgid "Tough as Nails"
-msgstr "Tough as Nails"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:127
-msgid "Last Stand"
-msgstr "Last Stand"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:128
-msgid "Charge Forward"
-msgstr "Charge Forward"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:129
-msgid "Go for Broke"
-msgstr "Go for Broke"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:130
-msgid "Charge Calling"
-msgstr "Charge Calling"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:131
-msgid "Unstoppable Wave"
-msgstr "Unstoppable Wave"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:132
-msgid "Heroic Sacrifice"
-msgstr "Heroic Sacrifice"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:133
-msgid "Guerilla Tactics"
-msgstr "Guerilla Tactics"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:134
-msgid "Fuel War with War"
-msgstr "Fuel War with War"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:135
-msgid "Essential Speed"
-msgstr "Essential Speed"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:136
-msgid "Anger"
-msgstr "Anger"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:137
-msgid "Righteous Fury"
-msgstr "Righteous Fury"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:138
-msgid "Frenzy Furious"
-msgstr "Frenzy Furious"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:139
-msgid "Tunnel Vision"
-msgstr "Tunnel Vision"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:140
-msgid "Rampaging"
-msgstr "Rampaging"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:141
-msgid "Uncontrolled Anger"
-msgstr "Uncontrolled Anger"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:142
-msgid "Seething Silhouette"
-msgstr "Seething Silhouette"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:143
-msgid "Ritual of Offering"
-msgstr "Ritual of Offering"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:144
-msgid "Fury's Onslaught"
-msgstr "Fury's Onslaught"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:145
-msgid "Hysteria"
-msgstr "Hysteria"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:146
-msgid "Growing Anger"
-msgstr "Growing Anger"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:147
-msgid "Split Form"
-msgstr "Split Form"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:148
-msgid "Rage Infusion"
-msgstr "Rage Infusion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:149
-msgid "High Court Chariot"
-msgstr "High Court Chariot"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:150
-msgid "Unbreakable Stand"
-msgstr "Unbreakable Stand"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:151
-msgid "Whirlwind Advance"
-msgstr "Whirlwind Advance"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:152
-msgid "Invulnerability"
-msgstr "Invulnerability"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:153
-msgid "Divine Intervention"
-msgstr "Divine Intervention"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:154
-msgid "Desperation"
-msgstr "Desperation"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:155
-msgid "Improvision"
-msgstr "Improvision"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:156
-msgid "Unsullied Blade"
-msgstr "Unsullied Blade"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:157
-msgid "Baptism of Purity"
-msgstr "Baptism of Purity"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:158
-msgid "Cleanse Filth"
-msgstr "Cleanse Filth"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:159
-msgid "Boundless Sanctuary"
-msgstr "Boundless Sanctuary"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:160
-msgid "Utmost Devotion"
-msgstr "Utmost Devotion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:161
-msgid "Born to Cleanse"
-msgstr "Born to Cleanse"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:162
-msgid "Sing with the Tide"
-msgstr "Sing with the Tide"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:163
-msgid "Undersea Ballad"
-msgstr "Undersea Ballad"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:164
-msgid "Wave Aria"
-msgstr "Wave Aria"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:165
-msgid "Sea Foam Nocturne"
-msgstr "Sea Foam Nocturne"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:166
-msgid "Idyll of the Tide"
-msgstr "Idyll of the Tide"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:167
-msgid "Chantey of Sinking"
-msgstr "Chantey of Sinking"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:168
-msgid "Murmurs of the Distant Tide"
-msgstr "Murmurs of the Distant Tide"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:169
-msgid "Incarnation of the Gods"
-msgstr "Incarnation of the Gods"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:170
-msgid "Divinity"
-msgstr "Divinity"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:171
-msgid "Might Flow"
-msgstr "Might Flow"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:172
-msgid "Divine Realm Power"
-msgstr "Divine Realm Power"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:173
-msgid "Incarnation"
-msgstr "Incarnation"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:174
-msgid "Divine Spirit"
-msgstr "Divine Spirit"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:175
-msgid "Wisdom of The Gods"
-msgstr "Wisdom of The Gods"
+#: src/data/translate/hero.ts:36
+msgid "Phantom Delivery"
+msgstr "Phantom Delivery"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:176
@@ -858,24 +694,9 @@ msgid "Predicted Harvest"
 msgstr "Predicted Harvest"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:177
-msgid "Finale Prophecy"
-msgstr "Finale Prophecy"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:178
-msgid "Predicted Reincarnation"
-msgstr "Predicted Reincarnation"
-
-#. js-lingui-explicit-id
 #: src/data/translate/hero.ts:179
 msgid "Predicted Hope"
 msgstr "Predicted Hope"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:180
-msgid "Farewell Prophecy"
-msgstr "Farewell Prophecy"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:181
@@ -883,34 +704,89 @@ msgid "Predicted Justice"
 msgstr "Predicted Justice"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:182
-msgid "Blasphemer"
-msgstr "Blasphemer"
+#: src/data/translate/hero.ts:178
+msgid "Predicted Reincarnation"
+msgstr "Predicted Reincarnation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:183
-msgid "Unholy Baptism"
-msgstr "Unholy Baptism"
+#: src/data/translate/hero.ts:37
+msgid "Radiation Effect"
+msgstr "Radiation Effect"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:184
-msgid "Disgraced Minister"
-msgstr "Disgraced Minister"
+#: src/data/translate/hero.ts:148
+msgid "Rage Infusion"
+msgstr "Rage Infusion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:185
-msgid "Tarnished Sage"
-msgstr "Tarnished Sage"
+#: src/data/translate/hero.ts:140
+msgid "Rampaging"
+msgstr "Rampaging"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:186
-msgid "Onset of Depravity"
-msgstr "Onset of Depravity"
+#: src/data/translate/hero.ts:53
+msgid "Ranger of Glory"
+msgstr "Ranger of Glory"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:187
-msgid "Extreme Desecration"
-msgstr "Extreme Desecration"
+#: src/data/translate/hero.ts:93
+msgid "Restless Ice-Fire"
+msgstr "Restless Ice-Fire"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:137
+msgid "Righteous Fury"
+msgstr "Righteous Fury"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:143
+msgid "Ritual of Offering"
+msgstr "Ritual of Offering"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:114
+msgid "Run With the Wind"
+msgstr "Run With the Wind"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:165
+msgid "Sea Foam Nocturne"
+msgstr "Sea Foam Nocturne"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:142
+msgid "Seething Silhouette"
+msgstr "Seething Silhouette"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:60
+msgid "Shadow Magazine"
+msgstr "Shadow Magazine"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:162
+msgid "Sing with the Tide"
+msgstr "Sing with the Tide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:112
+msgid "Socialite"
+msgstr "Socialite"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:197
+msgid "Spacetime Cutting"
+msgstr "Spacetime Cutting"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:194
+msgid "Spacetime Elapse"
+msgstr "Spacetime Elapse"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:199
+msgid "Spacetime Expansion"
+msgstr "Spacetime Expansion"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:188
@@ -918,34 +794,9 @@ msgid "Spacetime Illusion"
 msgstr "Spacetime Illusion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:189
-msgid "Me and Myself"
-msgstr "Me and Myself"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:190
-msgid "Make it Quick"
-msgstr "Make it Quick"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:191
-msgid "Eeeendless Mana"
-msgstr "Eeeendless Mana"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:192
-msgid "I'm an Illusion"
-msgstr "I'm an Illusion"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:193
-msgid "I'm Out of Mana"
-msgstr "I'm Out of Mana"
-
-#. js-lingui-explicit-id
-#: src/data/translate/hero.ts:194
-msgid "Spacetime Elapse"
-msgstr "Spacetime Elapse"
+#: src/data/translate/hero.ts:198
+msgid "Spacetime Pause"
+msgstr "Spacetime Pause"
 
 #. js-lingui-explicit-id
 #: src/data/translate/hero.ts:195
@@ -958,16 +809,171 @@ msgid "Spacetime Upheaval"
 msgstr "Spacetime Upheaval"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:197
-msgid "Spacetime Cutting"
-msgstr "Spacetime Cutting"
+#: src/data/translate/hero.ts:28
+msgid "Spacetime Witness Youga: Spacetime Elapse (#2)"
+msgstr "Spacetime Witness Youga: Spacetime Elapse (#2)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:198
-msgid "Spacetime Pause"
-msgstr "Spacetime Pause"
+#: src/data/translate/hero.ts:27
+msgid "Spacetime Witness Youga: Spacetime Illusion (#1)"
+msgstr "Spacetime Witness Youga: Spacetime Illusion (#1)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:199
-msgid "Spacetime Expansion"
-msgstr "Spacetime Expansion"
+#: src/data/translate/hero.ts:147
+msgid "Split Form"
+msgstr "Split Form"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:111
+msgid "Struggle Free"
+msgstr "Struggle Free"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:45
+msgid "Super Sonic Protocol"
+msgstr "Super Sonic Protocol"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:88
+msgid "Swift Stalk"
+msgstr "Swift Stalk"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:83
+msgid "Swift as Lightning"
+msgstr "Swift as Lightning"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:185
+msgid "Tarnished Sage"
+msgstr "Tarnished Sage"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:15
+msgid "The Forsaken Iris: Growing Breeze (#1)"
+msgstr "The Forsaken Iris: Growing Breeze (#1)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:16
+msgid "The Forsaken Iris: Vigilant Breeze (#2)"
+msgstr "The Forsaken Iris: Vigilant Breeze (#2)"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:23
+msgid "Tide Whisper Selena: Sing with the Tide"
+msgstr "Tide Whisper Selena: Sing with the Tide"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:126
+msgid "Tough as Nails"
+msgstr "Tough as Nails"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:42
+msgid "Trouble Maker"
+msgstr "Trouble Maker"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:139
+msgid "Tunnel Vision"
+msgstr "Tunnel Vision"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:86
+msgid "Twinblade Onslaught"
+msgstr "Twinblade Onslaught"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:150
+msgid "Unbreakable Stand"
+msgstr "Unbreakable Stand"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:141
+msgid "Uncontrolled Anger"
+msgstr "Uncontrolled Anger"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:163
+msgid "Undersea Ballad"
+msgstr "Undersea Ballad"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:183
+msgid "Unholy Baptism"
+msgstr "Unholy Baptism"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:131
+msgid "Unstoppable Wave"
+msgstr "Unstoppable Wave"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:156
+msgid "Unsullied Blade"
+msgstr "Unsullied Blade"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:160
+msgid "Utmost Devotion"
+msgstr "Utmost Devotion"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:85
+msgid "Vendetta's Sting"
+msgstr "Vendetta's Sting"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:124
+msgid "Veteran"
+msgstr "Veteran"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:116
+msgid "Vigilant Breeze"
+msgstr "Vigilant Breeze"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:120
+msgid "Warmest Vigilance"
+msgstr "Warmest Vigilance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:164
+msgid "Wave Aria"
+msgstr "Wave Aria"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:58
+msgid "Well Prepared"
+msgstr "Well Prepared"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:151
+msgid "Whirlwind Advance"
+msgstr "Whirlwind Advance"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:117
+msgid "Whirlwind Tango"
+msgstr "Whirlwind Tango"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:82
+msgid "Wild Lightning"
+msgstr "Wild Lightning"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:72
+msgid "Wind Stalker"
+msgstr "Wind Stalker"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:175
+msgid "Wisdom of The Gods"
+msgstr "Wisdom of The Gods"
+
+#. js-lingui-explicit-id
+#: src/data/translate/hero.ts:66
+msgid "Zealot of War"
+msgstr "Zealot of War"

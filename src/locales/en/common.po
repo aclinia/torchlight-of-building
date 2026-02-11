@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/AdvancedCraftingModal.tsx:124
+#: src/components/equipment/EditGearModal.tsx:890
 msgid ""
 "+10% Fire Damage\n"
 "+20 to Maximum Life\n"
@@ -24,19 +24,27 @@ msgstr ""
 "+20 to Maximum Life\n"
 "+5% Attack Speed"
 
-#: src/components/equipment/EditGearModal.tsx:688
+#: src/components/equipment/EditGearModal.tsx:713
 msgid "Base Stats (1 max)"
 msgstr "Base Stats (1 max)"
 
-#: src/routes/index.tsx:429
+#: src/routes/index.tsx:434
 msgid "Create your first character build to get started"
 msgstr "Create your first character build to get started"
 
-#: src/routes/builder/equipment.tsx:126
+#: src/routes/builder/equipment.tsx:105
 msgid "Craft Item"
 msgstr "Craft Item"
 
-#: src/routes/index.tsx:166
+#: src/components/equipment/EditGearModal.tsx:897
+msgid "Enter raw affix text, one per line. Use this for affixes not available in the dropdowns above."
+msgstr "Enter raw affix text, one per line. Use this for affixes not available in the dropdowns above."
+
+#: src/components/equipment/EditGearModal.tsx:885
+msgid "Custom Affixes"
+msgstr "Custom Affixes"
+
+#: src/routes/index.tsx:167
 msgid "Rename"
 msgstr "Rename"
 
@@ -44,24 +52,23 @@ msgstr "Rename"
 #~ msgid "Select equipment type..."
 #~ msgstr "Select equipment type..."
 
-#: src/routes/index.tsx:402
+#: src/routes/index.tsx:407
 msgid "Create New"
 msgstr "Create New"
 
-#: src/routes/builder/equipment.tsx:111
+#: src/routes/builder/equipment.tsx:98
 msgid "Craft New Item"
 msgstr "Craft New Item"
 
 #: src/routes/builder/equipment.tsx:118
-msgid "Advanced Crafting"
-msgstr "Advanced Crafting"
+#~ msgid "Advanced Crafting"
+#~ msgstr "Advanced Crafting"
 
-#: src/routes/builder/equipment.tsx:137
+#: src/routes/builder/equipment.tsx:116
 msgid "No items in inventory. Craft items above to add them here."
 msgstr "No items in inventory. Craft items above to add them here."
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:145
-#: src/components/equipment/EditGearModal.tsx:877
+#: src/components/equipment/EditGearModal.tsx:924
 msgid "Save to Inventory"
 msgstr "Save to Inventory"
 
@@ -72,8 +79,8 @@ msgstr "Active Skills"
 
 #. js-lingui-explicit-id
 #: src/components/equipment/AdvancedCraftingModal.tsx:94
-msgid "Advanced Crafting"
-msgstr "Advanced Crafting"
+#~ msgid "Advanced Crafting"
+#~ msgstr "Advanced Crafting"
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
@@ -157,7 +164,7 @@ msgid "Core Talent 2"
 msgstr "Core Talent 2"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:657
+#: src/components/equipment/EditGearModal.tsx:676
 msgid "Craft New Item"
 msgstr "Craft New Item"
 
@@ -181,7 +188,7 @@ msgstr "Cudgel"
 msgid "Dagger"
 msgstr "Dagger"
 
-#: src/routes/index.tsx:438
+#: src/routes/index.tsx:443
 msgid "Create New Build"
 msgstr "Create New Build"
 
@@ -190,7 +197,7 @@ msgstr "Create New Build"
 msgid "Divinity Slate"
 msgstr "Divinity Slate"
 
-#: src/routes/index.tsx:396
+#: src/routes/index.tsx:401
 msgid "Import Build"
 msgstr "Import Build"
 
@@ -200,7 +207,7 @@ msgid "Edit Prism"
 msgstr "Edit Prism"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:658
+#: src/components/equipment/EditGearModal.tsx:677
 msgid "Edit {equipmentType}"
 msgstr "Edit {equipmentType}"
 
@@ -214,7 +221,7 @@ msgstr "Equipment"
 msgid "Fire Cannon"
 msgstr "Fire Cannon"
 
-#: src/components/equipment/EditGearModal.tsx:752
+#: src/components/equipment/EditGearModal.tsx:777
 msgid "Tower Sequence (1 max)"
 msgstr "Tower Sequence (1 max)"
 
@@ -263,19 +270,19 @@ msgstr "Helmet (STR)"
 msgid "Hero"
 msgstr "Hero"
 
-#: src/routes/index.tsx:426
+#: src/routes/index.tsx:431
 msgid "No builds yet"
 msgstr "No builds yet"
 
-#: src/routes/index.tsx:370
+#: src/routes/index.tsx:375
 msgid "The build code in the URL was invalid or could not be imported."
 msgstr "The build code in the URL was invalid or could not be imported."
 
-#: src/routes/index.tsx:348
+#: src/routes/index.tsx:353
 msgid "Early Development"
 msgstr "Early Development"
 
-#: src/routes/index.tsx:351
+#: src/routes/index.tsx:356
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 msgstr "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 
@@ -290,7 +297,7 @@ msgid "Legendary Talent"
 msgstr "Legendary Talent"
 
 #. placeholder {0}: formatDate(save.createdAt)
-#: src/routes/index.tsx:118
+#: src/routes/index.tsx:119
 msgid "Created: {0}"
 msgstr "Created: {0}"
 
@@ -324,7 +331,7 @@ msgstr "Neck"
 msgid "Necklace"
 msgstr "Necklace"
 
-#: src/components/equipment/EditGearModal.tsx:708
+#: src/components/equipment/EditGearModal.tsx:733
 msgid "Base Affixes (2 max)"
 msgstr "Base Affixes (2 max)"
 
@@ -383,8 +390,7 @@ msgid "Scepter"
 msgstr "Scepter"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/AdvancedCraftingModal.tsx:109
-#: src/components/equipment/EditGearModal.tsx:676
+#: src/components/equipment/EditGearModal.tsx:701
 msgid "Select equipment type..."
 msgstr "Select equipment type..."
 
@@ -453,15 +459,15 @@ msgstr "Two-Handed Hammer"
 msgid "Two-Handed Sword"
 msgstr "Two-Handed Sword"
 
-#: src/routes/index.tsx:389
+#: src/routes/index.tsx:394
 msgid "My Builds"
 msgstr "My Builds"
 
 #: src/components/equipment/AdvancedCraftingModal.tsx:118
-msgid "Affix Lines (one per line)"
-msgstr "Affix Lines (one per line)"
+#~ msgid "Affix Lines (one per line)"
+#~ msgstr "Affix Lines (one per line)"
 
-#: src/routes/builder/equipment.tsx:88
+#: src/routes/builder/equipment.tsx:76
 msgid "Equipment Slots"
 msgstr "Equipment Slots"
 
@@ -471,7 +477,7 @@ msgid "Wand"
 msgstr "Wand"
 
 #. placeholder {0}: formatDate(save.updatedAt)
-#: src/routes/index.tsx:122
+#: src/routes/index.tsx:123
 msgid "Updated: {0}"
 msgstr "Updated: {0}"
 
@@ -479,12 +485,11 @@ msgstr "Updated: {0}"
 #~ msgid "No implemented active skills enabled. Enable an active skill in the Skills section (currently supported: Berserking Blade, Frost Spike)."
 #~ msgstr "No implemented active skills enabled. Enable an active skill in the Skills section (currently supported: Berserking Blade, Frost Spike)."
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:103
-#: src/components/equipment/EditGearModal.tsx:670
+#: src/components/equipment/EditGearModal.tsx:695
 msgid "Equipment Type"
 msgstr "Equipment Type"
 
-#: src/components/equipment/EditGearModal.tsx:862
+#: src/components/equipment/EditGearModal.tsx:909
 msgid "Select an equipment type to begin crafting"
 msgstr "Select an equipment type to begin crafting"
 
@@ -492,27 +497,26 @@ msgstr "Select an equipment type to begin crafting"
 msgid "Active Skill"
 msgstr "Active Skill"
 
-#: src/routes/builder/equipment.tsx:132
+#: src/routes/builder/equipment.tsx:111
 msgid "Inventory"
 msgstr "Inventory"
 
-#: src/routes/index.tsx:144
-#: src/routes/index.tsx:178
+#: src/routes/index.tsx:145
+#: src/routes/index.tsx:179
 msgid "Delete"
 msgstr "Delete"
 
-#: src/components/equipment/EditGearModal.tsx:816
+#: src/components/equipment/EditGearModal.tsx:841
 msgid "Prefixes (3 max)"
 msgstr "Prefixes (3 max)"
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:142
-#: src/components/equipment/EditGearModal.tsx:869
-#: src/routes/index.tsx:107
-#: src/routes/index.tsx:150
+#: src/components/equipment/EditGearModal.tsx:916
+#: src/routes/index.tsx:108
+#: src/routes/index.tsx:151
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/components/equipment/EditGearModal.tsx:772
+#: src/components/equipment/EditGearModal.tsx:797
 msgid "Blending (1 max)"
 msgstr "Blending (1 max)"
 
@@ -520,19 +524,19 @@ msgstr "Blending (1 max)"
 msgid "Prisms"
 msgstr "Prisms"
 
-#: src/routes/index.tsx:172
+#: src/routes/index.tsx:173
 msgid "Copy"
 msgstr "Copy"
 
-#: src/routes/builder/equipment.tsx:133
+#: src/routes/builder/equipment.tsx:112
 msgid "items"
 msgstr "items"
 
-#: src/components/equipment/EditGearModal.tsx:838
+#: src/components/equipment/EditGearModal.tsx:863
 msgid "Suffixes (3 max)"
 msgstr "Suffixes (3 max)"
 
-#: src/components/equipment/EditGearModal.tsx:732
+#: src/components/equipment/EditGearModal.tsx:757
 msgid "Sweet Dream Affix (1 max)"
 msgstr "Sweet Dream Affix (1 max)"
 
@@ -542,7 +546,7 @@ msgid "Core Talents"
 msgstr "Core Talents"
 
 #. placeholder {0}: save.name
-#: src/routes/index.tsx:134
+#: src/routes/index.tsx:135
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Are you sure you want to delete \"{0}\"?"
 
@@ -559,15 +563,15 @@ msgstr "Add Legendary"
 msgid "Select Tree for {0}"
 msgstr "Select Tree for {0}"
 
-#: src/components/equipment/EditGearModal.tsx:879
-#: src/routes/index.tsx:101
+#: src/components/equipment/EditGearModal.tsx:926
+#: src/routes/index.tsx:102
 msgid "Save"
 msgstr "Save"
 
 #: src/components/equipment/AdvancedCraftingModal.tsx:131
-msgid "Enter raw affix text. Each line will be parsed as a separate affix."
-msgstr "Enter raw affix text. Each line will be parsed as a separate affix."
+#~ msgid "Enter raw affix text. Each line will be parsed as a separate affix."
+#~ msgstr "Enter raw affix text. Each line will be parsed as a separate affix."
 
-#: src/routes/index.tsx:367
+#: src/routes/index.tsx:372
 msgid "Import Failed"
 msgstr "Import Failed"

@@ -14,26 +14,34 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/AdvancedCraftingModal.tsx:124
+#: src/components/equipment/EditGearModal.tsx:890
 msgid ""
 "+10% Fire Damage\n"
 "+20 to Maximum Life\n"
 "+5% Attack Speed"
 msgstr ""
 
-#: src/components/equipment/EditGearModal.tsx:688
+#: src/components/equipment/EditGearModal.tsx:713
 msgid "Base Stats (1 max)"
 msgstr "基底词缀 (1 max)"
 
-#: src/routes/index.tsx:429
+#: src/routes/index.tsx:434
 msgid "Create your first character build to get started"
 msgstr "创建您的第一个角色流派以开始使用"
 
-#: src/routes/builder/equipment.tsx:126
+#: src/routes/builder/equipment.tsx:105
 msgid "Craft Item"
 msgstr ""
 
-#: src/routes/index.tsx:166
+#: src/components/equipment/EditGearModal.tsx:897
+msgid "Enter raw affix text, one per line. Use this for affixes not available in the dropdowns above."
+msgstr ""
+
+#: src/components/equipment/EditGearModal.tsx:885
+msgid "Custom Affixes"
+msgstr ""
+
+#: src/routes/index.tsx:167
 msgid "Rename"
 msgstr "重命名"
 
@@ -41,24 +49,23 @@ msgstr "重命名"
 #~ msgid "Select equipment type..."
 #~ msgstr "选择一个装备类型..."
 
-#: src/routes/index.tsx:402
+#: src/routes/index.tsx:407
 msgid "Create New"
 msgstr "新建"
 
-#: src/routes/builder/equipment.tsx:111
+#: src/routes/builder/equipment.tsx:98
 msgid "Craft New Item"
 msgstr "制作新物品"
 
 #: src/routes/builder/equipment.tsx:118
-msgid "Advanced Crafting"
-msgstr ""
+#~ msgid "Advanced Crafting"
+#~ msgstr ""
 
-#: src/routes/builder/equipment.tsx:137
+#: src/routes/builder/equipment.tsx:116
 msgid "No items in inventory. Craft items above to add them here."
 msgstr "库存中没有物品。在上方制作物品以添加到此处。"
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:145
-#: src/components/equipment/EditGearModal.tsx:877
+#: src/components/equipment/EditGearModal.tsx:924
 msgid "Save to Inventory"
 msgstr "保存到库存"
 
@@ -69,8 +76,8 @@ msgstr "主动技能"
 
 #. js-lingui-explicit-id
 #: src/components/equipment/AdvancedCraftingModal.tsx:94
-msgid "Advanced Crafting"
-msgstr ""
+#~ msgid "Advanced Crafting"
+#~ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
@@ -154,7 +161,7 @@ msgid "Core Talent 2"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:657
+#: src/components/equipment/EditGearModal.tsx:676
 msgid "Craft New Item"
 msgstr ""
 
@@ -178,7 +185,7 @@ msgstr "武杖"
 msgid "Dagger"
 msgstr "匕首"
 
-#: src/routes/index.tsx:438
+#: src/routes/index.tsx:443
 msgid "Create New Build"
 msgstr "创建新流派"
 
@@ -187,7 +194,7 @@ msgstr "创建新流派"
 msgid "Divinity Slate"
 msgstr "神格石板"
 
-#: src/routes/index.tsx:396
+#: src/routes/index.tsx:401
 msgid "Import Build"
 msgstr "导入流派"
 
@@ -197,7 +204,7 @@ msgid "Edit Prism"
 msgstr "编辑棱镜"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/EditGearModal.tsx:658
+#: src/components/equipment/EditGearModal.tsx:677
 msgid "Edit {equipmentType}"
 msgstr ""
 
@@ -211,7 +218,7 @@ msgstr "装备"
 msgid "Fire Cannon"
 msgstr "火炮"
 
-#: src/components/equipment/EditGearModal.tsx:752
+#: src/components/equipment/EditGearModal.tsx:777
 msgid "Tower Sequence (1 max)"
 msgstr "高塔词缀 (1 max)"
 
@@ -260,19 +267,19 @@ msgstr "头盔 (力量)"
 msgid "Hero"
 msgstr "英雄"
 
-#: src/routes/index.tsx:426
+#: src/routes/index.tsx:431
 msgid "No builds yet"
 msgstr "暂无流派"
 
-#: src/routes/index.tsx:370
+#: src/routes/index.tsx:375
 msgid "The build code in the URL was invalid or could not be imported."
 msgstr ""
 
-#: src/routes/index.tsx:348
+#: src/routes/index.tsx:353
 msgid "Early Development"
 msgstr "早期预览"
 
-#: src/routes/index.tsx:351
+#: src/routes/index.tsx:356
 msgid "Please be patient and bear with me on any issues you encounter with this app, as it's still in early phases of development."
 msgstr "请耐心等待，对于这个应用程序在早期开发阶段遇到的任何问题，请多多包涵。"
 
@@ -287,7 +294,7 @@ msgid "Legendary Talent"
 msgstr "传奇天赋"
 
 #. placeholder {0}: formatDate(save.createdAt)
-#: src/routes/index.tsx:118
+#: src/routes/index.tsx:119
 msgid "Created: {0}"
 msgstr "创建时间：{0}"
 
@@ -321,7 +328,7 @@ msgstr "项链"
 msgid "Necklace"
 msgstr "项链"
 
-#: src/components/equipment/EditGearModal.tsx:708
+#: src/components/equipment/EditGearModal.tsx:733
 msgid "Base Affixes (2 max)"
 msgstr "基础词缀 (2 max)"
 
@@ -380,8 +387,7 @@ msgid "Scepter"
 msgstr "魔杖"
 
 #. js-lingui-explicit-id
-#: src/components/equipment/AdvancedCraftingModal.tsx:109
-#: src/components/equipment/EditGearModal.tsx:676
+#: src/components/equipment/EditGearModal.tsx:701
 msgid "Select equipment type..."
 msgstr "选择装备类型..."
 
@@ -450,15 +456,15 @@ msgstr "双手锤"
 msgid "Two-Handed Sword"
 msgstr "双手剑"
 
-#: src/routes/index.tsx:389
+#: src/routes/index.tsx:394
 msgid "My Builds"
 msgstr "我的配装"
 
 #: src/components/equipment/AdvancedCraftingModal.tsx:118
-msgid "Affix Lines (one per line)"
-msgstr ""
+#~ msgid "Affix Lines (one per line)"
+#~ msgstr ""
 
-#: src/routes/builder/equipment.tsx:88
+#: src/routes/builder/equipment.tsx:76
 msgid "Equipment Slots"
 msgstr "装备槽位"
 
@@ -468,16 +474,15 @@ msgid "Wand"
 msgstr "法杖"
 
 #. placeholder {0}: formatDate(save.updatedAt)
-#: src/routes/index.tsx:122
+#: src/routes/index.tsx:123
 msgid "Updated: {0}"
 msgstr "更新时间: {0}"
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:103
-#: src/components/equipment/EditGearModal.tsx:670
+#: src/components/equipment/EditGearModal.tsx:695
 msgid "Equipment Type"
 msgstr "装备类型"
 
-#: src/components/equipment/EditGearModal.tsx:862
+#: src/components/equipment/EditGearModal.tsx:909
 msgid "Select an equipment type to begin crafting"
 msgstr "选择一个装备类型以开始制作"
 
@@ -485,27 +490,26 @@ msgstr "选择一个装备类型以开始制作"
 msgid "Active Skill"
 msgstr ""
 
-#: src/routes/builder/equipment.tsx:132
+#: src/routes/builder/equipment.tsx:111
 msgid "Inventory"
 msgstr "库存"
 
-#: src/routes/index.tsx:144
-#: src/routes/index.tsx:178
+#: src/routes/index.tsx:145
+#: src/routes/index.tsx:179
 msgid "Delete"
 msgstr "删除"
 
-#: src/components/equipment/EditGearModal.tsx:816
+#: src/components/equipment/EditGearModal.tsx:841
 msgid "Prefixes (3 max)"
 msgstr "前缀 (3 max)"
 
-#: src/components/equipment/AdvancedCraftingModal.tsx:142
-#: src/components/equipment/EditGearModal.tsx:869
-#: src/routes/index.tsx:107
-#: src/routes/index.tsx:150
+#: src/components/equipment/EditGearModal.tsx:916
+#: src/routes/index.tsx:108
+#: src/routes/index.tsx:151
 msgid "Cancel"
 msgstr "取消"
 
-#: src/components/equipment/EditGearModal.tsx:772
+#: src/components/equipment/EditGearModal.tsx:797
 msgid "Blending (1 max)"
 msgstr "调香词缀 (1 max)"
 
@@ -513,19 +517,19 @@ msgstr "调香词缀 (1 max)"
 msgid "Prisms"
 msgstr "棱镜"
 
-#: src/routes/index.tsx:172
+#: src/routes/index.tsx:173
 msgid "Copy"
 msgstr "复制"
 
-#: src/routes/builder/equipment.tsx:133
+#: src/routes/builder/equipment.tsx:112
 msgid "items"
 msgstr "物品"
 
-#: src/components/equipment/EditGearModal.tsx:838
+#: src/components/equipment/EditGearModal.tsx:863
 msgid "Suffixes (3 max)"
 msgstr "后缀 (3 max)"
 
-#: src/components/equipment/EditGearModal.tsx:732
+#: src/components/equipment/EditGearModal.tsx:757
 msgid "Sweet Dream Affix (1 max)"
 msgstr "美梦词缀 (1 max)"
 
@@ -535,7 +539,7 @@ msgid "Core Talents"
 msgstr "核心天赋"
 
 #. placeholder {0}: save.name
-#: src/routes/index.tsx:134
+#: src/routes/index.tsx:135
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "您确定要删除“{0}”吗？"
 
@@ -552,15 +556,15 @@ msgstr "增加一个传奇物品"
 msgid "Select Tree for {0}"
 msgstr "为 {0} 选择天赋树"
 
-#: src/components/equipment/EditGearModal.tsx:879
-#: src/routes/index.tsx:101
+#: src/components/equipment/EditGearModal.tsx:926
+#: src/routes/index.tsx:102
 msgid "Save"
 msgstr "保存"
 
 #: src/components/equipment/AdvancedCraftingModal.tsx:131
-msgid "Enter raw affix text. Each line will be parsed as a separate affix."
-msgstr ""
+#~ msgid "Enter raw affix text. Each line will be parsed as a separate affix."
+#~ msgstr ""
 
-#: src/routes/index.tsx:367
+#: src/routes/index.tsx:372
 msgid "Import Failed"
 msgstr ""
