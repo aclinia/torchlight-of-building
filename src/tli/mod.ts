@@ -244,6 +244,7 @@ const ConditionValues = [
   // pactspirits
   "has_portrait_of_a_fallen_saintess_pactspirit",
   "has_squidnova",
+  "frostbitten_heart_is_active",
 ] as const;
 
 export const Conditions = createUnionMap(ConditionValues);

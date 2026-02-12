@@ -4,6 +4,17 @@ import type { Mod } from "../mod";
 type ModFactory = (levelIndex: number) => Mod[];
 
 const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
+  // Frostfire Gemma: Frostbitten Heart (#2)
+  "Frostbitten Heart": () => [
+    { type: "InflictFrostbitePct", value: 100 },
+    {
+      type: "DmgPct",
+      value: 20,
+      addn: true,
+      dmgModType: "cold",
+      cond: "frostbitten_heart_is_active",
+    },
+  ],
   // Cateye Erika: Wind Stalker (#1)
   "Wind Stalker": () => [
     { type: "MovementSpeedPct", value: 20 },

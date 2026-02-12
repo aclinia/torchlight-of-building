@@ -193,6 +193,8 @@ export interface Configuration {
   realmOfMercuryEnabled: boolean;
   // default to false
   baptismOfPurityEnabled: boolean;
+  // default to false
+  frostbittenHeartIsActive: boolean;
 
   // ------------
   // enemy config
@@ -288,6 +290,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   numBerserkingBladeBuffStacks: undefined,
   realmOfMercuryEnabled: false,
   baptismOfPurityEnabled: false,
+  frostbittenHeartIsActive: false,
   enemyColdRes: undefined,
   enemyLightningRes: undefined,
   enemyFireRes: undefined,

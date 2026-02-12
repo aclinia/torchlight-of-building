@@ -876,6 +876,10 @@ const filterModsByCond = (
       })
       .with("taking_damage_over_time", () => config.takingDamageOverTime)
       .with("has_low_mana", () => config.hasLowMana)
+      .with(
+        "frostbitten_heart_is_active",
+        () => config.frostbittenHeartIsActive,
+      )
       .exhaustive();
   });
 };
