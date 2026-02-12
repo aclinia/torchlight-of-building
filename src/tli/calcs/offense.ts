@@ -2043,12 +2043,12 @@ const resolveModsForOffenseSkill = (
     });
   };
   const pushTangle = (): void => {
-    if (!modExists(mods, "IsTangle") || config.numTangles <= 1) return;
+    if (!modExists(mods, "IsTangle") || config.numActiveTangles <= 1) return;
     mods.push({
       type: "DmgPct",
       dmgModType: "global",
       addn: true,
-      value: (config.numTangles - 1) * 100,
+      value: (config.numActiveTangles - 1) * 100,
       src: "Tangle",
     });
   };

@@ -953,12 +953,12 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             min={0}
           />
           <label className="text-right text-zinc-50">
-            Tangles
-            <InfoTooltip text="Number of tangles. Defaults to 1." />
+            Active Tangles
+            <InfoTooltip text="Number of active tangles. Defaults to 1." />
           </label>
           <NumberInput
-            value={config.numTangles}
-            onChange={(v) => onUpdate({ numTangles: v ?? 1 })}
+            value={config.numActiveTangles}
+            onChange={(v) => onUpdate({ numActiveTangles: v ?? 1 })}
             min={1}
           />
 

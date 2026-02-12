@@ -212,7 +212,7 @@ export interface Configuration {
   twistedSpacetimeStacks?: number;
 
   // default to 1
-  numTangles: number;
+  numActiveTangles: number;
 
   // custom affix lines for injecting arbitrary mods
   customAffixLines?: string[];
@@ -295,7 +295,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   enemyArmor: undefined,
   pureHeartStacks: undefined,
   twistedSpacetimeStacks: undefined,
-  numTangles: 1,
+  numActiveTangles: 1,
   customAffixLines: undefined,
 };
 

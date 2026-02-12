@@ -171,7 +171,7 @@ Access the field via the `config` parameter in calculation functions:
 
 ```typescript
 // In src/tli/calcs/offense.ts or related files
-const numTangles = config.numTangles;
+const numActiveTangles = config.numActiveTangles;
 ```
 
 ### 6. Verify
