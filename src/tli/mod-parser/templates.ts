@@ -101,6 +101,14 @@ export const allParsers = [
     return { value: c.value, dmgModType: c.modType, addn: false, per };
   }),
   t(
+    "for every {amt:+dec%} attack or spell block chance, {value:+dec%} additional damage, up to {limit:+dec%}",
+  ).output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: GLOBAL,
+    addn: true,
+    per: { stackable: S.total_block_pct, amt: c.amt, valueLimit: c.limit },
+  })),
+  t(
     "{value:+dec%} additional damage per {amt:+dec%} movement speed, up to {limit:+dec%}",
   ).output("DmgPct", (c) => {
     const per: PerStackable = {
@@ -201,7 +209,7 @@ export const allParsers = [
     addn: c.additional !== undefined,
     cond: C.have_both_sealed_mana_and_life,
   })),
-  t("{value:+dec%} damage when focus blessing is active").output(
+  t("{value:+dec%} damage {(when|while)} focus blessing is active").output(
     "DmgPct",
     (c) => ({
       value: c.value,
@@ -404,6 +412,14 @@ export const allParsers = [
     }),
   ),
   t(
+    "{value:+dec%} additional damage for {dur:int} s after using mobility skills",
+  ).output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: GLOBAL,
+    addn: true,
+    cond: C.has_used_mobility_skill_recently,
+  })),
+  t(
     "{value:+dec%} additional damage for {dur:int}s after using mobility skills",
   ).output("DmgPct", (c) => ({
     value: c.value,
@@ -430,6 +446,10 @@ export const allParsers = [
       dmgModType: c.modType ?? "global",
       addn: c.additional !== undefined,
     }),
+  ),
+  t("{value:+dec%} critical strike rating against frostbitten enemies").output(
+    "CritRatingPct",
+    (c) => ({ value: c.value, modType: GLOBAL, cond: C.enemy_frostbitten }),
   ),
   t("{value:+dec%} sentry skill critical strike rating").output(
     "CritRatingPct",

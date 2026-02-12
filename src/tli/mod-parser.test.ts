@@ -3801,3 +3801,60 @@ test("parse has attack aggression", () => {
   const result = parseMod("Has Attack Aggression");
   expect(result).toEqual([{ type: "HasAttackAggression" }]);
 });
+
+test("parse damage while focus blessing is active", () => {
+  const result = parseMod("+30% damage while Focus Blessing is active");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 30,
+      dmgModType: "global",
+      addn: false,
+      cond: "has_focus_blessing",
+    },
+  ]);
+});
+
+test("parse additional damage per block chance up to limit", () => {
+  const result = parseMod(
+    "For every +3% Attack or Spell Block Chance, +2% additional damage, up to +90%",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 2,
+      dmgModType: "global",
+      addn: true,
+      per: { stackable: "total_block_pct", amt: 3, valueLimit: 90 },
+    },
+  ]);
+});
+
+test("parse crit rating against frostbitten enemies", () => {
+  const result = parseMod(
+    "+60% Critical Strike Rating against Frostbitten enemies",
+  );
+  expect(result).toEqual([
+    {
+      type: "CritRatingPct",
+      value: 60,
+      modType: "global",
+      cond: "enemy_frostbitten",
+    },
+  ]);
+});
+
+test("parse additional damage for 5 s after using mobility skills", () => {
+  const result = parseMod(
+    "+55% additional damage for 5 s after using Mobility Skills",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 55,
+      dmgModType: "global",
+      addn: true,
+      cond: "has_used_mobility_skill_recently",
+    },
+  ]);
+});
