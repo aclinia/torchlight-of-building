@@ -28,6 +28,9 @@ const combinedParser = multi(allParsers);
  * - `[...mods]`: Successfully parsed with one or more extracted mods
  */
 export const parseMod = (input: string): Mod[] | undefined => {
-  const normalized = input.trim().toLowerCase();
+  const normalized = input
+    .trim()
+    .toLowerCase()
+    .replace(/^\[.*?\]\s*/, "");
   return combinedParser.parse(normalized);
 };

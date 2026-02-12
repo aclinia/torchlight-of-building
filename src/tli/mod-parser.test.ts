@@ -3858,3 +3858,16 @@ test("parse additional damage for 5 s after using mobility skills", () => {
     },
   ]);
 });
+
+test("strips square bracket prefix before parsing", () => {
+  const result = parseMod("[Endless Fervor] Have Fervor");
+  const expected = parseMod("Have Fervor");
+  expect(result).toEqual(expected);
+});
+
+test("strips square bracket prefix with damage mod", () => {
+  const result = parseMod("[Some Trait] +18% fire damage");
+  expect(result).toEqual([
+    { type: "DmgPct", value: 18, dmgModType: "fire", addn: false },
+  ]);
+});
