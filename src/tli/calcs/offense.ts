@@ -46,6 +46,7 @@ import { getGearAffixes } from "./affix-collectors";
 import {
   addDRs,
   applyDmgBonusesAndPen,
+  type CritChance,
   calculateAspd,
   calculateCritChance,
   calculateCritDmg,
@@ -80,11 +81,11 @@ import type { OffenseSkillName } from "./skill-confs";
 import { type ModWithValue, multModValue, multValue } from "./util";
 
 // Re-export types that consumers expect from offense.ts
-export type { DmgChunk, DmgPools, DmgRanges };
+export type { CritChance, DmgChunk, DmgPools, DmgRanges };
 export { collectMods, convertDmg };
 
 export interface WeaponAttackSummary {
-  critChance: number;
+  critChance: CritChance;
   aspd: number;
   avgHit: number;
   avgHitWithCrit: number;
@@ -2571,7 +2572,7 @@ const calcWeaponAttack = (
   const aspd = calculateAspd(weapon, mods, skill);
   const critChance = calculateCritChance(mods, skill);
   const avgHitWithCrit =
-    avgHit * critChance * critDmgMult + avgHit * (1 - critChance);
+    avgHit * critChance.actual * critDmgMult + avgHit * (1 - critChance.actual);
   return { avgHit, aspd, critChance, avgHitWithCrit };
 };
 
@@ -2891,7 +2892,7 @@ const calcSpellRippleMult = (mods: Mod[]): number => {
 };
 
 export interface OffenseSpellDpsSummary {
-  critChance: number;
+  critChance: CritChance;
   critDmgMult: number;
   castsPerSec: number;
   avgHitWithCrit: number;
@@ -2930,7 +2931,7 @@ const calcAvgSpellDps = (
   const spellRippleMult = calcSpellRippleMult(mods);
 
   const avgHitWithCrit =
-    avg * critChance * critDmgMult + avg * (1 - critChance);
+    avg * critChance.actual * critDmgMult + avg * (1 - critChance.actual);
   const avgDps =
     avgHitWithCrit * doubleDmgMult * cspd * extraMult * spellRippleMult;
   return { critChance, critDmgMult, castsPerSec: cspd, avgHitWithCrit, avgDps };

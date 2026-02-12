@@ -163,9 +163,9 @@ const validate = (
   for (const [key, value] of Object.entries(expected)) {
     // Map legacy flat keys to mainhand
     if (WEAPON_SUMMARY_KEYS.includes(key as keyof WeaponAttackSummary)) {
-      expect(summary?.mainhand[key as keyof WeaponAttackSummary]).toBeCloseTo(
-        value,
-      );
+      const raw = summary?.mainhand[key as keyof WeaponAttackSummary];
+      const actual = typeof raw === "object" ? raw.actual : raw;
+      expect(actual).toBeCloseTo(value);
     } else if (key === "critDmgMult" || key === "avgDps") {
       expect(summary?.[key]).toBeCloseTo(value);
     }
@@ -4488,9 +4488,9 @@ describe("spell damage", () => {
     expect(actual).toBeDefined();
     expect(actual?.spellDpsSummary).toBeDefined();
     for (const [key, value] of Object.entries(expected)) {
-      expect(
-        actual?.spellDpsSummary?.[key as keyof SpellExpectedOutput],
-      ).toBeCloseTo(value);
+      const raw = actual?.spellDpsSummary?.[key as keyof SpellExpectedOutput];
+      const resolved = typeof raw === "object" ? raw.actual : raw;
+      expect(resolved).toBeCloseTo(value);
     }
   };
 

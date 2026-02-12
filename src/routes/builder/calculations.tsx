@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
 import {
+  type CritChance,
   calculateOffense,
   type OffenseInput,
   type OffenseSlashStrikeDpsSummary,
@@ -33,6 +34,14 @@ const formatRes = (res: Resistance): string => {
     return `${res.actual}% (${res.potential}%)`;
   }
   return `${res.actual}%`;
+};
+
+const formatCritChance = (crit: CritChance): string => {
+  const actual = formatStatValue.percentage(crit.actual);
+  if (crit.uncapped > 1) {
+    return `${actual} (${formatStatValue.percentage(crit.uncapped)})`;
+  }
+  return actual;
 };
 
 const DMG_TYPE_COLORS: Record<string, string> = {
@@ -206,7 +215,7 @@ const SpellHitSummarySection = ({
         />
         <StatLine
           label="Crit Chance"
-          value={formatStatValue.percentage(summary.critChance)}
+          value={formatCritChance(summary.critChance)}
         />
         <StatLine
           label="Crit Multiplier"
@@ -313,7 +322,7 @@ const SlashStrikeSummarySection = ({
         />
         <StatLine
           label="Crit Chance"
-          value={formatStatValue.percentage(summary.sweep.mainhand.critChance)}
+          value={formatCritChance(summary.sweep.mainhand.critChance)}
         />
         <StatLine
           label="Attack Speed"
@@ -441,7 +450,7 @@ function CalculationsPage(): React.ReactNode {
                       ? "Crit Chance (MH)"
                       : "Crit Chance"
                   }
-                  value={formatStatValue.percentage(
+                  value={formatCritChance(
                     offenseSummary.attackDpsSummary.mainhand.critChance,
                   )}
                 />
@@ -471,7 +480,7 @@ function CalculationsPage(): React.ReactNode {
                     />
                     <StatLine
                       label="Crit Chance (OH)"
-                      value={formatStatValue.percentage(
+                      value={formatCritChance(
                         offenseSummary.attackDpsSummary.offhand.critChance,
                       )}
                     />

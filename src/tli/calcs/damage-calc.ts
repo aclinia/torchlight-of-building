@@ -748,10 +748,15 @@ export const calculateGearAspd = (weapon: Gear, allMods: Mod[]): number => {
 
 // === Crit Calculations ===
 
+export interface CritChance {
+  actual: number;
+  uncapped: number;
+}
+
 export const calculateCritChance = (
   allMods: Mod[],
   skill: BaseActiveSkill,
-): number => {
+): CritChance => {
   const modTypes: CritRatingModType[] = ["global"];
   if (skill.tags.includes("Attack")) {
     modTypes.push("attack");
@@ -780,11 +785,13 @@ export const calculateCritChance = (
     modTypes.includes(m.modType),
   );
   const critRatingMult = calcEffMult(critRatingPctMods);
-  const critRate = Math.min(baseCritChance * critRatingMult, 1);
+  const uncapped = baseCritChance * critRatingMult;
+  const critRate = Math.min(uncapped, 1);
   if (modExists(allMods, "LuckyCrit")) {
-    return Math.min(2 * critRate - critRate ** 2, 1);
+    const luckyCrit = Math.min(2 * critRate - critRate ** 2, 1);
+    return { actual: luckyCrit, uncapped };
   }
-  return critRate;
+  return { actual: critRate, uncapped };
 };
 
 export const calculateCritDmg = (
