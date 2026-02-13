@@ -2001,10 +2001,17 @@ const resolveModsForOffenseSkill = (
   const pushFrostbite = (): void => {
     if (!config.enemyFrostbittenEnabled) return;
 
-    const maxFrostbiteRating =
-      10 + sumByValue(filterMods(mods, "MaxFrostbiteRating"));
+    const maxFrostbiteLimit =
+      findMod(mods, "MaxFrostbiteRatingLimitOverride")?.value ?? 100;
+
+    const maxFrostbiteRating = Math.min(
+      maxFrostbiteLimit,
+      10 + sumByValue(filterMods(mods, "MaxFrostbiteRating")),
+    );
     const frostbitePoints = config.enemyFrostbittenPoints ?? maxFrostbiteRating;
-    const baseFrostbiteValPerPoint = 0.5;
+
+    const frostbiteEffMult = calcEffMult(mods, "FrostbiteEffPct");
+    const baseFrostbiteValPerPoint = 0.5 * frostbiteEffMult;
     const frostbiteVal = baseFrostbiteValPerPoint * frostbitePoints;
     mods.push({
       type: "DmgPct",

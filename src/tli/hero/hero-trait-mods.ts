@@ -15,6 +15,13 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
       cond: "frostbitten_heart_is_active",
     },
   ],
+  Deepfreeze: (i) => [
+    {
+      type: "MaxFrostbiteRatingLimitOverride",
+      value: [150, 150, 200, 200, 200][i],
+    },
+    { type: "FrostbiteEffPct", value: [65, 90, 110, 130, 150][i] },
+  ],
   // Cateye Erika: Wind Stalker (#1)
   "Wind Stalker": () => [
     { type: "MovementSpeedPct", value: 20 },

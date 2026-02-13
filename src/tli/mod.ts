@@ -508,6 +508,8 @@ interface ModDefinitions {
   BaseWiltFlatDmg: { value: number };
   WiltDmgPct: { value: number; addn?: boolean };
   MaxFrostbiteRating: { value: number };
+  MaxFrostbiteRatingLimitOverride: { value: number };
+  FrostbiteEffPct: { value: number };
   InflictFrostbitePct: { value: number; isEnemyDebugg?: boolean };
   InflictParalysisPct: { value: number };
   FreezeDurationPct: { value: number };
