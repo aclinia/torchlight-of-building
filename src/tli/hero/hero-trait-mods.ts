@@ -22,6 +22,10 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
     },
     { type: "FrostbiteEffPct", value: [65, 90, 110, 130, 150][i] },
   ],
+  // Frostfire Gemma: Blooming Frost Flower (#2)
+  "Blooming Frost Flower": (i) => [
+    { type: "MaxFrostbiteRating", value: [35, 45, 55, 65, 75][i] },
+  ],
   "Dance of Frost": (i) => [
     {
       type: "DmgPct",
