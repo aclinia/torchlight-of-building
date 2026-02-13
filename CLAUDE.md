@@ -269,6 +269,7 @@ generateItemId(); // crypto.randomUUID()
 | Add skill              | `src/tli/calcs/skill-confs.ts` (skill configurations)                                                         |
 | Add skill mods         | `src/tli/skills/` (active, passive, or support mods/factories) - use `/implementing-game-skill-parsers` skill |
 | Add support skill mods | `src/tli/skills/support-mod-templates.ts` - uses template-based parsing                                       |
+| Add hero trait         | `src/tli/hero/hero-trait-mods.ts` - use `/add-hero-trait` skill                                               |
 | Add utility helper     | Create `src/lib/{feature}-utils.ts`                                                                           |
 | Update talent trees    | `pnpm exec tsx src/scripts/generate-talent-tree-data.ts`                                                      |
 | Regenerate affixes     | `pnpm exec tsx src/scripts/generate-gear-affix-data.ts`                                                       |
@@ -318,6 +319,7 @@ Guided workflows for common tasks (invoke with `/skill-name`):
 | `/implementing-game-skill-parsers` | Adding active/passive skill data parsers                |
 | `/add-mod-resolver`                | Adding push* resolvers in resolveModsForOffenseSkill    |
 | `/add-configuration`               | Adding new configuration fields (booleans, numbers)     |
+| `/add-hero-trait`                  | Adding hero trait mod implementations                   |
 
 ## Gotchas
 

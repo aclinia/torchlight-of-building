@@ -276,6 +276,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           />
 
           <label className="text-right text-zinc-50">
+            Dance of Frost Stacks
+            <InfoTooltip text="Frostfire Gemma: Dance of Frost trait stacks" />
+          </label>
+          <NumberInput
+            value={config.danceOfFrostStacks}
+            onChange={(v) => onUpdate({ danceOfFrostStacks: v })}
+            min={0}
+          />
+
+          <label className="text-right text-zinc-50">
             Shadow Hits
             <InfoTooltip text="Defaults to max" />
           </label>

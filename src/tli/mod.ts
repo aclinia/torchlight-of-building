@@ -158,6 +158,7 @@ const StackableValues = [
   // hero-specific
   "stalker",
   "twisted_spacetime",
+  "dance_of_frost",
   // pactspirit-specific
   "repentance",
   "pure_heart",

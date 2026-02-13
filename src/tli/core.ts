@@ -195,6 +195,8 @@ export interface Configuration {
   baptismOfPurityEnabled: boolean;
   // default to false
   frostbittenHeartIsActive: boolean;
+  // default to 0
+  danceOfFrostStacks?: number;
 
   // ------------
   // enemy config
@@ -291,6 +293,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   realmOfMercuryEnabled: false,
   baptismOfPurityEnabled: false,
   frostbittenHeartIsActive: false,
+  danceOfFrostStacks: undefined,
   enemyColdRes: undefined,
   enemyLightningRes: undefined,
   enemyFireRes: undefined,

@@ -22,6 +22,16 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
     },
     { type: "FrostbiteEffPct", value: [65, 90, 110, 130, 150][i] },
   ],
+  "Dance of Frost": (i) => [
+    {
+      type: "DmgPct",
+      value: [8, 10, 12, 15, 18][i],
+      dmgModType: "cold",
+      addn: true,
+      isEnemyDebuff: true,
+      per: { stackable: "dance_of_frost", limit: 4 },
+    },
+  ],
   // Cateye Erika: Wind Stalker (#1)
   "Wind Stalker": () => [
     { type: "MovementSpeedPct", value: 20 },

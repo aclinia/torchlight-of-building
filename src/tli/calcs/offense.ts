@@ -2191,6 +2191,7 @@ const resolveModsForOffenseSkill = (
   pushTangle();
   const { spellBurstChargeSpeedBonusPct } = pushSpellBurstChargeSpeed();
   pushErika1();
+  normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
   const { multistrikeChancePct, multistrikeIncDmgPct } = pushMultistrike();
 
   return {
