@@ -452,6 +452,19 @@ export const allParsers = [
     "CritRatingPct",
     (c) => ({ value: c.value, modType: GLOBAL, cond: C.enemy_frostbitten }),
   ),
+  t("{value:+int} critical strike rating against frostbitten enemies").output(
+    "FlatCritRating",
+    (c) => ({ value: c.value, modType: GLOBAL, cond: C.enemy_frostbitten }),
+  ),
+  t("{value:+dec%} critical strike damage against frostbitten enemies").output(
+    "CritDmgPct",
+    (c) => ({
+      value: c.value,
+      addn: false,
+      modType: GLOBAL,
+      cond: C.enemy_frostbitten,
+    }),
+  ),
   t("{value:+dec%} sentry skill critical strike rating").output(
     "CritRatingPct",
     (c) => ({ value: c.value, modType: "sentry_skill" as const }),
@@ -1335,6 +1348,13 @@ export const allParsers = [
   t(
     "{value:dec%} chance to gain a barrier for every {dist:int} m you move",
   ).output("GeneratesBarrier", () => ({})),
+  t(
+    "{value:+dec%} movement speed if you have used a mobility skill recently",
+  ).output("MovementSpeedPct", (c) => ({
+    value: c.value,
+    addn: false,
+    cond: C.has_used_mobility_skill_recently,
+  })),
   t("{value:+dec%} [additional] movement speed").output(
     "MovementSpeedPct",
     (c) => ({ value: c.value, addn: c.additional !== undefined }),
@@ -1711,7 +1731,7 @@ export const allParsers = [
     () => ({}),
   ),
   t(
-    "regenerates {value:dec%} mana per second when focus blessing is active",
+    "regenerates {value:dec%} mana per second {(when|while)} focus blessing is active",
   ).output("ManaRegenPerSecPct", (c) => ({
     value: c.value,
     cond: C.has_focus_blessing,
@@ -1959,6 +1979,10 @@ export const allParsers = [
     () => ({}),
   ),
   t("immune to curse").output("ImmuneToCurse", () => ({})),
+  t("eliminate enemies under {value:dec%} life on hit").output(
+    "EliminationPct",
+    (c) => ({ value: c.value }),
+  ),
   t("eliminates enemies under {value:dec%} life upon inflicting damage").output(
     "EliminationPct",
     (c) => ({ value: c.value }),
@@ -2204,4 +2228,10 @@ export const allParsers = [
     "BarrierShieldPct",
     (c) => ({ value: c.value, addn: c.additional !== undefined }),
   ),
+  t(
+    "when using a mobility skill, you can use {stacks:int} stack(s) of agility blessing to reset the mobility skill's cooldown. interval: {interval:dec} s",
+  ).outputNone(),
+  t(
+    "gains {stacks:int} stack of focus blessing every {interval:dec} s. loses focus blessing instead if you have not dealt any critical strikes recently",
+  ).output("GeneratesFocusBlessing", () => ({})),
 ];

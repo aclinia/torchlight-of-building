@@ -3907,3 +3907,74 @@ test("parse max tangle quantity", () => {
   const result = parseMod("+1 Max Tangle Quantity");
   expect(result).toEqual([{ type: "MaxTangleQuant", value: 1 }]);
 });
+
+test("parse mana regen while focus blessing is active", () => {
+  const result = parseMod(
+    "Regenerates 0.4% Mana per second while Focus Blessing is active",
+  );
+  expect(result).toEqual([
+    { type: "ManaRegenPerSecPct", value: 0.4, cond: "has_focus_blessing" },
+  ]);
+});
+
+test("parse crit damage against frostbitten enemies", () => {
+  const result = parseMod(
+    "+60% Critical Strike Damage against Frostbitten enemies",
+  );
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 60,
+      addn: false,
+      modType: "global",
+      cond: "enemy_frostbitten",
+    },
+  ]);
+});
+
+test("parse flat crit rating against frostbitten enemies", () => {
+  const result = parseMod(
+    "+100 Critical Strike Rating against Frostbitten enemies",
+  );
+  expect(result).toEqual([
+    {
+      type: "FlatCritRating",
+      value: 100,
+      modType: "global",
+      cond: "enemy_frostbitten",
+    },
+  ]);
+});
+
+test("parse elimination on hit", () => {
+  const result = parseMod("Eliminate enemies under 10% Life on hit");
+  expect(result).toEqual([{ type: "EliminationPct", value: 10 }]);
+});
+
+test("parse movement speed after mobility skill", () => {
+  const result = parseMod(
+    "+35% Movement Speed if you have used a Mobility Skill recently",
+  );
+  expect(result).toEqual([
+    {
+      type: "MovementSpeedPct",
+      value: 35,
+      addn: false,
+      cond: "has_used_mobility_skill_recently",
+    },
+  ]);
+});
+
+test("parse agility blessing cooldown reset (no-op)", () => {
+  const result = parseMod(
+    "When using a Mobility Skill, you can use 1 stack(s) of Agility Blessing to reset the Mobility Skill's cooldown. Interval: 0.6 s",
+  );
+  expect(result).toEqual([]);
+});
+
+test("parse generates focus blessing every interval", () => {
+  const result = parseMod(
+    "Gains 1 stack of Focus Blessing every 0.5 s. Loses Focus Blessing instead if you have not dealt any Critical Strikes recently",
+  );
+  expect(result).toEqual([{ type: "GeneratesFocusBlessing" }]);
+});
