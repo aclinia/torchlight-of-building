@@ -1272,20 +1272,6 @@ const resolvePerSkillMods = (
   return { mods: [...selectedSkillMods, ...supportMods], skill };
 };
 
-interface EnemyFrostbittenCtx {
-  enabled: boolean;
-  points: number;
-}
-
-const calculateEnemyFrostbitten = (
-  config: Configuration,
-): EnemyFrostbittenCtx => {
-  return {
-    enabled: config.enemyFrostbittenEnabled,
-    points: config.enemyFrostbittenPoints ?? 0,
-  };
-};
-
 const calculateNumShadowHits = (mods: Mod[], config: Configuration): number => {
   const shadowQuantMods = filterMods(mods, "ShadowQuant");
   const shadowQuant = R.sumBy(shadowQuantMods, (m) => m.value);
@@ -1711,6 +1697,37 @@ const resolveModsForOffenseSkill = (
   };
 
   // actual mod resolvers below
+  const normalizeFromConfig = (): void => {
+    normalize("level", config.level);
+    normalize(
+      "num_max_multistrikes_recently",
+      config.numMaxMultistrikesRecently,
+    );
+    normalize(
+      "num_main_spell_skills_cast_recently",
+      config.numMainSpellSkillsCastRecently,
+    );
+    normalize(
+      "has_hit_enemy_with_elemental_dmg_recently",
+      config.hasHitEnemyWithElementalDmgRecently,
+    );
+    normalize(
+      "num_spell_skills_used_recently",
+      config.numSpellSkillsUsedRecently,
+    );
+    normalize("mana_consumed_recently", config.manaConsumedRecently ?? 0);
+    normalize("unsealed_mana_pct", 100 - (config.sealedManaPct ?? 0));
+    normalize("unsealed_life_pct", 100 - (config.sealedLifePct ?? 0));
+    normalize(
+      "num_enemies_affected_by_warcry",
+      config.numEnemiesAffectedByWarcry,
+    );
+    normalize("num_enemies_nearby", config.numEnemiesNearby);
+    normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
+    normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
+    normalize("frostbite_rating", config.enemyFrostbittenPoints ?? 0);
+    normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
+  };
   const pushStatNorms = (): void => {
     const totalMainStats = calculateTotalMainStats(skill, stats);
     const highestStat = Math.max(stats.dex, stats.int, stats.str);
@@ -1766,8 +1783,6 @@ const resolveModsForOffenseSkill = (
     if (!modExists(mods, "SpacetimeElapsePct")) {
       return;
     }
-
-    normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
 
     const baseRecordPct = calcEffMult(filterMods(mods, "SpacetimeElapsePct"));
     const recordedDmgMoreMods = filterMods(
@@ -2133,19 +2148,14 @@ const resolveModsForOffenseSkill = (
     normalize("unused_mind_control_link", mcMaxLinks - mcLinks);
   };
 
-  normalize("level", config.level);
+  normalizeFromConfig();
   pushStatNorms();
   pushDefenseNorms();
-  normalize("num_max_multistrikes_recently", config.numMaxMultistrikesRecently);
   const { mainHand, offHand } = loadout.gearPage.equippedGear;
   normalize(
     "num_unique_weapon_types_equipped",
     R.unique([mainHand?.equipmentType ?? "", offHand?.equipmentType ?? ""])
       .length,
-  );
-  normalize(
-    "num_main_spell_skills_cast_recently",
-    config.numMainSpellSkillsCastRecently,
   );
   pushBerserkingBlade();
   pushTradeoff();
@@ -2170,46 +2180,23 @@ const resolveModsForOffenseSkill = (
   mods.push(...calculateAffliction(mods, config));
   const repentanceStacks = 4 + sumByValue(filterMods(mods, "MaxRepentance"));
   const willpowerStacks = calculateWillpower(prenormMods);
-  const frostbitten = calculateEnemyFrostbitten(config);
   normalize("repentance", repentanceStacks);
   normalize("focus_blessing", focusBlessings);
   normalize("agility_blessing", agilityBlessings);
   normalize("tenacity_blessing", tenacityBlessings);
   normalize("desecration", desecration ?? 0);
-  normalize(
-    "has_hit_enemy_with_elemental_dmg_recently",
-    config.hasHitEnemyWithElementalDmgRecently,
-  );
-  normalize(
-    "num_spell_skills_used_recently",
-    config.numSpellSkillsUsedRecently,
-  );
   normalize("willpower", willpowerStacks);
-  normalize("frostbite_rating", frostbitten.points);
   pushProjectiles();
   pushFervor();
   pushShadowStrike();
 
-  const unsealedManaPct = 100 - (config.sealedManaPct ?? 0);
-  const unsealedLifePct = 100 - (config.sealedLifePct ?? 0);
-
   normalize("max_mana", maxMana);
   normalize("mercury_pt", mercuryPts);
-  normalize("mana_consumed_recently", config.manaConsumedRecently ?? 0);
-  normalize("unsealed_mana_pct", unsealedManaPct);
-  normalize("unsealed_life_pct", unsealedLifePct);
   pushHasSealedLifeAndManaCond();
-  normalize(
-    "num_enemies_affected_by_warcry",
-    config.numEnemiesAffectedByWarcry,
-  );
-  normalize("num_enemies_nearby", config.numEnemiesNearby);
-  normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
   pushPactspirits();
   const tangleSummary = pushTangle();
   const { spellBurstChargeSpeedBonusPct } = pushSpellBurstChargeSpeed();
   pushErika1();
-  normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
   const { multistrikeChancePct, multistrikeIncDmgPct } = pushMultistrike();
 
   return {
