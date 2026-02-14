@@ -2103,10 +2103,9 @@ const resolveModsForOffenseSkill = (
   };
   const pushTangle = (): TangleSummary | undefined => {
     if (!modExists(mods, "IsTangle")) return undefined;
-    const maxTangles = sumByValue(filterMods(mods, "MaxTangleQuant"));
-    const maxTanglesPerEnemy = sumByValue(
-      filterMods(mods, "MaxTangleQuantPerEnemy"),
-    );
+    const maxTangles = 1 + sumByValue(filterMods(mods, "MaxTangleQuant"));
+    const maxTanglesPerEnemy =
+      1 + sumByValue(filterMods(mods, "MaxTangleQuantPerEnemy"));
     if (config.numActiveTangles > 1) {
       mods.push({
         type: "DmgPct",
@@ -2149,6 +2148,9 @@ const resolveModsForOffenseSkill = (
   };
 
   normalizeFromConfig();
+  normalize("focus_blessing", focusBlessings);
+  normalize("agility_blessing", agilityBlessings);
+  normalize("tenacity_blessing", tenacityBlessings);
   pushStatNorms();
   pushDefenseNorms();
   const { mainHand, offHand } = loadout.gearPage.equippedGear;
@@ -2181,9 +2183,6 @@ const resolveModsForOffenseSkill = (
   const repentanceStacks = 4 + sumByValue(filterMods(mods, "MaxRepentance"));
   const willpowerStacks = calculateWillpower(prenormMods);
   normalize("repentance", repentanceStacks);
-  normalize("focus_blessing", focusBlessings);
-  normalize("agility_blessing", agilityBlessings);
-  normalize("tenacity_blessing", tenacityBlessings);
   normalize("desecration", desecration ?? 0);
   normalize("willpower", willpowerStacks);
   pushProjectiles();
