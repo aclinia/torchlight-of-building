@@ -381,6 +381,7 @@ const DMG_MOD_TYPE_RULES: Record<DmgModType, DmgModTypeRule> = {
   fire: "pool",
   erosion: "pool",
   elemental: "pool",
+  area_ailment: "never", // todo
   slash_strike_skill_ailment: "never", // todo
   ailment: "never", // todo
 };

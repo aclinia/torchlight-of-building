@@ -100,6 +100,18 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+33% additional Area Damage\n+33% additional Ailment Damage dealt by Area Skills\n+20% Skill Area when there are at least 8 enemies within 10 m",
     ],
     sealedManaPct: 50,
+    levelValues: {
+      areaDmgPct: [
+        14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+        32, 33, 34, 34.5, 35, 35.5, 36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40,
+        40.5, 41, 41.5, 42, 42.5, 43, 43.5,
+      ],
+      skillAreaPct: [
+        20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+        20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+        20, 20, 20, 20,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -366,6 +378,22 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+33% additional Area Damage\n+33% additional Ailment Damage dealt by Area Skills\n+20% Skill Area when there are at least 5 enemies within 10 m\n+4% additional Area Damage when there are at least 5 enemies within 10 m\n+4% additional Ailment Damage dealt by Area Skills when there are at least 5 enemies within 10 m",
     ],
     sealedManaPct: 50,
+    levelValues: {
+      areaDmgPct: [
+        14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+        32, 33, 34, 34.5, 35, 35.5, 36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40,
+        40.5, 41, 41.5, 42, 42.5, 43, 43.5,
+      ],
+      skillAreaPct: [
+        20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+        20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+        20, 20, 20, 20,
+      ],
+      condAreaDmgPct: [
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+      ],
+    },
   },
   {
     type: "Passive",

@@ -2,6 +2,7 @@ export const DMG_MOD_TYPES = [
   "global",
   "melee",
   "area",
+  "area_ailment",
   "attack",
   "spell",
   "physical",

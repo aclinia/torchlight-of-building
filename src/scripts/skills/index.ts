@@ -21,6 +21,7 @@ import {
 import {
   corrosionFocusParser,
   deepPainParser,
+  domainExpansionParser,
   electricConversionParser,
   energyFortressParser,
   erosionAmplificationParser,
@@ -29,6 +30,7 @@ import {
   nimblenessParser,
   preciseCrueltyParser,
   preciseDeepPainParser,
+  preciseDomainExpansionParser,
   preciseElectricConversionParser,
   preciseEnergyFortressParser,
   preciseErosionAmplificationParser,
@@ -235,6 +237,16 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Precise: Ice Focus",
     categories: ["passive"],
     parser: preciseIceFocusParser,
+  },
+  {
+    skillName: "Domain Expansion",
+    categories: ["passive"],
+    parser: domainExpansionParser,
+  },
+  {
+    skillName: "Precise: Domain Expansion",
+    categories: ["passive"],
+    parser: preciseDomainExpansionParser,
   },
 ];
 

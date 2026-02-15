@@ -561,3 +561,51 @@ export const iceFocusParser: SupportLevelParser = (input) => {
 export const preciseIceFocusParser: SupportLevelParser = (input) => {
   return iceFocusParser(input);
 };
+
+export const domainExpansionParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const areaDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    const dmgMatch = findMatch(
+      text,
+      ts("{value:?dec%} additional area damage"),
+      skillName,
+    );
+    areaDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(areaDmgPct, skillName);
+
+  return { areaDmgPct, skillAreaPct: createConstantLevels(20) };
+};
+
+export const preciseDomainExpansionParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const areaDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    const dmgMatch = findMatch(
+      text,
+      ts("{value:?dec%} additional area damage"),
+      skillName,
+    );
+    areaDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(areaDmgPct, skillName);
+
+  return {
+    areaDmgPct,
+    skillAreaPct: createConstantLevels(20),
+    condAreaDmgPct: createConstantLevels(4),
+  };
+};

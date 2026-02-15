@@ -298,4 +298,78 @@ export const passiveSkillModFactories: Partial<
       { type: "InflictFrostbitePct", value: v(vals.inflictFrostbitePct, l) },
     ],
   }),
+  "Domain Expansion": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.areaDmgPct, l),
+        addn: true,
+        dmgModType: "area",
+      },
+      {
+        type: "DmgPct",
+        value: v(vals.areaDmgPct, l),
+        addn: true,
+        dmgModType: "area_ailment",
+      },
+      {
+        type: "SkillAreaPct",
+        value: v(vals.skillAreaPct, l),
+        skillAreaModType: "global" as const,
+        condThreshold: {
+          target: "num_enemies_nearby" as const,
+          comparator: "gte" as const,
+          value: 8,
+        },
+      },
+    ],
+  }),
+  "Precise: Domain Expansion": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.areaDmgPct, l),
+        addn: true,
+        dmgModType: "area",
+      },
+      {
+        type: "DmgPct",
+        value: v(vals.areaDmgPct, l),
+        addn: true,
+        dmgModType: "area_ailment",
+      },
+      {
+        type: "SkillAreaPct",
+        value: v(vals.skillAreaPct, l),
+        skillAreaModType: "global" as const,
+        condThreshold: {
+          target: "num_enemies_nearby" as const,
+          comparator: "gte" as const,
+          value: 5,
+        },
+      },
+      {
+        type: "DmgPct",
+        value: v(vals.condAreaDmgPct, l),
+        addn: true,
+        dmgModType: "area",
+        condThreshold: {
+          target: "num_enemies_nearby" as const,
+          comparator: "gte" as const,
+          value: 5,
+        },
+      },
+      {
+        type: "DmgPct",
+        value: v(vals.condAreaDmgPct, l),
+        addn: true,
+        dmgModType: "area_ailment",
+        condThreshold: {
+          target: "num_enemies_nearby" as const,
+          comparator: "gte" as const,
+          value: 5,
+        },
+      },
+    ],
+  }),
 };
