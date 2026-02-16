@@ -193,7 +193,7 @@ describe("basic damage modifiers", () => {
     loadout: initLoadout({
       gearPage: {
         equippedGear: {
-          mainHand: { ...baseWeapon, base_affixes: weaponAffixes },
+          mainHand: { ...baseWeapon, baseAffixes: weaponAffixes },
         },
         inventory: [],
       },
@@ -453,7 +453,7 @@ describe("fervor mechanics", () => {
       gearPage: {
         equippedGear: {
           mainHand: affixes
-            ? { ...baseWeapon, base_affixes: affixes }
+            ? { ...baseWeapon, baseAffixes: affixes }
             : baseWeapon,
         },
         inventory: [],
@@ -3550,7 +3550,7 @@ describe("penetration", () => {
         ? baseWeapon
         : {
             ...baseWeapon,
-            base_affixes: [
+            baseAffixes: [
               affix([
                 { type: "FlatGearDmg", modType, value: { min: dmg, max: dmg } },
                 { type: "GearPhysDmgPct", value: -1 },
@@ -3932,7 +3932,7 @@ describe("resource pool: mana and mercury pts", () => {
         },
       ],
     },
-    base_affixes: [
+    baseAffixes: [
       {
         affixLines: [
           {
@@ -6034,7 +6034,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearEnergyShield", value: 200 },
                   { type: "GearEnergyShieldPct", value: 50 },
@@ -6051,7 +6051,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearEnergyShield", value: 100 },
                   { type: "GearEnergyShieldPct", value: 20 },
@@ -6114,7 +6114,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearArmor", value: 300 },
                   { type: "GearArmorPct", value: 50 },
@@ -6131,7 +6131,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearArmor", value: 100 },
                   { type: "GearArmorPct", value: 40 },
@@ -6182,7 +6182,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearEvasion", value: 300 },
                   { type: "GearEvasionPct", value: 60 },
@@ -6199,7 +6199,7 @@ describe("defense calculation (ES, Eva, Armor)", () => {
                   },
                 ],
               },
-              base_affixes: [
+              baseAffixes: [
                 affix([
                   { type: "GearEvasion", value: 100 },
                   { type: "GearEvasionPct", value: 30 },

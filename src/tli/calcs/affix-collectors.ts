@@ -95,24 +95,23 @@ export const getGearAffixes = (gear: Gear | undefined): Affix[] => {
     });
   }
 
-  if (gear.legendary_affixes !== undefined) {
+  if (gear.legendaryAffixes !== undefined) {
     // Legendary gear: blend first, then legendary affixes
-    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
-    affixes.push(...gear.legendary_affixes);
+    if (gear.blendAffix !== undefined) affixes.push(gear.blendAffix);
+    affixes.push(...gear.legendaryAffixes);
   } else {
-    if (gear.base_affixes !== undefined) affixes.push(...gear.base_affixes);
-    if (gear.sweet_dream_affix !== undefined)
-      affixes.push(gear.sweet_dream_affix);
-    if (gear.tower_sequence_affix !== undefined)
-      affixes.push(gear.tower_sequence_affix);
-    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
+    if (gear.baseAffixes !== undefined) affixes.push(...gear.baseAffixes);
+    if (gear.sweetDreamAffix !== undefined) affixes.push(gear.sweetDreamAffix);
+    if (gear.towerSequenceAffix !== undefined)
+      affixes.push(gear.towerSequenceAffix);
+    if (gear.blendAffix !== undefined) affixes.push(gear.blendAffix);
     if (gear.prefixes !== undefined) affixes.push(...gear.prefixes);
     if (gear.suffixes !== undefined) affixes.push(...gear.suffixes);
   }
 
   // Always include custom affixes (for both legendary and regular gear)
-  if (gear.custom_affixes !== undefined) {
-    affixes.push(...gear.custom_affixes);
+  if (gear.customAffixes !== undefined) {
+    affixes.push(...gear.customAffixes);
   }
 
   return affixes;

@@ -203,7 +203,7 @@ test("loadSave preserves UI fields (id, rarity, legendaryName)", () => {
           equipmentType: "Helmet (STR)",
           rarity: "legendary",
           legendaryName: "Crown of the Eternal",
-          legendary_affixes: ["+50% fire damage"],
+          legendaryAffixes: ["+50% fire damage"],
         },
       },
       inventory: [

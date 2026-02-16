@@ -234,20 +234,20 @@ const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
     baseStats: gear.baseStats
       ? convertBaseStats(gear.baseStats, src)
       : undefined,
-    base_affixes: convertAffixArray(gear.base_affixes, src),
+    baseAffixes: convertAffixArray(gear.baseAffixes, src),
     prefixes: convertAffixArray(gear.prefixes, src),
     suffixes: convertAffixArray(gear.suffixes, src),
-    blend_affix: gear.blend_affix
-      ? convertAffix(gear.blend_affix, src)
+    blendAffix: gear.blendAffix
+      ? convertAffix(gear.blendAffix, src)
       : undefined,
-    sweet_dream_affix: gear.sweet_dream_affix
-      ? convertAffix(gear.sweet_dream_affix, src)
+    sweetDreamAffix: gear.sweetDreamAffix
+      ? convertAffix(gear.sweetDreamAffix, src)
       : undefined,
-    tower_sequence_affix: gear.tower_sequence_affix
-      ? convertAffix(gear.tower_sequence_affix, src)
+    towerSequenceAffix: gear.towerSequenceAffix
+      ? convertAffix(gear.towerSequenceAffix, src)
       : undefined,
-    legendary_affixes: convertAffixArray(gear.legendary_affixes, src),
-    custom_affixes: convertAffixArray(gear.custom_affixes, src),
+    legendaryAffixes: convertAffixArray(gear.legendaryAffixes, src),
+    customAffixes: convertAffixArray(gear.customAffixes, src),
   };
 };
 

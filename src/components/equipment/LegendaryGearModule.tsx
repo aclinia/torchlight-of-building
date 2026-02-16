@@ -161,7 +161,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
   const handleSaveToInventory = () => {
     if (selectedLegendary === undefined) return;
 
-    const legendary_affixes: string[] = [];
+    const legendaryAffixes: string[] = [];
     for (let i = 0; i < affixStates.length; i++) {
       const state = affixStates[i];
       const affix = state.isCorrupted
@@ -172,10 +172,10 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
         console.error(`Unselected choice at index ${i}, cannot save item`);
         return;
       }
-      legendary_affixes.push(craftAffix(affixString, state.percentage));
+      legendaryAffixes.push(craftAffix(affixString, state.percentage));
     }
 
-    const blend_affix =
+    const blendAffix =
       isBelt && selectedBlendIndex !== undefined
         ? formatBlendAffix(blendAffixes[selectedBlendIndex])
         : undefined;
@@ -183,8 +183,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
     const newItem: Gear = {
       id: generateItemId(),
       equipmentType: selectedLegendary.equipmentType,
-      legendary_affixes,
-      blend_affix,
+      legendaryAffixes,
+      blendAffix,
       rarity: "legendary",
       baseStats: selectedLegendary.baseStat,
       legendaryName: selectedLegendary.name,
@@ -200,7 +200,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
   const createGearPreview = (index: number): CoreGear => {
     const legendary = sortedLegendaries[index];
 
-    const legendary_affixes: Affix[] = legendary.normalAffixes.map((affix) => {
+    const legendaryAffixes: Affix[] = legendary.normalAffixes.map((affix) => {
       const affixString = getAffixStringFromLegendary(affix);
       const crafted = craftAffix(affixString, DEFAULT_QUALITY);
       return convertAffixStringToAffix(crafted);
@@ -210,7 +210,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       equipmentType: legendary.equipmentType,
       rarity: "legendary",
       legendaryName: legendary.name,
-      legendary_affixes,
+      legendaryAffixes,
     };
   };
 

@@ -330,18 +330,18 @@ export interface Gear {
   baseStats?: BaseStats;
 
   // Regular gear affix properties
-  base_affixes?: Affix[];
+  baseAffixes?: Affix[];
   prefixes?: Affix[];
   suffixes?: Affix[];
-  blend_affix?: Affix;
-  sweet_dream_affix?: Affix;
-  tower_sequence_affix?: Affix;
+  blendAffix?: Affix;
+  sweetDreamAffix?: Affix;
+  towerSequenceAffix?: Affix;
 
   // Legendary gear affix property
-  legendary_affixes?: Affix[];
+  legendaryAffixes?: Affix[];
 
   // Custom affixes from advanced crafting (raw text, parsed like other affixes)
-  custom_affixes?: Affix[];
+  customAffixes?: Affix[];
 }
 
 // Unified talent node type with all derived data

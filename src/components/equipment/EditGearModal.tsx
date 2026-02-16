@@ -141,9 +141,9 @@ export const EditGearModal = ({
       if (item !== undefined) {
         // Edit mode: initialize from existing item
         // Custom affixes
-        if (item.custom_affixes !== undefined) {
+        if (item.customAffixes !== undefined) {
           setCustomAffixText(
-            item.custom_affixes.map((a) => getAffixText(a)).join("\n"),
+            item.customAffixes.map((a) => getAffixText(a)).join("\n"),
           );
         } else {
           setCustomAffixText("");
@@ -157,8 +157,8 @@ export const EditGearModal = ({
 
         // Base Affixes (2 max)
         const initialBaseAffixes: EditableAffixSlot[] = [];
-        if (item.base_affixes !== undefined) {
-          for (const affix of item.base_affixes) {
+        if (item.baseAffixes !== undefined) {
+          for (const affix of item.baseAffixes) {
             initialBaseAffixes.push(createExistingSlot(getAffixText(affix)));
           }
         }
@@ -169,26 +169,26 @@ export const EditGearModal = ({
         setBaseAffixes(initialBaseAffixes);
 
         // Sweet Dream Affix
-        if (item.sweet_dream_affix !== undefined) {
+        if (item.sweetDreamAffix !== undefined) {
           setSweetDreamAffix(
-            createExistingSlot(getAffixText(item.sweet_dream_affix)),
+            createExistingSlot(getAffixText(item.sweetDreamAffix)),
           );
         } else {
           setSweetDreamAffix(createNewSlot());
         }
 
         // Tower Sequence Affix
-        if (item.tower_sequence_affix !== undefined) {
+        if (item.towerSequenceAffix !== undefined) {
           setTowerSequenceAffix(
-            createExistingSlot(getAffixText(item.tower_sequence_affix)),
+            createExistingSlot(getAffixText(item.towerSequenceAffix)),
           );
         } else {
           setTowerSequenceAffix(createNewSlot());
         }
 
         // Blend Affix (belt only)
-        if (item.blend_affix !== undefined) {
-          setBlendAffix(createExistingSlot(getAffixText(item.blend_affix)));
+        if (item.blendAffix !== undefined) {
+          setBlendAffix(createExistingSlot(getAffixText(item.blendAffix)));
         } else {
           setBlendAffix(createNewSlot());
         }
@@ -521,13 +521,13 @@ export const EditGearModal = ({
         id: generateItemId(),
         equipmentType,
         baseStats: newBaseStats,
-        base_affixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
-        sweet_dream_affix: newSweetDreamAffix,
-        tower_sequence_affix: newTowerSequenceAffix,
-        blend_affix: newBlendAffix,
+        baseAffixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
+        sweetDreamAffix: newSweetDreamAffix,
+        towerSequenceAffix: newTowerSequenceAffix,
+        blendAffix: newBlendAffix,
         prefixes: newPrefixes.length > 0 ? newPrefixes : undefined,
         suffixes: newSuffixes.length > 0 ? newSuffixes : undefined,
-        custom_affixes: customAffixes.length > 0 ? customAffixes : undefined,
+        customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
       };
       onSave(undefined, newItem);
     } else if (item !== undefined && item.id !== undefined) {
@@ -538,13 +538,13 @@ export const EditGearModal = ({
         rarity: item.rarity === "rare" ? undefined : item.rarity,
         legendaryName: item.legendaryName,
         baseStats: newBaseStats,
-        base_affixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
-        sweet_dream_affix: newSweetDreamAffix,
-        tower_sequence_affix: newTowerSequenceAffix,
-        blend_affix: newBlendAffix,
+        baseAffixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
+        sweetDreamAffix: newSweetDreamAffix,
+        towerSequenceAffix: newTowerSequenceAffix,
+        blendAffix: newBlendAffix,
         prefixes: newPrefixes.length > 0 ? newPrefixes : undefined,
         suffixes: newSuffixes.length > 0 ? newSuffixes : undefined,
-        custom_affixes: customAffixes.length > 0 ? customAffixes : undefined,
+        customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
       };
       onSave(item.id, updatedItem);
     }
