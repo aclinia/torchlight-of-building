@@ -84,7 +84,18 @@ The `parseSupportAffix` function handles this wrapping:
 return mods.map((mod) => ({ mod }));
 ```
 
-### 4. Multi-Output Parsers
+### 4. No-Op Parsers (Informational Text)
+
+Use `outputNone()` when a mod string should be recognized (not flagged as unparsed) but has no effect on calculations:
+
+```typescript
+t("always attempts to trigger the supported skill. interval: {_:dec}s").outputNone(),
+t("automatically use the supported attack skill to continuously attack the nearest enemy within {_:int}m while standing still").outputNone(),
+```
+
+**IMPORTANT:** Use `outputNone()`, NOT `outputMany([])`. Both work but `outputNone()` is the correct API for this purpose.
+
+### 5. Multi-Output Parsers
 
 For affixes that produce multiple mods:
 ```typescript
@@ -95,7 +106,7 @@ t("{value:dec%} additional attack and cast speed for the supported skill")
   ]),
 ```
 
-### 5. Add a Test
+### 6. Add a Test
 
 Add a test case to `src/tli/skills/support-mod-templates.test.ts` using the example input string given to you:
 
@@ -117,7 +128,7 @@ test("parse <skill name> <description of what it parses>", () => {
 });
 ```
 
-### 6. Verify
+### 7. Verify
 
 Run tests to ensure parsing works:
 ```bash
@@ -250,6 +261,7 @@ t("{value:dec%} additional melee damage for the supported skill").output(...),  
 | Missing `type` field in output mapper | Include `type: "ModType"` in the returned object |
 | Handler doesn't account for new mod type | Update `offense.ts` to handle new mod types |
 | Forgot the wrapper structure | `parseSupportAffix` already wraps in `{ mod }` |
+| Using `outputMany([])` for no-op | Use `outputNone()` instead |
 
 ## Data Flow
 
@@ -273,4 +285,4 @@ Applied to skill calculations
 | Output | `Mod[]` | `SupportMod[]` (wrapped in `{ mod }`) |
 | Usage | `parseMod()` | `parseSupportAffixes()` |
 
-Both use the same template DSL (`t()`, `spec()`, `outputMany()`).
+Both use the same template DSL (`t()`, `spec()`, `outputMany()`, `outputNone()`).

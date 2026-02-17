@@ -299,13 +299,13 @@ const allSupportParsers = [
   // Recognized but produces no mods (informational text)
   t(
     "the supported skill gains a buff on critical strike. the buff lasts {_:int} s.",
-  ).outputMany([]),
+  ).outputNone(),
   t(
     "automatically and continuously cast the supported skill at the nearest enemy within {_:int}m while standing still",
-  ).outputMany([]),
+  ).outputNone(),
   t(
     "triggers the supported skill upon reaching the max multistrike count. interval: {_:dec}s",
-  ).outputMany([]),
+  ).outputNone(),
   t(
     "{value:+int%} chance for the supported skill to trigger multistrike",
   ).output((c) => ({ type: "MultistrikeChancePct", value: c.value })),
@@ -334,11 +334,11 @@ const allSupportParsers = [
   t("the supported skill is cast as a spell tangle").output(() => ({
     type: "IsTangle",
   })),
-  t("{_:+int} max charges for the supported skill").outputMany([]),
-  t("gains a {_:int} s buff after casting the supported skill").outputMany([]),
+  t("{_:+int} max charges for the supported skill").outputNone(),
+  t("gains a {_:int} s buff after casting the supported skill").outputNone(),
   t(
     "gains a stack of buff when using the supported skill every {_:int} s. the buff lasts {_:int}s",
-  ).outputMany([]),
+  ).outputNone(),
   t(
     "the supported skill is supported by lv. {level:int} {skillName:words}",
   ).output((c) => ({
@@ -346,6 +346,12 @@ const allSupportParsers = [
     skillName: c.skillName,
     level: c.level,
   })),
+  t(
+    "always attempts to trigger the supported skill. interval: {_:dec}s",
+  ).outputNone(),
+  t(
+    "automatically use the supported attack skill to continuously attack the nearest enemy within {_:int}m while standing still",
+  ).outputNone(),
 ];
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {

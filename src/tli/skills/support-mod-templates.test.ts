@@ -196,6 +196,20 @@ describe("parseSupportAffixes", () => {
     expect(result).toEqual([[]]);
   });
 
+  test("parse always attempts to trigger returns no mods", () => {
+    const result = parseSupportAffixes([
+      "Always attempts to trigger the supported skill. Interval: 0.2s",
+    ]);
+    expect(result).toEqual([[]]);
+  });
+
+  test("parse auto attack while standing still returns no mods", () => {
+    const result = parseSupportAffixes([
+      "Automatically use the Supported Attack Skill to continuously attack the nearest enemy within 25m while standing still",
+    ]);
+    expect(result).toEqual([[]]);
+  });
+
   test("parse SkillSupportedBy Willpower", () => {
     const result = parseSupportAffixes([
       "The supported skill is supported by Lv. 15 Willpower",
