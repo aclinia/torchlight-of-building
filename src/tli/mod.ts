@@ -322,6 +322,7 @@ interface ModDefinitions {
   DoubleDmgChancePct: { value: number; doubleDmgModType?: DoubleDmgModType };
   Stat: { value: number; statModType: StatModType };
   StatPct: { value: number; statModType: StatModType };
+  GainsFervor: object;
   HaveFervor: object;
   FixedFervorPts: { value: number };
   FervorEffPct: { value: number };

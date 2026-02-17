@@ -352,6 +352,26 @@ const allSupportParsers = [
   t(
     "automatically use the supported attack skill to continuously attack the nearest enemy within {_:int}m while standing still",
   ).outputNone(),
+  t(
+    "gains {_:int} fervor rating when the supported skill hits an enemy",
+  ).output(() => ({ type: "GainsFervor" })),
+  t(
+    "for every {amt:int} fervor rating, the supported skill {value:+dec%} critical strike rating",
+  ).output((c) => ({
+    type: "CritRatingPct",
+    value: c.value,
+    modType: GLOBAL,
+    per: { stackable: "fervor", amt: c.amt },
+  })),
+  t(
+    "the supported skill {value:dec%} additional damage for every {amt:int} fervor rating",
+  ).output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: GLOBAL,
+    addn: true,
+    per: { stackable: "fervor", amt: c.amt },
+  })),
 ];
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {

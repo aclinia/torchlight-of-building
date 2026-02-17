@@ -210,6 +210,50 @@ describe("parseSupportAffixes", () => {
     expect(result).toEqual([[]]);
   });
 
+  test("parse Fervor gains fervor rating on hit", () => {
+    const result = parseSupportAffixes([
+      "Gains 2 Fervor Rating when the supported skill hits an enemy",
+    ]);
+    expect(result).toEqual([[{ mod: { type: "GainsFervor" } }]]);
+  });
+
+  test("parse Fervor crit rating per fervor rating", () => {
+    const result = parseSupportAffixes([
+      "For every 10 Fervor Rating, the supported skill +3% Critical Strike Rating",
+    ]);
+    expect(result).toEqual([
+      [
+        {
+          mod: {
+            type: "CritRatingPct",
+            value: 3,
+            modType: "global",
+            per: { stackable: "fervor", amt: 10 },
+          },
+        },
+      ],
+    ]);
+  });
+
+  test("parse Fervor additional damage per fervor rating", () => {
+    const result = parseSupportAffixes([
+      "The supported skill 2.65% additional damage for every 10 Fervor Rating",
+    ]);
+    expect(result).toEqual([
+      [
+        {
+          mod: {
+            type: "DmgPct",
+            value: 2.65,
+            dmgModType: "global",
+            addn: true,
+            per: { stackable: "fervor", amt: 10 },
+          },
+        },
+      ],
+    ]);
+  });
+
   test("parse SkillSupportedBy Willpower", () => {
     const result = parseSupportAffixes([
       "The supported skill is supported by Lv. 15 Willpower",
