@@ -327,6 +327,8 @@ interface ModDefinitions {
   HaveFervor: object;
   FixedFervorPts: { value: number };
   FervorEffPct: { value: number };
+  FervorBaseEffSkillAreaPct: { value: number; perFervorAmt: number };
+  FervorBaseEffDmgPct: { value: number; perFervorAmt: number };
   FrailEffPct: { value: number };
   SteepStrikeChancePct: { value: number };
   SteepStrikeDmgPct: { value: number; addn: boolean };

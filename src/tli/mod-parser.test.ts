@@ -819,6 +819,24 @@ test("parse fervor effect", () => {
   expect(result).toEqual([{ type: "FervorEffPct", value: 4 }]);
 });
 
+test("parse fervor base effect skill area", () => {
+  const result = parseMod(
+    "Fervor gains an additional base effect: +1% Skill Area for every 3 Fervor Rating",
+  );
+  expect(result).toEqual([
+    { type: "FervorBaseEffSkillAreaPct", value: 1, perFervorAmt: 3 },
+  ]);
+});
+
+test("parse fervor base effect attack and ailment damage", () => {
+  const result = parseMod(
+    "Fervor gains an additional base effect: +1% additional Attack and Ailment Damage for every 1 Fervor Rating",
+  );
+  expect(result).toEqual([
+    { type: "FervorBaseEffDmgPct", value: 1, perFervorAmt: 1 },
+  ]);
+});
+
 test("parse steep strike chance", () => {
   const result = parseMod("+12% Steep Strike chance");
   expect(result).toEqual([{ type: "SteepStrikeChancePct", value: 12 }]);

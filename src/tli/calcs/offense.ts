@@ -380,6 +380,57 @@ const calculateFervorCritRateMod = (
   };
 };
 
+const calculateFervorBaseEffSkillArea = (
+  mods: Mod[],
+  resourcePool: ResourcePool,
+): Mod[] => {
+  const baseEffMods = filterMods(mods, "FervorBaseEffSkillAreaPct");
+  if (baseEffMods.length === 0) {
+    return [];
+  }
+  const fervorEffMult = calcEffMult(mods, "FervorEffPct");
+  return baseEffMods.map((mod) => {
+    const stacks = Math.floor(resourcePool.fervorPts / mod.perFervorAmt);
+    return {
+      type: "SkillAreaPct" as const,
+      value: mod.value * stacks * fervorEffMult,
+      skillAreaModType: "global" as const,
+      src: "fervor",
+    };
+  });
+};
+
+const calculateFervorBaseEffDmg = (
+  mods: Mod[],
+  resourcePool: ResourcePool,
+): Mod[] => {
+  const baseEffMods = filterMods(mods, "FervorBaseEffDmgPct");
+  if (baseEffMods.length === 0) {
+    return [];
+  }
+  const fervorEffMult = calcEffMult(mods, "FervorEffPct");
+  const result: Mod[] = [];
+  for (const mod of baseEffMods) {
+    const stacks = Math.floor(resourcePool.fervorPts / mod.perFervorAmt);
+    const value = mod.value * stacks * fervorEffMult;
+    result.push({
+      type: "DmgPct",
+      value,
+      dmgModType: "attack",
+      addn: true,
+      src: "fervor",
+    });
+    result.push({
+      type: "DmgPct",
+      value,
+      dmgModType: "ailment",
+      addn: true,
+      src: "fervor",
+    });
+  }
+  return result;
+};
+
 const calculateWillpower = (normalizedMods: Mod[]): number => {
   return findMod(normalizedMods, "MaxWillpowerStacks")?.value || 0;
 };
@@ -1637,6 +1688,8 @@ const stepDeps = createSelfReferential({
   spellBurstChargeSpeed: ["castSpeed"],
   maxSpellBurst: ["movementSpeed"],
   movementSpeed: ["attackAggression"],
+  fervor: [],
+  skillArea: ["fervor"],
 });
 
 const modSteps = Object.keys(stepDeps) as (keyof typeof stepDeps)[];
@@ -1863,12 +1916,16 @@ const resolveModsForOffenseSkill = (
     normalize("proj_speed_pct", projSpeedPct);
   };
   const pushSkillArea = (): void => {
+    step("skillArea");
     const skillAreaPct = sumByValue(filterMods(mods, "SkillAreaPct"));
     normalize("skill_area", skillAreaPct);
   };
   const pushFervor = () => {
+    step("fervor");
     if (resourcePool.hasFervor) {
       mods.push(calculateFervorCritRateMod(mods, resourcePool));
+      mods.push(...calculateFervorBaseEffSkillArea(mods, resourcePool));
+      mods.push(...calculateFervorBaseEffDmg(mods, resourcePool));
       normalize("fervor", resourcePool.fervorPts);
     }
   };
@@ -2248,8 +2305,8 @@ const resolveModsForOffenseSkill = (
   normalize("desecration", desecration ?? 0);
   normalize("willpower", willpowerStacks);
   pushProjectiles();
-  pushSkillArea();
   pushFervor();
+  pushSkillArea();
   pushShadowStrike();
 
   normalize("max_mana", maxMana);

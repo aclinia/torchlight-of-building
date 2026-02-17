@@ -934,6 +934,20 @@ export const allParsers = [
     type: "FervorEffPct",
     value: c.value,
   })),
+  t(
+    "fervor gains an additional base effect: {value:+dec%} skill area for every {amt:int} fervor rating",
+  ).output((c) => ({
+    type: "FervorBaseEffSkillAreaPct",
+    value: c.value,
+    perFervorAmt: c.amt,
+  })),
+  t(
+    "fervor gains an additional base effect: {value:+dec%} additional attack and ailment damage for every {amt:int} fervor rating",
+  ).output((c) => ({
+    type: "FervorBaseEffDmgPct",
+    value: c.value,
+    perFervorAmt: c.amt,
+  })),
   t("{value:+dec%} steep strike chance.").output((c) => ({
     type: "SteepStrikeChancePct",
     value: c.value,

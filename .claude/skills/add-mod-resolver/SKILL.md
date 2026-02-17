@@ -34,6 +34,8 @@ Mod resolvers are `push*` functions defined inside `resolveModsForOffenseSkill` 
 - `condThresholdMods` — non-per mods with `condThreshold` (pushed back by `normalize()` when threshold is met)
 - `resolvedCondMods` — mods with `resolvedCond` (pushed back by individual `push*` resolvers when condition is met)
 
+**IMPORTANT: Mods with a `per` field are filtered into `prenormMods` only — they do NOT appear in `mods`.** The `per` field (from `ModBase`) triggers automatic per-stackable normalization via `normalize()`. If a mod needs custom resolver logic (e.g., applying an effect multiplier before scaling by stacks), do NOT use `per` on the mod type. Instead, store the scaling info in a custom field (e.g., `perFervorAmt: number`) so the mod stays in `mods` and the resolver can find it via `filterMods()`.
+
 `resolveModsForOffenseSkill` then runs a sequence of `push*` resolver functions that push new derived mods into `mods` via `pm()`. Each `push*` function is a closure that captures:
 - `mods: Mod[]` — the shared mutable array of resolved mods
 - `prenormMods` — mods needing per-stackable normalization
@@ -185,28 +187,44 @@ To add a new resolved condition:
 2. In the mod parser template (`src/tli/mod-parser/templates.ts`), use `resolvedCond: "condition_name"` instead of `cond: "condition_name"`
 3. Write a `push*` resolver that filters `resolvedCondMods` and pushes matching mods via `pm()`, and call it at the appropriate point in the execution sequence
 
-**Resolver with step dependencies (rare, only when other resolvers depend on this one):**
-```typescript
-const pushSpellAggression = (): void => {
-  step("spellAggression");
-  if (!config.hasSpellAggression && !modExists(mods, "HasSpellAggression")) return;
-  const mult = calcEffMult(mods, "SpellAggressionEffPct");
-  mods.push({
-    type: "CspdPct",
-    value: 7 * mult,
-    addn: true,
-    src: "Spell Aggression",
-  });
-};
-```
+**Resolver with step dependencies (when one resolver produces mods consumed by another):**
 
-If using `step()`, also register the step in `stepDeps` (above `resolveModsForOffenseSkill`):
+Use `step()` and `stepDeps` whenever a resolver pushes mods that another resolver later reads. For example, `pushFervor` generates `SkillAreaPct` mods, so `pushSkillArea` depends on it. The dependency graph is validated at test time — if `pushSkillArea` runs before `pushFervor`, an error is recorded.
+
+1. Register both steps and their dependency in `stepDeps` (above `resolveModsForOffenseSkill`):
 ```typescript
 const stepDeps = createSelfReferential({
   // ... existing steps ...
-  newStep: ["dependency1"],  // list steps that must run before this one
+  fervor: [],
+  skillArea: ["fervor"],  // skillArea must run after fervor
 });
 ```
+
+2. Call `step()` at the top of each resolver:
+```typescript
+const pushFervor = () => {
+  step("fervor");
+  if (resourcePool.hasFervor) {
+    mods.push(calculateFervorCritRateMod(mods, resourcePool));
+    mods.push(...calculateFervorBaseEffSkillArea(mods, resourcePool));
+    normalize("fervor", resourcePool.fervorPts);
+  }
+};
+
+const pushSkillArea = (): void => {
+  step("skillArea");
+  const skillAreaPct = sumByValue(filterMods(mods, "SkillAreaPct"));
+  normalize("skill_area", skillAreaPct);
+};
+```
+
+3. Ensure the call order in the execution sequence matches the dependency graph (dependent runs after dependency):
+```typescript
+pushFervor();    // must come first
+pushSkillArea(); // depends on fervor
+```
+
+`step()` always goes at the top of the resolver, before any early returns, so the step is registered even if the resolver short-circuits.
 
 ### 4. Call the Function
 
@@ -253,6 +271,8 @@ Most resolvers use `addn: true` because their effects are multiplicative with ot
 | Using `addn: false` when the mechanic should be multiplicative | Use `addn: true` for separate "more" multipliers |
 | Pushing mods without `src` | Always include `src` for debug panel visibility |
 | Forgetting to add config field | Use `/add-configuration` skill first |
-| Adding `step()` unnecessarily | Only use `step()` if other resolvers depend on this one running first |
+| Missing `step()` when a resolver produces mods consumed by another | Add both steps to `stepDeps` with the dependency, and call `step()` at the top of each resolver |
+| Not matching execution order to `stepDeps` | The call order must satisfy the dependency graph — dependent resolvers run after their dependencies |
 | Not handling undefined config with `??` | Optional config values need fallback: `config.stacks ?? defaultMax` |
 | Placing config-only normalize inline in execution sequence | Add to `normalizeFromConfig()` instead; only use inline/push* for computed values |
+| Using `per` on a mod that needs custom resolver logic | Mods with `per` go to `prenormMods`, not `mods`, so `filterMods(mods, ...)` won't find them. Use a custom field (e.g., `perFervorAmt: number`) instead so the mod stays in `mods` for the resolver to read |
