@@ -124,6 +124,20 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
   ],
   // Rosa 2
   "Unsullied Blade": () => [{ type: "SpellDmgBonusAppliesToAtkDmg" }],
+  "Born to Cleanse": (i) => [
+    {
+      type: "DmgPct",
+      value: 0.4 * 25,
+      dmgModType: "elemental",
+      addn: true,
+      cond: "realm_of_mercury",
+    },
+    {
+      type: "AddnMainHandDmgPct",
+      value: [20, 27, 34, 41, 48][i],
+      cond: "realm_of_mercury",
+    },
+  ],
   "Boundless Sanctuary": (i) => [
     {
       type: "DmgPct",
