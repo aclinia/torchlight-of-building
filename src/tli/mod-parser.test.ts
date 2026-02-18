@@ -4203,3 +4203,51 @@ test("parse additional attack speed per regain", () => {
     },
   ]);
 });
+
+test("parse doubles max warcry skill effects", () => {
+  const result = parseMod("Doubles Max Warcry Skill Effects");
+  expect(result).toEqual([{ type: "WarcryEffPct", value: 100, addn: true }]);
+});
+
+test("parse damage dealt when holding a shield", () => {
+  const result = parseMod("+36% damage dealt when holding a Shield");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 36,
+      dmgModType: "global",
+      addn: false,
+      cond: "holding_shield",
+    },
+  ]);
+});
+
+test("parse attack block chance when holding a shield", () => {
+  const result = parseMod("+12% Attack Block Chance when holding a Shield");
+  expect(result).toEqual([
+    { type: "AttackBlockChancePct", value: 12, cond: "holding_shield" },
+  ]);
+});
+
+test("parse attack damage when holding a one-handed weapon", () => {
+  const result = parseMod(
+    "+54% Attack Damage when holding a One-Handed Weapon",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 54,
+      dmgModType: "attack",
+      addn: false,
+      cond: "has_one_handed_weapon",
+    },
+  ]);
+});
+
+test("parse attack and cast speed when holding a shield", () => {
+  const result = parseMod("+12% Attack and Cast Speed when holding a Shield");
+  expect(result).toEqual([
+    { type: "AspdPct", value: 12, addn: false, cond: "holding_shield" },
+    { type: "CspdPct", value: 12, addn: false, cond: "holding_shield" },
+  ]);
+});

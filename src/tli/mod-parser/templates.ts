@@ -399,6 +399,22 @@ export const allParsers = [
     addn: true,
     cond: "has_one_handed_weapon",
   })),
+  t("{value:+dec%} attack damage when holding a one-handed weapon").output(
+    (c) => ({
+      type: "DmgPct",
+      value: c.value,
+      dmgModType: "attack",
+      addn: false,
+      cond: "has_one_handed_weapon",
+    }),
+  ),
+  t("{value:+dec%} damage dealt when holding a shield").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: false,
+    cond: "holding_shield",
+  })),
   t(
     "{value:+dec%} additional attack damage for each unique type of weapon equipped while dual wielding",
   ).output((c) => ({
@@ -830,6 +846,22 @@ export const allParsers = [
       cond: "has_hasten",
     })),
   ]),
+  t(
+    "{value:+dec%} [additional] attack and cast speed when holding a shield",
+  ).outputMany([
+    spec((c) => ({
+      type: "AspdPct",
+      value: c.value,
+      addn: c.additional !== undefined,
+      cond: "holding_shield",
+    })),
+    spec((c) => ({
+      type: "CspdPct",
+      value: c.value,
+      addn: c.additional !== undefined,
+      cond: "holding_shield",
+    })),
+  ]),
   t("{value:+dec%} [additional] attack and cast speed").outputMany([
     spec((c) => ({
       type: "AspdPct",
@@ -1096,6 +1128,11 @@ export const allParsers = [
     type: "MaxManaPct",
     value: c.value,
     addn: c.additional !== undefined,
+  })),
+  t("{value:+dec%} attack block chance when holding a shield").output((c) => ({
+    type: "AttackBlockChancePct",
+    value: c.value,
+    cond: "holding_shield",
   })),
   t("{value:+dec%} attack block chance").output((c) => ({
     type: "AttackBlockChancePct",
@@ -2595,6 +2632,11 @@ export const allParsers = [
   t(
     "immediately casts warcry. {value:+dec%} additional warcry skill effect",
   ).output((c) => ({ type: "WarcryEffPct", value: c.value, addn: true })),
+  t("doubles max warcry skill effects").output(() => ({
+    type: "WarcryEffPct",
+    value: 100,
+    addn: true,
+  })),
   t("warcry is cast immediately").outputNone(),
   t("gains hasten when minions land a critical strike").output(() => ({
     type: "GeneratesHasten",
