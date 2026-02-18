@@ -557,6 +557,10 @@ interface ModDefinitions {
   ChainLightningWebOfLightning: object;
   ChainLightningMerge: { shotgunFalloffCoefficient: number };
   MaxBerserkingBladeStacks: { value: number };
+  ComboFinisherAspdPct: { value: number; addn?: boolean };
+  ComboStarter1AspdPct: { value: number; addn?: boolean };
+  ComboStarter2AspdPct: { value: number; addn?: boolean };
+  ComboFinisherAmplificationPct: { value: number; addn?: boolean };
   DoubleBerserkingBladeUpperLimit: object;
   // enemy mods
   EnemyRes: { value: number; resType: ResType };

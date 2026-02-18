@@ -4,6 +4,7 @@ import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
 import {
   type CritChance,
   calculateOffense,
+  type OffenseComboDpsSummary,
   type OffenseInput,
   type OffenseSlashStrikeDpsSummary,
   type OffenseSpellBurstDpsSummary,
@@ -272,6 +273,36 @@ const SpellBurstSummarySection = ({
   );
 };
 
+const ComboDpsSummarySection = ({
+  summary,
+}: {
+  summary: OffenseComboDpsSummary;
+}): React.ReactNode => {
+  return (
+    <div className="rounded-lg border border-orange-500/30 bg-zinc-900 p-3">
+      <div className="mb-2 text-sm font-semibold text-orange-400">
+        Combo Attack
+      </div>
+      <div className="grid grid-cols-2 gap-x-6 gap-y-0.5 md:grid-cols-3">
+        <StatLine
+          label="Average DPS"
+          value={formatStatValue.dps(summary.avgDps)}
+          highlight
+        />
+        <StatLine label="Combo Points" value={summary.comboPoints} />
+        <StatLine
+          label="Finisher Amplification"
+          value={formatStatValue.pct(summary.comboFinisherAmplificationPct)}
+        />
+        <StatLine
+          label="Crit Multiplier"
+          value={formatStatValue.multiplier(summary.critDmgMult)}
+        />
+      </div>
+    </div>
+  );
+};
+
 const SlashStrikeSummarySection = ({
   summary,
 }: {
@@ -375,6 +406,7 @@ function CalculationsPage(): React.ReactNode {
 
   const hasDamageStats =
     offenseSummary?.attackDpsSummary !== undefined ||
+    offenseSummary?.comboDpsSummary !== undefined ||
     offenseSummary?.slashStrikeDpsSummary !== undefined ||
     offenseSummary?.spellDpsSummary !== undefined ||
     offenseSummary?.spellBurstDpsSummary !== undefined ||
@@ -510,6 +542,10 @@ function CalculationsPage(): React.ReactNode {
                 )}
               </div>
             </div>
+          )}
+
+          {offenseSummary.comboDpsSummary !== undefined && (
+            <ComboDpsSummarySection summary={offenseSummary.comboDpsSummary} />
           )}
 
           {offenseSummary.slashStrikeDpsSummary !== undefined && (

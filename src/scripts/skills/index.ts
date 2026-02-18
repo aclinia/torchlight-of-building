@@ -15,6 +15,7 @@ import {
   manaBoilParser,
   mindControlParser,
   secretOriginUnleashParser,
+  spectralSlashParser,
   thunderSpikeParser,
   timidParser,
 } from "./active-parsers";
@@ -196,6 +197,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     parser: berserkingBladeParser,
   },
   { skillName: "Ice Lances", categories: ["active"], parser: iceLancesParser },
+  {
+    skillName: "Spectral Slash",
+    categories: ["active"],
+    parser: spectralSlashParser,
+  },
   {
     skillName: "Energy Fortress",
     categories: ["passive"],

@@ -675,6 +675,90 @@ export const iceLancesParser: SupportLevelParser = (input) => {
   };
 };
 
+export const spectralSlashParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+
+  const comboStarterWeaponAtkDmgPct: Record<number, number> = {};
+  const comboFinisherWeaponAtkDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20) {
+      // Descript has newlines separating lines; collapse to spaces for matching
+      const collapsed = text.replace(/\n/g, " ");
+      const starterMatch = findMatch(
+        collapsed,
+        ts("combo starter 1: deals {value:dec%} weapon attack damage"),
+        skillName,
+      );
+      comboStarterWeaponAtkDmgPct[level] = starterMatch.value;
+
+      const finisherMatch = findMatch(
+        collapsed,
+        ts("combo finisher: deals {value:dec%} weapon attack damage"),
+        skillName,
+      );
+      comboFinisherWeaponAtkDmgPct[level] = finisherMatch.value;
+    }
+  }
+
+  const level20StarterWeaponDmg = comboStarterWeaponAtkDmgPct[20];
+  const level20FinisherWeaponDmg = comboFinisherWeaponAtkDmgPct[20];
+
+  if (
+    level20StarterWeaponDmg === undefined ||
+    level20FinisherWeaponDmg === undefined
+  ) {
+    throw new Error(
+      `${skillName}: level 20 values missing, cannot fallback for levels 21-40`,
+    );
+  }
+
+  for (let level = 21; level <= 40; level++) {
+    comboStarterWeaponAtkDmgPct[level] = level20StarterWeaponDmg;
+    comboFinisherWeaponAtkDmgPct[level] = level20FinisherWeaponDmg;
+  }
+
+  // Extract constants from level 1 descript
+  const descript = descriptCol.rows[1];
+  if (descript === undefined) {
+    throw new Error(`${skillName}: no descript found for level 1`);
+  }
+
+  const comboFinisherAspdPct = findMatch(
+    descript,
+    ts("{value:+int%} additional attack speed for the combo finisher"),
+    skillName,
+  ).value;
+
+  const comboFinisherAmplificationPct = findMatch(
+    descript,
+    ts("{value:+int%} combo finisher amplification"),
+    skillName,
+  ).value;
+
+  const shotgunEffFalloffPct = findMatch(
+    descript,
+    ts("shotgun effect is {value:int%}"),
+    skillName,
+  ).value;
+
+  validateAllLevels(comboStarterWeaponAtkDmgPct, skillName);
+  validateAllLevels(comboFinisherWeaponAtkDmgPct, skillName);
+
+  return {
+    comboStarterWeaponAtkDmgPct,
+    comboFinisherWeaponAtkDmgPct,
+    comboFinisherAspdPct: createConstantLevels(comboFinisherAspdPct),
+    comboFinisherAmplificationPct: createConstantLevels(
+      comboFinisherAmplificationPct,
+    ),
+    shotgunEffFalloffPct: createConstantLevels(shotgunEffFalloffPct),
+  };
+};
+
 export const fearlessWarcryParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 

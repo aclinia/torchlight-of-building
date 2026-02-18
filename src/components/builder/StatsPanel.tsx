@@ -3,6 +3,7 @@ import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
 import {
   type CritChance,
   calculateOffense,
+  type OffenseComboDpsSummary,
   type OffenseInput,
   type OffenseSlashStrikeDpsSummary,
   type OffenseSpellBurstDpsSummary,
@@ -132,6 +133,31 @@ const SpellDpsSection = ({
   );
 };
 
+const ComboDpsSection = ({
+  summary,
+}: {
+  summary: OffenseComboDpsSummary;
+}): React.ReactNode => {
+  return (
+    <>
+      <StatLine
+        label="Combo DPS"
+        value={formatStatValue.dps(summary.avgDps)}
+        highlight
+      />
+      <StatLine label="Combo Points" value={summary.comboPoints} />
+      <StatLine
+        label="Finisher Amplification"
+        value={formatStatValue.pct(summary.comboFinisherAmplificationPct)}
+      />
+      <StatLine
+        label="Crit Multiplier"
+        value={formatStatValue.multiplier(summary.critDmgMult)}
+      />
+    </>
+  );
+};
+
 const SlashStrikeDpsSection = ({
   summary,
 }: {
@@ -246,6 +272,7 @@ export const StatsPanel = (): React.ReactNode => {
 
   const hasDamageStats =
     offenseSummary?.attackDpsSummary !== undefined ||
+    offenseSummary?.comboDpsSummary !== undefined ||
     offenseSummary?.slashStrikeDpsSummary !== undefined ||
     offenseSummary?.spellDpsSummary !== undefined ||
     offenseSummary?.spellBurstDpsSummary !== undefined ||
@@ -365,6 +392,13 @@ export const StatsPanel = (): React.ReactNode => {
                     />
                   </>
                 )}
+              </>
+            )}
+
+            {offenseSummary.comboDpsSummary !== undefined && (
+              <>
+                <div className="h-2" />
+                <ComboDpsSection summary={offenseSummary.comboDpsSummary} />
               </>
             )}
 

@@ -6389,3 +6389,92 @@ describe("Pactspirits", () => {
     });
   });
 });
+
+describe("combo attack damage ([Test] Combo Attack)", () => {
+  // Test skill has simple values:
+  // - starter1/starter2: 200% weapon damage
+  // - finisher: 100% weapon damage
+  // - combo finisher aspd: -40%
+  // - combo finisher amplification: +30%
+  const skillName = "[Test] Combo Attack" as const;
+
+  const comboWeapon = {
+    equipmentType: "One-Handed Sword" as const,
+    baseStats: {
+      baseStatLines: [
+        {
+          text: "100 - 100 physical damage",
+          mods: [{ type: "GearBasePhysDmg", value: 100 } as const],
+        },
+        {
+          text: "1.2 attack speed",
+          mods: [{ type: "GearBaseAttackSpeed", value: 1.2 } as const],
+        },
+      ],
+    },
+  };
+
+  const comboSkillPage = () => ({
+    activeSkills: {
+      1: { skillName, enabled: true, level: 20, supportSkills: {} },
+    },
+    passiveSkills: {},
+  });
+
+  const createComboInput = (mods: AffixLine[]) => ({
+    loadout: initLoadout({
+      gearPage: { equippedGear: { mainHand: comboWeapon }, inventory: [] },
+      customAffixLines: mods,
+      skillPage: comboSkillPage(),
+    }),
+    configuration: defaultConfiguration,
+  });
+
+  test("basic combo calculation with 3-part rotation", () => {
+    // 100 phys weapon, level 20:
+    // - starter1: 200% weapon damage → avgHit ≈ 200
+    // - starter2: 200% weapon damage → avgHit ≈ 200
+    // - finisher: 100% weapon damage → avgHit ≈ 100
+    //   finisher amplification: 1 + 2 * 30/100 = 1.6
+    //   no shotgun for test skill (shotgun is Spectral Slash-specific)
+    const input = createComboInput([]);
+    const results = calculateOffense(input);
+    const summary =
+      results.skills[skillName as ImplementedActiveSkillName]?.comboDpsSummary;
+
+    expect(summary).toBeDefined();
+    if (summary === undefined) return;
+
+    // Verify combo points and amplification
+    expect(summary.comboPoints).toBe(2);
+    expect(summary.comboFinisherAmplificationPct).toBeCloseTo(30);
+
+    // Verify DPS is positive and reasonable
+    expect(summary.avgDps).toBeGreaterThan(0);
+  });
+
+  test("damage mods apply to all combo parts", () => {
+    // Add +100% global damage
+    const input = createComboInput(
+      affixLines([
+        { type: "DmgPct", value: 100, dmgModType: "global", addn: true },
+      ]),
+    );
+    const results = calculateOffense(input);
+    const summary =
+      results.skills[skillName as ImplementedActiveSkillName]?.comboDpsSummary;
+
+    expect(summary).toBeDefined();
+    if (summary === undefined) return;
+
+    // +100% global damage should roughly double DPS
+    const baseInput = createComboInput([]);
+    const baseResults = calculateOffense(baseInput);
+    const baseSummary =
+      baseResults.skills[skillName as ImplementedActiveSkillName]
+        ?.comboDpsSummary;
+    expect(baseSummary).toBeDefined();
+    if (baseSummary === undefined) return;
+    expect(summary.avgDps).toBeCloseTo(baseSummary.avgDps * 2, 0);
+  });
+});

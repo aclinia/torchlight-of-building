@@ -1096,6 +1096,29 @@ const createTestSlashStrikeSkill = (): BaseActiveSkill => {
   };
 };
 
+const createTestComboAttackSkill = (): BaseActiveSkill => {
+  // Simple values: starter1/2 200%, finisher 100%, -40% finisher aspd, +30% amplification
+  const starterValues = Array.from({ length: 40 }, () => 200);
+  const finisherValues = Array.from({ length: 40 }, () => 100);
+  const finisherAspdValues = Array.from({ length: 40 }, () => -40);
+  const amplificationValues = Array.from({ length: 40 }, () => 30);
+  return {
+    type: "Active",
+    name: "[Test] Combo Attack",
+    kinds: ["deal_damage", "hit_enemies"],
+    tags: ["Attack", "Melee", "Combo"],
+    description: ["this is used for testing combo attack damage calculations"],
+    mainStats: ["str"],
+    levelValues: {
+      comboStarter1WeaponAtkDmgPct: starterValues,
+      comboStarter2WeaponAtkDmgPct: starterValues,
+      comboFinisherWeaponAtkDmgPct: finisherValues,
+      comboFinisherAspdPct: finisherAspdValues,
+      comboFinisherAmplificationPct: amplificationValues,
+    },
+  };
+};
+
 const generateActiveSkillFile = (
   constName: string,
   skills: BaseActiveSkill[],
@@ -1431,10 +1454,12 @@ const main = async (options: Options): Promise<void> => {
   const testPersistentSpell = createTestPersistentSpell();
   const testSimpleSpell = createTestSimpleSpell();
   const testSlashStrikeSkill = createTestSlashStrikeSkill();
+  const testComboAttackSkill = createTestComboAttackSkill();
   activeSkillGroups.get("Active")?.push(testSkill);
   activeSkillGroups.get("Active")?.push(testPersistentSpell);
   activeSkillGroups.get("Active")?.push(testSimpleSpell);
   activeSkillGroups.get("Active")?.push(testSlashStrikeSkill);
+  activeSkillGroups.get("Active")?.push(testComboAttackSkill);
 
   // Generate active skill files
   for (const [skillType, skills] of activeSkillGroups) {

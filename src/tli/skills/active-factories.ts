@@ -39,6 +39,27 @@ export const activeSkillModFactories: Partial<
       },
     },
   }),
+  // Test skill for combo attack damage testing
+  "[Test] Combo Attack": (l, vals) => ({
+    offense: {
+      comboStarter1WeaponAtkDmgPct: {
+        value: v(vals.comboStarter1WeaponAtkDmgPct, l),
+      },
+      comboStarter2WeaponAtkDmgPct: {
+        value: v(vals.comboStarter2WeaponAtkDmgPct, l),
+      },
+      comboFinisherWeaponAtkDmgPct: {
+        value: v(vals.comboFinisherWeaponAtkDmgPct, l),
+      },
+    },
+    mods: [
+      { type: "ComboFinisherAspdPct", value: v(vals.comboFinisherAspdPct, l) },
+      {
+        type: "ComboFinisherAmplificationPct",
+        value: v(vals.comboFinisherAmplificationPct, l),
+      },
+    ],
+  }),
   // Test skill for slash-strike (sweep/steep) damage testing
   "[Test] Slash Strike Skill": (l, vals) => ({
     offense: {
@@ -304,6 +325,27 @@ export const activeSkillModFactories: Partial<
         value: v(vals.maxBerserkingBladeStacks, l),
       },
       { type: "SteepStrikeChancePct", value: v(vals.steepStrikeChancePct, l) },
+    ],
+  }),
+  "Spectral Slash": (l, vals) => ({
+    offense: {
+      comboStarter1WeaponAtkDmgPct: {
+        value: v(vals.comboStarterWeaponAtkDmgPct, l),
+      },
+      comboStarter2WeaponAtkDmgPct: {
+        value: v(vals.comboStarterWeaponAtkDmgPct, l),
+      },
+      comboFinisherWeaponAtkDmgPct: {
+        value: v(vals.comboFinisherWeaponAtkDmgPct, l),
+      },
+      shotgunEffFalloffPct: { value: v(vals.shotgunEffFalloffPct, l) },
+    },
+    mods: [
+      { type: "ComboFinisherAspdPct", value: v(vals.comboFinisherAspdPct, l) },
+      {
+        type: "ComboFinisherAmplificationPct",
+        value: v(vals.comboFinisherAmplificationPct, l),
+      },
     ],
   }),
   "Ice Lances": (l, vals) => ({

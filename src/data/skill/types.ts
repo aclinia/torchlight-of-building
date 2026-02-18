@@ -199,6 +199,9 @@ export interface SkillOffense {
   steepWeaponAtkDmgPct?: { value: number };
   steepAddedDmgEffPct?: { value: number };
   shotgunEffFalloffPct?: { value: number };
+  comboStarter1WeaponAtkDmgPct?: { value: number };
+  comboStarter2WeaponAtkDmgPct?: { value: number };
+  comboFinisherWeaponAtkDmgPct?: { value: number };
 }
 
 export interface BaseActiveSkill extends BaseSkill {

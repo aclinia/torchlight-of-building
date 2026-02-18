@@ -121,9 +121,17 @@ interface TangleSummary {
   maxTanglesPerEnemy: number;
 }
 
+export interface OffenseComboDpsSummary {
+  comboFinisherAmplificationPct: number;
+  comboPoints: number;
+  critDmgMult: number;
+  avgDps: number;
+}
+
 interface OffenseSummary {
   attackDpsSummary?: OffenseAttackDpsSummary;
   slashStrikeDpsSummary?: OffenseSlashStrikeDpsSummary;
+  comboDpsSummary?: OffenseComboDpsSummary;
   spellDpsSummary?: OffenseSpellDpsSummary;
   spellBurstDpsSummary?: OffenseSpellBurstDpsSummary;
   persistentDpsSummary?: PersistentDpsSummary;
@@ -3041,6 +3049,132 @@ const calcAvgSlashStrikeDps = (
   };
 };
 
+// TODO: calculate combo points per hit and based on mods
+const COMBO_POINTS = 2;
+
+const calcAvgComboDps = (
+  mods: Mod[],
+  loadout: Loadout,
+  perSkillContext: PerSkillModContext,
+  skillLevel: number,
+  derivedCtx: DerivedCtx,
+  config: Configuration,
+): OffenseComboDpsSummary | undefined => {
+  // TODO: calculate with multiple finisher charges
+  const skill = perSkillContext.skill;
+  const skillMods = getActiveSkillMods(
+    skill.name as ActiveSkillName,
+    skillLevel,
+  );
+  const offense = skillMods.offense;
+
+  if (
+    offense?.comboStarter1WeaponAtkDmgPct === undefined ||
+    offense?.comboStarter2WeaponAtkDmgPct === undefined ||
+    offense?.comboFinisherWeaponAtkDmgPct === undefined
+  ) {
+    return undefined;
+  }
+
+  const mainhand = loadout.gearPage.equippedGear.mainHand;
+  if (mainhand === undefined) {
+    return undefined;
+  }
+  const offhand = loadout.gearPage.equippedGear.offHand;
+  const isDualWield = offhand !== undefined && isOneHandedWeapon(offhand);
+
+  const critDmgMult = calculateCritDmg(mods, skill);
+
+  // Combo dual wield: average the two weapons' results into a single summary.
+  // Unlike normal attacks which alternate hands, combos use the average of both
+  // weapons' gear damage, attack speed, and crit rating.
+  // addedDmgEffPct is always the same as weaponAtkDmgPct for combo skills.
+  const calcComboPart = (weaponAtkDmgPct: number): WeaponAttackSummary => {
+    const input: CalcWeaponAttackInput = {
+      mods,
+      skill,
+      derivedCtx,
+      config,
+      critDmgMult,
+      weaponAtkDmgPct,
+      addedDmgEffPct: weaponAtkDmgPct,
+    };
+    const mhAtk = calcWeaponAttack(mainhand, 0, input);
+    if (!isDualWield) {
+      return mhAtk;
+    }
+    // biome-ignore lint/style/noNonNullAssertion: guarded by isDualWield
+    const ohAtk = calcWeaponAttack(offhand!, 0, input);
+    return {
+      avgHit: (mhAtk.avgHit + ohAtk.avgHit) / 2,
+      aspd: (mhAtk.aspd + ohAtk.aspd) / 2,
+      critChance: {
+        actual: (mhAtk.critChance.actual + ohAtk.critChance.actual) / 2,
+        uncapped: (mhAtk.critChance.uncapped + ohAtk.critChance.uncapped) / 2,
+      },
+      avgHitWithCrit: (mhAtk.avgHitWithCrit + ohAtk.avgHitWithCrit) / 2,
+    };
+  };
+
+  const starter1Atk = calcComboPart(offense.comboStarter1WeaponAtkDmgPct.value);
+  const starter2Atk = calcComboPart(offense.comboStarter2WeaponAtkDmgPct.value);
+  const finisherAtk = calcComboPart(offense.comboFinisherWeaponAtkDmgPct.value);
+
+  // Per-part attack speed adjustments
+  const starter1AspdMult = calcEffMult(mods, "ComboStarter1AspdPct");
+  const starter2AspdMult = calcEffMult(mods, "ComboStarter2AspdPct");
+  const finisherAspdMult = calcEffMult(mods, "ComboFinisherAspdPct");
+
+  const starter1Aspd = starter1Atk.aspd * starter1AspdMult;
+  const starter2Aspd = starter2Atk.aspd * starter2AspdMult;
+  const finisherAspd = finisherAtk.aspd * finisherAspdMult;
+
+  // Time-weighted rotation
+  const interval1 = 1 / starter1Aspd;
+  const interval2 = 1 / starter2Aspd;
+  const intervalF = 1 / finisherAspd;
+  const fullCycleTime = interval1 + interval2 + intervalF;
+
+  // Combo Finisher Amplification
+  const comboFinisherAmplificationMult = calcEffMult(
+    mods,
+    "ComboFinisherAmplificationPct",
+  );
+  const finisherDmgMult =
+    1 + COMBO_POINTS * (comboFinisherAmplificationMult - 1);
+
+  // Spectral Slash-specific multipliers:
+  // - Finisher generates clones (= combo points) with shotgun falloff
+  // - Starter 1 marks the target for 30% additional damage on subsequent hits
+  const isSpectralSlash = skill.name === "Spectral Slash";
+  const spectralFinisherCloneMult = isSpectralSlash
+    ? 1 + COMBO_POINTS * ((offense.shotgunEffFalloffPct?.value ?? 0) / 100)
+    : 1;
+  const markDmgMult = isSpectralSlash ? 1.3 : 1;
+
+  // Calculate per-part damage contributions in the rotation
+  const starter1HitDmg = starter1Atk.avgHitWithCrit;
+  const starter2HitDmg = starter2Atk.avgHitWithCrit * markDmgMult;
+  const finisherHitDmg =
+    finisherAtk.avgHitWithCrit *
+    finisherDmgMult *
+    spectralFinisherCloneMult *
+    markDmgMult;
+
+  const doubleDmgMult = calculateDoubleDmgMult(mods, skill);
+  const extraMult = calculateExtraOffenseMults(mods, config);
+
+  const cycleDmg = starter1HitDmg + starter2HitDmg + finisherHitDmg;
+  const avgDps = (cycleDmg / fullCycleTime) * doubleDmgMult * extraMult;
+
+  return {
+    comboFinisherAmplificationPct: (comboFinisherAmplificationMult - 1) * 100,
+    comboPoints: COMBO_POINTS,
+    critDmgMult,
+    avgDps,
+  };
+};
+
 interface CalcSpellHitOutput {
   base: {
     physical: DmgRange;
@@ -3330,6 +3464,15 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       config,
     );
 
+    const comboDpsSummary = calcAvgComboDps(
+      mods,
+      loadout,
+      perSkillContext,
+      skillLevel,
+      derivedCtx,
+      config,
+    );
+
     const spellDpsSummary = calcAvgSpellDps(
       mods,
       loadout,
@@ -3365,6 +3508,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     const totalDps =
       (attackHitSummary?.avgDps ?? 0) +
       (slashStrikeDpsSummary?.avgDps ?? 0) +
+      (comboDpsSummary?.avgDps ?? 0) +
       (spellDpsSummary?.avgDps ?? 0) +
       (spellBurstDpsSummary?.avgDps ?? 0) +
       (spellBurstDpsSummary?.ingenuityOverload?.avgDps ?? 0) +
@@ -3374,6 +3518,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     skills[slot.skillName as ImplementedActiveSkillName] = {
       attackDpsSummary: attackHitSummary,
       slashStrikeDpsSummary,
+      comboDpsSummary,
       spellDpsSummary,
       spellBurstDpsSummary,
       persistentDpsSummary,
