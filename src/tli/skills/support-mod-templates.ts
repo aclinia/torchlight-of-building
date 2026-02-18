@@ -373,6 +373,18 @@ const allSupportParsers = [
     per: { stackable: "fervor", amt: c.amt },
   })),
   t(
+    "doubles the skills buff stack upper limit. each buff grants {value:dec%} additional skill area for the skill",
+  ).outputMany([
+    spec(() => ({ type: "DoubleBerserkingBladeUpperLimit" })),
+    spec((c) => ({
+      type: "SkillAreaPct",
+      value: c.value,
+      skillAreaModType: GLOBAL,
+      addn: true,
+      per: { stackable: "berserking_blade_buff" },
+    })),
+  ]),
+  t(
     "{value:dec%} of the bonuses and additional bonuses to skill area is also applied to the skill's additional steep strike damage",
   ).output((c) => ({
     type: "SteepStrikeDmgPct",

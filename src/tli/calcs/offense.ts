@@ -1689,7 +1689,8 @@ const stepDeps = createSelfReferential({
   maxSpellBurst: ["movementSpeed"],
   movementSpeed: ["attackAggression"],
   fervor: [],
-  skillArea: ["fervor"],
+  berserkingBlade: [],
+  skillArea: ["fervor", "berserkingBlade"],
 });
 
 const modSteps = Object.keys(stepDeps) as (keyof typeof stepDeps)[];
@@ -2239,10 +2240,14 @@ const resolveModsForOffenseSkill = (
     return { maxTangles, maxTanglesPerEnemy };
   };
   const pushBerserkingBlade = (): void => {
-    const maxBBStacks = sumByValue(
-      filterMods(mods, "MaxBerserkingBladeStacks"),
-    );
-    const bbStacks = config.numBerserkingBladeBuffStacks || maxBBStacks;
+    step("berserkingBlade");
+    let maxBBStacks = sumByValue(filterMods(mods, "MaxBerserkingBladeStacks"));
+    const hasDouble =
+      filterMods(mods, "DoubleBerserkingBladeUpperLimit").length > 0;
+    if (hasDouble) {
+      maxBBStacks = maxBBStacks * 2;
+    }
+    const bbStacks = config.numBerserkingBladeBuffStacks ?? maxBBStacks;
     normalize("berserking_blade_buff", bbStacks);
   };
   const pushMspd = (): number => {

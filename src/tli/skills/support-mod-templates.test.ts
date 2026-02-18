@@ -288,4 +288,24 @@ describe("parseSupportAffixes", () => {
       ],
     ]);
   });
+
+  test("parse doubles berserking blade buff stack upper limit with skill area", () => {
+    const result = parseSupportAffixes([
+      "Doubles the skills buff stack upper limit. Each buff grants 0.45% additional Skill Area for the skill",
+    ]);
+    expect(result).toEqual([
+      [
+        { mod: { type: "DoubleBerserkingBladeUpperLimit" } },
+        {
+          mod: {
+            type: "SkillAreaPct",
+            value: 0.45,
+            skillAreaModType: "global",
+            addn: true,
+            per: { stackable: "berserking_blade_buff" },
+          },
+        },
+      ],
+    ]);
+  });
 });

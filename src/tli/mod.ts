@@ -550,6 +550,7 @@ interface ModDefinitions {
   ChainLightningWebOfLightning: object;
   ChainLightningMerge: { shotgunFalloffCoefficient: number };
   MaxBerserkingBladeStacks: { value: number };
+  DoubleBerserkingBladeUpperLimit: object;
   // enemy mods
   EnemyRes: { value: number; resType: ResType };
   // core talent specific
