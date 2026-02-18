@@ -890,6 +890,14 @@ export const allParsers = [
       per: { stackable: "total_block_pct", amt: c.amt },
     })),
   ]),
+  t("{value:dec%} attack speed for every {amt:dec%} of life lost").output(
+    (c) => ({
+      type: "AspdPct",
+      value: c.value,
+      addn: false,
+      per: { stackable: "pct_life_lost", amt: c.amt },
+    }),
+  ),
   t(
     "{value:+dec%} additional attack speed for each time you have regained in the last {dur:int}s. stacks up to {limit:int} time(s)",
   ).output((c) => ({

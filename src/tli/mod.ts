@@ -163,6 +163,7 @@ export const Stackables = [
   "seconds_with_elite_nearby",
   "num_ice_puppet_stacks",
   "num_times_regained_recently",
+  "pct_life_lost",
   // defenses
   "armor",
   "evasion",

@@ -3043,6 +3043,18 @@ test("parse attack speed and movement speed per block", () => {
   ]);
 });
 
+test("parse attack speed per life lost", () => {
+  const result = parseMod("0.3% Attack Speed for every 1% of Life lost");
+  expect(result).toEqual([
+    {
+      type: "AspdPct",
+      value: 0.3,
+      addn: false,
+      per: { stackable: "pct_life_lost", amt: 1 },
+    },
+  ]);
+});
+
 test("parse max fortitude stacks", () => {
   const result = parseMod("+1 Max Fortitude Stacks");
   expect(result).toEqual([{ type: "MaxFortitudeStack", value: 1 }]);

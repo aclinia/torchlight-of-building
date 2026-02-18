@@ -420,6 +420,17 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           />
 
           <label className="text-right text-zinc-50">
+            Current Life %
+            <InfoTooltip text="Current life percentage. 100 = full life. Used for 'life lost' calculations." />
+          </label>
+          <NumberInput
+            value={config.currentLifePct}
+            onChange={(v) => onUpdate({ currentLifePct: v ?? 100 })}
+            min={0}
+            max={100}
+          />
+
+          <label className="text-right text-zinc-50">
             Enemy Cold Res %
             <InfoTooltip text="Enemy cold resistance. Defaults to 40%." />
           </label>

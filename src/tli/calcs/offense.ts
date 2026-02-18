@@ -1818,6 +1818,7 @@ const resolveModsForOffenseSkill = (
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
     normalize("num_ice_puppet_stacks", config.numIcePuppetStacks ?? 0);
     normalize("num_times_regained_recently", config.numTimesRegainedRecently);
+    normalize("pct_life_lost", 100 - config.currentLifePct);
   };
   const pushStatNorms = (): void => {
     const totalMainStats = calculateTotalMainStats(skill, stats);

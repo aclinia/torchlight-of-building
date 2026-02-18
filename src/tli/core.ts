@@ -193,6 +193,8 @@ export interface Configuration {
   numBerserkingBladeBuffStacks?: number;
   // default to 0
   numTimesRegainedRecently: number;
+  // default to 100
+  currentLifePct: number;
 
   // --------------------
   // hero-specific config
@@ -307,6 +309,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   numMaxMultistrikesRecently: 0,
   numBerserkingBladeBuffStacks: undefined,
   numTimesRegainedRecently: 0,
+  currentLifePct: 100,
   realmOfMercuryEnabled: false,
   numEnemiesInsideRealmOfMercury: 0,
   baptismOfPurityEnabled: false,
