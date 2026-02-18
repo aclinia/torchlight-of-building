@@ -6261,7 +6261,7 @@ describe("Pactspirits", () => {
     });
 
     test.each([
-      0, 1, 2, 3, 4, 5, 6,
+      0, 1, 2, 3, 4, 5,
     ])("Pure heart properly calculates with (%s) stacks config override", (stacks) => {
       // base * bonusdmg
       // 100 * 2 = 200

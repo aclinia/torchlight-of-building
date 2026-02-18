@@ -474,7 +474,7 @@ const calculatePactspiritMods = (
       type: "DmgPct",
       value: 5,
       dmgModType: "global",
-      per: { stackable: "pure_heart", multiplicative: true, limit: 6 },
+      per: { stackable: "pure_heart", multiplicative: true },
       addn: true,
       src: "Pure Heart",
       cond: "target_enemy_is_nearby",
@@ -486,7 +486,7 @@ const calculatePactspiritMods = (
       type: "DmgPct",
       value: 5,
       dmgModType: "attack",
-      per: { stackable: "feline_stimulant", multiplicative: true, limit: 3 },
+      per: { stackable: "feline_stimulant", multiplicative: true },
       addn: true,
       src: "Feline Stimulant",
     });
@@ -1830,7 +1830,6 @@ const resolveModsForOffenseSkill = (
     normalize("num_ice_puppet_stacks", config.numIcePuppetStacks ?? 0);
     normalize("num_times_regained_recently", config.numTimesRegainedRecently);
     normalize("pct_life_lost", 100 - config.currentLifePct);
-    normalize("feline_stimulant", config.numFelineStimulant ?? 3);
   };
   const pushStatNorms = (): void => {
     const totalMainStats = calculateTotalMainStats(skill, stats);
@@ -2000,10 +1999,21 @@ const resolveModsForOffenseSkill = (
 
   const pushPactspirits = () => {
     // Azure Gunslinger
-    const addedMaxStacks = sumByValue(filterMods(mods, "MaxPureHeartStacks"));
-    const maxStacks = 5 + addedMaxStacks;
-    const stacks = config.pureHeartStacks ?? maxStacks;
-    normalize("pure_heart", stacks);
+    {
+      const baseStacks = 5;
+      const addedMaxStacks = sumByValue(filterMods(mods, "MaxPureHeartStacks"));
+      const maxStacks = baseStacks + addedMaxStacks;
+      const stacks = Math.min(maxStacks, config.pureHeartStacks ?? maxStacks);
+      normalize("pure_heart", stacks);
+    }
+    {
+      const maxStacks = 3;
+      const stacks = Math.min(
+        maxStacks,
+        config.numFelineStimulant ?? maxStacks,
+      );
+      normalize("feline_stimulant", stacks);
+    }
   };
   const pushTradeoff = (): void => {
     const { str, dex } = resourcePool.stats;
