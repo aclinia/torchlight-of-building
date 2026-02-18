@@ -191,6 +191,8 @@ export interface Configuration {
   numMaxMultistrikesRecently: number;
   // default to max
   numBerserkingBladeBuffStacks?: number;
+  // default to 0
+  numTimesRegainedRecently: number;
 
   // --------------------
   // hero-specific config
@@ -304,6 +306,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   numMainSpellSkillsCastRecently: 0,
   numMaxMultistrikesRecently: 0,
   numBerserkingBladeBuffStacks: undefined,
+  numTimesRegainedRecently: 0,
   realmOfMercuryEnabled: false,
   numEnemiesInsideRealmOfMercury: 0,
   baptismOfPurityEnabled: false,

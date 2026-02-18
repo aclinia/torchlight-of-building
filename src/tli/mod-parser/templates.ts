@@ -859,6 +859,14 @@ export const allParsers = [
     })),
   ]),
   t(
+    "{value:+dec%} additional attack speed for each time you have regained in the last {dur:int}s. stacks up to {limit:int} time(s)",
+  ).output((c) => ({
+    type: "AspdPct",
+    value: c.value,
+    addn: true,
+    per: { stackable: "num_times_regained_recently", limit: c.limit },
+  })),
+  t(
     "{value:+dec%} additional attack speed when only {count:int} enemies are nearby",
   ).output((c) => ({
     type: "AspdPct",

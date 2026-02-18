@@ -162,6 +162,7 @@ export const Stackables = [
   "pure_heart",
   "seconds_with_elite_nearby",
   "num_ice_puppet_stacks",
+  "num_times_regained_recently",
   // defenses
   "armor",
   "evasion",

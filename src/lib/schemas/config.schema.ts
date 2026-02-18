@@ -105,6 +105,7 @@ export const ConfigurationPageSchema = z
       .number()
       .optional()
       .catch(d.numBerserkingBladeBuffStacks),
+    numTimesRegainedRecently: z.number().catch(d.numTimesRegainedRecently),
     realmOfMercuryEnabled: z.boolean().catch(d.realmOfMercuryEnabled),
     numEnemiesInsideRealmOfMercury: z
       .number()

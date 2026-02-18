@@ -1017,6 +1017,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           />
 
           <label className="text-right text-zinc-50">
+            Times Regained Recently
+            <InfoTooltip text="Number of times you have Regained in the last 8s. Defaults to 0." />
+          </label>
+          <NumberInput
+            value={config.numTimesRegainedRecently}
+            onChange={(v) => onUpdate({ numTimesRegainedRecently: v ?? 0 })}
+            min={0}
+          />
+
+          <label className="text-right text-zinc-50">
             Berserking Blade Buff Stacks
             <InfoTooltip text="Defaults to max stacks" />
           </label>

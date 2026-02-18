@@ -1817,6 +1817,7 @@ const resolveModsForOffenseSkill = (
     normalize("frostbite_rating", config.enemyFrostbittenPoints ?? 0);
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
     normalize("num_ice_puppet_stacks", config.numIcePuppetStacks ?? 0);
+    normalize("num_times_regained_recently", config.numTimesRegainedRecently);
   };
   const pushStatNorms = (): void => {
     const totalMainStats = calculateTotalMainStats(skill, stats);

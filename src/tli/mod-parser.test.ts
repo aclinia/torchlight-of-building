@@ -4189,3 +4189,17 @@ test("parse energy shield charge cannot be interrupted", () => {
   const result = parseMod("Energy Shield charge cannot be interrupted");
   expect(result).toEqual([]);
 });
+
+test("parse additional attack speed per regain", () => {
+  const result = parseMod(
+    "+2% additional Attack Speed for each time you have Regained in the last 8s. Stacks up to 4 time(s)",
+  );
+  expect(result).toEqual([
+    {
+      type: "AspdPct",
+      value: 2,
+      addn: true,
+      per: { stackable: "num_times_regained_recently", limit: 4 },
+    },
+  ]);
+});
