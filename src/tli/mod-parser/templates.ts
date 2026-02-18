@@ -1014,6 +1014,10 @@ export const allParsers = [
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  t("{value:+dec%} additional damage for main-hand weapons").output((c) => ({
+    type: "AddnMainHandDmgPct",
+    value: c.value,
+  })),
   t
     .multi([
       t("{value:+int} shadow quantity"),
@@ -2226,6 +2230,15 @@ export const allParsers = [
   t("{value:+int} to max feline stimulant stacks").output((c) => ({
     type: "MaxFelineStimulantStacks",
     value: c.value,
+  })),
+  t(
+    "{value:+dec%} additional attack damage when having feline stimulants",
+  ).output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "attack",
+    addn: true,
+    condThreshold: { target: "feline_stimulant", comparator: "gt", value: 0 },
   })),
   t("{value:+dec%} additional damage taken when Pure Heart is active").output(
     (c) => ({ type: "DmgTakenPct", value: c.value }),

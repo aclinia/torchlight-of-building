@@ -4286,3 +4286,23 @@ test("parse attack and cast speed when holding a shield", () => {
     { type: "CspdPct", value: 12, addn: false, cond: "holding_shield" },
   ]);
 });
+
+test("parse additional damage for main-hand weapons", () => {
+  const result = parseMod("+30% additional damage for Main-Hand Weapons");
+  expect(result).toEqual([{ type: "AddnMainHandDmgPct", value: 30 }]);
+});
+
+test("parse additional attack damage when having feline stimulants", () => {
+  const result = parseMod(
+    "+8% additional Attack Damage when having Feline Stimulants",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 8,
+      dmgModType: "attack",
+      addn: true,
+      condThreshold: { target: "feline_stimulant", comparator: "gt", value: 0 },
+    },
+  ]);
+});
