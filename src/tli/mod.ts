@@ -165,6 +165,7 @@ export const Stackables = [
   "num_ice_puppet_stacks",
   "num_times_regained_recently",
   "pct_life_lost",
+  "feline_stimulant",
   // defenses
   "armor",
   "evasion",

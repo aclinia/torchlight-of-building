@@ -507,6 +507,21 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             </>
           )}
 
+          {hasPactspirit("Kitty Express", loadout) && (
+            <>
+              <label className="text-right text-zinc-50">
+                Feline Stimulant Stacks
+                <InfoTooltip text="Kitty Express pactspirit buff. Defaults to max stacks 3." />
+              </label>
+              <NumberInput
+                value={config.numFelineStimulant}
+                onChange={(v) => onUpdate({ numFelineStimulant: v })}
+                min={0}
+                max={3}
+              />
+            </>
+          )}
+
           <label className="text-right text-zinc-50">Enemy Numbed</label>
           <input
             type="checkbox"

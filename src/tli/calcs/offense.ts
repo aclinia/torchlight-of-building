@@ -481,6 +481,17 @@ const calculatePactspiritMods = (
     });
   }
 
+  if (hasPactspirit("Kitty Express", loadout)) {
+    mods.push({
+      type: "DmgPct",
+      value: 5,
+      dmgModType: "attack",
+      per: { stackable: "feline_stimulant", multiplicative: true, limit: 3 },
+      addn: true,
+      src: "Feline Stimulant",
+    });
+  }
+
   if (hasPactspirit("Squiddle", loadout)) {
     const squidNovaEffMult = calcEffMult(loadoutMods, "SquidnovaEffPct");
     const squidNovaDmgPctValue = 16 * squidNovaEffMult;
@@ -1819,6 +1830,7 @@ const resolveModsForOffenseSkill = (
     normalize("num_ice_puppet_stacks", config.numIcePuppetStacks ?? 0);
     normalize("num_times_regained_recently", config.numTimesRegainedRecently);
     normalize("pct_life_lost", 100 - config.currentLifePct);
+    normalize("feline_stimulant", config.numFelineStimulant ?? 3);
   };
   const pushStatNorms = (): void => {
     const totalMainStats = calculateTotalMainStats(skill, stats);

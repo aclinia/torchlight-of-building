@@ -233,6 +233,9 @@ export interface Configuration {
   // default to 1
   numActiveTangles: number;
 
+  // default to 3
+  numFelineStimulant?: number;
+
   // custom affix lines for injecting arbitrary mods
   customAffixLines?: string[];
 }
@@ -324,6 +327,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   twistedSpacetimeStacks: undefined,
   numIcePuppetStacks: undefined,
   numActiveTangles: 1,
+  numFelineStimulant: undefined,
   customAffixLines: undefined,
 };
 
