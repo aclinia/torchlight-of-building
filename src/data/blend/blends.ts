@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-blend-data.ts
 import type { Blend } from "./types";
 
 export const Blends: readonly Blend[] = [

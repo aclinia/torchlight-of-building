@@ -14,846 +14,856 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:56
+#: src/data/translate/talents.ts:76
 msgid "Acquaintance"
 msgstr "Acquaintance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:5
+#: src/data/translate/talents.ts:7
 msgid "Affliction"
 msgstr "Affliction"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:99
+#: src/data/translate/talents.ts:102
 msgid "Alchemist"
 msgstr "Alchemist"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:147
+#: src/data/translate/talents.ts:150
 msgid "Ambition"
 msgstr "Ambition"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:142
+#: src/data/translate/talents.ts:145
 msgid "Arcane"
 msgstr "Arcane"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:72
+#: src/data/translate/talents.ts:75
 msgid "Arcanist"
 msgstr "Arcanist"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:104
+#: src/data/translate/talents.ts:107
 msgid "Artisan"
 msgstr "Artisan"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:45
+#: src/data/translate/talents.ts:48
 msgid "Assassin"
 msgstr "Assassin"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:164
+#: src/data/translate/talents.ts:167
 msgid "Automatic Upgrade"
 msgstr "Automatic Upgrade"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:83
+#: src/data/translate/talents.ts:86
 msgid "Barrier of Radiance"
 msgstr "Barrier of Radiance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:100
+#: src/data/translate/talents.ts:103
 msgid "Battle Trumpet"
 msgstr "Battle Trumpet"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:66
+#: src/data/translate/talents.ts:69
 msgid "Beacon"
 msgstr "Beacon"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:22
+#: src/data/translate/talents.ts:25
 msgid "Beyond Cure"
 msgstr "Beyond Cure"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:50
+#: src/data/translate/talents.ts:53
 msgid "Bladerunner"
 msgstr "Bladerunner"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:148
+#: src/data/translate/talents.ts:151
 msgid "Blunt"
 msgstr "Blunt"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:110
+#: src/data/translate/talents.ts:113
 msgid "Boss"
 msgstr "Boss"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:32
+#: src/data/translate/talents.ts:35
 msgid "Broken Dream"
 msgstr "Broken Dream"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:169
+#: src/data/translate/talents.ts:172
 msgid "Brutality"
 msgstr "Brutality"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:84
+#: src/data/translate/talents.ts:87
 msgid "Bunch"
 msgstr "Bunch"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:111
+#: src/data/translate/talents.ts:114
 msgid "Burning Aggression"
 msgstr "Burning Aggression"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:67
+#: src/data/translate/talents.ts:70
 msgid "Burning Touch"
 msgstr "Burning Touch"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:159
+#: src/data/translate/talents.ts:162
 msgid "Centralize"
 msgstr "Centralize"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:68
+#: src/data/translate/talents.ts:71
 msgid "Chilly"
 msgstr "Chilly"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:61
+#: src/data/translate/talents.ts:64
 msgid "Close Range Fire"
 msgstr "Close Range Fire"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:105
+#: src/data/translate/talents.ts:108
 msgid "Co-resonance"
 msgstr "Co-resonance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:149
+#: src/data/translate/talents.ts:152
 msgid "Cohesion"
 msgstr "Cohesion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:46
+#: src/data/translate/talents.ts:49
 msgid "Conductive"
 msgstr "Conductive"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:57
+#: src/data/translate/talents.ts:59
 msgid "Cultivation"
 msgstr "Cultivation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:27
+#: src/data/translate/talents.ts:30
 msgid "Daze"
 msgstr "Daze"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:6
+#: src/data/translate/talents.ts:8
 msgid "Deceiver's Might"
 msgstr "Deceiver's Might"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:165
+#: src/data/translate/talents.ts:168
 msgid "Defensiveness"
 msgstr "Defensiveness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:150
+#: src/data/translate/talents.ts:153
 msgid "Determined"
 msgstr "Determined"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:23
+#: src/data/translate/talents.ts:26
 msgid "Dirt"
 msgstr "Dirt"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:28
+#: src/data/translate/talents.ts:31
 msgid "Dirty Tricks"
 msgstr "Dirty Tricks"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:55
+#: src/data/translate/talents.ts:58
 msgid "Druid"
 msgstr "Druid"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:33
+#: src/data/translate/talents.ts:36
 msgid "Dying Dragon"
 msgstr "Dying Dragon"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:77
+#: src/data/translate/talents.ts:80
 msgid "Elementalist"
 msgstr "Elementalist"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:120
+#: src/data/translate/talents.ts:123
 msgid "Elimination"
 msgstr "Elimination"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:132
+#: src/data/translate/talents.ts:135
 msgid "Ember Armor"
 msgstr "Ember Armor"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:101
+#: src/data/translate/talents.ts:104
 msgid "Empower"
 msgstr "Empower"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:34
+#: src/data/translate/talents.ts:37
 msgid "End of War"
 msgstr "End of War"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:160
+#: src/data/translate/talents.ts:163
 msgid "Endless Fervor"
 msgstr "Endless Fervor"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:62
+#: src/data/translate/talents.ts:65
 msgid "Euphoria"
 msgstr "Euphoria"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:88
+#: src/data/translate/talents.ts:91
 msgid "Extreme Coldness"
 msgstr "Extreme Coldness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:161
+#: src/data/translate/talents.ts:164
 msgid "Falling Leaves"
 msgstr "Falling Leaves"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:35
+#: src/data/translate/talents.ts:38
 msgid "Falling Stars"
 msgstr "Falling Stars"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:154
+#: src/data/translate/talents.ts:157
 msgid "Fluke"
 msgstr "Fluke"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:78
+#: src/data/translate/talents.ts:81
 msgid "Focus"
 msgstr "Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:127
+#: src/data/translate/talents.ts:130
 msgid "Focused Strike"
 msgstr "Focused Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:7
+#: src/data/translate/talents.ts:9
 msgid "Forbidden Power"
 msgstr "Forbidden Power"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:133
+#: src/data/translate/talents.ts:136
 msgid "Formless"
 msgstr "Formless"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:89
+#: src/data/translate/talents.ts:92
 msgid "Frostbitten"
 msgstr "Frostbitten"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:90
+#: src/data/translate/talents.ts:93
 msgid "Frozen Lotus"
 msgstr "Frozen Lotus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:137
+#: src/data/translate/talents.ts:140
 msgid "Fueling"
 msgstr "Fueling"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:166
+#: src/data/translate/talents.ts:169
 msgid "Full Defense"
 msgstr "Full Defense"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:73
+#: src/data/translate/talents.ts:60
 msgid "Full Load"
 msgstr "Full Load"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:63
+#: src/data/translate/talents.ts:66
 msgid "Gale"
 msgstr "Gale"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:92
+#: src/data/translate/talents.ts:95
 msgid "God of Machines"
 msgstr "God of Machines"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:119
+#: src/data/translate/talents.ts:122
 msgid "God of Might"
 msgstr "God of Might"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:146
+#: src/data/translate/talents.ts:149
 msgid "God of War"
 msgstr "God of War"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:4
+#: src/data/translate/talents.ts:6
 msgid "Goddess of Deception"
 msgstr "Goddess of Deception"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:38
+#: src/data/translate/talents.ts:41
 msgid "Goddess of Hunting"
 msgstr "Goddess of Hunting"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:65
+#: src/data/translate/talents.ts:68
 msgid "Goddess of Knowledge"
 msgstr "Goddess of Knowledge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:151
+#: src/data/translate/talents.ts:154
 msgid "Gravity"
 msgstr "Gravity"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:121
+#: src/data/translate/talents.ts:124
 msgid "Great Strength"
 msgstr "Great Strength"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:170
+#: src/data/translate/talents.ts:173
 msgid "Hair-trigger"
 msgstr "Hair-trigger"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:106
+#: src/data/translate/talents.ts:109
 msgid "Heat Up"
 msgstr "Heat Up"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:122
+#: src/data/translate/talents.ts:125
 msgid "Hidden Mastery"
 msgstr "Hidden Mastery"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:17
+#: src/data/translate/talents.ts:20
 msgid "Holiness"
 msgstr "Holiness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:155
+#: src/data/translate/talents.ts:158
 msgid "Impending"
 msgstr "Impending"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:39
+#: src/data/translate/talents.ts:42
 msgid "Impermanence"
 msgstr "Impermanence"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:12
+#: src/data/translate/talents.ts:15
 msgid "Indifference"
 msgstr "Indifference"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:69
+#: src/data/translate/talents.ts:72
 msgid "Insight"
 msgstr "Insight"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:171
+#: src/data/translate/talents.ts:174
 msgid "Instant Smash"
 msgstr "Instant Smash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:93
+#: src/data/translate/talents.ts:96
 msgid "Isomorphic Arms"
 msgstr "Isomorphic Arms"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:51
+#: src/data/translate/talents.ts:54
 msgid "Joined Force"
 msgstr "Joined Force"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:123
+#: src/data/translate/talents.ts:126
 msgid "Judgment"
 msgstr "Judgment"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:156
+#: src/data/translate/talents.ts:159
 msgid "Keep It Up"
 msgstr "Keep It Up"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:107
+#: src/data/translate/talents.ts:110
 msgid "Kinetic Conversion"
 msgstr "Kinetic Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:115
+#: src/data/translate/talents.ts:118
 msgid "Knowledgeable"
 msgstr "Knowledgeable"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:167
+#: src/data/translate/talents.ts:170
 msgid "Last Stand"
 msgstr "Last Stand"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:11
+#: src/data/translate/talents.ts:14
 msgid "Lich"
 msgstr "Lich"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:143
+#: src/data/translate/talents.ts:146
 msgid "Life Path"
 msgstr "Life Path"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:109
+#: src/data/translate/talents.ts:112
 msgid "Machinist"
 msgstr "Machinist"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:82
+#: src/data/translate/talents.ts:85
 msgid "Magister"
 msgstr "Magister"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:74
+#: src/data/translate/talents.ts:77
 msgid "Mana"
 msgstr "Mana"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:60
+#: src/data/translate/talents.ts:63
 msgid "Marksman"
 msgstr "Marksman"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:64
+#: src/data/translate/talents.ts:67
 msgid "Master Escapist"
 msgstr "Master Escapist"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:94
+#: src/data/translate/talents.ts:97
 msgid "Mighty Guard"
 msgstr "Mighty Guard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:91
+#: src/data/translate/talents.ts:94
 msgid "Mind Blade"
 msgstr "Mind Blade"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:75
+#: src/data/translate/talents.ts:78
 msgid "Mind Focus"
 msgstr "Mind Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:8
+#: src/data/translate/talents.ts:10
 msgid "Mixture"
 msgstr "Mixture"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:124
+#: src/data/translate/talents.ts:127
 msgid "Momentum"
 msgstr "Momentum"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:18
+#: src/data/translate/talents.ts:21
 msgid "More With Less"
 msgstr "More With Less"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:31
+#: src/data/translate/talents.ts:34
 msgid "New God"
 msgstr "New God"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:144
-msgid "No Lose Ends"
-msgstr "No Lose Ends"
+#: src/data/translate/talents.ts:147
+msgid "No Loose Ends"
+msgstr "No Loose Ends"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:13
+#: src/data/translate/talents.ts:144
+#~ msgid "No Lose Ends"
+#~ msgstr "No Lose Ends"
+
+#. js-lingui-explicit-id
+#: src/data/translate/talents.ts:16
 msgid "Off The Beaten Track"
 msgstr "Off The Beaten Track"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:126
+#: src/data/translate/talents.ts:129
 msgid "Onslaughter"
 msgstr "Onslaughter"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:172
+#: src/data/translate/talents.ts:175
 msgid "Open Wounds"
 msgstr "Open Wounds"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:95
+#: src/data/translate/talents.ts:98
 msgid "Orders"
 msgstr "Orders"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:96
+#: src/data/translate/talents.ts:99
 msgid "Overly Modified"
 msgstr "Overly Modified"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:116
+#: src/data/translate/talents.ts:119
 msgid "Panacea"
 msgstr "Panacea"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:70
+#: src/data/translate/talents.ts:73
 msgid "Peculiar Vibe"
 msgstr "Peculiar Vibe"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:79
+#: src/data/translate/talents.ts:82
 msgid "Penetrating"
 msgstr "Penetrating"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:40
+#: src/data/translate/talents.ts:43
 msgid "Perception"
 msgstr "Perception"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:9
+#: src/data/translate/talents.ts:11
 msgid "Plague"
 msgstr "Plague"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:85
+#: src/data/translate/talents.ts:88
 msgid "Play Safe"
 msgstr "Play Safe"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:58
+#: src/data/translate/talents.ts:61
 msgid "Poisoned Relief"
 msgstr "Poisoned Relief"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:52
+#: src/data/translate/talents.ts:55
 msgid "Preemptive Strike"
 msgstr "Preemptive Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:76
+#: src/data/translate/talents.ts:79
 msgid "Preparation"
 msgstr "Preparation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:87
+#: src/data/translate/talents.ts:90
 msgid "Prophet"
 msgstr "Prophet"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:16
+#: src/data/translate/talents.ts:19
 msgid "Psychic"
 msgstr "Psychic"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:47
+#: src/data/translate/talents.ts:50
 msgid "Queer Angle"
 msgstr "Queer Angle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:53
+#: src/data/translate/talents.ts:56
 msgid "Quick Advancement"
 msgstr "Quick Advancement"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:80
+#: src/data/translate/talents.ts:83
 msgid "Quick Ritual"
 msgstr "Quick Ritual"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:112
+#: src/data/translate/talents.ts:74
+msgid "Quick Wits"
+msgstr "Quick Wits"
+
+#. js-lingui-explicit-id
+#: src/data/translate/talents.ts:115
 msgid "Rally"
 msgstr "Rally"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:153
+#: src/data/translate/talents.ts:156
 msgid "Ranger"
 msgstr "Ranger"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:157
+#: src/data/translate/talents.ts:160
 msgid "Rapid Shots"
 msgstr "Rapid Shots"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:19
+#: src/data/translate/talents.ts:22
 msgid "Reap Purification"
 msgstr "Reap Purification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:59
+#: src/data/translate/talents.ts:62
 msgid "Rebirth"
 msgstr "Rebirth"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:117
+#: src/data/translate/talents.ts:120
 msgid "Reflection"
 msgstr "Reflection"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:118
+#: src/data/translate/talents.ts:121
 msgid "Resistance"
 msgstr "Resistance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:134
+#: src/data/translate/talents.ts:137
 msgid "Resolve"
 msgstr "Resolve"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:36
+#: src/data/translate/talents.ts:39
 msgid "Revealed Truth"
 msgstr "Revealed Truth"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:138
+#: src/data/translate/talents.ts:141
 msgid "Rock"
 msgstr "Rock"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:158
+#: src/data/translate/talents.ts:161
 msgid "Ronin"
 msgstr "Ronin"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:37
+#: src/data/translate/talents.ts:40
 msgid "Ruined City"
 msgstr "Ruined City"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:41
+#: src/data/translate/talents.ts:44
 msgid "Rushed"
 msgstr "Rushed"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:128
+#: src/data/translate/talents.ts:131
 msgid "Sacrifice"
 msgstr "Sacrifice"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:163
+#: src/data/translate/talents.ts:166
 msgid "Sentinel"
 msgstr "Sentinel"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:97
+#: src/data/translate/talents.ts:100
 msgid "Sentry"
 msgstr "Sentry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:168
+#: src/data/translate/talents.ts:171
 msgid "Shadowdancer"
 msgstr "Shadowdancer"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:21
+#: src/data/translate/talents.ts:24
 msgid "Shadowmaster"
 msgstr "Shadowmaster"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:108
+#: src/data/translate/talents.ts:111
 msgid "Shared Fate"
 msgstr "Shared Fate"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:86
+#: src/data/translate/talents.ts:89
 msgid "Shell"
 msgstr "Shell"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:152
+#: src/data/translate/talents.ts:155
 msgid "Shooting Arrows"
 msgstr "Shooting Arrows"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:98
+#: src/data/translate/talents.ts:101
 msgid "Shrink Back"
 msgstr "Shrink Back"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:102
+#: src/data/translate/talents.ts:105
 msgid "Source"
 msgstr "Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:14
+#: src/data/translate/talents.ts:17
 msgid "Stab In The Back"
 msgstr "Stab In The Back"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:139
+#: src/data/translate/talents.ts:142
 msgid "Starfire"
 msgstr "Starfire"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:135
+#: src/data/translate/talents.ts:138
 msgid "Static"
 msgstr "Static"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:42
+#: src/data/translate/talents.ts:45
 msgid "Steady Accumulation"
 msgstr "Steady Accumulation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:24
+#: src/data/translate/talents.ts:27
 msgid "Stealth Stab"
 msgstr "Stealth Stab"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:114
+#: src/data/translate/talents.ts:117
 msgid "Steel Vanguard"
 msgstr "Steel Vanguard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:10
+#: src/data/translate/talents.ts:12
 msgid "Subtle Impact"
 msgstr "Subtle Impact"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:145
+#: src/data/translate/talents.ts:148
 msgid "Survival Will"
 msgstr "Survival Will"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:129
+#: src/data/translate/talents.ts:132
 msgid "Sweep"
 msgstr "Sweep"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:103
+#: src/data/translate/talents.ts:106
 msgid "Talons of Abyss"
 msgstr "Talons of Abyss"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:125
+#: src/data/translate/talents.ts:128
 msgid "Tenacity"
 msgstr "Tenacity"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:131
+#: src/data/translate/talents.ts:134
 msgid "The Brave"
 msgstr "The Brave"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:43
+#: src/data/translate/talents.ts:46
 msgid "Third time's a charm"
 msgstr "Third time's a charm"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:44
+#: src/data/translate/talents.ts:47
 msgid "Three Birds with One Stone"
 msgstr "Three Birds with One Stone"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:48
+#: src/data/translate/talents.ts:51
 msgid "Thunderclap"
 msgstr "Thunderclap"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:162
+#: src/data/translate/talents.ts:165
 msgid "Tradeoff"
 msgstr "Tradeoff"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:49
+#: src/data/translate/talents.ts:52
 msgid "Transition"
 msgstr "Transition"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:81
+#: src/data/translate/talents.ts:84
 msgid "Translucent"
 msgstr "Translucent"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:140
+#: src/data/translate/talents.ts:143
 msgid "True Flame"
 msgstr "True Flame"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:25
+#: src/data/translate/talents.ts:28
 msgid "Twisted Belief"
 msgstr "Twisted Belief"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:113
+#: src/data/translate/talents.ts:116
 msgid "United Stand"
 msgstr "United Stand"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:29
+#: src/data/translate/talents.ts:32
 msgid "Verbal Abuse"
 msgstr "Verbal Abuse"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:30
+#: src/data/translate/talents.ts:33
 msgid "Vile"
 msgstr "Vile"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:54
+#: src/data/translate/talents.ts:57
 msgid "Waiting Attack"
 msgstr "Waiting Attack"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:15
+#: src/data/translate/talents.ts:18
 msgid "Ward"
 msgstr "Ward"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:26
+#: src/data/translate/talents.ts:29
 msgid "Warlock"
 msgstr "Warlock"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:136
+#: src/data/translate/talents.ts:139
 msgid "Warlord"
 msgstr "Warlord"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:141
+#: src/data/translate/talents.ts:144
 msgid "Warrior"
 msgstr "Warrior"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:130
+#: src/data/translate/talents.ts:133
 msgid "Well Matched"
 msgstr "Well Matched"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:20
+#: src/data/translate/talents.ts:23
 msgid "Windwalk"
 msgstr "Windwalk"
 
 #. js-lingui-explicit-id
 #: src/data/translate/talents.ts:71
-msgid "Winter"
-msgstr "Winter"
+#~ msgid "Winter"
+#~ msgstr "Winter"

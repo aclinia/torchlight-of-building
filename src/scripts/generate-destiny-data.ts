@@ -37,7 +37,9 @@ const extractDestinyData = (html: string): Destiny[] => {
 };
 
 const generateDataFile = (items: Destiny[]): string => {
-  return `import type { Destiny } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-destiny-data.ts
+import type { Destiny } from "./types";
 
 export const Destinies: readonly Destiny[] = ${JSON.stringify(items)};
 `;

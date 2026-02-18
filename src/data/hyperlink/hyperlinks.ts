@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hyperlink-data.ts
 export const Hyperlinks: Record<string, string> = {
   "Elemental Ailment": "Ignite, Frostbite, Freeze, and Numbed",
   Nearby: "Within 6m",

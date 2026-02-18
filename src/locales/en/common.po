@@ -154,12 +154,12 @@ msgid "Configuration"
 msgstr "Configuration"
 
 #. js-lingui-explicit-id
-#: src/components/talents/CoreTalentSelector.tsx:56
+#: src/components/talents/CoreTalentSelector.tsx:60
 msgid "Core Talent 1"
 msgstr "Core Talent 1"
 
 #. js-lingui-explicit-id
-#: src/components/talents/CoreTalentSelector.tsx:63
+#: src/components/talents/CoreTalentSelector.tsx:67
 msgid "Core Talent 2"
 msgstr "Core Talent 2"
 
@@ -540,8 +540,8 @@ msgstr "Suffixes (3 max)"
 msgid "Sweet Dream Affix (1 max)"
 msgstr "Sweet Dream Affix (1 max)"
 
-#: src/components/talents/CoreTalentSelector.tsx:86
-#: src/components/talents/CoreTalentSelector.tsx:98
+#: src/components/talents/CoreTalentSelector.tsx:90
+#: src/components/talents/CoreTalentSelector.tsx:102
 msgid "Core Talents"
 msgstr "Core Talents"
 

@@ -1123,7 +1123,9 @@ const generateActiveSkillFile = (
   constName: string,
   skills: BaseActiveSkill[],
 ): string => {
-  return `import type { BaseActiveSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseActiveSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseActiveSkill[];
 `;
@@ -1133,7 +1135,9 @@ const generateBaseSkillFile = (
   constName: string,
   skills: BaseSkill[],
 ): string => {
-  return `import type { BaseSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseSkill[];
 `;
@@ -1143,7 +1147,9 @@ const generatePassiveSkillFile = (
   constName: string,
   skills: BasePassiveSkill[],
 ): string => {
-  return `import type { BasePassiveSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BasePassiveSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BasePassiveSkill[];
 `;
@@ -1153,7 +1159,9 @@ const generateSupportSkillFile = (
   constName: string,
   skills: BaseSupportSkill[],
 ): string => {
-  return `import type { BaseSupportSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseSupportSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseSupportSkill[];
 `;
@@ -1163,7 +1171,9 @@ const generateMagnificentSupportSkillFile = (
   constName: string,
   skills: BaseMagnificentSupportSkill[],
 ): string => {
-  return `import type { BaseMagnificentSupportSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseMagnificentSupportSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseMagnificentSupportSkill[];
 `;
@@ -1173,7 +1183,9 @@ const generateNobleSupportSkillFile = (
   constName: string,
   skills: BaseNobleSupportSkill[],
 ): string => {
-  return `import type { BaseNobleSupportSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseNobleSupportSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseNobleSupportSkill[];
 `;
@@ -1183,7 +1195,9 @@ const generateActivationMediumSkillFile = (
   constName: string,
   skills: BaseActivationMediumSkill[],
 ): string => {
-  return `import type { BaseActivationMediumSkill } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+import type { BaseActivationMediumSkill } from "./types";
 
 export const ${constName} = ${toTypeScript(skills)} as const satisfies readonly BaseActivationMediumSkill[];
 `;

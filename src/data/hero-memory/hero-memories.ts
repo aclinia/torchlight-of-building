@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hero-memory-data.ts
 import type { HeroMemory } from "./types";
 
 export const HeroMemories: readonly HeroMemory[] = [

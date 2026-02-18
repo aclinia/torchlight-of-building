@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-destiny-data.ts
 import type { Destiny } from "./types";
 
 export const Destinies: readonly Destiny[] = [
@@ -947,5 +949,10 @@ export const Destinies: readonly Destiny[] = [
     name: "Wilt Damage Mitigation",
     affix: "(-36--30)% Wilt Damage taken",
   },
-  { type: "Undetermined Fate", name: "", affix: "Undetermined Fate" },
+  {
+    type: "Undetermined Fate",
+    name: "",
+    affix:
+      "Can be installed in an Undetermined Fate Slot to replace the original effects and unlock several additional Fate Slots (up to 5).",
+  },
 ];

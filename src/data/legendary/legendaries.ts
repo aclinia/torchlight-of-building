@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-legendary-data.ts
 import type { Legendary } from "./types";
 
 export const Legendaries: readonly Legendary[] = [

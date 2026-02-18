@@ -118,7 +118,9 @@ const generateTalentPO = async (): Promise<void> => {
 
 const generateTalentTS = async () => {
   const talentSet = getTalentSet();
-  const text = `import { i18n } from "@lingui/core";
+  const text = `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-talent-translate.ts
+import { i18n } from "@lingui/core";
 
 export const talentNames = [
 ${[...talentSet].map((name: string) => `  i18n._("${name}")`).join(",\n")},

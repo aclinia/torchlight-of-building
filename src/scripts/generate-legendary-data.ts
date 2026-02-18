@@ -397,7 +397,9 @@ const applyOverrides = (legendaries: Legendary[]): Legendary[] => {
 };
 
 const generateDataFile = (items: Legendary[]): string => {
-  return `import type { Legendary } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-legendary-data.ts
+import type { Legendary } from "./types";
 
 export const Legendaries: readonly Legendary[] = ${JSON.stringify(items)};
 `;

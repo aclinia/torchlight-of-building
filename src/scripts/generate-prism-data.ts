@@ -66,7 +66,9 @@ const extractPrismData = (html: string): Prism[] => {
 };
 
 const generateDataFile = (items: Prism[]): string => {
-  return `import type { Prism } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-prism-data.ts
+import type { Prism } from "./types";
 
 export const Prisms: readonly Prism[] = ${JSON.stringify(items)};
 `;

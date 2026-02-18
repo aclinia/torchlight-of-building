@@ -208,7 +208,9 @@ const parseProfessionTree = async (
 };
 
 const generateDataFile = (trees: TalentTreeData[]): string => {
-  return `import type { TalentTreeData } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-talent-tree-data.ts
+import type { TalentTreeData } from "./types";
 
 export const TalentTrees: readonly TalentTreeData[] = ${JSON.stringify(trees)};
 `;

@@ -12,966 +12,966 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:125
+#: src/data/translate/hero.ts:127
 msgid "All In"
 msgstr "一鼓作气"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:113
+#: src/data/translate/hero.ts:115
 msgid "Amazing Friends"
 msgstr "厉害的朋友"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:54
+#: src/data/translate/hero.ts:56
 msgid "Ammo Expert"
 msgstr "弹药专家"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:136
+#: src/data/translate/hero.ts:138
 msgid "Anger"
 msgstr "怒火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:49
+#: src/data/translate/hero.ts:51
 msgid "Auto-Ingenuity Program"
 msgstr "妙想自动程式"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:107
+#: src/data/translate/hero.ts:109
 msgid "Banquet of Bliss"
 msgstr "极乐狂宴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:157
+#: src/data/translate/hero.ts:159
 msgid "Baptism of Purity"
 msgstr "纯净施洗"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:19
+#: src/data/translate/hero.ts:21
 msgid "Berserker Rehan: Anger (#1)"
 msgstr "怒火 狂人雷恩"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:20
+#: src/data/translate/hero.ts:22
 msgid "Berserker Rehan: Seething Silhouette (#2)"
 msgstr "怒影 狂人雷恩"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:182
+#: src/data/translate/hero.ts:184
 msgid "Blasphemer"
 msgstr "渎神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:35
+#: src/data/translate/hero.ts:37
 msgid "Blast Barrage"
 msgstr "爆风弹袭"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:32
+#: src/data/translate/hero.ts:34
 msgid "Blast Nova"
 msgstr "爆破新星"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:102
+#: src/data/translate/hero.ts:104
 msgid "Blooming Frost Flower"
 msgstr "冰花盛放"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:95
+#: src/data/translate/hero.ts:97
 msgid "Bone-piercing Heat"
 msgstr "刺骨灼心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:161
+#: src/data/translate/hero.ts:163
 msgid "Born to Cleanse"
 msgstr "无垢无我"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:159
+#: src/data/translate/hero.ts:161
 msgid "Boundless Sanctuary"
 msgstr "无疆净土"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:43
+#: src/data/translate/hero.ts:45
 msgid "Brainstorm"
 msgstr "思想风暴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:118
+#: src/data/translate/hero.ts:120
 msgid "Breeze's Whisper"
 msgstr "让清风吹拂"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:78
+#: src/data/translate/hero.ts:80
 msgid "Cat Dive"
 msgstr "猫猫俯冲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:77
+#: src/data/translate/hero.ts:79
 msgid "Cat's Punches"
 msgstr "猫爪连弹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:76
+#: src/data/translate/hero.ts:78
 msgid "Cat's Scratch"
 msgstr "猫爪无影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:75
+#: src/data/translate/hero.ts:77
 msgid "Cat's Vision"
 msgstr "猫眼视界"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:10
+#: src/data/translate/hero.ts:12
 msgid "Cateye Erika: Lightning Shadow (#2)"
 msgstr "电光猫影 猫眼艾瑞卡"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:11
+#: src/data/translate/hero.ts:13
 msgid "Cateye Erika: Vendetta's Sting (#3)"
 msgstr "寻仇之刺 猫眼艾瑞卡"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:9
+#: src/data/translate/hero.ts:11
 msgid "Cateye Erika: Wind Stalker (#1)"
 msgstr "疾风追猎 猫眼艾瑞卡"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:68
+#: src/data/translate/hero.ts:70
 msgid "Ceasefire"
 msgstr "止战之息"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:167
+#: src/data/translate/hero.ts:169
 msgid "Chantey of Sinking"
 msgstr "沉没一切的船歌"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:130
+#: src/data/translate/hero.ts:132
 msgid "Charge Calling"
 msgstr "冲锋征召"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:128
+#: src/data/translate/hero.ts:130
 msgid "Charge Forward"
 msgstr "冲锋陷阵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:84
+#: src/data/translate/hero.ts:86
 msgid "Charging Equation"
 msgstr "蓄电方程"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:158
+#: src/data/translate/hero.ts:160
 msgid "Cleanse Filth"
 msgstr "涤瑕荡秽"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:18
+#: src/data/translate/hero.ts:20
 msgid "Commander Moto: Charge Calling (#2)"
 msgstr "冲锋征召 指挥官莫托"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:17
+#: src/data/translate/hero.ts:19
 msgid "Commander Moto: Order Calling (#1)"
 msgstr "号令征召 指挥官莫托"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:52
+#: src/data/translate/hero.ts:54
 msgid "Contingency Inspiration Delivery"
 msgstr "应急灵感投递"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:39
+#: src/data/translate/hero.ts:41
 msgid "Creative Genius"
 msgstr "创想鬼才"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:56
+#: src/data/translate/hero.ts:58
 msgid "Crushing Gale Trigger"
 msgstr "裂风扳机"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:100
+#: src/data/translate/hero.ts:102
 msgid "Dance of Frost"
 msgstr "霜染舞步"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:34
+#: src/data/translate/hero.ts:36
 msgid "Dangerous Runaway"
 msgstr "危险逃亡"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:61
+#: src/data/translate/hero.ts:63
 msgid "Dart Shot"
 msgstr "突进射击"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:80
+#: src/data/translate/hero.ts:82
 msgid "Dazzling Lightning"
 msgstr "电光闪闪"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:98
+#: src/data/translate/hero.ts:100
 msgid "Deepfreeze"
 msgstr "雪上加霜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:65
+#: src/data/translate/hero.ts:67
 msgid "Desperate Measure"
 msgstr "孤注一掷"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:154
+#: src/data/translate/hero.ts:156
 msgid "Desperation"
 msgstr "铤而走险"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:184
+#: src/data/translate/hero.ts:186
 msgid "Disgraced Minister"
 msgstr "玷辱孤臣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:153
+#: src/data/translate/hero.ts:155
 msgid "Divine Intervention"
 msgstr "天降神兵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:172
+#: src/data/translate/hero.ts:174
 msgid "Divine Realm Power"
 msgstr "神域威能"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:174
+#: src/data/translate/hero.ts:176
 msgid "Divine Spirit"
 msgstr "圣者神行"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:7
+#: src/data/translate/hero.ts:9
 msgid "Divineshot Carino: Lethal Flash (#2)"
 msgstr "至暗掠影 圣枪卡里诺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:6
+#: src/data/translate/hero.ts:8
 msgid "Divineshot Carino: Ranger of Glory (#1)"
 msgstr "荣光游侠 圣枪卡里诺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:8
+#: src/data/translate/hero.ts:10
 msgid "Divineshot Carino: Zealot of War (#3)"
 msgstr "战火狂徒 圣枪卡里诺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:170
+#: src/data/translate/hero.ts:172
 msgid "Divinity"
 msgstr "神权"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:108
+#: src/data/translate/hero.ts:110
 msgid "Dress Licker"
 msgstr "裙下之臣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:191
+#: src/data/translate/hero.ts:193
 msgid "Eeeendless Mana"
 msgstr "去码头整点蓝条"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:81
+#: src/data/translate/hero.ts:83
 msgid "Electroplated Motif"
 msgstr "电镀狸纹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:110
+#: src/data/translate/hero.ts:112
 msgid "Embrace the World"
 msgstr "拥抱世界吧"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:70
+#: src/data/translate/hero.ts:72
 msgid "Endless Frenzy"
 msgstr "狂战无止"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:4
+#: src/data/translate/hero.ts:6
 msgid "Escapist Bing: Blast Nova (#1)"
 msgstr "爆破新星 逃脱者宾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:5
+#: src/data/translate/hero.ts:7
 msgid "Escapist Bing: Creative Genius (#2)"
 msgstr "创想鬼才 逃脱者宾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:135
+#: src/data/translate/hero.ts:137
 msgid "Essential Speed"
 msgstr "兵贵神速"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:71
+#: src/data/translate/hero.ts:73
 msgid "Eternal Flames"
 msgstr "战火永燃"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:62
+#: src/data/translate/hero.ts:64
 msgid "Evil Ouroboros"
 msgstr "衔尾恶蛇"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:187
+#: src/data/translate/hero.ts:189
 msgid "Extreme Desecration"
 msgstr "亵渎已极"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:69
+#: src/data/translate/hero.ts:71
 msgid "Extreme Heat"
 msgstr "极端温差"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:180
+#: src/data/translate/hero.ts:182
 msgid "Farewell Prophecy"
 msgstr "告别预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:89
+#: src/data/translate/hero.ts:91
 msgid "Feline Fury"
 msgstr "猫不可忍"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:177
+#: src/data/translate/hero.ts:179
 msgid "Finale Prophecy"
 msgstr "终局预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:33
+#: src/data/translate/hero.ts:35
 msgid "Firepower Coverage"
 msgstr "火力覆盖"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:103
+#: src/data/translate/hero.ts:105
 msgid "Flame of Pleasure"
 msgstr "欢愉之焰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:105
+#: src/data/translate/hero.ts:107
 msgid "Flames of Desire"
 msgstr "无尽极刑"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:44
+#: src/data/translate/hero.ts:46
 msgid "Flash of Brilliance"
 msgstr "灵光跃迁"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:138
+#: src/data/translate/hero.ts:140
 msgid "Frenzy Furious"
 msgstr "怒不可遏"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:38
+#: src/data/translate/hero.ts:40
 msgid "Frenzy Hound"
 msgstr "狂暴猎犬"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:101
+#: src/data/translate/hero.ts:103
 msgid "Frigid Infusion"
 msgstr "苦寒浸染"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:97
+#: src/data/translate/hero.ts:99
 msgid "Frostbitten Heart"
 msgstr "冰结之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:14
+#: src/data/translate/hero.ts:16
 msgid "Frostfire Gemma: Flame of Pleasure (#3)"
 msgstr "欢愉之焰 冰焰吉玛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:13
+#: src/data/translate/hero.ts:15
 msgid "Frostfire Gemma: Frostbitten Heart (#2)"
 msgstr "冰结之心 冰焰吉玛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:12
+#: src/data/translate/hero.ts:14
 msgid "Frostfire Gemma: Ice-Fire Fusion (#1)"
 msgstr "冰火融合 冰焰吉玛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:134
+#: src/data/translate/hero.ts:136
 msgid "Fuel War with War"
 msgstr "以战养战"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:144
+#: src/data/translate/hero.ts:146
 msgid "Fury's Onslaught"
 msgstr "盛怒之下"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:99
+#: src/data/translate/hero.ts:101
 msgid "Glacial Night"
 msgstr "寒夜凝冰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:129
+#: src/data/translate/hero.ts:131
 msgid "Go for Broke"
 msgstr "破釜沉舟"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:104
+#: src/data/translate/hero.ts:106
 msgid "Groaning Echo"
 msgstr "绝望回声"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:115
+#: src/data/translate/hero.ts:117
 msgid "Grow With It"
 msgstr "和它一起长大"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:146
+#: src/data/translate/hero.ts:148
 msgid "Growing Anger"
 msgstr "孕育挥发"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:109
+#: src/data/translate/hero.ts:111
 msgid "Growing Breeze"
 msgstr "生长的微风"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:133
+#: src/data/translate/hero.ts:135
 msgid "Guerilla Tactics"
 msgstr "游击战术"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:119
+#: src/data/translate/hero.ts:121
 msgid "Happiest Reunion"
 msgstr "最喜悦的重逢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:74
+#: src/data/translate/hero.ts:76
 msgid "Have Fun"
 msgstr "嬉戏"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:132
+#: src/data/translate/hero.ts:134
 msgid "Heroic Sacrifice"
 msgstr "捐躯赴难"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:149
+#: src/data/translate/hero.ts:151
 msgid "High Court Chariot"
 msgstr "圣庭战车"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:51
+#: src/data/translate/hero.ts:53
 msgid "Hyper-Resonance Hypothesis"
 msgstr "超载共鸣猜想"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:145
+#: src/data/translate/hero.ts:147
 msgid "Hysteria"
 msgstr "歇斯底里"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:193
+#: src/data/translate/hero.ts:195
 msgid "I'm Out of Mana"
 msgstr "我没蓝了"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:192
+#: src/data/translate/hero.ts:194
 msgid "I'm an Illusion"
 msgstr "我成幻象了"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:96
+#: src/data/translate/hero.ts:98
 msgid "Ice to Blaze"
 msgstr "焚冰继火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:92
+#: src/data/translate/hero.ts:94
 msgid "Ice-Fire Embrace"
 msgstr "冰火相拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:91
+#: src/data/translate/hero.ts:93
 msgid "Ice-Fire Fusion"
 msgstr "冰火融合"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:94
+#: src/data/translate/hero.ts:96
 msgid "Ice-Fire Radiance"
 msgstr "冰火辉映"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:166
+#: src/data/translate/hero.ts:168
 msgid "Idyll of the Tide"
 msgstr "海潮的牧歌"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:155
+#: src/data/translate/hero.ts:157
 msgid "Improvision"
 msgstr "临机制变"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:173
+#: src/data/translate/hero.ts:175
 msgid "Incarnation"
 msgstr "化身降身"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:169
+#: src/data/translate/hero.ts:171
 msgid "Incarnation of the Gods"
 msgstr "众神之化身"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:67
+#: src/data/translate/hero.ts:69
 msgid "Incinerated Glory"
 msgstr "焚尽荣光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:106
+#: src/data/translate/hero.ts:108
 msgid "Infernal Damnation"
 msgstr "狱火沉沦"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:48
+#: src/data/translate/hero.ts:50
 msgid "Ingenious Chaos Principle"
 msgstr "妙想熵增法则"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:40
+#: src/data/translate/hero.ts:42
 msgid "Inspiration Overflow"
 msgstr "灵感狂潮"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:73
+#: src/data/translate/hero.ts:75
 msgid "Interest"
 msgstr "游兴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:152
+#: src/data/translate/hero.ts:154
 msgid "Invulnerability"
 msgstr "刀枪不入"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:55
+#: src/data/translate/hero.ts:57
 msgid "Landslide"
 msgstr "倾泻"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:127
+#: src/data/translate/hero.ts:129
 msgid "Last Stand"
 msgstr "背水一战"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:47
+#: src/data/translate/hero.ts:49
 msgid "Law of Ingenuity"
 msgstr "妙手巧得定律"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:87
+#: src/data/translate/hero.ts:89
 msgid "Leisurely Stroll"
 msgstr "袖手悠游"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:59
+#: src/data/translate/hero.ts:61
 msgid "Lethal Flash"
 msgstr "至暗掠影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:63
+#: src/data/translate/hero.ts:65
 msgid "Lethal Interval"
 msgstr "危险间距"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:21
+#: src/data/translate/hero.ts:23
 msgid "Lightbringer Rosa: High Court Chariot (#1)"
 msgstr "圣庭战车 光曜罗莎"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:22
+#: src/data/translate/hero.ts:24
 msgid "Lightbringer Rosa: Unsullied Blade (#2)"
 msgstr "无垢之刃 光曜罗莎"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:79
+#: src/data/translate/hero.ts:81
 msgid "Lightning Shadow"
 msgstr "电光猫影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:190
+#: src/data/translate/hero.ts:192
 msgid "Make it Quick"
 msgstr "搞快点搞快点"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:64
+#: src/data/translate/hero.ts:66
 msgid "Malice Charge"
 msgstr "恶意入膛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:189
+#: src/data/translate/hero.ts:191
 msgid "Me and Myself"
 msgstr "咱俩真棒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:121
+#: src/data/translate/hero.ts:123
 msgid "Merging Stream"
 msgstr "汇入本源的河流"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:171
+#: src/data/translate/hero.ts:173
 msgid "Might Flow"
 msgstr "神力流转"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:41
+#: src/data/translate/hero.ts:43
 msgid "Mind Domain"
 msgstr "思维领域"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:90
+#: src/data/translate/hero.ts:92
 msgid "Mortal Gambit"
 msgstr "命悬一线"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:50
+#: src/data/translate/hero.ts:52
 msgid "Multi-Coupling Equation"
 msgstr "多元耦合方程"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:168
+#: src/data/translate/hero.ts:170
 msgid "Murmurs of the Distant Tide"
 msgstr "流向远方的汐语"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:57
+#: src/data/translate/hero.ts:59
 msgid "Never Stopping"
 msgstr "永不停歇"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:122
+#: src/data/translate/hero.ts:124
 msgid "Nurturing Breeze"
 msgstr "化身万物的暖风"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:186
+#: src/data/translate/hero.ts:188
 msgid "Onset of Depravity"
 msgstr "堕落之始"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:26
+#: src/data/translate/hero.ts:28
 msgid "Oracle Thea: Blasphemer (#3)"
 msgstr "渎神 神谕者希雅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:24
+#: src/data/translate/hero.ts:26
 msgid "Oracle Thea: Incarnation of The Gods (#1)"
 msgstr "众神之化身 神谕者希雅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:25
+#: src/data/translate/hero.ts:27
 msgid "Oracle Thea: Wisdom of The Gods (#2)"
 msgstr "众神之伟智 神谕者希雅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:123
+#: src/data/translate/hero.ts:125
 msgid "Order Calling"
 msgstr "号令征召"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:46
+#: src/data/translate/hero.ts:48
 msgid "Over-Shield Module"
 msgstr "超防护模组"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:36
+#: src/data/translate/hero.ts:38
 msgid "Phantom Delivery"
 msgstr "虚实投递"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:176
+#: src/data/translate/hero.ts:178
 msgid "Predicted Harvest"
 msgstr "丰收预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:179
+#: src/data/translate/hero.ts:181
 msgid "Predicted Hope"
 msgstr "希望预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:181
+#: src/data/translate/hero.ts:183
 msgid "Predicted Justice"
 msgstr "公正预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:178
+#: src/data/translate/hero.ts:180
 msgid "Predicted Reincarnation"
 msgstr "轮回预言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:37
+#: src/data/translate/hero.ts:39
 msgid "Radiation Effect"
 msgstr "辐射效应"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:148
+#: src/data/translate/hero.ts:150
 msgid "Rage Infusion"
 msgstr "斗气化形"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:140
+#: src/data/translate/hero.ts:142
 msgid "Rampaging"
 msgstr "尽情挥发"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:53
+#: src/data/translate/hero.ts:55
 msgid "Ranger of Glory"
 msgstr "荣光游侠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:93
+#: src/data/translate/hero.ts:95
 msgid "Restless Ice-Fire"
 msgstr "躁动冰火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:137
+#: src/data/translate/hero.ts:139
 msgid "Righteous Fury"
 msgstr "义愤填膺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:143
+#: src/data/translate/hero.ts:145
 msgid "Ritual of Offering"
 msgstr "献身仪典"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:114
+#: src/data/translate/hero.ts:116
 msgid "Run With the Wind"
 msgstr "和风一起奔跑"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:165
+#: src/data/translate/hero.ts:167
 msgid "Sea Foam Nocturne"
 msgstr "海沫的夜曲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:142
+#: src/data/translate/hero.ts:144
 msgid "Seething Silhouette"
 msgstr "怒影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:60
+#: src/data/translate/hero.ts:62
 msgid "Shadow Magazine"
 msgstr "掠影弹匣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:162
+#: src/data/translate/hero.ts:164
 msgid "Sing with the Tide"
 msgstr "与海潮同歌"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:112
+#: src/data/translate/hero.ts:114
 msgid "Socialite"
 msgstr "很多的朋友"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:197
+#: src/data/translate/hero.ts:199
 msgid "Spacetime Cutting"
 msgstr "时空切割"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:194
+#: src/data/translate/hero.ts:196
 msgid "Spacetime Elapse"
 msgstr "时空流逝"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:199
+#: src/data/translate/hero.ts:201
 msgid "Spacetime Expansion"
 msgstr "时空膨胀"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:188
+#: src/data/translate/hero.ts:190
 msgid "Spacetime Illusion"
 msgstr "时空幻象"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:198
+#: src/data/translate/hero.ts:200
 msgid "Spacetime Pause"
 msgstr "时空停滞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:195
+#: src/data/translate/hero.ts:197
 msgid "Spacetime Speed-up"
 msgstr "时空加速"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:196
+#: src/data/translate/hero.ts:198
 msgid "Spacetime Upheaval"
 msgstr "时空剧变"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:28
+#: src/data/translate/hero.ts:30
 msgid "Spacetime Witness Youga: Spacetime Elapse (#2)"
 msgstr "时空流逝 时空见证者尤加"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:27
+#: src/data/translate/hero.ts:29
 msgid "Spacetime Witness Youga: Spacetime Illusion (#1)"
 msgstr "时空幻象 时空见证者尤加"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:147
+#: src/data/translate/hero.ts:149
 msgid "Split Form"
 msgstr "分裂之形"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:111
+#: src/data/translate/hero.ts:113
 msgid "Struggle Free"
 msgstr "挣脱束缚吧"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:45
+#: src/data/translate/hero.ts:47
 msgid "Super Sonic Protocol"
 msgstr "超音速协议"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:88
+#: src/data/translate/hero.ts:90
 msgid "Swift Stalk"
 msgstr "疾影潜踪"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:83
+#: src/data/translate/hero.ts:85
 msgid "Swift as Lightning"
 msgstr "猫驰电掣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:185
+#: src/data/translate/hero.ts:187
 msgid "Tarnished Sage"
 msgstr "群贤蒙垢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:15
+#: src/data/translate/hero.ts:17
 msgid "The Forsaken Iris: Growing Breeze (#1)"
 msgstr "生长的微风 遗世魔灵伊瑞斯"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:16
+#: src/data/translate/hero.ts:18
 msgid "The Forsaken Iris: Vigilant Breeze (#2)"
 msgstr "守望的暖风 遗世魔灵伊瑞斯"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:23
+#: src/data/translate/hero.ts:25
 msgid "Tide Whisper Selena: Sing with the Tide"
 msgstr "与海潮同歌 汐语赛琳娜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:126
+#: src/data/translate/hero.ts:128
 msgid "Tough as Nails"
 msgstr "坚甲厉兵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:42
+#: src/data/translate/hero.ts:44
 msgid "Trouble Maker"
 msgstr "危机创造"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:139
+#: src/data/translate/hero.ts:141
 msgid "Tunnel Vision"
 msgstr "顾此失彼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:86
+#: src/data/translate/hero.ts:88
 msgid "Twinblade Onslaught"
 msgstr "双刃齐下"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:150
+#: src/data/translate/hero.ts:152
 msgid "Unbreakable Stand"
 msgstr "以一敌百"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:141
+#: src/data/translate/hero.ts:143
 msgid "Uncontrolled Anger"
 msgstr "暴怒原罪"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:163
+#: src/data/translate/hero.ts:165
 msgid "Undersea Ballad"
 msgstr "海面下的抒情曲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:183
+#: src/data/translate/hero.ts:185
 msgid "Unholy Baptism"
 msgstr "污秽洗礼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:131
+#: src/data/translate/hero.ts:133
 msgid "Unstoppable Wave"
 msgstr "前仆后继"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:156
+#: src/data/translate/hero.ts:158
 msgid "Unsullied Blade"
 msgstr "无垢之刃"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:160
+#: src/data/translate/hero.ts:162
 msgid "Utmost Devotion"
 msgstr "竭诚奉圣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:85
+#: src/data/translate/hero.ts:87
 msgid "Vendetta's Sting"
 msgstr "寻仇之刺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:124
+#: src/data/translate/hero.ts:126
 msgid "Veteran"
 msgstr "百战老兵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:116
+#: src/data/translate/hero.ts:118
 msgid "Vigilant Breeze"
 msgstr "守望的暖风"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:120
+#: src/data/translate/hero.ts:122
 msgid "Warmest Vigilance"
 msgstr "最温暖的守望"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:164
+#: src/data/translate/hero.ts:166
 msgid "Wave Aria"
 msgstr "水波上的咏叹调"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:58
+#: src/data/translate/hero.ts:60
 msgid "Well Prepared"
 msgstr "有备无患"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:151
+#: src/data/translate/hero.ts:153
 msgid "Whirlwind Advance"
 msgstr "狂飙突进"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:117
+#: src/data/translate/hero.ts:119
 msgid "Whirlwind Tango"
 msgstr "同烈风共舞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:82
+#: src/data/translate/hero.ts:84
 msgid "Wild Lightning"
 msgstr "野性电光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:72
+#: src/data/translate/hero.ts:74
 msgid "Wind Stalker"
 msgstr "疾风追猎"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:175
+#: src/data/translate/hero.ts:177
 msgid "Wisdom of The Gods"
 msgstr "众神之伟智"
 
 #. js-lingui-explicit-id
-#: src/data/translate/hero.ts:66
+#: src/data/translate/hero.ts:68
 msgid "Zealot of War"
 msgstr "战火狂徒"

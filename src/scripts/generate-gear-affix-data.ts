@@ -398,7 +398,9 @@ const generateEquipmentAffixFile = (
 ): string => {
   const constName = fileKeyToConstName(fileKey);
 
-  return `import type { BaseGearAffix } from "../../tli/gear-data-types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-gear-affix-data.ts
+import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const ${constName}: readonly BaseGearAffix[] = ${JSON.stringify(affixes)};
 `;
@@ -416,7 +418,9 @@ const generateAllAffixesFile = (fileKeys: string[]): string => {
     .map((key) => `  ...${fileKeyToConstName(key)},`)
     .join("\n");
 
-  return `${imports}
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-gear-affix-data.ts
+${imports}
 
 export const ALL_GEAR_AFFIXES = [
 ${arraySpread}

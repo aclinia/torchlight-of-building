@@ -122,7 +122,9 @@ const generateTranslateNames = async (
 
 const generateSkillTS = async () => {
   const skillSet = getSkillSet();
-  const text = `import { i18n } from "@lingui/core";
+  const text = `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-translate.ts
+import { i18n } from "@lingui/core";
 
 export const skillNames = [
 ${[...skillSet].map((name: string) => `  i18n._("${name}")`).join(",\n")},

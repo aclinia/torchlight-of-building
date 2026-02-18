@@ -111,7 +111,9 @@ const extractCoreTalents = ($: cheerio.CheerioAPI): BaseCoreTalent[] => {
 };
 
 const generateDataFile = (talents: BaseCoreTalent[]): string => {
-  return `import type { BaseCoreTalent } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-core-talent-data.ts
+import type { BaseCoreTalent } from "./types";
 
 export const CoreTalents = ${JSON.stringify(talents)} as const satisfies readonly BaseCoreTalent[];
 `;

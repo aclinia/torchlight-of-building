@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-gear-affix-data.ts
 import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const ONE_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] =

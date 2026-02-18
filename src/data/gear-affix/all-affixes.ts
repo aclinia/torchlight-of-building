@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-gear-affix-data.ts
 import { BELT_BASE_AFFIX_AFFIXES } from "./belt-base-affix";
 import { BELT_BASE_STATS_AFFIXES } from "./belt-base-stats";
 import { BELT_CORROSION_BASE_AFFIXES } from "./belt-corrosion-base";

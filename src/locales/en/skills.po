@@ -14,357 +14,357 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:338
+#: src/data/translate/skills.ts:341
 msgid "Activation Medium: Boss"
 msgstr "Activation Medium: Boss"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:339
+#: src/data/translate/skills.ts:342
 msgid "Activation Medium: Burst Activation"
 msgstr "Activation Medium: Burst Activation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:340
+#: src/data/translate/skills.ts:343
 msgid "Activation Medium: Channel"
 msgstr "Activation Medium: Channel"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:341
+#: src/data/translate/skills.ts:344
 msgid "Activation Medium: Critical Strike"
 msgstr "Activation Medium: Critical Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:342
+#: src/data/translate/skills.ts:345
 msgid "Activation Medium: Demolisher"
 msgstr "Activation Medium: Demolisher"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:343
+#: src/data/translate/skills.ts:346
 msgid "Activation Medium: Elite"
 msgstr "Activation Medium: Elite"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:344
+#: src/data/translate/skills.ts:347
 msgid "Activation Medium: Energy Shield"
 msgstr "Activation Medium: Energy Shield"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:345
+#: src/data/translate/skills.ts:348
 msgid "Activation Medium: Instruction"
 msgstr "Activation Medium: Instruction"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:346
+#: src/data/translate/skills.ts:349
 msgid "Activation Medium: Life"
 msgstr "Activation Medium: Life"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:347
+#: src/data/translate/skills.ts:350
 msgid "Activation Medium: Lock On"
 msgstr "Activation Medium: Lock On"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:348
+#: src/data/translate/skills.ts:351
 msgid "Activation Medium: Minion"
 msgstr "Activation Medium: Minion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:349
+#: src/data/translate/skills.ts:352
 msgid "Activation Medium: Motionless"
 msgstr "Activation Medium: Motionless"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:350
+#: src/data/translate/skills.ts:353
 msgid "Activation Medium: Multistrike"
 msgstr "Activation Medium: Multistrike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:351
+#: src/data/translate/skills.ts:354
 msgid "Activation Medium: Perpetual Motion"
 msgstr "Activation Medium: Perpetual Motion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:352
+#: src/data/translate/skills.ts:355
 msgid "Activation Medium: Preparation"
 msgstr "Activation Medium: Preparation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:353
+#: src/data/translate/skills.ts:356
 msgid "Activation Medium: Resonance"
 msgstr "Activation Medium: Resonance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:354
+#: src/data/translate/skills.ts:357
 msgid "Activation Medium: Resonance Activation"
 msgstr "Activation Medium: Resonance Activation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:355
+#: src/data/translate/skills.ts:358
 msgid "Activation Medium: Rhythm"
 msgstr "Activation Medium: Rhythm"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:356
+#: src/data/translate/skills.ts:359
 msgid "Activation Medium: Root"
 msgstr "Activation Medium: Root"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:357
+#: src/data/translate/skills.ts:360
 msgid "Activation Medium: Root Attack"
 msgstr "Activation Medium: Root Attack"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:358
+#: src/data/translate/skills.ts:361
 msgid "Activation Medium: Sentry"
 msgstr "Activation Medium: Sentry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:359
+#: src/data/translate/skills.ts:362
 msgid "Activation Medium: Severe Injury"
 msgstr "Activation Medium: Severe Injury"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:360
+#: src/data/translate/skills.ts:363
 msgid "Activation Medium: Spell Burst"
 msgstr "Activation Medium: Spell Burst"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:361
+#: src/data/translate/skills.ts:364
 msgid "Activation Medium: Start"
 msgstr "Activation Medium: Start"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:362
+#: src/data/translate/skills.ts:365
 msgid "Activation Medium: Still Attack"
 msgstr "Activation Medium: Still Attack"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:363
+#: src/data/translate/skills.ts:366
 msgid "Activation Medium: Tangle"
 msgstr "Activation Medium: Tangle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:364
+#: src/data/translate/skills.ts:367
 msgid "Activation Medium: Track"
 msgstr "Activation Medium: Track"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:365
+#: src/data/translate/skills.ts:368
 msgid "Activation Medium: Wind Rhythm"
 msgstr "Activation Medium: Wind Rhythm"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:161
+#: src/data/translate/skills.ts:164
 msgid "Acuteness Focus"
 msgstr "Acuteness Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:497
+#: src/data/translate/skills.ts:500
 msgid "Acuteness Focus: Dull Pain (Noble)"
 msgstr "Acuteness Focus: Dull Pain (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:366
+#: src/data/translate/skills.ts:369
 msgid "Acuteness Focus: Piercing Agony (Magnificent)"
 msgstr "Acuteness Focus: Piercing Agony (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:498
+#: src/data/translate/skills.ts:501
 msgid "Acuteness Focus: Remaining Strength (Noble)"
 msgstr "Acuteness Focus: Remaining Strength (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:367
+#: src/data/translate/skills.ts:370
 msgid "Acuteness Focus: Sharpening (Magnificent)"
 msgstr "Acuteness Focus: Sharpening (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:216
+#: src/data/translate/skills.ts:219
 msgid "Added Cold Damage"
 msgstr "Added Cold Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:217
+#: src/data/translate/skills.ts:220
 msgid "Added Erosion Damage"
 msgstr "Added Erosion Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:218
+#: src/data/translate/skills.ts:221
 msgid "Added Fire Damage"
 msgstr "Added Fire Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:219
+#: src/data/translate/skills.ts:222
 msgid "Added Lightning Damage"
 msgstr "Added Lightning Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:220
+#: src/data/translate/skills.ts:223
 msgid "Added Physical Damage"
 msgstr "Added Physical Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:221
+#: src/data/translate/skills.ts:224
 msgid "Additional Ignite"
 msgstr "Additional Ignite"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:4
+#: src/data/translate/skills.ts:6
 msgid "Aegis of Fire"
 msgstr "Aegis of Fire"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:162
+#: src/data/translate/skills.ts:165
 msgid "Ailment Amplification"
 msgstr "Ailment Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:222
+#: src/data/translate/skills.ts:225
 msgid "Ailment Termination"
 msgstr "Ailment Termination"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:5
+#: src/data/translate/skills.ts:7
 msgid "Aim"
 msgstr "Aim"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:6
+#: src/data/translate/skills.ts:8
 msgid "Aimed Shot"
 msgstr "Aimed Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:223
+#: src/data/translate/skills.ts:226
 msgid "All In"
 msgstr "All In"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:7
+#: src/data/translate/skills.ts:9
 msgid "Arcane Circle"
 msgstr "Arcane Circle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:8
+#: src/data/translate/skills.ts:10
 msgid "Archery Bond"
 msgstr "Archery Bond"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:9
+#: src/data/translate/skills.ts:11
 msgid "Arrow Einherjar"
 msgstr "Arrow Einherjar"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:499
+#: src/data/translate/skills.ts:502
 msgid "Arrow Einherjar: Advancement (Noble)"
 msgstr "Arrow Einherjar: Advancement (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:368
+#: src/data/translate/skills.ts:371
 msgid "Arrow Einherjar: Arrowstorm (Magnificent)"
 msgstr "Arrow Einherjar: Arrowstorm (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:500
+#: src/data/translate/skills.ts:503
 msgid "Arrow Einherjar: Fellowship (Noble)"
 msgstr "Arrow Einherjar: Fellowship (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:224
+#: src/data/translate/skills.ts:227
 msgid "Assault Command"
 msgstr "Assault Command"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:225
+#: src/data/translate/skills.ts:228
 msgid "Attack Focus"
 msgstr "Attack Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:226
+#: src/data/translate/skills.ts:229
 msgid "Aura Amplification"
 msgstr "Aura Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:227
+#: src/data/translate/skills.ts:230
 msgid "Auto-Charge"
 msgstr "Auto-Charge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:10
+#: src/data/translate/skills.ts:12
 msgid "Berserking Blade"
 msgstr "Berserking Blade"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:501
+#: src/data/translate/skills.ts:504
 msgid "Berserking Blade: Decimate (Noble)"
 msgstr "Berserking Blade: Decimate (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:369
+#: src/data/translate/skills.ts:372
 msgid "Berserking Blade: Desperation (Magnificent)"
 msgstr "Berserking Blade: Desperation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:502
+#: src/data/translate/skills.ts:505
 msgid "Berserking Blade: Rampage (Noble)"
 msgstr "Berserking Blade: Rampage (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:370
+#: src/data/translate/skills.ts:373
 msgid "Berserking Blade: Sweep (Magnificent)"
 msgstr "Berserking Blade: Sweep (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:11
+#: src/data/translate/skills.ts:13
 msgid "Biting Cold"
 msgstr "Biting Cold"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:12
+#: src/data/translate/skills.ts:14
 msgid "Black Hole"
 msgstr "Black Hole"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:13
+#: src/data/translate/skills.ts:15
 msgid "Blazing Bullet"
 msgstr "Blazing Bullet"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:503
+#: src/data/translate/skills.ts:506
 msgid "Blazing Bullet: Dual Resonance (Noble)"
 msgstr "Blazing Bullet: Dual Resonance (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:371
+#: src/data/translate/skills.ts:374
 msgid "Blazing Bullet: Fiery Blast (Magnificent)"
 msgstr "Blazing Bullet: Fiery Blast (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:504
+#: src/data/translate/skills.ts:507
 msgid "Blazing Bullet: Ignition Point (Noble)"
 msgstr "Blazing Bullet: Ignition Point (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:14
+#: src/data/translate/skills.ts:16
 msgid "Blazing Dance"
 msgstr "Blazing Dance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:15
+#: src/data/translate/skills.ts:17
 msgid "Blazing Incineration"
 msgstr "Blazing Incineration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:16
+#: src/data/translate/skills.ts:18
 msgid "Blazing Spin"
 msgstr "Blazing Spin"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:17
+#: src/data/translate/skills.ts:19
 msgid "Bleak Grass"
 msgstr "Bleak Grass"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:228
+#: src/data/translate/skills.ts:231
 msgid "Blind"
 msgstr "Blind"
 
@@ -374,717 +374,717 @@ msgstr "Blind"
 #~ msgstr "Blinding"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:18
+#: src/data/translate/skills.ts:20
 msgid "Blink"
 msgstr "Blink"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:19
+#: src/data/translate/skills.ts:21
 msgid "Blink Arrow"
 msgstr "Blink Arrow"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:20
+#: src/data/translate/skills.ts:22
 msgid "Blizzard"
 msgstr "Blizzard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:505
+#: src/data/translate/skills.ts:508
 msgid "Blizzard: Avalanche (Noble)"
 msgstr "Blizzard: Avalanche (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:372
+#: src/data/translate/skills.ts:375
 msgid "Blizzard: Freezing Point (Magnificent)"
 msgstr "Blizzard: Freezing Point (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:373
+#: src/data/translate/skills.ts:376
 msgid "Blizzard: Hail (Magnificent)"
 msgstr "Blizzard: Hail (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:506
+#: src/data/translate/skills.ts:509
 msgid "Blizzard: Numbing Cold (Noble)"
 msgstr "Blizzard: Numbing Cold (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:21
+#: src/data/translate/skills.ts:23
 msgid "Blurry Steps"
 msgstr "Blurry Steps"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:22
+#: src/data/translate/skills.ts:24
 msgid "Bombard"
 msgstr "Bombard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:374
+#: src/data/translate/skills.ts:377
 msgid "Bombard: Cannon (Magnificent)"
 msgstr "Bombard: Cannon (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:507
+#: src/data/translate/skills.ts:510
 msgid "Bombard: Fission (Noble)"
 msgstr "Bombard: Fission (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:508
+#: src/data/translate/skills.ts:511
 msgid "Bombard: Grenade (Noble)"
 msgstr "Bombard: Grenade (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:375
+#: src/data/translate/skills.ts:378
 msgid "Bombard: Guided (Magnificent)"
 msgstr "Bombard: Guided (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:509
+#: src/data/translate/skills.ts:512
 msgid "Bombard: Smokescreen (Noble)"
 msgstr "Bombard: Smokescreen (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:23
+#: src/data/translate/skills.ts:25
 msgid "Brisk Wind"
 msgstr "Brisk Wind"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:24
+#: src/data/translate/skills.ts:26
 msgid "Bull's Rage"
 msgstr "Bull's Rage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:25
+#: src/data/translate/skills.ts:27
 msgid "Burning Shot"
 msgstr "Burning Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:376
+#: src/data/translate/skills.ts:379
 msgid "Burning Shot: Combustion (Magnificent)"
 msgstr "Burning Shot: Combustion (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:377
+#: src/data/translate/skills.ts:380
 msgid "Burning Shot: Fiery Blast (Magnificent)"
 msgstr "Burning Shot: Fiery Blast (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:510
+#: src/data/translate/skills.ts:513
 msgid "Burning Shot: Ignition (Noble)"
 msgstr "Burning Shot: Ignition (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:511
+#: src/data/translate/skills.ts:514
 msgid "Burning Shot: Through Fire (Noble)"
 msgstr "Burning Shot: Through Fire (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:26
+#: src/data/translate/skills.ts:28
 msgid "Burst of Anger"
 msgstr "Burst of Anger"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:229
+#: src/data/translate/skills.ts:232
 msgid "Carpet Bombardment"
 msgstr "Carpet Bombardment"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:230
+#: src/data/translate/skills.ts:233
 msgid "Cataclysm"
 msgstr "Cataclysm"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:27
+#: src/data/translate/skills.ts:29
 msgid "Centralized Loading"
 msgstr "Centralized Loading"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:28
+#: src/data/translate/skills.ts:30
 msgid "Chain Lightning"
 msgstr "Chain Lightning"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:378
+#: src/data/translate/skills.ts:381
 msgid "Chain Lightning: Augmentation (Magnificent)"
 msgstr "Chain Lightning: Augmentation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:512
+#: src/data/translate/skills.ts:515
 msgid "Chain Lightning: Lucky (Noble)"
 msgstr "Chain Lightning: Lucky (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:513
+#: src/data/translate/skills.ts:516
 msgid "Chain Lightning: Merge (Noble)"
 msgstr "Chain Lightning: Merge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:379
+#: src/data/translate/skills.ts:382
 msgid "Chain Lightning: Web of Lightning (Magnificent)"
 msgstr "Chain Lightning: Web of Lightning (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:231
+#: src/data/translate/skills.ts:234
 msgid "Channel Preparation"
 msgstr "Channel Preparation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:232
+#: src/data/translate/skills.ts:235
 msgid "Charge"
 msgstr "Charge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:163
+#: src/data/translate/skills.ts:166
 msgid "Charged Flames"
 msgstr "Charged Flames"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:29
+#: src/data/translate/skills.ts:31
 msgid "Charged Pummel"
 msgstr "Charged Pummel"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:514
+#: src/data/translate/skills.ts:517
 msgid "Charged Pummel: Charge Reduction (Noble)"
 msgstr "Charged Pummel: Charge Reduction (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:380
+#: src/data/translate/skills.ts:383
 msgid "Charged Pummel: Connected (Magnificent)"
 msgstr "Charged Pummel: Connected (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:381
+#: src/data/translate/skills.ts:384
 msgid "Charged Pummel: Drastic Shift (Magnificent)"
 msgstr "Charged Pummel: Drastic Shift (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:515
+#: src/data/translate/skills.ts:518
 msgid "Charged Pummel: Electric Charge (Noble)"
 msgstr "Charged Pummel: Electric Charge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:30
+#: src/data/translate/skills.ts:32
 msgid "Charging Warcry"
 msgstr "Charging Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:31
+#: src/data/translate/skills.ts:33
 msgid "Chromatic Shot"
 msgstr "Chromatic Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:32
+#: src/data/translate/skills.ts:34
 msgid "Compound Source"
 msgstr "Compound Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:233
+#: src/data/translate/skills.ts:236
 msgid "Concentration Warcry"
 msgstr "Concentration Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:234
+#: src/data/translate/skills.ts:237
 msgid "Control Spell"
 msgstr "Control Spell"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:235
+#: src/data/translate/skills.ts:238
 msgid "Cooldown Reduction"
 msgstr "Cooldown Reduction"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:164
+#: src/data/translate/skills.ts:167
 msgid "Corrosion Focus"
 msgstr "Corrosion Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:382
+#: src/data/translate/skills.ts:385
 msgid "Corrosion Focus: Clustering (Magnificent)"
 msgstr "Corrosion Focus: Clustering (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:383
+#: src/data/translate/skills.ts:386
 msgid "Corrosion Focus: Infection (Magnificent)"
 msgstr "Corrosion Focus: Infection (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:516
+#: src/data/translate/skills.ts:519
 msgid "Corrosion Focus: Splash (Noble)"
 msgstr "Corrosion Focus: Splash (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:33
+#: src/data/translate/skills.ts:35
 msgid "Corrosive Shot"
 msgstr "Corrosive Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:517
+#: src/data/translate/skills.ts:520
 msgid "Corrosive Shot: Burst of Agony (Noble)"
 msgstr "Corrosive Shot: Burst of Agony (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:518
+#: src/data/translate/skills.ts:521
 msgid "Corrosive Shot: Degeneration (Noble)"
 msgstr "Corrosive Shot: Degeneration (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:384
+#: src/data/translate/skills.ts:387
 msgid "Corrosive Shot: Swift Action (Magnificent)"
 msgstr "Corrosive Shot: Swift Action (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:34
+#: src/data/translate/skills.ts:36
 msgid "Corrosive Throw"
 msgstr "Corrosive Throw"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:385
+#: src/data/translate/skills.ts:388
 msgid "Corrosive Throw: Augmentation (Magnificent)"
 msgstr "Corrosive Throw: Augmentation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:519
+#: src/data/translate/skills.ts:522
 msgid "Corrosive Throw: Blitz Strike (Noble)"
 msgstr "Corrosive Throw: Blitz Strike (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:520
+#: src/data/translate/skills.ts:523
 msgid "Corrosive Throw: Swift Strike (Noble)"
 msgstr "Corrosive Throw: Swift Strike (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:35
+#: src/data/translate/skills.ts:37
 msgid "Corruption"
 msgstr "Corruption"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:236
+#: src/data/translate/skills.ts:239
 msgid "Cost Conversion"
 msgstr "Cost Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:36
+#: src/data/translate/skills.ts:38
 msgid "Crescent Slash"
 msgstr "Crescent Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:521
+#: src/data/translate/skills.ts:524
 msgid "Crescent Slash: Flash (Noble)"
 msgstr "Crescent Slash: Flash (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:386
+#: src/data/translate/skills.ts:389
 msgid "Crescent Slash: Raid (Magnificent)"
 msgstr "Crescent Slash: Raid (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:522
+#: src/data/translate/skills.ts:525
 msgid "Crescent Slash: Rising (Noble)"
 msgstr "Crescent Slash: Rising (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:387
+#: src/data/translate/skills.ts:390
 msgid "Crescent Slash: Vile (Magnificent)"
 msgstr "Crescent Slash: Vile (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:237
+#: src/data/translate/skills.ts:240
 msgid "Critical Charge"
 msgstr "Critical Charge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:238
+#: src/data/translate/skills.ts:241
 msgid "Critical Strike Damage Increase"
 msgstr "Critical Strike Damage Increase"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:239
+#: src/data/translate/skills.ts:242
 msgid "Critical Strike Rating Increase"
 msgstr "Critical Strike Rating Increase"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:165
+#: src/data/translate/skills.ts:168
 msgid "Cruelty"
 msgstr "Cruelty"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:37
+#: src/data/translate/skills.ts:39
 msgid "Dark Gate"
 msgstr "Dark Gate"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:38
+#: src/data/translate/skills.ts:40
 msgid "Dazzled"
 msgstr "Dazzled"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:39
+#: src/data/translate/skills.ts:41
 msgid "Dazzling Bloom"
 msgstr "Dazzling Bloom"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:166
+#: src/data/translate/skills.ts:169
 msgid "Deep Pain"
 msgstr "Deep Pain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:240
+#: src/data/translate/skills.ts:243
 msgid "Deep Wounds"
 msgstr "Deep Wounds"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:241
+#: src/data/translate/skills.ts:244
 msgid "Defense Form"
 msgstr "Defense Form"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:242
+#: src/data/translate/skills.ts:245
 msgid "Defense Layers"
 msgstr "Defense Layers"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:40
+#: src/data/translate/skills.ts:42
 msgid "Defensive Buffer"
 msgstr "Defensive Buffer"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:41
+#: src/data/translate/skills.ts:43
 msgid "Delayed Pain"
 msgstr "Delayed Pain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:42
+#: src/data/translate/skills.ts:44
 msgid "Destructive Light Cannon"
 msgstr "Destructive Light Cannon"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:167
+#: src/data/translate/skills.ts:170
 msgid "Domain Expansion"
 msgstr "Domain Expansion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:43
+#: src/data/translate/skills.ts:45
 msgid "Double Thrusts"
 msgstr "Double Thrusts"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:523
+#: src/data/translate/skills.ts:526
 msgid "Double Thrusts: Cutthroat (Noble)"
 msgstr "Double Thrusts: Cutthroat (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:524
+#: src/data/translate/skills.ts:527
 msgid "Double Thrusts: Recourse (Noble)"
 msgstr "Double Thrusts: Recourse (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:388
+#: src/data/translate/skills.ts:391
 msgid "Double Thrusts: Restless (Magnificent)"
 msgstr "Double Thrusts: Restless (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:44
+#: src/data/translate/skills.ts:46
 msgid "Drinking Recovery"
 msgstr "Drinking Recovery"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:168
+#: src/data/translate/skills.ts:171
 msgid "Electric Conversion"
 msgstr "Electric Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:243
+#: src/data/translate/skills.ts:246
 msgid "Electric Overload"
 msgstr "Electric Overload"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:244
+#: src/data/translate/skills.ts:247
 msgid "Electric Punishment"
 msgstr "Electric Punishment"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:45
+#: src/data/translate/skills.ts:47
 msgid "Electrifying Shot"
 msgstr "Electrifying Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:389
+#: src/data/translate/skills.ts:392
 msgid "Electrifying Shot: Close-Range (Magnificent)"
 msgstr "Electrifying Shot: Close-Range (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:525
+#: src/data/translate/skills.ts:528
 msgid "Electrifying Shot: Multishot (Noble)"
 msgstr "Electrifying Shot: Multishot (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:46
+#: src/data/translate/skills.ts:48
 msgid "Electrocute"
 msgstr "Electrocute"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:245
+#: src/data/translate/skills.ts:248
 msgid "Elemental Duo"
 msgstr "Elemental Duo"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:246
+#: src/data/translate/skills.ts:249
 msgid "Elemental Fusion"
 msgstr "Elemental Fusion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:247
+#: src/data/translate/skills.ts:250
 msgid "Elemental Impact"
 msgstr "Elemental Impact"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:169
+#: src/data/translate/skills.ts:172
 msgid "Elemental Resistance"
 msgstr "Elemental Resistance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:47
+#: src/data/translate/skills.ts:49
 msgid "Elemental Shock"
 msgstr "Elemental Shock"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:248
+#: src/data/translate/skills.ts:251
 msgid "Emergency Avoidance"
 msgstr "Emergency Avoidance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:249
+#: src/data/translate/skills.ts:252
 msgid "Emergency restoration"
 msgstr "Emergency restoration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:48
+#: src/data/translate/skills.ts:50
 msgid "Endless Vendetta"
 msgstr "Endless Vendetta"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:170
+#: src/data/translate/skills.ts:173
 msgid "Energy Fortress"
 msgstr "Energy Fortress"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:250
+#: src/data/translate/skills.ts:253
 msgid "Enhanced Ailment"
 msgstr "Enhanced Ailment"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:49
+#: src/data/translate/skills.ts:51
 msgid "Entangled Pain"
 msgstr "Entangled Pain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:171
+#: src/data/translate/skills.ts:174
 msgid "Erosion Amplification"
 msgstr "Erosion Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:251
+#: src/data/translate/skills.ts:254
 msgid "Extended Duration"
 msgstr "Extended Duration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:172
+#: src/data/translate/skills.ts:175
 msgid "Fearless"
 msgstr "Fearless"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:50
+#: src/data/translate/skills.ts:52
 msgid "Fearless Warcry"
 msgstr "Fearless Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:51
+#: src/data/translate/skills.ts:53
 msgid "Fire Burst"
 msgstr "Fire Burst"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:526
+#: src/data/translate/skills.ts:529
 msgid "Fire Burst: Converge (Noble)"
 msgstr "Fire Burst: Converge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:390
+#: src/data/translate/skills.ts:393
 msgid "Fire Burst: Heart of Flame (Magnificent)"
 msgstr "Fire Burst: Heart of Flame (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:527
+#: src/data/translate/skills.ts:530
 msgid "Fire Burst: Prairie Fire (Noble)"
 msgstr "Fire Burst: Prairie Fire (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:391
+#: src/data/translate/skills.ts:394
 msgid "Fire Burst: Violent Blast (Magnificent)"
 msgstr "Fire Burst: Violent Blast (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:252
+#: src/data/translate/skills.ts:255
 msgid "Fire Explosion"
 msgstr "Fire Explosion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:52
+#: src/data/translate/skills.ts:54
 msgid "Fixate"
 msgstr "Fixate"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:53
+#: src/data/translate/skills.ts:55
 msgid "Flame Core"
 msgstr "Flame Core"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:528
+#: src/data/translate/skills.ts:531
 msgid "Flame Core: Engage (Noble)"
 msgstr "Flame Core: Engage (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:392
+#: src/data/translate/skills.ts:395
 msgid "Flame Core: Lone Vanguard (Magnificent)"
 msgstr "Flame Core: Lone Vanguard (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:173
+#: src/data/translate/skills.ts:176
 msgid "Flame Focus"
 msgstr "Flame Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:529
+#: src/data/translate/skills.ts:532
 msgid "Flame Focus: Blast (Noble)"
 msgstr "Flame Focus: Blast (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:393
+#: src/data/translate/skills.ts:396
 msgid "Flame Focus: Flint (Magnificent)"
 msgstr "Flame Focus: Flint (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:394
+#: src/data/translate/skills.ts:397
 msgid "Flame Focus: Kindling (Magnificent)"
 msgstr "Flame Focus: Kindling (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:54
+#: src/data/translate/skills.ts:56
 msgid "Flame Jet"
 msgstr "Flame Jet"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:395
+#: src/data/translate/skills.ts:398
 msgid "Flame Jet: Burst (Magnificent)"
 msgstr "Flame Jet: Burst (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:530
+#: src/data/translate/skills.ts:533
 msgid "Flame Jet: Furnace (Noble)"
 msgstr "Flame Jet: Furnace (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:531
+#: src/data/translate/skills.ts:534
 msgid "Flame Jet: Offshoot (Noble)"
 msgstr "Flame Jet: Offshoot (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:396
+#: src/data/translate/skills.ts:399
 msgid "Flame Jet: Scorched Earth (Magnificent)"
 msgstr "Flame Jet: Scorched Earth (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:55
+#: src/data/translate/skills.ts:57
 msgid "Flame Slash"
 msgstr "Flame Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:397
+#: src/data/translate/skills.ts:400
 msgid "Flame Slash: Immediate Threat (Magnificent)"
 msgstr "Flame Slash: Immediate Threat (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:532
+#: src/data/translate/skills.ts:535
 msgid "Flame Slash: Inverted Blaze (Noble)"
 msgstr "Flame Slash: Inverted Blaze (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:253
+#: src/data/translate/skills.ts:256
 msgid "Focus Acceleration"
 msgstr "Focus Acceleration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:254
+#: src/data/translate/skills.ts:257
 msgid "Focus Buff"
 msgstr "Focus Buff"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:255
+#: src/data/translate/skills.ts:258
 msgid "Focused Beam"
 msgstr "Focused Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:56
+#: src/data/translate/skills.ts:58
 msgid "Focused Shot"
 msgstr "Focused Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:398
+#: src/data/translate/skills.ts:401
 msgid "Focused Shot: Aspire (Magnificent)"
 msgstr "Focused Shot: Aspire (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:533
+#: src/data/translate/skills.ts:536
 msgid "Focused Shot: Building Momentum (Noble)"
 msgstr "Focused Shot: Building Momentum (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:399
+#: src/data/translate/skills.ts:402
 msgid "Focused Shot: Long Shot (Magnificent)"
 msgstr "Focused Shot: Long Shot (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:534
+#: src/data/translate/skills.ts:537
 msgid "Focused Shot: Power Bow (Noble)"
 msgstr "Focused Shot: Power Bow (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:535
+#: src/data/translate/skills.ts:538
 msgid "Focused Shot: Snipe (Noble)"
 msgstr "Focused Shot: Snipe (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:57
+#: src/data/translate/skills.ts:59
 msgid "Focused Slash"
 msgstr "Focused Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:536
+#: src/data/translate/skills.ts:539
 msgid "Focused Slash: Behead (Noble)"
 msgstr "Focused Slash: Behead (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:400
+#: src/data/translate/skills.ts:403
 msgid "Focused Slash: Duel (Magnificent)"
 msgstr "Focused Slash: Duel (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:537
+#: src/data/translate/skills.ts:540
 msgid "Focused Slash: Fervor (Noble)"
 msgstr "Focused Slash: Fervor (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:401
+#: src/data/translate/skills.ts:404
 msgid "Focused Slash: Tranquility (Magnificent)"
 msgstr "Focused Slash: Tranquility (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:58
+#: src/data/translate/skills.ts:60
 msgid "Forced Start"
 msgstr "Forced Start"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:256
+#: src/data/translate/skills.ts:259
 msgid "Fragile Resurrection"
 msgstr "Fragile Resurrection"
 
@@ -1094,422 +1094,422 @@ msgstr "Fragile Resurrection"
 #~ msgstr "Freeze Chance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:257
+#: src/data/translate/skills.ts:260
 msgid "Friend of Spirit Magi"
 msgstr "Friend of Spirit Magi"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:174
+#: src/data/translate/skills.ts:177
 msgid "Frigid Domain"
 msgstr "Frigid Domain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:59
+#: src/data/translate/skills.ts:61
 msgid "Frigid Transmission"
 msgstr "Frigid Transmission"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:60
+#: src/data/translate/skills.ts:62
 msgid "Frost Core"
 msgstr "Frost Core"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:402
+#: src/data/translate/skills.ts:405
 msgid "Frost Core: Chase (Magnificent)"
 msgstr "Frost Core: Chase (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:538
+#: src/data/translate/skills.ts:541
 msgid "Frost Core: Puncture (Noble)"
 msgstr "Frost Core: Puncture (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:61
+#: src/data/translate/skills.ts:63
 msgid "Frost Impact"
 msgstr "Frost Impact"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:539
+#: src/data/translate/skills.ts:542
 msgid "Frost Impact: Chilling Buildup (Noble)"
 msgstr "Frost Impact: Chilling Buildup (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:540
+#: src/data/translate/skills.ts:543
 msgid "Frost Impact: Chilling Surge (Noble)"
 msgstr "Frost Impact: Chilling Surge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:403
+#: src/data/translate/skills.ts:406
 msgid "Frost Impact: Frozen Trajectory (Magnificent)"
 msgstr "Frost Impact: Frozen Trajectory (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:404
+#: src/data/translate/skills.ts:407
 msgid "Frost Impact: Ice Cluster (Magnificent)"
 msgstr "Frost Impact: Ice Cluster (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:62
+#: src/data/translate/skills.ts:64
 msgid "Frost Release"
 msgstr "Frost Release"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:63
+#: src/data/translate/skills.ts:65
 msgid "Frost Shield"
 msgstr "Frost Shield"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:64
+#: src/data/translate/skills.ts:66
 msgid "Frost Spike"
 msgstr "Frost Spike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:541
+#: src/data/translate/skills.ts:544
 msgid "Frost Spike: Glaciate (Noble)"
 msgstr "Frost Spike: Glaciate (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:542
+#: src/data/translate/skills.ts:545
 msgid "Frost Spike: Ice Fission (Noble)"
 msgstr "Frost Spike: Ice Fission (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:405
+#: src/data/translate/skills.ts:408
 msgid "Frost Spike: Offshoot (Magnificent)"
 msgstr "Frost Spike: Offshoot (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:65
+#: src/data/translate/skills.ts:67
 msgid "Frost Terra"
 msgstr "Frost Terra"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:543
+#: src/data/translate/skills.ts:546
 msgid "Frost Terra: Cohesion (Noble)"
 msgstr "Frost Terra: Cohesion (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:406
+#: src/data/translate/skills.ts:409
 msgid "Frost Terra: Rime (Magnificent)"
 msgstr "Frost Terra: Rime (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:407
+#: src/data/translate/skills.ts:410
 msgid "Frost Terra: Snow Shell (Magnificent)"
 msgstr "Frost Terra: Snow Shell (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:544
+#: src/data/translate/skills.ts:547
 msgid "Frost Terra: Winter's Bite (Noble)"
 msgstr "Frost Terra: Winter's Bite (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:66
+#: src/data/translate/skills.ts:68
 msgid "Gale Slash"
 msgstr "Gale Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:545
+#: src/data/translate/skills.ts:548
 msgid "Gale Slash: Brutality (Noble)"
 msgstr "Gale Slash: Brutality (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:408
+#: src/data/translate/skills.ts:411
 msgid "Gale Slash: Dominance (Magnificent)"
 msgstr "Gale Slash: Dominance (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:409
+#: src/data/translate/skills.ts:412
 msgid "Gale Slash: Onslaught (Magnificent)"
 msgstr "Gale Slash: Onslaught (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:546
+#: src/data/translate/skills.ts:549
 msgid "Gale Slash: Soaring (Noble)"
 msgstr "Gale Slash: Soaring (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:67
+#: src/data/translate/skills.ts:69
 msgid "Ghost Blade Einherjar"
 msgstr "Ghost Blade Einherjar"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:547
+#: src/data/translate/skills.ts:550
 msgid "Ghost Blade Einherjar: Eruption (Noble)"
 msgstr "Ghost Blade Einherjar: Eruption (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:548
+#: src/data/translate/skills.ts:551
 msgid "Ghost Blade Einherjar: Heroes (Noble)"
 msgstr "Ghost Blade Einherjar: Heroes (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:410
+#: src/data/translate/skills.ts:413
 msgid "Ghost Blade Einherjar: Prestige (Magnificent)"
 msgstr "Ghost Blade Einherjar: Prestige (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:411
+#: src/data/translate/skills.ts:414
 msgid "Ghost Blade Einherjar: Unbroken (Magnificent)"
 msgstr "Ghost Blade Einherjar: Unbroken (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:258
+#: src/data/translate/skills.ts:261
 msgid "Glacial Freeze"
 msgstr "Glacial Freeze"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:68
+#: src/data/translate/skills.ts:70
 msgid "Glacier Ripples"
 msgstr "Glacier Ripples"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:259
+#: src/data/translate/skills.ts:262
 msgid "Gladiator's Roar"
 msgstr "Gladiator's Roar"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:69
+#: src/data/translate/skills.ts:71
 msgid "Gold Rush"
 msgstr "Gold Rush"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:260
+#: src/data/translate/skills.ts:263
 msgid "Ground Divide"
 msgstr "Ground Divide"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:70
+#: src/data/translate/skills.ts:72
 msgid "Groundshaker"
 msgstr "Groundshaker"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:549
+#: src/data/translate/skills.ts:552
 msgid "Groundshaker: Collapse (Noble)"
 msgstr "Groundshaker: Collapse (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:550
+#: src/data/translate/skills.ts:553
 msgid "Groundshaker: Cripple (Noble)"
 msgstr "Groundshaker: Cripple (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:412
+#: src/data/translate/skills.ts:415
 msgid "Groundshaker: Epicenter (Magnificent)"
 msgstr "Groundshaker: Epicenter (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:413
+#: src/data/translate/skills.ts:416
 msgid "Groundshaker: Frequent Quake (Magnificent)"
 msgstr "Groundshaker: Frequent Quake (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:551
+#: src/data/translate/skills.ts:554
 msgid "Groundshaker: Wrathful Vault (Noble)"
 msgstr "Groundshaker: Wrathful Vault (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:261
+#: src/data/translate/skills.ts:264
 msgid "Grudge"
 msgstr "Grudge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:262
+#: src/data/translate/skills.ts:265
 msgid "Guard"
 msgstr "Guard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:71
+#: src/data/translate/skills.ts:73
 msgid "Hammer of Ash"
 msgstr "Hammer of Ash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:552
+#: src/data/translate/skills.ts:555
 msgid "Hammer of Ash: Blast Quake (Noble)"
 msgstr "Hammer of Ash: Blast Quake (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:553
+#: src/data/translate/skills.ts:556
 msgid "Hammer of Ash: Quickfire (Noble)"
 msgstr "Hammer of Ash: Quickfire (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:414
+#: src/data/translate/skills.ts:417
 msgid "Hammer of Ash: Rekindle (Magnificent)"
 msgstr "Hammer of Ash: Rekindle (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:415
+#: src/data/translate/skills.ts:418
 msgid "Hammer of Ash: Upheaval (Magnificent)"
 msgstr "Hammer of Ash: Upheaval (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:72
+#: src/data/translate/skills.ts:74
 msgid "Harmonious Field"
 msgstr "Harmonious Field"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:263
+#: src/data/translate/skills.ts:266
 msgid "Harvest Time"
 msgstr "Harvest Time"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:264
+#: src/data/translate/skills.ts:267
 msgid "Haunt"
 msgstr "Haunt"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:73
+#: src/data/translate/skills.ts:75
 msgid "Haunting Abomination"
 msgstr "Haunting Abomination"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:554
+#: src/data/translate/skills.ts:557
 msgid "Haunting Abomination: Depravity (Noble)"
 msgstr "Haunting Abomination: Depravity (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:416
+#: src/data/translate/skills.ts:419
 msgid "Haunting Abomination: Feud (Magnificent)"
 msgstr "Haunting Abomination: Feud (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:555
+#: src/data/translate/skills.ts:558
 msgid "Haunting Abomination: Hail Mary (Noble)"
 msgstr "Haunting Abomination: Hail Mary (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:417
+#: src/data/translate/skills.ts:420
 msgid "Haunting Abomination: Misdeeds (Magnificent)"
 msgstr "Haunting Abomination: Misdeeds (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:74
+#: src/data/translate/skills.ts:76
 msgid "High Energy Beam"
 msgstr "High Energy Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:265
+#: src/data/translate/skills.ts:268
 msgid "High Voltage"
 msgstr "High Voltage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:75
+#: src/data/translate/skills.ts:77
 msgid "Howling Gale"
 msgstr "Howling Gale"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:556
+#: src/data/translate/skills.ts:559
 msgid "Howling Gale: Eye of the Gale (Noble)"
 msgstr "Howling Gale: Eye of the Gale (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:557
+#: src/data/translate/skills.ts:560
 msgid "Howling Gale: Furious Sweep (Noble)"
 msgstr "Howling Gale: Furious Sweep (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:418
+#: src/data/translate/skills.ts:421
 msgid "Howling Gale: Headwind (Magnificent)"
 msgstr "Howling Gale: Headwind (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:419
+#: src/data/translate/skills.ts:422
 msgid "Howling Gale: Rapid Sweep (Magnificent)"
 msgstr "Howling Gale: Rapid Sweep (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:266
+#: src/data/translate/skills.ts:269
 msgid "Hunting Tempo"
 msgstr "Hunting Tempo"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:76
+#: src/data/translate/skills.ts:78
 msgid "Ice Bond"
 msgstr "Ice Bond"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:77
+#: src/data/translate/skills.ts:79
 msgid "Ice Earthshaker"
 msgstr "Ice Earthshaker"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:175
+#: src/data/translate/skills.ts:178
 msgid "Ice Focus"
 msgstr "Ice Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:558
+#: src/data/translate/skills.ts:561
 msgid "Ice Focus: Frigid Wind (Noble)"
 msgstr "Ice Focus: Frigid Wind (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:420
+#: src/data/translate/skills.ts:423
 msgid "Ice Focus: Permafrost (Magnificent)"
 msgstr "Ice Focus: Permafrost (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:421
+#: src/data/translate/skills.ts:424
 msgid "Ice Focus: Shattered Ice (Magnificent)"
 msgstr "Ice Focus: Shattered Ice (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:559
+#: src/data/translate/skills.ts:562
 msgid "Ice Focus: Solemn Chill (Noble)"
 msgstr "Ice Focus: Solemn Chill (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:78
+#: src/data/translate/skills.ts:80
 msgid "Ice Lances"
 msgstr "Ice Lances"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:560
+#: src/data/translate/skills.ts:563
 msgid "Ice Lances: Bounce (Noble)"
 msgstr "Ice Lances: Bounce (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:422
+#: src/data/translate/skills.ts:425
 msgid "Ice Lances: Ice Corrosion (Magnificent)"
 msgstr "Ice Lances: Ice Corrosion (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:561
+#: src/data/translate/skills.ts:564
 msgid "Ice Lances: Permafrost (Noble)"
 msgstr "Ice Lances: Permafrost (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:423
+#: src/data/translate/skills.ts:426
 msgid "Ice Lances: Rebound (Magnificent)"
 msgstr "Ice Lances: Rebound (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:79
+#: src/data/translate/skills.ts:81
 msgid "Ice Shot"
 msgstr "Ice Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:562
+#: src/data/translate/skills.ts:565
 msgid "Ice Shot: Batter (Noble)"
 msgstr "Ice Shot: Batter (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:424
+#: src/data/translate/skills.ts:427
 msgid "Ice Shot: Ice Blast (Magnificent)"
 msgstr "Ice Shot: Ice Blast (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:80
+#: src/data/translate/skills.ts:82
 msgid "Icebound Beam"
 msgstr "Icebound Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:563
+#: src/data/translate/skills.ts:566
 msgid "Icebound Beam: Chilling Spike (Noble)"
 msgstr "Icebound Beam: Chilling Spike (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:425
+#: src/data/translate/skills.ts:428
 msgid "Icebound Beam: Frostbitten (Magnificent)"
 msgstr "Icebound Beam: Frostbitten (Magnificent)"
 
@@ -1519,12 +1519,12 @@ msgstr "Icebound Beam: Frostbitten (Magnificent)"
 #~ msgstr "Icebound Beam: Numbing Cold (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:564
+#: src/data/translate/skills.ts:567
 msgid "Icebound Beam: Ring Blade (Noble)"
 msgstr "Icebound Beam: Ring Blade (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:81
+#: src/data/translate/skills.ts:83
 msgid "Icy Blade"
 msgstr "Icy Blade"
 
@@ -1534,672 +1534,672 @@ msgstr "Icy Blade"
 #~ msgstr "Icy Blade: Frozen Edge (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:565
+#: src/data/translate/skills.ts:568
 msgid "Icy Blade: Hidden Edge (Noble)"
 msgstr "Icy Blade: Hidden Edge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:426
+#: src/data/translate/skills.ts:429
 msgid "Icy Blade: Quick Freeze (Magnificent)"
 msgstr "Icy Blade: Quick Freeze (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:267
+#: src/data/translate/skills.ts:270
 msgid "Improved Corrosion"
 msgstr "Improved Corrosion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:268
+#: src/data/translate/skills.ts:271
 msgid "Increased Area"
 msgstr "Increased Area"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:82
+#: src/data/translate/skills.ts:84
 msgid "Inexhaustible Barrage"
 msgstr "Inexhaustible Barrage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:427
+#: src/data/translate/skills.ts:430
 msgid "Inexhaustible Barrage: Bombard (Magnificent)"
 msgstr "Inexhaustible Barrage: Bombard (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:566
+#: src/data/translate/skills.ts:569
 msgid "Inexhaustible Barrage: Fatal Pursuit (Noble)"
 msgstr "Inexhaustible Barrage: Fatal Pursuit (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:567
+#: src/data/translate/skills.ts:570
 msgid "Inexhaustible Barrage: Landslide (Noble)"
 msgstr "Inexhaustible Barrage: Landslide (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:269
+#: src/data/translate/skills.ts:272
 msgid "Instant restoration"
 msgstr "Instant restoration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:270
+#: src/data/translate/skills.ts:273
 msgid "Iron Fortification"
 msgstr "Iron Fortification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:271
+#: src/data/translate/skills.ts:274
 msgid "Jump"
 msgstr "Jump"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:83
+#: src/data/translate/skills.ts:85
 msgid "Leap Attack"
 msgstr "Leap Attack"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:84
+#: src/data/translate/skills.ts:86
 msgid "Life Source"
 msgstr "Life Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:85
+#: src/data/translate/skills.ts:87
 msgid "Lightning Beam"
 msgstr "Lightning Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:428
+#: src/data/translate/skills.ts:431
 msgid "Lightning Beam: Aftershock (Magnificent)"
 msgstr "Lightning Beam: Aftershock (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:429
+#: src/data/translate/skills.ts:432
 msgid "Lightning Beam: Relentless (Magnificent)"
 msgstr "Lightning Beam: Relentless (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:568
+#: src/data/translate/skills.ts:571
 msgid "Lightning Beam: Reverberation (Noble)"
 msgstr "Lightning Beam: Reverberation (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:569
+#: src/data/translate/skills.ts:572
 msgid "Lightning Beam: Salvo (Noble)"
 msgstr "Lightning Beam: Salvo (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:86
+#: src/data/translate/skills.ts:88
 msgid "Lightning Shot"
 msgstr "Lightning Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:570
+#: src/data/translate/skills.ts:573
 msgid "Lightning Shot: Crossed Lightning (Noble)"
 msgstr "Lightning Shot: Crossed Lightning (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:430
+#: src/data/translate/skills.ts:433
 msgid "Lightning Shot: Offshoot (Magnificent)"
 msgstr "Lightning Shot: Offshoot (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:87
+#: src/data/translate/skills.ts:89
 msgid "Lightning Star"
 msgstr "Lightning Star"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:88
+#: src/data/translate/skills.ts:90
 msgid "Lightning Storm"
 msgstr "Lightning Storm"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:571
+#: src/data/translate/skills.ts:574
 msgid "Lightning Storm: Boundless (Noble)"
 msgstr "Lightning Storm: Boundless (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:572
+#: src/data/translate/skills.ts:575
 msgid "Lightning Storm: Raging Storm (Noble)"
 msgstr "Lightning Storm: Raging Storm (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:431
+#: src/data/translate/skills.ts:434
 msgid "Lightning Storm: Surging Thunder (Magnificent)"
 msgstr "Lightning Storm: Surging Thunder (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:89
+#: src/data/translate/skills.ts:91
 msgid "Lightning Surge"
 msgstr "Lightning Surge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:272
+#: src/data/translate/skills.ts:275
 msgid "Lightning to Cold"
 msgstr "Lightning to Cold"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:273
+#: src/data/translate/skills.ts:276
 msgid "Lion's Roars"
 msgstr "Lion's Roars"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:90
+#: src/data/translate/skills.ts:92
 msgid "Machine Army"
 msgstr "Machine Army"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:274
+#: src/data/translate/skills.ts:277
 msgid "Magic Dash"
 msgstr "Magic Dash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:176
+#: src/data/translate/skills.ts:179
 msgid "Magical Source"
 msgstr "Magical Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:91
+#: src/data/translate/skills.ts:93
 msgid "Mana Boil"
 msgstr "Mana Boil"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:92
+#: src/data/translate/skills.ts:94
 msgid "Mana Source"
 msgstr "Mana Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:275
+#: src/data/translate/skills.ts:278
 msgid "Maniacal Army"
 msgstr "Maniacal Army"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:276
+#: src/data/translate/skills.ts:279
 msgid "Manifold Entanglement"
 msgstr "Manifold Entanglement"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:93
+#: src/data/translate/skills.ts:95
 msgid "Marked Rain of Arrows"
 msgstr "Marked Rain of Arrows"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:432
+#: src/data/translate/skills.ts:435
 msgid "Marked Rain of Arrows: Chain Reaction (Magnificent)"
 msgstr "Marked Rain of Arrows: Chain Reaction (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:433
+#: src/data/translate/skills.ts:436
 msgid "Marked Rain of Arrows: Heartpiercer (Magnificent)"
 msgstr "Marked Rain of Arrows: Heartpiercer (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:573
+#: src/data/translate/skills.ts:576
 msgid "Marked Rain of Arrows: Hyper Blast (Noble)"
 msgstr "Marked Rain of Arrows: Hyper Blast (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:574
+#: src/data/translate/skills.ts:577
 msgid "Marked Rain of Arrows: Rainfall (Noble)"
 msgstr "Marked Rain of Arrows: Rainfall (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:575
+#: src/data/translate/skills.ts:578
 msgid "Marked Rain of Arrows: Threads of Arrows (Noble)"
 msgstr "Marked Rain of Arrows: Threads of Arrows (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:277
+#: src/data/translate/skills.ts:280
 msgid "Mass Effect"
 msgstr "Mass Effect"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:278
+#: src/data/translate/skills.ts:281
 msgid "Mechanical Modification"
 msgstr "Mechanical Modification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:279
+#: src/data/translate/skills.ts:282
 msgid "Melee Knockback"
 msgstr "Melee Knockback"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:94
+#: src/data/translate/skills.ts:96
 msgid "Mind Control"
 msgstr "Mind Control"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:434
+#: src/data/translate/skills.ts:437
 msgid "Mind Control: Befuddle (Magnificent)"
 msgstr "Mind Control: Befuddle (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:435
+#: src/data/translate/skills.ts:438
 msgid "Mind Control: Concentrate (Magnificent)"
 msgstr "Mind Control: Concentrate (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:576
+#: src/data/translate/skills.ts:579
 msgid "Mind Control: Enthrall (Noble)"
 msgstr "Mind Control: Enthrall (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:577
+#: src/data/translate/skills.ts:580
 msgid "Mind Control: Entice (Noble)"
 msgstr "Mind Control: Entice (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:95
+#: src/data/translate/skills.ts:97
 msgid "Molten Rising"
 msgstr "Molten Rising"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:96
+#: src/data/translate/skills.ts:98
 msgid "Moon Strike"
 msgstr "Moon Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:578
+#: src/data/translate/skills.ts:581
 msgid "Moon Strike: Lunar Eclipse (Noble)"
 msgstr "Moon Strike: Lunar Eclipse (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:436
+#: src/data/translate/skills.ts:439
 msgid "Moon Strike: Lunar Ring (Magnificent)"
 msgstr "Moon Strike: Lunar Ring (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:437
+#: src/data/translate/skills.ts:440
 msgid "Moon Strike: Rainbow (Magnificent)"
 msgstr "Moon Strike: Rainbow (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:579
+#: src/data/translate/skills.ts:582
 msgid "Moon Strike: Wax and Wane (Noble)"
 msgstr "Moon Strike: Wax and Wane (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:280
+#: src/data/translate/skills.ts:283
 msgid "Multifaceted Guard"
 msgstr "Multifaceted Guard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:281
+#: src/data/translate/skills.ts:284
 msgid "Multiple Projectiles"
 msgstr "Multiple Projectiles"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:282
+#: src/data/translate/skills.ts:285
 msgid "Multistrike"
 msgstr "Multistrike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:177
+#: src/data/translate/skills.ts:180
 msgid "Nimbleness"
 msgstr "Nimbleness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:97
+#: src/data/translate/skills.ts:99
 msgid "Nourishment of Life"
 msgstr "Nourishment of Life"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:283
+#: src/data/translate/skills.ts:286
 msgid "Nova Shot"
 msgstr "Nova Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:98
+#: src/data/translate/skills.ts:100
 msgid "Obscure"
 msgstr "Obscure"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:99
+#: src/data/translate/skills.ts:101
 msgid "Onslaught Punch"
 msgstr "Onslaught Punch"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:284
+#: src/data/translate/skills.ts:287
 msgid "Overload"
 msgstr "Overload"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:100
+#: src/data/translate/skills.ts:102
 msgid "Overpower"
 msgstr "Overpower"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:285
+#: src/data/translate/skills.ts:288
 msgid "Pain Amplification"
 msgstr "Pain Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:286
+#: src/data/translate/skills.ts:289
 msgid "Passivation"
 msgstr "Passivation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:101
+#: src/data/translate/skills.ts:103
 msgid "Path of Flames"
 msgstr "Path of Flames"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:580
+#: src/data/translate/skills.ts:583
 msgid "Path of Flames: Heat Wave (Noble)"
 msgstr "Path of Flames: Heat Wave (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:581
+#: src/data/translate/skills.ts:584
 msgid "Path of Flames: Raging Boil (Noble)"
 msgstr "Path of Flames: Raging Boil (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:438
+#: src/data/translate/skills.ts:441
 msgid "Path of Flames: Spontaneous Combustion (Magnificent)"
 msgstr "Path of Flames: Spontaneous Combustion (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:287
+#: src/data/translate/skills.ts:290
 msgid "Periodic Burst"
 msgstr "Periodic Burst"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:102
+#: src/data/translate/skills.ts:104
 msgid "Permafrost Cast"
 msgstr "Permafrost Cast"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:288
+#: src/data/translate/skills.ts:291
 msgid "Physical to Fire"
 msgstr "Physical to Fire"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:103
+#: src/data/translate/skills.ts:105
 msgid "Prayer"
 msgstr "Prayer"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:203
+#: src/data/translate/skills.ts:206
 msgid "Precise Projectiles"
 msgstr "Precise Projectiles"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:303
+#: src/data/translate/skills.ts:306
 msgid "Precise Restrain"
 msgstr "Precise Restrain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:178
+#: src/data/translate/skills.ts:181
 msgid "Precise: Acuteness Focus"
 msgstr "Precise: Acuteness Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:179
+#: src/data/translate/skills.ts:182
 msgid "Precise: Ailment Amplification"
 msgstr "Precise: Ailment Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:180
+#: src/data/translate/skills.ts:183
 msgid "Precise: Charged Flames"
 msgstr "Precise: Charged Flames"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:289
+#: src/data/translate/skills.ts:292
 msgid "Precise: Concentrated"
 msgstr "Precise: Concentrated"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:181
+#: src/data/translate/skills.ts:184
 msgid "Precise: Corrosion Focus"
 msgstr "Precise: Corrosion Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:182
+#: src/data/translate/skills.ts:185
 msgid "Precise: Cruelty"
 msgstr "Precise: Cruelty"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:183
+#: src/data/translate/skills.ts:186
 msgid "Precise: Deep Pain"
 msgstr "Precise: Deep Pain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:290
+#: src/data/translate/skills.ts:293
 msgid "Precise: Disciplined"
 msgstr "Precise: Disciplined"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:184
+#: src/data/translate/skills.ts:187
 msgid "Precise: Domain Expansion"
 msgstr "Precise: Domain Expansion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:185
+#: src/data/translate/skills.ts:188
 msgid "Precise: Electric Conversion"
 msgstr "Precise: Electric Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:186
+#: src/data/translate/skills.ts:189
 msgid "Precise: Elemental Resistance"
 msgstr "Precise: Elemental Resistance"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:187
+#: src/data/translate/skills.ts:190
 msgid "Precise: Energy Fortress"
 msgstr "Precise: Energy Fortress"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:188
+#: src/data/translate/skills.ts:191
 msgid "Precise: Erosion Amplification"
 msgstr "Precise: Erosion Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:189
+#: src/data/translate/skills.ts:192
 msgid "Precise: Fearless"
 msgstr "Precise: Fearless"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:190
+#: src/data/translate/skills.ts:193
 msgid "Precise: Flame Focus"
 msgstr "Precise: Flame Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:291
+#: src/data/translate/skills.ts:294
 msgid "Precise: Focus Buff"
 msgstr "Precise: Focus Buff"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:292
+#: src/data/translate/skills.ts:295
 msgid "Precise: Friend of Spirit Magi"
 msgstr "Precise: Friend of Spirit Magi"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:191
+#: src/data/translate/skills.ts:194
 msgid "Precise: Frigid Domain"
 msgstr "Precise: Frigid Domain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:293
+#: src/data/translate/skills.ts:296
 msgid "Precise: Harmony"
 msgstr "Precise: Harmony"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:192
+#: src/data/translate/skills.ts:195
 msgid "Precise: Ice Focus"
 msgstr "Precise: Ice Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:193
+#: src/data/translate/skills.ts:196
 msgid "Precise: Magical Source"
 msgstr "Precise: Magical Source"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:294
+#: src/data/translate/skills.ts:297
 msgid "Precise: Malleable"
 msgstr "Precise: Malleable"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:194
+#: src/data/translate/skills.ts:197
 msgid "Precise: Nimbleness"
 msgstr "Precise: Nimbleness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:195
+#: src/data/translate/skills.ts:198
 msgid "Precise: Precise Projectiles"
 msgstr "Precise: Precise Projectiles"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:295
+#: src/data/translate/skills.ts:298
 msgid "Precise: Protection Field"
 msgstr "Precise: Protection Field"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:296
+#: src/data/translate/skills.ts:299
 msgid "Precise: Purify"
 msgstr "Precise: Purify"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:196
+#: src/data/translate/skills.ts:199
 msgid "Precise: Radical Order"
 msgstr "Precise: Radical Order"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:197
+#: src/data/translate/skills.ts:200
 msgid "Precise: Rejuvenation"
 msgstr "Precise: Rejuvenation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:297
+#: src/data/translate/skills.ts:300
 msgid "Precise: Safety in Numbers"
 msgstr "Precise: Safety in Numbers"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:298
+#: src/data/translate/skills.ts:301
 msgid "Precise: Seal Conversion"
 msgstr "Precise: Seal Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:299
+#: src/data/translate/skills.ts:302
 msgid "Precise: Selfishness"
 msgstr "Precise: Selfishness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:300
+#: src/data/translate/skills.ts:303
 msgid "Precise: Selfless"
 msgstr "Precise: Selfless"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:198
+#: src/data/translate/skills.ts:201
 msgid "Precise: Spell Amplification"
 msgstr "Precise: Spell Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:301
+#: src/data/translate/skills.ts:304
 msgid "Precise: Stand as One"
 msgstr "Precise: Stand as One"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:199
+#: src/data/translate/skills.ts:202
 msgid "Precise: Steadfast"
 msgstr "Precise: Steadfast"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:302
+#: src/data/translate/skills.ts:305
 msgid "Precise: Superpower"
 msgstr "Precise: Superpower"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:200
+#: src/data/translate/skills.ts:203
 msgid "Precise: Swiftness"
 msgstr "Precise: Swiftness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:201
+#: src/data/translate/skills.ts:204
 msgid "Precise: Thunder Focus"
 msgstr "Precise: Thunder Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:202
+#: src/data/translate/skills.ts:205
 msgid "Precise: Weapon Amplification"
 msgstr "Precise: Weapon Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:304
+#: src/data/translate/skills.ts:307
 msgid "Precision Strike"
 msgstr "Precision Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:305
+#: src/data/translate/skills.ts:308
 msgid "Preparation"
 msgstr "Preparation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:306
+#: src/data/translate/skills.ts:309
 msgid "Projectile Penetration"
 msgstr "Projectile Penetration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:307
+#: src/data/translate/skills.ts:310
 msgid "Projectile Split"
 msgstr "Projectile Split"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:308
+#: src/data/translate/skills.ts:311
 msgid "Protection Field"
 msgstr "Protection Field"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:309
+#: src/data/translate/skills.ts:312
 msgid "Psychic Burst"
 msgstr "Psychic Burst"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:310
+#: src/data/translate/skills.ts:313
 msgid "Psychic Surge"
 msgstr "Psychic Surge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:311
+#: src/data/translate/skills.ts:314
 msgid "Quick Decision"
 msgstr "Quick Decision"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:312
+#: src/data/translate/skills.ts:315
 msgid "Quick Mobility"
 msgstr "Quick Mobility"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:313
+#: src/data/translate/skills.ts:316
 msgid "Quick Return"
 msgstr "Quick Return"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:204
+#: src/data/translate/skills.ts:207
 msgid "Radical Order"
 msgstr "Radical Order"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:314
+#: src/data/translate/skills.ts:317
 msgid "Raging Slash"
 msgstr "Raging Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:104
+#: src/data/translate/skills.ts:106
 msgid "Raging Warcry"
 msgstr "Raging Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:105
+#: src/data/translate/skills.ts:107
 msgid "Rain of Arrows"
 msgstr "Rain of Arrows"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:582
+#: src/data/translate/skills.ts:585
 msgid "Rain of Arrows: Payback (Noble)"
 msgstr "Rain of Arrows: Payback (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:439
+#: src/data/translate/skills.ts:442
 msgid "Rain of Arrows: Swift Flight (Magnificent)"
 msgstr "Rain of Arrows: Swift Flight (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:583
+#: src/data/translate/skills.ts:586
 msgid "Rain of Arrows: Tracking (Noble)"
 msgstr "Rain of Arrows: Tracking (Noble)"
 
@@ -2209,996 +2209,1001 @@ msgstr "Rain of Arrows: Tracking (Noble)"
 #~ msgstr "Reaping Agony"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:315
+#: src/data/translate/skills.ts:318
 msgid "Recklessness"
 msgstr "Recklessness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:316
+#: src/data/translate/skills.ts:319
 msgid "Reclusion"
 msgstr "Reclusion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:317
+#: src/data/translate/skills.ts:320
 msgid "Recuperation"
 msgstr "Recuperation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:106
+#: src/data/translate/skills.ts:108
 msgid "Reform"
 msgstr "Reform"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:318
+#: src/data/translate/skills.ts:321
 msgid "Refracted Prism"
 msgstr "Refracted Prism"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:205
+#: src/data/translate/skills.ts:208
 msgid "Rejuvenation"
 msgstr "Rejuvenation"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:319
+#: src/data/translate/skills.ts:322
 msgid "Residues"
 msgstr "Residues"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:320
+#: src/data/translate/skills.ts:323
 msgid "Restoration Charge"
 msgstr "Restoration Charge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:321
+#: src/data/translate/skills.ts:324
 msgid "Restrain"
 msgstr "Restrain"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:107
+#: src/data/translate/skills.ts:109
 msgid "Resurrection Warcry"
 msgstr "Resurrection Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:108
+#: src/data/translate/skills.ts:110
 msgid "Ring of Blades"
 msgstr "Ring of Blades"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:440
+#: src/data/translate/skills.ts:443
 msgid "Ring of Blades: Blade Formation (Magnificent)"
 msgstr "Ring of Blades: Blade Formation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:584
+#: src/data/translate/skills.ts:587
 msgid "Ring of Blades: Razor Edge (Noble)"
 msgstr "Ring of Blades: Razor Edge (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:585
+#: src/data/translate/skills.ts:588
 msgid "Ring of Blades: Strength in Numbers (Noble)"
 msgstr "Ring of Blades: Strength in Numbers (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:109
+#: src/data/translate/skills.ts:111
 msgid "Ring of Ice"
 msgstr "Ring of Ice"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:586
+#: src/data/translate/skills.ts:589
 msgid "Ring of Ice: Cascade (Noble)"
 msgstr "Ring of Ice: Cascade (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:441
+#: src/data/translate/skills.ts:444
 msgid "Ring of Ice: Ice Seal (Magnificent)"
 msgstr "Ring of Ice: Ice Seal (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:110
+#: src/data/translate/skills.ts:112
 msgid "Rising Edge"
 msgstr "Rising Edge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:111
+#: src/data/translate/skills.ts:113
 msgid "Rock Blast"
 msgstr "Rock Blast"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:112
+#: src/data/translate/skills.ts:114
 msgid "Rocket Jump"
 msgstr "Rocket Jump"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:113
+#: src/data/translate/skills.ts:115
 msgid "Safeguard Ring"
 msgstr "Safeguard Ring"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:114
+#: src/data/translate/skills.ts:116
 msgid "Savage Charge"
 msgstr "Savage Charge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:442
+#: src/data/translate/skills.ts:445
 msgid "Savage Charge: Bulldoze (Magnificent)"
 msgstr "Savage Charge: Bulldoze (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:443
+#: src/data/translate/skills.ts:446
 msgid "Savage Charge: Infuriate (Magnificent)"
 msgstr "Savage Charge: Infuriate (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:587
+#: src/data/translate/skills.ts:590
 msgid "Savage Charge: Raid (Noble)"
 msgstr "Savage Charge: Raid (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:322
+#: src/data/translate/skills.ts:325
 msgid "Savage Growth"
 msgstr "Savage Growth"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:115
+#: src/data/translate/skills.ts:117
 msgid "Scattered Mud"
 msgstr "Scattered Mud"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:323
+#: src/data/translate/skills.ts:326
 msgid "Scattershot Beam"
 msgstr "Scattershot Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:116
+#: src/data/translate/skills.ts:118
 msgid "Scorch"
 msgstr "Scorch"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:117
+#: src/data/translate/skills.ts:119
 msgid "Scorching Beam"
 msgstr "Scorching Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:588
+#: src/data/translate/skills.ts:591
 msgid "Scorching Beam: Disintegrate (Noble)"
 msgstr "Scorching Beam: Disintegrate (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:589
+#: src/data/translate/skills.ts:592
 msgid "Scorching Beam: Immolate (Noble)"
 msgstr "Scorching Beam: Immolate (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:444
+#: src/data/translate/skills.ts:447
 msgid "Scorching Beam: Shockwave (Magnificent)"
 msgstr "Scorching Beam: Shockwave (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:445
+#: src/data/translate/skills.ts:448
 msgid "Scorching Beam: Supercharge (Magnificent)"
 msgstr "Scorching Beam: Supercharge (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:118
+#: src/data/translate/skills.ts:120
 msgid "Scorching Pulse"
 msgstr "Scorching Pulse"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:324
+#: src/data/translate/skills.ts:327
 msgid "Seal Conversion"
 msgstr "Seal Conversion"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:119
+#: src/data/translate/skills.ts:121
 msgid "Secret Origin Unleash"
 msgstr "Secret Origin Unleash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:325
+#: src/data/translate/skills.ts:328
 msgid "Sentry Modification"
 msgstr "Sentry Modification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:120
+#: src/data/translate/skills.ts:122
 msgid "Serpent Beam"
 msgstr "Serpent Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:446
+#: src/data/translate/skills.ts:449
 msgid "Serpent Beam: Barrage (Magnificent)"
 msgstr "Serpent Beam: Barrage (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:447
+#: src/data/translate/skills.ts:450
 msgid "Serpent Beam: Inferno (Magnificent)"
 msgstr "Serpent Beam: Inferno (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:590
+#: src/data/translate/skills.ts:593
 msgid "Serpent Beam: Torrent (Noble)"
 msgstr "Serpent Beam: Torrent (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:591
+#: src/data/translate/skills.ts:594
 msgid "Serpent Beam: Twin Blaze (Noble)"
 msgstr "Serpent Beam: Twin Blaze (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:326
+#: src/data/translate/skills.ts:329
 msgid "Servant Damage"
 msgstr "Servant Damage"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:327
+#: src/data/translate/skills.ts:330
 msgid "Servant Life"
 msgstr "Servant Life"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:121
+#: src/data/translate/skills.ts:123
 msgid "Shackles of Malice"
 msgstr "Shackles of Malice"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:448
+#: src/data/translate/skills.ts:451
 msgid "Shackles of Malice: Defile (Magnificent)"
 msgstr "Shackles of Malice: Defile (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:592
+#: src/data/translate/skills.ts:595
 msgid "Shackles of Malice: Mutual Destruction (Noble)"
 msgstr "Shackles of Malice: Mutual Destruction (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:593
+#: src/data/translate/skills.ts:596
 msgid "Shackles of Malice: Spite (Noble)"
 msgstr "Shackles of Malice: Spite (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:449
+#: src/data/translate/skills.ts:452
 msgid "Shackles of Malice: Vendetta (Magnificent)"
 msgstr "Shackles of Malice: Vendetta (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:122
+#: src/data/translate/skills.ts:124
 msgid "Shadow Dash"
 msgstr "Shadow Dash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:123
+#: src/data/translate/skills.ts:125
 msgid "Shadow Shot"
 msgstr "Shadow Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:450
+#: src/data/translate/skills.ts:453
 msgid "Shadow Shot: Eradicate (Magnificent)"
 msgstr "Shadow Shot: Eradicate (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:124
+#: src/data/translate/skills.ts:126
 msgid "Shadow Swamp"
 msgstr "Shadow Swamp"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:451
+#: src/data/translate/skills.ts:454
 msgid "Shadow Swamp: Gushing Spring (Magnificent)"
 msgstr "Shadow Swamp: Gushing Spring (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:594
+#: src/data/translate/skills.ts:597
 msgid "Shadow Swamp: Overlapping Waves (Noble)"
 msgstr "Shadow Swamp: Overlapping Waves (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:452
+#: src/data/translate/skills.ts:455
 msgid "Shadow Swamp: Splatter (Magnificent)"
 msgstr "Shadow Swamp: Splatter (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:595
+#: src/data/translate/skills.ts:598
 msgid "Shadow Swamp: Still Water (Noble)"
 msgstr "Shadow Swamp: Still Water (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:125
+#: src/data/translate/skills.ts:127
 msgid "Shattered Stone"
 msgstr "Shattered Stone"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:126
+#: src/data/translate/skills.ts:128
 msgid "Shockwave Warcry"
 msgstr "Shockwave Warcry"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:328
+#: src/data/translate/skills.ts:331
 msgid "Shortened Duration"
 msgstr "Shortened Duration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:329
+#: src/data/translate/skills.ts:332
 msgid "Slow Projectile"
 msgstr "Slow Projectile"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:127
+#: src/data/translate/skills.ts:129
 msgid "Sparkle"
 msgstr "Sparkle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:453
+#: src/data/translate/skills.ts:456
 msgid "Sparkle: Magnetic Field (Magnificent)"
 msgstr "Sparkle: Magnetic Field (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:596
+#: src/data/translate/skills.ts:599
 msgid "Sparkle: Static Electricity (Noble)"
 msgstr "Sparkle: Static Electricity (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:597
+#: src/data/translate/skills.ts:600
 msgid "Sparkle: Strobe (Noble)"
 msgstr "Sparkle: Strobe (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:128
+#: src/data/translate/skills.ts:130
 msgid "Spectral Slash"
 msgstr "Spectral Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:454
+#: src/data/translate/skills.ts:457
 msgid "Spectral Slash: Detonation (Magnificent)"
 msgstr "Spectral Slash: Detonation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:598
+#: src/data/translate/skills.ts:601
 msgid "Spectral Slash: Legion (Noble)"
 msgstr "Spectral Slash: Legion (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:599
+#: src/data/translate/skills.ts:602
 msgid "Spectral Slash: Synchrony (Noble)"
 msgstr "Spectral Slash: Synchrony (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:129
+#: src/data/translate/skills.ts:131
 msgid "Speed Phantom"
 msgstr "Speed Phantom"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:206
+#: src/data/translate/skills.ts:209
 msgid "Spell Amplification"
 msgstr "Spell Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:330
+#: src/data/translate/skills.ts:333
 msgid "Spell Concentration"
 msgstr "Spell Concentration"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:331
+#: src/data/translate/skills.ts:334
 msgid "Spell Tangle"
 msgstr "Spell Tangle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:130
+#: src/data/translate/skills.ts:132
 msgid "Spiral Strike"
 msgstr "Spiral Strike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:131
+#: src/data/translate/skills.ts:133
 msgid "Split Firebolt"
 msgstr "Split Firebolt"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:600
+#: src/data/translate/skills.ts:603
 msgid "Split Firebolt: Focal Point (Noble)"
 msgstr "Split Firebolt: Focal Point (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:455
+#: src/data/translate/skills.ts:458
 msgid "Split Firebolt: Split (Magnificent)"
 msgstr "Split Firebolt: Split (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:132
+#: src/data/translate/skills.ts:134
 msgid "Split Shot"
 msgstr "Split Shot"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:601
+#: src/data/translate/skills.ts:604
 msgid "Split Shot: Collaboration (Noble)"
 msgstr "Split Shot: Collaboration (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:456
+#: src/data/translate/skills.ts:459
 msgid "Split Shot: Diversion (Magnificent)"
 msgstr "Split Shot: Diversion (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:602
+#: src/data/translate/skills.ts:605
 msgid "Split Shot: Rapid Advance (Noble)"
 msgstr "Split Shot: Rapid Advance (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:457
+#: src/data/translate/skills.ts:460
 msgid "Split Shot: Volley (Magnificent)"
 msgstr "Split Shot: Volley (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:133
+#: src/data/translate/skills.ts:135
 msgid "Star Stalker"
 msgstr "Star Stalker"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:207
+#: src/data/translate/skills.ts:210
 msgid "Steadfast"
 msgstr "Steadfast"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:332
+#: src/data/translate/skills.ts:335
 msgid "Steamroll"
 msgstr "Steamroll"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:134
+#: src/data/translate/skills.ts:136
 msgid "Stoneskin"
 msgstr "Stoneskin"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:208
+#: src/data/translate/skills.ts:211
 msgid "Summon Erosion Magus"
 msgstr "Summon Erosion Magus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:458
+#: src/data/translate/skills.ts:461
 msgid "Summon Erosion Magus: Frequent Quake (Magnificent)"
 msgstr "Summon Erosion Magus: Frequent Quake (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:603
+#: src/data/translate/skills.ts:606
 msgid "Summon Erosion Magus: Malady (Noble)"
 msgstr "Summon Erosion Magus: Malady (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:604
+#: src/data/translate/skills.ts:607
 msgid "Summon Erosion Magus: Malignant (Noble)"
 msgstr "Summon Erosion Magus: Malignant (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:459
+#: src/data/translate/skills.ts:462
 msgid "Summon Erosion Magus: Plague Source (Magnificent)"
 msgstr "Summon Erosion Magus: Plague Source (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:460
+#: src/data/translate/skills.ts:463
 msgid "Summon Erosion Magus: Wicked (Magnificent)"
 msgstr "Summon Erosion Magus: Wicked (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:209
+#: src/data/translate/skills.ts:212
 msgid "Summon Fire Magus"
 msgstr "Summon Fire Magus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:461
+#: src/data/translate/skills.ts:464
 msgid "Summon Fire Magus: Aflame (Magnificent)"
 msgstr "Summon Fire Magus: Aflame (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:605
+#: src/data/translate/skills.ts:608
 msgid "Summon Fire Magus: Engulfing Flames (Noble)"
 msgstr "Summon Fire Magus: Engulfing Flames (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:462
+#: src/data/translate/skills.ts:465
 msgid "Summon Fire Magus: Fire Ward (Magnificent)"
 msgstr "Summon Fire Magus: Fire Ward (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:463
+#: src/data/translate/skills.ts:466
 msgid "Summon Fire Magus: Flowing Flames (Magnificent)"
 msgstr "Summon Fire Magus: Flowing Flames (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:606
+#: src/data/translate/skills.ts:609
 msgid "Summon Fire Magus: Wicked Spirit (Noble)"
 msgstr "Summon Fire Magus: Wicked Spirit (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:210
+#: src/data/translate/skills.ts:213
 msgid "Summon Frost Magus"
 msgstr "Summon Frost Magus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:464
+#: src/data/translate/skills.ts:467
 msgid "Summon Frost Magus: Cold Ward (Magnificent)"
 msgstr "Summon Frost Magus: Cold Ward (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:465
+#: src/data/translate/skills.ts:468
 msgid "Summon Frost Magus: Ice Crusher (Magnificent)"
 msgstr "Summon Frost Magus: Ice Crusher (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:466
+#: src/data/translate/skills.ts:469
 msgid "Summon Frost Magus: Piercing Cold (Magnificent)"
 msgstr "Summon Frost Magus: Piercing Cold (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:607
+#: src/data/translate/skills.ts:610
 msgid "Summon Frost Magus: Vengeance (Noble)"
 msgstr "Summon Frost Magus: Vengeance (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:135
+#: src/data/translate/skills.ts:137
 msgid "Summon Grim Phantom"
 msgstr "Summon Grim Phantom"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:608
+#: src/data/translate/skills.ts:611
 msgid "Summon Grim Phantom: Flicker (Noble)"
 msgstr "Summon Grim Phantom: Flicker (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:467
+#: src/data/translate/skills.ts:470
 msgid "Summon Grim Phantom: Glare (Magnificent)"
 msgstr "Summon Grim Phantom: Glare (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:609
+#: src/data/translate/skills.ts:612
 msgid "Summon Grim Phantom: Shriek (Noble)"
 msgstr "Summon Grim Phantom: Shriek (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:468
+#: src/data/translate/skills.ts:471
 msgid "Summon Grim Phantom: Spur (Magnificent)"
 msgstr "Summon Grim Phantom: Spur (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:610
+#: src/data/translate/skills.ts:613
 msgid "Summon Grim Phantom: Undercurrent (Noble)"
 msgstr "Summon Grim Phantom: Undercurrent (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:136
+#: src/data/translate/skills.ts:138
 msgid "Summon Machine Guard"
 msgstr "Summon Machine Guard"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:611
+#: src/data/translate/skills.ts:614
 msgid "Summon Machine Guard: Crushing Blow (Noble)"
 msgstr "Summon Machine Guard: Crushing Blow (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:612
+#: src/data/translate/skills.ts:615
 msgid "Summon Machine Guard: Dead Silence (Noble)"
 msgstr "Summon Machine Guard: Dead Silence (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:613
+#: src/data/translate/skills.ts:616
 msgid "Summon Machine Guard: Discipline (Noble)"
 msgstr "Summon Machine Guard: Discipline (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:469
+#: src/data/translate/skills.ts:472
 msgid "Summon Machine Guard: Iron Fist (Magnificent)"
 msgstr "Summon Machine Guard: Iron Fist (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:470
+#: src/data/translate/skills.ts:473
 msgid "Summon Machine Guard: Pummel (Magnificent)"
 msgstr "Summon Machine Guard: Pummel (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:211
+#: src/data/translate/skills.ts:214
 msgid "Summon Rock Magus"
 msgstr "Summon Rock Magus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:471
+#: src/data/translate/skills.ts:474
 msgid "Summon Rock Magus: Clustering Sand (Magnificent)"
 msgstr "Summon Rock Magus: Clustering Sand (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:472
+#: src/data/translate/skills.ts:475
 msgid "Summon Rock Magus: Forging (Magnificent)"
 msgstr "Summon Rock Magus: Forging (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:614
+#: src/data/translate/skills.ts:617
 msgid "Summon Rock Magus: Stone Refinement (Noble)"
 msgstr "Summon Rock Magus: Stone Refinement (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:473
+#: src/data/translate/skills.ts:476
 msgid "Summon Rock Magus: Unyielding (Magnificent)"
 msgstr "Summon Rock Magus: Unyielding (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:137
+#: src/data/translate/skills.ts:139
 msgid "Summon Spider Tank"
 msgstr "Summon Spider Tank"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:615
+#: src/data/translate/skills.ts:618
 msgid "Summon Spider Tank: Focus Fire (Noble)"
 msgstr "Summon Spider Tank: Focus Fire (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:616
+#: src/data/translate/skills.ts:619
 msgid "Summon Spider Tank: Spider Egg (Noble)"
 msgstr "Summon Spider Tank: Spider Egg (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:474
+#: src/data/translate/skills.ts:477
 msgid "Summon Spider Tank: Steamroll (Magnificent)"
 msgstr "Summon Spider Tank: Steamroll (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:212
+#: src/data/translate/skills.ts:215
 msgid "Summon Thunder Magus"
 msgstr "Summon Thunder Magus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:617
+#: src/data/translate/skills.ts:620
 msgid "Summon Thunder Magus: Agility (Noble)"
 msgstr "Summon Thunder Magus: Agility (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:475
+#: src/data/translate/skills.ts:478
 msgid "Summon Thunder Magus: Continuation (Magnificent)"
 msgstr "Summon Thunder Magus: Continuation (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:618
+#: src/data/translate/skills.ts:621
 msgid "Summon Thunder Magus: Heavy Arrow (Noble)"
 msgstr "Summon Thunder Magus: Heavy Arrow (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:476
+#: src/data/translate/skills.ts:479
 msgid "Summon Thunder Magus: Lightning Ward (Magnificent)"
 msgstr "Summon Thunder Magus: Lightning Ward (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:138
+#: src/data/translate/skills.ts:140
 msgid "Swift Shadow Raid"
 msgstr "Swift Shadow Raid"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:213
+#: src/data/translate/skills.ts:216
 msgid "Swiftness"
 msgstr "Swiftness"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:477
+#: src/data/translate/skills.ts:480
 msgid "Synthetic Troop: Force Field (Magnificent)"
 msgstr "Synthetic Troop: Force Field (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:333
+#: src/data/translate/skills.ts:336
 msgid "Tendonslicer"
 msgstr "Tendonslicer"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:334
+#: src/data/translate/skills.ts:337
 msgid "Terrain of Malice"
 msgstr "Terrain of Malice"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:139
+#: src/data/translate/skills.ts:141
 msgid "Thunder Core"
 msgstr "Thunder Core"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:619
+#: src/data/translate/skills.ts:622
 msgid "Thunder Core: Augmentation (Noble)"
 msgstr "Thunder Core: Augmentation (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:478
+#: src/data/translate/skills.ts:481
 msgid "Thunder Core: Electric Field (Magnificent)"
 msgstr "Thunder Core: Electric Field (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:620
+#: src/data/translate/skills.ts:623
 msgid "Thunder Core: Lightning Lasso (Noble)"
 msgstr "Thunder Core: Lightning Lasso (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:479
+#: src/data/translate/skills.ts:482
 msgid "Thunder Core: Lone Vanguard (Magnificent)"
 msgstr "Thunder Core: Lone Vanguard (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:214
+#: src/data/translate/skills.ts:217
 msgid "Thunder Focus"
 msgstr "Thunder Focus"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:480
+#: src/data/translate/skills.ts:483
 msgid "Thunder Focus: Haste (Magnificent)"
 msgstr "Thunder Focus: Haste (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:621
+#: src/data/translate/skills.ts:624
 msgid "Thunder Focus: Overflow (Noble)"
 msgstr "Thunder Focus: Overflow (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:481
+#: src/data/translate/skills.ts:484
 msgid "Thunder Focus: Quickstep (Magnificent)"
 msgstr "Thunder Focus: Quickstep (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:622
+#: src/data/translate/skills.ts:625
 msgid "Thunder Focus: Tremor (Noble)"
 msgstr "Thunder Focus: Tremor (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:140
+#: src/data/translate/skills.ts:142
 msgid "Thunder Slash"
 msgstr "Thunder Slash"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:623
+#: src/data/translate/skills.ts:626
 msgid "Thunder Slash: Big Stride (Noble)"
 msgstr "Thunder Slash: Big Stride (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:482
+#: src/data/translate/skills.ts:485
 msgid "Thunder Slash: Blade Cluster (Magnificent)"
 msgstr "Thunder Slash: Blade Cluster (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:624
+#: src/data/translate/skills.ts:627
 msgid "Thunder Slash: Flurry (Noble)"
 msgstr "Thunder Slash: Flurry (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:483
+#: src/data/translate/skills.ts:486
 msgid "Thunder Slash: Keen Edge (Magnificent)"
 msgstr "Thunder Slash: Keen Edge (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:141
+#: src/data/translate/skills.ts:143
 msgid "Thunder Spike"
 msgstr "Thunder Spike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:484
+#: src/data/translate/skills.ts:487
 msgid "Thunder Spike: Numb (Magnificent)"
 msgstr "Thunder Spike: Numb (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:625
+#: src/data/translate/skills.ts:628
 msgid "Thunder Spike: Rumbling Thunder (Noble)"
 msgstr "Thunder Spike: Rumbling Thunder (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:626
+#: src/data/translate/skills.ts:629
 msgid "Thunder Spike: Tremble (Noble)"
 msgstr "Thunder Spike: Tremble (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:142
+#: src/data/translate/skills.ts:144
 msgid "Thunderbolt Overload"
 msgstr "Thunderbolt Overload"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:627
+#: src/data/translate/skills.ts:630
 msgid "Thunderbolt Overload: Augmentation (Noble)"
 msgstr "Thunderbolt Overload: Augmentation (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:485
+#: src/data/translate/skills.ts:488
 msgid "Thunderbolt Overload: Leap (Magnificent)"
 msgstr "Thunderbolt Overload: Leap (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:486
+#: src/data/translate/skills.ts:489
 msgid "Thunderbolt Overload: Retribution (Magnificent)"
 msgstr "Thunderbolt Overload: Retribution (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:143
+#: src/data/translate/skills.ts:145
 msgid "Thundercloud"
 msgstr "Thundercloud"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:144
+#: src/data/translate/skills.ts:146
 msgid "Thundercloud Surge"
 msgstr "Thundercloud Surge"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:487
+#: src/data/translate/skills.ts:490
 msgid "Thundercloud: Alarmed Awakening (Magnificent)"
 msgstr "Thundercloud: Alarmed Awakening (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:488
+#: src/data/translate/skills.ts:491
 msgid "Thundercloud: Billowing Cloud (Magnificent)"
 msgstr "Thundercloud: Billowing Cloud (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:628
+#: src/data/translate/skills.ts:631
 msgid "Thundercloud: Heavy Cloud (Noble)"
 msgstr "Thundercloud: Heavy Cloud (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:629
+#: src/data/translate/skills.ts:632
 msgid "Thundercloud: Thunderous Blow (Noble)"
 msgstr "Thundercloud: Thunderous Blow (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:145
+#: src/data/translate/skills.ts:147
 msgid "Thunderlight Arrow"
 msgstr "Thunderlight Arrow"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:146
+#: src/data/translate/skills.ts:148
 msgid "Thunderlight Bond"
 msgstr "Thunderlight Bond"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:147
+#: src/data/translate/skills.ts:149
 msgid "Timid"
 msgstr "Timid"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:148
+#: src/data/translate/skills.ts:150
 msgid "Towering Mountains"
 msgstr "Towering Mountains"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:149
+#: src/data/translate/skills.ts:151
 msgid "Vendetta"
 msgstr "Vendetta"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:150
+#: src/data/translate/skills.ts:152
 msgid "Vulnerability"
 msgstr "Vulnerability"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:215
+#: src/data/translate/skills.ts:218
 msgid "Weapon Amplification"
 msgstr "Weapon Amplification"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:335
+#: src/data/translate/skills.ts:338
 msgid "Well-Fought Battle"
 msgstr "Well-Fought Battle"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:151
+#: src/data/translate/skills.ts:153
 msgid "Whirlwind"
 msgstr "Whirlwind"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:152
+#: src/data/translate/skills.ts:154
 msgid "Whirlwind Blade"
 msgstr "Whirlwind Blade"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:631
+#: src/data/translate/skills.ts:634
 msgid "Whirlwind Blade: Circling (Noble)"
 msgstr "Whirlwind Blade: Circling (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:632
+#: src/data/translate/skills.ts:635
 msgid "Whirlwind Blade: Sharpen (Noble)"
 msgstr "Whirlwind Blade: Sharpen (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:491
+#: src/data/translate/skills.ts:494
 msgid "Whirlwind Blade: Swift Slash (Magnificent)"
 msgstr "Whirlwind Blade: Swift Slash (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:492
+#: src/data/translate/skills.ts:495
 msgid "Whirlwind Blade: Unsheath (Magnificent)"
 msgstr "Whirlwind Blade: Unsheath (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:489
+#: src/data/translate/skills.ts:492
 msgid "Whirlwind: Endless Wind (Magnificent)"
 msgstr "Whirlwind: Endless Wind (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:630
+#: src/data/translate/skills.ts:633
 msgid "Whirlwind: Whirling Blade (Noble)"
 msgstr "Whirlwind: Whirling Blade (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:490
+#: src/data/translate/skills.ts:493
 msgid "Whirlwind: Wind Barrier (Magnificent)"
 msgstr "Whirlwind: Wind Barrier (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:336
+#: src/data/translate/skills.ts:339
 msgid "Willpower"
 msgstr "Willpower"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:153
+#: src/data/translate/skills.ts:155
 msgid "Wilt Spike"
 msgstr "Wilt Spike"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:633
+#: src/data/translate/skills.ts:636
 msgid "Wilt Spike: Evanescence (Noble)"
 msgstr "Wilt Spike: Evanescence (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:493
+#: src/data/translate/skills.ts:496
 msgid "Wilt Spike: Languish (Magnificent)"
 msgstr "Wilt Spike: Languish (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:634
+#: src/data/translate/skills.ts:637
 msgid "Wilt Spike: Mirage (Noble)"
 msgstr "Wilt Spike: Mirage (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:494
+#: src/data/translate/skills.ts:497
 msgid "Wilt Spike: Wither (Magnificent)"
 msgstr "Wilt Spike: Wither (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:154
+#: src/data/translate/skills.ts:156
 msgid "Wilting Beam"
 msgstr "Wilting Beam"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:495
+#: src/data/translate/skills.ts:498
 msgid "Wilting Beam: Dispirit (Magnificent)"
 msgstr "Wilting Beam: Dispirit (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:635
+#: src/data/translate/skills.ts:638
 msgid "Wilting Beam: Rapid Completion (Noble)"
 msgstr "Wilting Beam: Rapid Completion (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:496
+#: src/data/translate/skills.ts:499
 msgid "Wilting Beam: Reflection (Magnificent)"
 msgstr "Wilting Beam: Reflection (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:636
+#: src/data/translate/skills.ts:639
 msgid "Wilting Beam: Set Course (Noble)"
 msgstr "Wilting Beam: Set Course (Noble)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:337
+#: src/data/translate/skills.ts:340
 msgid "Wind Projectiles"
 msgstr "Wind Projectiles"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:155
+#: src/data/translate/skills.ts:157
 msgid "Withering Payback"
 msgstr "Withering Payback"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:156
+#: src/data/translate/skills.ts:158
 msgid "World of Thorns"
 msgstr "World of Thorns"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:157
+#: src/data/translate/skills.ts:163
+msgid "[Test] Combo Attack"
+msgstr "[Test] Combo Attack"
+
+#. js-lingui-explicit-id
+#: src/data/translate/skills.ts:159
 msgid "[Test] Simple Attack"
 msgstr "[Test] Simple Attack"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:158
+#: src/data/translate/skills.ts:160
 msgid "[Test] Simple Persistent Spell"
 msgstr "[Test] Simple Persistent Spell"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:159
+#: src/data/translate/skills.ts:161
 msgid "[Test] Simple Spell"
 msgstr "[Test] Simple Spell"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:160
+#: src/data/translate/skills.ts:162
 msgid "[Test] Slash Strike Skill"
 msgstr "[Test] Slash Strike Skill"

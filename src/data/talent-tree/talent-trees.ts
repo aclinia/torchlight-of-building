@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-talent-tree-data.ts
 import type { TalentTreeData } from "./types";
 
 export const TalentTrees: readonly TalentTreeData[] = [

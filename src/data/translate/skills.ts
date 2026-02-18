@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-translate.ts
 import { i18n } from "@lingui/core";
 
 export const skillNames = [
@@ -158,6 +160,7 @@ export const skillNames = [
   i18n._("[Test] Simple Persistent Spell"),
   i18n._("[Test] Simple Spell"),
   i18n._("[Test] Slash Strike Skill"),
+  i18n._("[Test] Combo Attack"),
   i18n._("Acuteness Focus"),
   i18n._("Ailment Amplification"),
   i18n._("Charged Flames"),

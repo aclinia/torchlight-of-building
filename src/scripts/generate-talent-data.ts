@@ -35,7 +35,9 @@ const extractTalentData = (html: string): Talent[] => {
 };
 
 const generateDataFile = (items: Talent[]): string => {
-  return `import type { Talent } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-talent-data.ts
+import type { Talent } from "./types";
 
 export const Talents: readonly Talent[] = ${JSON.stringify(items)};
 `;

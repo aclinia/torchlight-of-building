@@ -155,7 +155,9 @@ const extractPactspirit = (
 };
 
 const generateDataFile = (items: Pactspirit[]): string => {
-  return `import type { Pactspirit } from "./types";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-pactspirit-data.ts
+import type { Pactspirit } from "./types";
 
 export const Pactspirits = ${JSON.stringify(items)} as const satisfies readonly Pactspirit[];
 `;

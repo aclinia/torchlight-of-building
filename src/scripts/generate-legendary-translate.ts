@@ -51,7 +51,9 @@ const fetchLegendaryPages = async (locale: Translate): Promise<void> => {
 };
 
 const generateLegendaryNames = (): string => {
-  return `import { i18n } from "@lingui/core";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-legendary-translate.ts
+import { i18n } from "@lingui/core";
 
 export const legendaryNames = [
 ${Legendaries.map((l: Legendary) => `  i18n._("${l.name}")`).join(",\n")},

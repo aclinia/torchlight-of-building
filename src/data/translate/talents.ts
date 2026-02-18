@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-talent-translate.ts
 import { i18n } from "@lingui/core";
 
 export const talentNames = [
@@ -8,6 +10,7 @@ export const talentNames = [
   i18n._("Mixture"),
   i18n._("Plague"),
   i18n._("Subtle Impact"),
+  i18n._(""),
   i18n._("Lich"),
   i18n._("Indifference"),
   i18n._("Off The Beaten Track"),
@@ -53,8 +56,8 @@ export const talentNames = [
   i18n._("Quick Advancement"),
   i18n._("Waiting Attack"),
   i18n._("Druid"),
-  i18n._("Acquaintance"),
   i18n._("Cultivation"),
+  i18n._("Full Load"),
   i18n._("Poisoned Relief"),
   i18n._("Rebirth"),
   i18n._("Marksman"),
@@ -68,9 +71,9 @@ export const talentNames = [
   i18n._("Chilly"),
   i18n._("Insight"),
   i18n._("Peculiar Vibe"),
-  i18n._("Winter"),
+  i18n._("Quick Wits"),
   i18n._("Arcanist"),
-  i18n._("Full Load"),
+  i18n._("Acquaintance"),
   i18n._("Mana"),
   i18n._("Mind Focus"),
   i18n._("Preparation"),
@@ -141,7 +144,7 @@ export const talentNames = [
   i18n._("Warrior"),
   i18n._("Arcane"),
   i18n._("Life Path"),
-  i18n._("No Lose Ends"),
+  i18n._("No Loose Ends"),
   i18n._("Survival Will"),
   i18n._("God of War"),
   i18n._("Ambition"),

@@ -165,7 +165,9 @@ const generateHeroText = async (): Promise<string> => {
     await new Promise((resolve) => setTimeout(resolve, 100));
   }
 
-  return `import { i18n } from "@lingui/core";
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hero-translate.ts
+import { i18n } from "@lingui/core";
 
 export const heroNames = [
 ${herolist.map((h) => `  i18n._("${h.name}")`).join(",\n")},

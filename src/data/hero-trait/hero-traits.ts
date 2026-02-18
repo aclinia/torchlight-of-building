@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hero-trait-data.ts
 import type { BaseHeroTrait } from "./types";
 
 export const HeroTraits = [

@@ -12,1586 +12,1616 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:4
+#: src/data/translate/legendary-names.ts:6
 msgid "Aeterna Martyr"
 msgstr "殉永恒者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:5
+#: src/data/translate/legendary-names.ts:7
 msgid "Agony of Lost Self"
 msgstr "舍本之痛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:6
+#: src/data/translate/legendary-names.ts:8
 msgid "Agony's Embrace"
 msgstr "苦痛之拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:7
+#: src/data/translate/legendary-names.ts:9
 msgid "Air Treaders"
 msgstr "破空轻履"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:8
+#: src/data/translate/legendary-names.ts:10
 msgid "Alloy Covenant"
 msgstr "合金圣约"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:9
+#: src/data/translate/legendary-names.ts:11
 msgid "Arcane Shield"
 msgstr "奥术秘能之盾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:10
+#: src/data/translate/legendary-names.ts:12
 msgid "Archmage's Hands"
 msgstr "大法师之手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:11
+#: src/data/translate/legendary-names.ts:13
 msgid "Ardor"
 msgstr "热忱"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:12
+#: src/data/translate/legendary-names.ts:14
 msgid "Arminius Guillotine"
 msgstr "阿米尼乌斯断头台"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:13
+#: src/data/translate/legendary-names.ts:15
 msgid "Arrival of the Polar Night"
 msgstr "极夜照临"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:14
+#: src/data/translate/legendary-names.ts:16
 msgid "Aslan"
 msgstr "阿日斯兰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:15
+#: src/data/translate/legendary-names.ts:17
 msgid "Awaiting"
 msgstr "失期"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:16
+#: src/data/translate/legendary-names.ts:18
 msgid "Awakening Skull"
 msgstr "苏醒头颅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:17
+#: src/data/translate/legendary-names.ts:19
 msgid "Berserker Bracer"
 msgstr "狂猎者护腕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:18
+#: src/data/translate/legendary-names.ts:20
 msgid "Blade-Dancer's Edges"
 msgstr "舞锋者的群锋"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:19
+#: src/data/translate/legendary-names.ts:21
 msgid "Blade-dancer's Fingers"
 msgstr "舞锋者的双指"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:20
+#: src/data/translate/legendary-names.ts:22
 msgid "Blade-dancer's Steps"
 msgstr "舞锋者的轻踏"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:21
+#: src/data/translate/legendary-names.ts:23
 msgid "Blessing Pendant"
 msgstr "灵佑之坠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:22
+#: src/data/translate/legendary-names.ts:24
 msgid "Blight"
 msgstr "恶劫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:23
+#: src/data/translate/legendary-names.ts:25
 msgid "Blind Vision"
 msgstr "盲眼之视"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:24
+#: src/data/translate/legendary-names.ts:26
 msgid "Blinding Bracers"
 msgstr "灼眼战腕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:25
+#: src/data/translate/legendary-names.ts:27
 msgid "Bodhi Girdle"
 msgstr "达摩束带"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:26
+#: src/data/translate/legendary-names.ts:28
 msgid "Boom Gloves"
 msgstr "砰砰手套"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:27
+#: src/data/translate/legendary-names.ts:29
 msgid "Boor's Iron Crown"
 msgstr "莽夫的铁冠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:28
+#: src/data/translate/legendary-names.ts:30
 msgid "Boots of Devastation"
 msgstr "破壁战履"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:29
+#: src/data/translate/legendary-names.ts:31
 msgid "Boots of Sinned Fire"
 msgstr "罪火之足"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:30
+#: src/data/translate/legendary-names.ts:32
 msgid "Born in Fire"
 msgstr "火焰降生"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:31
+#: src/data/translate/legendary-names.ts:33
 msgid "Bow of Endless Dusk"
 msgstr "无尽黄昏之弓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:32
+#: src/data/translate/legendary-names.ts:34
 msgid "Brainwave Emitter"
 msgstr "脑波迸发器"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:33
+#: src/data/translate/legendary-names.ts:35
 msgid "Broken Sun Ring"
 msgstr "破碎日环"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:34
+#: src/data/translate/legendary-names.ts:36
 msgid "Burning Ice"
 msgstr "不冻之冰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:35
+#: src/data/translate/legendary-names.ts:37
 msgid "Buzzing"
 msgstr "蜂鸣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:36
+#: src/data/translate/legendary-names.ts:38
 msgid "Call of Souls"
 msgstr "灵魄之应"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:37
+#: src/data/translate/legendary-names.ts:39
 msgid "Chain behind the Curtain"
 msgstr "操幕之链"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:38
+#: src/data/translate/legendary-names.ts:40
 msgid "Chain of Resistance"
 msgstr "抗争铁链"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:39
+#: src/data/translate/legendary-names.ts:41
 msgid "Chaos Abyss"
 msgstr "混沌深渊"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:40
+#: src/data/translate/legendary-names.ts:42
 msgid "Chaotic Ending"
 msgstr "混乱终焉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:41
+#: src/data/translate/legendary-names.ts:43
 msgid "Cicada Shell"
 msgstr "蝉锐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:42
+#: src/data/translate/legendary-names.ts:44
 msgid "Circular Clearing"
 msgstr "环形清算"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:43
+#: src/data/translate/legendary-names.ts:45
 msgid "Clarity"
 msgstr "洞明"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:44
+#: src/data/translate/legendary-names.ts:46
 msgid "Clay Doll's Broken Finger"
 msgstr "泥偶的断指"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:45
+#: src/data/translate/legendary-names.ts:47
 msgid "Clenched Spring"
 msgstr "紧握的发条"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:46
+#: src/data/translate/legendary-names.ts:48
 msgid "Cold Breath"
 msgstr "冰冷呼吸"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:47
+#: src/data/translate/legendary-names.ts:49
 msgid "Cold Sanctuary Prosthetics"
 msgstr "御寒义肢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:48
+#: src/data/translate/legendary-names.ts:50
 msgid "Coldness Tracer's Tear"
 msgstr "溯寒者的鸣泣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:49
+#: src/data/translate/legendary-names.ts:51
 msgid "Compensatory Life"
 msgstr "生息代偿"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:50
+#: src/data/translate/legendary-names.ts:52
 msgid "Confusion Elemental Belt"
 msgstr "混乱元素腰带"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:51
+#: src/data/translate/legendary-names.ts:53
 msgid "Corrosion of Manifolds"
 msgstr "流形之蚀"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:52
+#: src/data/translate/legendary-names.ts:54
 msgid "Corrupted Bulwark"
 msgstr "浸蚀壁垒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:53
+#: src/data/translate/legendary-names.ts:55
 msgid "Corrupted Marrow"
 msgstr "蚀髓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:54
+#: src/data/translate/legendary-names.ts:56
 msgid "Cover the Sun"
 msgstr "蔽日"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:55
+#: src/data/translate/legendary-names.ts:57
 msgid "Crimson King"
 msgstr "深红之王"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:56
+#: src/data/translate/legendary-names.ts:58
 msgid "Crosser"
 msgstr "交错者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:57
+#: src/data/translate/legendary-names.ts:59
 msgid "Crow's Plume"
 msgstr "暮鸦尾翎"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:58
+#: src/data/translate/legendary-names.ts:60
 msgid "Cry of Divinity"
 msgstr "神性之呼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:59
+#: src/data/translate/legendary-names.ts:61
 msgid "Cursed Flame"
 msgstr "咒焰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:60
+#: src/data/translate/legendary-names.ts:62
 msgid "Dawn Break"
 msgstr "破晓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:61
+#: src/data/translate/legendary-names.ts:63
 msgid "Death's Touch"
 msgstr "凶神之手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:62
+#: src/data/translate/legendary-names.ts:64
 msgid "Decayed Mind"
 msgstr "喑腐神智"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:63
+#: src/data/translate/legendary-names.ts:65
 msgid "Decaying Blessing"
 msgstr "腐殖恩泽"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:64
+#: src/data/translate/legendary-names.ts:66
 msgid "Demons' Touch"
 msgstr "群魔之手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:65
+#: src/data/translate/legendary-names.ts:67
 msgid "Desire of Survival"
 msgstr "求生之欲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:66
+#: src/data/translate/legendary-names.ts:68
 msgid "Despised Shadow"
 msgstr "渎影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:67
+#: src/data/translate/legendary-names.ts:69
 msgid "Devouring Tide"
 msgstr "嗜炎之潮"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:68
+#: src/data/translate/legendary-names.ts:70
 msgid "Divine Ember"
 msgstr "神躯燃烬"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:69
+#: src/data/translate/legendary-names.ts:71
 msgid "Double Rainbow"
 msgstr "双虹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:70
+#: src/data/translate/legendary-names.ts:72
 msgid "Dragon Breath Armor"
 msgstr "龙息护甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:71
+#: src/data/translate/legendary-names.ts:73
 msgid "Dragon Scale Shoes"
 msgstr "龙鳞轻履"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:72
+#: src/data/translate/legendary-names.ts:74
 msgid "Dumb Voice"
 msgstr "喑哑"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:73
+#: src/data/translate/legendary-names.ts:75
 msgid "Electricity Amplifier"
 msgstr "电能增幅器"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:74
+#: src/data/translate/legendary-names.ts:76
 msgid "Elegy of Immortality"
 msgstr "永生挽歌"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:75
+#: src/data/translate/legendary-names.ts:77
 msgid "Elemental Whirl"
 msgstr "元素洄旋"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:76
+#: src/data/translate/legendary-names.ts:78
 msgid "Elemental Whisper Belt"
 msgstr "元素秘语腰带"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:77
+#: src/data/translate/legendary-names.ts:79
 msgid "Embrace of the Dark Surge"
 msgstr "黑潮之拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:78
+#: src/data/translate/legendary-names.ts:80
 msgid "Enamor"
 msgstr "泛泛倾心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:79
+#: src/data/translate/legendary-names.ts:81
 msgid "End Night Banquet"
 msgstr "终夜狂宴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:80
+#: src/data/translate/legendary-names.ts:82
 msgid "Endless Fortress"
 msgstr "无限要塞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:81
+#: src/data/translate/legendary-names.ts:83
 msgid "Entangled Root"
 msgstr "盘根"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:82
+#: src/data/translate/legendary-names.ts:84
 msgid "Eternal Moon"
 msgstr "不落之月"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:83
+#: src/data/translate/legendary-names.ts:85
 msgid "Eternal Sea Fog"
 msgstr "虚海永雾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:84
+#: src/data/translate/legendary-names.ts:86
 msgid "Eternal Sun"
 msgstr "永恒日轮"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:85
+#: src/data/translate/legendary-names.ts:87
 msgid "Eternity"
 msgstr "永恒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:86
+#: src/data/translate/legendary-names.ts:88
 msgid "Everburn Thunderfire"
 msgstr "永燃雷火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:87
+#: src/data/translate/legendary-names.ts:89
 msgid "Evil Heart Armor"
 msgstr "邪心护甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:88
+#: src/data/translate/legendary-names.ts:90
 msgid "Exemption Thunderhell"
 msgstr "破厄雷狱"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:89
+#: src/data/translate/legendary-names.ts:91
 msgid "False God's Skin"
 msgstr "伪神之蜕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:90
+#: src/data/translate/legendary-names.ts:92
 msgid "Farewell Desire"
 msgstr "临别索求"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:91
+#: src/data/translate/legendary-names.ts:93
 msgid "Feline Gloves"
 msgstr "灵猫手套"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:92
+#: src/data/translate/legendary-names.ts:94
 msgid "Feline Steps"
 msgstr "灵猫步伐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:93
+#: src/data/translate/legendary-names.ts:95
 msgid "Fiend Crown"
 msgstr "邪龙头冠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:94
+#: src/data/translate/legendary-names.ts:96
 msgid "Fiery Oath"
 msgstr "炎誓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:95
+#: src/data/translate/legendary-names.ts:97
 msgid "Fighting Stompers"
 msgstr "无尽斗志"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:96
+#: src/data/translate/legendary-names.ts:98
 msgid "Final Bastion"
 msgstr "最后壁垒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:97
+#: src/data/translate/legendary-names.ts:99
 msgid "Fire Lord's Promise"
 msgstr "炎魔的允诺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:98
+#: src/data/translate/legendary-names.ts:100
 msgid "Fire Lord's Pyric Stride"
 msgstr "炎魔的焚步"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:99
+#: src/data/translate/legendary-names.ts:101
 msgid "Fire Shielding Prosthetics"
 msgstr "避火义肢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:100
+#: src/data/translate/legendary-names.ts:102
 msgid "Flaming Evil"
 msgstr "噬火之恶"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:101
+#: src/data/translate/legendary-names.ts:103
 msgid "Fleeting Regret"
 msgstr "虚握之恨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:102
+#: src/data/translate/legendary-names.ts:104
 msgid "Fleeting Sky"
 msgstr "苍蓝刹那"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:103
+#: src/data/translate/legendary-names.ts:105
 msgid "Flying Bird"
 msgstr "飞鸟"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:104
+#: src/data/translate/legendary-names.ts:106
 msgid "Flying Light at Daybreak"
 msgstr "飞光破晓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:105
+#: src/data/translate/legendary-names.ts:107
 msgid "Folklore of Locking Fingers"
 msgstr "勾指怪谈"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:106
+#: src/data/translate/legendary-names.ts:108
 msgid "Fool's Crown"
 msgstr "愚人的帝冕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:107
+#: src/data/translate/legendary-names.ts:109
 msgid "Forlorn Crystal"
 msgstr "荒芜结晶"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:108
+#: src/data/translate/legendary-names.ts:110
 msgid "Formation Breaker"
 msgstr "破阵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:109
+#: src/data/translate/legendary-names.ts:111
 msgid "Frantic Shadow"
 msgstr "乱影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:110
+#: src/data/translate/legendary-names.ts:112
 msgid "Friend Nemesis"
 msgstr "密友克星"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:111
+#: src/data/translate/legendary-names.ts:113
 msgid "Frostbolt"
 msgstr "霜狱雷鸣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:112
+#: src/data/translate/legendary-names.ts:114
 msgid "Frozen Flame"
 msgstr "不燃之火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:113
+#: src/data/translate/legendary-names.ts:115
 msgid "Frozen Lightning"
 msgstr "冰结雷光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:114
+#: src/data/translate/legendary-names.ts:116
 msgid "Frozen Path"
 msgstr "冰封行径"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:115
+#: src/data/translate/legendary-names.ts:117
 msgid "Frozen Ripples"
 msgstr "冰海涟漪"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:116
+#: src/data/translate/legendary-names.ts:118
 msgid "Frozen Sight"
 msgstr "冰冻目光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:117
+#: src/data/translate/legendary-names.ts:119
 msgid "Frozen Will"
 msgstr "冰封之志"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:118
+#: src/data/translate/legendary-names.ts:120
 msgid "Furious Man's Body"
 msgstr "怒汉之躯"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:119
-msgid "Furious Man's Loud Song"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:120
+#: src/data/translate/legendary-names.ts:121
 msgid "Fury Heart"
 msgstr "狂怒之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:121
+#: src/data/translate/legendary-names.ts:122
+msgid "Futile Tradeoff"
+msgstr "未果的权衡"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:123
 msgid "Gauze of Phantom Sin"
 msgstr "幻罪黑纱"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:122
+#: src/data/translate/legendary-names.ts:124
 msgid "Genius Battlegear"
 msgstr "创意作战服"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:123
+#: src/data/translate/legendary-names.ts:125
 msgid "Ghost Slaughter"
 msgstr "鬼途"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:124
+#: src/data/translate/legendary-names.ts:126
 msgid "Glacial Abyss Arrow"
 msgstr "寒渊箭影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:125
+#: src/data/translate/legendary-names.ts:127
 msgid "Glacier Caster Shield"
 msgstr "冰川魔盾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:126
+#: src/data/translate/legendary-names.ts:128
 msgid "Glorious Journey"
 msgstr "辉煌旅途"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:127
+#: src/data/translate/legendary-names.ts:129
 msgid "Grace Boots"
 msgstr "翩然之靴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:128
+#: src/data/translate/legendary-names.ts:130
 msgid "Grandmaster's Hands"
 msgstr "宗师之手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:129
+#: src/data/translate/legendary-names.ts:131
 msgid "Grasp of Truth"
 msgstr "真知之握"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:130
+#: src/data/translate/legendary-names.ts:132
 msgid "Gravel"
 msgstr "砂砾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:131
+#: src/data/translate/legendary-names.ts:133
 msgid "Guild Guard Boots"
 msgstr "商会护卫战靴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:132
+#: src/data/translate/legendary-names.ts:134
 msgid "Hand of Malice"
 msgstr "仇恶之手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:133
+#: src/data/translate/legendary-names.ts:135
 msgid "Hanging Two-Tone Mask"
 msgstr "倒吊的半面"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:134
+#: src/data/translate/legendary-names.ts:136
 msgid "Harbinger's Reversed Plumes"
 msgstr "亡鸟的逆羽"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:135
+#: src/data/translate/legendary-names.ts:137
 msgid "Headless Crown"
 msgstr "无首之冕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:136
+#: src/data/translate/legendary-names.ts:138
 msgid "Heart of Animitta"
 msgstr "无相禅心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:137
+#: src/data/translate/legendary-names.ts:139
 msgid "Heart of Magic"
 msgstr "万法之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:138
+#: src/data/translate/legendary-names.ts:140
 msgid "Heart of Rock"
 msgstr "顽石之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:139
+#: src/data/translate/legendary-names.ts:141
 msgid "Heart of the Storm"
 msgstr "风暴之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:140
+#: src/data/translate/legendary-names.ts:142
 msgid "Heavy Soul"
 msgstr "沉重灵魂"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:141
+#: src/data/translate/legendary-names.ts:143
 msgid "Heavyware"
 msgstr "重器"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:142
+#: src/data/translate/legendary-names.ts:144
 msgid "Heels of Hands"
 msgstr "三步舞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:143
+#: src/data/translate/legendary-names.ts:145
 msgid "Hekate's Vision"
 msgstr "巫神视界"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:144
+#: src/data/translate/legendary-names.ts:146
 msgid "Highest Glance"
 msgstr "至高一瞥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:145
+#: src/data/translate/legendary-names.ts:147
 msgid "Horn Ring"
 msgstr "号令指环"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:146
+#: src/data/translate/legendary-names.ts:148
 msgid "Hot Night's Embrace"
 msgstr "热夜的轻拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:147
+#: src/data/translate/legendary-names.ts:149
 msgid "Howling Wind"
 msgstr "劲风起时"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:148
+#: src/data/translate/legendary-names.ts:150
 msgid "Hunting the Eye of the Kraken"
 msgstr "追猎海妖之眼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:150
+#: src/data/translate/legendary-names.ts:152
 msgid "Ice Pulse"
 msgstr "寒冰法脉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:149
+#: src/data/translate/legendary-names.ts:151
 msgid "Ice and Fire"
 msgstr "冰火交融"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:151
+#: src/data/translate/legendary-names.ts:153
 msgid "Iced Drinker's Cage"
 msgstr "饮冰者的樊笼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:152
+#: src/data/translate/legendary-names.ts:154
 msgid "Illusory Ocean Silk - Ash"
 msgstr "幻海缠丝-劫灰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:153
+#: src/data/translate/legendary-names.ts:155
 msgid "Illusory Ocean Silk - Chilly"
 msgstr "幻海缠丝-苦寒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:154
+#: src/data/translate/legendary-names.ts:156
 msgid "Illusory Ocean Silk - Iron Rain"
 msgstr "幻海缠丝-铁雨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:155
+#: src/data/translate/legendary-names.ts:157
 msgid "Illusory Ocean Silk - Thunder"
 msgstr "幻海缠丝-厉雷"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:156
+#: src/data/translate/legendary-names.ts:158
 msgid "Illusory Ocean Silk - Unreal"
 msgstr "幻海缠丝-虚妄"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:157
+#: src/data/translate/legendary-names.ts:159
 msgid "Imperial Iron Sentry"
 msgstr "皇家铁卫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:158
+#: src/data/translate/legendary-names.ts:160
 msgid "Imperious Verdict"
 msgstr "擅断"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:159
+#: src/data/translate/legendary-names.ts:161
 msgid "Imploration Dagger"
 msgstr "求告匕首"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:160
+#: src/data/translate/legendary-names.ts:162
 msgid "Incorrect Arbitration"
 msgstr "错误仲裁"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:161
+#: src/data/translate/legendary-names.ts:163
 msgid "Insulation"
 msgstr "绝缘"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:162
+#: src/data/translate/legendary-names.ts:164
 msgid "Interlocking Soul"
 msgstr "灵魂交错"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:163
+#: src/data/translate/legendary-names.ts:166
 msgid "Iron Nest"
 msgstr "铁巢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:164
+#: src/data/translate/legendary-names.ts:165
+msgid "Iron and Bloom"
+msgstr "铁与花"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:167
 msgid "Israfel's Laws"
 msgstr "伊斯拉菲尔的旧律"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:165
+#: src/data/translate/legendary-names.ts:168
 msgid "Israfel's Sorrow"
 msgstr "伊斯拉菲尔的悲愿"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:166
+#: src/data/translate/legendary-names.ts:169
 msgid "Jumble Ice"
 msgstr "凌汛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:167
+#: src/data/translate/legendary-names.ts:170
 msgid "Kaleidoscope"
 msgstr "世界流转"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:168
+#: src/data/translate/legendary-names.ts:171
 msgid "King Lionheart's Ambition"
 msgstr "狮心王的热望"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:169
+#: src/data/translate/legendary-names.ts:172
 msgid "King's Boon"
 msgstr "君王恩赐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:170
+#: src/data/translate/legendary-names.ts:173
 msgid "Kingly Armor"
 msgstr "王魂护甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:171
+#: src/data/translate/legendary-names.ts:174
 msgid "Kragol's Roar"
 msgstr "克拉戈尔的嘶吼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:172
+#: src/data/translate/legendary-names.ts:175
 msgid "Lady's Tears"
 msgstr "铃兰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:173
+#: src/data/translate/legendary-names.ts:176
 msgid "Last Stand"
 msgstr "背水一战"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:174
+#: src/data/translate/legendary-names.ts:177
 msgid "Last Words of Chaos"
 msgstr "混沌遗言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:175
+#: src/data/translate/legendary-names.ts:178
 msgid "Law of Greed"
 msgstr "不轨律"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:176
+#: src/data/translate/legendary-names.ts:179
 msgid "Legendary Soldier Spectacles"
 msgstr "传奇战士护目镜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:177
+#: src/data/translate/legendary-names.ts:180
 msgid "Legless Bird's Lament"
 msgstr "无脚鸟的悲啼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:178
+#: src/data/translate/legendary-names.ts:181
 msgid "Light Hunter Belt"
 msgstr "猎光腰带"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:179
+#: src/data/translate/legendary-names.ts:182
 msgid "Lightning Striker's Sacrum"
 msgstr "掣电者的骶骨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:180
+#: src/data/translate/legendary-names.ts:183
 msgid "Lone Survivor"
 msgstr "独活"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:181
+#: src/data/translate/legendary-names.ts:184
 msgid "Lone Walker's Boots"
 msgstr "独行者之靴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:182
+#: src/data/translate/legendary-names.ts:185
 msgid "Lonesome"
 msgstr "孤胆"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:183
+#: src/data/translate/legendary-names.ts:186
 msgid "Machine Lord"
 msgstr "机械领主"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:184
+#: src/data/translate/legendary-names.ts:187
 msgid "Mad Doctor's Silver-Plated Lung"
 msgstr "疯医的镀银肺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:185
+#: src/data/translate/legendary-names.ts:188
 msgid "Magnus' Jealousy"
 msgstr "玛格努斯的妒火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:186
+#: src/data/translate/legendary-names.ts:189
 msgid "Magnus' Laws"
 msgstr "玛格努斯的旧律"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:187
+#: src/data/translate/legendary-names.ts:190
 msgid "Magnus' Mindflame"
 msgstr "玛格努斯的心火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:188
+#: src/data/translate/legendary-names.ts:191
 msgid "Magnus' Scar"
 msgstr "玛格努斯的疤面"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:189
+#: src/data/translate/legendary-names.ts:192
+msgid "Malign Embrace"
+msgstr "恶意缠绵"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:193
 msgid "Marksman Bracers"
 msgstr "神射手护腕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:190
+#: src/data/translate/legendary-names.ts:194
 msgid "Martyr's Staff"
 msgstr "殉节神木"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:191
+#: src/data/translate/legendary-names.ts:195
 msgid "Mask of Infernal Iron"
 msgstr "业火的铁面"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:192
+#: src/data/translate/legendary-names.ts:196
 msgid "Master Defender Pendant"
 msgstr "防御宗师吊坠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:193
+#: src/data/translate/legendary-names.ts:197
 msgid "Memory"
 msgstr "追忆"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:194
+#: src/data/translate/legendary-names.ts:198
 msgid "Mercurial Torment"
 msgstr "汞海极刑"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:195
+#: src/data/translate/legendary-names.ts:199
 msgid "Mere Eternity"
 msgstr "区区永恒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:196
+#: src/data/translate/legendary-names.ts:200
 msgid "Mind Infusion"
 msgstr "心灵灌注"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:197
+#: src/data/translate/legendary-names.ts:201
 msgid "Miniature Void Sea"
 msgstr "掌中虚海"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:198
+#: src/data/translate/legendary-names.ts:202
 msgid "Misube's Refusal"
 msgstr "密修比的拒绝"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:199
+#: src/data/translate/legendary-names.ts:203
 msgid "Mortal's Reverie"
 msgstr "凡夫的梦"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:200
+#: src/data/translate/legendary-names.ts:204
 msgid "Mother Goddess' Paddock"
 msgstr "母神围场"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:201
+#: src/data/translate/legendary-names.ts:205
 msgid "Mountain Howling"
 msgstr "山峦尖啸"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:202
-msgid "Mourner's Shadow"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:203
+#: src/data/translate/legendary-names.ts:206
 msgid "Necklace of Firebird"
 msgstr "淬火之鸟的颈链"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:204
+#: src/data/translate/legendary-names.ts:207
 msgid "Necklace of Inverse"
 msgstr "逆反"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:205
+#: src/data/translate/legendary-names.ts:208
 msgid "Oathkeeper"
 msgstr "立誓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:206
+#: src/data/translate/legendary-names.ts:209
 msgid "Ocean of Rock"
 msgstr "磐岩的汪洋"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:207
+#: src/data/translate/legendary-names.ts:210
+msgid "Old Grudge"
+msgstr "旧怨"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:211
 msgid "Ominous Gift"
 msgstr "不详馈赠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:208
+#: src/data/translate/legendary-names.ts:212
 msgid "Opening Heart"
 msgstr "敞开心扉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:209
+#: src/data/translate/legendary-names.ts:213
 msgid "Oversight"
 msgstr "智者千虑"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:210
+#: src/data/translate/legendary-names.ts:214
 msgid "Ownerless"
 msgstr "无主"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:211
+#: src/data/translate/legendary-names.ts:215
 msgid "Pale Mist's Embrace"
 msgstr "苍白云雾之拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:212
+#: src/data/translate/legendary-names.ts:216
 msgid "Passing of Time"
 msgstr "时之逝"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:213
+#: src/data/translate/legendary-names.ts:217
 msgid "Pathfinder's Path"
 msgstr "追迹者步履"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:214
+#: src/data/translate/legendary-names.ts:218
 msgid "Pentagram Astrolabe"
 msgstr "五芒星盘"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:215
+#: src/data/translate/legendary-names.ts:219
 msgid "Phantasm"
 msgstr "幻躯"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:216
+#: src/data/translate/legendary-names.ts:220
 msgid "Phantom"
 msgstr "幻影"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:217
+#: src/data/translate/legendary-names.ts:221
 msgid "Photophobia"
 msgstr "厌光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:218
+#: src/data/translate/legendary-names.ts:222
 msgid "Plain Echo"
 msgstr "原野回响"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:219
+#: src/data/translate/legendary-names.ts:223
 msgid "Polygonal Enclosure"
 msgstr "多棱之围"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:220
+#: src/data/translate/legendary-names.ts:224
 msgid "Powered Battle Greaves"
 msgstr "动力作战胫甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:221
+#: src/data/translate/legendary-names.ts:225
 msgid "Praise for Injury"
 msgstr "伤损礼赞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:222
+#: src/data/translate/legendary-names.ts:226
 msgid "Prayer Bead of Evil"
 msgstr "颂恶念珠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:223
+#: src/data/translate/legendary-names.ts:227
 msgid "Providential Grace"
 msgstr "神意恩典"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:224
+#: src/data/translate/legendary-names.ts:228
 msgid "Quantum Convergence"
 msgstr "量子汇流"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:225
+#: src/data/translate/legendary-names.ts:229
 msgid "Ralph's Ambition"
 msgstr "雷尔夫的野心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:226
+#: src/data/translate/legendary-names.ts:230
 msgid "Ralph's Burial"
 msgstr "雷尔夫的骨冢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:227
+#: src/data/translate/legendary-names.ts:231
 msgid "Ralph's Footsteps"
 msgstr "雷尔夫的足迹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:228
+#: src/data/translate/legendary-names.ts:232
 msgid "Ralph's Journey"
 msgstr "雷尔夫的苦旅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:229
+#: src/data/translate/legendary-names.ts:233
 msgid "Ralph's Laws"
 msgstr "雷尔夫的旧律"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:230
+#: src/data/translate/legendary-names.ts:234
 msgid "Rat Herder's Golden Rein"
 msgstr "牧鼠人的金缰绳"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:231
+#: src/data/translate/legendary-names.ts:235
 msgid "Rat King's Escape Show"
 msgstr "鼠王的逃生秀"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:232
+#: src/data/translate/legendary-names.ts:236
 msgid "Rat King's Megagon Dice"
 msgstr "鼠王的百面骰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:233
+#: src/data/translate/legendary-names.ts:237
 msgid "Resolution Steps"
 msgstr "坚定步伐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:234
+#: src/data/translate/legendary-names.ts:238
 msgid "Restless Glacier"
 msgstr "躁动冰河"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:235
+#: src/data/translate/legendary-names.ts:239
 msgid "Revered Light"
 msgstr "崇光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:236
+#: src/data/translate/legendary-names.ts:240
 msgid "Reverse-Reverse-Reverse Mirror"
 msgstr "反反反面镜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:237
+#: src/data/translate/legendary-names.ts:241
 msgid "Rock Lizard's Skull"
 msgstr "岩石巨蜥之颅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:238
+#: src/data/translate/legendary-names.ts:242
 msgid "Royal Cycle"
 msgstr "王事枯荣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:239
+#: src/data/translate/legendary-names.ts:243
 msgid "Royal Guard's Boots"
 msgstr "皇家禁卫之靴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:240
+#: src/data/translate/legendary-names.ts:244
 msgid "Ruinous Star"
 msgstr "煞星"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:241
+#: src/data/translate/legendary-names.ts:245
 msgid "Sage's Foresight"
 msgstr "智者远见"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:242
+#: src/data/translate/legendary-names.ts:246
 msgid "Sage's Insight"
 msgstr "贤者的洞察"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:243
+#: src/data/translate/legendary-names.ts:247
 msgid "Sage's Shackle"
 msgstr "贤者的铁枷"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:244
+#: src/data/translate/legendary-names.ts:248
 msgid "Sarituya"
 msgstr "萨日图雅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:245
+#: src/data/translate/legendary-names.ts:249
 msgid "Scarlet Decree"
 msgstr "猩红敕令"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:246
+#: src/data/translate/legendary-names.ts:250
 msgid "Scepter of Excommunication"
 msgstr "绝罚权杖"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:247
+#: src/data/translate/legendary-names.ts:251
 msgid "Scorching Tempo"
 msgstr "狂热节奏"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:248
+#: src/data/translate/legendary-names.ts:252
 msgid "Scorching Wave"
 msgstr "热潮"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:249
+#: src/data/translate/legendary-names.ts:253
 msgid "Scorching Words"
 msgstr "炽热真言"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:250
+#: src/data/translate/legendary-names.ts:254
 msgid "Sea Splitter"
 msgstr "断海"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:251
+#: src/data/translate/legendary-names.ts:255
 msgid "Searing Finger Bone"
 msgstr "灼热指骨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:252
+#: src/data/translate/legendary-names.ts:256
 msgid "Severed Wrist"
 msgstr "断腕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:253
+#: src/data/translate/legendary-names.ts:257
 msgid "Shadow Dance"
 msgstr "阴翳舞步"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:254
+#: src/data/translate/legendary-names.ts:258
 msgid "Shadow of Thunderlight's Eyes"
 msgstr "雷光绝影的冷眼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:255
+#: src/data/translate/legendary-names.ts:259
 msgid "Shadow of Thunderlight's Fury"
 msgstr "雷光绝影之怒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:256
+#: src/data/translate/legendary-names.ts:260
 msgid "Shadow of Thunderlight's Touch"
 msgstr "雷光绝影之触"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:257
+#: src/data/translate/legendary-names.ts:261
 msgid "Shamed"
 msgstr "荣辱"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:258
+#: src/data/translate/legendary-names.ts:262
 msgid "Shattered Moonlight"
 msgstr "迸碎月光"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:259
+#: src/data/translate/legendary-names.ts:263
 msgid "Shield of Judgment"
 msgstr "裁决之盾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:260
+#: src/data/translate/legendary-names.ts:264
+msgid "Silent Avowal"
+msgstr "无声剖白"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:265
 msgid "Silent Observer"
 msgstr "静观"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:261
+#: src/data/translate/legendary-names.ts:266
 msgid "Silent Sentry Shield"
 msgstr "沉默守卫之盾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:262
+#: src/data/translate/legendary-names.ts:267
 msgid "Silver Frost"
 msgstr "银霜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:263
+#: src/data/translate/legendary-names.ts:268
 msgid "Siren Faceguard"
 msgstr "海妖面甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:264
+#: src/data/translate/legendary-names.ts:269
 msgid "Solid River"
 msgstr "凝河"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:265
+#: src/data/translate/legendary-names.ts:270
 msgid "Spring Resurrection"
 msgstr "春日复苏"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:266
+#: src/data/translate/legendary-names.ts:271
 msgid "Steel Stagnation"
 msgstr "钢铁凝滞"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:267
+#: src/data/translate/legendary-names.ts:272
 msgid "Steel's Lament"
 msgstr "钢铁悲鸣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:268
+#: src/data/translate/legendary-names.ts:273
 msgid "Stellar Vestment of Eminence"
 msgstr "恢弘群星法袍"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:269
+#: src/data/translate/legendary-names.ts:274
 msgid "Strange Snow"
 msgstr "畸雪"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:270
+#: src/data/translate/legendary-names.ts:275
 msgid "Stray Bird's Return"
 msgstr "迷鸟的归栖"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:271
+#: src/data/translate/legendary-names.ts:276
 msgid "Strayed Healer's Waistguard"
 msgstr "歧路药师护腰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:272
+#: src/data/translate/legendary-names.ts:277
 msgid "Stream of Steel"
 msgstr "钢铁涓流"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:274
+#: src/data/translate/legendary-names.ts:279
 msgid "Sun's Embrace"
 msgstr "烈阳之拥"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:273
+#: src/data/translate/legendary-names.ts:278
 msgid "Sun-shooter Long Bow"
 msgstr "射日长弓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:275
+#: src/data/translate/legendary-names.ts:280
 msgid "Supreme Throne"
 msgstr "无上权柄"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:276
+#: src/data/translate/legendary-names.ts:281
 msgid "Surging Inspiration"
 msgstr "涌动灵感"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:277
+#: src/data/translate/legendary-names.ts:282
 msgid "The Coward's Counterfire"
 msgstr "怯懦者的反击"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:278
+#: src/data/translate/legendary-names.ts:283
+msgid "Throat-Slasher"
+msgstr "刎颈之刻"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:284
 msgid "Thunder Branch"
 msgstr "雷枝"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:279
+#: src/data/translate/legendary-names.ts:285
 msgid "Thunder Channeling Prosthetics"
 msgstr "引雷义肢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:280
+#: src/data/translate/legendary-names.ts:286
 msgid "Thunder Jawbone"
 msgstr "万雷颚骨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:281
+#: src/data/translate/legendary-names.ts:287
 msgid "Thunder Manipulator"
 msgstr "雷霆操纵者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:282
+#: src/data/translate/legendary-names.ts:288
 msgid "Tide of the Styx"
 msgstr "冥河潮汐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:283
+#: src/data/translate/legendary-names.ts:289
 msgid "Time of Vow"
 msgstr "誓之时"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:284
+#: src/data/translate/legendary-names.ts:290
 msgid "Torturer's Touch"
 msgstr "刑求之触"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:285
+#: src/data/translate/legendary-names.ts:291
 msgid "Traceless Pain"
 msgstr "清净幻痛"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:286
+#: src/data/translate/legendary-names.ts:292
 msgid "Tranquil Stir"
 msgstr "静谧波澜"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:287
+#: src/data/translate/legendary-names.ts:293
 msgid "Trauma's Embrace"
-msgstr "伤逝之拥"
+msgstr ""
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:288
+#: src/data/translate/legendary-names.ts:294
+msgid "Trickster's Tread"
+msgstr "诡行步"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:295
 msgid "Trinity"
 msgstr "三相"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:289
+#: src/data/translate/legendary-names.ts:296
 msgid "Troublemaker"
 msgstr "捣乱份子"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:290
+#: src/data/translate/legendary-names.ts:297
 msgid "Truth"
 msgstr "真理"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:291
+#: src/data/translate/legendary-names.ts:298
 msgid "Twilight Vestment"
 msgstr "薄暮笼罩法袍"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:292
+#: src/data/translate/legendary-names.ts:299
 msgid "Twisted Branch"
 msgstr "寒枝扭结"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:293
+#: src/data/translate/legendary-names.ts:300
 msgid "Tyrant's Iron Fist"
 msgstr "暴君的铁腕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:294
+#: src/data/translate/legendary-names.ts:301
 msgid "Tyrant's Smoldering Hold"
 msgstr "暴君的凶焰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:295
+#: src/data/translate/legendary-names.ts:302
 msgid "Unbreakable Armor"
 msgstr "不破胸甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:296
+#: src/data/translate/legendary-names.ts:303
 msgid "Undying Faith"
 msgstr "不灭信仰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:297
+#: src/data/translate/legendary-names.ts:304
 msgid "Unholy Prayer (agility)"
-msgstr "污秽祝祷 (灵动)"
+msgstr ""
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:298
+#: src/data/translate/legendary-names.ts:305
 msgid "Unholy Prayer (focus)"
-msgstr "污秽祝祷 (聚能)"
+msgstr ""
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:299
+#: src/data/translate/legendary-names.ts:306
 msgid "Unholy Prayer (tenacity)"
-msgstr "污秽祝祷 (坚韧)"
+msgstr ""
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:300
+#: src/data/translate/legendary-names.ts:307
 msgid "Vajra Handguards"
 msgstr "金刚护手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:301
+#: src/data/translate/legendary-names.ts:308
 msgid "Valerie's Night Stroll"
 msgstr "瓦里哀的夜行"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:302
+#: src/data/translate/legendary-names.ts:309
 msgid "Varagon Shroud"
 msgstr "瓦拉冈裹躯布"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:303
+#: src/data/translate/legendary-names.ts:310
 msgid "Varagon's Attack"
 msgstr "瓦拉冈的狂袭"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:304
+#: src/data/translate/legendary-names.ts:311
 msgid "Varagon's Lament"
 msgstr "瓦拉冈悲风"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:305
+#: src/data/translate/legendary-names.ts:312
+msgid "Vendetta's Sleeve-Blade"
+msgstr "仇弑袖剑"
+
+#. js-lingui-explicit-id
+#: src/data/translate/legendary-names.ts:313
 msgid "Verdant Steps"
 msgstr "森罗行迹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:306
+#: src/data/translate/legendary-names.ts:314
 msgid "Vestment of Song"
 msgstr "天籁长袍"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:307
+#: src/data/translate/legendary-names.ts:315
 msgid "Void Embankment"
 msgstr "虚空堤岸"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:308
+#: src/data/translate/legendary-names.ts:316
 msgid "Vortex Heart"
 msgstr "旋流之心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:309
+#: src/data/translate/legendary-names.ts:317
 msgid "Vow's Grasp"
 msgstr "孤誓之握"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:310
+#: src/data/translate/legendary-names.ts:318
 msgid "Warden's Breastpin"
 msgstr "典狱官的胸针"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:311
+#: src/data/translate/legendary-names.ts:319
 msgid "Webbed Arcane Headscarf"
 msgstr "蛛网奥秘头巾"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:312
+#: src/data/translate/legendary-names.ts:320
 msgid "When Winter Comes"
 msgstr "霜起之时"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:313
+#: src/data/translate/legendary-names.ts:321
 msgid "Will"
 msgstr "决意"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:314
+#: src/data/translate/legendary-names.ts:322
 msgid "Wind Chasers"
 msgstr "追风步履"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:315
+#: src/data/translate/legendary-names.ts:323
 msgid "Windbreath Convergence"
 msgstr "风息之引"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:316
+#: src/data/translate/legendary-names.ts:324
 msgid "Windbreath Dispersion"
 msgstr "风息之散"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:317
+#: src/data/translate/legendary-names.ts:325
 msgid "Wings of Light"
 msgstr "趋光之翼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:318
+#: src/data/translate/legendary-names.ts:326
 msgid "Winter of Origin"
 msgstr "原点的寒冬"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:319
+#: src/data/translate/legendary-names.ts:327
 msgid "Witchdoctor's Herb Bag"
 msgstr "巫医的草药包"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:320
+#: src/data/translate/legendary-names.ts:328
 msgid "Wriggling Tango"
 msgstr "蠕行探戈"

@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-gear-affix-data.ts
 import type { BaseGearAffix } from "../../tli/gear-data-types";
 
 export const CHEST_ARMOR_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [

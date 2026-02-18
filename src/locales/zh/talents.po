@@ -12,846 +12,846 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:56
+#: src/data/translate/talents.ts:76
 msgid "Acquaintance"
 msgstr "似曾相识"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:5
+#: src/data/translate/talents.ts:7
 msgid "Affliction"
 msgstr "加剧"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:99
+#: src/data/translate/talents.ts:102
 msgid "Alchemist"
 msgstr "炼金术士"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:147
+#: src/data/translate/talents.ts:150
 msgid "Ambition"
 msgstr "野心"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:142
+#: src/data/translate/talents.ts:145
 msgid "Arcane"
 msgstr "秘法"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:72
+#: src/data/translate/talents.ts:75
 msgid "Arcanist"
 msgstr "秘术师"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:104
+#: src/data/translate/talents.ts:107
 msgid "Artisan"
 msgstr "巧匠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:45
+#: src/data/translate/talents.ts:48
 msgid "Assassin"
 msgstr "刺客"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:164
+#: src/data/translate/talents.ts:167
 msgid "Automatic Upgrade"
 msgstr "自主升级"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:83
+#: src/data/translate/talents.ts:86
 msgid "Barrier of Radiance"
 msgstr "光辉结界"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:100
+#: src/data/translate/talents.ts:103
 msgid "Battle Trumpet"
 msgstr "冲锋号角"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:66
+#: src/data/translate/talents.ts:69
 msgid "Beacon"
 msgstr "Item"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:22
+#: src/data/translate/talents.ts:25
 msgid "Beyond Cure"
 msgstr "病入膏肓"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:50
+#: src/data/translate/talents.ts:53
 msgid "Bladerunner"
 msgstr "刀锋行者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:148
+#: src/data/translate/talents.ts:151
 msgid "Blunt"
 msgstr "钝器"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:110
+#: src/data/translate/talents.ts:113
 msgid "Boss"
 msgstr "首领"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:32
+#: src/data/translate/talents.ts:35
 msgid "Broken Dream"
 msgstr "长梦醒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:169
+#: src/data/translate/talents.ts:172
 msgid "Brutality"
 msgstr "残暴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:84
+#: src/data/translate/talents.ts:87
 msgid "Bunch"
 msgstr "积聚"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:111
+#: src/data/translate/talents.ts:114
 msgid "Burning Aggression"
 msgstr "侵略如火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:67
+#: src/data/translate/talents.ts:70
 msgid "Burning Touch"
 msgstr "炙手可热"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:159
+#: src/data/translate/talents.ts:162
 msgid "Centralize"
 msgstr "聚权"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:68
+#: src/data/translate/talents.ts:71
 msgid "Chilly"
 msgstr "苦寒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:61
+#: src/data/translate/talents.ts:64
 msgid "Close Range Fire"
 msgstr "抵近射击"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:105
+#: src/data/translate/talents.ts:108
 msgid "Co-resonance"
 msgstr "同频共振"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:149
+#: src/data/translate/talents.ts:152
 msgid "Cohesion"
 msgstr "凝聚"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:46
+#: src/data/translate/talents.ts:49
 msgid "Conductive"
 msgstr "导电"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:57
+#: src/data/translate/talents.ts:59
 msgid "Cultivation"
 msgstr "栽培"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:27
+#: src/data/translate/talents.ts:30
 msgid "Daze"
 msgstr "迷乱"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:6
+#: src/data/translate/talents.ts:8
 msgid "Deceiver's Might"
 msgstr "怪力乱神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:165
+#: src/data/translate/talents.ts:168
 msgid "Defensiveness"
 msgstr "守势"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:150
+#: src/data/translate/talents.ts:153
 msgid "Determined"
 msgstr "坚强"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:23
+#: src/data/translate/talents.ts:26
 msgid "Dirt"
 msgstr "污垢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:28
+#: src/data/translate/talents.ts:31
 msgid "Dirty Tricks"
 msgstr "肮脏技巧"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:55
+#: src/data/translate/talents.ts:58
 msgid "Druid"
 msgstr "德鲁伊"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:33
+#: src/data/translate/talents.ts:36
 msgid "Dying Dragon"
 msgstr "龙息绝"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:77
+#: src/data/translate/talents.ts:80
 msgid "Elementalist"
 msgstr "元素师"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:120
+#: src/data/translate/talents.ts:123
 msgid "Elimination"
 msgstr "淘汰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:132
+#: src/data/translate/talents.ts:135
 msgid "Ember Armor"
 msgstr "灰烬装甲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:101
+#: src/data/translate/talents.ts:104
 msgid "Empower"
 msgstr "激发"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:34
+#: src/data/translate/talents.ts:37
 msgid "End of War"
 msgstr "征伐终"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:160
+#: src/data/translate/talents.ts:163
 msgid "Endless Fervor"
 msgstr "无边战意"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:62
+#: src/data/translate/talents.ts:65
 msgid "Euphoria"
 msgstr "亢奋"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:88
+#: src/data/translate/talents.ts:91
 msgid "Extreme Coldness"
 msgstr "刺骨极寒"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:161
+#: src/data/translate/talents.ts:164
 msgid "Falling Leaves"
 msgstr "落叶飞花"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:35
+#: src/data/translate/talents.ts:38
 msgid "Falling Stars"
 msgstr "繁星坠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:154
+#: src/data/translate/talents.ts:157
 msgid "Fluke"
 msgstr "侥幸"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:78
+#: src/data/translate/talents.ts:81
 msgid "Focus"
 msgstr "贯注"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:127
+#: src/data/translate/talents.ts:130
 msgid "Focused Strike"
 msgstr "聚能之击"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:7
+#: src/data/translate/talents.ts:9
 msgid "Forbidden Power"
 msgstr "禁忌力量"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:133
+#: src/data/translate/talents.ts:136
 msgid "Formless"
 msgstr "大象无形"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:89
+#: src/data/translate/talents.ts:92
 msgid "Frostbitten"
 msgstr "冻伤"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:90
+#: src/data/translate/talents.ts:93
 msgid "Frozen Lotus"
 msgstr "冰冻之莲"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:137
+#: src/data/translate/talents.ts:140
 msgid "Fueling"
 msgstr "火上浇油"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:166
+#: src/data/translate/talents.ts:169
 msgid "Full Defense"
 msgstr "全面防御"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:73
+#: src/data/translate/talents.ts:60
 msgid "Full Load"
 msgstr "满载"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:63
+#: src/data/translate/talents.ts:66
 msgid "Gale"
 msgstr "狂风"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:92
+#: src/data/translate/talents.ts:95
 msgid "God of Machines"
 msgstr "机械之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:119
+#: src/data/translate/talents.ts:122
 msgid "God of Might"
 msgstr "巨力之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:146
+#: src/data/translate/talents.ts:149
 msgid "God of War"
 msgstr "征战之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:4
+#: src/data/translate/talents.ts:6
 msgid "Goddess of Deception"
 msgstr "欺诈之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:38
+#: src/data/translate/talents.ts:41
 msgid "Goddess of Hunting"
 msgstr "狩猎之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:65
+#: src/data/translate/talents.ts:68
 msgid "Goddess of Knowledge"
 msgstr "知识之神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:151
+#: src/data/translate/talents.ts:154
 msgid "Gravity"
 msgstr "引力"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:121
+#: src/data/translate/talents.ts:124
 msgid "Great Strength"
 msgstr "势大力沉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:170
+#: src/data/translate/talents.ts:173
 msgid "Hair-trigger"
 msgstr "一触即发"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:106
+#: src/data/translate/talents.ts:109
 msgid "Heat Up"
 msgstr "升温"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:122
+#: src/data/translate/talents.ts:125
 msgid "Hidden Mastery"
 msgstr "藏巧于拙"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:17
+#: src/data/translate/talents.ts:20
 msgid "Holiness"
 msgstr "圣洁"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:155
+#: src/data/translate/talents.ts:158
 msgid "Impending"
 msgstr "近在眉睫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:39
+#: src/data/translate/talents.ts:42
 msgid "Impermanence"
 msgstr "世事无常"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:12
+#: src/data/translate/talents.ts:15
 msgid "Indifference"
 msgstr "冷眼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:69
+#: src/data/translate/talents.ts:72
 msgid "Insight"
 msgstr "别具慧眼"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:171
+#: src/data/translate/talents.ts:174
 msgid "Instant Smash"
 msgstr "迎头痛击"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:93
+#: src/data/translate/talents.ts:96
 msgid "Isomorphic Arms"
 msgstr "同构武装"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:51
+#: src/data/translate/talents.ts:54
 msgid "Joined Force"
 msgstr "合力"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:123
+#: src/data/translate/talents.ts:126
 msgid "Judgment"
 msgstr "审判"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:156
+#: src/data/translate/talents.ts:159
 msgid "Keep It Up"
 msgstr "再接再厉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:107
+#: src/data/translate/talents.ts:110
 msgid "Kinetic Conversion"
 msgstr "动能转化"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:115
+#: src/data/translate/talents.ts:118
 msgid "Knowledgeable"
 msgstr "博闻强识"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:167
+#: src/data/translate/talents.ts:170
 msgid "Last Stand"
 msgstr "背水一战"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:11
+#: src/data/translate/talents.ts:14
 msgid "Lich"
 msgstr "巫妖"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:143
+#: src/data/translate/talents.ts:146
 msgid "Life Path"
 msgstr "生命通道"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:109
+#: src/data/translate/talents.ts:112
 msgid "Machinist"
 msgstr "机械师"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:82
+#: src/data/translate/talents.ts:85
 msgid "Magister"
 msgstr "魔导师"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:74
+#: src/data/translate/talents.ts:77
 msgid "Mana"
 msgstr "魔力"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:60
+#: src/data/translate/talents.ts:63
 msgid "Marksman"
 msgstr "神射手"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:64
+#: src/data/translate/talents.ts:67
 msgid "Master Escapist"
 msgstr "逃脱大师"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:94
+#: src/data/translate/talents.ts:97
 msgid "Mighty Guard"
 msgstr "强力护卫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:91
+#: src/data/translate/talents.ts:94
 msgid "Mind Blade"
 msgstr "心灵利刃"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:75
+#: src/data/translate/talents.ts:78
 msgid "Mind Focus"
 msgstr "聚气凝神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:8
+#: src/data/translate/talents.ts:10
 msgid "Mixture"
 msgstr "混入"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:124
+#: src/data/translate/talents.ts:127
 msgid "Momentum"
 msgstr "借势"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:18
+#: src/data/translate/talents.ts:21
 msgid "More With Less"
 msgstr "事半功倍"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:31
+#: src/data/translate/talents.ts:34
 msgid "New God"
 msgstr "新神"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:144
-msgid "No Lose Ends"
+#: src/data/translate/talents.ts:147
+msgid "No Loose Ends"
 msgstr "善始善终"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:13
+#: src/data/translate/talents.ts:16
 msgid "Off The Beaten Track"
 msgstr "独辟蹊径"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:126
+#: src/data/translate/talents.ts:129
 msgid "Onslaughter"
 msgstr "猛袭者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:172
+#: src/data/translate/talents.ts:175
 msgid "Open Wounds"
 msgstr "伤口撕裂"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:95
+#: src/data/translate/talents.ts:98
 msgid "Orders"
 msgstr "号令"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:96
+#: src/data/translate/talents.ts:99
 msgid "Overly Modified"
 msgstr "过度改装"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:116
+#: src/data/translate/talents.ts:119
 msgid "Panacea"
 msgstr "灵丹妙药"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:70
+#: src/data/translate/talents.ts:73
 msgid "Peculiar Vibe"
 msgstr "奇幻莫测"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:79
+#: src/data/translate/talents.ts:82
 msgid "Penetrating"
 msgstr "入木三分"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:40
+#: src/data/translate/talents.ts:43
 msgid "Perception"
 msgstr "敏锐"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:9
+#: src/data/translate/talents.ts:11
 msgid "Plague"
 msgstr "瘟疫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:85
+#: src/data/translate/talents.ts:88
 msgid "Play Safe"
 msgstr "稳扎稳打"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:58
+#: src/data/translate/talents.ts:61
 msgid "Poisoned Relief"
 msgstr "饮鸩止渴"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:52
+#: src/data/translate/talents.ts:55
 msgid "Preemptive Strike"
 msgstr "先发制人"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:76
+#: src/data/translate/talents.ts:79
 msgid "Preparation"
 msgstr "Alts"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:87
+#: src/data/translate/talents.ts:90
 msgid "Prophet"
 msgstr "先知"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:16
+#: src/data/translate/talents.ts:19
 msgid "Psychic"
 msgstr "异能者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:47
+#: src/data/translate/talents.ts:50
 msgid "Queer Angle"
 msgstr "奇妙角度"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:53
+#: src/data/translate/talents.ts:56
 msgid "Quick Advancement"
 msgstr "势如破竹"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:80
+#: src/data/translate/talents.ts:83
 msgid "Quick Ritual"
 msgstr "快速仪式"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:112
+#: src/data/translate/talents.ts:74
+msgid "Quick Wits"
+msgstr "随机应变"
+
+#. js-lingui-explicit-id
+#: src/data/translate/talents.ts:115
 msgid "Rally"
 msgstr "点兵"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:153
+#: src/data/translate/talents.ts:156
 msgid "Ranger"
 msgstr "游侠"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:157
+#: src/data/translate/talents.ts:160
 msgid "Rapid Shots"
 msgstr "强弓劲弩"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:19
+#: src/data/translate/talents.ts:22
 msgid "Reap Purification"
 msgstr "净化切割"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:59
+#: src/data/translate/talents.ts:62
 msgid "Rebirth"
 msgstr "脱胎换骨"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:117
+#: src/data/translate/talents.ts:120
 msgid "Reflection"
 msgstr "映射"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:118
+#: src/data/translate/talents.ts:121
 msgid "Resistance"
 msgstr "抗性"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:134
+#: src/data/translate/talents.ts:137
 msgid "Resolve"
 msgstr "坚毅"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:36
+#: src/data/translate/talents.ts:39
 msgid "Revealed Truth"
 msgstr "诳语破"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:138
+#: src/data/translate/talents.ts:141
 msgid "Rock"
 msgstr "磐石"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:158
+#: src/data/translate/talents.ts:161
 msgid "Ronin"
 msgstr "神行武士"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:37
+#: src/data/translate/talents.ts:40
 msgid "Ruined City"
 msgstr "高城覆"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:41
+#: src/data/translate/talents.ts:44
 msgid "Rushed"
 msgstr "行色匆匆"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:128
+#: src/data/translate/talents.ts:131
 msgid "Sacrifice"
 msgstr "舍命"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:163
+#: src/data/translate/talents.ts:166
 msgid "Sentinel"
 msgstr "铁卫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:97
+#: src/data/translate/talents.ts:100
 msgid "Sentry"
 msgstr "哨卫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:168
+#: src/data/translate/talents.ts:171
 msgid "Shadowdancer"
 msgstr "影舞者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:21
+#: src/data/translate/talents.ts:24
 msgid "Shadowmaster"
 msgstr "驭影者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:108
+#: src/data/translate/talents.ts:111
 msgid "Shared Fate"
 msgstr "同舟共济"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:86
+#: src/data/translate/talents.ts:89
 msgid "Shell"
 msgstr "甲壳"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:152
+#: src/data/translate/talents.ts:155
 msgid "Shooting Arrows"
 msgstr "流矢"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:98
+#: src/data/translate/talents.ts:101
 msgid "Shrink Back"
 msgstr "龟缩"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:102
+#: src/data/translate/talents.ts:105
 msgid "Source"
 msgstr "源泉"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:14
+#: src/data/translate/talents.ts:17
 msgid "Stab In The Back"
 msgstr "暗箭难防"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:139
+#: src/data/translate/talents.ts:142
 msgid "Starfire"
 msgstr "星星之火"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:135
+#: src/data/translate/talents.ts:138
 msgid "Static"
 msgstr "入静"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:42
+#: src/data/translate/talents.ts:45
 msgid "Steady Accumulation"
 msgstr "厚积薄发"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:24
+#: src/data/translate/talents.ts:27
 msgid "Stealth Stab"
 msgstr "隐刺"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:114
+#: src/data/translate/talents.ts:117
 msgid "Steel Vanguard"
 msgstr "钢铁先锋"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:10
+#: src/data/translate/talents.ts:12
 msgid "Subtle Impact"
 msgstr "潜移默化"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:145
+#: src/data/translate/talents.ts:148
 msgid "Survival Will"
 msgstr "生存意志"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:129
+#: src/data/translate/talents.ts:132
 msgid "Sweep"
 msgstr "清扫"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:103
+#: src/data/translate/talents.ts:106
 msgid "Talons of Abyss"
 msgstr "深渊爪牙"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:125
+#: src/data/translate/talents.ts:128
 msgid "Tenacity"
 msgstr "坚韧"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:131
+#: src/data/translate/talents.ts:134
 msgid "The Brave"
 msgstr "勇者"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:43
+#: src/data/translate/talents.ts:46
 msgid "Third time's a charm"
 msgstr "三思而动"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:44
+#: src/data/translate/talents.ts:47
 msgid "Three Birds with One Stone"
 msgstr "一箭三雕"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:48
+#: src/data/translate/talents.ts:51
 msgid "Thunderclap"
 msgstr "平地惊雷"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:162
+#: src/data/translate/talents.ts:165
 msgid "Tradeoff"
 msgstr "权衡轻重"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:49
+#: src/data/translate/talents.ts:52
 msgid "Transition"
 msgstr "跃迁"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:81
+#: src/data/translate/talents.ts:84
 msgid "Translucent"
 msgstr "透明"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:140
+#: src/data/translate/talents.ts:143
 msgid "True Flame"
 msgstr "真实之焰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:25
+#: src/data/translate/talents.ts:28
 msgid "Twisted Belief"
 msgstr "扭曲信仰"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:113
+#: src/data/translate/talents.ts:116
 msgid "United Stand"
 msgstr "众志成城"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:29
+#: src/data/translate/talents.ts:32
 msgid "Verbal Abuse"
 msgstr "污言秽语"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:30
+#: src/data/translate/talents.ts:33
 msgid "Vile"
 msgstr "卑劣"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:54
+#: src/data/translate/talents.ts:57
 msgid "Waiting Attack"
 msgstr "伺机而动"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:15
+#: src/data/translate/talents.ts:18
 msgid "Ward"
 msgstr "结界"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:26
+#: src/data/translate/talents.ts:29
 msgid "Warlock"
 msgstr "暗影术士"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:136
+#: src/data/translate/talents.ts:139
 msgid "Warlord"
 msgstr "督军"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:141
+#: src/data/translate/talents.ts:144
 msgid "Warrior"
 msgstr "斗士"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:130
+#: src/data/translate/talents.ts:133
 msgid "Well Matched"
 msgstr "势均力敌"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:20
+#: src/data/translate/talents.ts:23
 msgid "Windwalk"
 msgstr "疾徐"
-
-#. js-lingui-explicit-id
-#: src/data/translate/talents.ts:71
-msgid "Winter"
-msgstr "凛冬"

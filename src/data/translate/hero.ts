@@ -1,3 +1,5 @@
+// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hero-translate.ts
 import { i18n } from "@lingui/core";
 
 export const heroNames = [

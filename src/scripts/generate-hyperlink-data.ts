@@ -101,7 +101,9 @@ const generateDataFile = (hyperlinks: Record<string, string>): string => {
     .map(([name, desc]) => `  ${JSON.stringify(name)}: ${JSON.stringify(desc)}`)
     .join(",\n");
 
-  return `export const Hyperlinks: Record<string, string> = {
+  return `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-hyperlink-data.ts
+export const Hyperlinks: Record<string, string> = {
 ${entries},
 };
 `;
