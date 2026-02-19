@@ -83,11 +83,20 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
         ? i18n._("Medium Talent")
         : i18n._("Legendary Talent");
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     if (canPlacePrism && onPlacePrism) {
       onPlacePrism();
     } else if (canPlaceInverseImage && onPlaceInverseImage) {
       onPlaceInverseImage();
+    } else if (canAllocate) {
+      onAllocate();
+    }
+  };
+
+  const handleContextMenu = (e: React.MouseEvent): void => {
+    e.preventDefault();
+    if (canDeallocate) {
+      onDeallocate();
     }
   };
 
@@ -308,12 +317,17 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
             ? "border-cyan-500 bg-cyan-500/20"
             : allocated > 0
               ? "border-cyan-400 bg-cyan-500/15"
-              : "border-cyan-600 bg-cyan-500/10"
+              : canAllocate
+                ? "border-cyan-600 bg-cyan-500/10 cursor-pointer"
+                : "border-cyan-600 bg-cyan-500/10"
         }`}
         ref={triggerRef}
+        onClick={canAllocate ? onAllocate : undefined}
+        onContextMenu={handleContextMenu}
+        onMouseDown={(e) => e.preventDefault()}
       >
         {/* Reflected Icon */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src={`/tli/talents/${node.iconName}.webp`}
             alt={node.iconName}
@@ -325,42 +339,9 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
         </div>
 
         {/* Points Display */}
-        <div className="absolute bottom-0 left-0 right-0 bg-cyan-900/70 text-cyan-200 text-xs text-center py-0.5 rounded-b-md">
+        <div className="absolute bottom-0 left-0 right-0 bg-cyan-900/70 text-cyan-200 text-xs text-center py-0.5 rounded-b-md pointer-events-none">
           {allocated}/{node.maxPoints}
         </div>
-
-        {/* Add Button - Top Left */}
-        <button
-          type="button"
-          onClick={onAllocate}
-          disabled={!canAllocate}
-          className={`
-            absolute -top-2 -left-2 w-7 h-7 rounded-full text-white text-sm font-bold
-            ${
-              canAllocate
-                ? "bg-cyan-500 hover:bg-cyan-400"
-                : "bg-zinc-700 text-zinc-500 cursor-not-allowed"
-            }
-          `}
-        >
-          +
-        </button>
-        {/* Remove Button - Top Right */}
-        <button
-          type="button"
-          onClick={onDeallocate}
-          disabled={!canDeallocate}
-          className={`
-            absolute -top-2 -right-2 w-7 h-7 rounded-full text-white text-sm font-bold
-            ${
-              canDeallocate
-                ? "bg-red-500 hover:bg-red-600"
-                : "bg-zinc-700 text-zinc-500 cursor-not-allowed"
-            }
-          `}
-        >
-          -
-        </button>
 
         <Tooltip
           isVisible={isVisible}
@@ -415,17 +396,19 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
               : isFullyAllocated
                 ? "border-green-500 bg-green-500/15"
                 : allocated > 0
-                  ? "border-amber-500 bg-amber-500/10"
+                  ? "border-amber-500 bg-amber-500/10 cursor-pointer"
                   : isLocked
                     ? "border-zinc-800 bg-zinc-800 opacity-50"
-                    : "border-zinc-700 bg-zinc-800 hover:border-amber-500"
+                    : "border-zinc-700 bg-zinc-800 hover:border-amber-500 cursor-pointer"
         }
       `}
       onClick={handleClick}
+      onContextMenu={handleContextMenu}
+      onMouseDown={(e) => e.preventDefault()}
       ref={triggerRef}
     >
       {/* Icon */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <img
           src={`/tli/talents/${node.iconName}.webp`}
           alt={node.iconName}
@@ -437,47 +420,9 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
       </div>
 
       {/* Points Display */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs text-center py-0.5 rounded-b-md">
+      <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs text-center py-0.5 rounded-b-md pointer-events-none">
         {allocated}/{node.maxPoints}
       </div>
-
-      {/* Allocation Buttons (hidden when selecting prism or inverse image on empty node) */}
-      {!canPlacePrism && !canPlaceInverseImage && (
-        <>
-          {/* Add Button - Top Left */}
-          <button
-            type="button"
-            onClick={onAllocate}
-            disabled={!canAllocate}
-            className={`
-              absolute -top-2 -left-2 w-7 h-7 rounded-full text-white text-sm font-bold
-              ${
-                canAllocate
-                  ? "bg-green-500 hover:bg-green-600"
-                  : "bg-zinc-700 text-zinc-500 cursor-not-allowed"
-              }
-            `}
-          >
-            +
-          </button>
-          {/* Remove Button - Top Right */}
-          <button
-            type="button"
-            onClick={onDeallocate}
-            disabled={!canDeallocate}
-            className={`
-              absolute -top-2 -right-2 w-7 h-7 rounded-full text-white text-sm font-bold
-              ${
-                canDeallocate
-                  ? "bg-red-500 hover:bg-red-600"
-                  : "bg-zinc-700 text-zinc-500 cursor-not-allowed"
-              }
-            `}
-          >
-            -
-          </button>
-        </>
-      )}
 
       {/* Place Prism indicator when selecting */}
       {canPlacePrism && (
