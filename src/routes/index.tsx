@@ -345,23 +345,6 @@ function SavesPage(): React.ReactNode {
           </div>
         </div>
 
-        <div className="mb-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
-          <div className="flex items-start gap-3">
-            <span className="text-amber-400 text-lg">🛠️</span>
-            <div>
-              <p className="text-amber-200 font-medium">
-                <Trans>Early Development</Trans>
-              </p>
-              <p className="text-zinc-400 text-sm mt-1">
-                <Trans>
-                  Please be patient and bear with me on any issues you encounter
-                  with this app, as it's still in early phases of development.
-                </Trans>
-              </p>
-            </div>
-          </div>
-        </div>
-
         {showImportError && (
           <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
             <div className="flex items-start justify-between gap-3">

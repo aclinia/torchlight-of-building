@@ -198,12 +198,6 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
                   {currentSaveName}
                 </button>
               ))}
-            <div className="ml-4 flex items-center gap-2 rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-1.5">
-              <span className="text-amber-400">🛠️</span>
-              <span className="text-amber-200 text-sm">
-                Early development — please be patient with any issues!
-              </span>
-            </div>
           </div>
 
           <div className="flex items-center gap-3">
