@@ -29,14 +29,19 @@ export const SLOT_TO_EQUIPMENT_SLOT: Record<GearSlot, EquipmentSlot[]> = {
 
 export const SLOT_TO_VALID_EQUIPMENT_TYPES: Record<GearSlot, EquipmentType[]> =
   {
-    helmet: ["Helmet (DEX)", "Helmet (INT)", "Helmet (STR)"],
-    chest: ["Chest Armor (DEX)", "Chest Armor (INT)", "Chest Armor (STR)"],
-    gloves: ["Gloves (DEX)", "Gloves (INT)", "Gloves (STR)"],
-    boots: ["Boots (DEX)", "Boots (INT)", "Boots (STR)"],
-    belt: ["Belt"],
-    neck: ["Necklace"],
-    leftRing: ["Ring", "Spirit Ring"],
-    rightRing: ["Ring", "Spirit Ring"],
+    helmet: ["Helmet (DEX)", "Helmet (INT)", "Helmet (STR)", "Vorax Gear"],
+    chest: [
+      "Chest Armor (DEX)",
+      "Chest Armor (INT)",
+      "Chest Armor (STR)",
+      "Vorax Gear",
+    ],
+    gloves: ["Gloves (DEX)", "Gloves (INT)", "Gloves (STR)", "Vorax Gear"],
+    boots: ["Boots (DEX)", "Boots (INT)", "Boots (STR)", "Vorax Gear"],
+    belt: ["Belt", "Vorax Gear"],
+    neck: ["Necklace", "Vorax Gear"],
+    leftRing: ["Ring", "Spirit Ring", "Vorax Gear"],
+    rightRing: ["Ring", "Spirit Ring", "Vorax Gear"],
     mainHand: [
       "Bow",
       "Cane",

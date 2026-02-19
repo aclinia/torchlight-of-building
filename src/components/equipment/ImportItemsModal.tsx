@@ -20,6 +20,29 @@ interface ImportItemInput {
 
 const EQUIPMENT_TYPE_SET = new Set<string>(EQUIPMENT_TYPES);
 
+// In-game format uses "INT Helmet" but the app expects "Helmet (INT)"
+const STAT_PREFIXES = ["STR", "DEX", "INT"] as const;
+
+const normalizeEquipmentType = (raw: string): string => {
+  // Already a valid type
+  if (EQUIPMENT_TYPE_SET.has(raw)) {
+    return raw;
+  }
+
+  // Try converting "STR Gloves" → "Gloves (STR)", "INT Chest Armor" → "Chest Armor (INT)", etc.
+  for (const prefix of STAT_PREFIXES) {
+    if (raw.startsWith(`${prefix} `)) {
+      const base = raw.slice(prefix.length + 1);
+      const normalized = `${base} (${prefix})`;
+      if (EQUIPMENT_TYPE_SET.has(normalized)) {
+        return normalized;
+      }
+    }
+  }
+
+  return raw;
+};
+
 const parseImportedItems = (
   json: string,
 ): { items: Gear[]; errors: string[] } => {
@@ -50,14 +73,16 @@ const parseImportedItems = (
       continue;
     }
 
-    if (!EQUIPMENT_TYPE_SET.has(entry.equipmentType)) {
+    const normalizedType = normalizeEquipmentType(entry.equipmentType);
+
+    if (!EQUIPMENT_TYPE_SET.has(normalizedType)) {
       errors.push(
         `Item ${i + 1} (${entry.name ?? "unknown"}): unknown equipmentType "${entry.equipmentType}"`,
       );
       continue;
     }
 
-    const equipmentType = entry.equipmentType as EquipmentType;
+    const equipmentType = normalizedType as EquipmentType;
     const name = typeof entry.name === "string" ? entry.name : undefined;
     const affixes = Array.isArray(entry.affixes)
       ? entry.affixes.filter((a): a is string => typeof a === "string")
@@ -115,6 +140,7 @@ export const ImportItemsModal = ({
 }: ImportItemsModalProps): React.ReactNode => {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState<string | undefined>();
+  const [warning, setWarning] = useState<string | undefined>();
 
   const handleImport = (): void => {
     const trimmed = inputValue.trim();
@@ -133,13 +159,22 @@ export const ImportItemsModal = ({
     onImport(items);
     setInputValue("");
     setError(undefined);
-    onClose();
+
+    if (errors.length > 0) {
+      setWarning(
+        `Imported ${items.length} item(s). The following could not be imported:\n${errors.join("\n")}`,
+      );
+    } else {
+      setWarning(undefined);
+      onClose();
+    }
   };
 
   useEffect(() => {
     if (isOpen) {
       setInputValue("");
       setError(undefined);
+      setWarning(undefined);
     }
   }, [isOpen]);
 
@@ -176,6 +211,12 @@ export const ImportItemsModal = ({
 
       {error !== undefined && (
         <p className="mt-2 whitespace-pre-wrap text-sm text-red-500">{error}</p>
+      )}
+
+      {warning !== undefined && (
+        <p className="mt-2 whitespace-pre-wrap text-sm text-amber-400">
+          {warning}
+        </p>
       )}
 
       <ModalActions>

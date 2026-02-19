@@ -49,6 +49,7 @@ export const EQUIPMENT_TYPES = [
   "Two-Handed Axe",
   "Two-Handed Hammer",
   "Two-Handed Sword",
+  "Vorax Gear",
   "Wand",
 ] as const;
 
