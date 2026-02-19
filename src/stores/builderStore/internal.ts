@@ -18,6 +18,7 @@ import type {
   ReflectedAllocatedNode,
   RingSlotState,
   SaveData,
+  SkillPage,
   SupportSkillSlot,
 } from "../../lib/save-data";
 import type { SavesIndex } from "../../lib/saves";
@@ -998,6 +999,12 @@ export const internalStore = create(
           if (placedInverseImage?.treeSlot === treeSlot) {
             placedInverseImage.reflectedAllocatedNodes = [];
           }
+        });
+      },
+
+      importSkillPage: (skillPage: SkillPage) => {
+        set((state) => {
+          state.saveData.skillPage = skillPage;
         });
       },
 

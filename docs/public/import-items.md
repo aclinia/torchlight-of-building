@@ -10,7 +10,7 @@ Open your inventory in Torchlight Infinite and hover over each piece of gear to 
 
 Make sure the **detailed view is not enabled** - you want the standard tooltip view.
 
-![Example gear screenshot](assets/gear_example_1.png)
+![Example gear screenshot](assets/gear-example-1.png)
 
 ### 2. Upload screenshots to an AI chatbot
 

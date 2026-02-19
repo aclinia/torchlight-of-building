@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ActiveSkills, PassiveSkills } from "@/src/data/skill";
 import { i18n } from "@/src/lib/i18n";
+import { SkillImportModal } from "../../components/skills/SkillImportModal";
 import { SkillSlot } from "../../components/skills/SkillSlot";
-import { useBuilderActions, useLoadout } from "../../stores/builderStore";
+import {
+  useBuilderActions,
+  useLoadout,
+  useSaveDataRaw,
+} from "../../stores/builderStore";
 import type { ActiveSkillSlots, PassiveSkillSlots } from "../../tli/core";
 
 export const Route = createFileRoute("/builder/skills")({
@@ -30,13 +35,16 @@ const getSelectedPassiveSkillNames = (skills: PassiveSkillSlots): string[] => {
 
 function SkillsPage(): React.ReactNode {
   const loadout = useLoadout();
+  const saveData = useSaveDataRaw("export");
   const {
     setActiveSkill,
     setPassiveSkill,
     toggleSkillEnabled,
     setSkillLevel,
     setSupportSkill,
+    importSkillPage,
   } = useBuilderActions();
+  const [importModalOpen, setImportModalOpen] = useState(false);
 
   const selectedActiveNames = useMemo(
     (): string[] => getSelectedActiveSkillNames(loadout.skillPage.activeSkills),
@@ -51,6 +59,23 @@ function SkillsPage(): React.ReactNode {
 
   return (
     <div className="space-y-8">
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={() => setImportModalOpen(true)}
+          className="px-3 py-1.5 text-sm bg-zinc-700 hover:bg-zinc-600 text-zinc-200 rounded-lg transition-colors"
+        >
+          Import Skills
+        </button>
+      </div>
+
+      <SkillImportModal
+        isOpen={importModalOpen}
+        onClose={() => setImportModalOpen(false)}
+        currentSkillPage={saveData.skillPage}
+        onImport={importSkillPage}
+      />
+
       <div>
         <h2 className="mb-4 text-xl font-bold text-zinc-50">
           {i18n._("Active Skills")}
