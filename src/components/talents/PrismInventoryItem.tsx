@@ -39,11 +39,22 @@ export const PrismInventoryItem: React.FC<PrismInventoryItemProps> = ({
   const rareCount = nonAreaAffixes.length - legendaryCount;
   const areaLabel = getAreaLabel(areaAffix);
 
-  const baseAffixFirstLine = prism.baseAffix.split("\n")[0];
-  const displayText =
-    baseAffixFirstLine.length > 60
-      ? `${baseAffixFirstLine.slice(0, 60)}...`
-      : baseAffixFirstLine;
+  const displayText = (() => {
+    if (prism.rarity === "rare") {
+      const delimiterIndex = prism.baseAffix.indexOf(
+        "Advanced Talent Panel:\n",
+      );
+      if (delimiterIndex !== -1) {
+        return prism.baseAffix
+          .slice(delimiterIndex + "Advanced Talent Panel:\n".length)
+          .replaceAll("\n", " / ");
+      }
+    } else {
+      const match = prism.baseAffix.match(/with\s+(.+)$/);
+      if (match !== null) return match[1];
+    }
+    return prism.baseAffix.split("\n")[0];
+  })();
 
   const handleClick = (): void => {
     if (selectionMode && onSelect !== undefined) {

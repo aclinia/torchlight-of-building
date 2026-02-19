@@ -61,7 +61,7 @@ export const PrismSection: React.FC<PrismSectionProps> = ({
             onCancel={editingPrism ? handleCancel : undefined}
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <PrismInventory
             prisms={prisms}
             onEdit={handleEdit}
