@@ -88,26 +88,32 @@ const parseImportedItems = (
       ? entry.affixes.filter((a): a is string => typeof a === "string")
       : [];
 
+    // Strip "- Priceless" suffix for lookup purposes
+    const lookupName =
+      name !== undefined && name.endsWith("- Priceless")
+        ? name.slice(0, -"- Priceless".length).trimEnd()
+        : name;
+
     // Look up base stats from legendaries or base gear
     let baseStats: string | undefined;
     let baseGearName: string | undefined;
     let rarity: "legendary" | undefined;
     let legendaryName: string | undefined;
 
-    if (name !== undefined) {
-      const legendary = Legendaries.find((l) => l.name === name);
+    if (lookupName !== undefined) {
+      const legendary = Legendaries.find((l) => l.name === lookupName);
       if (legendary !== undefined) {
         baseStats =
           legendary.baseStat.length > 0 ? legendary.baseStat : undefined;
         baseGearName = legendary.baseItem;
         rarity = "legendary";
-        legendaryName = name;
+        legendaryName = lookupName;
       } else {
-        const baseGear = ALL_BASE_GEAR.find((g) => g.name === name);
+        const baseGear = ALL_BASE_GEAR.find((g) => g.name === lookupName);
         if (baseGear !== undefined) {
           baseStats = baseGear.stats.length > 0 ? baseGear.stats : undefined;
-          baseGearName = name;
         }
+        baseGearName = lookupName;
       }
     }
 
