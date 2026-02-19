@@ -29,6 +29,10 @@ import {
   getTargetAreaPositions,
   reflectPosition,
 } from "@/src/lib/inverse-image-utils";
+import {
+  extractAdditionalEffect,
+  extractReplacementName,
+} from "@/src/lib/prism-utils";
 import type {
   SaveData,
   BaseSupportSkillSlot as SaveDataBaseSupportSkillSlot,
@@ -336,22 +340,13 @@ const createTalentNode = (
   return base;
 };
 
-const REPLACES_CORE_TALENT_PREFIX =
-  "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with ";
-
-const ADDS_CORE_TALENT_DELIMITER = "Advanced Talent Panel:\n";
-
 const extractReplacementCoreTalent = (
   baseAffix: string | undefined,
   src: string,
 ): Affix | undefined => {
-  if (
-    baseAffix === undefined ||
-    !baseAffix.startsWith(REPLACES_CORE_TALENT_PREFIX)
-  ) {
-    return undefined;
-  }
-  const name = baseAffix.slice(REPLACES_CORE_TALENT_PREFIX.length);
+  if (baseAffix === undefined) return undefined;
+  const name = extractReplacementName(baseAffix);
+  if (name === undefined) return undefined;
   const hyperlinkName = getHyperlinkName(name);
   if (hyperlinkName === undefined) {
     console.error(`Unknown hyperlink for replacement core talent: ${name}`);
@@ -371,17 +366,9 @@ const extractAddedCoreTalentAffix = (
   baseAffix: string | undefined,
   src: string,
 ): Affix | undefined => {
-  if (
-    baseAffix === undefined ||
-    !baseAffix.startsWith("Adds an additional effect to the Core Talent")
-  ) {
-    return undefined;
-  }
-  const delimiterIndex = baseAffix.indexOf(ADDS_CORE_TALENT_DELIMITER);
-  if (delimiterIndex === -1) return undefined;
-  const affixText = baseAffix.slice(
-    delimiterIndex + ADDS_CORE_TALENT_DELIMITER.length,
-  );
+  if (baseAffix === undefined) return undefined;
+  const affixText = extractAdditionalEffect(baseAffix);
+  if (affixText === undefined) return undefined;
   return convertAffix(affixText, src);
 };
 

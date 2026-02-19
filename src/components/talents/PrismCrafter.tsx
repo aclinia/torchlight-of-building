@@ -7,6 +7,7 @@ import { i18n } from "@/src/lib/i18n";
 import {
   getAreaAffixes,
   getBaseAffixes,
+  getBaseAffixLabel,
   getLegendaryGaugeAffixes,
   getMutationAffixes,
   getRareGaugeAffixes,
@@ -78,23 +79,10 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
   }, [editingPrism]);
 
   const baseAffixOptions = useMemo((): SearchableSelectOption<string>[] => {
-    return getBaseAffixes(rarity).map((affix) => {
-      let label = affix.affix;
-      if (rarity === "rare") {
-        const delimiterIndex = affix.affix.indexOf("Advanced Talent Panel:\n");
-        if (delimiterIndex !== -1) {
-          label = affix.affix.slice(
-            delimiterIndex + "Advanced Talent Panel:\n".length,
-          );
-        }
-      } else {
-        const match = affix.affix.match(/with\s+(.+)$/);
-        if (match !== null) {
-          label = match[1];
-        }
-      }
-      return { value: affix.affix, label: label.replaceAll("\n", " / ") };
-    });
+    return getBaseAffixes(rarity).map((affix) => ({
+      value: affix.affix,
+      label: getBaseAffixLabel(affix.affix),
+    }));
   }, [rarity]);
 
   const areaAffixOptions = useMemo((): SearchableSelectOption<string>[] => {

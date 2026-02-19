@@ -68,12 +68,39 @@ export const getMutationAffixes = (): PrismAffix[] => {
   });
 };
 
-// Extract core talent name from a "Replaces...with X" base affix
-export const getCoreTalentFromBaseAffix = (
+// Shared constants for prism base affix parsing
+export const REPLACES_CORE_TALENT_PREFIX =
+  "Replaces the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel with ";
+
+export const ADDS_CORE_TALENT_DELIMITER = "Advanced Talent Panel:\n";
+
+// Extract the replacement core talent name from a legendary base affix
+export const extractReplacementName = (
   baseAffix: string,
 ): string | undefined => {
-  const match = baseAffix.match(/with\s+(.+)$/);
-  return match !== null ? match[1] : undefined;
+  if (!baseAffix.startsWith(REPLACES_CORE_TALENT_PREFIX)) return undefined;
+  return baseAffix.slice(REPLACES_CORE_TALENT_PREFIX.length);
+};
+
+// Extract the additional effect text from a rare base affix
+export const extractAdditionalEffect = (
+  baseAffix: string,
+): string | undefined => {
+  if (!baseAffix.startsWith("Adds an additional effect to the Core Talent")) {
+    return undefined;
+  }
+  const delimiterIndex = baseAffix.indexOf(ADDS_CORE_TALENT_DELIMITER);
+  if (delimiterIndex === -1) return undefined;
+  return baseAffix.slice(delimiterIndex + ADDS_CORE_TALENT_DELIMITER.length);
+};
+
+// Get a short display label for a prism base affix
+export const getBaseAffixLabel = (baseAffix: string): string => {
+  const additional = extractAdditionalEffect(baseAffix);
+  if (additional !== undefined) return additional.replaceAll("\n", " / ");
+  const replacement = extractReplacementName(baseAffix);
+  if (replacement !== undefined) return replacement;
+  return baseAffix.split("\n")[0];
 };
 
 // Prism area dimensions and anchor points

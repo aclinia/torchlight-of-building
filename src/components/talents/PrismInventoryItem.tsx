@@ -1,6 +1,10 @@
 import { Tooltip, TooltipTitle } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import { getAreaLabel, getLegendaryGaugeAffixes } from "@/src/lib/prism-utils";
+import {
+  getAreaLabel,
+  getBaseAffixLabel,
+  getLegendaryGaugeAffixes,
+} from "@/src/lib/prism-utils";
 import type { CraftedPrism } from "@/src/tli/core";
 
 interface PrismInventoryItemProps {
@@ -39,22 +43,7 @@ export const PrismInventoryItem: React.FC<PrismInventoryItemProps> = ({
   const rareCount = nonAreaAffixes.length - legendaryCount;
   const areaLabel = getAreaLabel(areaAffix);
 
-  const displayText = (() => {
-    if (prism.rarity === "rare") {
-      const delimiterIndex = prism.baseAffix.indexOf(
-        "Advanced Talent Panel:\n",
-      );
-      if (delimiterIndex !== -1) {
-        return prism.baseAffix
-          .slice(delimiterIndex + "Advanced Talent Panel:\n".length)
-          .replaceAll("\n", " / ");
-      }
-    } else {
-      const match = prism.baseAffix.match(/with\s+(.+)$/);
-      if (match !== null) return match[1];
-    }
-    return prism.baseAffix.split("\n")[0];
-  })();
+  const displayText = getBaseAffixLabel(prism.baseAffix);
 
   const handleClick = (): void => {
     if (selectionMode && onSelect !== undefined) {
@@ -142,7 +131,7 @@ export const PrismInventoryItem: React.FC<PrismInventoryItemProps> = ({
         </TooltipTitle>
         <div className="mb-2 text-xs text-zinc-300 whitespace-pre-line">
           <span className="text-zinc-500">Base: </span>
-          {prism.baseAffix}
+          {displayText}
         </div>
         {areaAffix !== undefined && (
           <div className="mb-1 text-xs text-zinc-400">
