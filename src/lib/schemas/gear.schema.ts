@@ -23,6 +23,7 @@ const BaseGearSchema = z.preprocess(
   z.object({
     id: z.string(),
     equipmentType: EquipmentTypeSchema,
+    equipmentSlot: z.string().optional(),
     rarity: GearRaritySchema.optional(),
     legendaryName: z.string().optional(),
     baseStats: z.string().optional(),

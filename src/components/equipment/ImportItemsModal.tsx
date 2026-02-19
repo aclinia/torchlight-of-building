@@ -83,6 +83,8 @@ const parseImportedItems = (
     }
 
     const equipmentType = normalizedType as EquipmentType;
+    const equipmentSlot =
+      typeof entry.equipmentSlot === "string" ? entry.equipmentSlot : undefined;
     const name = typeof entry.name === "string" ? entry.name : undefined;
     const affixes = Array.isArray(entry.affixes)
       ? entry.affixes.filter((a): a is string => typeof a === "string")
@@ -120,6 +122,7 @@ const parseImportedItems = (
     const item: Gear = {
       id: generateItemId(),
       equipmentType,
+      ...(equipmentSlot !== undefined ? { equipmentSlot } : {}),
       ...(rarity !== undefined ? { rarity } : {}),
       ...(legendaryName !== undefined ? { legendaryName } : {}),
       ...(baseStats !== undefined ? { baseStats } : {}),

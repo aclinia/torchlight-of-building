@@ -334,6 +334,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
 
 export interface Gear {
   equipmentType: EquipmentType;
+  equipmentSlot?: string;
 
   // UI fields (preserved from SaveData for display, always present for inventory items)
   id?: string;

@@ -229,6 +229,7 @@ const convertCustomAffixLines = (lines: string[] | undefined): AffixLine[] => {
 const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
   return {
     equipmentType: gear.equipmentType,
+    equipmentSlot: gear.equipmentSlot,
     id: gear.id,
     rarity: gear.rarity,
     legendaryName: gear.legendaryName,
