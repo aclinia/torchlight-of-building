@@ -1,4 +1,4 @@
-import type { DivinityAffixType, SlateShape } from "@/src/tli/core";
+import type { AnySlateShape, DivinityAffixType } from "@/src/tli/core";
 
 export interface AffixSlotConstraint {
   allowedTypes: DivinityAffixType[];
@@ -15,7 +15,7 @@ export interface FixedAffix {
 export interface LegendarySlateTemplate {
   key: string;
   displayName: string;
-  shape: SlateShape;
+  shape: AnySlateShape;
   canRotate: boolean;
   canFlip: boolean;
   affixSlots: AffixSlotConstraint[];

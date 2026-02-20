@@ -3222,7 +3222,7 @@ describe("Divinity Slate Mods", () => {
         inventory: [
           {
             id: "slate-1",
-            shape: "Single",
+            shape: "O",
             rotation: 0,
             flippedH: false,
             flippedV: false,
@@ -3270,7 +3270,7 @@ describe("Divinity Slate Mods", () => {
         inventory: [
           {
             id: "slate-1",
-            shape: "Single",
+            shape: "O",
             rotation: 0,
             flippedH: false,
             flippedV: false,
@@ -3321,7 +3321,7 @@ describe("Divinity Slate Mods", () => {
         inventory: [
           {
             id: "slate-1",
-            shape: "Single",
+            shape: "O",
             rotation: 0,
             flippedH: false,
             flippedV: false,
@@ -3338,7 +3338,7 @@ describe("Divinity Slate Mods", () => {
           },
           {
             id: "slate-2",
-            shape: "Single",
+            shape: "O",
             rotation: 0,
             flippedH: false,
             flippedV: false,

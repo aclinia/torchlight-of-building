@@ -1,11 +1,12 @@
 import type {
+  AnySlateShape,
   DivinitySlate,
   PlacedSlate,
   Rotation,
-  SlateShape,
 } from "@/src/tli/core";
+import { getSlateShape } from "./divinity-utils";
 
-export const SHAPE_CELLS: Record<SlateShape, [number, number][]> = {
+export const SHAPE_CELLS: Record<AnySlateShape, [number, number][]> = {
   O: [
     [0, 0],
     [0, 1],
@@ -62,18 +63,20 @@ export const SHAPE_CELLS: Record<SlateShape, [number, number][]> = {
   ],
 };
 
-export const SHAPE_BOUNDS: Record<SlateShape, { rows: number; cols: number }> =
-  {
-    O: { rows: 2, cols: 2 },
-    L: { rows: 3, cols: 2 },
-    Z: { rows: 2, cols: 3 },
-    T: { rows: 2, cols: 3 },
-    // Legendary slate shapes
-    Single: { rows: 1, cols: 1 },
-    CornerL: { rows: 2, cols: 2 },
-    Vertical2: { rows: 2, cols: 1 },
-    Pedigree: { rows: 3, cols: 3 },
-  };
+export const SHAPE_BOUNDS: Record<
+  AnySlateShape,
+  { rows: number; cols: number }
+> = {
+  O: { rows: 2, cols: 2 },
+  L: { rows: 3, cols: 2 },
+  Z: { rows: 2, cols: 3 },
+  T: { rows: 2, cols: 3 },
+  // Legendary slate shapes
+  Single: { rows: 1, cols: 1 },
+  CornerL: { rows: 2, cols: 2 },
+  Vertical2: { rows: 2, cols: 1 },
+  Pedigree: { rows: 3, cols: 3 },
+};
 
 const normalizeCoordinates = (
   cells: [number, number][],
@@ -98,7 +101,7 @@ const rotateCells90 = (
 };
 
 export const applyRotation = (
-  shape: SlateShape,
+  shape: AnySlateShape,
   rotation: Rotation,
 ): { cells: [number, number][]; bounds: { rows: number; cols: number } } => {
   let cells = [...SHAPE_CELLS[shape]];
@@ -137,7 +140,7 @@ const flipVertical = (
 };
 
 export const getTransformedCells = (
-  shape: SlateShape,
+  shape: AnySlateShape,
   rotation: Rotation,
   flippedH: boolean,
   flippedV: boolean,
@@ -160,7 +163,7 @@ export const getOccupiedCells = (
   placed: PlacedSlate,
 ): [number, number][] => {
   const cells = getTransformedCells(
-    slate.shape,
+    getSlateShape(slate),
     slate.rotation,
     slate.flippedH,
     slate.flippedV,
@@ -173,7 +176,7 @@ export const getOccupiedCells = (
 };
 
 export const getTransformedBounds = (
-  shape: SlateShape,
+  shape: AnySlateShape,
   rotation: Rotation,
 ): { rows: number; cols: number } => {
   const { bounds } = applyRotation(shape, rotation);

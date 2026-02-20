@@ -1,6 +1,6 @@
 import { Tooltip } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import { getSlateDisplayName } from "@/src/lib/divinity-utils";
+import { getSlateDisplayName, getSlateShape } from "@/src/lib/divinity-utils";
 import type { DivinitySlate } from "@/src/tli/core";
 import { SlatePreview } from "./SlatePreview";
 import { SlateTooltipContent } from "./SlateTooltipContent";
@@ -43,7 +43,7 @@ export const SlateInventoryItem: React.FC<SlateInventoryItemProps> = ({
       >
         <div className="flex-shrink-0">
           <SlatePreview
-            shape={slate.shape}
+            shape={getSlateShape(slate)}
             god={slate.god}
             rotation={slate.rotation}
             flippedH={slate.flippedH}

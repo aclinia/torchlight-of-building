@@ -444,17 +444,22 @@ export interface TalentPage {
   inventory: TalentInventory;
 }
 
-export const SLATE_SHAPES = [
-  "O",
-  "L",
-  "Z",
-  "T",
+export const SLATE_SHAPES = ["O", "L", "Z", "T"] as const;
+export type SlateShape = (typeof SLATE_SHAPES)[number];
+
+export const LEGENDARY_SLATE_SHAPES = [
   "Single",
   "CornerL",
   "Vertical2",
   "Pedigree",
 ] as const;
-export type SlateShape = (typeof SLATE_SHAPES)[number];
+export type LegendarySlateShape = (typeof LEGENDARY_SLATE_SHAPES)[number];
+
+export const ALL_SLATE_SHAPES = [
+  ...SLATE_SHAPES,
+  ...LEGENDARY_SLATE_SHAPES,
+] as const;
+export type AnySlateShape = (typeof ALL_SLATE_SHAPES)[number];
 
 export const DIVINITY_GODS = [
   "Deception",
@@ -485,7 +490,7 @@ export interface PlacedSlate {
 export interface DivinitySlate {
   id: string;
   god?: DivinityGod;
-  shape: SlateShape;
+  shape?: SlateShape;
   rotation: Rotation;
   flippedH: boolean;
   flippedV: boolean;

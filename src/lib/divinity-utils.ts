@@ -1,6 +1,27 @@
 import { Talents } from "@/src/data/talent/talents";
-import type { DivinitySlate } from "@/src/tli/core";
+import type { AnySlateShape, DivinitySlate } from "@/src/tli/core";
+import { LEGENDARY_SLATE_TEMPLATES } from "./legendary-slate-templates";
 import type { DivinityAffixType, DivinityGod } from "./save-data";
+
+// Build reverse lookup from displayName → template
+const LEGENDARY_NAME_TO_TEMPLATE = new Map(
+  Object.values(LEGENDARY_SLATE_TEMPLATES).map((t) => [t.displayName, t]),
+);
+
+export const getSlateShape = (slate: {
+  shape?: AnySlateShape;
+  isLegendary?: boolean;
+  legendaryName?: string;
+}): AnySlateShape => {
+  if (slate.isLegendary === true && slate.legendaryName !== undefined) {
+    const template = LEGENDARY_NAME_TO_TEMPLATE.get(slate.legendaryName);
+    if (template !== undefined) {
+      return template.shape;
+    }
+    return "Single";
+  }
+  return slate.shape ?? "Single";
+};
 
 export interface DivinityAffix {
   effect: string;

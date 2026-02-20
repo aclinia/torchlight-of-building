@@ -1,8 +1,8 @@
 import type {
+  AnySlateShape,
   DivinitySlate,
   PlacedSlate,
   Rotation,
-  SlateShape,
 } from "@/src/tli/core";
 import { getOccupiedCells, getTransformedCells } from "./divinity-shapes";
 
@@ -51,7 +51,7 @@ export const buildOccupiedCellsSet = (
 };
 
 export const canPlaceSlate = (
-  shape: SlateShape,
+  shape: AnySlateShape,
   position: { row: number; col: number },
   rotation: Rotation,
   flippedH: boolean,

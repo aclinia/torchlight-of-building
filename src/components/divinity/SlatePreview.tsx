@@ -1,9 +1,9 @@
 import { applyRotation, getTransformedCells } from "@/src/lib/divinity-shapes";
 import { GOD_COLORS, LEGENDARY_SLATE_COLOR } from "@/src/lib/divinity-utils";
-import type { DivinityGod, Rotation, SlateShape } from "@/src/tli/core";
+import type { AnySlateShape, DivinityGod, Rotation } from "@/src/tli/core";
 
 interface SlatePreviewProps {
-  shape: SlateShape;
+  shape: AnySlateShape;
   god?: DivinityGod;
   rotation?: Rotation;
   flippedH?: boolean;

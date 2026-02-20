@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { getSlateShape } from "@/src/lib/divinity-utils";
 import type { DivinitySlate } from "@/src/tli/core";
 import { SlatePreview } from "./SlatePreview";
 
@@ -82,7 +83,7 @@ export const SlateEditToolbar: React.FC<SlateEditToolbarProps> = ({
       <div className="bg-zinc-900 border border-zinc-600 rounded-lg shadow-xl p-2">
         <div className="flex items-center gap-2 mb-2">
           <SlatePreview
-            shape={slate.shape}
+            shape={getSlateShape(slate)}
             god={slate.god}
             rotation={slate.rotation}
             flippedH={slate.flippedH}
@@ -130,7 +131,7 @@ export const SlateEditToolbar: React.FC<SlateEditToolbarProps> = ({
             className="rounded bg-zinc-700 px-2 py-1.5 text-xs text-zinc-200 hover:bg-zinc-600"
             title="Change Shape"
           >
-            {slate.shape}
+            {getSlateShape(slate)}
           </button>
           <button
             type="button"

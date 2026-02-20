@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { getSlateShape } from "./divinity-utils";
 import { parseImportedSlates } from "./slate-import";
 
 describe("parseImportedSlates", () => {
@@ -15,7 +16,8 @@ describe("parseImportedSlates", () => {
     expect(slates).toHaveLength(1);
     expect(slates[0].isLegendary).toBe(true);
     expect(slates[0].legendaryName).toBe("Fallen Starlight");
-    expect(slates[0].shape).toBe("Vertical2");
+    expect(slates[0].shape).toBeUndefined();
+    expect(getSlateShape(slates[0])).toBe("Vertical2");
     expect(slates[0].affixes).toEqual([
       "+15% Critical Strike Rating",
       "+3% Max Life",
@@ -92,7 +94,8 @@ describe("parseImportedSlates", () => {
       );
       expect(errors).toEqual([]);
       expect(slates[0].legendaryName).toBe(expectedDisplayName);
-      expect(slates[0].shape).toBe(expectedShape);
+      expect(slates[0].shape).toBeUndefined();
+      expect(getSlateShape(slates[0])).toBe(expectedShape);
     }
   });
 
@@ -106,7 +109,8 @@ describe("parseImportedSlates", () => {
     expect(slates).toHaveLength(1);
     expect(slates[0].isLegendary).toBe(true);
     expect(slates[0].legendaryName).toBe("Unknown Slate");
-    expect(slates[0].shape).toBe("Single");
+    expect(slates[0].shape).toBeUndefined();
+    expect(getSlateShape(slates[0])).toBe("Single");
     expect(slates[0].affixes).toEqual(["+10% damage"]);
   });
 

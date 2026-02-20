@@ -15,7 +15,7 @@ import {
   getOccupiedCells,
   getTransformedCells,
 } from "@/src/lib/divinity-shapes";
-import { getSlateColor } from "@/src/lib/divinity-utils";
+import { getSlateColor, getSlateShape } from "@/src/lib/divinity-utils";
 import {
   type DivinityPage,
   ROTATIONS,
@@ -103,7 +103,7 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
     // Calculate preview position
     if (dropTarget) {
       const shapeCells = getTransformedCells(
-        draggedSlate.shape,
+        getSlateShape(draggedSlate),
         draggedSlate.rotation,
         draggedSlate.flippedH,
         draggedSlate.flippedV,
@@ -231,7 +231,9 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
 
   const handleChangeShape = (): void => {
     if (!selectedSlate || !selectedSlateId) return;
-    const currentIndex = SLATE_SHAPES.indexOf(selectedSlate.shape);
+    if (selectedSlate.isLegendary === true) return;
+    const shape = getSlateShape(selectedSlate) as SlateShape;
+    const currentIndex = SLATE_SHAPES.indexOf(shape);
     const nextIndex = (currentIndex + 1) % SLATE_SHAPES.length;
     onUpdateSlateShape(selectedSlateId, SLATE_SHAPES[nextIndex]);
   };
@@ -295,7 +297,7 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
       // Update toolbar position if we were dragging the selected slate
       if (draggedSlateId === selectedSlateId && selectedSlate) {
         const cells = getTransformedCells(
-          selectedSlate.shape,
+          getSlateShape(selectedSlate),
           selectedSlate.rotation,
           selectedSlate.flippedH,
           selectedSlate.flippedV,
@@ -421,7 +423,7 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
     showInvalidOverlay: boolean,
   ) => {
     const shapeCells = getTransformedCells(
-      slate.shape,
+      getSlateShape(slate),
       slate.rotation,
       slate.flippedH,
       slate.flippedV,
@@ -569,7 +571,7 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
 
           if (isSelectedSlateDragging && dropTarget) {
             const cells = getTransformedCells(
-              selectedSlate.shape,
+              getSlateShape(selectedSlate),
               selectedSlate.rotation,
               selectedSlate.flippedH,
               selectedSlate.flippedV,

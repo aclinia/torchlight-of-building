@@ -65,7 +65,7 @@ const initialState: InternalBuilderState = {
 const toSaveDataSlate = (slate: CoreDivinitySlate): DivinitySlate => ({
   id: slate.id,
   god: slate.god,
-  shape: slate.shape,
+  shape: slate.isLegendary === true ? undefined : slate.shape,
   rotation: slate.rotation,
   flippedH: slate.flippedH,
   flippedV: slate.flippedV,

@@ -3,16 +3,7 @@ import { z } from "zod";
 import { EQUIPMENT_TYPES } from "@/src/tli/gear-data-types";
 
 // Re-export const arrays from core.ts for runtime use
-export const SLATE_SHAPES = [
-  "O",
-  "L",
-  "Z",
-  "T",
-  "Single",
-  "CornerL",
-  "Vertical2",
-  "Pedigree",
-] as const;
+export const SLATE_SHAPES = ["O", "L", "Z", "T"] as const;
 
 export const DIVINITY_GODS = [
   "Deception",

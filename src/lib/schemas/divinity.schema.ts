@@ -10,7 +10,7 @@ import {
 const BaseDivinitySlateSchema = z.object({
   id: z.string(),
   god: DivinityGodSchema.optional().catch(undefined),
-  shape: SlateShapeSchema,
+  shape: SlateShapeSchema.optional().catch(undefined),
   rotation: RotationSchema,
   flippedH: z.boolean(),
   flippedV: z.boolean(),

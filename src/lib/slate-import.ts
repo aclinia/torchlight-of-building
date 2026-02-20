@@ -60,7 +60,6 @@ export const parseImportedSlates = (
     if (legendaryTemplate !== undefined) {
       slates.push({
         id: generateItemId(),
-        shape: legendaryTemplate.shape,
         rotation: 0,
         flippedH: false,
         flippedV: false,
@@ -89,7 +88,6 @@ export const parseImportedSlates = (
     // Unknown name — treat as legendary with the imported name
     slates.push({
       id: generateItemId(),
-      shape: "Single",
       rotation: 0,
       flippedH: false,
       flippedV: false,

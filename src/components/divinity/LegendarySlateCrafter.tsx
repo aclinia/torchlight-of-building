@@ -166,7 +166,6 @@ export const LegendarySlateCrafter: React.FC<LegendarySlateCrafterProps> = ({
     const slate: DivinitySlate = {
       id: generateItemId(),
       god: undefined,
-      shape: template.shape,
       rotation: template.canRotate ? rotation : 0,
       flippedH: template.canFlip ? flippedH : false,
       flippedV: template.canFlip ? flippedV : false,
