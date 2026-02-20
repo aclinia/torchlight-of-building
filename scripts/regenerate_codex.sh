@@ -1,1 +1,0 @@
-curl https://torchcodex.com/ > .garbage/codex2.html && tidy --wrap 0 -mqi .garbage/codex2.html

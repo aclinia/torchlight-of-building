@@ -137,7 +137,7 @@ src/tli/                 # Game engine (pure TypeScript, no React)
     └── craft.ts
 
 src/scripts/             # Build-time scripts (scraping, code generation)
-├── lib/                 # Shared utilities (codex.ts, tlidb.ts)
+├── lib/                 # Shared utilities (tlidb.ts)
 ├── skills/              # Skill data parsers
 │   ├── active-parsers.ts
 │   ├── passive-parsers.ts
