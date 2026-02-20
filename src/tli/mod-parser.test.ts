@@ -4357,6 +4357,13 @@ test("parse additional attack damage when having feline stimulant (singular)", (
   ]);
 });
 
+test("parse gains feline stimulant stack (no-op)", () => {
+  const result = parseMod(
+    "Gains 1 stack of Feline Stimulant when triggering a Main Skill",
+  );
+  expect(result).toEqual([]);
+});
+
 test("parse copies talent on all adjacent slates (no-op)", () => {
   const result = parseMod(
     "Copies the last Talent on all adjacent slates. Unable to copy Core Talents.",

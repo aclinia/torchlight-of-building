@@ -2253,6 +2253,9 @@ export const allParsers = [
     "gains {stacks:int} stack of pure heart when using an attack mobility skill",
   ).outputNone(),
   t(
+    "gains {stacks:int} stack of feline stimulant when triggering a main skill",
+  ).outputNone(),
+  t(
     "converts {value:dec%} of {from:DmgChunkType} damage taken to {to:DmgChunkType} damage",
   ).output((c) => ({
     type: "ConvertDmgTakenPct",
