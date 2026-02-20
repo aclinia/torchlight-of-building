@@ -21,6 +21,7 @@ function DivinityPage(): React.ReactNode {
     placeSlate,
     removeSlate,
     updateSlate,
+    importSlates,
   } = useBuilderActions();
 
   return (
@@ -47,6 +48,7 @@ function DivinityPage(): React.ReactNode {
       onUpdateSlateShape={(slateId: string, shape: SlateShape) =>
         updateSlate(slateId, { shape })
       }
+      onImportSlates={importSlates}
     />
   );
 }

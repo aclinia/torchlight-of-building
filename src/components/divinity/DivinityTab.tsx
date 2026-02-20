@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { findGridCenter } from "@/src/lib/divinity-grid";
+import type { DivinitySlate as SaveDataSlate } from "@/src/lib/schemas/divinity.schema";
 import type {
   DivinityPage,
   DivinitySlate,
@@ -7,6 +9,7 @@ import type {
   SlateShape,
 } from "@/src/tli/core";
 import { DivinityGrid } from "./DivinityGrid";
+import { ImportSlatesModal } from "./ImportSlatesModal";
 import { LegendarySlateCrafter } from "./LegendarySlateCrafter";
 import { SlateCrafter } from "./SlateCrafter";
 import { SlateInventory } from "./SlateInventory";
@@ -29,6 +32,7 @@ interface DivinityTabProps {
     flippedV: boolean,
   ) => void;
   onUpdateSlateShape: (slateId: string, shape: SlateShape) => void;
+  onImportSlates: (slates: SaveDataSlate[]) => void;
 }
 
 export const DivinityTab: React.FC<DivinityTabProps> = ({
@@ -42,8 +46,10 @@ export const DivinityTab: React.FC<DivinityTabProps> = ({
   onUpdateSlateRotation,
   onUpdateSlateFlip,
   onUpdateSlateShape,
+  onImportSlates,
 }) => {
   const placedSlateIds = divinityPage.placedSlates.map((p) => p.slateId);
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
 
   const handlePlaceSlate = (slateId: string) => {
     const center = findGridCenter();
@@ -66,6 +72,16 @@ export const DivinityTab: React.FC<DivinityTabProps> = ({
       </div>
 
       <div className="flex flex-col gap-6">
+        <div>
+          <button
+            type="button"
+            onClick={() => setIsImportModalOpen(true)}
+            className="w-full rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-3 font-semibold text-zinc-200 transition-colors hover:bg-zinc-700"
+          >
+            Import Slates
+          </button>
+        </div>
+
         <SlateCrafter onSave={onSaveSlate} />
 
         <LegendarySlateCrafter onSave={onSaveSlate} />
@@ -78,6 +94,12 @@ export const DivinityTab: React.FC<DivinityTabProps> = ({
           onDelete={onDeleteSlate}
         />
       </div>
+
+      <ImportSlatesModal
+        isOpen={isImportModalOpen}
+        onClose={() => setIsImportModalOpen(false)}
+        onImport={onImportSlates}
+      />
     </div>
   );
 };

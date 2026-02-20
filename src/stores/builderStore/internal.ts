@@ -617,6 +617,14 @@ export const internalStore = create(
         });
       },
 
+      importSlates: (slates: DivinitySlate[]) => {
+        set((state) => {
+          for (const slate of slates) {
+            state.saveData.divinityPage.inventory.push(slate);
+          }
+        });
+      },
+
       // Skills actions
       setActiveSkill: (
         slot: 1 | 2 | 3 | 4 | 5,
