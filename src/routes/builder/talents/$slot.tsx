@@ -114,6 +114,9 @@ function TalentsSlotPage(): React.ReactNode {
       const tree = loadout.talentPage.talentTrees[treeSlot];
       if (tree?.nodes.some((n) => n.points > 0)) return;
 
+      // Don't allow switching if there's a prism placed in this tree
+      if (placedPrism?.treeSlot === treeSlot) return;
+
       if (newTreeName === "") {
         setTreeOrClear(treeSlot, "");
         return;
@@ -124,7 +127,7 @@ function TalentsSlotPage(): React.ReactNode {
 
       setTreeOrClear(treeSlot, newTreeName);
     },
-    [loadout.talentPage.talentTrees, setTreeOrClear],
+    [loadout.talentPage.talentTrees, setTreeOrClear, placedPrism],
   );
 
   const handleResetTree = useCallback(
