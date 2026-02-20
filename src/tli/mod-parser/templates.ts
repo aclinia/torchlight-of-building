@@ -2670,6 +2670,18 @@ export const allParsers = [
     "restores {value:dec%} life on block. interval: {interval:dec}s",
   ).outputNone(),
   t("takes {value:int} true damage every {interval:dec}s").outputNone(),
+  t(
+    "copies the last talent on the adjacent slate above to this slate. unable to copy the core talent.",
+  ).outputNone(),
+  t(
+    "copies the last talent on the adjacent slate on the left to this slate. unable to copy the core talent.",
+  ).outputNone(),
+  t(
+    "copies the last talent on the adjacent slate below this slate. unable to copy the core talents.",
+  ).outputNone(),
+  t(
+    "copies the last talent on the adjacent slate on the right to this slate. unable to copy the core talent.",
+  ).outputNone(),
   t("{value:+dec%} [additional] warcry effect").output((c) => ({
     type: "WarcryEffPct",
     value: c.value,
@@ -2727,8 +2739,5 @@ export const allParsers = [
   })),
   t(
     "copies the last talent on all adjacent slates. unable to copy core talents.",
-  ).outputNone(),
-  t(
-    "copies the last talent on the adjacent slate {(above|left|below|right)} to this slate. unable to copy the core talent.",
   ).outputNone(),
 ];

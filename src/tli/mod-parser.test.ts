@@ -3816,6 +3816,29 @@ test("parse energy shield starts to charge when blocking (empty)", () => {
   expect(result).toEqual([]);
 });
 
+test("parse copies talent from adjacent slate (empty)", () => {
+  expect(
+    parseMod(
+      "Copies the last Talent on the adjacent slate above to this slate. Unable to copy the Core Talent.",
+    ),
+  ).toEqual([]);
+  expect(
+    parseMod(
+      "Copies the last Talent on the adjacent slate on the left to this slate. Unable to copy the Core Talent.",
+    ),
+  ).toEqual([]);
+  expect(
+    parseMod(
+      "Copies the last Talent on the adjacent slate below this slate. Unable to copy the Core Talents.",
+    ),
+  ).toEqual([]);
+  expect(
+    parseMod(
+      "Copies the last Talent on the adjacent slate on the right to this slate. Unable to copy the Core Talent.",
+    ),
+  ).toEqual([]);
+});
+
 test("parse you can cast additional curses", () => {
   const result = parseMod("You can cast 1 additional Curse(s)");
   expect(result).toEqual([{ type: "AddnCurse", value: 1 }]);
@@ -4322,34 +4345,6 @@ test("parse additional attack damage when having feline stimulants", () => {
 test("parse copies talent on all adjacent slates (no-op)", () => {
   const result = parseMod(
     "Copies the last Talent on all adjacent slates. Unable to copy Core Talents.",
-  );
-  expect(result).toEqual([]);
-});
-
-test("parse copies talent on adjacent slate above (no-op)", () => {
-  const result = parseMod(
-    "Copies the last Talent on the adjacent slate above to this slate. Unable to copy the Core Talent.",
-  );
-  expect(result).toEqual([]);
-});
-
-test("parse copies talent on adjacent slate left (no-op)", () => {
-  const result = parseMod(
-    "Copies the last Talent on the adjacent slate left to this slate. Unable to copy the Core Talent.",
-  );
-  expect(result).toEqual([]);
-});
-
-test("parse copies talent on adjacent slate below (no-op)", () => {
-  const result = parseMod(
-    "Copies the last Talent on the adjacent slate below to this slate. Unable to copy the Core Talent.",
-  );
-  expect(result).toEqual([]);
-});
-
-test("parse copies talent on adjacent slate right (no-op)", () => {
-  const result = parseMod(
-    "Copies the last Talent on the adjacent slate right to this slate. Unable to copy the Core Talent.",
   );
   expect(result).toEqual([]);
 });
