@@ -982,13 +982,16 @@ export const internalStore = create(
           if (treeName === "") {
             delete state.saveData.talentPage.talentTrees[treeSlot];
           } else {
+            const existing = state.saveData.talentPage.talentTrees[treeSlot];
+            const isSameTree = existing?.name === treeName;
             state.saveData.talentPage.talentTrees[treeSlot] = {
               name: treeName,
-              allocatedNodes: [],
+              allocatedNodes: isSameTree
+                ? (existing?.allocatedNodes ?? [])
+                : [],
               selectedCoreTalents: clearCoreTalents
                 ? []
-                : (state.saveData.talentPage.talentTrees[treeSlot]
-                    ?.selectedCoreTalents ?? []),
+                : (existing?.selectedCoreTalents ?? []),
             };
           }
         });
