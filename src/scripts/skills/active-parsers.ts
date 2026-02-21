@@ -745,6 +745,12 @@ export const spectralSlashParser: SupportLevelParser = (input) => {
     skillName,
   ).value;
 
+  const maxClones = findMatch(
+    descript,
+    ts("up to {value:int} clone(s)"),
+    skillName,
+  ).value;
+
   validateAllLevels(comboStarterWeaponAtkDmgPct, skillName);
   validateAllLevels(comboFinisherWeaponAtkDmgPct, skillName);
 
@@ -756,6 +762,7 @@ export const spectralSlashParser: SupportLevelParser = (input) => {
       comboFinisherAmplificationPct,
     ),
     shotgunEffFalloffPct: createConstantLevels(shotgunEffFalloffPct),
+    maxClones: createConstantLevels(maxClones),
   };
 };
 

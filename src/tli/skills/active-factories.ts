@@ -339,6 +339,7 @@ export const activeSkillModFactories: Partial<
         value: v(vals.comboFinisherWeaponAtkDmgPct, l),
       },
       shotgunEffFalloffPct: { value: v(vals.shotgunEffFalloffPct, l) },
+      maxClones: { value: v(vals.maxClones, l) },
     },
     mods: [
       { type: "ComboFinisherAspdPct", value: v(vals.comboFinisherAspdPct, l) },

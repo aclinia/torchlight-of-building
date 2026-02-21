@@ -3189,11 +3189,13 @@ const calcAvgComboDps = (
     1 + comboPoints * (comboFinisherAmplificationMult - 1);
 
   // Spectral Slash-specific multipliers:
-  // - Finisher generates clones (= combo points) with shotgun falloff
+  // - Finisher generates clones (= combo points), capped by maxClones, with shotgun falloff
   // - Starter 1 marks the target for 30% additional damage on subsequent hits
   const isSpectralSlash = skill.name === "Spectral Slash";
+  const maxClones = offense.maxClones?.value ?? Infinity;
+  const cloneCount = Math.min(comboPoints, maxClones);
   const spectralFinisherCloneMult = isSpectralSlash
-    ? 1 + comboPoints * ((offense.shotgunEffFalloffPct?.value ?? 0) / 100)
+    ? 1 + cloneCount * ((offense.shotgunEffFalloffPct?.value ?? 0) / 100)
     : 1;
   const markDmgMult = isSpectralSlash ? 1.3 : 1;
 
