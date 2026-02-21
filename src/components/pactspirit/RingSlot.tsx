@@ -4,55 +4,41 @@ import {
   TooltipTitle,
 } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import type { Affix, RingSlotState } from "@/src/tli/core";
+import type { Affix, InstalledDestiny, RingSlotState } from "@/src/tli/core";
 import { isInnerRing } from "../../lib/pactspirit-utils";
 import type { RingSlotKey } from "../../lib/types";
 
-interface RingSlotProps {
-  ringSlot: RingSlotKey;
-  ringState: RingSlotState;
-  onInstallClick: () => void;
-  onRevert: () => void;
+interface DestinySlotRowProps {
+  displayName: string;
+  subtitle: string;
+  displayAffix: Affix;
+  installedDestiny?: InstalledDestiny;
+  className?: string;
+  onAction: () => void;
+  actionLabel: string;
+  actionVariant: "install" | "revert";
 }
 
-export const RingSlot: React.FC<RingSlotProps> = ({
-  ringSlot,
-  ringState,
-  onInstallClick,
-  onRevert,
+export const DestinySlotRow: React.FC<DestinySlotRowProps> = ({
+  displayName,
+  subtitle,
+  displayAffix,
+  installedDestiny,
+  className = "bg-zinc-800 border-zinc-700",
+  onAction,
+  actionLabel,
+  actionVariant,
 }) => {
   const { isVisible, triggerRef, triggerRect } = useTooltip();
 
-  const hasDestiny = !!ringState.installedDestiny;
-  const isInner = isInnerRing(ringSlot);
-
-  let displayName: string;
-  let displayAffix: Affix;
-  let destinyType: string | undefined;
-
-  if (hasDestiny && ringState.installedDestiny) {
-    const {
-      destinyName,
-      destinyType: dType,
-      affix,
-    } = ringState.installedDestiny;
-    destinyType = dType;
-    displayName = destinyName;
-    displayAffix = affix;
-  } else {
-    displayName = ringState.originalRingName;
-    displayAffix = ringState.originalAffix;
-  }
+  const hasDestiny = installedDestiny !== undefined;
+  const titleText =
+    hasDestiny && installedDestiny.destinyType !== undefined
+      ? `${installedDestiny.destinyType}: ${displayName}`
+      : displayName;
 
   return (
-    <div
-      className={`p-2 rounded-lg border ${
-        isInner
-          ? "bg-zinc-800 border-zinc-700"
-          : "bg-zinc-750 border-amber-700/50"
-      }`}
-      ref={triggerRef}
-    >
+    <div className={`p-2 rounded-lg border ${className}`} ref={triggerRef}>
       <div className="flex items-center justify-between gap-2">
         <div className="flex-1 min-w-0">
           <div
@@ -60,39 +46,31 @@ export const RingSlot: React.FC<RingSlotProps> = ({
               hasDestiny ? "text-amber-400" : "text-zinc-200"
             }`}
           >
-            {hasDestiny && destinyType
-              ? `${destinyType}: ${displayName}`
-              : displayName}
+            {titleText}
           </div>
-          <div className="text-xs text-zinc-500">
-            {isInner ? "Inner Ring" : "Mid Ring"}
-          </div>
+          <div className="text-xs text-zinc-500">{subtitle}</div>
         </div>
         <div className="flex gap-1 flex-shrink-0">
-          {hasDestiny ? (
+          {actionVariant === "revert" ? (
             <button
-              onClick={onRevert}
+              onClick={onAction}
               className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
             >
-              Revert
+              {actionLabel}
             </button>
           ) : (
             <button
-              onClick={onInstallClick}
+              onClick={onAction}
               className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
             >
-              Install
+              {actionLabel}
             </button>
           )}
         </div>
       </div>
 
       <Tooltip isVisible={isVisible} triggerRect={triggerRect}>
-        <TooltipTitle>
-          {hasDestiny && destinyType
-            ? `${destinyType}: ${displayName}`
-            : displayName}
-        </TooltipTitle>
+        <TooltipTitle>{titleText}</TooltipTitle>
         <TooltipContent>
           <div>
             {displayAffix.affixLines.map((line, lineIdx) => (
@@ -114,5 +92,47 @@ export const RingSlot: React.FC<RingSlotProps> = ({
         </TooltipContent>
       </Tooltip>
     </div>
+  );
+};
+
+interface RingSlotProps {
+  ringSlot: RingSlotKey;
+  ringState: RingSlotState;
+  onInstallClick: () => void;
+  onRevert: () => void;
+}
+
+export const RingSlot: React.FC<RingSlotProps> = ({
+  ringSlot,
+  ringState,
+  onInstallClick,
+  onRevert,
+}) => {
+  const { installedDestiny } = ringState;
+  const hasDestiny = installedDestiny !== undefined;
+  const isInner = isInnerRing(ringSlot);
+
+  const displayName = hasDestiny
+    ? installedDestiny.destinyName
+    : ringState.originalRingName;
+  const displayAffix = hasDestiny
+    ? installedDestiny.affix
+    : ringState.originalAffix;
+
+  return (
+    <DestinySlotRow
+      displayName={displayName}
+      subtitle={isInner ? "Inner Ring" : "Mid Ring"}
+      displayAffix={displayAffix}
+      installedDestiny={ringState.installedDestiny}
+      className={
+        isInner
+          ? "bg-zinc-800 border-zinc-700"
+          : "bg-zinc-750 border-amber-700/50"
+      }
+      onAction={hasDestiny ? onRevert : onInstallClick}
+      actionLabel={hasDestiny ? "Revert" : "Install"}
+      actionVariant={hasDestiny ? "revert" : "install"}
+    />
   );
 };

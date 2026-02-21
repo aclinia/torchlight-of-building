@@ -8,17 +8,14 @@ import {
   hasRanges,
 } from "../../lib/pactspirit-utils";
 import type { InstalledDestinyResult } from "../../lib/types";
-import type {
-  Affix,
-  PactspiritSlot,
-  UndeterminedFateSlotState,
-} from "../../tli/core";
+import type { PactspiritSlot, UndeterminedFateSlotState } from "../../tli/core";
 import {
   Modal,
   ModalActions,
   ModalButton,
   ModalDescription,
 } from "../ui/Modal";
+import { DestinySlotRow } from "./RingSlot";
 
 interface UndeterminedFateSectionProps {
   slot: PactspiritSlot;
@@ -40,43 +37,23 @@ const FateSlotRow: React.FC<{
 }> = ({ fateSlot, label, onInstallClick, onRevert }) => {
   const { installedDestiny } = fateSlot;
   const hasDestiny = installedDestiny !== undefined;
-  const displayAffix: Affix = hasDestiny
+  const displayName = hasDestiny ? installedDestiny.destinyName : label;
+  const displayAffix = hasDestiny
     ? installedDestiny.affix
     : fateSlot.defaultAffix;
-  const displayText = displayAffix.affixLines.map((l) => l.text).join(", ");
+  const slotTypeLabel =
+    fateSlot.slotType === "micro" ? "Micro Slot" : "Medium Slot";
 
   return (
-    <div className="flex items-center justify-between gap-2 p-2 bg-zinc-800 rounded-lg border border-zinc-700">
-      <div className="flex-1 min-w-0">
-        <div
-          className={`text-sm font-medium truncate ${
-            hasDestiny ? "text-amber-400" : "text-zinc-200"
-          }`}
-        >
-          {hasDestiny
-            ? `${installedDestiny.destinyType}: ${installedDestiny.destinyName}`
-            : label}
-        </div>
-        <div className="text-xs text-zinc-500">{displayText}</div>
-      </div>
-      <div className="flex gap-1 flex-shrink-0">
-        {hasDestiny ? (
-          <button
-            onClick={onRevert}
-            className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
-          >
-            Revert
-          </button>
-        ) : (
-          <button
-            onClick={onInstallClick}
-            className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
-          >
-            Install
-          </button>
-        )}
-      </div>
-    </div>
+    <DestinySlotRow
+      displayName={displayName}
+      subtitle={slotTypeLabel}
+      displayAffix={displayAffix}
+      installedDestiny={fateSlot.installedDestiny}
+      onAction={hasDestiny ? onRevert : onInstallClick}
+      actionLabel={hasDestiny ? "Revert" : "Install"}
+      actionVariant={hasDestiny ? "revert" : "install"}
+    />
   );
 };
 
@@ -343,22 +320,14 @@ export const UndeterminedFateSection: React.FC<
         <h4 className="text-sm font-medium text-zinc-400 mb-2">
           Undetermined Fate
         </h4>
-        <div className="p-2 bg-zinc-800 rounded-lg border border-zinc-700 flex items-center justify-between gap-2">
-          <div className="flex-1 min-w-0">
-            <div className="text-sm text-zinc-200">Default Effect</div>
-            <div className="text-xs text-zinc-500">
-              {slot.defaultUndeterminedAffix.affixLines
-                .map((l) => l.text)
-                .join(", ")}
-            </div>
-          </div>
-          <button
-            onClick={() => setConfigModalOpen(true)}
-            className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs flex-shrink-0"
-          >
-            Configure
-          </button>
-        </div>
+        <DestinySlotRow
+          displayName="Default Effect"
+          subtitle="Undetermined Fate"
+          displayAffix={slot.defaultUndeterminedAffix}
+          onAction={() => setConfigModalOpen(true)}
+          actionLabel="Configure"
+          actionVariant="install"
+        />
         <ConfigureModal
           isOpen={configModalOpen}
           onClose={() => setConfigModalOpen(false)}
