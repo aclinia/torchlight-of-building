@@ -2842,24 +2842,12 @@ const calcAvgAttackDps = (
   const offense = skillMods.offense;
 
   // Get offense percentages based on skill type
-  const offenseValues = match(skill.name as ActiveSkillName)
-    .with("Frost Spike", "Thunder Spike", "Berserking Blade", () => {
-      const weaponAtkDmgPct = offense?.weaponAtkDmgPct?.value;
-      const addedDmgEffPct = offense?.addedDmgEffPct?.value;
-      if (weaponAtkDmgPct === undefined || addedDmgEffPct === undefined) {
-        return undefined;
-      }
-      return { weaponAtkDmgPct, addedDmgEffPct };
-    })
-    .with("[Test] Simple Attack", () => ({
-      weaponAtkDmgPct: 100,
-      addedDmgEffPct: 100,
-    }))
-    .otherwise(() => undefined);
-
-  if (offenseValues === undefined) {
+  const weaponAtkDmgPct = offense?.weaponAtkDmgPct?.value;
+  const addedDmgEffPct = offense?.addedDmgEffPct?.value;
+  if (weaponAtkDmgPct === undefined || addedDmgEffPct === undefined) {
     return undefined;
   }
+  const offenseValues = { weaponAtkDmgPct, addedDmgEffPct };
 
   const critDmgMult = calculateCritDmg(mods, skill);
   const mainhand = loadout.gearPage.equippedGear.mainHand;
