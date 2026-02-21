@@ -3180,7 +3180,7 @@ const calcAvgComboDps = (
   // - Finisher generates clones (= combo points), capped by maxClones, with shotgun falloff
   // - Starter 1 marks the target for 30% additional damage on subsequent hits
   const isSpectralSlash = skill.name === "Spectral Slash";
-  const maxClones = offense.maxClones?.value ?? Infinity;
+  const maxClones = findMod(mods, "SpectralSlashMaxClones")?.value ?? Infinity;
   const cloneCount = Math.min(comboPoints, maxClones);
   const spectralFinisherCloneMult = isSpectralSlash
     ? 1 + cloneCount * ((offense.shotgunEffFalloffPct?.value ?? 0) / 100)

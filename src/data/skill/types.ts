@@ -202,7 +202,6 @@ export interface SkillOffense {
   comboStarter1WeaponAtkDmgPct?: { value: number };
   comboStarter2WeaponAtkDmgPct?: { value: number };
   comboFinisherWeaponAtkDmgPct?: { value: number };
-  maxClones?: { value: number };
 }
 
 export interface BaseActiveSkill extends BaseSkill {
