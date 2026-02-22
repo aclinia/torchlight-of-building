@@ -149,6 +149,14 @@ const getHyperlinkName = (text: string): HyperlinkName | undefined => {
   return undefined;
 };
 
+const extractBracketPrefix = (
+  text: string,
+): { specialName: string | undefined; text: string } => {
+  const match = text.match(/^\[(.+?)\]\s*/);
+  if (match === null) return { specialName: undefined, text };
+  return { specialName: match[1], text: text.slice(match[0].length) };
+};
+
 const convertAffix = (
   affixTextParam: string,
   src: string | undefined,
@@ -156,7 +164,9 @@ const convertAffix = (
   const divinityText = "(Max Divinity Effect: 1)";
   const maxDivinity = affixTextParam.endsWith(divinityText) ? 1 : undefined;
   const affixText = affixTextParam.replace(divinityText, "").trimEnd();
-  const lines = affixText.split(/\n/);
+  const { specialName: bracketName, text: cleanedText } =
+    extractBracketPrefix(affixText);
+  const lines = cleanedText.split(/\n/);
 
   // Check if the entire affix is a single core talent name
   if (lines.length === 1) {
@@ -194,7 +204,7 @@ const convertAffix = (
     return { text: lineText, mods: mods?.map((mod) => ({ ...mod, src })) };
   });
 
-  return { affixLines, src, maxDivinity };
+  return { specialName: bracketName, affixLines, src, maxDivinity };
 };
 
 const convertAffixArray = (

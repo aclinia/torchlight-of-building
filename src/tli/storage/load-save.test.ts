@@ -232,3 +232,48 @@ test("loadSave preserves UI fields (id, rarity, legendaryName)", () => {
   expect(ring.rarity).toBe("rare");
   expect(ring.legendaryName).toBeUndefined();
 });
+
+test("loadSave extracts bracket prefix as specialName", () => {
+  const weapon = {
+    id: "test-weapon",
+    equipmentType: "One-Handed Sword" as const,
+    prefixes: ["[Endless Fervor] +18% fire damage"],
+  };
+  const saveData = createMinimalSaveData({
+    equipmentPage: {
+      equippedGear: { mainHand: { id: "test-weapon" } },
+      inventory: [weapon],
+    },
+  });
+
+  const loadout = loadSave(saveData);
+  const mainHand = loadout.gearPage.equippedGear.mainHand!;
+  const affixes = getGearAffixes(mainHand);
+  expect(affixes).toHaveLength(1);
+
+  const affix = affixes[0];
+  expect(affix.specialName).toBe("Endless Fervor");
+  expect(getAffixText(affix)).toBe("+18% fire damage");
+  const mods = getAffixMods(affix);
+  expect(mods).toHaveLength(1);
+  expect(mods[0].type).toBe("DmgPct");
+});
+
+test("loadSave does not set specialName for affixes without bracket prefix", () => {
+  const weapon = {
+    id: "test-weapon",
+    equipmentType: "One-Handed Sword" as const,
+    prefixes: ["+10% fire damage"],
+  };
+  const saveData = createMinimalSaveData({
+    equipmentPage: {
+      equippedGear: { mainHand: { id: "test-weapon" } },
+      inventory: [weapon],
+    },
+  });
+
+  const loadout = loadSave(saveData);
+  const mainHand = loadout.gearPage.equippedGear.mainHand!;
+  const affixes = getGearAffixes(mainHand);
+  expect(affixes[0].specialName).toBeUndefined();
+});

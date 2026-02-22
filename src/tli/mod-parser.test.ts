@@ -4091,17 +4091,14 @@ test("parse additional damage for 5 s after using mobility skills", () => {
   ]);
 });
 
-test("strips square bracket prefix before parsing", () => {
+test("does not strip square bracket prefix (handled by load-save)", () => {
   const result = parseMod("[Endless Fervor] Have Fervor");
-  const expected = parseMod("Have Fervor");
-  expect(result).toEqual(expected);
+  expect(result).toBeUndefined();
 });
 
-test("strips square bracket prefix with damage mod", () => {
+test("does not strip square bracket prefix with damage mod (handled by load-save)", () => {
   const result = parseMod("[Some Trait] +18% fire damage");
-  expect(result).toEqual([
-    { type: "DmgPct", value: 18, dmgModType: "fire", addn: false },
-  ]);
+  expect(result).toBeUndefined();
 });
 
 test("parse max tangle quantity per enemy", () => {
