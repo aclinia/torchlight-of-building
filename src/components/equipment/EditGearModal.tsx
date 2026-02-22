@@ -613,7 +613,9 @@ export const EditGearModal = ({
 
   const equipmentTypeOptions = useMemo(
     () =>
-      allEquipmentTypes.map((type) => ({ value: type, label: i18n._(type) })),
+      allEquipmentTypes
+        .filter((type) => type !== "Vorax Gear")
+        .map((type) => ({ value: type, label: i18n._(type) })),
     [allEquipmentTypes],
   );
 
