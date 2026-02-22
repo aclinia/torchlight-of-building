@@ -176,6 +176,7 @@ export const Stackables = [
   "num_main_spell_skills_cast_recently",
   "skill_area",
   "num_aura",
+  "steep_strike_chance_pct",
 ] as const;
 
 export type Stackable = (typeof Stackables)[number];

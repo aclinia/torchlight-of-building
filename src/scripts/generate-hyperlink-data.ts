@@ -56,6 +56,13 @@ const cleanDescription = (html: string): string => {
     .replace(/&#39;/g, "'")
     .replace(/&nbsp;/g, " ");
 
+  // Replace Unicode hyphens/dashes with ASCII hyphen
+  text = text.replace(/[\u2010\u2011\u2012\u2013\u2014\u2015\u2212]/g, "-");
+
+  // Replace other common Unicode punctuation with ASCII equivalents
+  text = text.replace(/[\u2018\u2019]/g, "'");
+  text = text.replace(/[\u201C\u201D]/g, '"');
+
   // Normalize whitespace (excluding placeholder)
   text = text.replace(/[ \t]+/g, " ");
 

@@ -730,7 +730,7 @@ export const Hyperlinks: Record<string, string> = {
   Miniaturization:
     "-15% Physique, +10% Movement Speed, and -5% additional Damage Over Time taken",
   "Blazing Sun":
-    "+1% Slash‐Strike Skill Area and +1% additional Steep Strike Damage for every +6% Steep Strike chance",
+    "+1% Slash-Strike Skill Area and +1% additional Steep Strike Damage for every +6% Steep Strike chance",
   Almighty: "Own massive Energy",
   Mottled:
     "+40% additional Elemental Damage and Erosion Damage for Minions if you have dealt Physical Damage recently. +40% additional Erosion Damage and Physical Damage for Minions if you have dealt Elemental Damage recently. +40% additional Minion Elemental Damage and Physical Damage if you have dealt Erosion Damage recently.",

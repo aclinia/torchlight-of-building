@@ -996,6 +996,22 @@ export const allParsers = [
     value: c.value,
     perFervorAmt: c.amt,
   })),
+  t(
+    "{area:+dec%} slash-strike skill area and {dmg:+dec%} additional steep strike damage for every {amt:+dec%} steep strike chance",
+  ).outputMany([
+    spec((c) => ({
+      type: "SkillAreaPct",
+      value: c.area,
+      skillAreaModType: "global",
+      per: { stackable: "steep_strike_chance_pct", amt: c.amt },
+    })),
+    spec((c) => ({
+      type: "SteepStrikeDmgPct",
+      value: c.dmg,
+      addn: true,
+      per: { stackable: "steep_strike_chance_pct", amt: c.amt },
+    })),
+  ]),
   t("{value:+dec%} steep strike chance.").output((c) => ({
     type: "SteepStrikeChancePct",
     value: c.value,

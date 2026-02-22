@@ -1728,7 +1728,8 @@ const stepDeps = createSelfReferential({
   movementSpeed: ["attackAggression"],
   fervor: [],
   berserkingBlade: [],
-  skillArea: ["fervor", "berserkingBlade"],
+  steepStrikeChance: [],
+  skillArea: ["fervor", "berserkingBlade", "steepStrikeChance"],
 });
 
 const modSteps = Object.keys(stepDeps) as (keyof typeof stepDeps)[];
@@ -1955,6 +1956,13 @@ const resolveModsForOffenseSkill = (
 
     const projSpeedPct = sumByValue(filterMods(mods, "ProjSpdPct"));
     normalize("proj_speed_pct", projSpeedPct);
+  };
+  const pushSteepStrikeChance = (): void => {
+    step("steepStrikeChance");
+    const steepStrikeChancePct = sumByValue(
+      filterMods(mods, "SteepStrikeChancePct"),
+    );
+    normalize("steep_strike_chance_pct", steepStrikeChancePct);
   };
   const pushSkillArea = (): void => {
     step("skillArea");
@@ -2377,6 +2385,7 @@ const resolveModsForOffenseSkill = (
   normalize("willpower", willpowerStacks);
   pushProjectiles();
   pushFervor();
+  pushSteepStrikeChance();
   pushSkillArea();
   pushShadowStrike();
 
