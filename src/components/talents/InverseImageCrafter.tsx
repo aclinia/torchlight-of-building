@@ -55,11 +55,7 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
   };
 
   return (
-    <div className="rounded-lg border border-zinc-700 bg-zinc-800 p-4">
-      <h3 className="mb-4 text-lg font-medium text-zinc-200">
-        {editingInverseImage ? "Edit Inverse Image" : "Craft Inverse Image"}
-      </h3>
-
+    <div>
       <div className="space-y-4">
         <div>
           <label className="mb-2 block text-sm text-zinc-400">

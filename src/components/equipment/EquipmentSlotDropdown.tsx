@@ -111,9 +111,12 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
   };
 
   return (
-    <div className="flex items-center gap-3 py-2">
-      <label className="w-24 font-medium text-zinc-400 text-sm">{label}:</label>
+    <div className="flex items-center gap-2 py-1">
+      <label className="w-22 shrink-0 font-medium text-zinc-400 text-sm">
+        {label}:
+      </label>
       <SearchableSelect
+        size="sm"
         value={selectedItemId ?? undefined}
         onChange={(value) => onSelectItem(slot, value ?? null)}
         options={compatibleItems.map((item) => ({
@@ -123,7 +126,7 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
           sublabel: `${getGearAffixes(item).length} affixes`,
         }))}
         placeholder="-- None --"
-        className="flex-1"
+        className="min-w-0 flex-1 max-w-xs"
         renderOption={renderOption}
         renderSelectedTooltip={renderSelectedTooltip}
       />

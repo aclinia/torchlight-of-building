@@ -40,6 +40,11 @@ function EquipmentPage(): React.ReactNode {
   // Legendary crafting modal state
   const [isLegendaryModalOpen, setIsLegendaryModalOpen] = useState(false);
 
+  // Selected inventory item
+  const [selectedItemId, setSelectedItemId] = useState<string | undefined>(
+    undefined,
+  );
+
   const handleImportItems = useCallback(
     (items: SaveDataGear[]) => {
       for (const item of items) {
@@ -85,14 +90,33 @@ function EquipmentPage(): React.ReactNode {
   const handleDeleteItem = useCallback(
     (itemId: string) => {
       deleteItem(itemId);
+      if (selectedItemId === itemId) {
+        setSelectedItemId(undefined);
+      }
     },
-    [deleteItem],
+    [deleteItem, selectedItemId],
   );
 
+  const handleSelectItem = useCallback((itemId: string) => {
+    setSelectedItemId((prev) => (prev === itemId ? undefined : itemId));
+  }, []);
+
+  const selectedItem = useMemo(
+    () =>
+      selectedItemId !== undefined
+        ? loadout.gearPage.inventory.find((i) => i.id === selectedItemId)
+        : undefined,
+    [selectedItemId, loadout.gearPage.inventory],
+  );
+
+  // Clear selection if the selected item no longer exists
+  const effectiveSelectedId =
+    selectedItem !== undefined ? selectedItemId : undefined;
+
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-      <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
-        <h2 className="mb-4 text-xl font-semibold text-zinc-50">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-4">
+        <h2 className="mb-2 text-base font-semibold text-zinc-50">
           <Trans>Equipment Slots</Trans>
         </h2>
         <div className="space-y-1">
@@ -112,48 +136,91 @@ function EquipmentPage(): React.ReactNode {
         </div>
       </div>
 
-      <div className="space-y-6">
-        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
-          <h2 className="mb-4 text-xl font-semibold text-zinc-50">
+      <div className="space-y-4">
+        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-4">
+          <h2 className="mb-2 text-base font-semibold text-zinc-50">
             <Trans>Craft New Item</Trans>
           </h2>
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
               onClick={() => openEditModal()}
-              className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
+              className="flex-1 rounded-lg bg-amber-500 px-3 py-1.5 text-sm font-medium text-zinc-950 transition-colors hover:bg-amber-600"
             >
-              <Trans>Craft Item</Trans>
+              Normal
             </button>
             <button
               type="button"
               onClick={() => setIsLegendaryModalOpen(true)}
-              className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
+              className="flex-1 rounded-lg bg-amber-500 px-3 py-1.5 text-sm font-medium text-zinc-950 transition-colors hover:bg-amber-600"
             >
-              <Trans>Craft Legendary</Trans>
+              Legendary
             </button>
             <button
               type="button"
               onClick={() => setIsVoraxModalOpen(true)}
-              className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
+              className="flex-1 rounded-lg bg-amber-500 px-3 py-1.5 text-sm font-medium text-zinc-950 transition-colors hover:bg-amber-600"
             >
-              <Trans>Craft Vorax</Trans>
+              Vorax
             </button>
             <button
               type="button"
               onClick={() => setIsImportModalOpen(true)}
-              className="rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-3 font-semibold text-zinc-200 transition-colors hover:bg-zinc-700"
+              className="rounded-lg border border-zinc-600 bg-zinc-800 px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-zinc-700"
             >
-              Import Items
+              Import
             </button>
           </div>
         </div>
 
-        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
-          <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            <Trans>Inventory</Trans> ({loadout.gearPage.inventory.length}{" "}
-            <Trans>items</Trans>)
-          </h2>
+        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-4">
+          <div className="mb-2 flex items-center justify-between">
+            <h2 className="text-base font-semibold text-zinc-50">
+              <Trans>Inventory</Trans> ({loadout.gearPage.inventory.length}{" "}
+              <Trans>items</Trans>)
+            </h2>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                disabled={
+                  effectiveSelectedId === undefined ||
+                  selectedItem?.rarity === "legendary"
+                }
+                onClick={() => {
+                  if (effectiveSelectedId !== undefined) {
+                    openEditModal(effectiveSelectedId);
+                  }
+                }}
+                className="rounded bg-zinc-600 px-2 py-1 text-xs text-zinc-50 transition-colors hover:bg-zinc-500 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                disabled={effectiveSelectedId === undefined}
+                onClick={() => {
+                  if (effectiveSelectedId !== undefined) {
+                    copyItem(effectiveSelectedId);
+                  }
+                }}
+                className="rounded bg-amber-500 px-2 py-1 text-xs text-zinc-950 transition-colors hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Copy
+              </button>
+              <button
+                type="button"
+                disabled={effectiveSelectedId === undefined}
+                onClick={() => {
+                  if (effectiveSelectedId !== undefined) {
+                    handleDeleteItem(effectiveSelectedId);
+                  }
+                }}
+                className="rounded bg-red-500 px-2 py-1 text-xs text-white transition-colors hover:bg-red-600 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
           {loadout.gearPage.inventory.length === 0 ? (
             <p className="py-4 text-center italic text-zinc-500">
               <Trans>
@@ -161,16 +228,16 @@ function EquipmentPage(): React.ReactNode {
               </Trans>
             </p>
           ) : (
-            <div className="max-h-96 space-y-2 overflow-y-auto">
+            <div className="max-h-96 space-y-1 overflow-y-auto">
               {loadout.gearPage.inventory.map((item) => (
                 <InventoryItem
                   key={item.id}
                   item={item}
                   // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
                   isEquipped={isItemEquipped(item.id!)}
-                  onCopy={copyItem}
-                  onEdit={openEditModal}
-                  onDelete={handleDeleteItem}
+                  // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
+                  isSelected={effectiveSelectedId === item.id!}
+                  onSelect={handleSelectItem}
                 />
               ))}
             </div>

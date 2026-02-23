@@ -8,17 +8,15 @@ import { GearTooltipContent } from "./GearTooltipContent";
 interface InventoryItemProps {
   item: Gear;
   isEquipped: boolean;
-  onCopy: (itemId: string) => void;
-  onEdit: (itemId: string) => void;
-  onDelete: (id: string) => void;
+  isSelected: boolean;
+  onSelect: (itemId: string) => void;
 }
 
 export const InventoryItem: React.FC<InventoryItemProps> = ({
   item,
   isEquipped,
-  onCopy,
-  onEdit,
-  onDelete,
+  isSelected,
+  onSelect,
 }) => {
   const { isVisible, triggerRef, triggerRect } = useTooltip();
 
@@ -26,10 +24,16 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
 
   return (
     <div
-      className={`group relative flex items-center justify-between p-3 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors border ${
-        isLegendary ? "border-amber-500/50" : "border-transparent"
+      className={`group relative flex items-center px-2 py-1 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors border cursor-pointer ${
+        isSelected
+          ? "border-amber-500"
+          : isLegendary
+            ? "border-amber-500/50"
+            : "border-transparent"
       }`}
       ref={triggerRef}
+      // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
+      onClick={() => onSelect(item.id!)}
     >
       <div className="flex items-center gap-2">
         <span className="font-medium text-zinc-50 text-sm">
@@ -44,37 +48,6 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
         {isEquipped && (
           <span className="text-xs text-green-500 font-medium">Equipped</span>
         )}
-      </div>
-      <div className="flex gap-2">
-        <button
-          type="button"
-          // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
-          onClick={() => onCopy(item.id!)}
-          className="rounded bg-amber-500 px-2 py-1 text-xs text-zinc-950 hover:bg-amber-600"
-          title="Copy item"
-        >
-          Copy
-        </button>
-        {!isLegendary && (
-          <button
-            type="button"
-            // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
-            onClick={() => onEdit(item.id!)}
-            className="rounded bg-zinc-600 px-2 py-1 text-xs text-zinc-50 hover:bg-zinc-500"
-            title="Edit item"
-          >
-            Edit
-          </button>
-        )}
-        <button
-          type="button"
-          // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
-          onClick={() => onDelete(item.id!)}
-          className="rounded bg-red-500 px-2 py-1 text-xs text-white hover:bg-red-600"
-          title="Delete item"
-        >
-          Delete
-        </button>
       </div>
 
       <Tooltip

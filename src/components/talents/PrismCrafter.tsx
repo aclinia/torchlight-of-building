@@ -3,7 +3,6 @@ import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/components/ui/SearchableSelect";
-import { i18n } from "@/src/lib/i18n";
 import {
   getAreaAffixes,
   getBaseAffixes,
@@ -135,13 +134,7 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
   const canSave = baseAffix !== undefined;
 
   return (
-    <div className="rounded-lg border border-zinc-700 bg-zinc-800 p-4">
-      <h3 className="mb-4 text-lg font-medium text-zinc-200">
-        {editingPrism !== undefined
-          ? i18n._("Edit Prism")
-          : i18n._("Craft Prism")}
-      </h3>
-
+    <div>
       <div className="mb-4">
         <label className="mb-2 block text-sm text-zinc-400">Rarity</label>
         <div className="flex gap-2">

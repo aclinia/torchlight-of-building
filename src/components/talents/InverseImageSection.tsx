@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { CraftedInverseImage } from "@/src/tli/core";
+import { Modal } from "../ui/Modal";
 import { InverseImageCrafter } from "./InverseImageCrafter";
 import { InverseImageInventory } from "./InverseImageInventory";
 
@@ -30,53 +31,76 @@ export const InverseImageSection: React.FC<InverseImageSectionProps> = ({
   isOnGodGoddessTree = false,
   treeHasPoints = false,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingInverseImage, setEditingInverseImage] = useState<
     CraftedInverseImage | undefined
   >(undefined);
 
-  const handleSave = (inverseImage: CraftedInverseImage) => {
-    if (editingInverseImage) {
+  const handleSave = (inverseImage: CraftedInverseImage): void => {
+    if (editingInverseImage !== undefined) {
       onUpdate(inverseImage);
-      setEditingInverseImage(undefined);
     } else {
       onSave(inverseImage);
     }
-  };
-
-  const handleEdit = (inverseImage: CraftedInverseImage) => {
-    setEditingInverseImage(inverseImage);
-  };
-
-  const handleCancel = () => {
     setEditingInverseImage(undefined);
+    setIsModalOpen(false);
+  };
+
+  const handleEdit = (inverseImage: CraftedInverseImage): void => {
+    setEditingInverseImage(inverseImage);
+    setIsModalOpen(true);
+  };
+
+  const handleClose = (): void => {
+    setEditingInverseImage(undefined);
+    setIsModalOpen(false);
+  };
+
+  const handleOpenCraft = (): void => {
+    setEditingInverseImage(undefined);
+    setIsModalOpen(true);
   };
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-bold mb-4 text-zinc-50">Inverse Images</h2>
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <InverseImageCrafter
-            editingInverseImage={editingInverseImage}
-            onSave={handleSave}
-            onCancel={editingInverseImage ? handleCancel : undefined}
-          />
-        </div>
-        <div className="flex-1">
-          <InverseImageInventory
-            inverseImages={inverseImages}
-            onEdit={handleEdit}
-            onCopy={onCopy}
-            onDelete={onDelete}
-            selectedInverseImageId={selectedInverseImageId}
-            onSelectInverseImage={onSelectInverseImage}
-            hasInverseImagePlaced={hasInverseImagePlaced}
-            hasPrismPlaced={hasPrismPlaced}
-            isOnGodGoddessTree={isOnGodGoddessTree}
-            treeHasPoints={treeHasPoints}
-          />
-        </div>
+    <div>
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="text-xl font-bold text-zinc-50">Inverse Images</h2>
+        <button
+          type="button"
+          onClick={handleOpenCraft}
+          className="rounded-lg bg-amber-500 px-3 py-1.5 text-sm font-medium text-zinc-950 transition-colors hover:bg-amber-600"
+        >
+          Craft Inverse Image
+        </button>
       </div>
+      <InverseImageInventory
+        inverseImages={inverseImages}
+        onEdit={handleEdit}
+        onCopy={onCopy}
+        onDelete={onDelete}
+        selectedInverseImageId={selectedInverseImageId}
+        onSelectInverseImage={onSelectInverseImage}
+        hasInverseImagePlaced={hasInverseImagePlaced}
+        hasPrismPlaced={hasPrismPlaced}
+        isOnGodGoddessTree={isOnGodGoddessTree}
+        treeHasPoints={treeHasPoints}
+      />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleClose}
+        title={
+          editingInverseImage !== undefined
+            ? "Edit Inverse Image"
+            : "Craft Inverse Image"
+        }
+        dismissible={false}
+      >
+        <InverseImageCrafter
+          editingInverseImage={editingInverseImage}
+          onSave={handleSave}
+          onCancel={handleClose}
+        />
+      </Modal>
     </div>
   );
 };

@@ -479,35 +479,37 @@ function TalentsSlotPage(): React.ReactNode {
         )}
       </div>
 
-      <PrismSection
-        prisms={prismList}
-        onSave={(prism) => addPrismToInventory(prism)}
-        onUpdate={updatePrism}
-        onCopy={(prism: CraftedPrism) => copyPrism(prism.id)}
-        onDelete={handleDeletePrism}
-        selectedPrismId={selectedPrismId}
-        onSelectPrism={setSelectedPrismId}
-        hasPrismPlaced={!!placedPrism}
-        isOnGodGoddessTree={activeTreeSlot === "tree1"}
-      />
+      <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <PrismSection
+          prisms={prismList}
+          onSave={(prism) => addPrismToInventory(prism)}
+          onUpdate={updatePrism}
+          onCopy={(prism: CraftedPrism) => copyPrism(prism.id)}
+          onDelete={handleDeletePrism}
+          selectedPrismId={selectedPrismId}
+          onSelectPrism={setSelectedPrismId}
+          hasPrismPlaced={!!placedPrism}
+          isOnGodGoddessTree={activeTreeSlot === "tree1"}
+        />
 
-      <InverseImageSection
-        inverseImages={inverseImageList}
-        onSave={(inverseImage: CraftedInverseImage) =>
-          addInverseImageToInventory(inverseImage)
-        }
-        onUpdate={updateInverseImage}
-        onCopy={(inverseImage: CraftedInverseImage) =>
-          copyInverseImage(inverseImage.id)
-        }
-        onDelete={handleDeleteInverseImage}
-        selectedInverseImageId={selectedInverseImageId}
-        onSelectInverseImage={setSelectedInverseImageId}
-        hasInverseImagePlaced={!!placedInverseImage}
-        hasPrismPlaced={!!placedPrism}
-        isOnGodGoddessTree={activeTreeSlot === "tree1"}
-        treeHasPoints={currentTreeTotalPoints > 0}
-      />
+        <InverseImageSection
+          inverseImages={inverseImageList}
+          onSave={(inverseImage: CraftedInverseImage) =>
+            addInverseImageToInventory(inverseImage)
+          }
+          onUpdate={updateInverseImage}
+          onCopy={(inverseImage: CraftedInverseImage) =>
+            copyInverseImage(inverseImage.id)
+          }
+          onDelete={handleDeleteInverseImage}
+          selectedInverseImageId={selectedInverseImageId}
+          onSelectInverseImage={setSelectedInverseImageId}
+          hasInverseImagePlaced={!!placedInverseImage}
+          hasPrismPlaced={!!placedPrism}
+          isOnGodGoddessTree={activeTreeSlot === "tree1"}
+          treeHasPoints={currentTreeTotalPoints > 0}
+        />
+      </div>
     </>
   );
 }
