@@ -494,11 +494,6 @@ msgid "No Loose Ends"
 msgstr "No Loose Ends"
 
 #. js-lingui-explicit-id
-#: src/data/translate/talents.ts:144
-#~ msgid "No Lose Ends"
-#~ msgstr "No Lose Ends"
-
-#. js-lingui-explicit-id
 #: src/data/translate/talents.ts:16
 msgid "Off The Beaten Track"
 msgstr "Off The Beaten Track"
@@ -862,8 +857,3 @@ msgstr "Well Matched"
 #: src/data/translate/talents.ts:23
 msgid "Windwalk"
 msgstr "Windwalk"
-
-#. js-lingui-explicit-id
-#: src/data/translate/talents.ts:71
-#~ msgid "Winter"
-#~ msgstr "Winter"

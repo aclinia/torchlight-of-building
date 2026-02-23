@@ -33,10 +33,6 @@ msgstr ""
 msgid "Create your first character build to get started"
 msgstr "创建您的第一个角色流派以开始使用"
 
-#: src/routes/builder/equipment.tsx:119
-#~ msgid "Craft Item"
-#~ msgstr ""
-
 #: src/components/equipment/EditGearModal.tsx:949
 msgid "Enter raw affix text, one per line. Use this for affixes not available in the dropdowns above."
 msgstr ""
@@ -49,10 +45,6 @@ msgstr ""
 msgid "Rename"
 msgstr "重命名"
 
-#: src/routes/builder/equipment.tsx:433
-#~ msgid "Select equipment type..."
-#~ msgstr "选择一个装备类型..."
-
 #: src/components/equipment/VoraxGearModule.tsx:685
 msgid "Vorax Limb"
 msgstr ""
@@ -64,10 +56,6 @@ msgstr "新建"
 #: src/routes/builder/equipment.tsx:142
 msgid "Craft New Item"
 msgstr "制作新物品"
-
-#: src/routes/builder/equipment.tsx:118
-#~ msgid "Advanced Crafting"
-#~ msgstr ""
 
 #: src/routes/builder/equipment.tsx:226
 msgid "No items in inventory. Craft items above to add them here."
@@ -88,11 +76,6 @@ msgstr "主动技能"
 #: src/components/equipment/LegendaryGearModule.tsx:299
 msgid "Add Legendary"
 msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/equipment/AdvancedCraftingModal.tsx:94
-#~ msgid "Advanced Crafting"
-#~ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:4
@@ -181,11 +164,6 @@ msgid "Craft New Item"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:164
-#~ msgid "Craft Prism"
-#~ msgstr "制作棱镜"
-
-#. js-lingui-explicit-id
 #: src/components/equipment/VoraxGearModule.tsx:677
 msgid "Craft Vorax Gear"
 msgstr ""
@@ -217,11 +195,6 @@ msgstr "神格石板"
 #: src/routes/index.tsx:384
 msgid "Import Build"
 msgstr "导入流派"
-
-#. js-lingui-explicit-id
-#: src/components/talents/PrismCrafter.tsx:163
-#~ msgid "Edit Prism"
-#~ msgstr "编辑棱镜"
 
 #. js-lingui-explicit-id
 #: src/components/equipment/EditGearModal.tsx:699
@@ -389,10 +362,6 @@ msgstr "戒指"
 msgid "Rod"
 msgstr "灵杖"
 
-#: src/routes/builder/talents/$slot.tsx:310
-#~ msgid "Tree Slots"
-#~ msgstr "天赋树"
-
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:42
 msgid "Scepter"
@@ -422,21 +391,6 @@ msgstr "盾牌 (力量)"
 #: src/data/translate/translate-tab.ts:6
 msgid "Skills"
 msgstr "技能"
-
-#. js-lingui-explicit-id
-#: src/routes/builder/talents/$slot.tsx:358
-#~ msgid "Slot"
-#~ msgstr ""
-
-#. js-lingui-explicit-id
-#: src/routes/builder/talents/$slot.tsx:357
-#~ msgid "Slot 1"
-#~ msgstr ""
-
-#. js-lingui-explicit-id
-#: src/routes/builder/talents/$slot.tsx:336
-#~ msgid "Slot 1 (God/Goddess)"
-#~ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/data/translate/equipment-types.ts:46
@@ -471,10 +425,6 @@ msgstr "双手剑"
 #: src/routes/index.tsx:377
 msgid "My Builds"
 msgstr "我的配装"
-
-#: src/components/equipment/AdvancedCraftingModal.tsx:118
-#~ msgid "Affix Lines (one per line)"
-#~ msgstr ""
 
 #: src/routes/builder/equipment.tsx:120
 msgid "Equipment Slots"
@@ -575,22 +525,10 @@ msgstr "您确定要删除“{0}”吗？"
 msgid "Select Legendary"
 msgstr "选择一个传奇物品"
 
-#: src/components/equipment/LegendaryGearModule.tsx:292
-#~ msgid "Add Legendary"
-#~ msgstr "增加一个传奇物品"
-
-#: src/routes/builder/talents/$slot.tsx:354
-#~ msgid "Select Tree for {0}"
-#~ msgstr "为 {0} 选择天赋树"
-
 #: src/components/equipment/EditGearModal.tsx:978
 #: src/routes/index.tsx:102
 msgid "Save"
 msgstr "保存"
-
-#: src/components/equipment/AdvancedCraftingModal.tsx:131
-#~ msgid "Enter raw affix text. Each line will be parsed as a separate affix."
-#~ msgstr ""
 
 #: src/components/equipment/EditGearModal.tsx:772
 msgid "Clear"

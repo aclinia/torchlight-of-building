@@ -589,11 +589,6 @@ msgid "Furious Man's Body"
 msgstr "Furious Man's Body"
 
 #. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:119
-#~ msgid "Furious Man's Loud Song"
-#~ msgstr "Furious Man's Loud Song"
-
-#. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:121
 msgid "Fury Heart"
 msgstr "Fury Heart"
@@ -1017,11 +1012,6 @@ msgstr "Mother Goddess' Paddock"
 #: src/data/translate/legendary-names.ts:205
 msgid "Mountain Howling"
 msgstr "Mountain Howling"
-
-#. js-lingui-explicit-id
-#: src/data/translate/legendary-names.ts:202
-#~ msgid "Mourner's Shadow"
-#~ msgstr "Mourner's Shadow"
 
 #. js-lingui-explicit-id
 #: src/data/translate/legendary-names.ts:206

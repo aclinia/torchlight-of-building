@@ -369,11 +369,6 @@ msgid "Blind"
 msgstr "Blind"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:226
-#~ msgid "Blinding"
-#~ msgstr "Blinding"
-
-#. js-lingui-explicit-id
 #: src/data/translate/skills.ts:20
 msgid "Blink"
 msgstr "Blink"
@@ -1089,11 +1084,6 @@ msgid "Fragile Resurrection"
 msgstr "Fragile Resurrection"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:255
-#~ msgid "Freeze Chance"
-#~ msgstr "Freeze Chance"
-
-#. js-lingui-explicit-id
 #: src/data/translate/skills.ts:260
 msgid "Friend of Spirit Magi"
 msgstr "Friend of Spirit Magi"
@@ -1514,11 +1504,6 @@ msgid "Icebound Beam: Frostbitten (Magnificent)"
 msgstr "Icebound Beam: Frostbitten (Magnificent)"
 
 #. js-lingui-explicit-id
-#: src/data/translate/skills.ts:425
-#~ msgid "Icebound Beam: Numbing Cold (Magnificent)"
-#~ msgstr "Icebound Beam: Numbing Cold (Magnificent)"
-
-#. js-lingui-explicit-id
 #: src/data/translate/skills.ts:567
 msgid "Icebound Beam: Ring Blade (Noble)"
 msgstr "Icebound Beam: Ring Blade (Noble)"
@@ -1527,11 +1512,6 @@ msgstr "Icebound Beam: Ring Blade (Noble)"
 #: src/data/translate/skills.ts:83
 msgid "Icy Blade"
 msgstr "Icy Blade"
-
-#. js-lingui-explicit-id
-#: src/data/translate/skills.ts:426
-#~ msgid "Icy Blade: Frozen Edge (Magnificent)"
-#~ msgstr "Icy Blade: Frozen Edge (Magnificent)"
 
 #. js-lingui-explicit-id
 #: src/data/translate/skills.ts:568
@@ -2202,11 +2182,6 @@ msgstr "Rain of Arrows: Swift Flight (Magnificent)"
 #: src/data/translate/skills.ts:586
 msgid "Rain of Arrows: Tracking (Noble)"
 msgstr "Rain of Arrows: Tracking (Noble)"
-
-#. js-lingui-explicit-id
-#: src/data/translate/skills.ts:313
-#~ msgid "Reaping Agony"
-#~ msgstr "Reaping Agony"
 
 #. js-lingui-explicit-id
 #: src/data/translate/skills.ts:318
