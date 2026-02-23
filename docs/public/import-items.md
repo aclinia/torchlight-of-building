@@ -27,12 +27,15 @@ I'd like the following information from each item:
 * Affixes, which are white or blue text with colored bullet points to their left. Only parse the left-aligned text with bullet points
    * do not parse center-aligned text without bullet points or the gold flavor text at the bottom
    * affixes may also contain newlines
+
+IMPORTANT: ONLY parse lines that have a visible colored bullet point (■ or •) immediately to the left of the text. Skip any lines without bullet points, even if they appear to be affixes. The first line after the divider often lacks a bullet point and should be ignored.
 Affixes may appear in both the upper and lower sections of the tooltip, separated by a divider line. Parse affixes from both sections. Also include any affixes that appear in colored text (yellow, red, cyan/blue) as long as they have a colored bullet point to their left.
 Use the following json structure: `{name: string, equipmentType: string, equipmentSlot: string, affixes: string[]}`
+Return the result in a list
 For example:
 
 ```
-{
+[{
   "name": "Ranger's Rusted Gauntlets",
   "equipmentType": "STR Gloves",
   "equipmentSlot": "Hands",
@@ -40,7 +43,7 @@ For example:
     "+10 Strength",
     "+30% Skill Area\n+30% Minion Skill Area"
   ]
-}
+}]
 ```
 ````
 
