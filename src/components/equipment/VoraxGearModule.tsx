@@ -569,6 +569,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       id: generateItemId(),
       equipmentType: "Vorax Gear",
       rarity: "vorax",
+      baseGearName: selectedLimb?.name,
       baseAffixes,
       prefixes: craftedPrefixes,
       suffixes: craftedSuffixes,

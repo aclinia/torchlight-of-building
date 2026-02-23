@@ -38,7 +38,7 @@ const OptionWithTooltip: React.FC<OptionWithTooltipProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className={selected ? "text-amber-400" : ""}>
-        {item.legendaryName ?? item.equipmentType}
+        {item.legendaryName ?? item.baseGearName ?? item.equipmentType}
       </span>
       {isLegendary && (
         <span className="text-amber-400 ml-2 text-xs">Legendary</span>
@@ -122,7 +122,9 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
         options={compatibleItems.map((item) => ({
           // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
           value: item.id!,
-          label: i18n._(item.legendaryName ?? item.equipmentType),
+          label: i18n._(
+            item.legendaryName ?? item.baseGearName ?? item.equipmentType,
+          ),
           sublabel: `${getGearAffixes(item).length} affixes`,
         }))}
         placeholder="-- None --"

@@ -286,6 +286,7 @@ const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
     id: gear.id,
     rarity: gear.rarity,
     legendaryName: gear.legendaryName,
+    baseGearName: gear.baseGearName,
     baseStats: gear.baseStats
       ? convertBaseStats(gear.baseStats, gear.baseGearName, src)
       : undefined,

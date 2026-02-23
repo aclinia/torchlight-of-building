@@ -8,7 +8,9 @@ export const GearTooltipContent: React.FC<{ item: Gear }> = ({ item }) => {
 
   return (
     <>
-      <TooltipTitle>{item.legendaryName ?? item.equipmentType}</TooltipTitle>
+      <TooltipTitle>
+        {item.legendaryName ?? item.baseGearName ?? item.equipmentType}
+      </TooltipTitle>
       {isLegendary && (
         <div className="text-xs text-zinc-500 mb-2">{item.equipmentType}</div>
       )}

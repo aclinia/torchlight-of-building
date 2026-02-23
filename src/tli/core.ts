@@ -335,6 +335,7 @@ export interface Gear {
   id?: string;
   rarity?: "rare" | "legendary" | "vorax";
   legendaryName?: string;
+  baseGearName?: string;
 
   // Base stats (shared by both regular and legendary gear)
   baseStats?: BaseStats;
