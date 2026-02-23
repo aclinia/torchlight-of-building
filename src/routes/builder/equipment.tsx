@@ -117,13 +117,27 @@ function EquipmentPage(): React.ReactNode {
           <h2 className="mb-4 text-xl font-semibold text-zinc-50">
             <Trans>Craft New Item</Trans>
           </h2>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <button
               type="button"
               onClick={() => openEditModal()}
               className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
             >
               <Trans>Craft Item</Trans>
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsLegendaryModalOpen(true)}
+              className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
+            >
+              <Trans>Craft Legendary</Trans>
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsVoraxModalOpen(true)}
+              className="flex-1 rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
+            >
+              <Trans>Craft Vorax</Trans>
             </button>
             <button
               type="button"
@@ -161,32 +175,6 @@ function EquipmentPage(): React.ReactNode {
               ))}
             </div>
           )}
-        </div>
-
-        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
-          <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            <Trans>Add Legendary</Trans>
-          </h2>
-          <button
-            type="button"
-            onClick={() => setIsLegendaryModalOpen(true)}
-            className="w-full rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
-          >
-            <Trans>Craft Legendary Item</Trans>
-          </button>
-        </div>
-
-        <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
-          <h2 className="mb-4 text-xl font-semibold text-zinc-50">
-            <Trans>Craft Vorax Gear</Trans>
-          </h2>
-          <button
-            type="button"
-            onClick={() => setIsVoraxModalOpen(true)}
-            className="w-full rounded-lg bg-amber-500 px-4 py-3 font-semibold text-zinc-950 transition-colors hover:bg-amber-600"
-          >
-            <Trans>Craft Vorax Item</Trans>
-          </button>
         </div>
       </div>
 
