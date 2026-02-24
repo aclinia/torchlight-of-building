@@ -24,7 +24,7 @@ export const AffixPreviewSection = ({
   return (
     <>
       {!hideQualitySlider && (
-        <div className="mb-3">
+        <div className="mt-2 mb-1">
           <div className="flex justify-between items-center mb-1">
             <label
               htmlFor={`quality-slider-${slotIndex}`}
@@ -48,7 +48,7 @@ export const AffixPreviewSection = ({
         </div>
       )}
 
-      <div className="bg-zinc-900 p-3 rounded border border-zinc-700 flex">
+      <div className="mt-1 bg-zinc-900 p-2 rounded border border-zinc-700 flex">
         <div
           className={`text-sm font-medium whitespace-pre-line flex-1 ${hideQualitySlider || !showTierInfo ? "text-purple-400" : "text-amber-400"}`}
         >

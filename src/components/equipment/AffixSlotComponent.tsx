@@ -49,7 +49,7 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
     : "";
 
   return (
-    <div className="bg-zinc-800 p-4 rounded-lg">
+    <div>
       {/* Affix Dropdown */}
       <SearchableSelect
         value={selection.affixIndex ?? undefined}
@@ -59,7 +59,6 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
           label: formatOption ? formatOption(affix) : formatAffixOption(affix),
         }))}
         placeholder={`<Select ${affixType}>`}
-        className="mb-3"
       />
 
       {selectedAffix !== undefined && (

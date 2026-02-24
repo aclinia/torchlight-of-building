@@ -8,7 +8,7 @@ export const ExistingAffixDisplay = ({
   onDelete,
 }: ExistingAffixDisplayProps): React.ReactElement => {
   return (
-    <div className="rounded-lg bg-zinc-800 p-4">
+    <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
       <div className="flex">
         <div className="flex-1 whitespace-pre-line text-sm font-medium text-amber-400">
           {value}

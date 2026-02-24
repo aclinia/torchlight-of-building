@@ -706,13 +706,13 @@ export const EditGearModal = ({
       maxWidth="xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-6 overflow-y-auto pr-2">
+      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
         {/* Equipment Type Selector (creation mode only) */}
         {mode === "create" && (
           <div>
             <label
               htmlFor="equipment-type-select"
-              className="mb-2 block text-sm font-medium text-zinc-50"
+              className="mb-1 block text-sm font-medium text-zinc-50"
             >
               <Trans>Equipment Type</Trans>
             </label>
@@ -731,7 +731,7 @@ export const EditGearModal = ({
             {/* Base Stats Section */}
             {baseGearOptions.length > 0 && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   <Trans>Base Stats (1 max)</Trans>
                 </h3>
                 {baseStats.type === "existing" &&
@@ -741,7 +741,7 @@ export const EditGearModal = ({
                     onDelete={handleDeleteBaseStats}
                   />
                 ) : (
-                  <div className="rounded-lg bg-zinc-800 p-4">
+                  <>
                     <SearchableSelect
                       value={baseStats.affixIndex ?? undefined}
                       onChange={(value) =>
@@ -757,23 +757,27 @@ export const EditGearModal = ({
                     />
                     {baseStats.affixIndex !== undefined &&
                       baseGearOptions[baseStats.affixIndex] !== undefined && (
-                        <div className="mt-3 space-y-1">
-                          <p className="text-sm font-medium text-amber-400">
-                            {baseGearOptions[baseStats.affixIndex].name}
-                          </p>
-                          <p className="whitespace-pre-wrap text-sm text-zinc-300">
-                            {baseGearOptions[baseStats.affixIndex].stats}
-                          </p>
-                          <button
-                            type="button"
-                            onClick={() => handleDeleteBaseStats()}
-                            className="mt-2 text-xs text-zinc-500 hover:text-red-400"
-                          >
-                            <Trans>Clear</Trans>
-                          </button>
+                        <div className="mt-2 rounded border border-zinc-700 bg-zinc-900 p-2">
+                          <div className="flex">
+                            <div className="flex-1 space-y-1">
+                              <p className="text-sm font-medium text-amber-400">
+                                {baseGearOptions[baseStats.affixIndex].name}
+                              </p>
+                              <p className="whitespace-pre-wrap text-sm text-zinc-300">
+                                {baseGearOptions[baseStats.affixIndex].stats}
+                              </p>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteBaseStats()}
+                              className="text-xs font-medium text-red-500 hover:text-red-400"
+                            >
+                              <Trans>Clear</Trans>
+                            </button>
+                          </div>
                         </div>
                       )}
-                  </div>
+                  </>
                 )}
               </div>
             )}
@@ -781,10 +785,10 @@ export const EditGearModal = ({
             {/* Base Affixes Section */}
             {baseAffixOptions.length > 0 && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   <Trans>Base Affixes (2 max)</Trans>
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-2">
                   {baseAffixes.map((slot, index) =>
                     renderAffixSlot(
                       slot,
@@ -805,7 +809,7 @@ export const EditGearModal = ({
             {/* Sweet Dream Affix Section */}
             {sweetDreamAffixes.length > 0 && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   <Trans>Sweet Dream Affix (1 max)</Trans>
                 </h3>
                 {renderAffixSlot(
@@ -825,7 +829,7 @@ export const EditGearModal = ({
             {/* Tower Sequence Affix Section */}
             {towerSequenceAffixes.length > 0 && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   <Trans>Tower Sequence (1 max)</Trans>
                 </h3>
                 {renderAffixSlot(
@@ -845,7 +849,7 @@ export const EditGearModal = ({
             {/* Blending Affix Section (Belts Only) */}
             {isBelt && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   <Trans>Blending (1 max)</Trans>
                 </h3>
                 {renderAffixSlot(
@@ -889,7 +893,7 @@ export const EditGearModal = ({
 
             {/* Prefixes Section */}
             <div>
-              <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Prefixes (3 max)</Trans>
               </h3>
               <div className="space-y-4">
@@ -911,7 +915,7 @@ export const EditGearModal = ({
 
             {/* Suffixes Section */}
             <div>
-              <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Suffixes (3 max)</Trans>
               </h3>
               <div className="space-y-4">
@@ -933,7 +937,7 @@ export const EditGearModal = ({
 
             {/* Custom Affixes Section */}
             <div>
-              <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Custom Affixes</Trans>
               </h3>
               <textarea

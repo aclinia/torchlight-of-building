@@ -72,9 +72,9 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
       : undefined;
 
   return (
-    <div className="bg-zinc-800 p-3 rounded-lg">
+    <div className="bg-zinc-800 p-2 rounded-lg">
       {/* Toggle Button */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-1">
         <button
           type="button"
           onClick={() => onToggleCorruption(index)}
@@ -93,7 +93,7 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
 
       {/* Choice Selector (for choice-type affixes) */}
       {isChoice && (
-        <div className="mb-2">
+        <div className="mb-1">
           <div className="text-xs text-zinc-400 mb-1 italic">
             {currentAffix.choiceDescriptor}
           </div>
@@ -120,7 +120,7 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
 
       {/* Quality Sliders (one per range in the affix) */}
       {showSlider && (
-        <div className="mb-2 space-y-2">
+        <div className="mb-1 space-y-1">
           {ranges.map((range, rangeIdx) => (
             <div key={rangeIdx}>
               <div className="flex justify-between items-center mb-1">

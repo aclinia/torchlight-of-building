@@ -97,7 +97,7 @@ export const GroupedAffixSlotComponent = ({
   const sortedOptionsWithHeaders = getOptionsWithHeaders(sortedAffixGroups);
 
   return (
-    <div className="bg-zinc-800 p-4 rounded-lg">
+    <div>
       <SearchableSelect
         value={
           selectedGroup !== undefined
@@ -118,7 +118,6 @@ export const GroupedAffixSlotComponent = ({
         }}
         options={sortedOptionsWithHeaders}
         placeholder={`<Select ${affixType}>`}
-        className="mb-3"
       />
 
       {selectedAffix !== undefined && (

@@ -300,10 +300,10 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       maxWidth="xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-6 overflow-y-auto pr-2">
+      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
         {/* Legendary Selector */}
         <div>
-          <label className="mb-2 block text-sm font-medium text-zinc-50">
+          <label className="mb-1 block text-sm font-medium text-zinc-50">
             <Trans>Select Legendary</Trans>
           </label>
           <SearchableSelect
@@ -320,10 +320,10 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
             {/* Base Stat Display */}
             {selectedLegendary.baseStat !== "" && (
               <div>
-                <h3 className="mb-2 text-sm font-medium text-zinc-400">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   Base Stat
                 </h3>
-                <div className="rounded-lg border border-zinc-700 bg-zinc-800 p-3">
+                <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
                   <span className="whitespace-pre-line text-amber-400">
                     {selectedLegendary.baseStat}
                   </span>
@@ -334,7 +334,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
             {/* Blending Section (Belts Only) */}
             {isBelt && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
                   Blending (1 max)
                 </h3>
                 <SearchableSelect
@@ -344,14 +344,14 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
                   placeholder="Select a blend..."
                 />
                 {selectedBlendIndex !== undefined && (
-                  <div className="mt-3 rounded-lg border border-zinc-700 bg-zinc-800 p-3">
+                  <div className="mt-1 rounded border border-zinc-700 bg-zinc-900 p-2">
                     <pre className="whitespace-pre-wrap font-sans text-sm text-amber-400">
                       {formatBlendPreview(blendAffixes[selectedBlendIndex])}
                     </pre>
                     <button
                       type="button"
                       onClick={() => setSelectedBlendIndex(undefined)}
-                      className="mt-2 text-xs text-zinc-400 hover:text-zinc-200"
+                      className="mt-1 text-xs text-zinc-400 hover:text-zinc-200"
                     >
                       Clear
                     </button>
@@ -362,10 +362,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
 
             {/* Affixes Section */}
             <div>
-              <h3 className="mb-3 text-lg font-semibold text-zinc-50">
-                Affixes
-              </h3>
-              <div className="space-y-3">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">Affixes</h3>
+              <div className="space-y-2">
                 {selectedLegendary.normalAffixes.map((normalAffix, index) => (
                   <LegendaryAffixRow
                     key={index}

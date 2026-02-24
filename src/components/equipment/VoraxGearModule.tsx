@@ -683,9 +683,9 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       return (
         <div
           key={slotIdx}
-          className="rounded-lg border border-zinc-700 bg-zinc-800 p-3"
+          className="rounded-lg border border-zinc-700 bg-zinc-800 p-2"
         >
-          <div className="mb-2 flex items-center justify-between">
+          <div className="mb-1 flex items-center justify-between">
             <span className="text-sm font-medium text-zinc-300">
               {label} {slotIdx + 1}
             </span>
@@ -709,9 +709,9 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
     return (
       <div
         key={slotIdx}
-        className="rounded-lg border border-zinc-700 bg-zinc-800 p-3"
+        className="rounded-lg border border-zinc-700 bg-zinc-800 p-2"
       >
-        <div className="mb-2 flex items-center justify-between">
+        <div className="mb-1 flex items-center justify-between">
           <span className="text-sm font-medium text-zinc-300">
             {label} {slotIdx + 1}
           </span>
@@ -785,10 +785,10 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       maxWidth="xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-6 overflow-y-auto pr-2">
+      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
         {/* Vorax Limb Selector */}
         <div>
-          <label className="mb-2 block text-sm font-medium text-zinc-50">
+          <label className="mb-1 block text-sm font-medium text-zinc-50">
             <Trans>Vorax Limb</Trans>
           </label>
           <SearchableSelect
@@ -803,7 +803,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
           <>
             {/* Base Affix */}
             <div>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Base Affix</Trans>
               </h3>
               <SearchableSelect
@@ -813,7 +813,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
                 placeholder="Select base affix..."
               />
               {selectedBaseAffixIndex !== undefined && (
-                <div className="mt-2 rounded border border-zinc-700 bg-zinc-800 p-2">
+                <div className="mt-1 rounded border border-zinc-700 bg-zinc-900 p-2">
                   <span className="whitespace-pre-line text-sm text-amber-400">
                     {selectedLimb.baseAffixes[selectedBaseAffixIndex].affix}
                   </span>
@@ -823,10 +823,10 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
 
             {/* Prefixes */}
             <div>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Prefixes (3 max)</Trans>
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {prefixSlots.map((slot, idx) =>
                   renderSlot(
                     "prefix",
@@ -841,10 +841,10 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
 
             {/* Suffixes */}
             <div>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Suffixes (3 max)</Trans>
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {suffixSlots.map((slot, idx) =>
                   renderSlot(
                     "suffix",
@@ -859,7 +859,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
 
             {/* Custom Affixes */}
             <div>
-              <h3 className="mb-3 text-lg font-semibold text-zinc-50">
+              <h3 className="mb-1 text-sm font-medium text-zinc-50">
                 <Trans>Custom Affixes</Trans>
               </h3>
               <textarea

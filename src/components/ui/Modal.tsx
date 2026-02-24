@@ -48,10 +48,10 @@ export const Modal = ({
     >
       <div className="absolute inset-0 bg-black/60" />
       <div
-        className={`relative bg-zinc-900 rounded-lg shadow-xl p-6 ${maxWidthClasses[maxWidth]} w-full mx-4 border border-zinc-700`}
+        className={`relative bg-zinc-900 rounded-lg shadow-xl p-4 ${maxWidthClasses[maxWidth]} w-full mx-4 border border-zinc-700`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-3">
           <h2 className="text-xl font-semibold text-zinc-50">{title}</h2>
           {!dismissible && (
             <button
