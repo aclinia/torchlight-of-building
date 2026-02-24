@@ -5,6 +5,7 @@ import type { HeroMemory } from "@/src/tli/core";
 interface HeroMemoryItemProps {
   memory: HeroMemory;
   isEquipped: boolean;
+  onEdit: (memoryId: string) => void;
   onCopy: (memoryId: string) => void;
   onDelete: (id: string) => void;
 }
@@ -12,6 +13,7 @@ interface HeroMemoryItemProps {
 export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
   memory,
   isEquipped,
+  onEdit,
   onCopy,
   onDelete,
 }) => {
@@ -34,6 +36,14 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
         )}
       </div>
       <div className="flex gap-2">
+        <button
+          type="button"
+          onClick={() => onEdit(memory.id)}
+          className="px-2 py-1 bg-zinc-600 hover:bg-zinc-500 text-zinc-50 rounded text-xs"
+          title="Edit memory"
+        >
+          Edit
+        </button>
         <button
           type="button"
           onClick={() => onCopy(memory.id)}

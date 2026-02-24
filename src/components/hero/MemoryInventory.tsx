@@ -15,7 +15,7 @@ export const MemoryInventory = ({
   onMemoryCopy,
   onMemoryDelete,
 }: MemoryInventoryProps) => {
-  const openModal = useHeroUIStore((s) => s.openMemoryCraftModal);
+  const openModal = useHeroUIStore((s) => s.openMemoryModal);
 
   const isMemoryEquipped = (memoryId: string): boolean => {
     return (
@@ -33,7 +33,7 @@ export const MemoryInventory = ({
         </h2>
         <button
           type="button"
-          onClick={openModal}
+          onClick={() => openModal()}
           className="px-3 py-1.5 bg-amber-500 text-zinc-950 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors"
         >
           Craft Memory
@@ -50,6 +50,7 @@ export const MemoryInventory = ({
               key={memory.id}
               memory={memory}
               isEquipped={isMemoryEquipped(memory.id)}
+              onEdit={(memoryId) => openModal(memoryId)}
               onCopy={onMemoryCopy}
               onDelete={onMemoryDelete}
             />

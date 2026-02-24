@@ -1,7 +1,9 @@
+import { useMemo } from "react";
 import type {
   HeroMemorySlot,
   HeroMemory as SaveDataHeroMemory,
 } from "@/src/lib/save-data";
+import { useHeroUIStore } from "@/src/stores/heroUIStore";
 import type { HeroMemory, HeroPage } from "@/src/tli/core";
 import { EditMemoryModal } from "./EditMemoryModal";
 import { HeroSelector } from "./HeroSelector";
@@ -11,6 +13,7 @@ import { TraitSelector } from "./TraitSelector";
 interface HeroTabProps {
   heroPage: HeroPage;
   heroMemoryList: HeroMemory[];
+  saveDataMemoryList: SaveDataHeroMemory[];
   onHeroChange: (hero: string | undefined) => void;
   onTraitSelect: (
     level: 45 | 60 | 75,
@@ -18,7 +21,10 @@ interface HeroTabProps {
     traitName: string | undefined,
   ) => void;
   onMemoryEquip: (slot: HeroMemorySlot, memoryId: string | undefined) => void;
-  onMemorySave: (memory: SaveDataHeroMemory) => void;
+  onMemorySave: (
+    memoryId: string | undefined,
+    memory: SaveDataHeroMemory,
+  ) => void;
   onMemoryCopy: (memoryId: string) => void;
   onMemoryDelete: (id: string) => void;
 }
@@ -26,6 +32,7 @@ interface HeroTabProps {
 export const HeroTab = ({
   heroPage,
   heroMemoryList,
+  saveDataMemoryList,
   onHeroChange,
   onTraitSelect,
   onMemoryEquip,
@@ -33,6 +40,17 @@ export const HeroTab = ({
   onMemoryCopy,
   onMemoryDelete,
 }: HeroTabProps) => {
+  const editingMemoryId = useHeroUIStore((s) => s.editingMemoryId);
+
+  // Find the SaveData version of the memory being edited
+  const editingMemory = useMemo(
+    () =>
+      editingMemoryId !== undefined
+        ? saveDataMemoryList.find((m) => m.id === editingMemoryId)
+        : undefined,
+    [editingMemoryId, saveDataMemoryList],
+  );
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Left Column: Hero Selection & Traits */}
@@ -59,7 +77,7 @@ export const HeroTab = ({
         />
       </div>
 
-      <EditMemoryModal onMemorySave={onMemorySave} />
+      <EditMemoryModal memory={editingMemory} onSave={onMemorySave} />
     </div>
   );
 };

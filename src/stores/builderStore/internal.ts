@@ -459,6 +459,24 @@ export const internalStore = create(
         });
       },
 
+      updateHeroMemory: (memoryId: string, memory: HeroMemory) => {
+        set((state) => {
+          const index = state.saveData.heroPage.memoryInventory.findIndex(
+            (m) => m.id === memoryId,
+          );
+          if (index === -1) return;
+          state.saveData.heroPage.memoryInventory[index] = memory;
+          // Also update equipped slots if this memory is equipped
+          (["slot45", "slot60", "slot75"] as HeroMemorySlot[]).forEach(
+            (slot) => {
+              if (state.saveData.heroPage.memorySlots[slot]?.id === memoryId) {
+                state.saveData.heroPage.memorySlots[slot] = memory;
+              }
+            },
+          );
+        });
+      },
+
       deleteHeroMemory: (memoryId: string) => {
         set((state) => {
           state.saveData.heroPage.memoryInventory =

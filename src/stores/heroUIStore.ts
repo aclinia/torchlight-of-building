@@ -11,20 +11,25 @@ interface MemoryAffixSlotState {
 }
 
 interface HeroUIState {
-  // Memory craft modal state
-  isMemoryCraftModalOpen: boolean;
+  // Memory modal state
+  isMemoryModalOpen: boolean;
+  editingMemoryId: string | undefined; // undefined = create mode, string = edit mode
 
   // Memory crafting state
   craftingMemoryType: HeroMemoryType | undefined;
   craftingBaseStat: string | undefined;
+  existingFixedAffixes: string[]; // Existing affix text from edit mode
+  existingRandomAffixes: string[]; // Existing affix text from edit mode
   fixedAffixSlots: MemoryAffixSlotState[];
   randomAffixSlots: MemoryAffixSlotState[];
 
   // Actions
-  openMemoryCraftModal: () => void;
-  closeMemoryCraftModal: () => void;
+  openMemoryModal: (memoryId?: string) => void;
+  closeMemoryModal: () => void;
   setCraftingMemoryType: (type: HeroMemoryType | undefined) => void;
   setCraftingBaseStat: (stat: string | undefined) => void;
+  setExistingFixedAffix: (index: number, value: string | undefined) => void;
+  setExistingRandomAffix: (index: number, value: string | undefined) => void;
   setFixedAffixSlot: (
     index: number,
     update: Partial<MemoryAffixSlotState>,
@@ -41,26 +46,37 @@ const createEmptyAffixSlots = (count: number): MemoryAffixSlotState[] =>
     .fill(null)
     .map(() => ({ effectIndex: undefined, quality: DEFAULT_QUALITY }));
 
+const INITIAL_CRAFTING_STATE = {
+  craftingMemoryType: undefined as HeroMemoryType | undefined,
+  craftingBaseStat: undefined as string | undefined,
+  existingFixedAffixes: [] as string[],
+  existingRandomAffixes: [] as string[],
+  fixedAffixSlots: createEmptyAffixSlots(2),
+  randomAffixSlots: createEmptyAffixSlots(4),
+};
+
 export const useHeroUIStore = create<HeroUIState>()(
   immer((set) => ({
     // Initial state
-    isMemoryCraftModalOpen: false,
-    craftingMemoryType: undefined,
-    craftingBaseStat: undefined,
-    fixedAffixSlots: createEmptyAffixSlots(2),
-    randomAffixSlots: createEmptyAffixSlots(4),
+    isMemoryModalOpen: false,
+    editingMemoryId: undefined,
+    ...INITIAL_CRAFTING_STATE,
 
     // Actions
-    openMemoryCraftModal: () =>
+    openMemoryModal: (memoryId) =>
       set((state) => {
-        state.isMemoryCraftModalOpen = true;
+        state.isMemoryModalOpen = true;
+        state.editingMemoryId = memoryId;
       }),
 
-    closeMemoryCraftModal: () =>
+    closeMemoryModal: () =>
       set((state) => {
-        state.isMemoryCraftModalOpen = false;
+        state.isMemoryModalOpen = false;
+        state.editingMemoryId = undefined;
         state.craftingMemoryType = undefined;
         state.craftingBaseStat = undefined;
+        state.existingFixedAffixes = [];
+        state.existingRandomAffixes = [];
         state.fixedAffixSlots = createEmptyAffixSlots(2);
         state.randomAffixSlots = createEmptyAffixSlots(4);
       }),
@@ -69,6 +85,8 @@ export const useHeroUIStore = create<HeroUIState>()(
       set((state) => {
         state.craftingMemoryType = type;
         state.craftingBaseStat = undefined;
+        state.existingFixedAffixes = [];
+        state.existingRandomAffixes = [];
         state.fixedAffixSlots = createEmptyAffixSlots(2);
         state.randomAffixSlots = createEmptyAffixSlots(4);
       }),
@@ -76,6 +94,16 @@ export const useHeroUIStore = create<HeroUIState>()(
     setCraftingBaseStat: (stat) =>
       set((state) => {
         state.craftingBaseStat = stat;
+      }),
+
+    setExistingFixedAffix: (index, value) =>
+      set((state) => {
+        state.existingFixedAffixes[index] = value ?? "";
+      }),
+
+    setExistingRandomAffix: (index, value) =>
+      set((state) => {
+        state.existingRandomAffixes[index] = value ?? "";
       }),
 
     setFixedAffixSlot: (index, update) =>
@@ -92,6 +120,8 @@ export const useHeroUIStore = create<HeroUIState>()(
       set((state) => {
         state.craftingMemoryType = undefined;
         state.craftingBaseStat = undefined;
+        state.existingFixedAffixes = [];
+        state.existingRandomAffixes = [];
         state.fixedAffixSlots = createEmptyAffixSlots(2);
         state.randomAffixSlots = createEmptyAffixSlots(4);
       }),

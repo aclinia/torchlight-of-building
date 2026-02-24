@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import type { HeroMemory, HeroMemoryType } from "@/src/lib/save-data";
 import { HERO_MEMORY_TYPES } from "@/src/lib/save-data";
@@ -14,7 +14,8 @@ import { generateItemId } from "../../lib/storage";
 import { Modal, ModalActions, ModalButton } from "../ui/Modal";
 
 interface EditMemoryModalProps {
-  onMemorySave: (memory: HeroMemory) => void;
+  memory: HeroMemory | undefined; // undefined = create mode
+  onSave: (memoryId: string | undefined, memory: HeroMemory) => void;
 }
 
 interface AffixSlotProps {
@@ -72,6 +73,33 @@ const AffixSlot = ({
           />
         </>
       )}
+    </div>
+  );
+};
+
+interface ExistingAffixProps {
+  value: string;
+  onDelete: () => void;
+}
+
+const ExistingAffix = ({
+  value,
+  onDelete,
+}: ExistingAffixProps): React.ReactElement => {
+  return (
+    <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
+      <div className="flex">
+        <div className="flex-1 whitespace-pre-line text-sm font-medium text-amber-400">
+          {value}
+        </div>
+        <button
+          type="button"
+          onClick={onDelete}
+          className="ml-2 text-xs font-medium text-red-500 hover:text-red-400"
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };
@@ -142,18 +170,49 @@ const MemoryPreview = ({
 };
 
 export const EditMemoryModal = ({
-  onMemorySave,
+  memory,
+  onSave,
 }: EditMemoryModalProps): React.ReactElement => {
-  const isOpen = useHeroUIStore((s) => s.isMemoryCraftModalOpen);
-  const closeModal = useHeroUIStore((s) => s.closeMemoryCraftModal);
+  const isOpen = useHeroUIStore((s) => s.isMemoryModalOpen);
+  const closeModal = useHeroUIStore((s) => s.closeMemoryModal);
   const craftingMemoryType = useHeroUIStore((s) => s.craftingMemoryType);
   const craftingBaseStat = useHeroUIStore((s) => s.craftingBaseStat);
+  const existingFixedAffixes = useHeroUIStore((s) => s.existingFixedAffixes);
+  const existingRandomAffixes = useHeroUIStore((s) => s.existingRandomAffixes);
   const fixedAffixSlots = useHeroUIStore((s) => s.fixedAffixSlots);
   const randomAffixSlots = useHeroUIStore((s) => s.randomAffixSlots);
   const setCraftingMemoryType = useHeroUIStore((s) => s.setCraftingMemoryType);
   const setCraftingBaseStat = useHeroUIStore((s) => s.setCraftingBaseStat);
+  const setExistingFixedAffix = useHeroUIStore((s) => s.setExistingFixedAffix);
+  const setExistingRandomAffix = useHeroUIStore(
+    (s) => s.setExistingRandomAffix,
+  );
   const setFixedAffixSlot = useHeroUIStore((s) => s.setFixedAffixSlot);
   const setRandomAffixSlot = useHeroUIStore((s) => s.setRandomAffixSlot);
+
+  const mode = memory === undefined ? "create" : "edit";
+
+  // Initialize state from existing memory when opening in edit mode
+  useEffect(() => {
+    if (isOpen && memory !== undefined) {
+      setCraftingMemoryType(memory.memoryType);
+      setCraftingBaseStat(memory.baseStat);
+      // Store existing affix text — these show as ExistingAffix displays
+      for (const [idx, text] of memory.fixedAffixes.entries()) {
+        setExistingFixedAffix(idx, text);
+      }
+      for (const [idx, text] of memory.randomAffixes.entries()) {
+        setExistingRandomAffix(idx, text);
+      }
+    }
+  }, [
+    isOpen,
+    memory,
+    setCraftingMemoryType,
+    setCraftingBaseStat,
+    setExistingFixedAffix,
+    setExistingRandomAffix,
+  ]);
 
   const baseStats = useMemo(
     () =>
@@ -177,14 +236,37 @@ export const EditMemoryModal = ({
     [craftingMemoryType],
   );
 
-  // Build preview lines from current crafting state
+  // Count existing affixes that haven't been deleted
+  const activeExistingFixedCount = existingFixedAffixes.filter(
+    (a) => a !== "",
+  ).length;
+  const activeExistingRandomCount = existingRandomAffixes.filter(
+    (a) => a !== "",
+  ).length;
+
+  // How many new affix slots to show (fill up to max)
+  const newFixedSlotCount = Math.max(0, 2 - activeExistingFixedCount);
+  const newRandomSlotCount = Math.max(0, 2 - activeExistingRandomCount);
+
+  // Build preview lines from current state
   const previewLines = useMemo((): PreviewLine[] => {
     const lines: PreviewLine[] = [];
+    let affixNum = 0;
 
-    for (const [idx, slot] of fixedAffixSlots.entries()) {
+    // Existing fixed affixes
+    for (const text of existingFixedAffixes) {
+      if (text !== "") {
+        affixNum++;
+        lines.push({ label: `Fixed Affix ${affixNum}`, text });
+      }
+    }
+
+    // New fixed affixes
+    for (const slot of fixedAffixSlots.slice(0, newFixedSlotCount)) {
       if (slot.effectIndex !== undefined) {
+        affixNum++;
         lines.push({
-          label: `Fixed Affix ${idx + 1}`,
+          label: `Fixed Affix ${affixNum}`,
           text: craftHeroMemoryAffix(
             fixedAffixes[slot.effectIndex],
             slot.quality,
@@ -193,10 +275,22 @@ export const EditMemoryModal = ({
       }
     }
 
-    for (const [idx, slot] of randomAffixSlots.slice(0, 2).entries()) {
+    affixNum = 0;
+
+    // Existing random affixes
+    for (const text of existingRandomAffixes) {
+      if (text !== "") {
+        affixNum++;
+        lines.push({ label: `Random Affix ${affixNum}`, text });
+      }
+    }
+
+    // New random affixes
+    for (const slot of randomAffixSlots.slice(0, newRandomSlotCount)) {
       if (slot.effectIndex !== undefined) {
+        affixNum++;
         lines.push({
-          label: `Random Affix ${idx + 1}`,
+          label: `Random Affix ${affixNum}`,
           text: craftHeroMemoryAffix(
             randomAffixes[slot.effectIndex],
             slot.quality,
@@ -206,43 +300,65 @@ export const EditMemoryModal = ({
     }
 
     return lines;
-  }, [fixedAffixSlots, randomAffixSlots, fixedAffixes, randomAffixes]);
+  }, [
+    existingFixedAffixes,
+    existingRandomAffixes,
+    fixedAffixSlots,
+    randomAffixSlots,
+    fixedAffixes,
+    randomAffixes,
+    newFixedSlotCount,
+    newRandomSlotCount,
+  ]);
 
-  const handleSaveMemory = (): void => {
+  const handleSave = (): void => {
     if (craftingMemoryType === undefined || craftingBaseStat === undefined)
       return;
 
-    const fixedAffixesData: string[] = fixedAffixSlots
-      .filter((slot) => slot.effectIndex !== undefined)
-      .map((slot) =>
-        // biome-ignore lint/style/noNonNullAssertion: filtered for defined effectIndex above
-        craftHeroMemoryAffix(fixedAffixes[slot.effectIndex!], slot.quality),
-      );
+    // Collect existing affixes that weren't deleted
+    const finalFixedAffixes: string[] = existingFixedAffixes.filter(
+      (a) => a !== "",
+    );
+    const finalRandomAffixes: string[] = existingRandomAffixes.filter(
+      (a) => a !== "",
+    );
 
-    const randomAffixesData: string[] = randomAffixSlots
-      .filter((slot) => slot.effectIndex !== undefined)
-      .map((slot) =>
-        // biome-ignore lint/style/noNonNullAssertion: filtered for defined effectIndex above
-        craftHeroMemoryAffix(randomAffixes[slot.effectIndex!], slot.quality),
-      );
+    // Add newly crafted affixes
+    for (const slot of fixedAffixSlots.slice(0, newFixedSlotCount)) {
+      if (slot.effectIndex !== undefined) {
+        finalFixedAffixes.push(
+          craftHeroMemoryAffix(fixedAffixes[slot.effectIndex], slot.quality),
+        );
+      }
+    }
 
-    const newMemory: HeroMemory = {
-      id: generateItemId(),
+    for (const slot of randomAffixSlots.slice(0, newRandomSlotCount)) {
+      if (slot.effectIndex !== undefined) {
+        finalRandomAffixes.push(
+          craftHeroMemoryAffix(randomAffixes[slot.effectIndex], slot.quality),
+        );
+      }
+    }
+
+    const savedMemory: HeroMemory = {
+      id: memory?.id ?? generateItemId(),
       memoryType: craftingMemoryType,
       baseStat: craftingBaseStat,
-      fixedAffixes: fixedAffixesData,
-      randomAffixes: randomAffixesData,
+      fixedAffixes: finalFixedAffixes,
+      randomAffixes: finalRandomAffixes,
     };
 
-    onMemorySave(newMemory);
+    onSave(memory?.id, savedMemory);
     closeModal();
   };
+
+  const title = mode === "create" ? "Craft Hero Memory" : "Edit Hero Memory";
 
   return (
     <Modal
       isOpen={isOpen}
       onClose={closeModal}
-      title="Craft Hero Memory"
+      title={title}
       maxWidth="3xl"
       dismissible={false}
     >
@@ -290,28 +406,43 @@ export const EditMemoryModal = ({
                   Fixed Affixes (2 max)
                 </h3>
                 <div className="space-y-3">
-                  {fixedAffixSlots.map((slot, idx) => (
-                    <AffixSlot
-                      key={`fixed-${idx}`}
-                      slotIndex={idx}
-                      type="fixed"
-                      affixes={fixedAffixes}
-                      effectIndex={slot.effectIndex}
-                      quality={slot.quality}
-                      onSelect={(effectIndex) =>
-                        setFixedAffixSlot(idx, {
-                          effectIndex,
-                          quality:
-                            effectIndex === undefined
-                              ? DEFAULT_QUALITY
-                              : slot.quality,
-                        })
-                      }
-                      onQuality={(quality) =>
-                        setFixedAffixSlot(idx, { quality })
-                      }
-                    />
-                  ))}
+                  {/* Existing fixed affixes from edit mode */}
+                  {existingFixedAffixes.map(
+                    (text, idx) =>
+                      text !== "" && (
+                        <ExistingAffix
+                          key={`existing-fixed-${idx}`}
+                          value={text}
+                          onDelete={() => setExistingFixedAffix(idx, undefined)}
+                        />
+                      ),
+                  )}
+
+                  {/* New fixed affix slots */}
+                  {fixedAffixSlots
+                    .slice(0, newFixedSlotCount)
+                    .map((slot, idx) => (
+                      <AffixSlot
+                        key={`fixed-${idx}`}
+                        slotIndex={idx}
+                        type="fixed"
+                        affixes={fixedAffixes}
+                        effectIndex={slot.effectIndex}
+                        quality={slot.quality}
+                        onSelect={(effectIndex) =>
+                          setFixedAffixSlot(idx, {
+                            effectIndex,
+                            quality:
+                              effectIndex === undefined
+                                ? DEFAULT_QUALITY
+                                : slot.quality,
+                          })
+                        }
+                        onQuality={(quality) =>
+                          setFixedAffixSlot(idx, { quality })
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 
@@ -320,28 +451,45 @@ export const EditMemoryModal = ({
                   Random Affixes (2 max)
                 </h3>
                 <div className="space-y-3">
-                  {randomAffixSlots.slice(0, 2).map((slot, idx) => (
-                    <AffixSlot
-                      key={`random-${idx}`}
-                      slotIndex={idx}
-                      type="random"
-                      affixes={randomAffixes}
-                      effectIndex={slot.effectIndex}
-                      quality={slot.quality}
-                      onSelect={(effectIndex) =>
-                        setRandomAffixSlot(idx, {
-                          effectIndex,
-                          quality:
-                            effectIndex === undefined
-                              ? DEFAULT_QUALITY
-                              : slot.quality,
-                        })
-                      }
-                      onQuality={(quality) =>
-                        setRandomAffixSlot(idx, { quality })
-                      }
-                    />
-                  ))}
+                  {/* Existing random affixes from edit mode */}
+                  {existingRandomAffixes.map(
+                    (text, idx) =>
+                      text !== "" && (
+                        <ExistingAffix
+                          key={`existing-random-${idx}`}
+                          value={text}
+                          onDelete={() =>
+                            setExistingRandomAffix(idx, undefined)
+                          }
+                        />
+                      ),
+                  )}
+
+                  {/* New random affix slots */}
+                  {randomAffixSlots
+                    .slice(0, newRandomSlotCount)
+                    .map((slot, idx) => (
+                      <AffixSlot
+                        key={`random-${idx}`}
+                        slotIndex={idx}
+                        type="random"
+                        affixes={randomAffixes}
+                        effectIndex={slot.effectIndex}
+                        quality={slot.quality}
+                        onSelect={(effectIndex) =>
+                          setRandomAffixSlot(idx, {
+                            effectIndex,
+                            quality:
+                              effectIndex === undefined
+                                ? DEFAULT_QUALITY
+                                : slot.quality,
+                          })
+                        }
+                        onQuality={(quality) =>
+                          setRandomAffixSlot(idx, { quality })
+                        }
+                      />
+                    ))}
                 </div>
               </div>
             </>
@@ -363,13 +511,13 @@ export const EditMemoryModal = ({
           Cancel
         </ModalButton>
         <ModalButton
-          onClick={handleSaveMemory}
+          onClick={handleSave}
           fullWidth
           disabled={
             craftingMemoryType === undefined || craftingBaseStat === undefined
           }
         >
-          Save to Inventory
+          {mode === "create" ? "Save to Inventory" : "Save"}
         </ModalButton>
       </ModalActions>
     </Modal>
