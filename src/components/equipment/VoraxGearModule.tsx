@@ -347,9 +347,24 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
   ]);
   const [customAffixText, setCustomAffixText] = useState("");
 
-  // Pre-populate state when editing an existing item
+  // Pre-populate state when editing an existing item, or reset to base state
   useEffect(() => {
-    if (editItem === undefined) return;
+    if (editItem === undefined) {
+      setSelectedLimbIndex(undefined);
+      setSelectedBaseAffixIndex(undefined);
+      setPrefixSlots([
+        createRegularSlot(),
+        createRegularSlot(),
+        createRegularSlot(),
+      ]);
+      setSuffixSlots([
+        createRegularSlot(),
+        createRegularSlot(),
+        createRegularSlot(),
+      ]);
+      setCustomAffixText("");
+      return;
+    }
 
     // Find the limb index from the item's baseGearName
     const limbIdx = ALL_VORAX_LIMBS.findIndex(
