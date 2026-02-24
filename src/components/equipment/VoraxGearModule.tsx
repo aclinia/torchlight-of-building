@@ -754,7 +754,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
             {label} {slotIdx + 1}
           </span>
           <div className="flex items-center gap-2">
-            {slot.type === "legendary" && slot.legendaryName !== undefined && (
+            {slot.type === "legendary" && (
               <button
                 type="button"
                 onClick={() => handleCorruptionToggle(section, slotIdx)}
