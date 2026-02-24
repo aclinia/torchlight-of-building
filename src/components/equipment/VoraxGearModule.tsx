@@ -1,11 +1,12 @@
 import { i18n } from "@lingui/core";
 import { Trans } from "@lingui/react/macro";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import type { LegendaryAffix } from "@/src/data/legendary/types";
 import { ALL_VORAX_LIMBS } from "@/src/data/vorax/all-vorax-limbs";
 import type { VoraxLimbData } from "@/src/data/vorax/types";
 import type { Gear } from "@/src/lib/save-data";
+import { type Gear as EngineGear, getAffixText } from "@/src/tli/core";
 import { craft, craftMulti, extractRanges } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
 import {
@@ -37,7 +38,9 @@ type LegendaryVoraxSlot = {
   percentages: number[];
 };
 
-type VoraxAffixSlot = RegularVoraxSlot | LegendaryVoraxSlot;
+type ExistingVoraxSlot = { type: "existing"; text: string };
+
+type VoraxAffixSlot = RegularVoraxSlot | LegendaryVoraxSlot | ExistingVoraxSlot;
 
 const createRegularSlot = (): RegularVoraxSlot => ({
   type: "regular",
@@ -316,13 +319,15 @@ const LegendarySlotEditor = ({
 interface VoraxGearModuleProps {
   isOpen: boolean;
   onClose: () => void;
-  onSaveToInventory: (item: Gear) => void;
+  onSave: (itemId: string | undefined, item: Gear) => void;
+  editItem?: EngineGear;
 }
 
 export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
   isOpen,
   onClose,
-  onSaveToInventory,
+  onSave,
+  editItem,
 }) => {
   const [selectedLimbIndex, setSelectedLimbIndex] = useState<
     number | undefined
@@ -341,6 +346,58 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
     createRegularSlot(),
   ]);
   const [customAffixText, setCustomAffixText] = useState("");
+
+  // Pre-populate state when editing an existing item
+  useEffect(() => {
+    if (editItem === undefined) return;
+
+    // Find the limb index from the item's baseGearName
+    const limbIdx = ALL_VORAX_LIMBS.findIndex(
+      (limb) => limb.name === editItem.baseGearName,
+    );
+    if (limbIdx !== -1) {
+      setSelectedLimbIndex(limbIdx);
+
+      // Try to match the base affix to the limb's base affix list
+      const limb = ALL_VORAX_LIMBS[limbIdx];
+      if (
+        editItem.baseAffixes !== undefined &&
+        editItem.baseAffixes.length > 0
+      ) {
+        const baseAffixText = getAffixText(editItem.baseAffixes[0]);
+        const baseIdx = limb.baseAffixes.findIndex(
+          (ba) => ba.affix === baseAffixText,
+        );
+        setSelectedBaseAffixIndex(baseIdx !== -1 ? baseIdx : undefined);
+      } else {
+        setSelectedBaseAffixIndex(undefined);
+      }
+    } else {
+      setSelectedBaseAffixIndex(undefined);
+    }
+
+    // Load existing prefixes into prefix slots as read-only "existing" entries
+    const existingPrefixes = (editItem.prefixes ?? []).map(
+      (a): ExistingVoraxSlot => ({ type: "existing", text: getAffixText(a) }),
+    );
+    setPrefixSlots([
+      ...existingPrefixes,
+      ...Array.from({ length: 3 - existingPrefixes.length }, createRegularSlot),
+    ]);
+
+    // Load existing suffixes into suffix slots as read-only "existing" entries
+    const existingSuffixes = (editItem.suffixes ?? []).map(
+      (a): ExistingVoraxSlot => ({ type: "existing", text: getAffixText(a) }),
+    );
+    setSuffixSlots([
+      ...existingSuffixes,
+      ...Array.from({ length: 3 - existingSuffixes.length }, createRegularSlot),
+    ]);
+
+    // Only load custom affixes into the text area
+    const customTexts = (editItem.customAffixes ?? []).map(getAffixText);
+    setCustomAffixText(customTexts.length > 0 ? customTexts.join("\n") : "");
+  }, [editItem]);
 
   const limbOptions = useMemo(
     () =>
@@ -547,7 +604,9 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
 
     const craftedPrefixes: string[] = [];
     for (const slot of prefixSlots) {
-      if (slot.type === "regular") {
+      if (slot.type === "existing") {
+        craftedPrefixes.push(slot.text);
+      } else if (slot.type === "regular") {
         const result = craftRegularAffix(prefixAffixes, slot);
         if (result !== undefined) craftedPrefixes.push(result);
       } else {
@@ -558,7 +617,9 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
 
     const craftedSuffixes: string[] = [];
     for (const slot of suffixSlots) {
-      if (slot.type === "regular") {
+      if (slot.type === "existing") {
+        craftedSuffixes.push(slot.text);
+      } else if (slot.type === "regular") {
         const result = craftRegularAffix(suffixAffixes, slot);
         if (result !== undefined) craftedSuffixes.push(result);
       } else {
@@ -573,7 +634,7 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       .filter((line) => line !== "");
 
     const newItem: Gear = {
-      id: generateItemId(),
+      id: editItem?.id ?? generateItemId(),
       equipmentType: "Vorax Gear",
       rarity: "vorax",
       baseGearName: selectedLimb?.name,
@@ -583,24 +644,31 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
     };
 
-    onSaveToInventory(newItem);
+    onSave(editItem?.id, newItem);
     handleLimbSelect(undefined);
     onClose();
   };
 
+  const getSlotState = (slot: VoraxAffixSlot): AffixSlotState =>
+    slot.type === "regular"
+      ? { affixIndex: slot.affixIndex, percentage: slot.percentage }
+      : { affixIndex: undefined, percentage: DEFAULT_QUALITY };
+
   const getPrefixSlotStates = (): AffixSlotState[] =>
-    prefixSlots.map((slot) =>
-      slot.type === "regular"
-        ? { affixIndex: slot.affixIndex, percentage: slot.percentage }
-        : { affixIndex: undefined, percentage: DEFAULT_QUALITY },
-    );
+    prefixSlots.map(getSlotState);
 
   const getSuffixSlotStates = (): AffixSlotState[] =>
-    suffixSlots.map((slot) =>
-      slot.type === "regular"
-        ? { affixIndex: slot.affixIndex, percentage: slot.percentage }
-        : { affixIndex: undefined, percentage: DEFAULT_QUALITY },
+    suffixSlots.map(getSlotState);
+
+  const handleClearExistingSlot = (
+    section: "prefix" | "suffix",
+    slotIdx: number,
+  ): void => {
+    const setter = section === "prefix" ? setPrefixSlots : setSuffixSlots;
+    setter((prev) =>
+      prev.map((s, i) => (i === slotIdx ? createRegularSlot() : s)),
     );
+  };
 
   const renderSlot = (
     section: "prefix" | "suffix",
@@ -610,6 +678,34 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
     allSlotStates: AffixSlotState[],
   ): React.ReactElement => {
     const label = section === "prefix" ? "Prefix" : "Suffix";
+
+    if (slot.type === "existing") {
+      return (
+        <div
+          key={slotIdx}
+          className="rounded-lg border border-zinc-700 bg-zinc-800 p-3"
+        >
+          <div className="mb-2 flex items-center justify-between">
+            <span className="text-sm font-medium text-zinc-300">
+              {label} {slotIdx + 1}
+            </span>
+            <button
+              type="button"
+              onClick={() => handleClearExistingSlot(section, slotIdx)}
+              className="rounded bg-red-500/80 px-2 py-0.5 text-xs font-medium text-white transition-colors hover:bg-red-600"
+            >
+              <Trans>Delete</Trans>
+            </button>
+          </div>
+          <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
+            <div className="whitespace-pre-line text-sm text-amber-400">
+              {slot.text}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div
         key={slotIdx}
@@ -683,7 +779,9 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={i18n._("Craft Vorax Gear")}
+      title={i18n._(
+        editItem !== undefined ? "Edit Vorax Gear" : "Craft Vorax Gear",
+      )}
       maxWidth="xl"
       dismissible={false}
     >
@@ -797,7 +895,11 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
           fullWidth
           disabled={selectedLimb === undefined}
         >
-          <Trans>Save to Inventory</Trans>
+          {editItem !== undefined ? (
+            <Trans>Save Changes</Trans>
+          ) : (
+            <Trans>Save to Inventory</Trans>
+          )}
         </ModalButton>
       </ModalActions>
     </Modal>

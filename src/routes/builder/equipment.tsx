@@ -14,6 +14,7 @@ import type { Gear as SaveDataGear } from "../../lib/save-data";
 import type { GearSlot } from "../../lib/types";
 import { useBuilderActions, useLoadout } from "../../stores/builderStore";
 import { useEquipmentUIStore } from "../../stores/equipmentUIStore";
+import type { Gear as EngineGear } from "../../tli/core";
 
 export const Route = createFileRoute("/builder/equipment")({
   component: EquipmentPage,
@@ -36,6 +37,9 @@ function EquipmentPage(): React.ReactNode {
 
   // Vorax crafting modal state
   const [isVoraxModalOpen, setIsVoraxModalOpen] = useState(false);
+  const [voraxEditItem, setVoraxEditItem] = useState<EngineGear | undefined>(
+    undefined,
+  );
 
   // Legendary crafting modal state
   const [isLegendaryModalOpen, setIsLegendaryModalOpen] = useState(false);
@@ -187,8 +191,16 @@ function EquipmentPage(): React.ReactNode {
                   selectedItem?.rarity === "legendary"
                 }
                 onClick={() => {
-                  if (effectiveSelectedId !== undefined) {
-                    openEditModal(effectiveSelectedId);
+                  if (
+                    effectiveSelectedId !== undefined &&
+                    selectedItem !== undefined
+                  ) {
+                    if (selectedItem.rarity === "vorax") {
+                      setVoraxEditItem(selectedItem);
+                      setIsVoraxModalOpen(true);
+                    } else {
+                      openEditModal(effectiveSelectedId);
+                    }
                   }
                 }}
                 className="rounded bg-zinc-600 px-2 py-1 text-xs text-zinc-50 transition-colors hover:bg-zinc-500 disabled:cursor-not-allowed disabled:opacity-40"
@@ -266,8 +278,12 @@ function EquipmentPage(): React.ReactNode {
 
       <VoraxGearModule
         isOpen={isVoraxModalOpen}
-        onClose={() => setIsVoraxModalOpen(false)}
-        onSaveToInventory={addItemToInventory}
+        onClose={() => {
+          setIsVoraxModalOpen(false);
+          setVoraxEditItem(undefined);
+        }}
+        onSave={handleGearModalSave}
+        editItem={voraxEditItem}
       />
     </div>
   );
