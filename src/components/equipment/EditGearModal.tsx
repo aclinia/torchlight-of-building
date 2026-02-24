@@ -10,7 +10,6 @@ import {
 import {
   formatBlendAffix,
   formatBlendOption,
-  formatBlendPreview,
   getBlendAffixes,
 } from "@/src/lib/blend-utils";
 import {
@@ -27,10 +26,12 @@ import type {
   BaseGearAffix,
   EquipmentType,
 } from "@/src/tli/gear-data-types";
+import { convertGear } from "@/src/tli/storage/load-save";
 import { Modal, ModalActions, ModalButton } from "../ui/Modal";
 import { SearchableSelect } from "../ui/SearchableSelect";
 import { AffixSlotComponent } from "./AffixSlotComponent";
 import { ExistingAffixDisplay } from "./ExistingAffixDisplay";
+import { GearTooltipContent } from "./GearTooltipContent";
 import { GroupedAffixSlotComponent } from "./GroupedAffixSlotComponent";
 
 interface EditableAffixSlot {
@@ -423,16 +424,14 @@ export const EditGearModal = ({
     });
   }, []);
 
-  // Build and save the item
-  const handleSave = useCallback(() => {
-    // Guard: need equipment type for both modes
-    if (equipmentType === undefined) return;
+  // Build a SaveDataGear from current crafting state
+  const buildSaveDataGear = useCallback((): SaveDataGear | undefined => {
+    if (equipmentType === undefined) return undefined;
 
     // Build base stats
     let newBaseStats: string | undefined;
     let newBaseGearName: string | undefined;
     if (baseStats.type === "existing" && baseStats.value !== undefined) {
-      // Find matching base gear by name to get the stats text
       const matchingGear = baseGearOptions.find(
         (g) => g.name === baseStats.value,
       );
@@ -533,44 +532,23 @@ export const EditGearModal = ({
       .map((line) => line.trim())
       .filter((line) => line !== "");
 
-    if (mode === "create") {
-      // Creation mode: generate new ID
-      const newItem: SaveDataGear = {
-        id: generateItemId(),
-        equipmentType,
-        baseStats: newBaseStats,
-        baseGearName: newBaseGearName,
-        baseAffixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
-        sweetDreamAffix: newSweetDreamAffix,
-        towerSequenceAffix: newTowerSequenceAffix,
-        blendAffix: newBlendAffix,
-        prefixes: newPrefixes.length > 0 ? newPrefixes : undefined,
-        suffixes: newSuffixes.length > 0 ? newSuffixes : undefined,
-        customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
-      };
-      onSave(undefined, newItem);
-    } else if (item !== undefined && item.id !== undefined) {
-      // Edit mode: preserve existing item properties
-      const updatedItem: SaveDataGear = {
-        id: item.id,
-        equipmentType,
-        rarity: item.rarity === "rare" ? undefined : item.rarity,
-        legendaryName: item.legendaryName,
-        baseStats: newBaseStats,
-        baseGearName: newBaseGearName,
-        baseAffixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
-        sweetDreamAffix: newSweetDreamAffix,
-        towerSequenceAffix: newTowerSequenceAffix,
-        blendAffix: newBlendAffix,
-        prefixes: newPrefixes.length > 0 ? newPrefixes : undefined,
-        suffixes: newSuffixes.length > 0 ? newSuffixes : undefined,
-        customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
-      };
-      onSave(item.id, updatedItem);
-    }
-    onClose();
+    return {
+      id: item?.id ?? "preview",
+      equipmentType,
+      rarity:
+        item !== undefined && item.rarity !== "rare" ? item.rarity : undefined,
+      legendaryName: item?.legendaryName,
+      baseStats: newBaseStats,
+      baseGearName: newBaseGearName,
+      baseAffixes: newBaseAffixes.length > 0 ? newBaseAffixes : undefined,
+      sweetDreamAffix: newSweetDreamAffix,
+      towerSequenceAffix: newTowerSequenceAffix,
+      blendAffix: newBlendAffix,
+      prefixes: newPrefixes.length > 0 ? newPrefixes : undefined,
+      suffixes: newSuffixes.length > 0 ? newSuffixes : undefined,
+      customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
+    };
   }, [
-    mode,
     item,
     equipmentType,
     customAffixText,
@@ -589,9 +567,28 @@ export const EditGearModal = ({
     prefixAffixes,
     suffixes,
     suffixAffixes,
-    onSave,
-    onClose,
   ]);
+
+  // Build preview Gear object from current crafting state
+  const previewGear = useMemo((): Gear | undefined => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return undefined;
+    return convertGear(saveData, undefined);
+  }, [buildSaveDataGear]);
+
+  // Build and save the item
+  const handleSave = useCallback(() => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return;
+
+    if (mode === "create") {
+      const newItem: SaveDataGear = { ...saveData, id: generateItemId() };
+      onSave(undefined, newItem);
+    } else if (item !== undefined && item.id !== undefined) {
+      onSave(item.id, { ...saveData, id: item.id });
+    }
+    onClose();
+  }, [mode, item, buildSaveDataGear, onSave, onClose]);
 
   const toAffixSlotStates = (slots: EditableAffixSlot[]): AffixSlotState[] => {
     return slots.map((slot) => ({
@@ -638,7 +635,6 @@ export const EditGearModal = ({
     options?: {
       hideQualitySlider?: boolean;
       formatOption?: (affix: BaseGearAffix) => string;
-      formatCraftedText?: (affix: BaseGearAffix) => string;
       allSlotStates?: AffixSlotState[];
     },
   ): React.ReactElement => {
@@ -668,7 +664,6 @@ export const EditGearModal = ({
           onSliderChange={onSliderChange}
           onClear={onClear}
           hideTierInfo={false}
-          formatCraftedText={options?.formatCraftedText}
           allSlotStates={options?.allSlotStates}
         />
       );
@@ -688,7 +683,6 @@ export const EditGearModal = ({
         hideQualitySlider={options?.hideQualitySlider}
         hideTierInfo={true}
         formatOption={options?.formatOption}
-        formatCraftedText={options?.formatCraftedText}
       />
     );
   };
@@ -703,268 +697,260 @@ export const EditGearModal = ({
       isOpen={isOpen}
       onClose={onClose}
       title={modalTitle}
-      maxWidth="xl"
+      maxWidth="4xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
-        {/* Equipment Type Selector (creation mode only) */}
-        {mode === "create" && (
-          <div>
-            <label
-              htmlFor="equipment-type-select"
-              className="mb-1 block text-sm font-medium text-zinc-50"
-            >
-              <Trans>Equipment Type</Trans>
-            </label>
-            <SearchableSelect
-              value={selectedEquipmentType}
-              onChange={handleEquipmentTypeChange}
-              options={equipmentTypeOptions}
-              placeholder={i18n._("Select equipment type...")}
-            />
-          </div>
-        )}
+      <div className="flex h-[70vh] gap-4">
+        {/* Left panel: Crafting controls */}
+        <div className="min-w-0 flex-1 space-y-3 overflow-y-auto pr-2">
+          {/* Equipment Type Selector (creation mode only) */}
+          {mode === "create" && (
+            <div>
+              <label
+                htmlFor="equipment-type-select"
+                className="mb-1 block text-sm font-medium text-zinc-50"
+              >
+                <Trans>Equipment Type</Trans>
+              </label>
+              <SearchableSelect
+                value={selectedEquipmentType}
+                onChange={handleEquipmentTypeChange}
+                options={equipmentTypeOptions}
+                placeholder={i18n._("Select equipment type...")}
+              />
+            </div>
+          )}
 
-        {/* Affix sections - only show when equipment type is selected */}
-        {equipmentType !== undefined && (
-          <>
-            {/* Base Stats Section */}
-            {baseGearOptions.length > 0 && (
-              <div>
-                <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  <Trans>Base Stats (1 max)</Trans>
-                </h3>
-                {baseStats.type === "existing" &&
-                baseStats.value !== undefined ? (
-                  <ExistingAffixDisplay
-                    value={baseStats.value}
-                    onDelete={handleDeleteBaseStats}
-                  />
-                ) : (
-                  <>
-                    <SearchableSelect
-                      value={baseStats.affixIndex ?? undefined}
-                      onChange={(value) =>
-                        handleBaseStatsSelect(0, value?.toString() ?? "")
-                      }
-                      options={baseGearOptions.map(
-                        (gear: BaseGear, idx: number) => ({
-                          value: idx,
-                          label: `${gear.name} — ${gear.stats.replace(/\n/g, "/")}`,
-                        }),
-                      )}
-                      placeholder={`<Select Base Stats>`}
+          {/* Affix sections - only show when equipment type is selected */}
+          {equipmentType !== undefined && (
+            <>
+              {/* Base Stats Section */}
+              {baseGearOptions.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    <Trans>Base Stats (1 max)</Trans>
+                  </h3>
+                  {baseStats.type === "existing" &&
+                  baseStats.value !== undefined ? (
+                    <ExistingAffixDisplay
+                      value={baseStats.value}
+                      onDelete={handleDeleteBaseStats}
                     />
-                    {baseStats.affixIndex !== undefined &&
-                      baseGearOptions[baseStats.affixIndex] !== undefined && (
-                        <div className="mt-2 rounded border border-zinc-700 bg-zinc-900 p-2">
-                          <div className="flex">
-                            <div className="flex-1 space-y-1">
-                              <p className="text-sm font-medium text-amber-400">
-                                {baseGearOptions[baseStats.affixIndex].name}
-                              </p>
-                              <p className="whitespace-pre-wrap text-sm text-zinc-300">
-                                {baseGearOptions[baseStats.affixIndex].stats}
-                              </p>
-                            </div>
+                  ) : (
+                    <>
+                      <SearchableSelect
+                        value={baseStats.affixIndex ?? undefined}
+                        onChange={(value) =>
+                          handleBaseStatsSelect(0, value?.toString() ?? "")
+                        }
+                        options={baseGearOptions.map(
+                          (gear: BaseGear, idx: number) => ({
+                            value: idx,
+                            label: `${gear.name} — ${gear.stats.replace(/\n/g, "/")}`,
+                          }),
+                        )}
+                        placeholder={`<Select Base Stats>`}
+                      />
+                      {baseStats.affixIndex !== undefined &&
+                        baseGearOptions[baseStats.affixIndex] !== undefined && (
+                          <div className="mt-1 flex items-center gap-2">
+                            <span className="text-xs text-zinc-400">
+                              {baseGearOptions[baseStats.affixIndex].name}
+                            </span>
                             <button
                               type="button"
                               onClick={() => handleDeleteBaseStats()}
-                              className="text-xs font-medium text-red-500 hover:text-red-400"
+                              className="shrink-0 text-xs font-medium text-red-500 hover:text-red-400"
                             >
                               <Trans>Clear</Trans>
                             </button>
                           </div>
-                        </div>
-                      )}
-                  </>
-                )}
-              </div>
-            )}
+                        )}
+                    </>
+                  )}
+                </div>
+              )}
 
-            {/* Base Affixes Section */}
-            {baseAffixOptions.length > 0 && (
+              {/* Base Affixes Section */}
+              {baseAffixOptions.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    <Trans>Base Affixes (2 max)</Trans>
+                  </h3>
+                  <div className="space-y-2">
+                    {baseAffixes.map((slot, index) =>
+                      renderAffixSlot(
+                        slot,
+                        index,
+                        "Base Affix",
+                        baseAffixOptions,
+                        handleBaseAffixSelect,
+                        handleBaseAffixSliderChange,
+                        handleClearBaseAffix,
+                        () => handleDeleteBaseAffix(index),
+                        { allSlotStates: toAffixSlotStates(baseAffixes) },
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Sweet Dream Affix Section */}
+              {sweetDreamAffixes.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    <Trans>Sweet Dream Affix (1 max)</Trans>
+                  </h3>
+                  {renderAffixSlot(
+                    sweetDreamAffix,
+                    0,
+                    "Sweet Dream Affix",
+                    sweetDreamAffixes,
+                    handleSweetDreamSelect,
+                    handleSweetDreamSliderChange,
+                    handleClearSweetDream,
+                    handleDeleteSweetDream,
+                    {},
+                  )}
+                </div>
+              )}
+
+              {/* Tower Sequence Affix Section */}
+              {towerSequenceAffixes.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    <Trans>Tower Sequence (1 max)</Trans>
+                  </h3>
+                  {renderAffixSlot(
+                    towerSequenceAffix,
+                    0,
+                    "Tower Sequence",
+                    towerSequenceAffixes,
+                    handleTowerSequenceSelect,
+                    () => {},
+                    handleClearTowerSequence,
+                    handleDeleteTowerSequence,
+                    { hideQualitySlider: true },
+                  )}
+                </div>
+              )}
+
+              {/* Blending Affix Section (Belts Only) */}
+              {isBelt && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    <Trans>Blending (1 max)</Trans>
+                  </h3>
+                  {renderAffixSlot(
+                    blendAffix,
+                    0,
+                    "Blend",
+                    blendAffixes.map((blend) => ({
+                      craftableAffix: blend.affix,
+                      tier: "0",
+                      equipmentSlot: "Trinket",
+                      equipmentType: "Belt",
+                      affixType: "Prefix",
+                      craftingPool: "",
+                    })) as BaseGearAffix[],
+                    handleBlendSelect,
+                    () => {},
+                    handleClearBlend,
+                    handleDeleteBlend,
+                    {
+                      hideQualitySlider: true,
+                      formatOption: (affix) => {
+                        const blend = blendAffixes.find(
+                          (b) => b.affix === affix.craftableAffix,
+                        );
+                        return blend
+                          ? formatBlendOption(blend)
+                          : affix.craftableAffix;
+                      },
+                    },
+                  )}
+                </div>
+              )}
+
+              {/* Prefixes Section */}
               <div>
                 <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  <Trans>Base Affixes (2 max)</Trans>
+                  <Trans>Prefixes (3 max)</Trans>
                 </h3>
                 <div className="space-y-2">
-                  {baseAffixes.map((slot, index) =>
+                  {prefixes.map((slot, index) =>
                     renderAffixSlot(
                       slot,
                       index,
-                      "Base Affix",
-                      baseAffixOptions,
-                      handleBaseAffixSelect,
-                      handleBaseAffixSliderChange,
-                      handleClearBaseAffix,
-                      () => handleDeleteBaseAffix(index),
-                      { allSlotStates: toAffixSlotStates(baseAffixes) },
+                      "Prefix",
+                      prefixAffixes,
+                      handlePrefixSelect,
+                      handlePrefixSliderChange,
+                      handleClearPrefix,
+                      () => handleDeletePrefix(index),
+                      { allSlotStates: toAffixSlotStates(prefixes) },
                     ),
                   )}
                 </div>
               </div>
-            )}
 
-            {/* Sweet Dream Affix Section */}
-            {sweetDreamAffixes.length > 0 && (
+              {/* Suffixes Section */}
               <div>
                 <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  <Trans>Sweet Dream Affix (1 max)</Trans>
+                  <Trans>Suffixes (3 max)</Trans>
                 </h3>
-                {renderAffixSlot(
-                  sweetDreamAffix,
-                  0,
-                  "Sweet Dream Affix",
-                  sweetDreamAffixes,
-                  handleSweetDreamSelect,
-                  handleSweetDreamSliderChange,
-                  handleClearSweetDream,
-                  handleDeleteSweetDream,
-                  {},
-                )}
+                <div className="space-y-2">
+                  {suffixes.map((slot, index) =>
+                    renderAffixSlot(
+                      slot,
+                      index,
+                      "Suffix",
+                      suffixAffixes,
+                      handleSuffixSelect,
+                      handleSuffixSliderChange,
+                      handleClearSuffix,
+                      () => handleDeleteSuffix(index),
+                      { allSlotStates: toAffixSlotStates(suffixes) },
+                    ),
+                  )}
+                </div>
               </div>
-            )}
 
-            {/* Tower Sequence Affix Section */}
-            {towerSequenceAffixes.length > 0 && (
+              {/* Custom Affixes Section */}
               <div>
                 <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  <Trans>Tower Sequence (1 max)</Trans>
+                  <Trans>Custom Affixes</Trans>
                 </h3>
-                {renderAffixSlot(
-                  towerSequenceAffix,
-                  0,
-                  "Tower Sequence",
-                  towerSequenceAffixes,
-                  handleTowerSequenceSelect,
-                  () => {},
-                  handleClearTowerSequence,
-                  handleDeleteTowerSequence,
-                  { hideQualitySlider: true },
-                )}
+                <textarea
+                  value={customAffixText}
+                  onChange={(e) => setCustomAffixText(e.target.value)}
+                  placeholder={i18n._(
+                    "+10% Fire Damage\n+20 to Maximum Life\n+5% Attack Speed",
+                  )}
+                  rows={4}
+                  className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-50 placeholder-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                />
+                <p className="mt-1 text-xs text-zinc-500">
+                  <Trans>
+                    Enter raw affix text, one per line. Use this for affixes not
+                    available in the dropdowns above.
+                  </Trans>
+                </p>
               </div>
-            )}
+            </>
+          )}
+        </div>
 
-            {/* Blending Affix Section (Belts Only) */}
-            {isBelt && (
-              <div>
-                <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  <Trans>Blending (1 max)</Trans>
-                </h3>
-                {renderAffixSlot(
-                  blendAffix,
-                  0,
-                  "Blend",
-                  blendAffixes.map((blend) => ({
-                    craftableAffix: blend.affix,
-                    tier: "0",
-                    equipmentSlot: "Trinket",
-                    equipmentType: "Belt",
-                    affixType: "Prefix",
-                    craftingPool: "",
-                  })) as BaseGearAffix[],
-                  handleBlendSelect,
-                  () => {},
-                  handleClearBlend,
-                  handleDeleteBlend,
-                  {
-                    hideQualitySlider: true,
-                    formatOption: (affix) => {
-                      const blend = blendAffixes.find(
-                        (b) => b.affix === affix.craftableAffix,
-                      );
-                      return blend
-                        ? formatBlendOption(blend)
-                        : affix.craftableAffix;
-                    },
-                    formatCraftedText: (affix) => {
-                      const blend = blendAffixes.find(
-                        (b) => b.affix === affix.craftableAffix,
-                      );
-                      return blend
-                        ? formatBlendPreview(blend)
-                        : affix.craftableAffix;
-                    },
-                  },
-                )}
-              </div>
-            )}
-
-            {/* Prefixes Section */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Prefixes (3 max)</Trans>
-              </h3>
-              <div className="space-y-2">
-                {prefixes.map((slot, index) =>
-                  renderAffixSlot(
-                    slot,
-                    index,
-                    "Prefix",
-                    prefixAffixes,
-                    handlePrefixSelect,
-                    handlePrefixSliderChange,
-                    handleClearPrefix,
-                    () => handleDeletePrefix(index),
-                    { allSlotStates: toAffixSlotStates(prefixes) },
-                  ),
-                )}
-              </div>
-            </div>
-
-            {/* Suffixes Section */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Suffixes (3 max)</Trans>
-              </h3>
-              <div className="space-y-2">
-                {suffixes.map((slot, index) =>
-                  renderAffixSlot(
-                    slot,
-                    index,
-                    "Suffix",
-                    suffixAffixes,
-                    handleSuffixSelect,
-                    handleSuffixSliderChange,
-                    handleClearSuffix,
-                    () => handleDeleteSuffix(index),
-                    { allSlotStates: toAffixSlotStates(suffixes) },
-                  ),
-                )}
-              </div>
-            </div>
-
-            {/* Custom Affixes Section */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Custom Affixes</Trans>
-              </h3>
-              <textarea
-                value={customAffixText}
-                onChange={(e) => setCustomAffixText(e.target.value)}
-                placeholder={i18n._(
-                  "+10% Fire Damage\n+20 to Maximum Life\n+5% Attack Speed",
-                )}
-                rows={4}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-50 placeholder-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
-              />
-              <p className="mt-1 text-xs text-zinc-500">
-                <Trans>
-                  Enter raw affix text, one per line. Use this for affixes not
-                  available in the dropdowns above.
-                </Trans>
-              </p>
-            </div>
-          </>
-        )}
-
-        {/* Message when no equipment type selected in creation mode */}
-        {mode === "create" && equipmentType === undefined && (
-          <p className="py-8 text-center italic text-zinc-500">
-            <Trans>Select an equipment type to begin crafting</Trans>
-          </p>
-        )}
+        {/* Right panel: Gear preview */}
+        <div className="w-64 shrink-0 overflow-y-auto rounded-lg border border-zinc-700 bg-zinc-800 p-3">
+          {previewGear !== undefined ? (
+            <GearTooltipContent item={previewGear} />
+          ) : (
+            <p className="text-xs italic text-zinc-500">
+              <Trans>No affixes</Trans>
+            </p>
+          )}
+        </div>
       </div>
 
       <ModalActions>

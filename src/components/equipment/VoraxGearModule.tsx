@@ -1,6 +1,6 @@
 import { i18n } from "@lingui/core";
 import { Trans } from "@lingui/react/macro";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import type { LegendaryAffix } from "@/src/data/legendary/types";
 import { ALL_VORAX_LIMBS } from "@/src/data/vorax/all-vorax-limbs";
@@ -9,6 +9,7 @@ import type { Gear } from "@/src/lib/save-data";
 import { type Gear as EngineGear, getAffixText } from "@/src/tli/core";
 import { craft, craftMulti, extractRanges } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
+import { convertGear } from "@/src/tli/storage/load-save";
 import {
   getAffixForPercentage,
   getPercentageWithinTier,
@@ -19,6 +20,7 @@ import { generateItemId } from "../../lib/storage";
 import type { AffixSlotState } from "../../lib/types";
 import { Modal, ModalActions, ModalButton } from "../ui/Modal";
 import { SearchableSelect } from "../ui/SearchableSelect";
+import { GearTooltipContent } from "./GearTooltipContent";
 import { GroupedAffixSlotComponent } from "./GroupedAffixSlotComponent";
 
 // --- Types ---
@@ -105,6 +107,39 @@ const getCurrentAffix = (
     : legendary.normalAffixes[affixIndex];
 };
 
+const craftRegularAffix = (
+  affixes: BaseGearAffix[],
+  slot: RegularVoraxSlot,
+): string | undefined => {
+  if (slot.affixIndex === undefined) return undefined;
+  const groups = groupAffixesByBaseName(affixes, affixes);
+  const group = groups.find((g) =>
+    g.originalIndices.includes(slot.affixIndex as number),
+  );
+  if (group === undefined) return undefined;
+  const affix = getAffixForPercentage(slot.percentage, group.affixes);
+  const percentageWithinTier = getPercentageWithinTier(
+    slot.percentage,
+    group.affixes.length,
+  );
+  return craft(affix, percentageWithinTier);
+};
+
+const craftLegendaryAffix = (slot: LegendaryVoraxSlot): string | undefined => {
+  if (slot.legendaryName === undefined || slot.affixIndex === undefined) {
+    return undefined;
+  }
+  const legendary = Legendaries.find((l) => l.name === slot.legendaryName);
+  if (legendary === undefined) return undefined;
+  const affix = getCurrentAffix(legendary, slot.affixIndex, slot.isCorrupted);
+  const affixStr = getAffixString(affix, slot.selectedChoiceIndex);
+  if (affixStr === undefined) return undefined;
+  return (
+    slot.legendaryName +
+    craftMulti({ craftableAffix: affixStr }, slot.percentages)
+  );
+};
+
 // --- Sub-components ---
 
 interface LegendarySlotEditorProps {
@@ -161,11 +196,6 @@ const LegendarySlotEditor = ({
       : undefined;
 
   const ranges = affixStr !== undefined ? extractRanges(affixStr) : [];
-
-  const craftedText =
-    affixStr !== undefined
-      ? craftMulti({ craftableAffix: affixStr }, slot.percentages)
-      : undefined;
 
   const handleLegendarySelect = (idx: number | undefined): void => {
     if (idx === undefined) {
@@ -300,14 +330,6 @@ const LegendarySlotEditor = ({
               />
             </div>
           ))}
-        </div>
-      )}
-
-      {craftedText !== undefined && (
-        <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
-          <div className="whitespace-pre-line text-sm text-amber-400">
-            {craftedText}
-          </div>
         </div>
       )}
     </div>
@@ -590,43 +612,8 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
     );
   };
 
-  const craftRegularAffix = (
-    affixes: BaseGearAffix[],
-    slot: RegularVoraxSlot,
-  ): string | undefined => {
-    if (slot.affixIndex === undefined) return undefined;
-    const groups = groupAffixesByBaseName(affixes, affixes);
-    const group = groups.find((g) =>
-      g.originalIndices.includes(slot.affixIndex as number),
-    );
-    if (group === undefined) return undefined;
-    const affix = getAffixForPercentage(slot.percentage, group.affixes);
-    const percentageWithinTier = getPercentageWithinTier(
-      slot.percentage,
-      group.affixes.length,
-    );
-    return craft(affix, percentageWithinTier);
-  };
-
-  const craftLegendaryAffix = (
-    slot: LegendaryVoraxSlot,
-  ): string | undefined => {
-    if (slot.legendaryName === undefined || slot.affixIndex === undefined) {
-      return undefined;
-    }
-    const legendary = Legendaries.find((l) => l.name === slot.legendaryName);
-    if (legendary === undefined) return undefined;
-    const affix = getCurrentAffix(legendary, slot.affixIndex, slot.isCorrupted);
-    const affixStr = getAffixString(affix, slot.selectedChoiceIndex);
-    if (affixStr === undefined) return undefined;
-    return (
-      slot.legendaryName +
-      craftMulti({ craftableAffix: affixStr }, slot.percentages)
-    );
-  };
-
-  const handleSave = (): void => {
-    if (selectedLimb === undefined) return;
+  const buildSaveDataGear = useCallback((): Gear | undefined => {
+    if (selectedLimb === undefined) return undefined;
 
     const baseAffixes: string[] = [];
     if (selectedBaseAffixIndex !== undefined) {
@@ -664,8 +651,8 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       .map((line) => line.trim())
       .filter((line) => line !== "");
 
-    const newItem: Gear = {
-      id: editItem?.id ?? generateItemId(),
+    return {
+      id: editItem?.id ?? "preview",
       equipmentType: "Vorax Gear",
       rarity: "vorax",
       baseGearName: selectedLimb?.name,
@@ -674,8 +661,28 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       suffixes: craftedSuffixes,
       customAffixes: customAffixes.length > 0 ? customAffixes : undefined,
     };
+  }, [
+    selectedLimb,
+    selectedBaseAffixIndex,
+    prefixSlots,
+    suffixSlots,
+    customAffixText,
+    editItem,
+    prefixAffixes,
+    suffixAffixes,
+  ]);
 
-    onSave(editItem?.id, newItem);
+  const previewGear = useMemo((): EngineGear | undefined => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return undefined;
+    return convertGear(saveData, undefined);
+  }, [buildSaveDataGear]);
+
+  const handleSave = (): void => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return;
+
+    onSave(editItem?.id, { ...saveData, id: editItem?.id ?? generateItemId() });
     handleLimbSelect(undefined);
     onClose();
   };
@@ -813,108 +820,122 @@ export const VoraxGearModule: React.FC<VoraxGearModuleProps> = ({
       title={i18n._(
         editItem !== undefined ? "Edit Vorax Gear" : "Craft Vorax Gear",
       )}
-      maxWidth="xl"
+      maxWidth="4xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
-        {/* Vorax Limb Selector */}
-        <div>
-          <label className="mb-1 block text-sm font-medium text-zinc-50">
-            <Trans>Vorax Limb</Trans>
-          </label>
-          <SearchableSelect
-            value={selectedLimbIndex}
-            onChange={handleLimbSelect}
-            options={limbOptions}
-            placeholder="Select a vorax limb..."
-          />
+      <div className="flex h-[70vh] gap-4">
+        {/* Left panel: Crafting controls */}
+        <div className="min-w-0 flex-1 space-y-3 overflow-y-auto pr-2">
+          {/* Vorax Limb Selector */}
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-50">
+              <Trans>Vorax Limb</Trans>
+            </label>
+            <SearchableSelect
+              value={selectedLimbIndex}
+              onChange={handleLimbSelect}
+              options={limbOptions}
+              placeholder="Select a vorax limb..."
+            />
+          </div>
+
+          {selectedLimb !== undefined && (
+            <>
+              {/* Base Affix */}
+              <div>
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                  <Trans>Base Affix</Trans>
+                </h3>
+                <SearchableSelect
+                  value={selectedBaseAffixIndex}
+                  onChange={setSelectedBaseAffixIndex}
+                  options={baseAffixOptions}
+                  placeholder="Select base affix..."
+                />
+                {selectedBaseAffixIndex !== undefined && (
+                  <div className="mt-1">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedBaseAffixIndex(undefined)}
+                      className="text-xs font-medium text-red-500 hover:text-red-400"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Prefixes */}
+              <div>
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                  <Trans>Prefixes (3 max)</Trans>
+                </h3>
+                <div className="space-y-2">
+                  {prefixSlots.map((slot, idx) =>
+                    renderSlot(
+                      "prefix",
+                      idx,
+                      slot,
+                      prefixAffixes,
+                      getPrefixSlotStates(),
+                    ),
+                  )}
+                </div>
+              </div>
+
+              {/* Suffixes */}
+              <div>
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                  <Trans>Suffixes (3 max)</Trans>
+                </h3>
+                <div className="space-y-2">
+                  {suffixSlots.map((slot, idx) =>
+                    renderSlot(
+                      "suffix",
+                      idx,
+                      slot,
+                      suffixAffixes,
+                      getSuffixSlotStates(),
+                    ),
+                  )}
+                </div>
+              </div>
+
+              {/* Custom Affixes */}
+              <div>
+                <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                  <Trans>Custom Affixes</Trans>
+                </h3>
+                <textarea
+                  value={customAffixText}
+                  onChange={(e) => setCustomAffixText(e.target.value)}
+                  placeholder={i18n._(
+                    "+10% Fire Damage\n+20 to Maximum Life\n+5% Attack Speed",
+                  )}
+                  rows={4}
+                  className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-50 placeholder-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                />
+                <p className="mt-1 text-xs text-zinc-500">
+                  <Trans>
+                    Enter raw affix text, one per line. Use this for affixes not
+                    available in the dropdowns above.
+                  </Trans>
+                </p>
+              </div>
+            </>
+          )}
         </div>
 
-        {selectedLimb !== undefined ? (
-          <>
-            {/* Base Affix */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Base Affix</Trans>
-              </h3>
-              <SearchableSelect
-                value={selectedBaseAffixIndex}
-                onChange={setSelectedBaseAffixIndex}
-                options={baseAffixOptions}
-                placeholder="Select base affix..."
-              />
-              {selectedBaseAffixIndex !== undefined && (
-                <div className="mt-1 rounded border border-zinc-700 bg-zinc-900 p-2">
-                  <span className="whitespace-pre-line text-sm text-amber-400">
-                    {selectedLimb.baseAffixes[selectedBaseAffixIndex].affix}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Prefixes */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Prefixes (3 max)</Trans>
-              </h3>
-              <div className="space-y-2">
-                {prefixSlots.map((slot, idx) =>
-                  renderSlot(
-                    "prefix",
-                    idx,
-                    slot,
-                    prefixAffixes,
-                    getPrefixSlotStates(),
-                  ),
-                )}
-              </div>
-            </div>
-
-            {/* Suffixes */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Suffixes (3 max)</Trans>
-              </h3>
-              <div className="space-y-2">
-                {suffixSlots.map((slot, idx) =>
-                  renderSlot(
-                    "suffix",
-                    idx,
-                    slot,
-                    suffixAffixes,
-                    getSuffixSlotStates(),
-                  ),
-                )}
-              </div>
-            </div>
-
-            {/* Custom Affixes */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                <Trans>Custom Affixes</Trans>
-              </h3>
-              <textarea
-                value={customAffixText}
-                onChange={(e) => setCustomAffixText(e.target.value)}
-                placeholder={i18n._(
-                  "+10% Fire Damage\n+20 to Maximum Life\n+5% Attack Speed",
-                )}
-                rows={4}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-50 placeholder-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
-              />
-              <p className="mt-1 text-xs text-zinc-500">
-                <Trans>
-                  Enter raw affix text, one per line. Use this for affixes not
-                  available in the dropdowns above.
-                </Trans>
-              </p>
-            </div>
-          </>
-        ) : (
-          <p className="py-8 text-center italic text-zinc-500">
-            <Trans>Select a vorax limb to configure</Trans>
-          </p>
-        )}
+        {/* Right panel: Gear preview */}
+        <div className="w-64 shrink-0 overflow-y-auto rounded-lg border border-zinc-700 bg-zinc-800 p-3">
+          {previewGear !== undefined ? (
+            <GearTooltipContent item={previewGear} />
+          ) : (
+            <p className="text-xs italic text-zinc-500">
+              <Trans>No affixes</Trans>
+            </p>
+          )}
+        </div>
       </div>
 
       <ModalActions>

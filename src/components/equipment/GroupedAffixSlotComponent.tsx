@@ -1,11 +1,9 @@
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
-import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
 import {
   type GroupableAffixType,
   getAffixForPercentage,
   getOptionsWithHeaders,
-  getPercentageWithinTier,
   getSortedGroups,
   groupAffixesByBaseName,
 } from "../../lib/affix-utils";
@@ -21,7 +19,6 @@ interface GroupedAffixSlotComponentProps {
   onSliderChange: (slotIndex: number, value: string) => void;
   onClear: (slotIndex: number) => void;
   hideTierInfo?: boolean;
-  formatCraftedText?: (affix: BaseGearAffix) => string;
   allSlotStates?: AffixSlotState[];
 }
 
@@ -34,7 +31,6 @@ export const GroupedAffixSlotComponent = ({
   onSliderChange,
   onClear,
   hideTierInfo = false,
-  formatCraftedText,
   allSlotStates,
 }: GroupedAffixSlotComponentProps): React.ReactElement => {
   // Build set of affix indices that are selected in OTHER slots of the same affixType (Prefix/Suffix/Base Affix)
@@ -79,20 +75,6 @@ export const GroupedAffixSlotComponent = ({
       ? getAffixForPercentage(selection.percentage, selectedGroup.affixes)
       : undefined;
 
-  // Generate preview text
-  const previewText =
-    selectedAffix !== undefined && selectedGroup !== undefined
-      ? formatCraftedText !== undefined
-        ? formatCraftedText(selectedAffix)
-        : craft(
-            selectedAffix,
-            getPercentageWithinTier(
-              selection.percentage,
-              selectedGroup.affixes.length,
-            ),
-          )
-      : "";
-
   const sortedAffixGroups = getSortedGroups(availableGroups);
   const sortedOptionsWithHeaders = getOptionsWithHeaders(sortedAffixGroups);
 
@@ -125,7 +107,6 @@ export const GroupedAffixSlotComponent = ({
           slotIndex={slotIndex}
           selectedAffix={selectedAffix}
           percentage={selection.percentage}
-          previewText={previewText}
           hideQualitySlider={false}
           showTierInfo={!hideTierInfo}
           onSliderChange={onSliderChange}

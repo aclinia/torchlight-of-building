@@ -1,5 +1,4 @@
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
-import { craft } from "@/src/tli/crafting/craft";
 import type { BaseGearAffix } from "@/src/tli/gear-data-types";
 import {
   formatAffixOption,
@@ -21,7 +20,6 @@ interface AffixSlotProps {
   hideQualitySlider?: boolean;
   hideTierInfo?: boolean;
   formatOption?: (affix: BaseGearAffix) => string;
-  formatCraftedText?: (affix: BaseGearAffix) => string;
 }
 
 export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
@@ -35,18 +33,11 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
   hideQualitySlider = false,
   hideTierInfo = false,
   formatOption,
-  formatCraftedText,
 }) => {
   const selectedAffix =
     selection.affixIndex !== undefined
       ? affixes[selection.affixIndex]
       : undefined;
-
-  const previewText = selectedAffix
-    ? formatCraftedText
-      ? formatCraftedText(selectedAffix)
-      : craft(selectedAffix, selection.percentage)
-    : "";
 
   return (
     <div>
@@ -66,7 +57,6 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
           slotIndex={slotIndex}
           selectedAffix={selectedAffix}
           percentage={selection.percentage}
-          previewText={previewText}
           hideQualitySlider={hideQualitySlider}
           showTierInfo={!hideTierInfo}
           onSliderChange={onSliderChange}

@@ -1,16 +1,16 @@
 import { i18n } from "@lingui/core";
 import { Trans } from "@lingui/react/macro";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import type { LegendaryAffix } from "@/src/data/legendary/types";
 import type { Gear } from "@/src/lib/save-data";
 import type { Affix, AffixLine, Gear as CoreGear } from "@/src/tli/core";
 import { craft, craftMulti, extractRanges } from "@/src/tli/crafting/craft";
 import { parseMod } from "@/src/tli/mod-parser";
+import { convertGear } from "@/src/tli/storage/load-save";
 import {
   formatBlendAffix,
   formatBlendOption,
-  formatBlendPreview,
   getBlendAffixes,
 } from "../../lib/blend-utils";
 import { DEFAULT_QUALITY } from "../../lib/constants";
@@ -216,8 +216,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       return isChoiceType(affix) && state.selectedChoiceIndex === undefined;
     });
 
-  const handleSaveToInventory = () => {
-    if (selectedLegendary === undefined) return;
+  const buildSaveDataGear = useCallback((): Gear | undefined => {
+    if (selectedLegendary === undefined) return undefined;
 
     const legendaryAffixes: string[] = [];
     for (let i = 0; i < affixStates.length; i++) {
@@ -226,10 +226,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
         ? selectedLegendary.corruptionAffixes[i]
         : selectedLegendary.normalAffixes[i];
       const affixString = getAffixString(affix, state);
-      if (affixString === undefined) {
-        console.error(`Unselected choice at index ${i}, cannot save item`);
-        return;
-      }
+      if (affixString === undefined) continue;
       legendaryAffixes.push(craftAffixMulti(affixString, state.percentages));
     }
 
@@ -238,8 +235,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
         ? formatBlendAffix(blendAffixes[selectedBlendIndex])
         : undefined;
 
-    const newItem: Gear = {
-      id: generateItemId(),
+    return {
+      id: "preview",
       equipmentType: selectedLegendary.equipmentType,
       legendaryAffixes,
       blendAffix,
@@ -254,8 +251,25 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
           : undefined,
       legendaryName: selectedLegendary.name,
     };
+  }, [
+    selectedLegendary,
+    affixStates,
+    isBelt,
+    selectedBlendIndex,
+    blendAffixes,
+  ]);
 
-    onSaveToInventory(newItem);
+  const previewGear = useMemo((): CoreGear | undefined => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return undefined;
+    return convertGear(saveData, undefined);
+  }, [buildSaveDataGear]);
+
+  const handleSaveToInventory = () => {
+    const saveData = buildSaveDataGear();
+    if (saveData === undefined) return;
+
+    onSaveToInventory({ ...saveData, id: generateItemId() });
 
     setSelectedLegendaryIndex(undefined);
     setAffixStates([]);
@@ -297,93 +311,90 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       isOpen={isOpen}
       onClose={onClose}
       title={i18n._("Add Legendary")}
-      maxWidth="xl"
+      maxWidth="4xl"
       dismissible={false}
     >
-      <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-2">
-        {/* Legendary Selector */}
-        <div>
-          <label className="mb-1 block text-sm font-medium text-zinc-50">
-            <Trans>Select Legendary</Trans>
-          </label>
-          <SearchableSelect
-            value={selectedLegendaryIndex}
-            onChange={handleLegendarySelect}
-            options={legendaryOptions}
-            placeholder="Select a legendary..."
-            renderOptionTooltip={renderLegendaryTooltip}
-          />
-        </div>
+      <div className="flex h-[70vh] gap-4">
+        {/* Left panel: Crafting controls */}
+        <div className="min-w-0 flex-1 space-y-3 overflow-y-auto pr-2">
+          {/* Legendary Selector */}
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-50">
+              <Trans>Select Legendary</Trans>
+            </label>
+            <SearchableSelect
+              value={selectedLegendaryIndex}
+              onChange={handleLegendarySelect}
+              options={legendaryOptions}
+              placeholder="Select a legendary..."
+              renderOptionTooltip={renderLegendaryTooltip}
+            />
+          </div>
 
-        {selectedLegendary !== undefined ? (
-          <>
-            {/* Base Stat Display */}
-            {selectedLegendary.baseStat !== "" && (
+          {selectedLegendary !== undefined && (
+            <>
+              {/* Blending Section (Belts Only) */}
+              {isBelt && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium text-zinc-50">
+                    Blending (1 max)
+                  </h3>
+                  <SearchableSelect
+                    value={selectedBlendIndex}
+                    onChange={setSelectedBlendIndex}
+                    options={blendOptions}
+                    placeholder="Select a blend..."
+                  />
+                  {selectedBlendIndex !== undefined && (
+                    <div className="mt-1">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedBlendIndex(undefined)}
+                        className="text-xs font-medium text-red-500 hover:text-red-400"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Affixes Section */}
               <div>
                 <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  Base Stat
+                  Affixes
                 </h3>
-                <div className="rounded border border-zinc-700 bg-zinc-900 p-2">
-                  <span className="whitespace-pre-line text-amber-400">
-                    {selectedLegendary.baseStat}
-                  </span>
+                <div className="space-y-2">
+                  {selectedLegendary.normalAffixes.map((normalAffix, index) => (
+                    <LegendaryAffixRow
+                      key={index}
+                      index={index}
+                      normalAffix={normalAffix}
+                      corruptionAffix={
+                        selectedLegendary.corruptionAffixes[index]
+                      }
+                      state={affixStates[index]}
+                      onToggleCorruption={handleToggleCorruption}
+                      onPercentageChange={handlePercentageChange}
+                      onChoiceSelect={handleChoiceSelect}
+                    />
+                  ))}
                 </div>
               </div>
-            )}
+            </>
+          )}
+        </div>
 
-            {/* Blending Section (Belts Only) */}
-            {isBelt && (
-              <div>
-                <h3 className="mb-1 text-sm font-medium text-zinc-50">
-                  Blending (1 max)
-                </h3>
-                <SearchableSelect
-                  value={selectedBlendIndex}
-                  onChange={setSelectedBlendIndex}
-                  options={blendOptions}
-                  placeholder="Select a blend..."
-                />
-                {selectedBlendIndex !== undefined && (
-                  <div className="mt-1 rounded border border-zinc-700 bg-zinc-900 p-2">
-                    <pre className="whitespace-pre-wrap font-sans text-sm text-amber-400">
-                      {formatBlendPreview(blendAffixes[selectedBlendIndex])}
-                    </pre>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedBlendIndex(undefined)}
-                      className="mt-1 text-xs text-zinc-400 hover:text-zinc-200"
-                    >
-                      Clear
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Affixes Section */}
-            <div>
-              <h3 className="mb-1 text-sm font-medium text-zinc-50">Affixes</h3>
-              <div className="space-y-2">
-                {selectedLegendary.normalAffixes.map((normalAffix, index) => (
-                  <LegendaryAffixRow
-                    key={index}
-                    index={index}
-                    normalAffix={normalAffix}
-                    corruptionAffix={selectedLegendary.corruptionAffixes[index]}
-                    state={affixStates[index]}
-                    onToggleCorruption={handleToggleCorruption}
-                    onPercentageChange={handlePercentageChange}
-                    onChoiceSelect={handleChoiceSelect}
-                  />
-                ))}
-              </div>
-            </div>
-          </>
-        ) : (
-          <p className="py-8 text-center italic text-zinc-500">
-            Select a legendary to configure
-          </p>
-        )}
+        {/* Right panel: Gear preview */}
+        <div className="w-64 shrink-0 overflow-y-auto rounded-lg border border-zinc-700 bg-zinc-800 p-3">
+          {previewGear !== undefined ? (
+            <GearTooltipContent item={previewGear} />
+          ) : (
+            <p className="text-xs italic text-zinc-500">
+              <Trans>No affixes</Trans>
+            </p>
+          )}
+        </div>
       </div>
 
       <ModalActions>

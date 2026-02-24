@@ -278,7 +278,10 @@ const convertCustomAffixLines = (lines: string[] | undefined): AffixLine[] => {
   });
 };
 
-const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
+export const convertGear = (
+  gear: SaveDataGear,
+  src: string | undefined,
+): Gear => {
   const isVorax = gear.equipmentType === "Vorax Gear";
   return {
     equipmentType: gear.equipmentType,
