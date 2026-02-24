@@ -97,7 +97,7 @@ interface ModalActionsProps {
 }
 
 export const ModalActions = ({ children }: ModalActionsProps) => (
-  <div className="flex gap-3">{children}</div>
+  <div className="flex gap-3 mt-4">{children}</div>
 );
 
 interface ModalButtonProps {
