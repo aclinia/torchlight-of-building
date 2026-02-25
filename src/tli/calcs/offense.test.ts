@@ -6076,6 +6076,8 @@ describe("defense calculation (ES, Eva, Armor)", () => {
             slot45: {
               id: "test-memory",
               memoryType: "Memory of Discipline" as const,
+              rarity: "epic",
+              level: 40,
               affixes: [affix([{ type: "MaxEnergyShield", value: 500 }])],
             },
           },

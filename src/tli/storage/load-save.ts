@@ -638,7 +638,13 @@ const convertHeroMemory = (
     affixes.push(convertAffix(affixText, src));
   }
 
-  return { id: memory.id, memoryType: memory.memoryType, affixes };
+  return {
+    id: memory.id,
+    memoryType: memory.memoryType,
+    rarity: memory.rarity,
+    level: memory.level,
+    affixes,
+  };
 };
 
 const convertHeroTrait = (

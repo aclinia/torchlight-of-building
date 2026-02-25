@@ -39,6 +39,10 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
 
       <Tooltip isVisible={isVisible} triggerRect={triggerRect}>
         <TooltipTitle>{memory.memoryType}</TooltipTitle>
+        <div className="text-xs text-zinc-400 mb-1">
+          {memory.rarity.charAt(0).toUpperCase() + memory.rarity.slice(1)}{" "}
+          &middot; Level {memory.level}
+        </div>
         {memory.affixes.length > 0 ? (
           <div>
             {memory.affixes.map((affix, affixIdx) => (

@@ -470,7 +470,9 @@ const calculateHeroTraitMods = (loadout: Loadout): Mod[] => {
     if (trait !== undefined) {
       const memoryMods = collectModsFromAffixes(memory?.affixes ?? []);
       const addedLevel = findMod(memoryMods, "HeroTraitLevel")?.value ?? 0;
-      const level = 3 + addedLevel;
+      const memoryLevel = memory?.level ?? 40;
+      const baseLevel = memoryLevel >= 40 ? 3 : memoryLevel >= 20 ? 2 : 1;
+      const level = baseLevel + addedLevel;
       mods.push(...getHeroTraitMods(trait.name, level));
     }
   }

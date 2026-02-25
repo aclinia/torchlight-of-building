@@ -634,6 +634,8 @@ export type HeroMemorySlot = "slot45" | "slot60" | "slot75";
 export interface HeroMemory {
   id: string;
   memoryType: HeroMemoryType;
+  rarity: string;
+  level: number;
   affixes: Affix[];
 }
 
