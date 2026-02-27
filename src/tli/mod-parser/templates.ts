@@ -1862,14 +1862,14 @@ export const allParsers = [
       skillType: "spirit_magus",
     }),
   ),
-  t("{value:+dec%} sealed mana compensation for {skillName:words}").output(
-    (c) => ({
-      type: "SealedManaCompPct",
-      value: c.value,
-      addn: false,
-      skillName: c.skillName,
-    }),
-  ),
+  t(
+    "{value:+dec%} [additional] sealed mana compensation for {skillName:words}",
+  ).output((c) => ({
+    type: "SealedManaCompPct",
+    value: c.value,
+    addn: c.additional !== undefined,
+    skillName: c.skillName,
+  })),
   t(
     "{value:+dec%} [additional] {skillName:words} sealed mana compensation",
   ).output((c) => ({

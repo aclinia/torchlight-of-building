@@ -1443,9 +1443,12 @@ const resolveBuffSkillEffMults = (
       m.type === "CurseEffPct" ||
       m.type === "SpiritMagusOriginEffPct" ||
       m.type === "WarcryEffPct" ||
-      // AuraEffPct: include if no skillName (global) or skillName matches
+      // AuraEffPct: include if no skillName (global) or skillName matches.
+      // Also match if the skill is a "Precise: X" variant and the mod targets "X".
       (m.type === "AuraEffPct" &&
-        (m.skillName === undefined || m.skillName === buffSkillName)),
+        (m.skillName === undefined ||
+          m.skillName === buffSkillName ||
+          buffSkillName === `Precise: ${m.skillName}`)),
   );
   const { prenormMods, mods } = applyModFilters(
     buffSkillEffMods,
@@ -2556,6 +2559,8 @@ const calculateSealedResources = (
       (m) =>
         m.skillName === undefined ||
         m.skillName === slot.skillName ||
+        // Also match if the skill is a "Precise: X" variant and the mod targets "X".
+        slot.skillName === `Precise: ${m.skillName}` ||
         (passiveSkill.tags.includes("Spirit Magus") &&
           m.skillType === "spirit_magus"),
     );
