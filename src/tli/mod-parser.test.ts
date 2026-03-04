@@ -4444,7 +4444,7 @@ test("parse additional damage at low life", () => {
       value: 22,
       dmgModType: "global",
       addn: true,
-      resolvedCond: "at_low_life",
+      cond: "at_low_life",
     },
   ]);
 });

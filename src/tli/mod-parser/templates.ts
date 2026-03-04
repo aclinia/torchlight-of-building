@@ -245,7 +245,7 @@ export const allParsers = [
     value: c.value,
     dmgModType: "global",
     addn: c.additional !== undefined,
-    resolvedCond: "at_low_life",
+    cond: "at_low_life",
   })),
   t("{value:+dec%} damage {(when|while)} focus blessing is active").output(
     (c) => ({

@@ -255,6 +255,7 @@ export const Conditions = [
   "has_portrait_of_a_fallen_saintess_pactspirit",
   "has_squidnova",
   "frostbitten_heart_is_active",
+  "at_low_life",
 ] as const;
 
 export type Condition = (typeof Conditions)[number];
@@ -265,7 +266,6 @@ export const ResolvedConditions = [
   "have_both_sealed_mana_and_life",
   "at_max_focus_blessing",
   "at_max_feline_stimulant_stacks",
-  "at_low_life",
 ] as const;
 
 export type ResolvedCondition = (typeof ResolvedConditions)[number];

@@ -972,6 +972,7 @@ const filterModsByCond = (
         "frostbitten_heart_is_active",
         () => config.frostbittenHeartIsActive,
       )
+      .with("at_low_life", () => config.currentLifePct < 35)
       .exhaustive();
   });
 };
@@ -2293,10 +2294,6 @@ const resolveModsForOffenseSkill = (
       src: "Trinity: Elemental Penetration",
     });
   };
-  const pushLowLife = (): void => {
-    if (config.currentLifePct >= 35) return;
-    pm(...resolvedCondMods.filter((m) => m.resolvedCond === "at_low_life"));
-  };
   const pushHasSealedLifeAndManaCond = (): void => {
     const { sealedManaPct, sealedLifePct } = resourcePool.sealedResources;
     if (sealedManaPct <= 0 || sealedLifePct <= 0) return;
@@ -2441,7 +2438,6 @@ const resolveModsForOffenseSkill = (
 
   normalize("max_mana", maxMana);
   normalize("mercury_pt", mercuryPts);
-  pushLowLife();
   pushHasSealedLifeAndManaCond();
   pushPactspirits();
   const tangleSummary = pushTangle();
